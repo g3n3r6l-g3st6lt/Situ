@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mohamed Gharbia">
+<meta name="dcterms.date" content="2026-10-10">
+
+<title>The walking network – Situ</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./sources-check.html" rel="next">
+<link href="./readings-check.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c2228a6dba8593090521243fa9cc0660.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Situ</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./space-syntax.html" aria-current="page"> 
+<span class="menu-text">Method</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./network.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./s1-streets.html"> 
+<span class="menu-text">Systems</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./network.html">Data</a></li><li class="breadcrumb-item"><a href="./network.html">The walking network</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Situ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Method</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./space-syntax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What space syntax is</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Why I use it</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checking the readings</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./network.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">The walking network</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sources-check.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checking the sources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./counts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Movement counts and light timing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">S1 Streets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-streets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S1 Streets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S1 is built</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checks and decisions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 Scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S2 is built</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 tests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">S3 Rules</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S3 Rules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S3 is built</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S3 tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S3 checks with photos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">S4 Buildings</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s4-buildings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S4 Buildings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S4 is built</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S4 tests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#why-i-made-it" id="toc-why-i-made-it" class="nav-link active" data-scroll-target="#why-i-made-it">Why I made it</a></li>
+  <li><a href="#what-changed" id="toc-what-changed" class="nav-link" data-scroll-target="#what-changed">What changed</a></li>
+  <li><a href="#how-it-is-built" id="toc-how-it-is-built" class="nav-link" data-scroll-target="#how-it-is-built">How it is built</a></li>
+  <li><a href="#a-checked-place-île-des-sœurs" id="toc-a-checked-place-île-des-sœurs" class="nav-link" data-scroll-target="#a-checked-place-île-des-sœurs">A checked place: Île-des-Sœurs</a></li>
+  <li><a href="#checks" id="toc-checks" class="nav-link" data-scroll-target="#checks">Checks</a></li>
+  <li><a href="#maps" id="toc-maps" class="nav-link" data-scroll-target="#maps">Maps</a></li>
+  <li><a href="#risks" id="toc-risks" class="nav-link" data-scroll-target="#risks">Risks</a></li>
+  <li><a href="#the-analysis" id="toc-the-analysis" class="nav-link" data-scroll-target="#the-analysis">The analysis</a></li>
+  <li><a href="#the-driving-network" id="toc-the-driving-network" class="nav-link" data-scroll-target="#the-driving-network">The driving network</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./network.html">Data</a></li><li class="breadcrumb-item"><a href="./network.html">The walking network</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">The walking network</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mohamed Gharbia </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="why-i-made-it" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-made-it">Why I made it</h2>
+<p>The city’s street file (Géobase) draws streets. It leaves out most paths away from the street, including the Lachine Canal path and the park paths in Griffintown.</p>
+<p>Space syntax reads the whole network at once (<a href="./space-syntax-why.html#what-this-means-for-my-data">why that matters</a>). So a missing path does double harm: its own place is empty, and the streets around it look less connected than they are.</p>
+<p>Before running the analysis, I built one walking network for the whole island of Montréal, with the paths people actually use. The original Sample 4 files stay untouched beside it. This network is for the pedestrian analysis only. Cars get their own, built by the same road rules as S1 (<a href="#the-driving-network">below</a>).</p>
+</section>
+<section id="what-changed" class="level2">
+<h2 class="anchored" data-anchor-id="what-changed">What changed</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Taken out</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Added</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Highways come out, because nobody walks on them, and so do streets that exist only as plans.</p>
+<p>Bike lanes painted on a street stay out, and so do paths lying on top of a street, since the street is already there and would be drawn twice. Added pieces that join nothing are dropped too, because a piece on its own would get meaningless values.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>I added the off-street bike and multi-use paths from the city’s bike network, because people walk on them. Some of these paths are filed under a highway, mostly the separated paths on bridges. Removing the highway would have removed them as well, so I put them back. I also added the two Griffintown park paths I checked on photos in S1 (decision C18).</p>
+<p>Where a path end and a street do not quite touch in the data, a short straight line joins them. I call these connectors, and every one is listed.</p>
+</div>
+</div>
+</div>
+<p class="big-number">
+47,197 lines
+</p>
+<p>The network carries the same October decisions as S1: the footway behind Brennan and Ann (C04), and the link across Place des Aiguilleurs from the end of Smith (C06).</p>
+</section>
+<section id="how-it-is-built" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-is-built">How it is built</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  A[/"City streets&lt;br/&gt;Sample 4"/]:::data
+  B[/"City bike network"/]:::data
+  C[/"Park paths&lt;br/&gt;decision C18"/]:::rule
+  M[/"Checked places&lt;br/&gt;M01"/]:::rule
+
+  A --&gt; S0["LEAVE OUT&lt;br/&gt;highways, planned streets"]:::step
+  B --&gt; S1["READ PATHS&lt;br/&gt;off-street only,&lt;br/&gt;plus paths under removed highways"]:::step
+  C --&gt; S1
+  S0 --&gt; S2
+  S1 --&gt; S2["DROP DUPLICATES"]:::step
+  S2 --&gt; S3["JOIN&lt;br/&gt;path ends, then street dead ends"]:::step
+  M --&gt; S3
+  S3 --&gt; S4["CUT STREETS&lt;br/&gt;where a connector lands"]:::step
+  S4 --&gt; S5["DROP ISLANDS"]:::step
+  S5 --&gt; T["CHECKS&lt;br/&gt;C1 to C6"]:::test
+  T --&gt; O[/"Walking network&lt;br/&gt;with a report and lists"/]:::out
+
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6
+  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff
+  classDef test fill:none,stroke:#fe83cc,color:#fe83cc
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Each step in plain words
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A path counts as a duplicate when most of its length runs within 10 m of a street. It stays out.</p>
+<p>Joining follows the same rules as S1. A path end joins the nearest junction or street, and a street dead end may join the middle of a path. Across most of the island the gap may be at most 15 m. In Griffintown, and at places I have checked on a photo, it may be 25 m, because there I have looked and can trust a longer gap. Nobody has looked at the rest of the island, so the rule stays strict there. When a path crosses a street with no junction, I leave it unjoined, since the crossing could be a bridge or a tunnel.</p>
+<p>Where a connector lands in the middle of a street, the street is split at that point so the path has a junction to meet. Its total length stays the same.</p>
+<p>Finally, every line is grouped with the lines it touches. Added pieces outside the main group are dropped. City streets are never dropped; if one is cut off, a check reports it.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="a-checked-place-île-des-sœurs" class="level2">
+<h2 class="anchored" data-anchor-id="a-checked-place-île-des-sœurs">A checked place: Île-des-Sœurs</h2>
+<p>On the first run Île-des-Sœurs was cut off from the rest of the network. The bike path from the bridge ends 15.2 m from the boulevard, just over the 15 m limit.</p>
+<p>Raising the limit for the whole island would have created joins everywhere else. So I checked this one place on a photo.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/network_merge/evidence/M01_mapillary_2024-12-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The path meets Boulevard de l’Île-des-Sœurs at a painted crossing. Photo: Sacha862, December 2024, via Mapillary (CC BY-SA 4.0)."><img src="outputs/network_merge/evidence/M01_mapillary_2024-12-02.jpg" class="img-fluid figure-img" style="width:75.0%" alt="Street-level photo where the bike path meets Boulevard de l'Île-des-Soeurs."></a></p>
+<figcaption>The path meets Boulevard de l’Île-des-Sœurs at a painted crossing. Photo: Sacha862, December 2024, via Mapillary (CC BY-SA 4.0).</figcaption>
+</figure>
+</div>
+<p>The crossing is real. I recorded it as a checked place (M01), confirmed from the December 2024 photo. Near it, the longer Griffintown limit applies. Any other gap gets fixed the same way: look, decide, record it, run again.</p>
+</section>
+<section id="checks" class="level2">
+<h2 class="anchored" data-anchor-id="checks">Checks</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C1</td>
+<td>Is every walkable city street still there, at the same length?</td>
+<td>yes, all of them</td>
+</tr>
+<tr class="even">
+<td>C2</td>
+<td>Were any painted bike lanes added?</td>
+<td>no</td>
+</tr>
+<tr class="odd">
+<td>C3</td>
+<td>Is every connector within its limit?</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>C4</td>
+<td>Where does an added path cross a street with no junction?</td>
+<td>73 places, all listed</td>
+</tr>
+<tr class="odd">
+<td>C5</td>
+<td>Does Griffintown match S1?</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>C6</td>
+<td>Which parts are cut off from the main network?</td>
+<td>6 small parts</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="maps" class="level2">
+<h2 class="anchored" data-anchor-id="maps">Maps</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Griffintown</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Island</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/network_merge/merged_griffintown.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Griffintown and 900 m around it. Grey: city streets. White: added city paths, with the canal path along the south of the boundary. White dotted: the two park paths. Pink: connectors."><img src="outputs/network_merge/merged_griffintown.png" class="img-fluid figure-img" alt="Griffintown and 900 m around it with the merged walking network."></a></p>
+<figcaption>Griffintown and 900 m around it. Grey: city streets. White: added city paths, with the canal path along the south of the boundary. White dotted: the two park paths. Pink: connectors.</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/network_merge/merged_island.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The whole island. Pink: parts cut off from the main network."><img src="outputs/network_merge/merged_island.png" class="img-fluid figure-img" alt="The island of Montréal with the merged walking network."></a></p>
+<figcaption>The whole island. Pink: parts cut off from the main network.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="risks" class="level2">
+<h2 class="anchored" data-anchor-id="risks">Risks</h2>
+<p>A connector could join two things that are separate in reality. To guard against that, the gaps allowed are short and every connector is listed. Crossings are never joined automatically. The opposite can happen too: a real link stays unjoined. The 73 crossings are listed, and I can add checked places one by one.</p>
+<p>Bike paths stand in for footpaths, and a few may be unpleasant or closed to walking, so I took only separated paths and multi-use trails. The city maps park footpaths less well than bike paths, and I checked only Griffintown on photos, so values far from it are less certain.</p>
+<p>Near Griffintown the risk is low. Within 800 m there is one unjoined crossing, and within 2 km there are four.</p>
+</section>
+<section id="the-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="the-analysis">The analysis</h2>
+<p>On 10 October I ran PlanX on this network with the Sample 4 pedestrian settings: angular segment analysis, at radii of 200, 400 and 800 m and the whole network. Every line kept its number and its shape, so S2 can trace each value back to one line.</p>
+<p>My first run that day included a faulty first version of the Smith link (C06), which joined Smith to itself (<a href="./s1-checks.html#decisions">how it was found</a>). I rebuilt the network with the real link and ran PlanX again that evening with the same settings. A line-by-line check shows the result matches the network.</p>
+</section>
+<section id="the-driving-network" class="level2">
+<h2 class="anchored" data-anchor-id="the-driving-network">The driving network</h2>
+<p>The network for the vehicle analysis follows the same rules. It starts from every city line and leaves out the lines cars may not use under the S1 road classes, plus one small group of streets no car can reach from the rest. The lines it keeps stay exactly as the city drew them. Highways stay in, because cars use them. One-way streets keep their direction in the data, but segment analysis reads every line as two-way.</p>
+<p>I ran PlanX on it on 10 October, at radii of 1200 and 2000 m. Before October the vehicle values came from Sample 4, which included pedestrian ways, so 31 segments closed to cars carried vehicle values. Now none do.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Old and new values are different measurements
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The merged file is a different network, so its values are a new measurement that replaces the Sample 4 pedestrian values. I keep both and say which one each figure uses.</p>
+</div>
+</div>
+</section>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<p>The network I analyse is a decision. Every added path is a claim about where people can walk, and I want each claim to carry its evidence: a photo with its date. Then anyone can disagree with a specific join.</p>
+<p>I fixed a place and kept the rule. One bridge on Île-des-Sœurs did not justify a looser rule for the whole island.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/situ-project\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./readings-check.html" class="pagination-link" aria-label="Checking the readings">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Checking the readings</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./sources-check.html" class="pagination-link" aria-label="Checking the sources">
+        <span class="nav-page-text">Checking the sources</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Situ · Griffintown, Montréal</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Mohamed Gharbia · Concordia University</p>
+</div>
+  </div>
+</footer>
+<script src="assets/notes.js"></script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

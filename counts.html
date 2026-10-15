@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mohamed Gharbia">
+<meta name="dcterms.date" content="2026-10-10">
+
+<title>Movement counts and light timing – Situ</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./s1-streets.html" rel="next">
+<link href="./sources-check.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c2228a6dba8593090521243fa9cc0660.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Situ</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./space-syntax.html" aria-current="page"> 
+<span class="menu-text">Method</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./network.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./s1-streets.html"> 
+<span class="menu-text">Systems</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./network.html">Data</a></li><li class="breadcrumb-item"><a href="./counts.html">Movement counts and light timing</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Situ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Method</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./space-syntax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What space syntax is</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Why I use it</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checking the readings</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./network.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The walking network</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sources-check.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checking the sources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./counts.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Movement counts and light timing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">S1 Streets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-streets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S1 Streets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S1 is built</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checks and decisions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 Scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S2 is built</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 tests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">S3 Rules</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S3 Rules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S3 is built</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S3 tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S3 checks with photos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">S4 Buildings</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s4-buildings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S4 Buildings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S4 is built</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S4 tests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#what-the-city-counted" id="toc-what-the-city-counted" class="nav-link active" data-scroll-target="#what-the-city-counted">What the city counted</a></li>
+  <li><a href="#why-the-lights-need-an-estimate" id="toc-why-the-lights-need-an-estimate" class="nav-link" data-scroll-target="#why-the-lights-need-an-estimate">Why the lights need an estimate</a></li>
+  <li><a href="#websters-method" id="toc-websters-method" class="nav-link" data-scroll-target="#websters-method">Webster’s method</a></li>
+  <li><a href="#what-it-shows" id="toc-what-it-shows" class="nav-link" data-scroll-target="#what-it-shows">What it shows</a></li>
+  <li><a href="#the-other-29-lights" id="toc-the-other-29-lights" class="nav-link" data-scroll-target="#the-other-29-lights">The other 29 lights</a></li>
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
+  <li><a href="#pedestrian-signals" id="toc-pedestrian-signals" class="nav-link" data-scroll-target="#pedestrian-signals">Pedestrian signals</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./network.html">Data</a></li><li class="breadcrumb-item"><a href="./counts.html">Movement counts and light timing</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Movement counts and light timing</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mohamed Gharbia </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-the-city-counted" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-city-counted">What the city counted</h2>
+<p>The city counts traffic at intersections: every car, truck, bus, bicycle and pedestrian, in 15-minute slices. For vehicles it records each movement (northbound left, northbound through and so on). For pedestrians and bicycles it records each crosswalk. The file covers the whole city, 2024 to 2026 (<a href="https://donnees.montreal.ca/dataset/comptage-vehicules-pietons">donnees.montreal.ca</a>).</p>
+<p>I kept the counts taken within 15 m of an S1 junction. That leaves seven junctions:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Junction</th>
+<th>Where</th>
+<th>When</th>
+<th>Control in S3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>J040</td>
+<td>Guy, Ottawa and William</td>
+<td>3 days, around the clock, December 2024</td>
+<td>lights</td>
+</tr>
+<tr class="even">
+<td>J051</td>
+<td>de la Montagne and Notre-Dame</td>
+<td>1 day, 6:30 to 18:15, May 2026</td>
+<td>lights</td>
+</tr>
+<tr class="odd">
+<td>J181</td>
+<td>Robert-Bourassa and Saint-Jacques</td>
+<td>1 day, 6:30 to 18:15, November 2024</td>
+<td>lights, at an exit</td>
+</tr>
+<tr class="even">
+<td>J006</td>
+<td>Ann and Wellington</td>
+<td>1 day, 6:00 to 18:15, February 2024</td>
+<td>all-way stop</td>
+</tr>
+<tr class="odd">
+<td>J056</td>
+<td>Murray and Wellington</td>
+<td>the same day</td>
+<td>none</td>
+</tr>
+<tr class="even">
+<td>J086</td>
+<td>Shannon and Wellington</td>
+<td>the same day</td>
+<td>stop</td>
+</tr>
+<tr class="odd">
+<td>J092</td>
+<td>Young and Wellington</td>
+<td>the same day</td>
+<td>stop</td>
+</tr>
+</tbody>
+</table>
+<p>Beyond the lights, these counts are good for two things. S8 will compare simulated movement with space syntax, and these seven junctions let it also compare with movement that was actually counted: what people did on given days. And J040 was counted around the clock for three days, which gives S5 Rhythm a real day to start from.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/counts/day_profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush."><img src="outputs/counts/day_profile.png" class="img-fluid figure-img" alt="A day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush."></a></p>
+<figcaption>A day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush.</figcaption>
+</figure>
+</div>
+</section>
+<section id="why-the-lights-need-an-estimate" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-lights-need-an-estimate">Why the lights need an estimate</h2>
+<p>S3 knows where the 31 lights in S1 are. It does not know how long they stay green, because the city does not publish its timing plans. So the timing has to be estimated, and the estimate is mine.</p>
+</section>
+<section id="websters-method" class="level2">
+<h2 class="anchored" data-anchor-id="websters-method">Webster’s method</h2>
+<p>Webster’s method (Webster 1958) is the classic way to set a fixed light cycle from counted traffic. It asks how full each approach is, and which cycle length keeps the delay smallest. I apply it to the busiest counted hour.</p>
+<p>How full an approach is means the cars arriving per hour (a bus or truck counts as two) divided by what its lanes can pass while green, about 1,800 cars an hour per lane. The lanes come from OpenStreetMap. Each phase of the light takes its fullest approach, and the phases add up to a total load. Webster’s formula turns that total, and the time lost each time the green changes (4 s per phase here), into a cycle length. Each phase then gets green in proportion to its load.</p>
+<p>I add one check Webster does not make. A pedestrian crossing during a phase needs at least 7 s to start, plus the time to cross at a walking speed of 1.2 m/s. Where the green is shorter, I lengthen it.</p>
+<p>The two phases run along Montréal’s north-south, then its east-west. “North” here means the street grid’s north, about 305° on the compass, as in the city’s counts. The counts confirm it: at J040 almost nothing arrives from the north, where Ottawa is the one street no car may arrive along.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/counts/light_cycle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="The estimated cycles, second by second. Grey: amber and all-red, the time lost when the green changes."><img src="outputs/counts/light_cycle.png" class="img-fluid figure-img" alt="The estimated cycles, second by second. Grey: amber and all-red, the time lost when the green changes."></a></p>
+<figcaption>The estimated cycles, second by second. Grey: amber and all-red, the time lost when the green changes.</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-it-shows" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-shows">What it shows</h2>
+<p>At J040 (Guy, Ottawa and William), at 16h on 18 December 2024, the total load was 0.29 and Webster’s cycle came to 24 s. At J051 (de la Montagne and Notre-Dame) the load was 0.38 and the cycle 27 s.</p>
+<p>The traffic is far from filling these lights. Cycles of 24 and 27 s are much shorter than any city would use, so the cycle I use is my lower limit of 60 s. The green is then set by pedestrians and by the split of loads: 26 s each way at J040, and 38 s north-south against 14 s east-west at J051. That is a finding about Griffintown’s streets, and also a warning: at these volumes, the timing is more a design choice than a consequence of traffic.</p>
+<p>J181, on Robert-Bourassa, is skipped. Three of its four approaches lie beyond the network, and Webster needs them all.</p>
+</section>
+<section id="the-other-29-lights" class="level2">
+<h2 class="anchored" data-anchor-id="the-other-29-lights">The other 29 lights</h2>
+<p>I weighed four options. One plan for all lights would be simple, but a main street and a side street would get the same green. Borrowing the split of a counted light on the same streets would use real counts, but only two lights were counted. Timing the lights from space syntax was ruled out: S8 compares movement with space syntax, and lights timed from it would make S8 measure its own input. I chose to share the green by road class, which uses the city’s own street hierarchy, already in S1.</p>
+<section id="why-road-class" class="level3">
+<h3 class="anchored" data-anchor-id="why-road-class">Why road class</h3>
+<p>The city’s 2007 review of its arterial network (<a href="https://ville.montreal.qc.ca/pls/portal/docs/page/commissions_perm_v2_fr/media/documents/Revision_reseau_arteriel_20070412.pdf">PDF</a>) gives each class a daily traffic range: main arteries carry over 30,000 vehicles, collectors 1,000 to 15,000. Managing the flow is “prépondérante” on main arteries and “peu” on collectors (Ville de Montréal 2007). The United States standard says the same: “In general, the higher the traffic volume is, the higher the functional classification will be” (FHWA 2023, p.&nbsp;26, <a href="https://rosap.ntl.bts.gov/view/dot/72430/dot_72430_DS1.pdf">PDF</a>). And Webster (1958) shares the green in proportion to how full each approach is, so a busier street should get more of it.</p>
+</section>
+<section id="testing-it-on-our-counts" class="level3">
+<h3 class="anchored" data-anchor-id="testing-it-on-our-counts">Testing it on our counts</h3>
+<p>At every counted junction where the two streets differ in class, the higher class carried more traffic over the counted day:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Junction</th>
+<th>Higher class</th>
+<th>Lower class</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>J040 Guy, Ottawa and William</td>
+<td>William, collector</td>
+<td>Guy, local</td>
+<td>2.5</td>
+</tr>
+<tr class="even">
+<td>J006 Ann and Wellington</td>
+<td>Wellington, secondary arterial</td>
+<td>Ann, local</td>
+<td>8.5</td>
+</tr>
+<tr class="odd">
+<td>J056 Murray and Wellington</td>
+<td>Wellington</td>
+<td>Murray, local</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>J092 Young and Wellington</td>
+<td>Wellington</td>
+<td>Young, local</td>
+<td>22</td>
+</tr>
+<tr class="odd">
+<td>J086 Shannon and Wellington</td>
+<td>Wellington</td>
+<td>Shannon, local</td>
+<td>29</td>
+</tr>
+</tbody>
+</table>
+<p>Five out of five, though four are on Wellington, so the sample is small. And road class does not match Webster at the two counted lights. At J040 it would give 21 and 31 s where Webster gives 26 and 26, because at the busiest hour each lane is about as full on both streets. At J051 it would give 26 and 26 s where Webster gives 38 and 14, because the classes are equal but de la Montagne is busier. So the class tells which street gets more green over a day. It cannot tell how much at a given hour. That is why the counted lights keep Webster, and why the share by class is a cautious 60 %.</p>
+</section>
+<section id="the-rule" class="level3">
+<h3 class="anchored" data-anchor-id="the-rule">The rule</h3>
+<p>Each street arriving at a light belongs to one of the two axes, and each axis takes the highest class among its streets: main arterial (with highway) above secondary arterial, above collector, above local. If both axes have the same class, the two phases share the 52 s of usable green equally. If not, the higher class gets 60 % and the lower 40 %. No phase is shorter than its pedestrians need, and where they need more, the cycle grows. Where cars arrive on one axis only, the other phase is for pedestrians.</p>
+<p>Of the 31 lights, 2 follow Webster from counts, 17 have one street of higher class, 7 have equal classes, and 5 have cars on one axis only, mostly at the edge where the cross street lies beyond the network. In S7 these become the light plans, and the 60 % share and the 60 s cycle will be sliders in the <a href="./lab.html">Lab</a>.</p>
+</section>
+</section>
+<section id="assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
+<p>Every number here is a choice, and two are mine alone. The 60 s lower limit on the cycle (with 120 s as the upper) is my guess for a city centre, and it sets every cycle here. The 60 % share is my own choice: the counts show which street is busier, and say nothing of the amount. The other values (lane capacity, time lost per phase, walking speed and walk interval) follow Webster or common practice; real amber and all-red times are not published, and Montréal does not publish its own walking speed. The lane counts from OpenStreetMap cover 866 of 870 car ways, and I checked them at three junctions only.</p>
+<p>The counts themselves are a few days each, in winter or spring. They show those days, not a typical year.</p>
+</section>
+<section id="pedestrian-signals" class="level2">
+<h2 class="anchored" data-anchor-id="pedestrian-signals">Pedestrian signals</h2>
+<p>The city’s pedestrian-signal file uses the same intersection numbers as its light file. 30 of the 31 lights in S1 have pedestrian signals. The one without is Seigneurs and William.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/situ-project\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./sources-check.html" class="pagination-link" aria-label="Checking the sources">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Checking the sources</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./s1-streets.html" class="pagination-link" aria-label="S1 Streets">
+        <span class="nav-page-text">S1 Streets</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Situ · Griffintown, Montréal</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Mohamed Gharbia · Concordia University</p>
+</div>
+  </div>
+</footer>
+<script src="assets/notes.js"></script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

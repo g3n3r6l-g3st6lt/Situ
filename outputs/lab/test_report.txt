@@ -1,0 +1,17 @@
+L1  S1: streets, junctions and reach match the S1 network
+    every segment and junction; reach recomputed for every 15th junction
+    PASS
+
+L2  S2: every value matches scores.csv, and a missing value stays missing
+    213 segments x 13 measures
+    PASS
+
+L3  S3: rules, signs, speeds and checkpoints match the S3 tables
+    approaches, movements, control, signs, speeds and checkpoints, compared one by one
+    PASS
+
+L4  S3: the slider variants match the stress report
+    sign shake and light distance, count by count
+    PASS
+
+ALL PASS

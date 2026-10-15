@@ -1,0 +1,13 @@
+X1  Same input twice
+    identical: True   PASS
+
+X2  Distance within which a point outside every outline joins the nearest one (now 15 m)
+     0 m: 2048 unplaced | vs 15 m: 0 change building, 1630 become unplaced, 0 newly placed; dwellings 9794
+     5 m:  807 unplaced | vs 15 m: 0 change building, 389 become unplaced, 0 newly placed; dwellings 10832
+    15 m:  418 unplaced | vs 15 m: 0 change building, 0 become unplaced, 0 newly placed; dwellings 11954
+    30 m:  415 unplaced | vs 15 m: 0 change building, 0 become unplaced, 3 newly placed; dwellings 11954
+
+X3  Shake every address point (fixed random seed)
+    +/-2 m: 247 properties change building, 1 become unplaced, 0 newly placed; dwellings 11954 -> 11954
+    +/-5 m: 625 properties change building, 1 become unplaced, 0 newly placed; dwellings 11954 -> 11954
+    (an address point usually stands inside its building; a move near a party wall can cross into the neighbour)

@@ -1,0 +1,42 @@
+T1  Every S1 segment has exactly one row
+    PASS
+
+T2  No value is missing where it should exist, none exists where it should be missing
+    a missing value stays EMPTY (never 0) and always carries a reason
+    PASS
+
+T3  Every walking value can be rebuilt from trace.csv
+    length-weighted mean of the analysed lines listed for that segment
+    PASS
+
+T4  No value is invented
+    every traced value equals the analysis file; every row value lies between its lines' values
+    PASS
+
+T5  Values only come from the same kind of line (and the same ID_TRC for city streets)
+    PASS
+
+T6  Vehicle values equal the vehicle analysis for the same ID_TRC
+    PASS
+
+T7  Coverage (information, never a failure)
+    walking: 250 matched, 6 matched_split, 8 missing
+     - S144 Autoroute 10: walking missing, cover 0.0, 0 line(s) highway: left out of the walking network
+     - S153 Rue des Seigneurs: walking matched_split, cover 1.0, 2 line(s)
+     - S190 Rue Wellington: walking matched_split, cover 1.0, 2 line(s)
+     - S195 Lachine Canal path: walking matched_split, cover 1.0, 2 line(s)
+     - S197 Lachine Canal path: walking matched_split, cover 1.0, 2 line(s)
+     - S243 Voie Non-nommée: walking missing, cover 0.0, 0 line(s) highway: left out of the walking network
+     - S244 Voie Non-nommée: walking missing, cover 0.0, 0 line(s) highway: left out of the walking network
+     - S245 Voie Non-nommée: walking missing, cover 0.0, 0 line(s) highway: left out of the walking network
+     - S251 Voie Non-nommée: walking missing, cover 0.0, 0 line(s) highway: left out of the walking network
+     - S253 Autoroute 10: walking missing, cover 0.0, 0 line(s) highway: left out of the walking network
+     - S254 Autoroute 10: walking missing, cover 0.0, 0 line(s) highway: left out of the walking network
+     - S255 Rue des Seigneurs: walking matched_split, cover 1.0, 2 line(s)
+     - S262 footway: walking matched_split, cover 1.0, 2 line(s)
+     - S264 connector: walking missing, cover 0.049, 2 line(s) no analysed line within 1.0 m
+    vehicle: 227 matched, 37 not_a_road
+    city streets cars may not use (no vehicle value): 10
+    vehicle values on segments closed to cars in S1: 0
+
+ALL PASS

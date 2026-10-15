@@ -1,0 +1,13 @@
+﻿file,source,what,date,licence,used_by,how_obtained,status
+osm_places_2026-10-14.json,OpenStreetMap via the Overpass API (overpass-api.de),buildings and places in the study box + 150 m; query saved inside the file,2026-10-14,"ODbL 1.0, (c) OpenStreetMap contributors",S4,tools/fetch_osm_places.py,checked 2026-10-14
+roll_study_streets_2026-09-25.json,"Ville de Montréal, Unités d'évaluation foncière (tax roll)","CKAN resource 2b9dfc3d-91d3-48de-b32c-a2a6d9417079, rows on the study streets; holds 167 rows twice",2026-09-25,CC BY 4.0,S4,downloaded by hand,checked 2026-10-14
+address_points_2026-09-25.json,"Ville de Montréal, Adresse ponctuelle (address points)","CKAN resource fed5fd02-5535-458e-b13f-66e7a31a6d78, around the study area",2026-09-25,CC BY 4.0,S4,downloaded by hand,checked 2026-10-14
+QGIS/Sample4-200926/layers/occupation_commerciale_2025.gpkg,"Ville de Montréal, Locaux commerciaux et statuts d'occupation (Données Québec, vmtl-locaux-commerciaux)","2025 survey, 28,621 premises; EPSG 2950",2025 survey,CC BY 4.0,S4,saved by Mo in QGIS,checked 2026-10-14
+QGIS/Sample4-200926/Donnees_Quebec/lieux-en.csv,"Ville de Montréal, Lieux et bâtiments à vocation publique (public places)","X/Y in MTM 8, horaire_par_jour",downloaded 2026-10,CC BY 4.0,S4,saved by Mo,checked 2026-10-14
+QGIS/Sample4-200926/layers/Buildings.gpkg,"Concordia NGCI, Montreal buildings","333,596 buildings, heights and uses; one property per footprint",2022 roll,no licence provided,not used,saved by Mo,not used and not published until licensed
+osm_highways_2026-10-07.json,OpenStreetMap via the Overpass API,"streets and paths, S1",2026-10-07,ODbL 1.0,S1,tools,"from earlier notes, to confirm"
+osm_turn_restrictions_2026-10-09.json,OpenStreetMap via the Overpass API,"turn restrictions, S3 check",2026-10-09,ODbL 1.0,S3,tools,"from earlier notes, to confirm"
+reseau_cyclable_2026-10-07.geojson,"Ville de Montréal, cycling network","bike paths, S1",2026-10-07,CC BY 4.0,S1,downloaded,"from earlier notes, to confirm"
+mapillary_signs_2026-10-10.json,Mapillary API,"map features (signs) in the study box, S3 checks",2026-10-10,Mapillary terms; imagery CC BY-SA 4.0,S3,tools/fetch_mapillary_signs.py,as on the Resources page
+comptages_vehicules_cyclistes_pietons.csv,"Ville de Montréal, intersection counts (vehicles, cyclists, pedestrians)",turning-movement counts,2026-10-10,CC BY 4.0,counts page,downloaded,as on the Resources page
+feux-pietons.csv,"Ville de Montréal, pedestrian signals",pedestrian lights by intersection,2026-10-10,CC BY 4.0,counts page,downloaded,as on the Resources page

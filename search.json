@@ -1,0 +1,1841 @@
+[
+  {
+    "objectID": "space-syntax.html",
+    "href": "space-syntax.html",
+    "title": "What space syntax is",
+    "section": "",
+    "text": "Space syntax describes where each street sits in the whole street network. It asks two questions about every street: how easy it is to reach from everywhere else, and how often it lies on the way between other places.\nIt looks at the shape of the network and nothing else. Shops and people are outside its view. I find that limit useful, because it lets me ask how much of Griffintown’s movement the layout alone can explain.",
+    "crumbs": [
+      "Method",
+      "What space syntax is"
+    ]
+  },
+  {
+    "objectID": "space-syntax.html#in-short",
+    "href": "space-syntax.html#in-short",
+    "title": "What space syntax is",
+    "section": "",
+    "text": "Space syntax describes where each street sits in the whole street network. It asks two questions about every street: how easy it is to reach from everywhere else, and how often it lies on the way between other places.\nIt looks at the shape of the network and nothing else. Shops and people are outside its view. I find that limit useful, because it lets me ask how much of Griffintown’s movement the layout alone can explain.",
+    "crumbs": [
+      "Method",
+      "What space syntax is"
+    ]
+  },
+  {
+    "objectID": "space-syntax.html#where-it-comes-from",
+    "href": "space-syntax.html#where-it-comes-from",
+    "title": "What space syntax is",
+    "section": "Where it comes from",
+    "text": "Where it comes from\nBill Hillier and Julienne Hanson started the method at University College London. Their book The Social Logic of Space (1984) argued that the arrangement of spaces carries social meaning and can be measured.\n\n\n\n\n\n\n\n\nYear\nWork\nWhat it added\n\n\n\n\n1993\nHillier, Penn, Hanson, Grajewski & Xu\n“Natural movement”: the shape of the network is a main driver of how many people walk each street.\n\n\n2004\nRatti\nA critique: results depend on how the map is drawn, and early methods ignored metres.\n\n\n2005\nHillier & Iida\nCounting turns matched observed movement better than counting metres.\n\n\n2007\nTurner\nOrdinary street centrelines can be analysed, so I can use the city’s own street file.\n\n\n\nFull references are on the Resources page.\n\n\n\n\n\n\nNoteHow settled is it?\n\n\n\nThe natural movement claim is influential and still debated. Its strength varies from place to place and depends on land use. In the 1993 paper itself, the correlation between integration and movement across ten parts of King’s Cross ranged from 0.25 to 0.80, and shops could outweigh the layout (Hillier et al. 1993, pp. 31, 46). Ratti (2004, p. 492) adds that the method leaves land use out. So in Situ I test the claim in Griffintown. I do not assume it.",
+    "crumbs": [
+      "Method",
+      "What space syntax is"
+    ]
+  },
+  {
+    "objectID": "space-syntax.html#segments-and-depth",
+    "href": "space-syntax.html#segments-and-depth",
+    "title": "What space syntax is",
+    "section": "Segments and depth",
+    "text": "Segments and depth\nA segment is a piece of street between two junctions, the same unit as in S1 Streets. Depth is the distance between two segments. The made-up town below counts one step for each change of street, so it can be checked by hand. The real analysis counts angles: a right angle costs 1 and a 45° turn costs 0.5 (Turner 2007, p. 542). People seem to judge a route by how much it turns more than by its length (Hillier & Iida 2005).",
+    "crumbs": [
+      "Method",
+      "What space syntax is"
+    ]
+  },
+  {
+    "objectID": "space-syntax.html#integration-and-choice",
+    "href": "space-syntax.html#integration-and-choice",
+    "title": "What space syntax is",
+    "section": "Integration and choice",
+    "text": "Integration and choice\nIntegration measures how close a segment is, on average, to every other segment. A segment with high integration is easy to get to. Network science calls this closeness centrality (Sabidussi 1966).\nChoice imagines the shortest route between every pair of segments and counts how many of those routes pass through each one. A segment with high choice is often passed through. Network science calls this betweenness centrality (Freeman 1977).",
+    "crumbs": [
+      "Method",
+      "What space syntax is"
+    ]
+  },
+  {
+    "objectID": "space-syntax.html#radius",
+    "href": "space-syntax.html#radius",
+    "title": "What space syntax is",
+    "section": "Radius",
+    "text": "Radius\nThe analysis can be limited to a distance around each segment, called the radius. At 400 m it asks how central a street is within about five minutes’ walk. Radius n has no limit. In the literature, 400 to 800 m is the usual low radius and 4,000 to 8,000 m the usual high one (van Nes & Yamu 2021, p. 65).\nMy analysis (Sample 4) uses 200 to 800 m and radius n for pedestrians, and 1200 and 2000 m for vehicles. A street can be central at 400 m and peripheral at radius n, and that contrast often tells me more than any single value.",
+    "crumbs": [
+      "Method",
+      "What space syntax is"
+    ]
+  },
+  {
+    "objectID": "space-syntax.html#a-made-up-town",
+    "href": "space-syntax.html#a-made-up-town",
+    "title": "What space syntax is",
+    "section": "A made-up town",
+    "text": "A made-up town\nI invented this town so the numbers can be checked by hand. It has a main street (M1 to M5), cross streets to the north and south, a back street (B1, B2) and a cul-de-sac (C1, C2).\n\n\n\nDepth from M1, then integration, then choice, on the same made-up town.\n\n\n\nDepthIntegrationChoice\n\n\nStarting from M1 at depth 0, every street one step away has depth 1, the next ones depth 2, and so on. C2, at the end of the cul-de-sac, is six steps away.\n\n\nM3 has the highest integration (0.55), because it sits in the middle. C2 has the lowest (0.24), because every other street is far from it.\n\n\nM4 has the highest choice (55), because routes from the west side to the east side and to the cul-de-sac must cross it. C1 has 15, since every route to C2 passes through it. A dead end like C2 scores 0.\n\n\n\n\n\n\n\n\n\nTipWhat the toy shows\n\n\n\nM3 is the best place to be, and M4 is the best place to pass through. The two measures differ, so I keep both.",
+    "crumbs": [
+      "Method",
+      "What space syntax is"
+    ]
+  },
+  {
+    "objectID": "space-syntax.html#the-values-in-the-results",
+    "href": "space-syntax.html#the-values-in-the-results",
+    "title": "What space syntax is",
+    "section": "The values in the results",
+    "text": "The values in the results\nThe results also give normalised forms, NAIN for integration and NACH for choice, that can be compared between networks of different sizes (Hillier, Yang & Turner 2012, pp. 160, 165 and 191). NACH also evens out raw choice, where a few streets score very high and most score low. The paper gives two slightly different versions of NAIN, so I compare numbers only within one version (Checking the readings).",
+    "crumbs": [
+      "Method",
+      "What space syntax is"
+    ]
+  },
+  {
+    "objectID": "space-syntax.html#what-it-leaves-out",
+    "href": "space-syntax.html#what-it-leaves-out",
+    "title": "What space syntax is",
+    "section": "What it leaves out",
+    "text": "What it leaves out\n\n\n\nLeft out\nIn Griffintown\n\n\n\n\nwhat is on the street\na metro exit, a grocery store\n\n\nheight and level\nstairs, the canal banks\n\n\nquality of the walk\nsidewalk width, trees, noise, snow\n\n\ntime\nmorning and evening, summer and winter\n\n\ntraffic rules\none-way streets, closed crossings\n\n\nwho is walking\nage and purpose\n\n\n\nIn Situ each of these belongs to another system, such as S3 Rules or S5 Rhythm. That keeps space syntax clean as a measure.\nNext: Why I use it.",
+    "crumbs": [
+      "Method",
+      "What space syntax is"
+    ]
+  },
+  {
+    "objectID": "sources-check.html",
+    "href": "sources-check.html",
+    "title": "Checking the sources",
+    "section": "",
+    "text": "Some parts of Situ lean on sources I did not make. Before trusting one, I ask it a plain question and answer with a test I can run again.\n\n\n\n\n\nflowchart LR\n  Q1[\"What does a sign oblige?\"]:::q --&gt; A1[\"Québec regulation&lt;br/&gt;+ sign posters\"]:::src --&gt; R1[\"meaning: settled&lt;br/&gt;placement: open\"]:::res\n  Q2[\"How does PlanX&lt;br/&gt;measure a radius?\"]:::q --&gt; A2[\"compare&lt;br/&gt;segment counts\"]:::src --&gt; R2[\"along the streets\"]:::res\n  Q3[\"Which way does a&lt;br/&gt;Mapillary sign face?\"]:::q --&gt; A3[\"test on stop signs&lt;br/&gt;we already know\"]:::src --&gt; R3[\"the way it faces,&lt;br/&gt;with noise\"]:::res\n\n  classDef q fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef src fill:none,stroke:#8a8a8a,color:#a6a6a6\n  classDef res fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Checking the sources"
+    ]
+  },
+  {
+    "objectID": "sources-check.html#why-this-page",
+    "href": "sources-check.html#why-this-page",
+    "title": "Checking the sources",
+    "section": "",
+    "text": "Some parts of Situ lean on sources I did not make. Before trusting one, I ask it a plain question and answer with a test I can run again.\n\n\n\n\n\nflowchart LR\n  Q1[\"What does a sign oblige?\"]:::q --&gt; A1[\"Québec regulation&lt;br/&gt;+ sign posters\"]:::src --&gt; R1[\"meaning: settled&lt;br/&gt;placement: open\"]:::res\n  Q2[\"How does PlanX&lt;br/&gt;measure a radius?\"]:::q --&gt; A2[\"compare&lt;br/&gt;segment counts\"]:::src --&gt; R2[\"along the streets\"]:::res\n  Q3[\"Which way does a&lt;br/&gt;Mapillary sign face?\"]:::q --&gt; A3[\"test on stop signs&lt;br/&gt;we already know\"]:::src --&gt; R3[\"the way it faces,&lt;br/&gt;with noise\"]:::res\n\n  classDef q fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef src fill:none,stroke:#8a8a8a,color:#a6a6a6\n  classDef res fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Checking the sources"
+    ]
+  },
+  {
+    "objectID": "sources-check.html#signs-what-they-mean",
+    "href": "sources-check.html#signs-what-they-mean",
+    "title": "Checking the sources",
+    "section": "Signs: what they mean",
+    "text": "Signs: what they mean\nThe Québec standard for road signs, Tome V, Signalisation routière, is sold and was out of my reach, so I used free sources in its place. The Règlement sur la signalisation routière on LégisQuébec, current to 1 June 2026, gives the legal meaning of each kind of sign. The ministry’s 2026 sign posters (Québec.ca) and its online catalogue, the Répertoire des dispositifs, give their names and pictures.\nWhat the regulation says:\n\n\n\n\n\n\n\n\nArticle\nSign\nMeaning\n\n\n\n\n3\nevery prescription sign\nit applies where it is installed\n\n\n7\nstop (P-10)\nstop\n\n\n10\nno entry (P-40)\nyou may not enter this road\n\n\n13\none way (P-80-1)\nuse the road in the direction shown\n\n\n18\nP-110-1 to P-110-4\nat this intersection, turn or go on as the arrow shows\n\n\n20\nP-110-6 to P-110-8\nat this intersection, do not turn or go on as the arrow shows\n\n\n\n\n\n\n\n\n\nWarningCode numbers do not agree between sources\n\n\n\nThe regulation numbers the turn bans P-110-6 to P-110-8, while the 2026 poster shows P-110-62 for “no left turn”. So S3 reads a sign’s written meaning and ignores its code number.\n\n\nNone of these says where a sign stands, before or after the junction. The only text on placement I found is a 2001 provincial guide quoting Tome V: turn signs stand “à proximité de l’endroit où la manœuvre doit être effectuée”, near where the turn is made (BAnQ). That does not say which corner. So placement has to be read from photos, one junction at a time (below).",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Checking the sources"
+    ]
+  },
+  {
+    "objectID": "sources-check.html#planx-how-far-is-a-radius",
+    "href": "sources-check.html#planx-how-far-is-a-radius",
+    "title": "Checking the sources",
+    "section": "PlanX: how far is a radius?",
+    "text": "PlanX: how far is a radius?\nPlanX is the QGIS tool that gives each street segment its space syntax values. Its manual (version 4.18, September 2026) says the radius is “metric radii in map units”. It does not say whether 800 m means 800 m along the streets or 800 m in a straight line. These give very different neighbourhoods, so I tested it.\nFor each segment, PlanX reports how many other segments it found within the radius. For twelve segments in Griffintown I counted again in two ways: segments I can walk to within the radius, along the streets, and segments whose middle lies inside a circle of that radius. At 800 m, PlanX’s counts came to 0.89 of the along-the-streets counts and 0.57 of the straight-line counts. At 400 m the figures were 0.92 and 0.53.\nSo the radius is measured along the streets (certain). PlanX’s counts sit a little under mine, most likely because it measures metres along the path with the fewest turns, which is a bit longer than the shortest path (likely). I could not reproduce the counts exactly, so that detail stays open.\nThe manual also states a few things I checked against the readings:\n\n\n\nFrom the manual\nChecked\nWhat follows\n\n\n\n\nThe network has no direction: one-way streets are ignored\nthe manual says so\nthe vehicle values describe the street layout alone, without its traffic rules\n\n\nNACH (normalised choice) = log(CH + 1) / log(TD + 3)\nsame formula in Hillier, Yang and Turner (2012, p. 191); PlanX’s output matches it exactly\nS2’s choice values follow the published measure\n\n\nChoice is halved, though the formula does not halve it\nPlanX’s output shows it counts each pair of segments once (Checking the readings)\nthe same definition as Turner (2007, p. 544)\n\n\nNAIN (normalised integration) = (NC + 2)^1.2 / (TD + 2)\nthe paper gives two other forms (Checking the readings)\nthe order of streets is the same; the numbers compare only with the same form",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Checking the sources"
+    ]
+  },
+  {
+    "objectID": "sources-check.html#mapillary-which-way-does-a-sign-face",
+    "href": "sources-check.html#mapillary-which-way-does-a-sign-face",
+    "title": "Checking the sources",
+    "section": "Mapillary: which way does a sign face?",
+    "text": "Mapillary: which way does a sign face?\nMapillary reads its street photos with a machine and places every sign it sees on a map, with a compass angle for each. If that angle is the way the sign faces, it can tell which street a sign controls. That is exactly what the sign sources above leave open.\n\nGetting the signs\nI asked Mapillary for every feature it has mapped around the S1 network, in squares of about 400 m because it refuses large ones, and kept the traffic signs unchanged, with the date. On 10 October that gave 1,455 signs, 838 of them regulatory, among them 235 stop detections and 88 no-entry signs.\n\n\nTesting the direction on signs we already know\nA stop sign faces the drivers it stops. S3 already knows, for every city stop post, which street those drivers arrive along. So the right answer is known in advance: the sign should face against the drivers’ travel. For each city stop post I took the nearest Mapillary stop sign within 15 m and compared.\n\n\n\nLeft: the idea. Right: the test. Pink bars are posts where Mapillary’s angle is within 45° of facing the drivers.\n\n\nOf 139 city stop posts, 99 had a Mapillary stop sign within 15 m. For 69 of those, Mapillary’s angle was within 45° of facing the drivers, and only one pointed the way drivers travel. The median difference was 21°.\nSo the angle is the way the sign faces (likely). A second, smaller group sits near 90° off, and it has a simple cause (likely): at an all-way stop, four stop signs stand within a few metres, and the nearest Mapillary sign can be the one facing the cross street.\nThe main peak sits about 15° off zero, and I do not know why yet. Fifteen degrees never confuses two streets meeting at a junction, so it does not change how I use the angle. A machine reading is evidence to check, and every sign I use this way gets its photo looked at.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Checking the sources"
+    ]
+  },
+  {
+    "objectID": "sources-check.html#what-changes-in-the-systems",
+    "href": "sources-check.html#what-changes-in-the-systems",
+    "title": "Checking the sources",
+    "section": "What changes in the systems",
+    "text": "What changes in the systems\nS3 reads each sign by its written meaning. Where a sign’s placement was in doubt, I settled it with Mapillary’s facing and then the photo (S3 checks with photos). S2 reads its radii as distance along the streets, and its vehicle values ignore one-way streets.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Checking the sources"
+    ]
+  },
+  {
+    "objectID": "s4-buildings.html",
+    "href": "s4-buildings.html",
+    "title": "S4 Buildings",
+    "section": "",
+    "text": "S4 says what each building in the study area is: what it is used for, how tall it is, how many people live in it, and what is on its ground floor. It gathers this from five open files. Every answer keeps a note of where it came from. When no file knows the answer, the space stays empty with the reason written beside it.\nTwo more pages go further: how S4 is built and how I tested it.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 Buildings"
+    ]
+  },
+  {
+    "objectID": "s4-buildings.html#what-s4-does",
+    "href": "s4-buildings.html#what-s4-does",
+    "title": "S4 Buildings",
+    "section": "",
+    "text": "S4 says what each building in the study area is: what it is used for, how tall it is, how many people live in it, and what is on its ground floor. It gathers this from five open files. Every answer keeps a note of where it came from. When no file knows the answer, the space stays empty with the reason written beside it.\nTwo more pages go further: how S4 is built and how I tested it.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 Buildings"
+    ]
+  },
+  {
+    "objectID": "s4-buildings.html#why-buildings-matter-here",
+    "href": "s4-buildings.html#why-buildings-matter-here",
+    "title": "S4 Buildings",
+    "section": "Why buildings matter here",
+    "text": "Why buildings matter here\nS1 to S3 describe where people can move. They say nothing about why anyone would go somewhere. A street is busy at noon because of what lines it: a bank, a café, a gym, five hundred condos. S5 Rhythm will ask which buildings open when, and S6 will ask where people start and end their trips. S4 is the inventory they both read.\nMost answers come from the city’s tax roll, the official list of every property and what it is. When the roll is silent, I fall back on OpenStreetMap, the open map anyone can edit. For the ground floor I use the city’s 2025 survey of street-level commercial spaces, together with the places listed in OpenStreetMap.\nOne answer is an assumption, and I label it as one: which street a walker reaches the building from. No open file says where the doors are, so I link each building to the nearest street people can walk on. It is the weakest value in S4.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 Buildings"
+    ]
+  },
+  {
+    "objectID": "s4-buildings.html#one-building-step-by-step",
+    "href": "s4-buildings.html#one-building-step-by-step",
+    "title": "S4 Buildings",
+    "section": "One building, step by step",
+    "text": "One building, step by step\nDistrict Griffin sur Peel is the long low block on Rue Peel between Ottawa and William, with towers on top. OpenStreetMap draws it as one outline and tags it as retail.\nThe tax roll has 497 properties inside that outline. Almost all of them, 495, are condo dwellings. The other two are a shopping centre and a condo parking space. The roll speaks first, so S4 calls the building residential. The retail tag is kept on record and never used.\nThe 2025 survey finds ten premises on the ground floor, among them three banks and two restaurants. One space is vacant. Seven of these shops also appear in OpenStreetMap under the same name, so S4 counts each of them once. The nearest walkable street is Rue Ottawa, 6.5 m away.\nThis one building shows the main weakness of S4. Counted by property, the condos outvote the shops 495 to 1. On the street, though, it reads as a shopping strip. That is why I keep the ground floor separately: “used for” says what most of the building is, and “ground floor” says what a walker passes.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 Buildings"
+    ]
+  },
+  {
+    "objectID": "s4-buildings.html#try-it-in-the-lab",
+    "href": "s4-buildings.html#try-it-in-the-lab",
+    "title": "S4 Buildings",
+    "section": "Try it in the Lab",
+    "text": "Try it in the Lab\nIn the Lab, turn on the S4 buildings layer and click any building. The panel shows each value with its source. It also lists the places inside and the street the building is linked to. You can colour the buildings by their use or by where that use came from. Other layers show every place on the map and the 54 cases I still need to look at.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 Buildings"
+    ]
+  },
+  {
+    "objectID": "s4-buildings.html#what-it-found",
+    "href": "s4-buildings.html#what-it-found",
+    "title": "S4 Buildings",
+    "section": "What it found",
+    "text": "What it found\nThere are 297 buildings in the study area. The tax roll gave the use for 179 of them and OpenStreetMap for 80. The other 38 stay unknown, mostly small sheds and annexes that OpenStreetMap only calls “a building”. Most buildings with a known use are residential, and between them the buildings hold 11,954 dwellings.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 Buildings"
+    ]
+  },
+  {
+    "objectID": "s4-buildings.html#maps",
+    "href": "s4-buildings.html#maps",
+    "title": "S4 Buildings",
+    "section": "Maps",
+    "text": "Maps\n\nUseSource\n\n\n\n\n\nWhat each building is used for. Pink dashed outline: no source says. Pink X: B01, 415 properties at one address with no outline. Click to enlarge.\n\n\n\n\n\n\n\nWhere each building’s use came from. White: the tax roll. Grey: OpenStreetMap. Pink dashed: nowhere, so it stays unknown. Click to enlarge.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 Buildings"
+    ]
+  },
+  {
+    "objectID": "s4-buildings.html#what-i-still-need-to-check",
+    "href": "s4-buildings.html#what-i-still-need-to-check",
+    "title": "S4 Buildings",
+    "section": "What I still need to check",
+    "text": "What I still need to check\nS4 flags 54 cases for me to look at by hand. Most are buildings whose use no source gives. Some are ties, where two uses had the same number of properties. A few stand far from any walkable street, Hangar 1825 most of all. And one building seems to be missing from the map.\nThat last one matters most. At 1485 rue des Bassins (B01), the tax roll lists 415 dwellings, built in 2024, all at one address point. OpenStreetMap has not drawn the building yet. Until someone draws it, those people live nowhere on the map. I left them unplaced and counted. I did not invent an outline.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 Buildings"
+    ]
+  },
+  {
+    "objectID": "s4-buildings.html#a-note-on-licences",
+    "href": "s4-buildings.html#a-note-on-licences",
+    "title": "S4 Buildings",
+    "section": "A note on licences",
+    "text": "A note on licences\nThe Concordia NGCI building file has heights and a use for every building in Montréal, but it carries no licence. S4 does not use it, and I publish nothing made from it until a licence is granted.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 Buildings"
+    ]
+  },
+  {
+    "objectID": "s3-tests.html",
+    "href": "s3-tests.html",
+    "title": "S3 tests",
+    "section": "",
+    "text": "Each check asks one plain question of the rules S3 writes. Eight of them must pass, and all eight do. The other two only report. The Lab shows the latest results.\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nDoes every street a car can arrive along have exactly one approach?\nyes\n\n\nT2\nDoes every sign end up with a street, or a written reason it has none?\nyes\n\n\nT3\nDoes every stop sign stand where a driver would see it?\nyes\n\n\nT4\nDo the turns fit the street layout, and does every forbidden turn have a reason? No street may be a trap.\nyes\n\n\nT5\nDoes each junction’s control agree with its approaches?\nyes\n\n\nT6\nDo the no-entry signs agree with the city’s one-way streets?\nreport: 67 of 78 agree, and none disagrees; the rest could not be confirmed either way\n\n\nT7\nDoes every rule cite the signs behind it?\nyes\n\n\nT8\nHow sure is each link between a sign and a street?\nreport: see S3 Rules\n\n\nT9\nDoes every light stand within 25 m of its junction and name at least one of its streets?\nyes\n\n\nT10\nDoes every speed match the city file, and does every gap have a reason?\nyes\n\n\n\nA disagreement in T6 goes on the list of places to check, because I cannot tell from the desk which source is right. The photos explained the last four (S3 checks with photos).\n\n\n\n\n\n\nTipTesting the tests\n\n\n\nA test that always passes proves nothing. Before trusting T9 and T10, I broke the results on purpose. I moved one light by 30 m and changed two speed cells: one from 30 to 50, and one empty cell to 0. T9 caught the light and T10 caught both speeds. Then I put the files back.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 tests"
+    ]
+  },
+  {
+    "objectID": "s3-tests.html#ten-checks",
+    "href": "s3-tests.html#ten-checks",
+    "title": "S3 tests",
+    "section": "",
+    "text": "Each check asks one plain question of the rules S3 writes. Eight of them must pass, and all eight do. The other two only report. The Lab shows the latest results.\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nDoes every street a car can arrive along have exactly one approach?\nyes\n\n\nT2\nDoes every sign end up with a street, or a written reason it has none?\nyes\n\n\nT3\nDoes every stop sign stand where a driver would see it?\nyes\n\n\nT4\nDo the turns fit the street layout, and does every forbidden turn have a reason? No street may be a trap.\nyes\n\n\nT5\nDoes each junction’s control agree with its approaches?\nyes\n\n\nT6\nDo the no-entry signs agree with the city’s one-way streets?\nreport: 67 of 78 agree, and none disagrees; the rest could not be confirmed either way\n\n\nT7\nDoes every rule cite the signs behind it?\nyes\n\n\nT8\nHow sure is each link between a sign and a street?\nreport: see S3 Rules\n\n\nT9\nDoes every light stand within 25 m of its junction and name at least one of its streets?\nyes\n\n\nT10\nDoes every speed match the city file, and does every gap have a reason?\nyes\n\n\n\nA disagreement in T6 goes on the list of places to check, because I cannot tell from the desk which source is right. The photos explained the last four (S3 checks with photos).\n\n\n\n\n\n\nTipTesting the tests\n\n\n\nA test that always passes proves nothing. Before trusting T9 and T10, I broke the results on purpose. I moved one light by 30 m and changed two speed cells: one from 30 to 50, and one empty cell to 0. T9 caught the light and T10 caught both speeds. Then I put the files back.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 tests"
+    ]
+  },
+  {
+    "objectID": "s3-tests.html#stress-tests",
+    "href": "s3-tests.html#stress-tests",
+    "title": "S3 tests",
+    "section": "Stress tests",
+    "text": "Stress tests\nEach stress test changes one thing on purpose and counts how many rules move. The first, X1, simply runs S3 twice on the same input. The results are identical.\nX2 moves every sign post at random, by up to 1, 2, 4 and 8 m. Up to 2 m almost nothing changes. At 4 m ten streets change their stop, and at 8 m, 28 do. So the city’s sign positions would have to be off by more than 2 m before the stop rules start to shift. I do not know yet how accurate they are, and that is worth checking on the ground at a few corners.\n\n\n\nX2: as every post is moved further, more rules change. Up to 2 m almost nothing moves. Click to enlarge.\n\n\nX3 and X4 change how far before the junction, and how far to the right, a sign may stand. Both sit on a plateau: a little more or less than my 35 m and 20 m changes nothing, so the result does not hang on my exact choice. Only the tightest values lose signs. Most of the signs without a street stand at exits or beyond the edge.\nX5 places turn signs by position alone, as my first version did. That leaves 25 streets with no turn at all, against none with the meaning test and the photo decisions. That is why the meaning test exists.\nX6 changes how close a light must be to its junction. From 25 to 40 m the same 31 junctions get lights. At 5 m eight are lost: those lights stand 5 to 10 m from their junctions, mostly on Robert-Bourassa and on edge streets, where the city places the light on a wide corner. At 80 m, lights start landing on the wrong junctions.\nX7 changes how far a same-name line may lie when a street is missing from the speed file. It is the one setting with no plateau below it. Under 5 m, two Wellington pieces open to cars lose their limit. From 5 m on, all three redrawn pieces are covered. The 5 m was chosen for those three segments, and how S3 is built says so. Autoroute 10 and its ramps are never in the file, at any distance.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 tests"
+    ]
+  },
+  {
+    "objectID": "s3-tests.html#try-them-in-the-lab",
+    "href": "s3-tests.html#try-them-in-the-lab",
+    "title": "S3 tests",
+    "section": "Try them in the Lab",
+    "text": "Try them in the Lab\nX2, X6 and X7 are sliders in the Lab. Move the signs or change a distance, and see which streets change.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 tests"
+    ]
+  },
+  {
+    "objectID": "s3-checks.html",
+    "href": "s3-checks.html",
+    "title": "S3 checks with photos",
+    "section": "",
+    "text": "The city’s sign file says where each sign stands and what it says. It never says which way it faces. S3 guesses that from position and meaning, and most guesses are safe. A few places stayed in doubt: two signs that cannot both be true for one street, and no-entry signs on streets the city file calls two-way. For those, I looked at the street itself in Mapillary’s photos.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 checks with photos"
+    ]
+  },
+  {
+    "objectID": "s3-checks.html#why-photos",
+    "href": "s3-checks.html#why-photos",
+    "title": "S3 checks with photos",
+    "section": "",
+    "text": "The city’s sign file says where each sign stands and what it says. It never says which way it faces. S3 guesses that from position and meaning, and most guesses are safe. A few places stayed in doubt: two signs that cannot both be true for one street, and no-entry signs on streets the city file calls two-way. For those, I looked at the street itself in Mapillary’s photos.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 checks with photos"
+    ]
+  },
+  {
+    "objectID": "s3-checks.html#how-i-check-one-place",
+    "href": "s3-checks.html#how-i-check-one-place",
+    "title": "S3 checks with photos",
+    "section": "How I check one place",
+    "text": "How I check one place\n\n\n\n\n\nflowchart TB\n  subgraph DESK[\"AT THE DESK\"]\n    direction LR\n    A[\"1 · A place in doubt\"]:::step --&gt; B[\"2 · Mapillary signs&lt;br/&gt;within 30 m\"]:::step --&gt; C[\"3 · Two readings&lt;br/&gt;of where each faces\"]:::step --&gt; D[\"4 · Cut out the&lt;br/&gt;part of the photo\"]:::step\n  end\n  subgraph ME[\"BY EYE, THEN IN THE DATA\"]\n    direction LR\n    E[\"5 · Look\"]:::look --&gt; F[/\"6 · A decision&lt;br/&gt;written down\"/]:::out --&gt; G[\"7 · S3 applies it&lt;br/&gt;at the next build\"]:::step\n  end\n  DESK --&gt; ME\n\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef look fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  style DESK fill:none,stroke:#3a3a3a,color:#a6a6a6\n  style ME fill:none,stroke:#3a3a3a,color:#a6a6a6\n\n\n\n\n\n\nI start from a place S3 could not settle, and gather the signs Mapillary detected within 30 m of the junction (getting the signs).\nFor each sign there are two readings of where it faces. One is Mapillary’s own angle, which I tested on stop signs. The other comes from the photo itself: a sign whose face I can read is turned towards the camera. Each reading then points to the street whose drivers the sign faces.\nThe tool cuts the sign out of each panorama and puts every photo of one junction on one sheet, next to what the machine read. I look at the sheet and write down one decision per finding, with how sure I am and the evidence. The city’s file is never edited. At the next build S3 reads my decisions before its own matching.\nI call a decision likely when the two readings point to the same street and the photo shows a sign that fits. I leave it open when the readings disagree or the photo does not show which way the sign faces. A sign newer than every photo stays open too.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 checks with photos"
+    ]
+  },
+  {
+    "objectID": "s3-checks.html#the-decisions",
+    "href": "s3-checks.html#the-decisions",
+    "title": "S3 checks with photos",
+    "section": "The decisions",
+    "text": "The decisions\n\n\n\n\n\n\n\n\n\n\nPlace\nFinding\nHow sure\n\n\n\n\nP01\nWellington and Ann (J006)\n“straight only” faces Wellington from the west\nlikely\n\n\nP02\nWellington and Ann (J006)\n“left or right only” faces Rue Ann from the north\nlikely\n\n\nP03\nWellington and Ann (J006)\nan older sign and a newer city post disagree\nopen\n\n\nP04\nend of Brennan (J189)\nno-entry at bollards closes the paved area beyond\nlikely\n\n\nP05\neast end of Bassins (J122)\nno-entry closes the path into the new park\nlikely\n\n\nP06\npark path off William (J146)\nthe photos do not show which street the signs face\nopen\n\n\nP07\nNotre-Dame and Inspecteur (J045)\nno-entry guards one half of a divided entrance\nlikely\n\n\n\n\nWellington and Ann (J006)\nThis was the last place where S3’s turn signs contradicted each other. The photos show three different streets, each with its own sign.\n\n\n\nJ006. Each photo with what Mapillary read and the street that reading points to. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.\n\n\nThe green “straight only” on the west elm corner was seen in May 2022 and December 2023, and both readings point to Wellington arriving from the west. S3 had given it to the short split piece of Wellington, and that caused the contradiction. The “left or right only” under the viaduct faces Rue Ann from the north.\nOne question stays open (P03). In 2024 a “straight only” sign stood under the viaduct, facing the short split piece of Wellington. In October 2025 the city installed a new post there with a stop and “left or right only”. No photo is newer than that, so S3 follows the city post and keeps the question on the list.\nThe machine read the green “straight only” as “no straight through”, its opposite. That is why the photo decides, and the label alone never does.\n\n\nEnd of Brennan (J189)\n\n\n\nJ189. The end of Brennan in May 2024. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.\n\n\nBollards cross the street, and no-entry signs stand at them, closing the paved area beyond to cars. So the city file is right that cars may drive Brennan up to the bollards. The paving continues past them, which fits S1’s assumption C04 (walkers continue). It does not show where the paving leads, so C04 stays an assumption.\n\n\nEast end of Bassins (J122)\n\n\n\nJ122. The east end of Rue des Bassins. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.\n\n\nThe no-entry sign hangs under a stop sign, and Mapillary’s angle points within 2° at the path into the new park. It closes the park to cars. Rue des Bassins itself stays two-way, as the city file says.\n\n\nNotre-Dame and Inspecteur (J045)\n\n\n\nJ045. The corner of Notre-Dame and Inspecteur. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.\n\n\nHere the two readings disagree, so the photo alone would leave it open. OpenStreetMap settles it: it draws Inspecteur north of Notre-Dame as two one-way halves, and the sign guards the half coming towards Notre-Dame. The city draws one two-way line. That is coarser, and fine for S1, which works at the scale of whole streets.\n\n\nStill open\n\n\n\nJ146. The park path off Rue William. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.\n\n\nAt the park path off William (P06), the two readings are far off, and the photos show the signs without showing which way they face. Two more no-entry signs, at the park connectors (J145), are on recent posts that no Mapillary photo shows. P03 at J006, above, is the last open question.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 checks with photos"
+    ]
+  },
+  {
+    "objectID": "s3-checks.html#what-changed",
+    "href": "s3-checks.html#what-changed",
+    "title": "S3 checks with photos",
+    "section": "What changed",
+    "text": "What changed\nThe photos settled the last turn-sign contradiction and all four no-entry disagreements. Six no-entry signs are now explained by a photo, and the places to check went from 27 down to 21.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 checks with photos"
+    ]
+  },
+  {
+    "objectID": "s3-checks.html#limits",
+    "href": "s3-checks.html#limits",
+    "title": "S3 checks with photos",
+    "section": "Limits",
+    "text": "Limits\nMost of the photos come from the city’s own survey car, taken in 2022 to 2024, so a sign installed after the last photo cannot be checked this way. Mapillary’s labels and angles are only a first guess: here one label said the opposite of the sign, and at J045 the two readings disagreed.\nEach decision is mine. It says how sure I am and why, so anyone can look at a sheet and disagree with a specific row.\nPhotos: Mapillary contributors VdM (Ville de Montréal), geodz, une_abeille and AlexPL, CC BY-SA 4.0.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 checks with photos"
+    ]
+  },
+  {
+    "objectID": "s2-tests.html",
+    "href": "s2-tests.html",
+    "title": "S2 tests",
+    "section": "",
+    "text": "Each check asks a plain question of the result, and all of them pass. The Lab lists the results of the latest run.\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nDoes every S1 segment have exactly one row?\nYes\n\n\nIs a value present exactly when it should be, and is every missing value empty, with a reason?\nYes\n\n\nCan every walking value be rebuilt from the trace of analysed lines behind it?\nYes\n\n\nIs any value invented? Every traced value must equal the analysis, and every value must lie between the values of its lines.\nNo\n\n\nDo values come only from the same kind of line, and from the same street for city streets?\nYes\n\n\nDo vehicle values equal the vehicle analysis for the same street?\nYes\n\n\n\nA seventh check only reports coverage, which is described on S2 Scores.\n\n\n\n\n\n\nTipThe trace check caught a real problem\n\n\n\nOn the first run, the trace check failed. The trace rounded the shared metres to two decimals, so the values could not be rebuilt exactly from it. I now store them to six decimals. A trace that cannot reproduce its own numbers is a broken trace.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 tests"
+    ]
+  },
+  {
+    "objectID": "s2-tests.html#checks",
+    "href": "s2-tests.html#checks",
+    "title": "S2 tests",
+    "section": "",
+    "text": "Each check asks a plain question of the result, and all of them pass. The Lab lists the results of the latest run.\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nDoes every S1 segment have exactly one row?\nYes\n\n\nIs a value present exactly when it should be, and is every missing value empty, with a reason?\nYes\n\n\nCan every walking value be rebuilt from the trace of analysed lines behind it?\nYes\n\n\nIs any value invented? Every traced value must equal the analysis, and every value must lie between the values of its lines.\nNo\n\n\nDo values come only from the same kind of line, and from the same street for city streets?\nYes\n\n\nDo vehicle values equal the vehicle analysis for the same street?\nYes\n\n\n\nA seventh check only reports coverage, which is described on S2 Scores.\n\n\n\n\n\n\nTipThe trace check caught a real problem\n\n\n\nOn the first run, the trace check failed. The trace rounded the shared metres to two decimals, so the values could not be rebuilt exactly from it. I now store them to six decimals. A trace that cannot reproduce its own numbers is a broken trace.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 tests"
+    ]
+  },
+  {
+    "objectID": "s2-tests.html#stress-tests",
+    "href": "s2-tests.html#stress-tests",
+    "title": "S2 tests",
+    "section": "Stress tests",
+    "text": "Stress tests\nThe checks ask whether the result is right. The stress tests ask how easily it could go wrong. Each one changes one thing on purpose and measures what moves.\nRunning twice on the same input gives identical results, and changing the matching distance anywhere from 5 cm to 10 m changes nothing. Placing test points every 25 cm or every 5 m moves a value by about 0.01 at most.\nShaking every S1 point by up to 0.3 m changes one segment, a 15 m connector at Brennan, which then takes part of its value from the next connector. Shaken by up to 0.8 m, six segments change status, mostly paths and connectors along the canal, and no value moves by more than 0.08.\nThe real test is the same-kind rule. With the rule turned off and nothing shaken, no segment takes values from another line. Shaken by 0.8 m, 142 segments do. The worst is the short Smith link, which then takes values from the streets at both its ends and moves by 0.24.\n\n\n\nAs the S1 points are shaken further, segments without the same-kind rule start taking values from crossing streets. With the rule, almost nothing moves.\n\n\nWhat I take from this: the match is exact today because S1 and the walking network share coordinates, which is why the matching distance has no effect. The same-kind rule is what would keep S2 honest if the geometry drifted, for example after someone edits S1 in QGIS.\nThe rule test also found a real fault upstream. Before a fix, Rue Smith picked up 21 m from a connector, which meant a connector lay on top of the street. It was the C06 link, which joined Smith to its own other end. I fixed the rule in S1 (C06), and after the new PlanX run no such segment remains.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 tests"
+    ]
+  },
+  {
+    "objectID": "s2-build.html",
+    "href": "s2-build.html",
+    "title": "How S2 is built",
+    "section": "",
+    "text": "flowchart TB\n  IN1[/\"S1 segments&lt;br/&gt;264 segments\"/]:::data\n  IN2[/\"Walking values&lt;br/&gt;47,197 analysed lines\"/]:::data\n  IN3[/\"Vehicle values&lt;br/&gt;47,730 analysed lines\"/]:::data\n  CFG[/\"Settings&lt;br/&gt;a test point every metre, within 1 m&lt;br/&gt;cover 95 % or 50 %\"/]:::rule\n\n  IN1 --&gt; R[\"READ&lt;br/&gt;segments and analysed lines\"]:::step\n  IN2 --&gt; R\n  IN3 --&gt; R\n  R --&gt; G[\"SORT&lt;br/&gt;walking lines into a 20 m grid\"]:::step\n  G --&gt; W[\"WALKING MATCH&lt;br/&gt;test points and the same-kind rule,&lt;br/&gt;cover and a mean by length\"]:::step\n  CFG --&gt; W\n  R --&gt; V[\"VEHICLE MATCH&lt;br/&gt;may cars use it, then the same street\"]:::step\n  W --&gt; S[\"STATUS&lt;br/&gt;matched, split,&lt;br/&gt;partial or missing\"]:::step\n  V --&gt; S\n  S --&gt; O1[/\"values for every segment\"/]:::out\n  S --&gt; O2[/\"trace of every line used\"/]:::out\n  O1 --&gt; T[\"checks\"]:::test\n  O2 --&gt; T\n  T --&gt; X[\"stress tests\"]:::test\n  X --&gt; VZ[\"maps\"]:::test\n  VZ --&gt; WB[\"data for the Lab\"]:::test\n\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "How S2 is built"
+    ]
+  },
+  {
+    "objectID": "s2-build.html#blueprint",
+    "href": "s2-build.html#blueprint",
+    "title": "How S2 is built",
+    "section": "",
+    "text": "flowchart TB\n  IN1[/\"S1 segments&lt;br/&gt;264 segments\"/]:::data\n  IN2[/\"Walking values&lt;br/&gt;47,197 analysed lines\"/]:::data\n  IN3[/\"Vehicle values&lt;br/&gt;47,730 analysed lines\"/]:::data\n  CFG[/\"Settings&lt;br/&gt;a test point every metre, within 1 m&lt;br/&gt;cover 95 % or 50 %\"/]:::rule\n\n  IN1 --&gt; R[\"READ&lt;br/&gt;segments and analysed lines\"]:::step\n  IN2 --&gt; R\n  IN3 --&gt; R\n  R --&gt; G[\"SORT&lt;br/&gt;walking lines into a 20 m grid\"]:::step\n  G --&gt; W[\"WALKING MATCH&lt;br/&gt;test points and the same-kind rule,&lt;br/&gt;cover and a mean by length\"]:::step\n  CFG --&gt; W\n  R --&gt; V[\"VEHICLE MATCH&lt;br/&gt;may cars use it, then the same street\"]:::step\n  W --&gt; S[\"STATUS&lt;br/&gt;matched, split,&lt;br/&gt;partial or missing\"]:::step\n  V --&gt; S\n  S --&gt; O1[/\"values for every segment\"/]:::out\n  S --&gt; O2[/\"trace of every line used\"/]:::out\n  O1 --&gt; T[\"checks\"]:::test\n  O2 --&gt; T\n  T --&gt; X[\"stress tests\"]:::test\n  X --&gt; VZ[\"maps\"]:::test\n  VZ --&gt; WB[\"data for the Lab\"]:::test\n\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "How S2 is built"
+    ]
+  },
+  {
+    "objectID": "s2-build.html#the-problem",
+    "href": "s2-build.html#the-problem",
+    "title": "How S2 is built",
+    "section": "The problem",
+    "text": "The problem\nS1 and the walking network were built from the same city lines, and each one cut those lines in its own places. S1 cut a street where a park path joins it. The walking network cut streets wherever a bike path joins them, all over the island. So an S1 segment and an analysed line are often the same street with different ends.\nMatching by id alone would hide that. Rue des Seigneurs, for example, is one S1 segment lying over two analysed pieces with different values. Matching by shape finds both.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "How S2 is built"
+    ]
+  },
+  {
+    "objectID": "s2-build.html#the-matching-rule",
+    "href": "s2-build.html#the-matching-rule",
+    "title": "How S2 is built",
+    "section": "The matching rule",
+    "text": "The matching rule\n\n\n\nA made-up segment and the analysed lines under it.\n\n\nI cut each S1 segment into slices about a metre long and place a test point in the middle of each. Each point looks for the closest analysed line within 1 m, but only among lines of the same kind. A city street looks only at pieces of the same street in the city’s records, and a path or connector looks only at its own kind.\nThen I count the metres each analysed line shares with the segment. The cover is the share of the segment’s length that found a line. The value is the mean of those lines, each counting by the metres it shares, so with one line it is that line’s value exactly. The cover decides the status. Below 50 % the segment gets no value, and the reason is written down.\nThe same-kind rule matters near junctions. A test point near the end of a street also lies within 1 m of the crossing street. Without the rule, the street could take some of its neighbour’s values. The stress tests measure that risk.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "How S2 is built"
+    ]
+  },
+  {
+    "objectID": "s2-build.html#vehicle-values",
+    "href": "s2-build.html#vehicle-values",
+    "title": "How S2 is built",
+    "section": "Vehicle values",
+    "text": "Vehicle values\nThe driving network keeps the city’s lines uncut, so the city’s own street id is enough. Every S1 piece of a street gets that street’s vehicle value.\nBefore looking the street up, S2 checks whether cars may use it, by the same rule S1 uses. A street closed to cars is marked as not a road, with a written reason, and so is every added path or connector. That makes 37 segments, each meant to be empty. A street cars may use that is missing from the analysis would be marked missing. Today there are none.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "How S2 is built"
+    ]
+  },
+  {
+    "objectID": "s1-streets.html",
+    "href": "s1-streets.html",
+    "title": "S1 Streets",
+    "section": "",
+    "text": "S1 turns the city’s street lines into a network of segments and junctions, and records who may use each segment. Every later system walks or drives on this network, so it has to be right first.\nHow S1 is built sets out the rules I assumed. Two pages then test it: the tests check the network against itself, and Checks and decisions check it against the real street, with photos.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "S1 Streets"
+    ]
+  },
+  {
+    "objectID": "s1-streets.html#what-s1-does",
+    "href": "s1-streets.html#what-s1-does",
+    "title": "S1 Streets",
+    "section": "",
+    "text": "S1 turns the city’s street lines into a network of segments and junctions, and records who may use each segment. Every later system walks or drives on this network, so it has to be right first.\nHow S1 is built sets out the rules I assumed. Two pages then test it: the tests check the network against itself, and Checks and decisions check it against the real street, with photos.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "S1 Streets"
+    ]
+  },
+  {
+    "objectID": "s1-streets.html#words",
+    "href": "s1-streets.html#words",
+    "title": "S1 Streets",
+    "section": "Words",
+    "text": "Words\n\n\n\nA made-up street that shows every word S1 uses.\n\n\nA segment is a piece of street between two junctions, and a junction is where segment ends meet. Griffintown stays part of the city, so S1 also keeps the streets just outside the boundary that touch the study area. I call them the edge. A gate is where the study area meets the edge, and an exit is the far end of an edge street, where the city carries on. A dead end is a junction with only one segment that is neither a gate nor an exit. A one-way arrow shows the only direction cars may use; pedestrians may always walk both ways.\nS1 starts from the city’s street lines, which already carry the space syntax results, and the outline of the study area. My decisions from the checks are applied on top, each with its evidence. Every segment keeps the city’s own id, so any value can be traced back to its source.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "S1 Streets"
+    ]
+  },
+  {
+    "objectID": "s1-streets.html#result",
+    "href": "s1-streets.html#result",
+    "title": "S1 Streets",
+    "section": "Result",
+    "text": "Result\n\n232 segments inside · 32 on the edge\n\nBefore the checks, S1 had 190 segments and 12 dead ends. Now it has 2 dead ends.\n\nWhat changed in October\nThe October rebuild came from decisions about the boundary and about a few street ends. Every segment and junction that existed before kept its number. Pieces from later decisions are numbered last, so confirming or rejecting one never renumbers anything else.\nThe boundary first. The city codes Boulevard Robert-Bourassa as a pair of one-way roads about 60 m apart, and the boundary ran between them, so the boulevard carried traffic one way only. S1 now takes in both (C19), and keeps the edge around the whole area.\nThen the street ends. A footway now runs from the end of Brennan through the block to de la Commune (C04, C12), and the end of Ann joins it (C05). These links are assumed, and drawn in pink until a photo or a visit confirms them. From the end of Smith, a 41 m link crosses the plaza of Place des Aiguilleurs (C06). That one was settled with photos.\n\nNames and rulesEvery id\n\n\n\n\n\nSheet A. Click to enlarge.\n\n\n\n\n\n\n\nSheet B: look up any S or J id in the tables. Click to enlarge.\n\n\n\n\n\nThe sheets are turned so the street grid sits level and the labels read easily. The data itself is never turned, and the N arrow always points to true north.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "S1 Streets"
+    ]
+  },
+  {
+    "objectID": "s1-streets.html#try-it-from-here-to-there",
+    "href": "s1-streets.html#try-it-from-here-to-there",
+    "title": "S1 Streets",
+    "section": "Try it: from here to there",
+    "text": "Try it: from here to there\nIn the Lab, open S1 · from here to there, click a start junction, then an end junction. Everything it shows comes from the network alone:\n\n\n\n\n\n\n\nMeasure\nWhat it tells you\n\n\n\n\nShortest route\nthe shortest way along the streets, on foot or by car; every other route is compared with it\n\n\nDirectness\nthe route’s length divided by the straight line between the two points. A grid gives about 1.3; a barrier such as the canal pushes it higher\n\n\nVariety\nin pink, every street you could pass through on a trip at most 0, 5, 10, 25 or 50 % longer than the shortest. A wide band means many ways to go; a thin one means the layout funnels everyone onto one street\n\n\nCost of one-way streets\nby car, how much longer the drive is than the walk between the same two junctions\n\n\n\nA good first example is William at Young to further along William. It is 306 m on foot and 966 m by car, because William is one-way and the car has to go round the block.\nTwo trips from Rue des Bassins show the difference between the grid and the canal. From Bassins at Rioux to Notre-Dame at Robert-Bourassa, a 10 % detour opens up 82 other segments: walkers have many ways. From Bassins at Allée des Barges to Wellington, the walk is 1.7 times the straight line, because the canal has few crossings.\nThese measures say nothing about how anyone actually chooses a route. People do not all take the shortest way, and the turn bans and stops of S3 are not counted here. Routes also stay inside the study area, so by car many trips cannot be made without the city outside, and the Lab says so when that happens. Choice belongs to S6 Walkers and S7 Drivers; these measures are the yardstick their routes will be compared with. Lab notes shows how the measures are tested.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "S1 Streets"
+    ]
+  },
+  {
+    "objectID": "s1-streets.html#notes",
+    "href": "s1-streets.html#notes",
+    "title": "S1 Streets",
+    "section": "Notes",
+    "text": "Notes\nA road map is a poor walking map. The city’s file left out the canal path and the new park paths, and 10 of the 12 dead ends turned out to be places where walkers continue.\nThe boundary is a drawing decision. A line through the middle of a boulevard cut its traffic in half.\nStreet View can be old. Some of my evidence dates from 2007 to 2016, so every decision keeps its date.\nOne step of the reach is one junction. Distances in metres are in the route tool. Time comes later, when S6 and S7 give walkers and cars a speed.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "S1 Streets"
+    ]
+  },
+  {
+    "objectID": "s1-build.html",
+    "href": "s1-build.html",
+    "title": "How S1 is built",
+    "section": "",
+    "text": "flowchart TB\n  IN1[/\"City street lines&lt;br/&gt;whole island\"/]:::data\n  IN2[/\"Study area outline\"/]:::data\n  CFG[/\"Road-class rules&lt;br/&gt;ends within 0.5 m meet\"/]:::rule\n  COR[/\"My decisions&lt;br/&gt;and their evidence\"/]:::rule\n\n  IN1 --&gt; S1[\"READ&lt;br/&gt;every street line\"]:::step\n  IN2 --&gt; S1\n  S1 --&gt; S2[\"SELECT&lt;br/&gt;keep a segment if its&lt;br/&gt;halfway point is inside\"]:::step\n  S2 --&gt; S2b[\"CORRECTIONS&lt;br/&gt;add paths and assumed links,&lt;br/&gt;take in Robert-Bourassa\"]:::step\n  COR --&gt; S2b\n  S2b --&gt; S2c[\"EDGE&lt;br/&gt;outside streets that touch&lt;br/&gt;the area, kept as edge\"]:::step\n  S2c --&gt; S2d[\"NUMBER&lt;br/&gt;pieces from assumptions last\"]:::step\n  S2d --&gt; S3[\"JOIN ENDS&lt;br/&gt;ends closer than 0.5 m&lt;br/&gt;become one junction\"]:::step\n  S3 --&gt; S4[\"KINDS&lt;br/&gt;gates, exits, dead ends,&lt;br/&gt;junctions\"]:::step\n  CFG --&gt; S5\n  S4 --&gt; S5[\"PERMISSIONS&lt;br/&gt;walk? drive? which way?\"]:::step\n  S5 --&gt; OUT1[/\"Segments\"/]:::out\n  S5 --&gt; OUT2[/\"Junctions\"/]:::out\n  OUT1 --&gt; T[\"TESTS&lt;br/&gt;T1 to T7\"]:::test\n  OUT2 --&gt; T\n  T --&gt; V[\"SHEETS\"]:::test\n  V --&gt; W[\"LAB\"]:::test\n\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "How S1 is built"
+    ]
+  },
+  {
+    "objectID": "s1-build.html#blueprint",
+    "href": "s1-build.html#blueprint",
+    "title": "How S1 is built",
+    "section": "",
+    "text": "flowchart TB\n  IN1[/\"City street lines&lt;br/&gt;whole island\"/]:::data\n  IN2[/\"Study area outline\"/]:::data\n  CFG[/\"Road-class rules&lt;br/&gt;ends within 0.5 m meet\"/]:::rule\n  COR[/\"My decisions&lt;br/&gt;and their evidence\"/]:::rule\n\n  IN1 --&gt; S1[\"READ&lt;br/&gt;every street line\"]:::step\n  IN2 --&gt; S1\n  S1 --&gt; S2[\"SELECT&lt;br/&gt;keep a segment if its&lt;br/&gt;halfway point is inside\"]:::step\n  S2 --&gt; S2b[\"CORRECTIONS&lt;br/&gt;add paths and assumed links,&lt;br/&gt;take in Robert-Bourassa\"]:::step\n  COR --&gt; S2b\n  S2b --&gt; S2c[\"EDGE&lt;br/&gt;outside streets that touch&lt;br/&gt;the area, kept as edge\"]:::step\n  S2c --&gt; S2d[\"NUMBER&lt;br/&gt;pieces from assumptions last\"]:::step\n  S2d --&gt; S3[\"JOIN ENDS&lt;br/&gt;ends closer than 0.5 m&lt;br/&gt;become one junction\"]:::step\n  S3 --&gt; S4[\"KINDS&lt;br/&gt;gates, exits, dead ends,&lt;br/&gt;junctions\"]:::step\n  CFG --&gt; S5\n  S4 --&gt; S5[\"PERMISSIONS&lt;br/&gt;walk? drive? which way?\"]:::step\n  S5 --&gt; OUT1[/\"Segments\"/]:::out\n  S5 --&gt; OUT2[/\"Junctions\"/]:::out\n  OUT1 --&gt; T[\"TESTS&lt;br/&gt;T1 to T7\"]:::test\n  OUT2 --&gt; T\n  T --&gt; V[\"SHEETS\"]:::test\n  V --&gt; W[\"LAB\"]:::test\n\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "How S1 is built"
+    ]
+  },
+  {
+    "objectID": "s1-build.html#rules-i-assumed",
+    "href": "s1-build.html#rules-i-assumed",
+    "title": "How S1 is built",
+    "section": "Rules I assumed",
+    "text": "Rules I assumed\nThe city publishes what each class of road is. Who may use it is my decision, so I wrote it down.\n\n\n\n\n\n\n\n\n\nRoad class (city’s name)\nWalk\nDrive\nHow sure\n\n\n\n\nLocal street\nyes\nyes\nsafe\n\n\nPedestrian way\nyes\nno\nsafe\n\n\nBusiness place\nyes\nno\nunsure in general; confirmed for Rue Smith (C02)\n\n\nCollector and arterial\nyes\nyes\nsafe\n\n\nHighway\nno\nyes\nsafe\n\n\nProjected street\nno\nno\nremoved, since it is not built yet\n\n\n\nWhich way cars may go comes from the city’s own one-way code for each street.\nSource for the road classes: Ville de Montréal, Géobase, réseau routier (Resources).",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "How S1 is built"
+    ]
+  },
+  {
+    "objectID": "s1-build.html#the-edge",
+    "href": "s1-build.html#the-edge",
+    "title": "How S1 is built",
+    "section": "The edge",
+    "text": "The edge\nGriffintown is part of Montréal, and people and cars come and go. So S1 keeps every city street just outside the boundary that touches the study area, and calls it the edge. A gate is a junction where the study area meets the edge. An exit is the far end of an edge street: the tests, and later the agents, treat the rest of the city as reachable from there.\nThe edge follows the same rules as the inside, for walkers and for the direction of cars. S3 reads its signs too, so a junction on the boundary sees every street that meets it. Later systems decide what to do with it: S4 puts no buildings there, and S8 measures inside the boundary only.\nPieces from decisions taken after the October rebuild are numbered after everything else, the edge included. Confirming or rejecting one of them then never changes another id.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "How S1 is built"
+    ]
+  },
+  {
+    "objectID": "s1-build.html#two-ideas-behind-it",
+    "href": "s1-build.html#two-ideas-behind-it",
+    "title": "How S1 is built",
+    "section": "Two ideas behind it",
+    "text": "Two ideas behind it\n\nInside or outside?How far can I get?\n\n\nTo decide whether a point lies inside the study area, imagine a line going right from it and count how many times it crosses the outline. An odd count means inside. This is called ray casting. S1 applies it to the halfway point of each segment.\n\n\nStart at one junction and take every allowed move, then every move from each place you reached, and so on. This is called breadth-first search, and each round is one step. The reach view in the Lab plays it round by round.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "How S1 is built"
+    ]
+  },
+  {
+    "objectID": "readings-check.html",
+    "href": "readings-check.html",
+    "title": "Checking the readings",
+    "section": "",
+    "text": "Some sentences on this site lean on a reading: a paper says that layout drives movement, a book says which radius is usual. A sentence like that is only as good as the passage behind it. So I set each one beside its passage, with the page, and fixed the ones that said more than the passage does.",
+    "crumbs": [
+      "Method",
+      "Checking the readings"
+    ]
+  },
+  {
+    "objectID": "readings-check.html#why-this-page",
+    "href": "readings-check.html#why-this-page",
+    "title": "Checking the readings",
+    "section": "",
+    "text": "Some sentences on this site lean on a reading: a paper says that layout drives movement, a book says which radius is usual. A sentence like that is only as good as the passage behind it. So I set each one beside its passage, with the page, and fixed the ones that said more than the passage does.",
+    "crumbs": [
+      "Method",
+      "Checking the readings"
+    ]
+  },
+  {
+    "objectID": "readings-check.html#how-i-checked",
+    "href": "readings-check.html#how-i-checked",
+    "title": "Checking the readings",
+    "section": "How I checked",
+    "text": "How I checked\n\n\n\n\n\nflowchart LR\n  A[Every sentence&lt;br/&gt;that cites a reading]:::data --&gt; B[Find the passage&lt;br/&gt;in the PDF]:::step\n  B --&gt; C{Does it say&lt;br/&gt;what I wrote?}:::test\n  C --&gt; D[yes: supported&lt;br/&gt;add the page]:::out\n  C --&gt; E[partly: reword&lt;br/&gt;the sentence to match]:::out\n  C --&gt; F[no: remove it]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nI turned every PDF in my readings folder into text. The 1993 natural movement paper is a scan, so I read it with OCR (character recognition) first. For each sentence I found the passage, read it in context, noted the printed page and gave a verdict. Where a sentence lacked its passage or page, I added it.",
+    "crumbs": [
+      "Method",
+      "Checking the readings"
+    ]
+  },
+  {
+    "objectID": "readings-check.html#the-sentences",
+    "href": "readings-check.html#the-sentences",
+    "title": "Checking the readings",
+    "section": "The sentences",
+    "text": "The sentences\nMost sentences held. A few said a little more than their reading, and I reworded them; they are marked “partly”.\n\n\n\n\nOn the site\nReading, page\nVerdict\n\n\n\n\nR1\nSpaces carry social meaning and can be described (What space syntax is)\nHillier & Hanson 1984, preface, p. x\nsupported\n\n\nR2\nThe layout of the network is a main driver of how many people walk on each street\nHillier et al. 1993, abstract, p. 29: configuration is “the main generator of patterns of movement”\nsupported\n\n\nR3\nThe natural movement claim is debated; its strength changes with place and land use\nHillier et al. 1993, p. 46: across ten parts of King’s Cross the correlation ranges from 0.25 to 0.80; p. 31: shops act as multipliers and can outweigh layout. Ratti 2004, p. 492: the method leaves out land use\nsupported\n\n\nR4\nRatti: results changed with how the map was drawn, and early methods ignored metres\nRatti 2004, p. 494 and p. 487\nsupported\n\n\nR5\nHillier & Iida: measuring by angle matched movement better than metres\nHillier & Iida 2005, p. 475, tables on pp. 484 to 485\nsupported\n\n\nR6\n“People tend to keep going roughly straight” (Hillier & Iida)\nHillier & Iida 2005, p. 476: people judge routes by their turns\npartly; reworded\n\n\nR7\nTurner: road centrelines, cut into segments, can be analysed\nTurner 2007, abstract, p. 539\nsupported\n\n\nR8\nAngular depth: a right angle costs 1\nTurner 2007, p. 542: a 45° turn gives 0.5\nsupported\n\n\nR9\nHillier, Yang & Turner: values compare between networks of different sizes\nHillier, Yang & Turner 2012, p. 165\nsupported\n\n\nR10\nNACH = log(CH + 1) / log(TD + 3)\nHillier, Yang & Turner 2012, p. 160 and p. 191\nsupported; PlanX matches it exactly\n\n\nR11\nNAIN, normalised integration\nHillier, Yang & Turner 2012, p. 165 and p. 191 give two forms\nPlanX uses a third; warning added\n\n\nR12\nIntegration is closeness centrality (Sabidussi 1966)\nSabidussi 1966, p. 583\nsupported; PlanX’s integration is the normalised NAIN\n\n\nR13\nChoice is betweenness centrality (Freeman 1977)\nFreeman 1977, pp. 35 to 37; Turner 2007, p. 544\nsupported\n\n\nR14\n200, 400 and 800 m are the walkable neighbourhood\nvan Nes & Yamu 2021, p. 65: 400 to 800 m is the usual low radius\nsupported\n\n\nR15\n2000 m is a common scale for driving\nHillier, Yang & Turner 2012, p. 165: radius 2000 is “safe to use”, for cities in general\npartly; reworded, the passage says nothing about cars\n\n\nR16\nThe edge of the map distorts (Why I use it)\nRatti 2004, p. 496; van Nes & Yamu 2021, p. 51\nsupported\n\n\nR17\nWalkers taking the least-turning route would match choice by construction\nTurner 2007, p. 544\npartly; holds only if trips spread evenly over all pairs, condition added\n\n\nR18\nHillier: a spatial culture is a distinctive way of ordering space (About)\nHillier 1989, quoted in Griffiths & von Lünen 2016, p. xxiii\nsupported through the quotation; I have not read Hillier 1989\n\n\nR19\nSpatial cultures link how a built environment works with how it comes to mean\nGriffiths & von Lünen 2016, preface, p. xxi\nsupported\n\n\nR20\nSpace syntax research tends to take time out of social practice\nGriffiths & von Lünen 2016, p. xxiii, after Griffiths 2011\nsupported\n\n\nR21\nAdams aims to give spatial culture a structure to be “qualified and documented”\nAdams 2024, introduction (no page numbers in the ebook)\nsupported\n\n\nR22\nLefebvre: each space has its own times, and spatial practice links daily routine with the networks between places. His triad of spaces loses its force as an abstract model\nLefebvre 1991, pp. 31, 38 to 40\nsupported\n\n\nR23\nSchellenberg: records hold evidence of how their maker worked, and information about people and places\nSchellenberg 1956 (2003 reissue), pp. 139 to 140, 148\nsupported\n\n\nR24\nLondon Charter: paradata, the decisions linking sources to outcomes\nLondon Charter 2.1 (2009), principle 4.6\nsupported\n\n\nR25\nSeville: show what is real and what is not, with levels of accuracy; the work should be testable by others\nLópez-Menchero & Grande, principles 4 (4.4.2) and 7\nsupported\n\n\nR26\nSeville: no “lifeless cities”\nLópez-Menchero & Grande, principle 5.3\nsupported\n\n\nR27\nTaylor: the archive of enduring things and the repertoire of embodied practice are not by definition opposed\nTaylor 2003, pp. 19 to 21, 36\nsupported\n\n\nR28\nRhythm appears wherever a place and a time meet an expenditure of energy\nLefebvre 2004, Rhythmanalysis, p. 15\nsupported\n\n\nR29\nWhere there is rhythm, there is measure\nLefebvre 2004, p. 8\nsupported\n\n\nR30\nThe junction seen from the window: red, pedestrians cross; green, the cars rush\nLefebvre 2004, p. 28\nsupported\n\n\nR31\nThe rhythmanalyst is closer to the poet than to the statistician who counts (used as an objection)\nLefebvre 2004, p. 23\nsupported\n\n\nR32\nSchellenberg defines his two values “quite arbitrarily”\nSchellenberg 1956, p. 139\nsupported\n\n\n\nOne more sentence was wrong for another reason. Why I use it still said the city counted at four places on one day. Since October the counts cover seven S1 junctions (Movement counts), and I corrected it.",
+    "crumbs": [
+      "Method",
+      "Checking the readings"
+    ]
+  },
+  {
+    "objectID": "readings-check.html#planx-against-the-readings",
+    "href": "readings-check.html#planx-against-the-readings",
+    "title": "Checking the readings",
+    "section": "PlanX against the readings",
+    "text": "PlanX against the readings\nI also checked the analysis itself against the readings, using PlanX’s own output.\n\nDoes PlanX count a journey once, or once each way?\nPlanX’s manual left this open: its text halves choice and its formula does not. The output settles it.\nA dead-end street segment has one neighbour, and every journey out of the dead end passes through it. When that neighbour meets only two other lines at its far end, nothing else passes through it. Its choice is then simply the number of journeys between the dead end and every other segment. Counted once per pair, that is the number of segments reached less two. Counted once each way, it is double.\nFor 103 such neighbours, choice equals the once-per-pair count. For none does it equal the once-each-way count. The remaining 18 have other journeys passing through them. So PlanX counts each pair once, as Turner defines it (2007, p. 544).\nThe readings do not say how Depthmap stores its raw count. If a tool counted both ways, NACH would rise by about 0.05 at radius n here, and about 0.1 at 800 m (likely). That matters before setting Griffintown’s NACH beside a published one.\n\n\nIs NACH the published formula?\nYes. The published formula gives PlanX’s NACH on all 47,197 lines, at radius n and at 800 m, to the last decimal.\n\n\nWhich NAIN?\n\n\n\n\n\n\n\n\nForm\nSource\nMatches PlanX\n\n\n\n\nNC^1.2 / TD\nthe paper’s text, p. 165\nno: median difference 1.3 % at 800 m\n\n\n(NC + 2)^1.2 / TD\nthe paper’s appendix, p. 191\nno: median difference 0.8 % at 800 m\n\n\n(NC + 2)^1.2 / (TD + 2)\nPlanX\nyes, exactly\n\n\n\nThe order of the segments barely moves between forms (rank correlation 0.9995 at 800 m), so maps and rankings stay the same. The numbers themselves do not travel: compare a NAIN from this site only with one computed by the same form.\n\n\nIs Griffintown’s network ordinary?\nHillier, Yang and Turner (2012, p. 162) found that the mean NACH of real cities ranges from about 0.7 to 1.2. The whole island of Montréal, on my walking network, has a mean of 0.80 at radius n. That sits inside the range, which suggests the network was built and analysed in an ordinary way.",
+    "crumbs": [
+      "Method",
+      "Checking the readings"
+    ]
+  },
+  {
+    "objectID": "readings-check.html#readings-not-used-yet",
+    "href": "readings-check.html#readings-not-used-yet",
+    "title": "Checking the readings",
+    "section": "Readings not used yet",
+    "text": "Readings not used yet\nNo sentence on the site rests on two readings yet. Offenhuber and Ratti’s Decoding the City (2014) will matter for data and computer vision in the city. The Depthmap 4 handbook and the Depthmap manual 14a will matter when I compare PlanX with that other tool.\nThe archive readings and Lefebvre’s Rhythmanalysis were added on 10 October and are checked above. The four readings I make of these sources are defended on the About page.",
+    "crumbs": [
+      "Method",
+      "Checking the readings"
+    ]
+  },
+  {
+    "objectID": "readings-check.html#limits",
+    "href": "readings-check.html#limits",
+    "title": "Checking the readings",
+    "section": "Limits",
+    "text": "Limits\nI checked the sentences against the readings I have, so a claim can be supported here and still be contested elsewhere. OCR can misread a number; I checked the King’s Cross figures against the table layout, and they read consistently. Page numbers are the printed ones, so they match the published versions.",
+    "crumbs": [
+      "Method",
+      "Checking the readings"
+    ]
+  },
+  {
+    "objectID": "lab.html",
+    "href": "lab.html",
+    "title": "Lab",
+    "section": "",
+    "text": "This is one map with every system on it. Paint the streets with one system and show others on top of it. Each system’s tools have sliders you can try, and the results of the latest tests are listed at the bottom left. The Lab notes explain how the Lab works and how it is tested.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Situ",
+    "section": "",
+    "text": "Situ is the prototype for my PhD research-creation project. It asks whether the spatial culture and urban rhythm of Griffintown, Montréal, can be mediated and archived through a game-like 3D experience. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from observation, and I read both through urban theory. Game design carries the result to a player.\nNothing in Situ archives anything yet. So far there is a foundation: the street network with its rules, and the measures I will test it against.",
+    "crumbs": [
+      "Method",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#what-situ-is",
+    "href": "about.html#what-situ-is",
+    "title": "About Situ",
+    "section": "",
+    "text": "Situ is the prototype for my PhD research-creation project. It asks whether the spatial culture and urban rhythm of Griffintown, Montréal, can be mediated and archived through a game-like 3D experience. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from observation, and I read both through urban theory. Game design carries the result to a player.\nNothing in Situ archives anything yet. So far there is a foundation: the street network with its rules, and the measures I will test it against.",
+    "crumbs": [
+      "Method",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#the-idea",
+    "href": "about.html#the-idea",
+    "title": "About Situ",
+    "section": "The idea",
+    "text": "The idea\n\nSpatial culture\nHillier described a spatial culture as “a distinctive way of ordering space” (Hillier 1989, quoted in Griffiths & von Lünen 2016, p. xxiii). Griffiths and von Lünen see the field as the link between how a built place works and what it comes to mean to the people who live in it (2016, p. xxi). Adams (2024, introduction) wants spatial culture to be “qualified and documented”, which is close to what an archive needs.\n\n\nRhythm\nA street layout has no time in it, and space syntax tends to strip social practice of its time (Griffiths & von Lünen 2016, p. xxiii). Lefebvre finds rhythm wherever energy is spent in a particular place and time (2004, p. 15). His own example is a Paris junction seen from his window: on red the pedestrians cross, on green the cars rush (p. 28). The light cycles in S3 model that beat. He also holds that where there is rhythm there is measure (p. 8), so counts and timings belong in Situ. I add time on purpose: when places are open and when streets are busy.\n\n\nArchiving\nAn archive keeps two things: the evidence records give of how their maker worked, and the information they hold about people and places (Schellenberg 1956, pp. 139 to 140). Situ keeps both. The city data says what Griffintown is. My decision files and tests record how I turned it into a model, the layer the London Charter calls paradata (2009, principle 4.6). The Seville principles ask that a reconstruction show what is real and what is not (López-Menchero & Grande, principle 4), and that others can test it (principle 7). So every decision in my files carries a status, such as confirmed, assumed, likely or open.\nRhythm is the hard part. Taylor separates the archive of lasting things from the repertoire of embodied practice, like walking to work or lingering at a corner, which needs people to be present (2003, pp. 19 to 20). Situ cannot store a rhythm the way it stores a street. It can keep traces such as counts and timings, and offer a place where the rhythm can be performed again: the game. The Seville principles warn against showing “lifeless cities” (principle 5.3).\n\n\nWhat Situ has and what it lacks\nLefebvre describes three moments of social space (1991, pp. 38 to 40). I use them as a checklist. He warns that they lose their force when treated as an abstract model (p. 40), so each row stays open to revision.\n\n\n\n\n\n\n\n\nLefebvre\nIn Situ\nStatus\n\n\n\n\nconceived space: plans, maps, data\nthe network and its rules (S1 to S3), building types (S4), from city data and OpenStreetMap\nbuilt up to S4\n\n\nperceived space: daily routines\nrhythm and movement (S5 to S8), from the city’s counts and later computer vision\ncounts read, systems to come\n\n\nlived space: space as its users live it\nthe game, and what people say about the place, through play and later interviews\nnot started\n\n\n\n\n\n\n\n\n\nNoteFour readings I make, and how I defend them\n\n\n\n\n\nThese are my own interpretations of the sources. For each one I give my reason, the strongest objection I know, my answer, and what would show me wrong.\n\n1. Lefebvre’s triad as a checklist\n\nReason. Each kind of source in Situ lines up with one of Lefebvre’s moments of social space (1991, pp. 38 to 40).\nObjection. He warns that the triad loses its force as an abstract model (p. 40), and laying it over software comes close to that.\nAnswer. I use it only to see what is missing, and the lived row is empty. The rows also leak: the counts are observation, yet the city decided where to count.\nWrong if the rows cannot be kept apart at all. Then the table should show the crossings.\n\n\n\n2. “That difference is what the archive should keep”\n\nReason. Where space syntax and observed movement disagree, something besides the layout is at work, such as a shop or a rule. Griffiths and von Lünen ask research to spell out that kind of gap (2016, p. xxi), and the 1993 natural movement paper itself shows shops multiplying the effect of the layout (Hillier et al. 1993, p. 31).\nObjection. A difference may only be error, such as a wrong network or too few counts.\nAnswer. So every system is tested, and a difference counts only after those checks.\nWrong if the differences vanish once errors are fixed, or follow no pattern.\n\n\n\n3. Schellenberg’s two values\n\nReason. Schellenberg separates evidence of how a record’s maker worked from information about people and places (1956, pp. 139 to 140, 148). My decision files are the first kind and the city data is the second. The London Charter calls the first layer paradata (2009, principle 4.6).\nObjection. He wrote about government records in 1956, and a research model is no government agency.\nAnswer. I borrow only his distinction, which he says he defines “quite arbitrarily” (p. 139). The London Charter already carries it into visualisation.\nWrong if the two layers cannot be kept apart. That is why my corrections live in their own file and the city’s files stay untouched.\n\n\n\n4. Rhythm as repertoire, and the game as a place to perform it again\n\nReason. Taylor’s repertoire is embodied practice that needs people to be present (2003, pp. 19 to 20), and Lefebvre’s rhythm needs bodies spending energy (2004, p. 15). Play is embodied action too.\nObjection. A player alone in a simulation receives no memory from Griffintown’s people, and the game itself is code and data, an archive object. Lefebvre adds that the rhythmanalyst is closer to the poet than to “the statistician, who counts things” (2004, p. 23).\nAnswer. I accept most of this. The game keeps traces and sets up a new performance. It does not hold the original repertoire, which is why interviews and focus groups are in the plan.\nWrong if players’ movement bears no relation to the recorded rhythms. Then the game performs nothing of Griffintown.\n\n\n\n\n\n\n\nSpace syntax as one measuring stick\nSpace syntax describes the layout. I use it to measure, and the simulated walkers never read it. At the end, S8 compares where they went with what space syntax predicts and with the city’s counts. Where they agree, the layout may explain the movement. Where they differ, something else is at work, and that difference is what the archive should keep. Why I use it\n\n\n\n\n\nflowchart LR\n  D[City data&lt;br/&gt;streets, buildings,&lt;br/&gt;signs, lights]:::data --&gt; S[Small systems&lt;br/&gt;S1 to S7]:::step\n  O[Observation&lt;br/&gt;counts, later&lt;br/&gt;computer vision]:::data --&gt; S\n  S --&gt; M[Simulated movement&lt;br/&gt;and rhythm]:::step\n  M --&gt; C{S8 Observer&lt;br/&gt;compare}:::test\n  SS[Space syntax]:::data --&gt; C\n  O --&gt; C\n  C --&gt; G[The game:&lt;br/&gt;a place to play&lt;br/&gt;and to keep]:::out\n  L[Lived accounts&lt;br/&gt;interviews, play]:::data --&gt; G\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nI build Situ as small systems, each with a single job. I draw each one as a blueprint and test it, then try it in the Lab before the next one starts.",
+    "crumbs": [
+      "Method",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#the-systems",
+    "href": "about.html#the-systems",
+    "title": "About Situ",
+    "section": "The systems",
+    "text": "The systems\n\n\n\n\nSystem\nJob\nStatus\n\n\n\n\n\nWalking network\nAdd the city’s off-street paths before space syntax is calculated\nbuilt, tested\n\n\nS1\nStreets\nWhich streets connect, and who may use them in which direction\nbuilt, tested\n\n\nS2\nScores\nAttach the space syntax values to each street\nbuilt, tested\n\n\nS3\nRules\nStop signs, traffic lights, forbidden turns, speed limits\nbuilt, tested\n\n\nS4\nBuildings\nWhat each building is, so people have places to go\nbuilt, tested\n\n\nS5\nRhythm\nHow busy each place is at each hour\nnext\n\n\nS6\nWalkers\nPedestrians going from building to building\nlater\n\n\nS7\nDrivers\nCars that obey the rules\nlater\n\n\nS8\nObserver\nCounts where everyone went and compares\nlater",
+    "crumbs": [
+      "Method",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#where-to-start",
+    "href": "about.html#where-to-start",
+    "title": "About Situ",
+    "section": "Where to start",
+    "text": "Where to start\n\nIf space syntax is new to you: What space syntax is\nFor the first system: S1 Streets\nTo see every system on one map: the Lab\nFor every data source and reading: Resources",
+    "crumbs": [
+      "Method",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#reading-the-diagrams",
+    "href": "about.html#reading-the-diagrams",
+    "title": "About Situ",
+    "section": "Reading the diagrams",
+    "text": "Reading the diagrams\nEvery blueprint uses the same key. A grey outline is data coming in, and a dashed grey one is a decision I made and kept in a file. A white outline is a processing step, and a thick white one is a result written to disk. Pink marks a test.\nOn the map sheets, labels never overlap. When a label has to move, a thin line points back to what it names.",
+    "crumbs": [
+      "Method",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "counts.html",
+    "href": "counts.html",
+    "title": "Movement counts and light timing",
+    "section": "",
+    "text": "The city counts traffic at intersections: every car, truck, bus, bicycle and pedestrian, in 15-minute slices. For vehicles it records each movement (northbound left, northbound through and so on). For pedestrians and bicycles it records each crosswalk. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction. That leaves seven junctions:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day, 6:30 to 18:15, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day, 6:30 to 18:15, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day, 6:00 to 18:15, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nBeyond the lights, these counts are good for two things. S8 will compare simulated movement with space syntax, and these seven junctions let it also compare with movement that was actually counted: what people did on given days. And J040 was counted around the clock for three days, which gives S5 Rhythm a real day to start from.\n\n\n\nA day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#what-the-city-counted",
+    "href": "counts.html#what-the-city-counted",
+    "title": "Movement counts and light timing",
+    "section": "",
+    "text": "The city counts traffic at intersections: every car, truck, bus, bicycle and pedestrian, in 15-minute slices. For vehicles it records each movement (northbound left, northbound through and so on). For pedestrians and bicycles it records each crosswalk. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction. That leaves seven junctions:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day, 6:30 to 18:15, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day, 6:30 to 18:15, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day, 6:00 to 18:15, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nBeyond the lights, these counts are good for two things. S8 will compare simulated movement with space syntax, and these seven junctions let it also compare with movement that was actually counted: what people did on given days. And J040 was counted around the clock for three days, which gives S5 Rhythm a real day to start from.\n\n\n\nA day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#why-the-lights-need-an-estimate",
+    "href": "counts.html#why-the-lights-need-an-estimate",
+    "title": "Movement counts and light timing",
+    "section": "Why the lights need an estimate",
+    "text": "Why the lights need an estimate\nS3 knows where the 31 lights in S1 are. It does not know how long they stay green, because the city does not publish its timing plans. So the timing has to be estimated, and the estimate is mine.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#websters-method",
+    "href": "counts.html#websters-method",
+    "title": "Movement counts and light timing",
+    "section": "Webster’s method",
+    "text": "Webster’s method\nWebster’s method (Webster 1958) is the classic way to set a fixed light cycle from counted traffic. It asks how full each approach is, and which cycle length keeps the delay smallest. I apply it to the busiest counted hour.\nHow full an approach is means the cars arriving per hour (a bus or truck counts as two) divided by what its lanes can pass while green, about 1,800 cars an hour per lane. The lanes come from OpenStreetMap. Each phase of the light takes its fullest approach, and the phases add up to a total load. Webster’s formula turns that total, and the time lost each time the green changes (4 s per phase here), into a cycle length. Each phase then gets green in proportion to its load.\nI add one check Webster does not make. A pedestrian crossing during a phase needs at least 7 s to start, plus the time to cross at a walking speed of 1.2 m/s. Where the green is shorter, I lengthen it.\nThe two phases run along Montréal’s north-south, then its east-west. “North” here means the street grid’s north, about 305° on the compass, as in the city’s counts. The counts confirm it: at J040 almost nothing arrives from the north, where Ottawa is the one street no car may arrive along.\n\n\n\nThe estimated cycles, second by second. Grey: amber and all-red, the time lost when the green changes.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#what-it-shows",
+    "href": "counts.html#what-it-shows",
+    "title": "Movement counts and light timing",
+    "section": "What it shows",
+    "text": "What it shows\nAt J040 (Guy, Ottawa and William), at 16h on 18 December 2024, the total load was 0.29 and Webster’s cycle came to 24 s. At J051 (de la Montagne and Notre-Dame) the load was 0.38 and the cycle 27 s.\nThe traffic is far from filling these lights. Cycles of 24 and 27 s are much shorter than any city would use, so the cycle I use is my lower limit of 60 s. The green is then set by pedestrians and by the split of loads: 26 s each way at J040, and 38 s north-south against 14 s east-west at J051. That is a finding about Griffintown’s streets, and also a warning: at these volumes, the timing is more a design choice than a consequence of traffic.\nJ181, on Robert-Bourassa, is skipped. Three of its four approaches lie beyond the network, and Webster needs them all.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#the-other-29-lights",
+    "href": "counts.html#the-other-29-lights",
+    "title": "Movement counts and light timing",
+    "section": "The other 29 lights",
+    "text": "The other 29 lights\nI weighed four options. One plan for all lights would be simple, but a main street and a side street would get the same green. Borrowing the split of a counted light on the same streets would use real counts, but only two lights were counted. Timing the lights from space syntax was ruled out: S8 compares movement with space syntax, and lights timed from it would make S8 measure its own input. I chose to share the green by road class, which uses the city’s own street hierarchy, already in S1.\n\nWhy road class\nThe city’s 2007 review of its arterial network (PDF) gives each class a daily traffic range: main arteries carry over 30,000 vehicles, collectors 1,000 to 15,000. Managing the flow is “prépondérante” on main arteries and “peu” on collectors (Ville de Montréal 2007). The United States standard says the same: “In general, the higher the traffic volume is, the higher the functional classification will be” (FHWA 2023, p. 26, PDF). And Webster (1958) shares the green in proportion to how full each approach is, so a busier street should get more of it.\n\n\nTesting it on our counts\nAt every counted junction where the two streets differ in class, the higher class carried more traffic over the counted day:\n\n\n\n\n\n\n\n\n\nJunction\nHigher class\nLower class\nRatio\n\n\n\n\nJ040 Guy, Ottawa and William\nWilliam, collector\nGuy, local\n2.5\n\n\nJ006 Ann and Wellington\nWellington, secondary arterial\nAnn, local\n8.5\n\n\nJ056 Murray and Wellington\nWellington\nMurray, local\n10\n\n\nJ092 Young and Wellington\nWellington\nYoung, local\n22\n\n\nJ086 Shannon and Wellington\nWellington\nShannon, local\n29\n\n\n\nFive out of five, though four are on Wellington, so the sample is small. And road class does not match Webster at the two counted lights. At J040 it would give 21 and 31 s where Webster gives 26 and 26, because at the busiest hour each lane is about as full on both streets. At J051 it would give 26 and 26 s where Webster gives 38 and 14, because the classes are equal but de la Montagne is busier. So the class tells which street gets more green over a day. It cannot tell how much at a given hour. That is why the counted lights keep Webster, and why the share by class is a cautious 60 %.\n\n\nThe rule\nEach street arriving at a light belongs to one of the two axes, and each axis takes the highest class among its streets: main arterial (with highway) above secondary arterial, above collector, above local. If both axes have the same class, the two phases share the 52 s of usable green equally. If not, the higher class gets 60 % and the lower 40 %. No phase is shorter than its pedestrians need, and where they need more, the cycle grows. Where cars arrive on one axis only, the other phase is for pedestrians.\nOf the 31 lights, 2 follow Webster from counts, 17 have one street of higher class, 7 have equal classes, and 5 have cars on one axis only, mostly at the edge where the cross street lies beyond the network. In S7 these become the light plans, and the 60 % share and the 60 s cycle will be sliders in the Lab.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#assumptions",
+    "href": "counts.html#assumptions",
+    "title": "Movement counts and light timing",
+    "section": "Assumptions",
+    "text": "Assumptions\nEvery number here is a choice, and two are mine alone. The 60 s lower limit on the cycle (with 120 s as the upper) is my guess for a city centre, and it sets every cycle here. The 60 % share is my own choice: the counts show which street is busier, and say nothing of the amount. The other values (lane capacity, time lost per phase, walking speed and walk interval) follow Webster or common practice; real amber and all-red times are not published, and Montréal does not publish its own walking speed. The lane counts from OpenStreetMap cover 866 of 870 car ways, and I checked them at three junctions only.\nThe counts themselves are a few days each, in winter or spring. They show those days, not a typical year.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#pedestrian-signals",
+    "href": "counts.html#pedestrian-signals",
+    "title": "Movement counts and light timing",
+    "section": "Pedestrian signals",
+    "text": "Pedestrian signals\nThe city’s pedestrian-signal file uses the same intersection numbers as its light file. 30 of the 31 lights in S1 have pedestrian signals. The one without is Seigneurs and William.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html",
+    "href": "lab-notes.html",
+    "title": "Lab notes",
+    "section": "",
+    "text": "The Lab is one map with every system on it. Each system page keeps its own blueprint and maps. The Lab is where the systems meet, and where I can try them.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When a slider moves, the Lab switches between runs a stress test already made, or steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#what-the-lab-is",
+    "href": "lab-notes.html#what-the-lab-is",
+    "title": "Lab notes",
+    "section": "",
+    "text": "The Lab is one map with every system on it. Each system page keeps its own blueprint and maps. The Lab is where the systems meet, and where I can try them.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When a slider moves, the Lab switches between runs a stress test already made, or steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#what-it-shows",
+    "href": "lab-notes.html#what-it-shows",
+    "title": "Lab notes",
+    "section": "What it shows",
+    "text": "What it shows\nOnly one system paints the streets at a time, because two colourings on one line cannot be read. The others can be shown on top.\n\n\n\n\n\n\n\n\n\nSystem\nPaints the streets with\nShows on top\nLets you try\n\n\n\n\nS1 Streets\nwho may use each street\ngates, dead ends, one-way arrows and checkpoints\nhow far you can get from a junction, and every street a trip up to 50 % longer than the shortest route could use\n\n\nS2 Scores\nchoice or integration, on foot or by car, with a radius slider that can play\n\n\n\n\nS3 Rules\nspeed limits\nstops and lights; click a junction for its rules and signs\nits stress tests as sliders, such as moving the signs\n\n\nS4 Buildings\n\nbuildings coloured by use; click one for its values and sources\n\n\n\n\nThe latest test reports of every system are listed in the Lab as well.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#how-it-is-built",
+    "href": "lab-notes.html#how-it-is-built",
+    "title": "Lab notes",
+    "section": "How it is built",
+    "text": "How it is built\n\n\n\n\n\nflowchart LR\n  B1[\"S1 Streets&lt;br/&gt;results and checks\"]:::step --&gt; W1[\"copy for the Lab\"]:::step\n  B2[\"S2 Scores&lt;br/&gt;results and checks\"]:::step --&gt; W2[\"copy for the Lab\"]:::step\n  B3[\"S3 Rules&lt;br/&gt;results and checks\"]:::step --&gt; W3[\"copy for the Lab\"]:::step\n  C[\"shared way of copying\"]:::rule --&gt; W1\n  C --&gt; W2\n  C --&gt; W3\n  W1 --&gt; D1[/\"S1 data\"/]:::out\n  W2 --&gt; D2[/\"S2 data\"/]:::out\n  W3 --&gt; D3[/\"S3 data\"/]:::out\n  B1 --&gt; R1[\"shortest routes\"]:::step\n  R1 --&gt; D4[/\"route data\"/]:::out\n  D4 --&gt; L\n  D4 --&gt; T\n  D1 --&gt; L[\"the Lab\"]:::test\n  D2 --&gt; L\n  D3 --&gt; L\n  B4[\"S4 Buildings&lt;br/&gt;results and checks\"]:::step --&gt; W4[\"copy for the Lab\"]:::step\n  C --&gt; W4\n  W4 --&gt; D5[/\"S4 data\"/]:::out\n  D5 --&gt; L\n  D5 --&gt; T\n  D1 --&gt; T[\"the Lab checks&lt;br/&gt;L1 to L6\"]:::test\n  D2 --&gt; T\n  D3 --&gt; T\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nEach system copies its tables into one file for the Lab. A browser may refuse to read a data file from the disk, but it always runs a script, so each file is written as a small script. That way the Lab works even when the book is opened without a server.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#tests",
+    "href": "lab-notes.html#tests",
+    "title": "Lab notes",
+    "section": "How the Lab is tested",
+    "text": "How the Lab is tested\nThe Lab checks ask one thing: does the Lab show exactly what the systems wrote?\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nL1\nDo the Lab’s streets and junctions match S1, and does each junction reach the same streets? For every 15th junction the reach is worked out again from scratch.\n\n\nL2\nDoes every S2 value equal the S2 table, with missing values still missing?\n\n\nL3\nDo the S3 rules, signs, speeds and checkpoints equal the S3 tables?\n\n\nL4\nDo the sliders give the same counts as the S3 stress tests?\n\n\nL5\nIs every shortest route real and truly shortest, and do the browser’s route rules give the same routes as the originals?\n\n\nL6\nDoes every S4 building and place equal the S4 tables, down to each point of each outline, with empty cells still empty?\n\n\n\nAll six pass, and the Lab lists the latest results.\nI broke the files on purpose before trusting these checks. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, the same check for S3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change.\nThe shortest-route check does not trust the method that found the routes. If a route is real and no single move anywhere could shorten any distance, then no shorter route exists. That is checked separately, for every start and every move.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
+    ]
+  },
+  {
+    "objectID": "network.html",
+    "href": "network.html",
+    "title": "The walking network",
+    "section": "",
+    "text": "The city’s street file (Géobase) draws streets. It leaves out most paths away from the street, including the Lachine Canal path and the park paths in Griffintown.\nSpace syntax reads the whole network at once (why that matters). So a missing path does double harm: its own place is empty, and the streets around it look less connected than they are.\nBefore running the analysis, I built one walking network for the whole island of Montréal, with the paths people actually use. The original Sample 4 files stay untouched beside it. This network is for the pedestrian analysis only. Cars get their own, built by the same road rules as S1 (below).",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#why-i-made-it",
+    "href": "network.html#why-i-made-it",
+    "title": "The walking network",
+    "section": "",
+    "text": "The city’s street file (Géobase) draws streets. It leaves out most paths away from the street, including the Lachine Canal path and the park paths in Griffintown.\nSpace syntax reads the whole network at once (why that matters). So a missing path does double harm: its own place is empty, and the streets around it look less connected than they are.\nBefore running the analysis, I built one walking network for the whole island of Montréal, with the paths people actually use. The original Sample 4 files stay untouched beside it. This network is for the pedestrian analysis only. Cars get their own, built by the same road rules as S1 (below).",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#what-changed",
+    "href": "network.html#what-changed",
+    "title": "The walking network",
+    "section": "What changed",
+    "text": "What changed\n\nTaken outAdded\n\n\nHighways come out, because nobody walks on them, and so do streets that exist only as plans.\nBike lanes painted on a street stay out, and so do paths lying on top of a street, since the street is already there and would be drawn twice. Added pieces that join nothing are dropped too, because a piece on its own would get meaningless values.\n\n\nI added the off-street bike and multi-use paths from the city’s bike network, because people walk on them. Some of these paths are filed under a highway, mostly the separated paths on bridges. Removing the highway would have removed them as well, so I put them back. I also added the two Griffintown park paths I checked on photos in S1 (decision C18).\nWhere a path end and a street do not quite touch in the data, a short straight line joins them. I call these connectors, and every one is listed.\n\n\n\n\n47,197 lines\n\nThe network carries the same October decisions as S1: the footway behind Brennan and Ann (C04), and the link across Place des Aiguilleurs from the end of Smith (C06).",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#how-it-is-built",
+    "href": "network.html#how-it-is-built",
+    "title": "The walking network",
+    "section": "How it is built",
+    "text": "How it is built\n\n\n\n\n\nflowchart TB\n  A[/\"City streets&lt;br/&gt;Sample 4\"/]:::data\n  B[/\"City bike network\"/]:::data\n  C[/\"Park paths&lt;br/&gt;decision C18\"/]:::rule\n  M[/\"Checked places&lt;br/&gt;M01\"/]:::rule\n\n  A --&gt; S0[\"LEAVE OUT&lt;br/&gt;highways, planned streets\"]:::step\n  B --&gt; S1[\"READ PATHS&lt;br/&gt;off-street only,&lt;br/&gt;plus paths under removed highways\"]:::step\n  C --&gt; S1\n  S0 --&gt; S2\n  S1 --&gt; S2[\"DROP DUPLICATES\"]:::step\n  S2 --&gt; S3[\"JOIN&lt;br/&gt;path ends, then street dead ends\"]:::step\n  M --&gt; S3\n  S3 --&gt; S4[\"CUT STREETS&lt;br/&gt;where a connector lands\"]:::step\n  S4 --&gt; S5[\"DROP ISLANDS\"]:::step\n  S5 --&gt; T[\"CHECKS&lt;br/&gt;C1 to C6\"]:::test\n  T --&gt; O[/\"Walking network&lt;br/&gt;with a report and lists\"/]:::out\n\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\n\n\n\n\n\n\nNoteEach step in plain words\n\n\n\n\n\nA path counts as a duplicate when most of its length runs within 10 m of a street. It stays out.\nJoining follows the same rules as S1. A path end joins the nearest junction or street, and a street dead end may join the middle of a path. Across most of the island the gap may be at most 15 m. In Griffintown, and at places I have checked on a photo, it may be 25 m, because there I have looked and can trust a longer gap. Nobody has looked at the rest of the island, so the rule stays strict there. When a path crosses a street with no junction, I leave it unjoined, since the crossing could be a bridge or a tunnel.\nWhere a connector lands in the middle of a street, the street is split at that point so the path has a junction to meet. Its total length stays the same.\nFinally, every line is grouped with the lines it touches. Added pieces outside the main group are dropped. City streets are never dropped; if one is cut off, a check reports it.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#a-checked-place-île-des-sœurs",
+    "href": "network.html#a-checked-place-île-des-sœurs",
+    "title": "The walking network",
+    "section": "A checked place: Île-des-Sœurs",
+    "text": "A checked place: Île-des-Sœurs\nOn the first run Île-des-Sœurs was cut off from the rest of the network. The bike path from the bridge ends 15.2 m from the boulevard, just over the 15 m limit.\nRaising the limit for the whole island would have created joins everywhere else. So I checked this one place on a photo.\n\n\n\nThe path meets Boulevard de l’Île-des-Sœurs at a painted crossing. Photo: Sacha862, December 2024, via Mapillary (CC BY-SA 4.0).\n\n\nThe crossing is real. I recorded it as a checked place (M01), confirmed from the December 2024 photo. Near it, the longer Griffintown limit applies. Any other gap gets fixed the same way: look, decide, record it, run again.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#checks",
+    "href": "network.html#checks",
+    "title": "The walking network",
+    "section": "Checks",
+    "text": "Checks\n\n\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nC1\nIs every walkable city street still there, at the same length?\nyes, all of them\n\n\nC2\nWere any painted bike lanes added?\nno\n\n\nC3\nIs every connector within its limit?\nyes\n\n\nC4\nWhere does an added path cross a street with no junction?\n73 places, all listed\n\n\nC5\nDoes Griffintown match S1?\nyes\n\n\nC6\nWhich parts are cut off from the main network?\n6 small parts",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#maps",
+    "href": "network.html#maps",
+    "title": "The walking network",
+    "section": "Maps",
+    "text": "Maps\n\nGriffintownIsland\n\n\n\n\n\nGriffintown and 900 m around it. Grey: city streets. White: added city paths, with the canal path along the south of the boundary. White dotted: the two park paths. Pink: connectors.\n\n\n\n\n\n\n\nThe whole island. Pink: parts cut off from the main network.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#risks",
+    "href": "network.html#risks",
+    "title": "The walking network",
+    "section": "Risks",
+    "text": "Risks\nA connector could join two things that are separate in reality. To guard against that, the gaps allowed are short and every connector is listed. Crossings are never joined automatically. The opposite can happen too: a real link stays unjoined. The 73 crossings are listed, and I can add checked places one by one.\nBike paths stand in for footpaths, and a few may be unpleasant or closed to walking, so I took only separated paths and multi-use trails. The city maps park footpaths less well than bike paths, and I checked only Griffintown on photos, so values far from it are less certain.\nNear Griffintown the risk is low. Within 800 m there is one unjoined crossing, and within 2 km there are four.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#the-analysis",
+    "href": "network.html#the-analysis",
+    "title": "The walking network",
+    "section": "The analysis",
+    "text": "The analysis\nOn 10 October I ran PlanX on this network with the Sample 4 pedestrian settings: angular segment analysis, at radii of 200, 400 and 800 m and the whole network. Every line kept its number and its shape, so S2 can trace each value back to one line.\nMy first run that day included a faulty first version of the Smith link (C06), which joined Smith to itself (how it was found). I rebuilt the network with the real link and ran PlanX again that evening with the same settings. A line-by-line check shows the result matches the network.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#the-driving-network",
+    "href": "network.html#the-driving-network",
+    "title": "The walking network",
+    "section": "The driving network",
+    "text": "The driving network\nThe network for the vehicle analysis follows the same rules. It starts from every city line and leaves out the lines cars may not use under the S1 road classes, plus one small group of streets no car can reach from the rest. The lines it keeps stay exactly as the city drew them. Highways stay in, because cars use them. One-way streets keep their direction in the data, but segment analysis reads every line as two-way.\nI ran PlanX on it on 10 October, at radii of 1200 and 2000 m. Before October the vehicle values came from Sample 4, which included pedestrian ways, so 31 segments closed to cars carried vehicle values. Now none do.\n\n\n\n\n\n\nImportantOld and new values are different measurements\n\n\n\nThe merged file is a different network, so its values are a new measurement that replaces the Sample 4 pedestrian values. I keep both and say which one each figure uses.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "network.html#notes",
+    "href": "network.html#notes",
+    "title": "The walking network",
+    "section": "Notes",
+    "text": "Notes\nThe network I analyse is a decision. Every added path is a claim about where people can walk, and I want each claim to carry its evidence: a photo with its date. Then anyone can disagree with a specific join.\nI fixed a place and kept the rule. One bridge on Île-des-Sœurs did not justify a looser rule for the whole island.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "The walking network"
+    ]
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Only what Situ actually uses. Each entry says where it is used.",
+    "crumbs": [
+      "Method",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#data",
+    "href": "resources.html#data",
+    "title": "Resources",
+    "section": "Data",
+    "text": "Data\n\n\n\nSource\nWhat it gives\nUsed in\n\n\n\n\nVille de Montréal, Géobase, réseau routier (Données Québec)\nstreet centrelines with their class and direction\nS1 and the walking network, through Sample 4\n\n\nVille de Montréal, réseau cyclable (donnees.montreal.ca)\noff-street bike and multi-use paths\nS1 checks, the walking network\n\n\nVille de Montréal, sign inventory, excluding parking signs (donnees.montreal.ca), from Sample 4\nstop, all-way, turn and no-entry signs\nS3\n\n\nVille de Montréal, feux de circulation (donnees.montreal.ca), from Sample 4\nwhere each traffic light stands, and whether it is permanent\nS3\n\n\nVille de Montréal, limites de vitesse, file of 2026-02-26 (donnees.montreal.ca), from Sample 4\nthe speed limit of each street\nS3\n\n\nVille de Montréal, comptage des véhicules, cyclistes et piétons (donnees.montreal.ca), downloaded 2026-10-10\n15-minute counts of each turning movement by kind of road user, at about 23 intersections in and around Griffintown, 2024 to 2026\nMovement counts: light timing at 7 S1 junctions; later S5 and S8\n\n\nVille de Montréal, feux pour piétons (donnees.montreal.ca), downloaded 2026-10-10\nwhich lights have pedestrian signals: 30 of the 31 in S1\nMovement counts\n\n\nOpenStreetMap, through the Overpass API\nfootpaths and park paths, as a second opinion\nS1 checks, C18 park paths\n\n\nMapillary\nstreet-level photos, CC BY-SA 4.0\nS1 checks, M01\n\n\nMapillary map features API (graph.mapillary.com/map_features), fetched 2026-10-10\n1,455 signs detected in photos, with the direction each faces\nChecking the sources, S3 checks\n\n\nMapillary photos by VdM (Ville de Montréal), geodz, une_abeille and AlexPL, 2022 to 2026, CC BY-SA 4.0\nthe evidence behind each S3 decision\nS3 checks with photos\n\n\nGoogle Street View\nstreet-level photos, for looking only\nS1 checks\n\n\nVille de Montréal, Unités d’évaluation foncière (tax roll) (donnees.montreal.ca, resource 2b9dfc3d-91d3-48de-b32c-a2a6d9417079), fetched 2026-09-25\nuse, storeys, dwellings, year built and floor area of each property\nS4\n\n\nVille de Montréal, Adresse ponctuelle (address points) (donnees.montreal.ca, resource fed5fd02-5535-458e-b13f-66e7a31a6d78), fetched 2026-09-25\nwhere each civic number stands, to place the tax roll\nS4\n\n\nVille de Montréal, Locaux commerciaux et statuts d’occupation, 2025 survey (Données Québec), from Sample 4\nevery ground-floor commercial space, occupied or vacant, with its use: 247 in the study area\nS4\n\n\nVille de Montréal, Lieux et bâtiments à vocation publique (opendatamontreal.ca)\npublic places with opening hours\nS4\n\n\nOpenStreetMap buildings and places, through the Overpass API, fetched 2026-10-14, ODbL\nbuilding outlines, and shops, cafés, offices and parks, 83 of them with opening hours\nS4\n\n\n\nA list of every downloaded file gives each one’s date and licence. The Concordia NGCI building file is listed there too. It carries no licence, so S4 does not use it.",
+    "crumbs": [
+      "Method",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#rules-and-standards",
+    "href": "resources.html#rules-and-standards",
+    "title": "Resources",
+    "section": "Rules and standards",
+    "text": "Rules and standards\n\n\n\nSource\nWhat it gives\nUsed in\n\n\n\n\nRèglement sur la signalisation routière, RLRQ c. C-24.2, r. 41 (LégisQuébec), current to 2026-06-01\nthe legal meaning of each kind of sign\nS3, Checking the sources\n\n\nMinistère des Transports et de la Mobilité durable, La signalisation routière au Québec, five posters, April 2026 (Québec.ca)\nsign codes, names and pictures\nS3\n\n\nRépertoire des dispositifs de signalisation routière du Québec (rsr.transports.gouv.qc.ca)\nthe official catalogue of signs\nS3\n\n\nMinistère des Ressources naturelles (2001), Guide de signalisation routière sur les terres et dans les forêts du domaine de l’État (BAnQ)\nthe only free text I found on where turn signs stand\nChecking the sources",
+    "crumbs": [
+      "Method",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#tools",
+    "href": "resources.html#tools",
+    "title": "Resources",
+    "section": "Tools",
+    "text": "Tools\n\n\n\nTool\nRole\n\n\n\n\nPython\nall code and drawings\n\n\nQGIS\nviewing the data\n\n\nPlanX in QGIS, version 4.18 (manual)\nthe segment analysis; its radius is checked in Checking the sources\n\n\nQuarto\nthis book",
+    "crumbs": [
+      "Method",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#readings",
+    "href": "resources.html#readings",
+    "title": "Resources",
+    "section": "Readings",
+    "text": "Readings\n\nSpace syntax\n\nHillier, B., & Hanson, J. (1984). The Social Logic of Space. Cambridge University Press.\nHillier, B., Penn, A., Hanson, J., Grajewski, T., & Xu, J. (1993). Natural movement: or, configuration and attraction in urban pedestrian movement. Environment and Planning B, 20(1), 29–66.\nHillier, B. (1996). Space is the Machine. Cambridge University Press.\nRatti, C. (2004). Space syntax: some inconsistencies. Environment and Planning B, 31(4), 487–499.\nHillier, B., & Iida, S. (2005). Network and psychological effects in urban movement. In Spatial Information Theory (COSIT 2005), Lecture Notes in Computer Science 3693, 475–490. Springer.\nTurner, A. (2007). From axial to road-centre lines: a new representation for space syntax and a new model of route choice for transport network analysis. Environment and Planning B, 34(3), 539–555.\nHillier, B., Yang, T., & Turner, A. (2012). Normalising least angle choice in Depthmap and how it opens up new perspectives on the global and local analysis of city space. Journal of Space Syntax, 3(2), 155–193.\nvan Nes, A., & Yamu, C. (2021). Introduction to Space Syntax in Urban Studies. Springer. Open access.\n\n\n\nSpatial culture and rhythm\n\nGriffiths, S., & von Lünen, A. (Eds.) (2016). Spatial Cultures: Towards a New Social Morphology of Cities Past and Present. Routledge.\nAdams, R. (2024). Designing Spatial Culture. Routledge.\nLefebvre, H. (1991). The Production of Space (D. Nicholson-Smith, Trans.). Blackwell. (Original work published 1974)\nLefebvre, H. (2004). Rhythmanalysis: Space, Time and Everyday Life (S. Elden & G. Moore, Trans.). Continuum. (Original work published 1992)\n\n\n\nArchives and heritage visualisation\n\nSchellenberg, T. R. (2003). Modern Archives: Principles and Techniques. Society of American Archivists. (Original work published 1956)\nTaylor, D. (2003). The Archive and the Repertoire: Performing Cultural Memory in the Americas. Duke University Press.\nDenard, H. (Ed.) (2009). The London Charter for the Computer-Based Visualisation of Cultural Heritage, version 2.1. london-charter.org\nLópez-Menchero, V. M., & Grande, A. (2011). The principles of the Seville Charter. Proceedings of the XXIII CIPA Symposium, Prague.\n\n\n\nTraffic\n\nWebster, F. V. (1958). Traffic Signal Settings. Road Research Technical Paper 39. Her Majesty’s Stationery Office.\nVille de Montréal (2007). Assemblée publique sur la révision du réseau artériel de Montréal. Commission permanente sur le transport, 12 April 2007. PDF\nFederal Highway Administration (2023). Highway Functional Classification: Concepts, Criteria and Procedures. U.S. Department of Transportation. PDF\n\n\n\nNetwork measures\n\nSabidussi, G. (1966). The centrality index of a graph. Psychometrika, 31(4), 581–603.\nFreeman, L. C. (1977). A set of measures of centrality based on betweenness. Sociometry, 40(1), 35–41.\n\n\n\n\n\n\n\nWarningBefore citing\n\n\n\nVolume, issue and page numbers are given as I know them. The page numbers of the space syntax readings match my PDFs, as Checking the readings shows. Check each reference against the publisher’s page before it goes into a chapter.",
+    "crumbs": [
+      "Method",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "s1-checks.html",
+    "href": "s1-checks.html",
+    "title": "Checks and decisions",
+    "section": "",
+    "text": "The tests prove that the network agrees with itself. They cannot prove that it matches the street. So I count S1 as finished only when every doubtful place has a recorded decision.\nTo find those places, I compared S1 with two independent sources, both downloaded on 7 October 2026. OpenStreetMap is mapped by volunteers, which makes it a useful second opinion without authority. The city’s bike network holds the off-street paths that are missing from the street file. When both sources agree, my confidence goes up. The final word is a photo or a visit.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "Checks and decisions"
+    ]
+  },
+  {
+    "objectID": "s1-checks.html#why-s1-needed-checking",
+    "href": "s1-checks.html#why-s1-needed-checking",
+    "title": "Checks and decisions",
+    "section": "",
+    "text": "The tests prove that the network agrees with itself. They cannot prove that it matches the street. So I count S1 as finished only when every doubtful place has a recorded decision.\nTo find those places, I compared S1 with two independent sources, both downloaded on 7 October 2026. OpenStreetMap is mapped by volunteers, which makes it a useful second opinion without authority. The city’s bike network holds the off-street paths that are missing from the street file. When both sources agree, my confidence goes up. The final word is a photo or a visit.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "Checks and decisions"
+    ]
+  },
+  {
+    "objectID": "s1-checks.html#the-checkpoints",
+    "href": "s1-checks.html#the-checkpoints",
+    "title": "Checks and decisions",
+    "section": "The checkpoints",
+    "text": "The checkpoints\n\n\n\n18 checkpoints. Circle: crossing. Square: rule. Hexagon: dead end. Diamond: missing link. Grey outline: decided. Pink outline: still open. Click to enlarge.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "Checks and decisions"
+    ]
+  },
+  {
+    "objectID": "s1-checks.html#decisions",
+    "href": "s1-checks.html#decisions",
+    "title": "Checks and decisions",
+    "section": "Decisions",
+    "text": "Decisions\nI looked at each checkpoint in Google Street View, and in Mapillary where Street View was old. Each decision is recorded with its evidence and the date of that evidence. The city’s data is never edited; S1 applies my decisions on top of it.\n\nDecided (14)Assumed (3)Settled with photos (1)Taken in (1)\n\n\n\n\n\n\n\n\n\n\n\n\nPlace\nDecision\nEvidence (date)\n\n\n\n\nC01\nRue de la Commune under Autoroute 10\nAn overpass: the two roads cross without meeting, so there is no junction.\nStreet View; OpenStreetMap marks a bridge (2025-09)\n\n\nC02\nRue Smith (Place des Aiguilleurs)\nWalk only. It is a paved pedestrian plaza, with only service vehicles seen.\nStreet View; OpenStreetMap (2020-10)\n\n\nC03\nEnd of Rue Dalhousie\nA real dead end: a gate closes the lane along the railway wall.\nStreet View (2016-08)\n\n\nC07\nEnd of Rue du Square-Gallery\nA dead end for cars; walkers continue to the canal path (C16).\nStreet View (2014-07)\n\n\nC08\nEnd of Rue Richmond\nA dead end for cars; walkers continue to the canal path (C16). The footbridge across the canal leads out of the area and is left out.\nStreet View (2014-08)\n\n\nC09\nEast end of Rue des Bassins\nA real dead end: private parking.\nStreet View (2020-11)\n\n\nC10\nPath by the police station (Dalhousie and William)\nNo change: it touches the network at one end only.\nStreet View (2024-08)\n\n\nC11\nÉTS campus walkway (Barré and Eleanor)\nNo change: it only leads into the campus.\nStreet View (2021-04)\n\n\nC13\nWalkway off Notre-Dame and de l’Aqueduc\nNo change: a private walkway leading out of the area.\nStreet View (2024-08)\n\n\nC14\nCanal path at Place des Aiguilleurs\nPart of the canal path (C16).\nStreet View (2014-08)\n\n\nC15\nWellington bridge\nNo change: the bridge is already in the network beyond the boundary.\nStreet View (2025-06)\n\n\nC16\nLachine Canal path\nAdded, walk only, using the city’s bike network and joined to every street end it passes.\nStreet View (2024-08); the city’s bike network, with OpenStreetMap as a second opinion\n\n\nC17\nPath to the Little Burgundy sports centre\nNo change: it leads out of the area.\nStreet View (2024-08)\n\n\nC18\nNew park between Rue des Bassins and Rue William\nAdded the two park paths, walk only, drawn from OpenStreetMap.\nMapillary; OpenStreetMap (2026-08)\n\n\n\n\n\nThese are built as connected, as an assumption, and drawn in pink on every sheet. If a photo or a visit confirms one, its status becomes confirmed. If it shows the street really stops, it becomes rejected. The record stays, and S1 treats the street as a dead end again.\nAt the end of Rue Brennan (C04), cars stop at the bollards. I assume walkers carry on along a footway through the block to Rue Ann and de la Commune, and that this footway is open (C12). Look for yourself at the end of Brennan and the block.\nAt the end of Rue Ann (C05), I assume the street joins the same footway, 24 m away. The only view is Street View from 2007.\n\nWhat Mapillary showed (October 2026)\nIn October I searched Mapillary for every photo near the footway, leaving out those taken from the motorway above it. The question that would settle most was whether anyone had walked along the footway with a camera. Nobody had: of 292 photos from 2023 to 2025, the few that lie on it were taken from cars at its south tip.\nAt the north end, a photo from May 2024 shows the bollards with a no-entry sign for cars that carries a panel for walkers and bicycles, and paving going on past them. The south end was a gravel strip in 2023, then a building site and a parking compound into 2024; the 2025 photos are too tilted to show it. Every photo found is listed in this table.\nMy reading: the north end invites walkers in, and the south end was closed until at least May 2024. The photos cannot say whether the footway is open today, or whether Ann reaches it, so all three stay assumed. A visit would settle them, with photos at each end.\n\n\n\nEvery view the search kept, named by end, date and photo id. Photos: VdM and geodz, Mapillary, CC BY-SA 4.0. Click to enlarge.\n\n\n\n\n\nAt the end of Rue Smith (C06), walkers continue across the open plaza of Place des Aiguilleurs towards the canal. A straight 41 m line joins the end of Smith to Place des Aiguilleurs. The line is only a drawing of that crossing. The evidence is Mapillary photos from August 2016 and March 2024.\n\n\n\nThe end of Rue Smith in August 2016, looking towards the canal: an open paved plaza, benches, people. Photo: geodz, Mapillary, CC BY-SA 4.0. Click to enlarge.\n\n\nC06 did not come right the first time. The first build joined Smith to the nearest street end, which was the other end of Smith itself, so the link connected nothing. The S2 stress test caught it. Once that was fixed, nothing lay within the automatic 25 m reach, and Smith went back to being a dead end. Then the photos decided: a decision taken from a photo may now name the street to join and reach up to 60 m.\n\n\nBoulevard Robert-Bourassa (C19): both carriageways now belong to the study area. The city codes them as a pair of one-way roads, and the boundary ran between them. The evidence is the city’s street file and five traffic lights on the east carriageway (October 2026).",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "Checks and decisions"
+    ]
+  },
+  {
+    "objectID": "s1-checks.html#what-changed-in-the-network",
+    "href": "s1-checks.html#what-changed-in-the-network",
+    "title": "Checks and decisions",
+    "section": "What changed in the network",
+    "text": "What changed in the network\nThe canal path (C16) and the two park paths (C18) are in, for walkers only. Dead ends went from 12 to 2, at Dalhousie and the east end of Bassins, both confirmed. Brennan and Ann are now connected by assumption. Smith is connected from photos. Robert-Bourassa is now in full, and S1 also keeps the edge (S1 Streets).\n\n\n\n\n\n\nNoteHow an added path is joined\n\n\n\n\n\nEach end of the path joins whatever is nearest within 25 m: a junction, or a street that gets cut at that spot. A junction wins when it is at most 5 m further away. A street dead end within 25 m of the middle of a path is joined to it too. This is how the Allées reach the canal.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "Checks and decisions"
+    ]
+  },
+  {
+    "objectID": "s1-checks.html#evidence",
+    "href": "s1-checks.html#evidence",
+    "title": "Checks and decisions",
+    "section": "Evidence",
+    "text": "Evidence\n\n\n\n\n\n\nNotePhoto sheets for each checkpoint (Google Street View and Mapillary screenshots; Mapillary images CC BY-SA)\n\n\n\n\n\n                \nC06 used Mapillary photos from 2016 and 2024.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "Checks and decisions"
+    ]
+  },
+  {
+    "objectID": "s1-tests.html",
+    "href": "s1-tests.html",
+    "title": "Tests",
+    "section": "",
+    "text": "Each test asks one yes or no question about the network. If the answer is wrong, it says exactly what failed and where.\n\n\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nDoes every segment have a length and two different ends?\nyes\n\n\nT2\nCan a pedestrian reach every junction?\nyes\n\n\nT3\nWhere are the dead ends?\n2, at Rue Dalhousie and the east end of Rue des Bassins, both confirmed\n\n\nT4\nCan a car get from anywhere to anywhere, obeying one-way streets?\nyes\n\n\nT5\nCan every segment be traced to its source?\nyes\n\n\nT6\nIs every street cut at every junction?\nyes\n\n\nT7\nDo any lines cross without a junction?\nonly the overpass of Autoroute 10 over Rue de la Commune, confirmed (C01)\n\n\n\nT2 and T4 treat the city as connected beyond the exits, the far ends of the edge streets. T5 matters for later systems, because the city’s ids are what they use to join their data to S1. The Lab shows the latest results.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "Tests"
+    ]
+  },
+  {
+    "objectID": "s1-tests.html#seven-checks",
+    "href": "s1-tests.html#seven-checks",
+    "title": "Tests",
+    "section": "",
+    "text": "Each test asks one yes or no question about the network. If the answer is wrong, it says exactly what failed and where.\n\n\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nDoes every segment have a length and two different ends?\nyes\n\n\nT2\nCan a pedestrian reach every junction?\nyes\n\n\nT3\nWhere are the dead ends?\n2, at Rue Dalhousie and the east end of Rue des Bassins, both confirmed\n\n\nT4\nCan a car get from anywhere to anywhere, obeying one-way streets?\nyes\n\n\nT5\nCan every segment be traced to its source?\nyes\n\n\nT6\nIs every street cut at every junction?\nyes\n\n\nT7\nDo any lines cross without a junction?\nonly the overpass of Autoroute 10 over Rue de la Commune, confirmed (C01)\n\n\n\nT2 and T4 treat the city as connected beyond the exits, the far ends of the edge streets. T5 matters for later systems, because the city’s ids are what they use to join their data to S1. The Lab shows the latest results.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "Tests"
+    ]
+  },
+  {
+    "objectID": "s1-tests.html#reach-in-the-lab",
+    "href": "s1-tests.html#reach-in-the-lab",
+    "title": "Tests",
+    "section": "Reach, in the Lab",
+    "text": "Reach, in the Lab\nT2 and T4 ask, for every junction at once, whether a walker and a car can get everywhere. To watch one case, open the Lab at Rue Peel and Rue Wellington (J080) and press play. Each step goes one junction further. You can switch between on foot and by car, and choose whether the city beyond the exits counts. Any other junction works too: click it.\nFrom there, the walker reaches all 212 walkable segments in 18 steps. The car reaches 181 of 182 drivable segments without leaving the area. The last one, Boulevard Georges-Vanier (white dashed), can only be reached by leaving Griffintown and coming back in. That comes from where the boundary is drawn; the data is fine.",
+    "crumbs": [
+      "Method",
+      "S1 Streets",
+      "Tests"
+    ]
+  },
+  {
+    "objectID": "s2-scores.html",
+    "href": "s2-scores.html",
+    "title": "S2 Scores",
+    "section": "",
+    "text": "S2 takes the space syntax values and attaches them to every S1 segment, and it records which analysed line each value came from. Later systems never read these values. Only S8 Observer uses them, at the very end, as a measuring stick (why).\nTwo kinds of value matter most here. Choice is roughly how often a street lies on the way between other places. Integration is roughly how easy a street is to reach. Both are measured within a radius, from 200 m up to the whole island.\nHow I built it is on How S2 is built, and the checks are on S2 tests.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 Scores"
+    ]
+  },
+  {
+    "objectID": "s2-scores.html#what-s2-does",
+    "href": "s2-scores.html#what-s2-does",
+    "title": "S2 Scores",
+    "section": "",
+    "text": "S2 takes the space syntax values and attaches them to every S1 segment, and it records which analysed line each value came from. Later systems never read these values. Only S8 Observer uses them, at the very end, as a measuring stick (why).\nTwo kinds of value matter most here. Choice is roughly how often a street lies on the way between other places. Integration is roughly how easy a street is to reach. Both are measured within a radius, from 200 m up to the whole island.\nHow I built it is on How S2 is built, and the checks are on S2 tests.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 Scores"
+    ]
+  },
+  {
+    "objectID": "s2-scores.html#how-a-value-is-found",
+    "href": "s2-scores.html#how-a-value-is-found",
+    "title": "S2 Scores",
+    "section": "How a value is found",
+    "text": "How a value is found\nThe values come from PlanX’s analysis of the walking network and the driving network, where each analysed line carries its own values. For every S1 segment I look for the analysed lines lying under it, within 1 m. If two pieces of the same street lie under one segment, its value is their mean, weighted by length. A segment that finds too little gets no value at all, never a zero, and a written reason.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 Scores"
+    ]
+  },
+  {
+    "objectID": "s2-scores.html#result",
+    "href": "s2-scores.html#result",
+    "title": "S2 Scores",
+    "section": "Result",
+    "text": "Result\n\n257 of 264 segments with walking values · 227 with vehicle values\n\nAlmost every segment found its street exactly: 251 match one analysed line. Six are split across two pieces of the same street, such as Rue des Seigneurs and Rue Wellington, because the walking network cut those lines where a path joins and S1 did not.\nSeven segments have no walking value. All seven are Autoroute 10 and its ramps. Highways were left out of the walking network, so their values stay empty.\nThirty-seven segments have no vehicle value, and none should. They are walking paths and connectors, or city streets cars may not use, like the Allées or the pedestrian ends of Murray and Smith. No segment closed to cars carries a vehicle value. Before October there were 31, because the older Sample 4 vehicle analysis included pedestrian ways.\n\n\n\nHow each segment was matched. Grey: matched cleanly. Pink: the exceptions, numbered and explained in the key.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 Scores"
+    ]
+  },
+  {
+    "objectID": "s2-scores.html#what-changed-in-october",
+    "href": "s2-scores.html#what-changed-in-october",
+    "title": "S2 Scores",
+    "section": "What changed in October",
+    "text": "What changed in October\nOn 10 October I reran both analyses on the rebuilt networks and compared each segment inside Griffintown with its old value. Most streets kept their place in the order: the rank agreement (Spearman’s correlation, where 1.00 means no street moved) was 0.99 or 1.00 for every measure I compared.\nTwo changes are real, and both come from my own decisions. Rue Brennan and Rue Ann gained walking choice: the east end of Brennan went from 0.00 to 0.90, and Ann from 0.37 to 0.93. Both now lead somewhere, because I assumed they connect to the paths beyond them. That is an assumption. If a photo shows those streets really stop, I will reject those decisions and the values will fall back.\nMurray and Smith lost vehicle choice. The driving network leaves out their pedestrian ends, by the same road rule S1 uses. In the analysis cars can no longer pass through there, so the street before carries less through-traffic.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 Scores"
+    ]
+  },
+  {
+    "objectID": "s2-scores.html#watch-the-scale-change",
+    "href": "s2-scores.html#watch-the-scale-change",
+    "title": "S2 Scores",
+    "section": "Watch the scale change",
+    "text": "Watch the scale change\nIn the Lab, paint the streets with S2 and move the radius slider, or press play. You see walking or driving choice or integration as the radius grows from 200 m to the whole island. Each street is coloured by its rank in Griffintown, from grey for the lowest to pink for the highest. Click a street to read all its values.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 Scores"
+    ]
+  },
+  {
+    "objectID": "s2-scores.html#maps",
+    "href": "s2-scores.html#maps",
+    "title": "S2 Scores",
+    "section": "Maps",
+    "text": "Maps\nS2 holds 13 values for every street. The maps show four: walking at 800 m, about a ten-minute walk, and driving at 2000 m, a short trip by car. I chose those radii myself. 400 to 800 m is the usual low radius in space syntax studies (van Nes & Yamu 2021, p. 65), and Hillier, Yang and Turner (2012, p. 165) found 2000 m often significant in city work. Neither source ties 2000 m to cars, and neither radius comes from Griffintown’s data. Every other value is in the Lab.\n\nWalking choice, 800 mWalking integration, 800 mVehicle choice, 2000 mVehicle integration, 2000 m\n\n\n\n\n\nWalking choice at 800 m.\n\n\n\n\n\n\n\nWalking integration at 800 m.\n\n\n\n\n\n\n\nVehicle choice at 2000 m.\n\n\n\n\n\n\n\nVehicle integration at 2000 m.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 Scores"
+    ]
+  },
+  {
+    "objectID": "s2-scores.html#what-the-values-say",
+    "href": "s2-scores.html#what-the-values-say",
+    "title": "S2 Scores",
+    "section": "What the values say",
+    "text": "What the values say\nThese are readings of the layout. They say nothing yet about where people actually walk.\n\n\n\n\n\n\n\n\nMeasure\nHighest in Griffintown\nLowest\n\n\n\n\nwalking choice, 800 m\ndes Seigneurs, Guy, de la Commune, de la Montagne, Notre-Dame\nSaint-Thomas, Eleanor, Saint-Martin, Olier, Dalhousie\n\n\nwalking integration, 800 m\nNotre-Dame, Robert-Bourassa, Guy, Georges-Vanier, William\ncanal path, Olier, Square-Gallery, Smith, Brennan\n\n\nwalking choice, whole island\nNotre-Dame, Guy, de la Montagne, Peel, des Seigneurs\nSaint-Thomas, Olier, Eleanor, Rioux, Dalhousie\n\n\nvehicle choice, 2000 m\nNotre-Dame, Robert-Bourassa, Guy, des Seigneurs, de la Montagne\nOlier, Square-Gallery, Saint-Thomas, Brennan, Eleanor\n\n\n\nEach street is averaged over its segments inside Griffintown, weighted by length. Streets shorter than 100 m are left out, and so are connectors and footways.\nMy first reading, and it is an interpretation: the long north-south streets (Guy, de la Montagne, des Seigneurs, Peel) carry the most through-movement potential, on foot and by car. The canal path is easy to pass along and hard to reach, with low integration at 800 m. S8 will test whether simulated and real movement agree.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 Scores"
+    ]
+  },
+  {
+    "objectID": "s2-scores.html#notes",
+    "href": "s2-scores.html#notes",
+    "title": "S2 Scores",
+    "section": "Notes",
+    "text": "Notes\nValues from different networks are different measurements. The older Sample 4 values are kept for reference and never mixed with these.",
+    "crumbs": [
+      "Method",
+      "S2 Scores",
+      "S2 Scores"
+    ]
+  },
+  {
+    "objectID": "s3-build.html",
+    "href": "s3-build.html",
+    "title": "How S3 is built",
+    "section": "",
+    "text": "flowchart TB\n  IN1[/\"S1 streets&lt;br/&gt;and junctions\"/]:::data\n\n  subgraph SIGNS[\"SIGNS\"]\n    IN2[/\"City sign file\"/]:::data --&gt; P[\"POSTS&lt;br/&gt;installed, near a junction\"]:::step\n    DEC[/\"Photo decisions\"/]:::rule -.-&gt; F\n    P --&gt; F[\"FIND THE STREET&lt;br/&gt;by position and meaning\"]:::step\n    F --&gt; M[\"MOVES&lt;br/&gt;allowed or forbidden\"]:::step\n  end\n  subgraph LIGHTS[\"LIGHTS\"]\n    IN3[/\"Traffic-light file\"/]:::data --&gt; L[\"CLOSEST JUNCTION&lt;br/&gt;within 25 m\"]:::step\n  end\n  subgraph SPEED[\"SPEED\"]\n    IN4[/\"Speed-limit file\"/]:::data --&gt; SP[\"SAME STREET&lt;br/&gt;or same name nearby\"]:::step\n  end\n\n  IN1 --&gt; A[\"APPROACHES&lt;br/&gt;every way into a junction\"]:::step\n  A --&gt; F\n  IN1 --&gt; L\n  IN1 --&gt; SP\n  M --&gt; J[\"CONTROL&lt;br/&gt;lights, all-way stop, stop, none\"]:::step\n  L --&gt; J\n  J --&gt; O1[/\"Rules for every junction\"/]:::out\n  SP --&gt; O2[/\"A limit for every street\"/]:::out\n  O1 --&gt; T[\"TESTS\"]:::test\n  O2 --&gt; T\n\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n  style SIGNS fill:none,stroke:#3a3a3a\n  style LIGHTS fill:none,stroke:#3a3a3a\n  style SPEED fill:none,stroke:#3a3a3a",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#blueprint",
+    "href": "s3-build.html#blueprint",
+    "title": "How S3 is built",
+    "section": "",
+    "text": "flowchart TB\n  IN1[/\"S1 streets&lt;br/&gt;and junctions\"/]:::data\n\n  subgraph SIGNS[\"SIGNS\"]\n    IN2[/\"City sign file\"/]:::data --&gt; P[\"POSTS&lt;br/&gt;installed, near a junction\"]:::step\n    DEC[/\"Photo decisions\"/]:::rule -.-&gt; F\n    P --&gt; F[\"FIND THE STREET&lt;br/&gt;by position and meaning\"]:::step\n    F --&gt; M[\"MOVES&lt;br/&gt;allowed or forbidden\"]:::step\n  end\n  subgraph LIGHTS[\"LIGHTS\"]\n    IN3[/\"Traffic-light file\"/]:::data --&gt; L[\"CLOSEST JUNCTION&lt;br/&gt;within 25 m\"]:::step\n  end\n  subgraph SPEED[\"SPEED\"]\n    IN4[/\"Speed-limit file\"/]:::data --&gt; SP[\"SAME STREET&lt;br/&gt;or same name nearby\"]:::step\n  end\n\n  IN1 --&gt; A[\"APPROACHES&lt;br/&gt;every way into a junction\"]:::step\n  A --&gt; F\n  IN1 --&gt; L\n  IN1 --&gt; SP\n  M --&gt; J[\"CONTROL&lt;br/&gt;lights, all-way stop, stop, none\"]:::step\n  L --&gt; J\n  J --&gt; O1[/\"Rules for every junction\"/]:::out\n  SP --&gt; O2[/\"A limit for every street\"/]:::out\n  O1 --&gt; T[\"TESTS\"]:::test\n  O2 --&gt; T\n\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n  style SIGNS fill:none,stroke:#3a3a3a\n  style LIGHTS fill:none,stroke:#3a3a3a\n  style SPEED fill:none,stroke:#3a3a3a",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#the-problem",
+    "href": "s3-build.html#the-problem",
+    "title": "How S3 is built",
+    "section": "The problem",
+    "text": "The problem\nThe city’s sign file gives each post a position and a list of panels. It does not say which street a sign faces. A stop sign at a corner stands close to two or three streets at once, and only one of them has to stop. So for each sign, S3 has to work out which street it was put there for.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#approaches",
+    "href": "s3-build.html#approaches",
+    "title": "How S3 is built",
+    "section": "Approaches",
+    "text": "Approaches\nA sign speaks to the drivers coming from one direction. So S3 first lists every approach: each end of each street segment, seen as a car drives towards the junction. For each approach it notes four things: the direction a car is heading as it arrives, whether the one-way rules let a car arrive or leave along it, how long the segment is, and whether the junction is an exit, where the edge street meets the rest of the city.\nThe end of a one-way street pointing away from the junction gets no rules, since no car arrives that way.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#how-a-stop-sign-finds-its-street",
+    "href": "s3-build.html#how-a-stop-sign-finds-its-street",
+    "title": "How S3 is built",
+    "section": "How a stop sign finds its street",
+    "text": "How a stop sign finds its street\n\n\n\nA made-up junction. Left: where a stop sign must stand to belong to a street. Right: how a turn gets its name. Click to enlarge. To try it on real junctions, open the Lab.\n\n\nIn Québec a stop sign usually stands on the right of the street, just before the junction. S3 relies on that.\nFor each post, S3 looks at the approaches nearby and measures two distances: how far before the junction the post stands, and how far to the right of the street’s centre line. A post fits an approach when it stands up to 35 m before the junction and between 1 and 20 m to the right. It must also stand on that segment: a post further back belongs to the previous junction. This matters on very short pieces, like the 20 m stretches where Wellington splits in two.\nIf several approaches fit, the one closest to the usual spot wins (about 7 m to the right, near the junction), and S3 marks the link as less sure. On a one-way street signs often stand on both sides, so a post on the left is accepted too. If nothing fits, the sign gets no street and goes on the list to check.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#how-a-turn-sign-finds-its-street",
+    "href": "s3-build.html#how-a-turn-sign-finds-its-street",
+    "title": "How S3 is built",
+    "section": "How a turn sign finds its street",
+    "text": "How a turn sign finds its street\nTurn signs are harder. They often stand across the junction or on a median, so where a turn sign stands is a weak clue. S3 adds a second clue: what the sign would mean on each street nearby.\nBack at J027, both signs say “left turn only”, and two streets are close enough to own them. On Rue Chatham a car can turn left or right onto William, so “left only” keeps the left and removes the right. That makes sense. On Rue William, from either side, a car can only go straight on, since Chatham is one-way towards William. There “left only” would remove the only move and trap every car. So the signs belong to Chatham.\nThe rule is this: a turn sign belongs to a street only when it keeps at least one move the street has and removes at least one. If several streets pass, two things decide. First, panels on one post usually face the same drivers, so if the post also carries a stop sign and the turn sign means something on that street, it goes there. Then position: a sign before the junction, on the right, is preferred, and a sign past the junction is used only when nothing before it fits.\nTwo panels on one post that contradict each other, like “straight only” above “left or right only”, cannot face the same drivers. They stand back to back, so the second one looks for another street. If there is none, it gets no street and a place on the list to check. Only a photo can tell which way each one faces.\nA turn sign at an exit is ignored, because the streets it points to lie outside the network. If several turn signs on one street together leave no move at all, S3 sets them aside and keeps every move open. After the photos, no street is in that state.\nMy first version placed turn signs by position alone, like stop signs, and left many streets with no way out. One of the stress tests repeats that version so the difference stays visible.\nTo name a turn, S3 compares the direction a car is heading as it arrives with the direction of the street it leaves along. Less than 30° either way counts as straight on. Anything sharper is a left or a right. From Chatham onto William the heading turns 89° to the left. S3 never makes a U-turn.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#decisions-from-photos",
+    "href": "s3-build.html#decisions-from-photos",
+    "title": "How S3 is built",
+    "section": "Decisions from photos",
+    "text": "Decisions from photos\nA few signs could not be placed from the desk. For those I looked at Mapillary’s photos and wrote down what I saw (the photo checks). S3 reads those decisions before its own matching, so a photo outranks a guess. The city’s file is never edited, so removing a decision brings back S3’s own matching.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#no-entry-signs",
+    "href": "s3-build.html#no-entry-signs",
+    "title": "How S3 is built",
+    "section": "No-entry signs",
+    "text": "No-entry signs\nA no-entry sign stands at the mouth of a street a car may not enter. S1 already knows the one-way streets from the city, so S3 uses these signs only to check S1. A sign agrees when a street near it is one-way towards the junction, or closed to cars. If only a path I added in S1 explains it, it goes on the list to check, because my own decision cannot confirm itself.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#traffic-lights",
+    "href": "s3-build.html#traffic-lights",
+    "title": "How S3 is built",
+    "section": "Traffic lights",
+    "text": "Traffic lights\nThe city’s light file gives each light a point and the names of the streets it stands between. S3 gives each light to the closest junction within 25 m. A light between 25 and 100 m from every junction goes on the list to check, because it may point to a junction S1 is missing.\nThe street names give a second check: “Montagne / Wellington” should stand where Rue de la Montagne meets Rue Wellington. The file says nothing about timing, so that belongs to S7, as an assumption.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#speed-limits",
+    "href": "s3-build.html#speed-limits",
+    "title": "How S3 is built",
+    "section": "Speed limits",
+    "text": "Speed limits\nThe city’s speed file uses the same street ids as S1, so most segments simply take the limit written on their own line.\nTwo things need care. Seven segments have a limit of 0 in the file, and all seven are closed to cars, so S3 reads 0 as “no limit given” and leaves the limit empty. And three Wellington pieces were redrawn after the speed file was made, so they have new ids. For those, S3 looks for lines of the same street name lying along the segment, within 5 m. If they cover nearly all of it and agree on one speed, S3 takes that speed.\nThe 5 m is the smallest distance that covers the two short pieces where Wellington splits. I chose it by looking at those three segments, and a stress test shows what other distances would give.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-build.html#assumptions",
+    "href": "s3-build.html#assumptions",
+    "title": "How S3 is built",
+    "section": "Assumptions",
+    "text": "Assumptions\nThese are my choices for the simulation. None of them comes from the data.\n\n\n\n\n\n\n\n\nAssumption\nWhy\nWhere it could be wrong\n\n\n\n\nstop signs stand on the right\nthe usual placement in Québec\na sign on a median or a wide corner\n\n\na turn sign must mean something on its street\na sign is put up to change what drivers do\na sign that is truly redundant on the ground\n\n\npanels on one post face the same drivers, unless they contradict\nthe usual way posts are dressed\na post with panels for two streets that do not contradict\n\n\na photo decision outranks the matching\nthe photo shows the street; the matching only guesses\na photo older than the sign it shows (P03 stays open for that reason)\n\n\nno U-turns\nI have no data on where drivers make them\na driver who missed a turn\n\n\ntime-limited turn rules hold at all hours\nS3 has no clock yet; S5 Rhythm will give one\nrush-hour bans on 3 streets\n\n\ntemporary lights count as lights\nthe city file lists them with the others\nthe lights at Notre-Dame and Murray (J059), if they have been removed\n\n\na new street piece keeps the limit of the old line beneath it\nthe street and its name are the same\nthe three redrawn pieces of Wellington",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "How S3 is built"
+    ]
+  },
+  {
+    "objectID": "s3-rules.html",
+    "href": "s3-rules.html",
+    "title": "S3 Rules",
+    "section": "",
+    "text": "S3 gives the S1 streets their traffic rules. Picture a driver arriving at a junction. S3 answers four questions for them: must I stop here, are there traffic lights, where may I go next, and how fast may I drive. It reads three of the city’s files to find out, and every rule points back to the sign or city record it came from.\nLights and speed limits are the easy part, because the city lists them directly. Stops and turns are hard. The city’s sign file says where each sign stands and what it says. It never says which street a sign faces, and a sign at a corner often stands close to two or three streets at once. S3 has to work that out, and how S3 is built explains how.\nThe tests ask whether the result holds up, and the photo checks settle the few places I could not decide from the desk.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 Rules"
+    ]
+  },
+  {
+    "objectID": "s3-rules.html#what-s3-does",
+    "href": "s3-rules.html#what-s3-does",
+    "title": "S3 Rules",
+    "section": "",
+    "text": "S3 gives the S1 streets their traffic rules. Picture a driver arriving at a junction. S3 answers four questions for them: must I stop here, are there traffic lights, where may I go next, and how fast may I drive. It reads three of the city’s files to find out, and every rule points back to the sign or city record it came from.\nLights and speed limits are the easy part, because the city lists them directly. Stops and turns are hard. The city’s sign file says where each sign stands and what it says. It never says which street a sign faces, and a sign at a corner often stands close to two or three streets at once. S3 has to work that out, and how S3 is built explains how.\nThe tests ask whether the result holds up, and the photo checks settle the few places I could not decide from the desk.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 Rules"
+    ]
+  },
+  {
+    "objectID": "s3-rules.html#one-junction-step-by-step",
+    "href": "s3-rules.html#one-junction-step-by-step",
+    "title": "S3 Rules",
+    "section": "One junction, step by step",
+    "text": "One junction, step by step\nJunction J027 is where Rue Chatham ends at Rue William, in the west of Griffintown.\n\n\n\nRue Chatham is one-way towards William and must stop. Its two turn signs allow only the left. Click to enlarge.\n\n\n\nThree street ends touch J027: Rue Chatham, and Rue William on each side of it. A car can arrive along all of them, so S3 makes three approaches. An approach is simply one way of arriving at a junction: one street, driven towards the corner.\nThe sign file has a stop sign on a post near the corner. Measured from Rue Chatham, it stands 10 m before the junction and 5 m to the right. That is where a stop sign for Chatham would stand, and it fits no other street. So Rue Chatham must stop.\nTwo more posts carry “left turn only” signs. Both stand on the right of Rue Chatham, 4 to 8 m before the junction.\nFrom Chatham a car can leave along William to the left or to the right. S3 names each move by how much the car’s heading changes: about 90° to the left is a left.\nThe signs allow only the left. So the left onto William is allowed, and the right onto William is forbidden, with the reason written beside it.\nOne end of Rue William has its own stop sign and the other has none. So at J027 some streets stop, and there are no lights.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 Rules"
+    ]
+  },
+  {
+    "objectID": "s3-rules.html#try-it-in-the-lab",
+    "href": "s3-rules.html#try-it-in-the-lab",
+    "title": "S3 Rules",
+    "section": "Try it in the Lab",
+    "text": "Try it in the Lab\nThe Lab has every S3 junction on one map. Click a junction, then a street arriving at it, and the panel shows each rule with the sign behind it.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 Rules"
+    ]
+  },
+  {
+    "objectID": "s3-rules.html#result",
+    "href": "s3-rules.html#result",
+    "title": "S3 Rules",
+    "section": "Result",
+    "text": "Result\nOver the whole S1 network, inside and at the edge, the junctions fall into four kinds:\n\n\n\nJunction\nHow many\n\n\n\n\ntraffic lights\n31\n\n\nall-way stop\n22\n\n\nsome streets stop\n39\n\n\nneither\n99\n\n\n\nTurn signs forbid 86 of the 578 possible moves. Most car streets have a limit of 30 km/h, and some 40.\nEach link between a sign and a street is an inference, and S3 records how sure it is. Most stop signs fit only one street. Turn signs are harder, and more of them went to a best fit or found no street at all.\nOne small check came for free: lights and stop signs never share a junction. They come from separate files, so that agreement says something good about both.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 Rules"
+    ]
+  },
+  {
+    "objectID": "s3-rules.html#what-changed-in-october",
+    "href": "s3-rules.html#what-changed-in-october",
+    "title": "S3 Rules",
+    "section": "What changed in October",
+    "text": "What changed in October\nTwo things changed S3 this month. S1 gained its edge, and I rewrote how a sign finds its street. The rewrite settled two of the three turn conflicts and most of the no-entry disagreements, which I had suspected came from my own matching.\nThe new rules are mostly common sense about how signs are put up. A sign belongs only to a street it actually stands on, and panels on one post face the same drivers unless they contradict each other. How S3 is built has the rest.\n\n\n\n\nBefore\nAfter\n\n\n\n\nturn signs that fit one street only\n33\n78\n\n\nstreets whose turn signs contradict\n3\n1\n\n\nno-entry signs that disagree with the city file\n10\n4\n\n\nplaces to check\n83\n27\n\n\n\nThen I checked the doubtful places in Mapillary’s photos (how). That settled the last contradiction and every no-entry disagreement, and brought the places to check down to 21. The last contradiction was Wellington arriving at Ann (J006): the photos showed the two signs face two different streets.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 Rules"
+    ]
+  },
+  {
+    "objectID": "s3-rules.html#maps",
+    "href": "s3-rules.html#maps",
+    "title": "S3 Rules",
+    "section": "Maps",
+    "text": "Maps\n\nStops and lightsTurnsSpeedPlaces to check\n\n\n\n\n\nWho must stop where. Pink dot: traffic lights. A white bar across a street is a stop line. A ring is an all-way stop. Pink ring: lights with no S1 junction. Click to enlarge.\n\n\n\n\n\n\n\nWhere a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside. Click to enlarge.\n\n\n\n\n\n\n\nSpeed limits from the city file. Dashed: new Wellington pieces missing from the file, given the limit of the old line beneath them. Click to enlarge.\n\n\n\n\n\n\n\nThe places to check, numbered and explained in the key. Click to enlarge.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 Rules"
+    ]
+  },
+  {
+    "objectID": "s3-rules.html#places-still-to-check",
+    "href": "s3-rules.html#places-still-to-check",
+    "title": "S3 Rules",
+    "section": "Places still to check",
+    "text": "Places still to check\nThe 21 places still to check fall into five groups. Seven are Autoroute 10 and its ramps, which the city’s speed file does not cover. Six are signs I could not give to any street. Three are photo decisions the photos could not settle (still open). Three are lights just beyond the edge, such as the one at Queen and Wellington. Two are recent no-entry posts at the park connectors, newer than every photo.\nSigns at exits that face streets beyond the network are not on the list: they are not mine to check.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 Rules"
+    ]
+  },
+  {
+    "objectID": "s3-rules.html#what-s3-does-not-know",
+    "href": "s3-rules.html#what-s3-does-not-know",
+    "title": "S3 Rules",
+    "section": "What S3 does not know",
+    "text": "What S3 does not know\nThe city’s file says where the lights are and nothing about their timing. Movement counts and light timing estimates it where the city counted traffic. Elsewhere the cycle will be a procedural assumption in S7.\nSome turn rules hold only at certain hours. S3 keeps them on at all hours until S5 Rhythm gives the simulation a clock.\nAt exits, streets beyond the network meet the junction, and S3 cannot see them. So a junction there may look like an all-way stop when a street beyond does not stop. The junction’s note says so.",
+    "crumbs": [
+      "Method",
+      "S3 Rules",
+      "S3 Rules"
+    ]
+  },
+  {
+    "objectID": "s4-build.html",
+    "href": "s4-build.html",
+    "title": "How S4 is built",
+    "section": "",
+    "text": "flowchart TB\n  IN[/\"FIVE OPEN FILES&lt;br/&gt;OpenStreetMap · tax roll · address points&lt;br/&gt;commercial survey 2025 · public places\"/]:::data\n  IN --&gt; O[\"1 OUTLINES&lt;br/&gt;centre in the study area\"]:::step\n  O --&gt; A[\"2 THE ROLL AT ITS ADDRESS&lt;br/&gt;street name + civic number\"]:::step\n  A --&gt; L[\"3 EVERY ROW FINDS ITS BUILDING&lt;br/&gt;inside, or nearest within 15 m\"]:::step\n  L --&gt; U[\"4 USE&lt;br/&gt;roll, then tag\"]:::step\n  L --&gt; H[\"5 SIZE&lt;br/&gt;storeys, dwellings\"]:::step\n  L --&gt; G[\"6 GROUND FLOOR&lt;br/&gt;premises, places\"]:::step\n  S1[/\"S1 walkable streets\"/]:::data --&gt; X[\"7 ACCESS&lt;br/&gt;an assumption\"]:::step\n  O --&gt; X\n  U & H & G & X --&gt; OUT[/\"buildings, places,&lt;br/&gt;unplaced rows, checkpoints\"/]:::out\n  OUT --&gt; T[\"tests and maps\"]:::test\n\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#blueprint",
+    "href": "s4-build.html#blueprint",
+    "title": "How S4 is built",
+    "section": "",
+    "text": "flowchart TB\n  IN[/\"FIVE OPEN FILES&lt;br/&gt;OpenStreetMap · tax roll · address points&lt;br/&gt;commercial survey 2025 · public places\"/]:::data\n  IN --&gt; O[\"1 OUTLINES&lt;br/&gt;centre in the study area\"]:::step\n  O --&gt; A[\"2 THE ROLL AT ITS ADDRESS&lt;br/&gt;street name + civic number\"]:::step\n  A --&gt; L[\"3 EVERY ROW FINDS ITS BUILDING&lt;br/&gt;inside, or nearest within 15 m\"]:::step\n  L --&gt; U[\"4 USE&lt;br/&gt;roll, then tag\"]:::step\n  L --&gt; H[\"5 SIZE&lt;br/&gt;storeys, dwellings\"]:::step\n  L --&gt; G[\"6 GROUND FLOOR&lt;br/&gt;premises, places\"]:::step\n  S1[/\"S1 walkable streets\"/]:::data --&gt; X[\"7 ACCESS&lt;br/&gt;an assumption\"]:::step\n  O --&gt; X\n  U & H & G & X --&gt; OUT[/\"buildings, places,&lt;br/&gt;unplaced rows, checkpoints\"/]:::out\n  OUT --&gt; T[\"tests and maps\"]:::test\n\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#the-sources",
+    "href": "s4-build.html#the-sources",
+    "title": "How S4 is built",
+    "section": "The sources",
+    "text": "The sources\n\n\n\n\n\n\n\nSource\nWhat S4 takes from it\n\n\n\n\nOpenStreetMap\nbuilding outlines and tags; places such as shops and cafés, with opening hours\n\n\nVille de Montréal, tax roll (Unités d’évaluation foncière)\nfor each property: its use, storeys, dwellings, year built and floor area\n\n\nVille de Montréal, address points (Adresse ponctuelle)\nwhere each street number stands\n\n\nVille de Montréal, Locaux commerciaux et statuts d’occupation\nevery ground-floor commercial space in 2025, occupied or vacant\n\n\nVille de Montréal, Lieux et bâtiments à vocation publique\npublic places and their opening hours\n\n\nSitu S1\nthe streets people can walk on\n\n\n\nThe city’s files are open under CC BY 4.0 and OpenStreetMap under ODbL.\nI looked at two more and set them aside. The Concordia NGCI building file has no licence, so I cannot publish anything made from it. It also records each condo tower as a single property: 2199 rue Ann, 76 m tall, appears as one dwelling. The other was Québec City’s building file, which does not cover Montréal.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#the-problem",
+    "href": "s4-build.html#the-problem",
+    "title": "How S4 is built",
+    "section": "The problem",
+    "text": "The problem\nEvery source here is a list of points or rows. Only OpenStreetMap draws buildings. So before anything else, S4 has to give each row a building.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#step-1-the-outlines",
+    "href": "s4-build.html#step-1-the-outlines",
+    "title": "How S4 is built",
+    "section": "Step 1: the outlines",
+    "text": "Step 1: the outlines\nA building belongs to the study area when the centre of its outline falls inside the boundary.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#step-2-the-tax-roll-at-its-address",
+    "href": "s4-build.html#step-2-the-tax-roll-at-its-address",
+    "title": "How S4 is built",
+    "section": "Step 2: the tax roll at its address",
+    "text": "Step 2: the tax roll at its address\nThe roll gives each property a street name and a number, never a position. The city’s address points give a position for a range of numbers on a named street, so S4 matches the two. Many roll rows found no match, because I downloaded the roll for whole streets across the island and the address points only around Griffintown. I think none of the missed rows stands in the study area (likely). A street spelled two different ways would break the match, though, and no test catches that yet.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#step-3-every-row-finds-its-building",
+    "href": "s4-build.html#step-3-every-row-finds-its-building",
+    "title": "How S4 is built",
+    "section": "Step 3: every row finds its building",
+    "text": "Step 3: every row finds its building\nA point inside an outline belongs to that building. A point outside every outline joins the nearest one within 15 m, because an address point often stands at the curb and a shop’s point on its façade. Beyond that it stays unplaced, with the reason written down.\nWhy 15 m? With no reach at all, 2,048 properties would be left out. At 15 m only 418 are, and doubling the reach to 30 m places just three more. The further the reach, the more a point risks joining the wrong building.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#step-4-the-use",
+    "href": "s4-build.html#step-4-the-use",
+    "title": "How S4 is built",
+    "section": "Step 4: the use",
+    "text": "Step 4: the use\nThe roll gives every property a land-use code whose first digit names a broad family, such as residential or commerce. The commonest family among a building’s properties becomes its use, leaving out condo parking spaces and storage units. A tie goes to the larger floor area, and a missing area is never read as zero. When the roll cannot decide, the OpenStreetMap tag speaks next. A plain “building” tag names no use, so the use stays empty, with the reason.\nEvery tie goes on my list to check by hand, because it often means two buildings share one outline. Ardent Mills is an example: the roll places a 74-dwelling social housing property and the flour mill inside the same outline.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#step-5-size",
+    "href": "s4-build.html#step-5-size",
+    "title": "How S4 is built",
+    "section": "Step 5: size",
+    "text": "Step 5: size\nStoreys come from the roll, or failing that from OpenStreetMap. Condo units are left out of this, since the roll gives each unit its own floor count. Dwellings are the sum of the roll’s dwellings over the building’s properties.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#step-6-ground-floor-and-places",
+    "href": "s4-build.html#step-6-ground-floor-and-places",
+    "title": "How S4 is built",
+    "section": "Step 6: ground floor and places",
+    "text": "Step 6: ground floor and places\nThe premises are the 2025 survey’s spaces inside the building, vacant ones included. The places are anywhere a person might go. Some come from OpenStreetMap, and the others are the city’s public places and the survey’s occupied shops. Benches and bike racks are left out.\nSometimes the survey and OpenStreetMap list the same shop. When the two carry exactly the same name in the same building, S4 links them as one place. A looser match, like Orangetheory Fitness against Orangetheory Theory, is left alone: it would be a guess.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#step-7-the-access-link",
+    "href": "s4-build.html#step-7-the-access-link",
+    "title": "How S4 is built",
+    "section": "Step 7: the access link",
+    "text": "Step 7: the access link\nFor each building, S4 finds the nearest S1 street people can walk on, within 80 m. This stands in for the door. It is the weakest value in S4, and every building’s record says so.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-build.html#assumptions",
+    "href": "s4-build.html#assumptions",
+    "title": "How S4 is built",
+    "section": "Assumptions",
+    "text": "Assumptions\n\n\n\nAssumption\nWhy I accept it for now\nWhat would replace it\n\n\n\n\nA building is used for what most of its properties are\nthe roll is the most complete source\nfloor area by use, if the roll gave it per unit\n\n\nThe nearest walkable street is the way in\nno open file has entrances\nentrances in OpenStreetMap, or a site survey\n\n\nAn address point stands in its building\ntrue in most cases; a stress test measures the rest\na check against the roll’s lot numbers\n\n\nA shop with the same name in the same building is one shop\nan exact match is a strong signal\na site visit, or matching by address",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "How S4 is built"
+    ]
+  },
+  {
+    "objectID": "s4-tests.html",
+    "href": "s4-tests.html",
+    "title": "S4 tests",
+    "section": "",
+    "text": "Each check asks one plain question of the finished buildings.\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nDoes every building in the study area appear exactly once?\nYes, all 297\n\n\nDoes every missing value stay empty with a reason, and every value name its source?\nYes\n\n\nCan every count be rebuilt from the source files?\nYes\n\n\nIs every property and shop in the area either in one building or listed as unplaced, never both and never twice?\nYes\n\n\nDoes each use follow the rule for its source, ties included?\nYes\n\n\nIs every building linked to a walkable street within 80 m, or does it say why not?\nYes. Six links are longer than 30 m, and Hangar 1825 has none.\n\n\nIs every place in or next to its building, and does every shop listed twice point to its twin?\nYes, with 52 such pairs\n\n\n\nOne more check only reports how much the sources cover. A gap there is a fact about the sources, and never a failure. The Lab shows the latest results.\nTwo of these checks changed the work. The fourth one failed on its first run: it found 89 properties counted twice. The cause was my download. The tax roll came in pages, and some pages overlapped. S4 now keeps one row per property.\nThe use check changed after the first run too. Looking at the map of uses, I saw Ardent Mills, the flour mill, painted residential. The roll puts two properties in its outline, one residential and one industrial, and my first rule broke the tie by the order of a list. That was a choice I never made on purpose. Now a tie goes to the larger floor area, and a missing floor area settles nothing. After that the OpenStreetMap tag speaks, and every tie goes on my list to check by hand.\n\n\n\n\n\n\nTipTesting the tests\n\n\n\nA test that always passes proves nothing. So I broke the finished buildings file four ways and ran the checks again. I removed the reason from an unknown use, added one dwelling to a building, changed one use that came from the roll, and wrote 0 into an empty dwelling count. The checks caught all four. Then I put the file back.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 tests"
+    ]
+  },
+  {
+    "objectID": "s4-tests.html#the-checks",
+    "href": "s4-tests.html#the-checks",
+    "title": "S4 tests",
+    "section": "",
+    "text": "Each check asks one plain question of the finished buildings.\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nDoes every building in the study area appear exactly once?\nYes, all 297\n\n\nDoes every missing value stay empty with a reason, and every value name its source?\nYes\n\n\nCan every count be rebuilt from the source files?\nYes\n\n\nIs every property and shop in the area either in one building or listed as unplaced, never both and never twice?\nYes\n\n\nDoes each use follow the rule for its source, ties included?\nYes\n\n\nIs every building linked to a walkable street within 80 m, or does it say why not?\nYes. Six links are longer than 30 m, and Hangar 1825 has none.\n\n\nIs every place in or next to its building, and does every shop listed twice point to its twin?\nYes, with 52 such pairs\n\n\n\nOne more check only reports how much the sources cover. A gap there is a fact about the sources, and never a failure. The Lab shows the latest results.\nTwo of these checks changed the work. The fourth one failed on its first run: it found 89 properties counted twice. The cause was my download. The tax roll came in pages, and some pages overlapped. S4 now keeps one row per property.\nThe use check changed after the first run too. Looking at the map of uses, I saw Ardent Mills, the flour mill, painted residential. The roll puts two properties in its outline, one residential and one industrial, and my first rule broke the tie by the order of a list. That was a choice I never made on purpose. Now a tie goes to the larger floor area, and a missing floor area settles nothing. After that the OpenStreetMap tag speaks, and every tie goes on my list to check by hand.\n\n\n\n\n\n\nTipTesting the tests\n\n\n\nA test that always passes proves nothing. So I broke the finished buildings file four ways and ran the checks again. I removed the reason from an unknown use, added one dwelling to a building, changed one use that came from the roll, and wrote 0 into an empty dwelling count. The checks caught all four. Then I put the file back.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 tests"
+    ]
+  },
+  {
+    "objectID": "s4-tests.html#stress-tests",
+    "href": "s4-tests.html#stress-tests",
+    "title": "S4 tests",
+    "section": "Stress tests",
+    "text": "Stress tests\nThese ask how much the result depends on my choices.\nRunning S4 twice on the same input gives the same output, line for line.\nThe 15 m reach, within which a stray point joins the nearest building, matters a lot at first and then very little. With no reach at all, 2,048 properties would be left out. At 15 m only 418 are, and doubling it to 30 m places just three more, without moving any property to a different building.\nThe last test shakes every address point by 2 m, then by 5 m, as if the city had placed them a little off. At 2 m, 247 properties change building; at 5 m, 625 do. The total of dwellings stays at 11,954.\nThat last result is the warning. All the units at one address point move together, as one point. Where two buildings share a wall, an address point a little off lands in the neighbour, and a condo tower’s hundreds of units go with it. So a single building’s count can be wrong while the block’s total is right. S5 and S6 should read dwellings by block, or with that in mind.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 tests"
+    ]
+  },
+  {
+    "objectID": "s4-tests.html#the-lab-check",
+    "href": "s4-tests.html#the-lab-check",
+    "title": "S4 tests",
+    "section": "The Lab check",
+    "text": "The Lab check\nThe Lab keeps its own copy of the S4 results, so I added a check that the two match exactly, down to every outline point, and that an empty value stays empty. I broke the Lab’s copy four ways: I turned an unknown dwelling count into 0, changed one use, moved one outline point by 1 m, and dropped one place. The check caught all four.",
+    "crumbs": [
+      "Method",
+      "S4 Buildings",
+      "S4 tests"
+    ]
+  },
+  {
+    "objectID": "space-syntax-why.html",
+    "href": "space-syntax-why.html",
+    "title": "Why I use it",
+    "section": "",
+    "text": "A simulation can use space syntax as a steering wheel, where the agents read the values and prefer high-scoring streets. That is circular: the answer goes in, so the same answer comes out. I use it as a measuring stick. My agents never read the values, and I compare their movement with the values afterwards, which makes the comparison a real test.",
+    "crumbs": [
+      "Method",
+      "Why I use it"
+    ]
+  },
+  {
+    "objectID": "space-syntax-why.html#a-measuring-stick",
+    "href": "space-syntax-why.html#a-measuring-stick",
+    "title": "Why I use it",
+    "section": "",
+    "text": "A simulation can use space syntax as a steering wheel, where the agents read the values and prefer high-scoring streets. That is circular: the answer goes in, so the same answer comes out. I use it as a measuring stick. My agents never read the values, and I compare their movement with the values afterwards, which makes the comparison a real test.",
+    "crumbs": [
+      "Method",
+      "Why I use it"
+    ]
+  },
+  {
+    "objectID": "space-syntax-why.html#the-circle",
+    "href": "space-syntax-why.html#the-circle",
+    "title": "Why I use it",
+    "section": "The circle",
+    "text": "The circle\nChoice is already a route model: it counts the route with the least turning between every pair of segments (Turner 2007, p. 544). If my walkers also took those routes, spread evenly over all pairs, they would match choice by construction, and the match would prove nothing. So the walkers in S6 pick routes for their own reasons, such as where they are going and the time of day. Space syntax enters Situ only at the end, in S8 Observer.",
+    "crumbs": [
+      "Method",
+      "Why I use it"
+    ]
+  },
+  {
+    "objectID": "space-syntax-why.html#what-the-comparison-can-show",
+    "href": "space-syntax-why.html#what-the-comparison-can-show",
+    "title": "Why I use it",
+    "section": "What the comparison can show",
+    "text": "What the comparison can show\n\n\n\n\n\nflowchart LR\n  SS[Space syntax&lt;br/&gt;layout only]:::data --&gt; CMP{Compare&lt;br/&gt;street by street}:::test\n  SIM[Simulated walkers&lt;br/&gt;S6]:::step --&gt; CMP\n  REAL[Real counts&lt;br/&gt;Ville de Montréal]:::data --&gt; CMP\n  PLAY[Player traces&lt;br/&gt;in the game]:::step --&gt; CMP\n  CMP --&gt; Q[Where layout accounts for movement,&lt;br/&gt;and where something else does]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\n\nSimulationReal countsPlayers\n\n\nWhere the walkers and choice agree, the layout alone may explain the movement. Where they disagree, something else is at work, such as a building or a rule.\n\n\nThe city’s counts check the model against reality, and they are thin: seven S1 junctions, one to three days each, between February 2024 and May 2026 (Movement counts). That is enough to raise a warning and too little to prove anything.\n\n\nIn the game I can watch whether players drift toward integrated streets. This links to my research question on wayfinding.",
+    "crumbs": [
+      "Method",
+      "Why I use it"
+    ]
+  },
+  {
+    "objectID": "space-syntax-why.html#why-this-method",
+    "href": "space-syntax-why.html#why-this-method",
+    "title": "Why I use it",
+    "section": "Why this method",
+    "text": "Why this method\nIt runs on the city’s open street file in QGIS, and the same file with the same settings gives the same values. Forty years of studies use it, so I can set Griffintown beside other cities. It was built to study how layout and social life relate, which is the subject of my research. Its blind spots are well documented, and each one maps onto another Situ system.",
+    "crumbs": [
+      "Method",
+      "Why I use it"
+    ]
+  },
+  {
+    "objectID": "space-syntax-why.html#what-this-means-for-my-data",
+    "href": "space-syntax-why.html#what-this-means-for-my-data",
+    "title": "Why I use it",
+    "section": "What this means for my data",
+    "text": "What this means for my data\nValues belong to the network they were calculated on. A missing path makes its neighbours look less connected than they are, so I added the city’s off-street paths before the analysis (The walking network).\nThe edge of the map also distorts. Streets near it look peripheral only because the map stops there (Ratti 2004, p. 496; van Nes & Yamu 2021, p. 51). So the analysis covers the whole island, and I cut Griffintown out of the results afterwards.",
+    "crumbs": [
+      "Method",
+      "Why I use it"
+    ]
+  }
+]

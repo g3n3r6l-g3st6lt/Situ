@@ -1,0 +1,192 @@
+junction,kind,control,approaches,stops,all_way_sign,lights,note,x,y
+J001,gate,lights,4,0,False,815,,299188.85,5038345.31
+J002,gate,all_way_stop,2,2,False,,,299245.98,5038278.29
+J003,gate,none,1,0,False,,,299300.78,5038211.19
+J004,junction,none,1,0,False,,,300523.36,5039319.06
+J005,junction,all_way_stop,3,3,False,,,300468.98,5039347.12
+J006,junction,all_way_stop,4,4,False,,,300377.82,5039396.44
+J007,junction,all_way_stop,2,2,False,,,300227.2,5039477.13
+J008,junction,none,1,0,False,,,300084.49,5039554.16
+J009,junction,none,1,0,False,,,299847.16,5039270.61
+J010,junction,stop,3,2,False,,,299795.66,5039180.9
+J011,junction,none,1,0,False,,,299751.48,5039104.71
+J012,junction,all_way_stop,2,2,False,,,299698.75,5039012.44
+J013,junction,none,1,0,False,,,299664.95,5038956.72
+J014,junction,stop,3,2,False,,,299610.25,5038868.18
+J015,junction,stop,2,1,False,,,300236.72,5039074.93
+J016,junction,stop,3,2,False,,,300148.37,5039000.36
+J017,junction,all_way_stop,4,4,True,,,300083.9,5038946.35
+J018,junction,all_way_stop,4,4,True,,,299707.68,5038627.93
+J019,junction,none,2,0,False,,,299634.64,5038566.15
+J020,junction,stop,4,2,False,,,299584.13,5038526.29
+J021,dead_end,none,1,0,False,,,299492.86,5038450.12
+J022,junction,none,1,0,False,,,300509.08,5039411.32
+J023,junction,none,2,0,False,,,300453.42,5039234.6
+J024,junction,none,1,0,False,,,299406.03,5038412.11
+J025,junction,none,2,0,False,,,299384.38,5038430.34
+J026,gate,all_way_stop,3,3,False,,,299323.24,5038476.57
+J027,junction,stop,3,2,False,,,299479.92,5038483.63
+J028,junction,none,1,0,False,,,299440.84,5038509.27
+J029,junction,stop,2,1,False,,,299417.53,5038524.79
+J030,junction,none,2,0,False,,,299371.22,5038555.22
+J031,dead_end,none,1,0,False,,,300315.98,5039509.21
+J032,junction,stop,3,2,False,,,300260.51,5039538.98
+J033,junction,none,1,0,False,,,300128.35,5039610.38
+J034,junction,stop,1,1,False,,,300059.2,5039168.92
+J035,junction,all_way_stop,2,2,False,,,299914.6,5039244.73
+J036,junction,stop,1,1,False,,,299910.01,5039234.96
+J037,junction,none,1,0,False,,,300293.02,5038962.97
+J038,junction,stop,2,1,False,,,300263.53,5039030.16
+J039,junction,lights,3,0,False,1733,,300241.44,5039093.98
+J040,junction,lights,3,0,False,236,,299703.73,5038805.41
+J041,gate,lights,4,0,False,235,,299547.29,5038910.95
+J042,junction,all_way_stop,2,2,False,,,300104.24,5039580.52
+J043,junction,stop,3,2,False,,,300035.38,5039628.83
+J044,junction,lights,3,0,False,5479,,299969.29,5039675.33
+J045,gate,lights,4,0,False,383,,299951.0,5039688.01
+J046,junction,stop,3,2,False,,,299689.14,5039145.11
+J047,junction,stop,3,2,False,,,299602.19,5038999.39
+J048,junction,lights,3,0,False,241,,300037.42,5039126.57
+J049,junction,none,2,0,False,,,299931.26,5039142.9
+J050,junction,lights,3,0,False,242,,299871.0,5039152.22
+J051,gate,lights,4,0,False,240,,299737.22,5039227.71
+J052,junction,none,1,0,False,,,299993.85,5039574.88
+J053,junction,none,2,0,False,,,299926.78,5039618.98
+J054,junction,all_way_stop,2,2,True,,,300374.03,5039083.51
+J055,junction,stop,2,1,False,,,300259.36,5039139.48
+J056,junction,none,2,0,False,,,300248.18,5039145.58
+J057,junction,stop,2,1,False,,,300092.5,5039230.2
+J058,junction,stop,1,1,False,,,299946.09,5039308.82
+J059,gate,lights,3,0,False,3473,the city lists these lights as temporary,299816.86,5039375.97
+J060,junction,stop,2,1,False,,,300097.54,5039716.9
+J061,junction,all_way_stop,2,2,False,,,300028.14,5039762.97
+J062,gate,lights,3,0,False,9368,,299990.57,5039790.08
+J063,junction,none,2,0,False,,,299933.49,5039636.33
+J064,gate,none,2,0,False,,,299917.95,5039598.67
+J065,gate,lights,3,0,False,2028,,299899.81,5039557.93
+J066,gate,lights,4,0,False,399,,299876.12,5039503.09
+J067,junction,stop,3,2,False,,,299782.28,5039308.6
+J068,gate,lights,3,0,False,4072,,299634.45,5039053.5
+J069,gate,all_way_stop,3,3,True,,,299489.12,5038813.05
+J070,junction,stop,3,2,False,,,299443.77,5038721.24
+J071,gate,lights,4,0,False,247,,299409.87,5038642.75
+J072,junction,stop,1,1,False,,,300119.16,5038906.03
+J073,junction,all_way_stop,2,2,False,,,300194.15,5039415.58
+J074,junction,lights,3,0,False,401,,300158.11,5039347.79
+J075,junction,all_way_stop,2,2,False,,,300127.93,5039291.36
+J076,junction,all_way_stop,3,3,False,,,299995.59,5039049.38
+J077,junction,all_way_stop,2,2,False,,,299936.39,5038994.17
+J078,junction,none,2,0,False,,,299471.16,5038602.91
+J079,junction,all_way_stop,4,4,True,,,300399.24,5039232.0
+J080,junction,lights,4,0,False,404,,300310.85,5039265.9
+J081,junction,lights,3,0,False,405,,300005.89,5039429.25
+J082,junction,all_way_stop,4,4,True,,,299636.95,5038710.04
+J083,junction,none,2,0,False,,,300065.29,5039122.58
+J084,junction,lights,4,0,False,259,,299533.36,5038561.06
+J085,junction,none,2,0,False,,,300408.55,5039299.95
+J086,junction,stop,3,2,False,,,300345.7,5039333.89
+J087,junction,stop,2,1,False,,,300041.42,5039496.75
+J088,junction,none,2,0,False,,,300412.58,5039328.95
+J089,junction,stop,3,1,False,,,300389.29,5039153.64
+J090,junction,stop,3,2,False,,,299579.67,5038627.68
+J091,junction,stop,3,1,False,,,299845.75,5039096.1
+J092,junction,stop,3,1,False,,,300282.69,5039207.38
+J093,junction,stop,2,1,False,,,299977.71,5039372.77
+J094,junction,none,2,0,False,,,300305.48,5038984.92
+J095,gate,none,2,0,False,,,299904.53,5039568.7
+J096,gate,lights,3,0,False,1487,,300175.48,5039671.27
+J097,junction,all_way_stop,2,2,False,,,300418.83,5039373.55
+J098,junction,none,2,0,False,,,299757.79,5038569.8
+J099,junction,none,2,0,False,,,300256.72,5039097.19
+J100,junction,lights,3,0,False,398,,300441.53,5039529.83
+J101,junction,lights,2,0,False,5855,,300296.86,5039607.19
+J102,junction,none,1,0,False,,,299765.37,5038572.63
+J103,junction,none,2,0,False,,,300562.53,5039241.25
+J104,gate,none,2,0,False,,,300594.34,5039245.38
+J105,gate,none,1,0,False,,,300596.47,5039220.69
+J106,junction,none,1,0,False,,,300285.48,5039585.96
+J107,junction,none,1,0,False,,,300065.23,5039667.63
+J108,junction,none,1,0,False,,,299996.24,5039712.57
+J109,junction,none,2,0,False,,,299967.8,5039730.76
+J110,gate,none,2,0,False,,,299615.33,5038395.38
+J111,junction,stop,1,1,False,,,300396.22,5039385.92
+J112,junction,none,1,0,False,,,300431.56,5039366.54
+J113,junction,none,2,0,False,,,300385.83,5039411.47
+J114,junction,none,2,0,False,,,300406.99,5039452.51
+J115,junction,none,0,0,False,,,300366.58,5039020.05
+J116,junction,none,0,0,False,,,300152.37,5038860.25
+J117,junction,none,0,0,False,,,300370.56,5039060.37
+J118,junction,none,2,0,False,,,299666.7,5038752.92
+J119,junction,none,2,0,False,,,299938.3,5038823.49
+J120,junction,all_way_stop,2,2,False,,,299875.49,5038770.26
+J121,junction,none,2,0,False,,,299838.75,5038739.11
+J122,junction,all_way_stop,2,2,False,,,299780.55,5038689.79
+J123,junction,none,2,0,False,,,299745.3,5038659.91
+J124,junction,none,1,0,False,,,299853.0,5038923.55
+J125,junction,none,1,0,False,,,299790.26,5038870.35
+J126,junction,none,1,0,False,,,299753.48,5038839.17
+J127,junction,none,0,0,False,,,299886.91,5038681.26
+J128,junction,none,0,0,False,,,299934.47,5038700.6
+J129,junction,none,0,0,False,,,299998.82,5038751.58
+J130,junction,none,1,0,False,,,300142.98,5039627.78
+J131,junction,none,1,0,False,,,300164.87,5039657.62
+J132,junction,none,2,0,False,,,300369.9,5039380.93
+J133,junction,none,2,0,False,,,300309.53,5038966.93
+J134,gate,none,2,0,False,,,300327.78,5038864.88
+J135,junction,none,0,0,False,,,300362.36,5039003.97
+J136,junction,none,0,0,False,,,300320.45,5038969.39
+J137,junction,none,0,0,False,,,300300.88,5038954.14
+J138,junction,none,0,0,False,,,300246.57,5038921.84
+J139,junction,none,0,0,False,,,300147.45,5038855.07
+J140,junction,none,0,0,False,,,299786.68,5038581.05
+J141,junction,none,0,0,False,,,299888.41,5038678.0
+J142,junction,none,0,0,False,,,299935.86,5038697.12
+J143,junction,none,0,0,False,,,300001.34,5038748.59
+J144,junction,none,2,0,False,,,299694.05,5038791.85
+J145,junction,none,0,0,False,,,299776.34,5038696.24
+J146,junction,none,0,0,False,,,299700.8,5038786.52
+J147,junction,none,0,0,False,,,299740.74,5038666.13
+J148,junction,none,0,0,False,,,299670.84,5038749.08
+J149,gate,lights,2,0,False,969,,300209.45,5039718.86
+J150,gate,lights,1,0,False,4045,,300134.79,5039766.7
+J151,gate,stop,2,1,False,,,300065.77,5039815.88
+J152,gate,lights,2,0,False,4813,,300012.01,5039849.42
+J153,junction,none,1,0,False,,,300194.82,5039696.95
+J154,junction,none,2,0,False,,,300444.29,5039558.0
+J155,gate,lights,3,0,False,382,,300447.66,5039590.96
+J156,junction,none,2,0,False,,,300001.16,5039822.52
+J157,gate,lights,2,0,False,1423,,300323.73,5039656.94
+J158,junction,none,1,0,False,,,300310.39,5039632.8
+J159,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,299143.16,5038398.91
+J160,exit,stop,1,1,True,,exit: streets beyond the network meet here and are not counted,299081.69,5038253.17
+J161,exit,stop,1,1,False,,exit: streets beyond the network meet here and are not counted,299139.5,5038187.3
+J162,exit,none,0,0,False,,exit: streets beyond the network meet here and are not counted,299197.98,5038119.16
+J163,exit,stop,1,1,False,,exit: streets beyond the network meet here and are not counted,299263.66,5038519.28
+J164,exit,none,0,0,False,,exit: streets beyond the network meet here and are not counted,299797.12,5039629.36
+J165,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,299505.31,5038940.33
+J166,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,299907.57,5039722.25
+J167,exit,lights,1,0,False,397,exit: streets beyond the network meet here and are not counted,299539.74,5039363.88
+J168,exit,none,0,0,False,,exit: streets beyond the network meet here and are not counted,299925.68,5039874.83
+J169,exit,stop,1,1,False,,exit: streets beyond the network meet here and are not counted,300360.7,5039725.53
+J170,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,299444.62,5038846.12
+J171,exit,stop,1,1,False,,exit: streets beyond the network meet here and are not counted,300159.85,5039798.56
+J172,exit,stop,1,1,False,,exit: streets beyond the network meet here and are not counted,300457.86,5039673.16
+J173,exit,none,0,0,False,,exit: streets beyond the network meet here and are not counted,300256.21,5039782.57
+J174,exit,stop,1,1,False,,exit: streets beyond the network meet here and are not counted,299571.04,5039091.85
+J175,exit,none,2,0,False,,exit: streets beyond the network meet here and are not counted,299875.09,5039633.15
+J176,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,300017.71,5039832.39
+J177,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,299365.14,5038671.09
+J178,exit,lights,1,0,False,1536,exit: streets beyond the network meet here and are not counted,299629.82,5039496.36
+J179,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,300089.23,5039848.6
+J180,exit,stop,1,1,False,,exit: streets beyond the network meet here and are not counted,300091.9,5040012.25
+J181,exit,lights,1,0,False,407,exit: streets beyond the network meet here and are not counted,299913.05,5039913.64
+J182,exit,none,0,0,False,,exit: streets beyond the network meet here and are not counted,299995.85,5039803.92
+J183,exit,stop,1,1,False,,exit: streets beyond the network meet here and are not counted,300617.77,5039250.34
+J184,exit,none,0,0,False,,exit: streets beyond the network meet here and are not counted,300608.27,5039224.5
+J185,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,300885.67,5038911.56
+J186,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,299654.05,5038346.66
+J187,exit,none,1,0,False,,exit: streets beyond the network meet here and are not counted,299839.99,5039521.11
+J188,exit,lights,1,0,False,978,exit: streets beyond the network meet here and are not counted,300338.98,5038800.31
+J189,junction,none,0,0,False,,,300519.78,5039421.55
+J190,junction,none,0,0,False,,,300569.96,5039246.27
+J191,junction,none,0,0,False,,,300546.56,5039326.33

@@ -1,0 +1,36 @@
+T1  Every building whose centre is in the study area has exactly one row
+    297 buildings, recounted from the OSM file
+    PASS
+
+T2  A missing value stays empty and carries a reason; a value always names its source
+    PASS
+
+T3  Every count can be rebuilt from trace.csv and the source files
+    properties, dwellings and premises, recomputed from the tax roll itself
+    PASS
+
+T4  Nothing is lost: every property and premises in the area is either in a building or unplaced, once
+    9357 properties, 247 premises
+    PASS
+
+T5  Each use follows its stated source
+    roll: the commonest class among its properties, condo parking and storage left out, a tie settled by floor area; osm_tag: the building tag
+    PASS
+
+T6  Every building is linked to a walkable S1 street within 80 m, or says why not
+    the link is an assumption (entrances unknown); 6 links are longer than 30 m: w1093571773 43.4 m from Rue Richmond; w1163554942 46.1 m from Rue des Seigneurs; w1175945703 31.2 m from Rue Notre-Dame Ouest; w1344783765 35.8 m from Rue Guy; w347458840 33.2 m from Boulevard Georges-Vanier; w614137698 43.1 m from Rue des Seigneurs; 1 with no street within 80 m: w700571090 (Hangar 1825)
+    PASS
+
+T7  Every place is in or next to its building, or says why it has none; a repeat points to its twin
+    610 places; next to = within 15 m; 52 survey rows repeat an OpenStreetMap place
+    PASS
+
+T8  Coverage (information, never a failure)
+    buildings 297: use from the roll 179, from the OSM tag 80, unknown 38
+    storeys from the roll 108, from OSM 113, unknown 76
+    dwellings 11954 in 129 buildings
+    tax-roll properties: 8941 placed, 416 unplaced; 15013 rows on the study streets found no address point; 167 duplicate rows dropped
+    places 610 rows, 558 once each: in a building 542, outside 68; with opening hours 83
+     - unplaced: 418 x no building outline within 15 m
+
+ALL PASS
