@@ -199,6 +199,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./limits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limits of the desk</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./counts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Movement counts and light timing</span></a>
   </div>
@@ -488,7 +494,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="stress-tests">Stress tests</h2>
 <p>These ask how much the result depends on my choices.</p>
 <p>Running S4 twice on the same input gives the same output, line for line.</p>
-<p>The 15 m reach, within which a stray point joins the nearest building, matters a lot at first and then very little. With no reach at all, 1,322 rows would be left out. At 15 m, 468 are, 415 of them in the one building OpenStreetMap lacks. Doubling the reach to 30 m places two more, without moving any property to a different building.</p>
+<p>The 15 m reach, within which a stray point joins the nearest building, matters a lot at first and then very little. With no reach at all, 1,322 rows would be left out. At 15 m, 468 are, 415 of them at the one address point of checkpoint B01. Doubling the reach to 30 m places two more, without moving any property to a different building.</p>
 <p>The last test shakes every address point by 2 m, then by 5 m, as if the city had placed them a little off. At 2 m, 244 properties change building; at 5 m, 278 do. The total of dwellings stays at 11,954.</p>
 <p>The earlier figure at 5 m was 625, and it was partly an accident of the test. Each point’s random move depended on the order in which the points were read, so adding the lots reshuffled every move. Each address point now gets its own fixed move, whatever the order. With that fix, the run without lots gives 291 at 5 m, so the lots barely change this number (certain). Most properties sit on lots that hold several buildings, where the address point still decides.</p>
 <p>That result is the warning. All the units at one address point move together, as one point. Where two buildings share a wall, an address point a little off lands in the neighbour, and a condo tower’s hundreds of units go with it. So a single building’s count can be wrong while the block’s total is right. S5 and S6 should read dwellings by block, or with that in mind.</p>

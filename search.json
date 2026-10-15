@@ -259,7 +259,7 @@
     "href": "s4-buildings.html#what-i-still-need-to-check",
     "title": "S4 Buildings",
     "section": "What I still need to check",
-    "text": "What I still need to check\nS4 flags 61 cases for me to look at by hand. Most are buildings whose use no source gives. Some are ties, where two uses had the same number of properties. A few stand far from any walkable street, Hangar 1825 most of all. Ten times the city’s lot outline and its address point name different buildings. The largest was Griffix: its 197 flats had their address point inside MaryRobert next door, but their lot holds Griffix alone, so they now count in Griffix. And one building seems to be missing from the map.\nThat last one matters most. At 1485 rue des Bassins (B01), the tax roll lists 415 dwellings, built in 2024, all at one address point. OpenStreetMap has not drawn the building yet. Its lot, about 11,400 m², also holds Bass 4 and Le Vittorio, and the address point stands 130 m from both, so it is likely a third building on the same land. Until someone draws it, those people live nowhere on the map. I left them unplaced and counted. I did not invent an outline.",
+    "text": "What I still need to check\nS4 flags 61 cases for me to look at by hand. Most are buildings whose use no source gives. Some are ties, where two uses had the same number of properties. A few stand far from any walkable street, Hangar 1825 most of all. Ten times the city’s lot outline and its address point name different buildings. The largest was Griffix: its 197 flats had their address point inside MaryRobert next door, but their lot holds Griffix alone, so they now count in Griffix. And 415 properties stand at an address point far from any building.\nThat last one matters most. At 1485 rue des Bassins (B01), the tax roll lists 415 properties built in 2024: 290 dwellings and 125 condo parking spaces, all at one address point with no building on it. I first read this as a building OpenStreetMap had not drawn yet. The lot outlines changed my reading. The lot of 1485 holds Bass 4 and Le Vittorio, 130 m from the address point, and neither building has a single property placed in it. So the 290 dwellings most likely belong to those two towers, and the address point is the thing out of place (likely). Which tower holds how many, no file says. Until a door number or a site visit settles it, I leave them unplaced and counted, and I split nothing by guess.",
     "crumbs": [
       "Method",
       "S4 Buildings",
@@ -704,69 +704,183 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Situ",
+    "objectID": "limits.html",
+    "href": "limits.html",
+    "title": "Limits of the desk",
     "section": "",
-    "text": "Situ is the prototype for my PhD research-creation project. It asks whether the spatial culture and urban rhythm of Griffintown, Montréal, can be mediated and archived through a game-like 3D experience. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from observation, and I read both through urban theory. Game design carries the result to a player.\nNothing in Situ archives anything yet. So far there is a foundation: the street network with its rules, and the measures I will test it against.",
+    "text": "So far I have built Situ from open data, and I have looked at Griffintown mostly through other people’s cameras. I have not yet walked the area with a notebook to check each place myself. That shapes what every system can claim. This page sets out those limits in one place, so a reader can weigh each result against the way it was made.\nTwo words help. By open data I mean files that public bodies or volunteers publish for anyone to use, such as the city’s tax roll or OpenStreetMap. By desk research I mean everything I can do from a screen: working with those files, and looking at photos and videos that someone else took.",
     "crumbs": [
       "Method",
-      "About Situ"
+      "Data",
+      "Limits of the desk"
     ]
   },
   {
-    "objectID": "about.html#what-situ-is",
-    "href": "about.html#what-situ-is",
-    "title": "About Situ",
+    "objectID": "limits.html#why-this-page",
+    "href": "limits.html#why-this-page",
+    "title": "Limits of the desk",
     "section": "",
-    "text": "Situ is the prototype for my PhD research-creation project. It asks whether the spatial culture and urban rhythm of Griffintown, Montréal, can be mediated and archived through a game-like 3D experience. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from observation, and I read both through urban theory. Game design carries the result to a player.\nNothing in Situ archives anything yet. So far there is a foundation: the street network with its rules, and the measures I will test it against.",
+    "text": "So far I have built Situ from open data, and I have looked at Griffintown mostly through other people’s cameras. I have not yet walked the area with a notebook to check each place myself. That shapes what every system can claim. This page sets out those limits in one place, so a reader can weigh each result against the way it was made.\nTwo words help. By open data I mean files that public bodies or volunteers publish for anyone to use, such as the city’s tax roll or OpenStreetMap. By desk research I mean everything I can do from a screen: working with those files, and looking at photos and videos that someone else took.",
     "crumbs": [
       "Method",
-      "About Situ"
+      "Data",
+      "Limits of the desk"
     ]
   },
   {
-    "objectID": "about.html#the-idea",
-    "href": "about.html#the-idea",
-    "title": "About Situ",
-    "section": "The idea",
-    "text": "The idea\n\nSpatial culture\nHillier described a spatial culture as “a distinctive way of ordering space” (Hillier 1989, quoted in Griffiths & von Lünen 2016, p. xxiii). Griffiths and von Lünen see the field as the link between how a built place works and what it comes to mean to the people who live in it (2016, p. xxi). Adams (2024, introduction) wants spatial culture to be “qualified and documented”, which is close to what an archive needs.\n\n\nRhythm\nA street layout has no time in it, and space syntax tends to strip social practice of its time (Griffiths & von Lünen 2016, p. xxiii). Lefebvre finds rhythm wherever energy is spent in a particular place and time (2004, p. 15). His own example is a Paris junction seen from his window: on red the pedestrians cross, on green the cars rush (p. 28). The light cycles in S3 model that beat. He also holds that where there is rhythm there is measure (p. 8), so counts and timings belong in Situ. I add time on purpose: when places are open and when streets are busy.\n\n\nArchiving\nAn archive keeps two things: the evidence records give of how their maker worked, and the information they hold about people and places (Schellenberg 1956, pp. 139 to 140). Situ keeps both. The city data says what Griffintown is. My decision files and tests record how I turned it into a model, the layer the London Charter calls paradata (2009, principle 4.6). The Seville principles ask that a reconstruction show what is real and what is not (López-Menchero & Grande, principle 4), and that others can test it (principle 7). So every decision in my files carries a status, such as confirmed, assumed, likely or open.\nRhythm is the hard part. Taylor separates the archive of lasting things from the repertoire of embodied practice, like walking to work or lingering at a corner, which needs people to be present (2003, pp. 19 to 20). Situ cannot store a rhythm the way it stores a street. It can keep traces such as counts and timings, and offer a place where the rhythm can be performed again: the game. The Seville principles warn against showing “lifeless cities” (principle 5.3).\n\n\nWhat Situ has and what it lacks\nLefebvre describes three moments of social space (1991, pp. 38 to 40). I use them as a checklist. He warns that they lose their force when treated as an abstract model (p. 40), so each row stays open to revision.\n\n\n\n\n\n\n\n\nLefebvre\nIn Situ\nStatus\n\n\n\n\nconceived space: plans, maps, data\nthe network and its rules (S1 to S3), building types (S4), from city data and OpenStreetMap\nbuilt up to S4\n\n\nperceived space: daily routines\nrhythm and movement (S5 to S8), from the city’s counts and later computer vision\ncounts read, systems to come\n\n\nlived space: space as its users live it\nthe game, and what people say about the place, through play and later interviews\nnot started\n\n\n\n\n\n\n\n\n\nNoteFour readings I make, and how I defend them\n\n\n\n\n\nThese are my own interpretations of the sources. For each one I give my reason, the strongest objection I know, my answer, and what would show me wrong.\n\n1. Lefebvre’s triad as a checklist\n\nReason. Each kind of source in Situ lines up with one of Lefebvre’s moments of social space (1991, pp. 38 to 40).\nObjection. He warns that the triad loses its force as an abstract model (p. 40), and laying it over software comes close to that.\nAnswer. I use it only to see what is missing, and the lived row is empty. The rows also leak: the counts are observation, yet the city decided where to count.\nWrong if the rows cannot be kept apart at all. Then the table should show the crossings.\n\n\n\n2. “That difference is what the archive should keep”\n\nReason. Where space syntax and observed movement disagree, something besides the layout is at work, such as a shop or a rule. Griffiths and von Lünen ask research to spell out that kind of gap (2016, p. xxi), and the 1993 natural movement paper itself shows shops multiplying the effect of the layout (Hillier et al. 1993, p. 31).\nObjection. A difference may only be error, such as a wrong network or too few counts.\nAnswer. So every system is tested, and a difference counts only after those checks.\nWrong if the differences vanish once errors are fixed, or follow no pattern.\n\n\n\n3. Schellenberg’s two values\n\nReason. Schellenberg separates evidence of how a record’s maker worked from information about people and places (1956, pp. 139 to 140, 148). My decision files are the first kind and the city data is the second. The London Charter calls the first layer paradata (2009, principle 4.6).\nObjection. He wrote about government records in 1956, and a research model is no government agency.\nAnswer. I borrow only his distinction, which he says he defines “quite arbitrarily” (p. 139). The London Charter already carries it into visualisation.\nWrong if the two layers cannot be kept apart. That is why my corrections live in their own file and the city’s files stay untouched.\n\n\n\n4. Rhythm as repertoire, and the game as a place to perform it again\n\nReason. Taylor’s repertoire is embodied practice that needs people to be present (2003, pp. 19 to 20), and Lefebvre’s rhythm needs bodies spending energy (2004, p. 15). Play is embodied action too.\nObjection. A player alone in a simulation receives no memory from Griffintown’s people, and the game itself is code and data, an archive object. Lefebvre adds that the rhythmanalyst is closer to the poet than to “the statistician, who counts things” (2004, p. 23).\nAnswer. I accept most of this. The game keeps traces and sets up a new performance. It does not hold the original repertoire, which is why interviews and focus groups are in the plan.\nWrong if players’ movement bears no relation to the recorded rhythms. Then the game performs nothing of Griffintown.\n\n\n\n\n\n\n\nSpace syntax as one measuring stick\nSpace syntax describes the layout. I use it to measure, and the simulated walkers never read it. At the end, S8 compares where they went with what space syntax predicts and with the city’s counts. Where they agree, the layout may explain the movement. Where they differ, something else is at work, and that difference is what the archive should keep. Why I use it\n\n\n\n\n\nflowchart LR\n  D[City data&lt;br/&gt;streets, buildings,&lt;br/&gt;signs, lights]:::data --&gt; S[Small systems&lt;br/&gt;S1 to S7]:::step\n  O[Observation&lt;br/&gt;counts, later&lt;br/&gt;computer vision]:::data --&gt; S\n  S --&gt; M[Simulated movement&lt;br/&gt;and rhythm]:::step\n  M --&gt; C{S8 Observer&lt;br/&gt;compare}:::test\n  SS[Space syntax]:::data --&gt; C\n  O --&gt; C\n  C --&gt; G[The game:&lt;br/&gt;a place to play&lt;br/&gt;and to keep]:::out\n  L[Lived accounts&lt;br/&gt;interviews, play]:::data --&gt; G\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nI build Situ as small systems, each with a single job. I draw each one as a blueprint and test it, then try it in the Lab before the next one starts.",
+    "objectID": "limits.html#a-file-is-made-for-its-own-purpose",
+    "href": "limits.html#a-file-is-made-for-its-own-purpose",
+    "title": "Limits of the desk",
+    "section": "A file is made for its own purpose",
+    "text": "A file is made for its own purpose\nNo file describes a city in general. Each one was made by an institution to do a job, and its categories serve that job. Scholars of data make the same point: data are gathered and shaped for a purpose before anyone analyses them (Gitelman 2013; Kitchin 2014). When I borrow a file for a different question, its categories come with it.\nThe city’s street file is a road file. It left out the canal path and the new park paths, and 10 of the first 12 dead ends in S1 turned out to be places where walkers carry on. The tax roll is a file for taxing property. It counts a condo parking space as a property, as it counts a home, and it gives a tower’s storeys only for some kinds of property. The sign inventory serves the crews who maintain signs. It says where a sign stands and what it says, and never which way it faces.",
     "crumbs": [
       "Method",
-      "About Situ"
+      "Data",
+      "Limits of the desk"
     ]
   },
   {
-    "objectID": "about.html#the-systems",
-    "href": "about.html#the-systems",
-    "title": "About Situ",
-    "section": "The systems",
-    "text": "The systems\n\n\n\n\nSystem\nJob\nStatus\n\n\n\n\n\nWalking network\nAdd the city’s off-street paths before space syntax is calculated\nbuilt, tested\n\n\nS1\nStreets\nWhich streets connect, and who may use them in which direction\nbuilt, tested\n\n\nS2\nScores\nAttach the space syntax values to each street\nbuilt, tested\n\n\nS3\nRules\nStop signs, traffic lights, forbidden turns, speed limits\nbuilt, tested\n\n\nS4\nBuildings\nWhat each building is, so people have places to go\nbuilt, tested\n\n\nS5\nRhythm\nHow busy each place is at each hour\nnext\n\n\nS6\nWalkers\nPedestrians going from building to building\nlater\n\n\nS7\nDrivers\nCars that obey the rules\nlater\n\n\nS8\nObserver\nCounts where everyone went and compares\nlater",
+    "objectID": "limits.html#four-ways-the-files-fall-short",
+    "href": "limits.html#four-ways-the-files-fall-short",
+    "title": "Limits of the desk",
+    "section": "Four ways the files fall short",
+    "text": "Four ways the files fall short\nPurpose is one limit. I meet three more again and again.\nThe first is time. Every file has its own date, and Griffintown changes faster than most of them. Some of my Street View evidence dates from 2007 to 2016. The city’s sign post at one corner under the Wellington viaduct is from October 2025, while every photo of it is older (P03). The city’s 3D model of 2020 covers Ville-Marie and stops at the borough line, so Griffintown, in Le Sud-Ouest, has only the model of 2016, older than many of its towers. When two files disagree, the cause is often a gap in time.\nThe second is coverage: what a file leaves out. The speed file has no limits for Autoroute 10 and its ramps. The traffic light file says where the lights are and nothing about their timing. No open file says where the doors of buildings are. OpenStreetMap is drawn by volunteers, so a building appears only once someone draws it.\nThe third is position. A point in a file stands in for a thing on the street, and the two are rarely in the same spot. An address point often stands at the curb and a shop’s point on its façade. At 1485 rue des Bassins, 290 dwellings share one address point that stands 130 m from the two towers on their lot (checkpoint B01). Even my own arithmetic can move things: an early version of S4 placed some building centres tens of metres off, because of the way it handled large map coordinates.",
     "crumbs": [
       "Method",
-      "About Situ"
+      "Data",
+      "Limits of the desk"
     ]
   },
   {
-    "objectID": "about.html#where-to-start",
-    "href": "about.html#where-to-start",
-    "title": "About Situ",
-    "section": "Where to start",
-    "text": "Where to start\n\nIf space syntax is new to you: What space syntax is\nFor the first system: S1 Streets\nTo see every system on one map: the Lab\nFor every data source and reading: Resources",
+    "objectID": "limits.html#seeing-from-the-desk",
+    "href": "limits.html#seeing-from-the-desk",
+    "title": "Limits of the desk",
+    "section": "Seeing from the desk",
+    "text": "Seeing from the desk\nPhotos and videos let me look at the street without being there, and they settled real questions. Mapillary photos from 2016 and 2024 showed that walkers cross Place des Aiguilleurs at the end of Rue Smith (C06). Photos settled most of the no-entry disagreements in S3. A walking video filmed on 11 July 2026 shows the signs at the entrance of Allée des Vraquiers: no entry except for emergency vehicles, a pedestrian zone, no bicycles.\nStill, a camera goes where its owner walks, and it records one moment. Neither of the two recent walking videos reaches the end of Rue Brennan, so the footway I assumed there (C04) is still unconfirmed. A sign seen edge-on shows that it exists and hides which street it faces. A photo older than the sign it shows can mislead.\nSo every decision keeps its source and its date, and I grade the evidence. A link I assume is drawn in pink. A photo or a video can make it likely. Only a visit makes it confirmed. Videos are cited by link and timestamp, and no frame appears on this site unless its owner agrees.",
     "crumbs": [
       "Method",
-      "About Situ"
+      "Data",
+      "Limits of the desk"
     ]
   },
   {
-    "objectID": "about.html#reading-the-diagrams",
-    "href": "about.html#reading-the-diagrams",
-    "title": "About Situ",
-    "section": "Reading the diagrams",
-    "text": "Reading the diagrams\nEvery blueprint uses the same key. A grey outline is data coming in, and a dashed grey one is a decision I made and kept in a file. A white outline is a processing step, and a thick white one is a result written to disk. Pink marks a test.\nOn the map sheets, labels never overlap. When a label has to move, a thin line points back to what it names.",
+    "objectID": "limits.html#system-by-system",
+    "href": "limits.html#system-by-system",
+    "title": "Limits of the desk",
+    "section": "System by system",
+    "text": "System by system\n\n\n\nSystem\nWhat open data gives\nWhat the desk cannot settle\n\n\n\n\nS1 Streets\nstreet lines with their class and direction, plus paths from OpenStreetMap\nwhether a path is open on the ground, and where a closure or building site cuts a route. Three links at the end of Brennan and Ann rest on assumption\n\n\nS2 Scores\nspace syntax values measured on the network I built\nwhere people actually walk. The values also inherit S1’s assumptions: Brennan and Ann gained walking choice only because I assumed they lead somewhere\n\n\nS3 Rules\nwhere each sign and each light stands, and the speed limits\nwhich way a sign faces, and how long each light stays green. 21 places remain to check\n\n\nS4 Buildings\nuses and dwellings from the tax roll with its lots, and outlines from OpenStreetMap\nhow tall many buildings are, and which of two towers holds which units. 61 cases remain to check",
     "crumbs": [
       "Method",
-      "About Situ"
+      "Data",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#people-are-missing",
+    "href": "limits.html#people-are-missing",
+    "title": "Limits of the desk",
+    "section": "People are missing",
+    "text": "People are missing\nThe deepest limit is about people. Open data records a city’s infrastructure, its streets and its properties. Apart from the city’s movement counts at a few intersections (Movement counts), it says almost nothing about how people use the streets: where they linger, or when a corner fills. Situ wants to mediate and archive spatial culture and urban rhythm, and those live in what people do. From the desk I can describe the stage. I cannot yet describe the play.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#how-situ-carries-the-gaps",
+    "href": "limits.html#how-situ-carries-the-gaps",
+    "title": "Limits of the desk",
+    "section": "How Situ carries the gaps",
+    "text": "How Situ carries the gaps\nI try to keep each gap visible. A value no source gives stays empty, with the reason written beside it, and is never filled with a zero or a guess. Every assumption is labelled as one, on the page and in the Lab. Every place the desk could not settle becomes a checkpoint with a question, and the Lab explains why each kind matters.\nMost of the remaining checkpoints can only be closed on site. The next step is a walk through Griffintown with these questions in hand, photographing and dating each answer. Later, observation of people in place will feed S5 Rhythm, the first system about time and use.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#what-situ-can-claim-for-now",
+    "href": "limits.html#what-situ-can-claim-for-now",
+    "title": "Limits of the desk",
+    "section": "What Situ can claim, for now",
+    "text": "What Situ can claim, for now\nSitu describes Griffintown as its files and other people’s cameras record it, at dates I can name. It can show how the layout and the rules shape the movement that is possible. It cannot yet show how people actually live in the area. Each system says which of the two it is doing.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#references",
+    "href": "limits.html#references",
+    "title": "Limits of the desk",
+    "section": "References",
+    "text": "References\n\nGitelman, L. (ed.) (2013). “Raw Data” Is an Oxymoron. MIT Press.\nKitchin, R. (2014). The Data Revolution: Big Data, Open Data, Data Infrastructures and Their Consequences. SAGE.",
+    "crumbs": [
+      "Method",
+      "Data",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html",
+    "href": "lab-notes.html",
+    "title": "Lab notes",
+    "section": "",
+    "text": "The Lab is one map with a tab for each system. Each system page keeps its own blueprint and maps. The Lab is where I can try a system, see the places it still leaves open, and click anything on the map to read what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When the reach slider moves, the Lab steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#what-the-lab-is",
+    "href": "lab-notes.html#what-the-lab-is",
+    "title": "Lab notes",
+    "section": "",
+    "text": "The Lab is one map with a tab for each system. Each system page keeps its own blueprint and maps. The Lab is where I can try a system, see the places it still leaves open, and click anything on the map to read what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When the reach slider moves, the Lab steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#what-it-shows",
+    "href": "lab-notes.html#what-it-shows",
+    "title": "Lab notes",
+    "section": "What it shows",
+    "text": "What it shows\nOne system shows at a time, because two colourings on one street cannot be read. Each tab has at most two controls, its checkpoints grouped by kind with the reason each kind matters, and the result of its last tests.\n\n\n\n\n\n\n\n\nTab\nWhat the map shows\nWhat you can try\n\n\n\n\nS1 Streets\nwho may use each street, gates and dead ends\nhow far you can get from a junction, and every street a trip up to 50 % longer than the shortest could use\n\n\nS2 Scores\nchoice or integration, on foot or by car\na distance slider that can play\n\n\nS3 Rules\nstops and lights, or speed limits\nclick a junction, then a street arriving at it, for its rules and signs\n\n\nS4 Buildings\nbuildings by use, or by where the use came from\nthe places people go to\n\n\n\nI took the stress tests out of the Lab. They are on each system’s tests page, where their numbers can be read in full.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#how-it-is-built",
+    "href": "lab-notes.html#how-it-is-built",
+    "title": "Lab notes",
+    "section": "How it is built",
+    "text": "How it is built\n\n\n\n\n\nflowchart LR\n  B1[\"S1 Streets&lt;br/&gt;results and checks\"]:::step --&gt; W1[\"copy for the Lab\"]:::step\n  B2[\"S2 Scores&lt;br/&gt;results and checks\"]:::step --&gt; W2[\"copy for the Lab\"]:::step\n  B3[\"S3 Rules&lt;br/&gt;results and checks\"]:::step --&gt; W3[\"copy for the Lab\"]:::step\n  C[\"shared way of copying\"]:::rule --&gt; W1\n  C --&gt; W2\n  C --&gt; W3\n  W1 --&gt; D1[/\"S1 data\"/]:::out\n  W2 --&gt; D2[/\"S2 data\"/]:::out\n  W3 --&gt; D3[/\"S3 data\"/]:::out\n  B1 --&gt; R1[\"shortest routes\"]:::step\n  R1 --&gt; D4[/\"route data\"/]:::out\n  D4 --&gt; L\n  D4 --&gt; T\n  D1 --&gt; L[\"the Lab\"]:::test\n  D2 --&gt; L\n  D3 --&gt; L\n  B4[\"S4 Buildings&lt;br/&gt;results and checks\"]:::step --&gt; W4[\"copy for the Lab\"]:::step\n  C --&gt; W4\n  W4 --&gt; D5[/\"S4 data\"/]:::out\n  D5 --&gt; L\n  D5 --&gt; T\n  D1 --&gt; T[\"the Lab checks&lt;br/&gt;L1 to L6\"]:::test\n  D2 --&gt; T\n  D3 --&gt; T\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nEach system copies its tables into one file for the Lab. A browser may refuse to read a data file from the disk, but it always runs a script, so each file is written as a small script. That way the Lab works even when the book is opened without a server.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#tests",
+    "href": "lab-notes.html#tests",
+    "title": "Lab notes",
+    "section": "How the Lab is tested",
+    "text": "How the Lab is tested\nThe Lab checks ask one thing: does the Lab show exactly what the systems wrote?\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nL1\nDo the Lab’s streets and junctions match S1, and does each junction reach the same streets? For every 15th junction the reach is worked out again from scratch.\n\n\nL2\nDoes every S2 value equal the S2 table, with missing values still missing?\n\n\nL3\nDo the S3 rules, signs, speeds and checkpoints equal the S3 tables?\n\n\nL4\nDo the S3 stress results kept for the Lab give the same counts as the S3 stress tests?\n\n\nL5\nIs every shortest route real and truly shortest, and do the browser’s route rules give the same routes as the originals?\n\n\nL6\nDoes every S4 building and place equal the S4 tables, down to each point of each outline, with empty cells still empty?\n\n\n\nAll six pass, and the Lab lists the latest results.\nI broke the files on purpose before trusting these checks. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, the same check for S3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change.\nThe shortest-route check does not trust the method that found the routes. If a route is real and no single move anywhere could shorten any distance, then no shorter route exists. That is checked separately, for every start and every move.",
+    "crumbs": [
+      "Method",
+      "Lab",
+      "Lab notes"
     ]
   },
   {
@@ -866,63 +980,69 @@
     ]
   },
   {
-    "objectID": "lab-notes.html",
-    "href": "lab-notes.html",
-    "title": "Lab notes",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Situ",
     "section": "",
-    "text": "The Lab is one map with a tab for each system. Each system page keeps its own blueprint and maps. The Lab is where I can try a system, see the places it still leaves open, and click anything on the map to read what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When the reach slider moves, the Lab steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "text": "Situ is the prototype for my PhD research-creation project. It asks whether the spatial culture and urban rhythm of Griffintown, Montréal, can be mediated and archived through a game-like 3D experience. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from observation, and I read both through urban theory. Game design carries the result to a player.\nNothing in Situ archives anything yet. So far there is a foundation: the street network with its rules, and the measures I will test it against.",
     "crumbs": [
       "Method",
-      "Lab",
-      "Lab notes"
+      "About Situ"
     ]
   },
   {
-    "objectID": "lab-notes.html#what-the-lab-is",
-    "href": "lab-notes.html#what-the-lab-is",
-    "title": "Lab notes",
+    "objectID": "about.html#what-situ-is",
+    "href": "about.html#what-situ-is",
+    "title": "About Situ",
     "section": "",
-    "text": "The Lab is one map with a tab for each system. Each system page keeps its own blueprint and maps. The Lab is where I can try a system, see the places it still leaves open, and click anything on the map to read what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When the reach slider moves, the Lab steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "text": "Situ is the prototype for my PhD research-creation project. It asks whether the spatial culture and urban rhythm of Griffintown, Montréal, can be mediated and archived through a game-like 3D experience. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from observation, and I read both through urban theory. Game design carries the result to a player.\nNothing in Situ archives anything yet. So far there is a foundation: the street network with its rules, and the measures I will test it against.",
     "crumbs": [
       "Method",
-      "Lab",
-      "Lab notes"
+      "About Situ"
     ]
   },
   {
-    "objectID": "lab-notes.html#what-it-shows",
-    "href": "lab-notes.html#what-it-shows",
-    "title": "Lab notes",
-    "section": "What it shows",
-    "text": "What it shows\nOne system shows at a time, because two colourings on one street cannot be read. Each tab has at most two controls, its checkpoints grouped by kind with the reason each kind matters, and the result of its last tests.\n\n\n\n\n\n\n\n\nTab\nWhat the map shows\nWhat you can try\n\n\n\n\nS1 Streets\nwho may use each street, gates and dead ends\nhow far you can get from a junction, and every street a trip up to 50 % longer than the shortest could use\n\n\nS2 Scores\nchoice or integration, on foot or by car\na distance slider that can play\n\n\nS3 Rules\nstops and lights, or speed limits\nclick a junction, then a street arriving at it, for its rules and signs\n\n\nS4 Buildings\nbuildings by use, or by where the use came from\nthe places people go to\n\n\n\nI took the stress tests out of the Lab. They are on each system’s tests page, where their numbers can be read in full.",
+    "objectID": "about.html#the-idea",
+    "href": "about.html#the-idea",
+    "title": "About Situ",
+    "section": "The idea",
+    "text": "The idea\n\nSpatial culture\nHillier described a spatial culture as “a distinctive way of ordering space” (Hillier 1989, quoted in Griffiths & von Lünen 2016, p. xxiii). Griffiths and von Lünen see the field as the link between how a built place works and what it comes to mean to the people who live in it (2016, p. xxi). Adams (2024, introduction) wants spatial culture to be “qualified and documented”, which is close to what an archive needs.\n\n\nRhythm\nA street layout has no time in it, and space syntax tends to strip social practice of its time (Griffiths & von Lünen 2016, p. xxiii). Lefebvre finds rhythm wherever energy is spent in a particular place and time (2004, p. 15). His own example is a Paris junction seen from his window: on red the pedestrians cross, on green the cars rush (p. 28). The light cycles in S3 model that beat. He also holds that where there is rhythm there is measure (p. 8), so counts and timings belong in Situ. I add time on purpose: when places are open and when streets are busy.\n\n\nArchiving\nAn archive keeps two things: the evidence records give of how their maker worked, and the information they hold about people and places (Schellenberg 1956, pp. 139 to 140). Situ keeps both. The city data says what Griffintown is. My decision files and tests record how I turned it into a model, the layer the London Charter calls paradata (2009, principle 4.6). The Seville principles ask that a reconstruction show what is real and what is not (López-Menchero & Grande, principle 4), and that others can test it (principle 7). So every decision in my files carries a status, such as confirmed, assumed, likely or open.\nRhythm is the hard part. Taylor separates the archive of lasting things from the repertoire of embodied practice, like walking to work or lingering at a corner, which needs people to be present (2003, pp. 19 to 20). Situ cannot store a rhythm the way it stores a street. It can keep traces such as counts and timings, and offer a place where the rhythm can be performed again: the game. The Seville principles warn against showing “lifeless cities” (principle 5.3).\n\n\nWhat Situ has and what it lacks\nLefebvre describes three moments of social space (1991, pp. 38 to 40). I use them as a checklist. He warns that they lose their force when treated as an abstract model (p. 40), so each row stays open to revision.\n\n\n\n\n\n\n\n\nLefebvre\nIn Situ\nStatus\n\n\n\n\nconceived space: plans, maps, data\nthe network and its rules (S1 to S3), building types (S4), from city data and OpenStreetMap\nbuilt up to S4\n\n\nperceived space: daily routines\nrhythm and movement (S5 to S8), from the city’s counts and later computer vision\ncounts read, systems to come\n\n\nlived space: space as its users live it\nthe game, and what people say about the place, through play and later interviews\nnot started\n\n\n\n\n\n\n\n\n\nNoteFour readings I make, and how I defend them\n\n\n\n\n\nThese are my own interpretations of the sources. For each one I give my reason, the strongest objection I know, my answer, and what would show me wrong.\n\n1. Lefebvre’s triad as a checklist\n\nReason. Each kind of source in Situ lines up with one of Lefebvre’s moments of social space (1991, pp. 38 to 40).\nObjection. He warns that the triad loses its force as an abstract model (p. 40), and laying it over software comes close to that.\nAnswer. I use it only to see what is missing, and the lived row is empty. The rows also leak: the counts are observation, yet the city decided where to count.\nWrong if the rows cannot be kept apart at all. Then the table should show the crossings.\n\n\n\n2. “That difference is what the archive should keep”\n\nReason. Where space syntax and observed movement disagree, something besides the layout is at work, such as a shop or a rule. Griffiths and von Lünen ask research to spell out that kind of gap (2016, p. xxi), and the 1993 natural movement paper itself shows shops multiplying the effect of the layout (Hillier et al. 1993, p. 31).\nObjection. A difference may only be error, such as a wrong network or too few counts.\nAnswer. So every system is tested, and a difference counts only after those checks.\nWrong if the differences vanish once errors are fixed, or follow no pattern.\n\n\n\n3. Schellenberg’s two values\n\nReason. Schellenberg separates evidence of how a record’s maker worked from information about people and places (1956, pp. 139 to 140, 148). My decision files are the first kind and the city data is the second. The London Charter calls the first layer paradata (2009, principle 4.6).\nObjection. He wrote about government records in 1956, and a research model is no government agency.\nAnswer. I borrow only his distinction, which he says he defines “quite arbitrarily” (p. 139). The London Charter already carries it into visualisation.\nWrong if the two layers cannot be kept apart. That is why my corrections live in their own file and the city’s files stay untouched.\n\n\n\n4. Rhythm as repertoire, and the game as a place to perform it again\n\nReason. Taylor’s repertoire is embodied practice that needs people to be present (2003, pp. 19 to 20), and Lefebvre’s rhythm needs bodies spending energy (2004, p. 15). Play is embodied action too.\nObjection. A player alone in a simulation receives no memory from Griffintown’s people, and the game itself is code and data, an archive object. Lefebvre adds that the rhythmanalyst is closer to the poet than to “the statistician, who counts things” (2004, p. 23).\nAnswer. I accept most of this. The game keeps traces and sets up a new performance. It does not hold the original repertoire, which is why interviews and focus groups are in the plan.\nWrong if players’ movement bears no relation to the recorded rhythms. Then the game performs nothing of Griffintown.\n\n\n\n\n\n\n\nSpace syntax as one measuring stick\nSpace syntax describes the layout. I use it to measure, and the simulated walkers never read it. At the end, S8 compares where they went with what space syntax predicts and with the city’s counts. Where they agree, the layout may explain the movement. Where they differ, something else is at work, and that difference is what the archive should keep. Why I use it\n\n\n\n\n\nflowchart LR\n  D[City data&lt;br/&gt;streets, buildings,&lt;br/&gt;signs, lights]:::data --&gt; S[Small systems&lt;br/&gt;S1 to S7]:::step\n  O[Observation&lt;br/&gt;counts, later&lt;br/&gt;computer vision]:::data --&gt; S\n  S --&gt; M[Simulated movement&lt;br/&gt;and rhythm]:::step\n  M --&gt; C{S8 Observer&lt;br/&gt;compare}:::test\n  SS[Space syntax]:::data --&gt; C\n  O --&gt; C\n  C --&gt; G[The game:&lt;br/&gt;a place to play&lt;br/&gt;and to keep]:::out\n  L[Lived accounts&lt;br/&gt;interviews, play]:::data --&gt; G\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nI build Situ as small systems, each with a single job. I draw each one as a blueprint and test it, then try it in the Lab before the next one starts.",
     "crumbs": [
       "Method",
-      "Lab",
-      "Lab notes"
+      "About Situ"
     ]
   },
   {
-    "objectID": "lab-notes.html#how-it-is-built",
-    "href": "lab-notes.html#how-it-is-built",
-    "title": "Lab notes",
-    "section": "How it is built",
-    "text": "How it is built\n\n\n\n\n\nflowchart LR\n  B1[\"S1 Streets&lt;br/&gt;results and checks\"]:::step --&gt; W1[\"copy for the Lab\"]:::step\n  B2[\"S2 Scores&lt;br/&gt;results and checks\"]:::step --&gt; W2[\"copy for the Lab\"]:::step\n  B3[\"S3 Rules&lt;br/&gt;results and checks\"]:::step --&gt; W3[\"copy for the Lab\"]:::step\n  C[\"shared way of copying\"]:::rule --&gt; W1\n  C --&gt; W2\n  C --&gt; W3\n  W1 --&gt; D1[/\"S1 data\"/]:::out\n  W2 --&gt; D2[/\"S2 data\"/]:::out\n  W3 --&gt; D3[/\"S3 data\"/]:::out\n  B1 --&gt; R1[\"shortest routes\"]:::step\n  R1 --&gt; D4[/\"route data\"/]:::out\n  D4 --&gt; L\n  D4 --&gt; T\n  D1 --&gt; L[\"the Lab\"]:::test\n  D2 --&gt; L\n  D3 --&gt; L\n  B4[\"S4 Buildings&lt;br/&gt;results and checks\"]:::step --&gt; W4[\"copy for the Lab\"]:::step\n  C --&gt; W4\n  W4 --&gt; D5[/\"S4 data\"/]:::out\n  D5 --&gt; L\n  D5 --&gt; T\n  D1 --&gt; T[\"the Lab checks&lt;br/&gt;L1 to L6\"]:::test\n  D2 --&gt; T\n  D3 --&gt; T\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nEach system copies its tables into one file for the Lab. A browser may refuse to read a data file from the disk, but it always runs a script, so each file is written as a small script. That way the Lab works even when the book is opened without a server.",
+    "objectID": "about.html#the-systems",
+    "href": "about.html#the-systems",
+    "title": "About Situ",
+    "section": "The systems",
+    "text": "The systems\n\n\n\n\nSystem\nJob\nStatus\n\n\n\n\n\nWalking network\nAdd the city’s off-street paths before space syntax is calculated\nbuilt, tested\n\n\nS1\nStreets\nWhich streets connect, and who may use them in which direction\nbuilt, tested\n\n\nS2\nScores\nAttach the space syntax values to each street\nbuilt, tested\n\n\nS3\nRules\nStop signs, traffic lights, forbidden turns, speed limits\nbuilt, tested\n\n\nS4\nBuildings\nWhat each building is, so people have places to go\nbuilt, tested\n\n\nS5\nRhythm\nHow busy each place is at each hour\nnext\n\n\nS6\nWalkers\nPedestrians going from building to building\nlater\n\n\nS7\nDrivers\nCars that obey the rules\nlater\n\n\nS8\nObserver\nCounts where everyone went and compares\nlater",
     "crumbs": [
       "Method",
-      "Lab",
-      "Lab notes"
+      "About Situ"
     ]
   },
   {
-    "objectID": "lab-notes.html#tests",
-    "href": "lab-notes.html#tests",
-    "title": "Lab notes",
-    "section": "How the Lab is tested",
-    "text": "How the Lab is tested\nThe Lab checks ask one thing: does the Lab show exactly what the systems wrote?\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nL1\nDo the Lab’s streets and junctions match S1, and does each junction reach the same streets? For every 15th junction the reach is worked out again from scratch.\n\n\nL2\nDoes every S2 value equal the S2 table, with missing values still missing?\n\n\nL3\nDo the S3 rules, signs, speeds and checkpoints equal the S3 tables?\n\n\nL4\nDo the S3 stress results kept for the Lab give the same counts as the S3 stress tests?\n\n\nL5\nIs every shortest route real and truly shortest, and do the browser’s route rules give the same routes as the originals?\n\n\nL6\nDoes every S4 building and place equal the S4 tables, down to each point of each outline, with empty cells still empty?\n\n\n\nAll six pass, and the Lab lists the latest results.\nI broke the files on purpose before trusting these checks. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, the same check for S3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change.\nThe shortest-route check does not trust the method that found the routes. If a route is real and no single move anywhere could shorten any distance, then no shorter route exists. That is checked separately, for every start and every move.",
+    "objectID": "about.html#where-to-start",
+    "href": "about.html#where-to-start",
+    "title": "About Situ",
+    "section": "Where to start",
+    "text": "Where to start\n\nIf space syntax is new to you: What space syntax is\nFor the first system: S1 Streets\nTo see every system on one map: the Lab\nFor every data source and reading: Resources",
     "crumbs": [
       "Method",
-      "Lab",
-      "Lab notes"
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#reading-the-diagrams",
+    "href": "about.html#reading-the-diagrams",
+    "title": "About Situ",
+    "section": "Reading the diagrams",
+    "text": "Reading the diagrams\nEvery blueprint uses the same key. A grey outline is data coming in, and a dashed grey one is a decision I made and kept in a file. A white outline is a processing step, and a thick white one is a result written to disk. Pink marks a test.\nOn the map sheets, labels never overlap. When a label has to move, a thin line points back to what it names.",
+    "crumbs": [
+      "Method",
+      "About Situ"
     ]
   },
   {
@@ -1645,7 +1765,7 @@
     "href": "s4-build.html#step-3-every-row-finds-its-building",
     "title": "How S4 is built",
     "section": "Step 3: every row finds its building",
-    "text": "Step 3: every row finds its building\nThe city publishes the roll a second time with the outline of each property’s lot, the piece of land it is taxed on. Every condo unit in a building repeats the lot it shares with its neighbours. A lot is firmer ground than an address point, which is a single dot the city places near a door or a curb.\nSo S4 reads the lot first. The buildings on a lot are those whose centre the lot holds. When none does, a building that covers at least 30% of the lot counts.\n\nWhen the lot holds one building, the row goes there.\nWhen it holds several, the address point says which. If the point stands in none of them, the nearest within 15 m takes it. Beyond that the row stays unplaced, with the reason.\nWhen the lot holds no building, the address point works alone: inside an outline, or the nearest one within 15 m.\n\nThe lot and the address point sometimes disagree. When the lot holds one building, I let the lot decide. When it holds several and the point stands in a building off the lot, I let the point decide, since the lot cannot choose. Both cases go on my list of checkpoints, ten of them so far.\nGriffix is why this step changed. Its 197 flats, at 1045 rue Wellington, have their address point inside MaryRobert next door, so S4 used to count them there. Their lot holds Griffix and nothing else. They now live in Griffix, and MaryRobert drops from 678 dwellings to 491.\nWhy 15 m? With no reach at all, 1,322 rows would be left out. At 15 m, 468 are, and 415 of those belong to one building OpenStreetMap has not drawn (checkpoint B01). Doubling the reach to 30 m places two more. The further the reach, the more a point risks joining the wrong building.",
+    "text": "Step 3: every row finds its building\nThe city publishes the roll a second time with the outline of each property’s lot, the piece of land it is taxed on. Every condo unit in a building repeats the lot it shares with its neighbours. A lot is firmer ground than an address point, which is a single dot the city places near a door or a curb.\nSo S4 reads the lot first. The buildings on a lot are those whose centre the lot holds. When none does, a building that covers at least 30% of the lot counts.\n\nWhen the lot holds one building, the row goes there.\nWhen it holds several, the address point says which. If the point stands in none of them, the nearest within 15 m takes it. Beyond that the row stays unplaced, with the reason.\nWhen the lot holds no building, the address point works alone: inside an outline, or the nearest one within 15 m.\n\nThe lot and the address point sometimes disagree. When the lot holds one building, I let the lot decide. When it holds several and the point stands in a building off the lot, I let the point decide, since the lot cannot choose. Both cases go on my list of checkpoints, ten of them so far.\nGriffix is why this step changed. Its 197 flats, at 1045 rue Wellington, have their address point inside MaryRobert next door, so S4 used to count them there. Their lot holds Griffix and nothing else. They now live in Griffix, and MaryRobert drops from 678 dwellings to 491.\nWhy 15 m? With no reach at all, 1,322 rows would be left out. At 15 m, 468 are, and 415 of those share one address point that stands 130 m from the two towers on their lot (checkpoint B01). Doubling the reach to 30 m places two more. The further the reach, the more a point risks joining the wrong building.",
     "crumbs": [
       "Method",
       "S4 Buildings",
@@ -1741,7 +1861,7 @@
     "href": "s4-tests.html#stress-tests",
     "title": "S4 tests",
     "section": "Stress tests",
-    "text": "Stress tests\nThese ask how much the result depends on my choices.\nRunning S4 twice on the same input gives the same output, line for line.\nThe 15 m reach, within which a stray point joins the nearest building, matters a lot at first and then very little. With no reach at all, 1,322 rows would be left out. At 15 m, 468 are, 415 of them in the one building OpenStreetMap lacks. Doubling the reach to 30 m places two more, without moving any property to a different building.\nThe last test shakes every address point by 2 m, then by 5 m, as if the city had placed them a little off. At 2 m, 244 properties change building; at 5 m, 278 do. The total of dwellings stays at 11,954.\nThe earlier figure at 5 m was 625, and it was partly an accident of the test. Each point’s random move depended on the order in which the points were read, so adding the lots reshuffled every move. Each address point now gets its own fixed move, whatever the order. With that fix, the run without lots gives 291 at 5 m, so the lots barely change this number (certain). Most properties sit on lots that hold several buildings, where the address point still decides.\nThat result is the warning. All the units at one address point move together, as one point. Where two buildings share a wall, an address point a little off lands in the neighbour, and a condo tower’s hundreds of units go with it. So a single building’s count can be wrong while the block’s total is right. S5 and S6 should read dwellings by block, or with that in mind.",
+    "text": "Stress tests\nThese ask how much the result depends on my choices.\nRunning S4 twice on the same input gives the same output, line for line.\nThe 15 m reach, within which a stray point joins the nearest building, matters a lot at first and then very little. With no reach at all, 1,322 rows would be left out. At 15 m, 468 are, 415 of them at the one address point of checkpoint B01. Doubling the reach to 30 m places two more, without moving any property to a different building.\nThe last test shakes every address point by 2 m, then by 5 m, as if the city had placed them a little off. At 2 m, 244 properties change building; at 5 m, 278 do. The total of dwellings stays at 11,954.\nThe earlier figure at 5 m was 625, and it was partly an accident of the test. Each point’s random move depended on the order in which the points were read, so adding the lots reshuffled every move. Each address point now gets its own fixed move, whatever the order. With that fix, the run without lots gives 291 at 5 m, so the lots barely change this number (certain). Most properties sit on lots that hold several buildings, where the address point still decides.\nThat result is the warning. All the units at one address point move together, as one point. Where two buildings share a wall, an address point a little off lands in the neighbour, and a condo tower’s hundreds of units go with it. So a single building’s count can be wrong while the block’s total is right. S5 and S6 should read dwellings by block, or with that in mind.",
     "crumbs": [
       "Method",
       "S4 Buildings",

@@ -1,5 +1,5 @@
 checkpoint,kind,where,x,y,question
-B01,missing outline?,"299889.3, 5038814.81",299889.3,5038814.81,415 tax-roll properties share one address point with no building outline; is the building missing from OpenStreetMap?
+B01,missing outline?,"299889.3, 5038814.81",299889.3,5038814.81,"415 tax-roll properties share one address point outside every outline. Their lot holds Bass 4 and Le Vittorio, 132 m away. Do they belong to those buildings (the address point misplaced), or to one not drawn yet?"
 B02,use unknown,w1080276132,299760.99,5039146.67,"no tax-roll property placed here, and the OSM tag (building=yes) names no use. What is this building?"
 B03,use unknown,w1093571771,299606.35,5038763.71,"no tax-roll property placed here, and the OSM tag (building=yes) names no use. What is this building?"
 B04,use unknown,w1093571772,299580.49,5038766.57,"no tax-roll property placed here, and the OSM tag (building=yes) names no use. What is this building?"
