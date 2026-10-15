@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mohamed Gharbia">
-<meta name="dcterms.date" content="2026-10-10">
+<meta name="dcterms.date" content="2026-10-15">
 
 <title>S2 Scores – Situ</title>
 <style>
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./s2-build.html" rel="next">
+<link href="./s3-rules.html" rel="next">
 <link href="./s1-checks.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -80,6 +80,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -167,12 +170,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why I use it</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading closely</span></a>
   </div>
@@ -232,13 +229,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S1 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests</span></a>
+ <span class="menu-text">How S1 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -264,18 +255,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">S2 Scores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S2 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S2 tests</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -296,13 +275,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S3 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S3 tests</span></a>
+ <span class="menu-text">How S3 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,13 +304,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S4 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4 tests</span></a>
+ <span class="menu-text">How S4 is built and tested</span></a>
   </div>
 </li>
       </ul>
@@ -354,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">lab.html</span></a>
+ <span class="menu-text">Open the Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,13 +349,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#what-s2-does" id="toc-what-s2-does" class="nav-link active" data-scroll-target="#what-s2-does">What S2 does</a></li>
-  <li><a href="#how-a-value-is-found" id="toc-how-a-value-is-found" class="nav-link" data-scroll-target="#how-a-value-is-found">How a value is found</a></li>
   <li><a href="#result" id="toc-result" class="nav-link" data-scroll-target="#result">Result</a></li>
   <li><a href="#what-changed-in-october" id="toc-what-changed-in-october" class="nav-link" data-scroll-target="#what-changed-in-october">What changed in October</a></li>
-  <li><a href="#watch-the-scale-change" id="toc-watch-the-scale-change" class="nav-link" data-scroll-target="#watch-the-scale-change">Watch the scale change</a></li>
   <li><a href="#maps" id="toc-maps" class="nav-link" data-scroll-target="#maps">Maps</a></li>
   <li><a href="#what-the-values-say" id="toc-what-the-values-say" class="nav-link" data-scroll-target="#what-the-values-say">What the values say</a></li>
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  <li><a href="#how-s2-is-built" id="toc-how-s2-is-built" class="nav-link" data-scroll-target="#how-s2-is-built">How S2 is built</a></li>
+  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
   </ul>
 </nav>
     </div>
@@ -414,7 +380,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 10, 2026</p>
+      <p class="date">October 15, 2026</p>
     </div>
   </div>
   
@@ -428,22 +394,16 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-s2-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s2-does">What S2 does</h2>
-<p>S2 takes the space syntax values and attaches them to every S1 segment, and it records which analysed line each value came from. Later systems never read these values. Only S8 Observer uses them, at the very end, as a measuring stick (<a href="./space-syntax-why.html">why</a>).</p>
-<p>Two kinds of value matter most here. Choice is roughly how often a street lies on the way between other places. Integration is roughly how easy a street is to reach. Both are measured within a radius, from 200 m up to the whole island.</p>
-<p>How I built it is on <a href="./s2-build.html">How S2 is built</a>, and the checks are on <a href="./s2-tests.html">S2 tests</a>.</p>
-</section>
-<section id="how-a-value-is-found" class="level2">
-<h2 class="anchored" data-anchor-id="how-a-value-is-found">How a value is found</h2>
-<p>The values come from PlanX’s analysis of <a href="./network.html">the walking network</a> and <a href="./network.html#the-driving-network">the driving network</a>, where each analysed line carries its own values. For every S1 segment I look for the analysed lines lying under it, within 1 m. If two pieces of the same street lie under one segment, its value is their mean, weighted by length. A segment that finds too little gets no value at all, never a zero, and a written reason.</p>
+<p>S2 attaches space syntax values to every S1 segment and records the analysed line behind each value. Space syntax, begun by Bill Hillier and Julienne Hanson at University College London, measures where each street sits in the whole street network (<a href="./space-syntax.html">what space syntax is</a>). Integration is roughly how easy a street is to reach. Choice is roughly how often it lies on the way between other places. Both are measured within a radius, from 200 m up to the whole island.</p>
+<p>S3 to S7 never read these values. Only S8 Observer uses them, at the very end, as a measuring stick (<a href="./space-syntax.html#why-i-use-it">why</a>).</p>
 </section>
 <section id="result" class="level2">
 <h2 class="anchored" data-anchor-id="result">Result</h2>
 <p class="big-number">
 257 of 264 segments with walking values · 227 with vehicle values
 </p>
-<p>Almost every segment found its street exactly: 251 match one analysed line. Six are split across two pieces of the same street, such as Rue des Seigneurs and Rue Wellington, because the walking network cut those lines where a path joins and S1 did not.</p>
-<p>Seven segments have no walking value. All seven are Autoroute 10 and its ramps. Highways were left out of the walking network, so their values stay empty.</p>
-<p>Thirty-seven segments have no vehicle value, and none should. They are walking paths and connectors, or city streets cars may not use, like the Allées or the pedestrian ends of Murray and Smith. No segment closed to cars carries a vehicle value. Before October there were 31, because the older Sample 4 vehicle analysis included pedestrian ways.</p>
+<p>Almost every segment found its street exactly: 251 match one analysed line, and six lie over two pieces of the same street, such as Rue des Seigneurs and Rue Wellington. The seven without a walking value are Autoroute 10 and its ramps, which the walking network leaves out.</p>
+<p>The 37 segments without a vehicle value should have none. They are paths and connectors, or streets closed to cars, such as the Allées or the pedestrian ends of Murray and Smith. Before October, 31 of them carried one, because the older Sample 4 vehicle analysis included pedestrian ways.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s2/s2_sheet_status.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="How each segment was matched. Grey: matched cleanly. Pink: the exceptions, numbered and explained in the key."><img src="outputs/s2/s2_sheet_status.png" class="img-fluid figure-img" alt="How each segment was matched. Grey: matched cleanly. Pink: the exceptions, numbered and explained in the key."></a></p>
@@ -453,17 +413,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-changed-in-october" class="level2">
 <h2 class="anchored" data-anchor-id="what-changed-in-october">What changed in October</h2>
-<p>On 10 October I reran both analyses on the rebuilt networks and compared each segment inside Griffintown with its old value. Most streets kept their place in the order: the rank agreement (Spearman’s correlation, where 1.00 means no street moved) was 0.99 or 1.00 for every measure I compared.</p>
-<p>Two changes are real, and both come from my own decisions. Rue Brennan and Rue Ann gained walking choice: the east end of Brennan went from 0.00 to 0.90, and Ann from 0.37 to 0.93. Both now lead somewhere, because I assumed they connect to the paths beyond them. That is an assumption. If a photo shows those streets really stop, I will reject those decisions and the values will fall back.</p>
-<p>Murray and Smith lost vehicle choice. The driving network leaves out their pedestrian ends, by the same road rule S1 uses. In the analysis cars can no longer pass through there, so the street before carries less through-traffic.</p>
-</section>
-<section id="watch-the-scale-change" class="level2">
-<h2 class="anchored" data-anchor-id="watch-the-scale-change">Watch the scale change</h2>
-<p>In the <a href="./lab.html#radius">Lab</a>, open the S2 tab and move the distance slider, or press play. You see walking or driving choice or integration as the radius grows from 200 m to the whole island. Each street is coloured by its rank in Griffintown, from grey for the lowest to pink for the highest. Click a street to read all its values.</p>
+<p>On 10 October I reran both analyses on the rebuilt networks. Inside Griffintown the order of streets barely moved: the rank agreement (Spearman’s correlation, where 1.00 means no street moved) was 0.99 or 1.00 for every measure I compared.</p>
+<p>Two changes are real, and both follow from my own decisions. Rue Brennan and Rue Ann gained walking choice (the east end of Brennan from 0.00 to 0.90, Ann from 0.37 to 0.93), because I assumed they connect to the paths beyond them. If a photo shows those streets really stop, I will reject those decisions and the values will fall back. Murray and Smith lost vehicle choice: the driving network leaves out their pedestrian ends, by the same road rule S1 uses, so cars can no longer pass through there.</p>
+<p>Values from different networks are different measurements, so the older Sample 4 values stay for reference and are never mixed with these.</p>
 </section>
 <section id="maps" class="level2">
 <h2 class="anchored" data-anchor-id="maps">Maps</h2>
-<p>S2 holds 13 values for every street. The maps show four: walking at 800 m, about a ten-minute walk, and driving at 2000 m, a short trip by car. I chose those radii myself. 400 to 800 m is the usual low radius in space syntax studies (van Nes &amp; Yamu 2021, p.&nbsp;65), and Hillier, Yang and Turner (2012, p.&nbsp;165) found 2000 m often significant in city work. Neither source ties 2000 m to cars, and neither radius comes from Griffintown’s data. Every other value is in the <a href="./lab.html#radius">Lab</a>.</p>
+<p>The maps show four of the 13 values S2 holds for every street: walking at 800 m, about a ten-minute walk, and driving at 2000 m, a short trip by car. The radii are my choice. 400 to 800 m is the usual low radius in space syntax studies (van Nes &amp; Yamu 2021, p.&nbsp;65), and Hillier, Yang and Turner (2012, p.&nbsp;165) found 2000 m often significant in city work. Neither source ties 2000 m to cars, and neither radius comes from Griffintown’s data.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Walking choice, 800 m</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Walking integration, 800 m</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Vehicle choice, 2000 m</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Vehicle integration, 2000 m</a></li></ul>
 <div class="tab-content">
@@ -501,6 +457,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>The S2 tab of the <a href="./lab.html#radius">Lab</a> has the rest. A slider grows the radius, from 200 m to the whole island for walking and from 1200 to 2000 m for driving, and colours each street by its rank in Griffintown, from grey for the lowest to pink for the highest.</p>
 </section>
 <section id="what-the-values-say" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-values-say">What the values say</h2>
@@ -544,11 +501,146 @@ ul.task-list li input[type="checkbox"] {
 <p>Each street is averaged over its segments inside Griffintown, weighted by length. Streets shorter than 100 m are left out, and so are connectors and footways.</p>
 <p>My first reading, and it is an interpretation: the long north-south streets (Guy, de la Montagne, des Seigneurs, Peel) carry the most through-movement potential, on foot and by car. The canal path is easy to pass along and hard to reach, with low integration at 800 m. S8 will test whether simulated and real movement agree.</p>
 </section>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<p>Values from different networks are different measurements. The older Sample 4 values are kept for reference and never mixed with these.</p>
+<section id="how-s2-is-built" class="level2">
+<h2 class="anchored" data-anchor-id="how-s2-is-built">How S2 is built</h2>
+<p>The values come from PlanX, the QGIS tool I use for the analysis, run on <a href="./network.html">the walking network</a> and <a href="./network.html#the-driving-network">the driving network</a>. Each S1 segment takes the values of the analysed lines lying under it, within 1 m. A segment that finds too little gets no value, never a zero, and a written reason.</p>
+<section id="blueprint" class="level3">
+<h3 class="anchored" data-anchor-id="blueprint">Blueprint</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  IN1[/"S1 segments&lt;br/&gt;264 segments"/]:::data
+  IN2[/"Walking values&lt;br/&gt;47,197 analysed lines"/]:::data
+  IN3[/"Vehicle values&lt;br/&gt;47,730 analysed lines"/]:::data
+  CFG[/"Settings&lt;br/&gt;a test point every metre, within 1 m&lt;br/&gt;cover 95 % or 50 %"/]:::rule
+
+  IN1 --&gt; R["READ&lt;br/&gt;segments and analysed lines"]:::step
+  IN2 --&gt; R
+  IN3 --&gt; R
+  R --&gt; G["SORT&lt;br/&gt;walking lines into a 20 m grid"]:::step
+  G --&gt; W["WALKING MATCH&lt;br/&gt;test points and the same-kind rule,&lt;br/&gt;cover and a mean by length"]:::step
+  CFG --&gt; W
+  R --&gt; V["VEHICLE MATCH&lt;br/&gt;may cars use it, then the same street"]:::step
+  W --&gt; S["STATUS&lt;br/&gt;matched, split,&lt;br/&gt;partial or missing"]:::step
+  V --&gt; S
+  S --&gt; O1[/"values for every segment"/]:::out
+  S --&gt; O2[/"trace of every line used"/]:::out
+  O1 --&gt; T["checks"]:::test
+  O2 --&gt; T
+  T --&gt; X["stress tests"]:::test
+  X --&gt; VZ["maps"]:::test
+  VZ --&gt; WB["data for the Lab"]:::test
+
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6
+  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff
+  classDef test fill:none,stroke:#fe83cc,color:#fe83cc
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-problem">The problem</h3>
+<p>S1 and the walking network were built from the same city lines, and each cut them in its own places: S1 where a park path joins a street, the walking network wherever a bike path joins one. So an S1 segment and an analysed line are often the same street with different ends. Rue des Seigneurs is one S1 segment over two analysed pieces with different values. Matching by id alone would hide that. Matching by shape finds both.</p>
+</section>
+<section id="the-matching-rule" class="level3">
+<h3 class="anchored" data-anchor-id="the-matching-rule">The matching rule</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/s2/s2_concepts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="A made-up segment and the analysed lines under it."><img src="outputs/s2/s2_concepts.png" class="img-fluid figure-img" alt="A made-up segment and the analysed lines under it."></a></p>
+<figcaption>A made-up segment and the analysed lines under it.</figcaption>
+</figure>
+</div>
+<p>I place a test point every metre or so along each S1 segment. Each point looks for the closest analysed line within 1 m, but only among lines of the same kind: a city street looks only at pieces of the same street in the city’s records, and a path or connector only at its own kind.</p>
+<p>The cover is the share of the segment’s length that found a line. The value is the mean of the lines found, each weighted by the metres it shares with the segment, so with one line it is that line’s value exactly. With 95 % cover or more, the segment counts as matched, or as split when its value comes from two lines. Between 50 and 95 % it keeps its value and is marked partial, so the gap stays visible. Below 50 % it gets no value and a written reason. Today no segment is partial.</p>
+<p>The same-kind rule matters near junctions, where a test point at the end of a street also lies within 1 m of the crossing street. Without it, a street could take some of its neighbour’s values, a risk the <a href="#stress-tests">stress tests</a> measure.</p>
+</section>
+<section id="vehicle-values" class="level3">
+<h3 class="anchored" data-anchor-id="vehicle-values">Vehicle values</h3>
+<p>The <a href="./network.html#the-driving-network">driving network</a> keeps the city’s lines uncut, so every S1 piece of a street simply takes the vehicle value of the same city street id. First S2 asks, by the same rule S1 uses, whether cars may use the street. Streets closed to cars and every added path or connector are marked as not roads, with a written reason. A street open to cars but missing from the analysis would be marked missing. Today there are none.</p>
+</section>
+</section>
+<section id="tests" class="level2">
+<h2 class="anchored" data-anchor-id="tests">Tests</h2>
+<section id="checks" class="level3">
+<h3 class="anchored" data-anchor-id="checks">Checks</h3>
+<p>Each check asks a plain question of the result, and all of them pass. The <a href="./lab.html">Lab</a> lists the latest run.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Does every S1 segment have exactly one row?</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Is a value present exactly when it should be, and is every missing value empty, with a reason?</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Can every walking value be rebuilt from the trace of analysed lines behind it?</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Is any value invented, or outside the values of its lines?</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Do values come only from the same kind of line, and from the same street for city streets?</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Do vehicle values equal the vehicle analysis for the same street?</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>A seventh check only reports coverage, the numbers given under <a href="#result">Result</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The trace check caught a real problem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On the first run the trace check failed. The trace rounded the shared metres to two decimals, too coarse to rebuild the values exactly, so I now store them to six.</p>
+</div>
+</div>
+</section>
+<section id="stress-tests" class="level3">
+<h3 class="anchored" data-anchor-id="stress-tests">Stress tests</h3>
+<p>The stress tests ask how easily the result could go wrong, by changing one thing on purpose and measuring what moves.</p>
+<p>Two runs on the same input give identical results. Any matching distance from 5 cm to 10 m gives the same result, and test points every 25 cm or every 5 m move a value by about 0.01 at most. Shaking every S1 point by up to 0.3 m changes one segment, a 15 m connector at Brennan, which then takes part of its value from the next connector. At 0.8 m six segments change status, mostly paths and connectors along the canal, and no value moves by more than 0.08.</p>
+<p>The test that matters most turns the same-kind rule off. With nothing shaken, no segment then takes values from another line. Shaken by 0.8 m, 142 segments do, and the worst, the short Smith link, moves by 0.24 as it takes values from the streets at both its ends.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/s2/stress_shake.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="As the S1 points are shaken further, segments without the same-kind rule start taking values from crossing streets. With the rule, almost nothing moves."><img src="outputs/s2/stress_shake.png" class="img-fluid figure-img" alt="As the S1 points are shaken further, segments without the same-kind rule start taking values from crossing streets. With the rule, almost nothing moves."></a></p>
+<figcaption>As the S1 points are shaken further, segments without the same-kind rule start taking values from crossing streets. With the rule, almost nothing moves.</figcaption>
+</figure>
+</div>
+<p>The match is exact today because S1 and the walking network share coordinates, so the matching distance has no effect. If the geometry drifted, for example after someone edits S1 in QGIS, the same-kind rule would keep S2 honest.</p>
+<p>The rule test also found a fault upstream. Before a fix, Rue Smith picked up 21 m from a connector lying on top of it: the C06 link, which joined Smith to its own other end. I fixed the rule in S1 (<a href="./s1-checks.html#decisions">C06</a>), and after the new PlanX run no such segment remains.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -959,8 +1051,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./s2-build.html" class="pagination-link" aria-label="How S2 is built">
-        <span class="nav-page-text">How S2 is built</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./s3-rules.html" class="pagination-link" aria-label="S3 Rules">
+        <span class="nav-page-text">S3 Rules</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

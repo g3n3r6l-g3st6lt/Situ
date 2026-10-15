@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./s3-build.html" rel="next">
-<link href="./s2-tests.html" rel="prev">
+<link href="./s2-scores.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -167,12 +167,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why I use it</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading closely</span></a>
   </div>
@@ -232,13 +226,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S1 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests</span></a>
+ <span class="menu-text">How S1 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -264,18 +252,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">S2 Scores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S2 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S2 tests</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -296,13 +272,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S3 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S3 tests</span></a>
+ <span class="menu-text">How S3 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,13 +301,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S4 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4 tests</span></a>
+ <span class="menu-text">How S4 is built and tested</span></a>
   </div>
 </li>
       </ul>
@@ -354,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">lab.html</span></a>
+ <span class="menu-text">Open the Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -383,7 +347,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#what-s3-does" id="toc-what-s3-does" class="nav-link active" data-scroll-target="#what-s3-does">What S3 does</a></li>
   <li><a href="#one-junction-step-by-step" id="toc-one-junction-step-by-step" class="nav-link" data-scroll-target="#one-junction-step-by-step">One junction, step by step</a></li>
-  <li><a href="#try-it-in-the-lab" id="toc-try-it-in-the-lab" class="nav-link" data-scroll-target="#try-it-in-the-lab">Try it in the Lab</a></li>
   <li><a href="#result" id="toc-result" class="nav-link" data-scroll-target="#result">Result</a></li>
   <li><a href="#what-changed-in-october" id="toc-what-changed-in-october" class="nav-link" data-scroll-target="#what-changed-in-october">What changed in October</a></li>
   <li><a href="#maps" id="toc-maps" class="nav-link" data-scroll-target="#maps">Maps</a></li>
@@ -428,35 +391,31 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-s3-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s3-does">What S3 does</h2>
-<p>S3 gives the S1 streets their traffic rules. Picture a driver arriving at a junction. S3 answers four questions for them: must I stop here, are there traffic lights, where may I go next, and how fast may I drive. It reads three of the city’s files to find out, and every rule points back to the sign or city record it came from.</p>
-<p>Lights and speed limits are the easy part, because the city lists them directly. Stops and turns are hard. The city’s sign file says where each sign stands and what it says. It never says which street a sign faces, and a sign at a corner often stands close to two or three streets at once. S3 has to work that out, and <a href="./s3-build.html">how S3 is built</a> explains how.</p>
-<p><a href="./s3-tests.html">The tests</a> ask whether the result holds up, and <a href="./s3-checks.html">the photo checks</a> settle the few places I could not decide from the desk.</p>
+<p>S3 gives the S1 streets their traffic rules. Picture a driver arriving at a junction. S3 answers four questions for them: must I stop here, are there traffic lights, where may I go next, and how fast may I drive. It reads three of the city’s files, and every rule points back to the sign or city record it came from.</p>
+<p>The city lists lights and speed limits directly. Stops and turns are harder. The sign file says where each sign stands and what it says, never which street it faces, and a corner sign often stands close to two or three streets at once. S3 works out the street from where the sign stands and what it would mean there (<a href="./s3-build.html">how S3 is built</a>), and street photos settle the few places I could not decide from the desk (<a href="./s3-checks.html">S3 checks with photos</a>).</p>
 </section>
 <section id="one-junction-step-by-step" class="level2">
 <h2 class="anchored" data-anchor-id="one-junction-step-by-step">One junction, step by step</h2>
 <p>Junction J027 is where Rue Chatham ends at Rue William, in the west of Griffintown.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/s3_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Rue Chatham is one-way towards William and must stop. Its two turn signs allow only the left. Click to enlarge."><img src="outputs/s3/s3_example.png" class="img-fluid figure-img" alt="Rue Chatham is one-way towards William and must stop. Its two turn signs allow only the left. Click to enlarge."></a></p>
-<figcaption>Rue Chatham is one-way towards William and must stop. Its two turn signs allow only the left. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/s3_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Rue Chatham is one-way towards William and must stop. Its two turn signs allow only the left."><img src="outputs/s3/s3_example.png" class="img-fluid figure-img" alt="Rue Chatham is one-way towards William and must stop. Its two turn signs allow only the left."></a></p>
+<figcaption>Rue Chatham is one-way towards William and must stop. Its two turn signs allow only the left.</figcaption>
 </figure>
 </div>
 <ol type="1">
-<li>Three street ends touch J027: Rue Chatham, and Rue William on each side of it. A car can arrive along all of them, so S3 makes three approaches. An approach is simply one way of arriving at a junction: one street, driven towards the corner.</li>
-<li>The sign file has a stop sign on a post near the corner. Measured from Rue Chatham, it stands 10 m before the junction and 5 m to the right. That is where a stop sign for Chatham would stand, and it fits no other street. So Rue Chatham must stop.</li>
-<li>Two more posts carry “left turn only” signs. Both stand on the right of Rue Chatham, 4 to 8 m before the junction.</li>
-<li>From Chatham a car can leave along William to the left or to the right. S3 names each move by how much the car’s heading changes: about 90° to the left is a left.</li>
-<li>The signs allow only the left. So the left onto William is allowed, and the right onto William is forbidden, with the reason written beside it.</li>
-<li>One end of Rue William has its own stop sign and the other has none. So at J027 some streets stop, and there are no lights.</li>
+<li>Three street ends touch J027: Rue Chatham, and Rue William on each side of it. A car can arrive along each, so S3 makes three approaches. An approach is one street, driven towards the corner.</li>
+<li>A stop sign stands 10 m before the junction and 5 m to the right of Chatham, where a stop sign for Chatham would stand. It fits no other street, so Chatham must stop.</li>
+<li>Two more posts carry “left turn only” signs, both on the right of Chatham, 4 to 8 m before the junction.</li>
+<li>From Chatham a car can turn onto William to the left or to the right. S3 names each move by how much the car’s heading changes: about 90° to the left is a left.</li>
+<li>The signs allow only the left, so the right is forbidden, with the reason written beside it.</li>
+<li>One end of William has its own stop sign and the other has none. So at J027 some streets stop, and there are no lights.</li>
 </ol>
-</section>
-<section id="try-it-in-the-lab" class="level2">
-<h2 class="anchored" data-anchor-id="try-it-in-the-lab">Try it in the Lab</h2>
-<p>The <a href="./lab.html#J027-S020">Lab</a> has every S3 junction on one map. Click a junction, then a street arriving at it, and the panel shows each rule with the sign behind it.</p>
+<p>In the <a href="./lab.html#J027-S020">Lab</a>, click any junction, then a street arriving at it, to see each rule with the sign behind it.</p>
 </section>
 <section id="result" class="level2">
 <h2 class="anchored" data-anchor-id="result">Result</h2>
-<p>Over the whole S1 network, inside and at the edge, the junctions fall into four kinds:</p>
+<p>Over the whole S1 network, inside Griffintown and on the edge (the streets just outside the boundary that touch it), the junctions fall into four kinds:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -484,45 +443,12 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>Turn signs forbid 86 of the 578 possible moves. Most car streets have a limit of 30 km/h, and some 40.</p>
-<p>Each link between a sign and a street is an inference, and S3 records how sure it is. Most stop signs fit only one street. Turn signs are harder, and more of them went to a best fit or found no street at all.</p>
-<p>One small check came for free: lights and stop signs never share a junction. They come from separate files, so that agreement says something good about both.</p>
+<p>Each link between a sign and a street is an inference, so S3 records how sure it is. Most stop signs fit only one street. Turn signs more often went to a best fit or found no street at all. Lights and stop signs never share a junction, and since they come from separate files, that agreement speaks well of both.</p>
 </section>
 <section id="what-changed-in-october" class="level2">
 <h2 class="anchored" data-anchor-id="what-changed-in-october">What changed in October</h2>
-<p>Two things changed S3 this month. S1 gained its edge, and I rewrote how a sign finds its street. The rewrite settled two of the three turn conflicts and most of the no-entry disagreements, which I had suspected came from my own matching.</p>
-<p>The new rules are mostly common sense about how signs are put up. A sign belongs only to a street it actually stands on, and panels on one post face the same drivers unless they contradict each other. <a href="./s3-build.html">How S3 is built</a> has the rest.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Before</th>
-<th>After</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>turn signs that fit one street only</td>
-<td>33</td>
-<td>78</td>
-</tr>
-<tr class="even">
-<td>streets whose turn signs contradict</td>
-<td>3</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>no-entry signs that disagree with the city file</td>
-<td>10</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td>places to check</td>
-<td>83</td>
-<td>27</td>
-</tr>
-</tbody>
-</table>
-<p>Then I checked the doubtful places in Mapillary’s photos (<a href="./s3-checks.html">how</a>). That settled the last contradiction and every no-entry disagreement, and brought the places to check down to 21. The last contradiction was Wellington arriving at Ann (<a href="./s3-checks.html#wellington-and-ann-j006">J006</a>): the photos showed the two signs face two different streets.</p>
+<p>S1 gained its edge this month. I also rewrote how a sign finds its street, because I suspected my own matching caused the turn conflicts and no-entry disagreements. The new rules are mostly common sense about how signs are put up: a sign belongs only to a street it actually stands on, and panels on one post face the same drivers unless they contradict each other. Turn signs that fit only one street more than doubled, and the places to check fell from 83 to 27.</p>
+<p>Mapillary’s street photos then settled the last turn contradiction, at Wellington and Ann (<a href="./s3-checks.html#wellington-and-ann-j006">J006</a>), and every no-entry disagreement, bringing the places to check down to 21.</p>
 </section>
 <section id="maps" class="level2">
 <h2 class="anchored" data-anchor-id="maps">Maps</h2>
@@ -532,32 +458,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/s3_sheet_control.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Who must stop where. Pink dot: traffic lights. A white bar across a street is a stop line. A ring is an all-way stop. Pink ring: lights with no S1 junction. Click to enlarge."><img src="outputs/s3/s3_sheet_control.png" class="img-fluid figure-img" alt="Who must stop where. Pink dot: traffic lights. A white bar across a street is a stop line. A ring is an all-way stop. Pink ring: lights with no S1 junction. Click to enlarge."></a></p>
-<figcaption>Who must stop where. Pink dot: traffic lights. A white bar across a street is a stop line. A ring is an all-way stop. Pink ring: lights with no S1 junction. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/s3_sheet_control.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Who must stop where. Pink dot: traffic lights. A white bar across a street is a stop line. A ring is an all-way stop. Pink ring: lights with no S1 junction."><img src="outputs/s3/s3_sheet_control.png" class="img-fluid figure-img" alt="Who must stop where. Pink dot: traffic lights. A white bar across a street is a stop line. A ring is an all-way stop. Pink ring: lights with no S1 junction."></a></p>
+<figcaption>Who must stop where. Pink dot: traffic lights. A white bar across a street is a stop line. A ring is an all-way stop. Pink ring: lights with no S1 junction.</figcaption>
 </figure>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/s3_sheet_turns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Where a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside. Click to enlarge."><img src="outputs/s3/s3_sheet_turns.png" class="img-fluid figure-img" alt="Where a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside. Click to enlarge."></a></p>
-<figcaption>Where a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/s3_sheet_turns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Where a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside."><img src="outputs/s3/s3_sheet_turns.png" class="img-fluid figure-img" alt="Where a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside."></a></p>
+<figcaption>Where a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside.</figcaption>
 </figure>
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/s3_sheet_speed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Speed limits from the city file. Dashed: new Wellington pieces missing from the file, given the limit of the old line beneath them. Click to enlarge."><img src="outputs/s3/s3_sheet_speed.png" class="img-fluid figure-img" alt="Speed limits from the city file. Dashed: new Wellington pieces missing from the file, given the limit of the old line beneath them. Click to enlarge."></a></p>
-<figcaption>Speed limits from the city file. Dashed: new Wellington pieces missing from the file, given the limit of the old line beneath them. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/s3_sheet_speed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Speed limits from the city file. Dashed: new Wellington pieces missing from the file, given the limit of the old line beneath them."><img src="outputs/s3/s3_sheet_speed.png" class="img-fluid figure-img" alt="Speed limits from the city file. Dashed: new Wellington pieces missing from the file, given the limit of the old line beneath them."></a></p>
+<figcaption>Speed limits from the city file. Dashed: new Wellington pieces missing from the file, given the limit of the old line beneath them.</figcaption>
 </figure>
 </div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/s3_sheet_checks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="The places to check, numbered and explained in the key. Click to enlarge."><img src="outputs/s3/s3_sheet_checks.png" class="img-fluid figure-img" alt="The places to check, numbered and explained in the key. Click to enlarge."></a></p>
-<figcaption>The places to check, numbered and explained in the key. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/s3_sheet_checks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="The places to check, numbered and explained in the key."><img src="outputs/s3/s3_sheet_checks.png" class="img-fluid figure-img" alt="The places to check, numbered and explained in the key."></a></p>
+<figcaption>The places to check, numbered and explained in the key.</figcaption>
 </figure>
 </div>
 </div>
@@ -566,14 +492,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="places-still-to-check" class="level2">
 <h2 class="anchored" data-anchor-id="places-still-to-check">Places still to check</h2>
-<p>The 21 places still to check fall into five groups. Seven are Autoroute 10 and its ramps, which the city’s speed file does not cover. Six are signs I could not give to any street. Three are photo decisions the photos could not settle (<a href="./s3-checks.html#still-open">still open</a>). Three are lights just beyond the edge, such as the one at Queen and Wellington. Two are recent no-entry posts at the park connectors, newer than every photo.</p>
-<p>Signs at exits that face streets beyond the network are not on the list: they are not mine to check.</p>
+<p>Seven of the 21 are Autoroute 10 and its ramps, which the city’s speed file does not cover. Six are signs I could not give to any street, and three are signs the photos could not settle (decisions P03 and P06) (<a href="./s3-checks.html#still-open">still open</a>). Three are lights just beyond the edge, such as the one at Queen and Wellington, and two are recent no-entry posts at the park connectors, newer than every photo. Signs at exits that face streets beyond the network are left off: they are not mine to check.</p>
 </section>
 <section id="what-s3-does-not-know" class="level2">
 <h2 class="anchored" data-anchor-id="what-s3-does-not-know">What S3 does not know</h2>
-<p>The city’s file says where the lights are and nothing about their timing. <a href="./counts.html">Movement counts and light timing</a> estimates it where the city counted traffic. Elsewhere the cycle will be a procedural assumption in S7.</p>
-<p>Some turn rules hold only at certain hours. S3 keeps them on at all hours until S5 Rhythm gives the simulation a clock.</p>
-<p>At exits, streets beyond the network meet the junction, and S3 cannot see them. So a junction there may look like an all-way stop when a street beyond does not stop. The junction’s note says so.</p>
+<p>The city’s file says where the lights are and nothing about their timing. <a href="./counts.html">Movement counts and light timing</a> estimates it where the city counted traffic, and elsewhere the cycle will be a procedural assumption in S7. Some turn rules hold only at certain hours, and S3 keeps them on at all hours until S5 Rhythm gives the simulation a clock.</p>
+<p>An exit is where an edge street meets the rest of the city, and S3 cannot see the streets beyond it. A junction there may look like an all-way stop when a street beyond does not stop, and the junction’s note says so.</p>
 
 
 </section>
@@ -981,13 +905,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./s2-tests.html" class="pagination-link" aria-label="S2 tests">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">S2 tests</span>
+      <a href="./s2-scores.html" class="pagination-link" aria-label="S2 Scores">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">S2 Scores</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./s3-build.html" class="pagination-link" aria-label="How S3 is built">
-        <span class="nav-page-text">How S3 is built</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./s3-build.html" class="pagination-link" aria-label="How S3 is built and tested">
+        <span class="nav-page-text">How S3 is built and tested</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

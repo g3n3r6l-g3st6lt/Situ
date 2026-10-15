@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mohamed Gharbia">
-<meta name="dcterms.date" content="2026-10-10">
+<meta name="dcterms.date" content="2026-10-15">
 
-<title>How S1 is built – Situ</title>
+<title>How S1 is built and tested – Situ</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./s1-tests.html" rel="next">
+<link href="./s1-checks.html" rel="next">
 <link href="./s1-streets.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s1-streets.html">S1 Streets</a></li><li class="breadcrumb-item"><a href="./s1-build.html">How S1 is built</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s1-streets.html">S1 Streets</a></li><li class="breadcrumb-item"><a href="./s1-build.html">How S1 is built and tested</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -163,12 +163,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./space-syntax.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What space syntax is</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why I use it</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -232,13 +226,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s1-build.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">How S1 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests</span></a>
+ <span class="menu-text">How S1 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -264,18 +252,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">S2 Scores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S2 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S2 tests</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -296,13 +272,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S3 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S3 tests</span></a>
+ <span class="menu-text">How S3 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,13 +301,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S4 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4 tests</span></a>
+ <span class="menu-text">How S4 is built and tested</span></a>
   </div>
 </li>
       </ul>
@@ -354,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">lab.html</span></a>
+ <span class="menu-text">Open the Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -384,16 +348,19 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#blueprint" id="toc-blueprint" class="nav-link active" data-scroll-target="#blueprint">Blueprint</a></li>
   <li><a href="#rules-i-assumed" id="toc-rules-i-assumed" class="nav-link" data-scroll-target="#rules-i-assumed">Rules I assumed</a></li>
   <li><a href="#the-edge" id="toc-the-edge" class="nav-link" data-scroll-target="#the-edge">The edge</a></li>
+  <li><a href="#numbering" id="toc-numbering" class="nav-link" data-scroll-target="#numbering">Numbering</a></li>
+  <li><a href="#joining-an-added-path" id="toc-joining-an-added-path" class="nav-link" data-scroll-target="#joining-an-added-path">Joining an added path</a></li>
   <li><a href="#two-ideas-behind-it" id="toc-two-ideas-behind-it" class="nav-link" data-scroll-target="#two-ideas-behind-it">Two ideas behind it</a></li>
+  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s1-streets.html">S1 Streets</a></li><li class="breadcrumb-item"><a href="./s1-build.html">How S1 is built</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s1-streets.html">S1 Streets</a></li><li class="breadcrumb-item"><a href="./s1-build.html">How S1 is built and tested</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">How S1 is built</h1>
+<h1 class="title">How S1 is built and tested</h1>
 </div>
 
 
@@ -410,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 10, 2026</p>
+      <p class="date">October 15, 2026</p>
     </div>
   </div>
   
@@ -438,10 +405,10 @@ ul.task-list li input[type="checkbox"] {
   IN1 --&gt; S1["READ&lt;br/&gt;every street line"]:::step
   IN2 --&gt; S1
   S1 --&gt; S2["SELECT&lt;br/&gt;keep a segment if its&lt;br/&gt;halfway point is inside"]:::step
-  S2 --&gt; S2b["CORRECTIONS&lt;br/&gt;add paths and assumed links,&lt;br/&gt;take in Robert-Bourassa"]:::step
+  S2 --&gt; S2b["DECISIONS&lt;br/&gt;add paths and assumed links,&lt;br/&gt;take in Robert-Bourassa"]:::step
   COR --&gt; S2b
-  S2b --&gt; S2c["EDGE&lt;br/&gt;outside streets that touch&lt;br/&gt;the area, kept as edge"]:::step
-  S2c --&gt; S2d["NUMBER&lt;br/&gt;pieces from assumptions last"]:::step
+  S2b --&gt; S2c["EDGE&lt;br/&gt;outside streets that touch&lt;br/&gt;the area"]:::step
+  S2c --&gt; S2d["NUMBER&lt;br/&gt;later pieces last"]:::step
   S2d --&gt; S3["JOIN ENDS&lt;br/&gt;ends closer than 0.5 m&lt;br/&gt;become one junction"]:::step
   S3 --&gt; S4["KINDS&lt;br/&gt;gates, exits, dead ends,&lt;br/&gt;junctions"]:::step
   CFG --&gt; S5
@@ -522,14 +489,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Which way cars may go comes from the city’s own one-way code for each street.</p>
-<p>Source for the road classes: Ville de Montréal, <em>Géobase, réseau routier</em> (<a href="./resources.html">Resources</a>).</p>
+<p>Which way cars may go comes from the city’s own one-way code for each street. Source for the road classes: Ville de Montréal, <em>Géobase, réseau routier</em> (<a href="./resources.html">Resources</a>).</p>
 </section>
 <section id="the-edge" class="level2">
 <h2 class="anchored" data-anchor-id="the-edge">The edge</h2>
-<p>Griffintown is part of Montréal, and people and cars come and go. So S1 keeps every city street just outside the boundary that touches the study area, and calls it the edge. A gate is a junction where the study area meets the edge. An exit is the far end of an edge street: the tests, and later the agents, treat the rest of the city as reachable from there.</p>
-<p>The edge follows the same rules as the inside, for walkers and for the direction of cars. S3 reads its signs too, so a junction on the boundary sees every street that meets it. Later systems decide what to do with it: S4 puts no buildings there, and S8 measures inside the boundary only.</p>
+<p>People and cars come and go across the boundary, so S1 keeps the <a href="./s1-streets.html">edge</a> and treats it by the same rules as the inside, for walkers and for the direction of cars. The tests, and later the agents, treat the rest of the city as reachable from the exits. S3 reads the signs on the edge too, so a junction on the boundary sees every street that meets it. Later systems decide what to do with the edge: S4 puts no buildings there, and S8 measures inside the boundary only.</p>
+</section>
+<section id="numbering" class="level2">
+<h2 class="anchored" data-anchor-id="numbering">Numbering</h2>
 <p>Pieces from decisions taken after the October rebuild are numbered after everything else, the edge included. Confirming or rejecting one of them then never changes another id.</p>
+</section>
+<section id="joining-an-added-path" class="level2">
+<h2 class="anchored" data-anchor-id="joining-an-added-path">Joining an added path</h2>
+<p>Each end of an added path joins whatever is nearest within 25 m: a junction, or a street that gets cut at that spot. A junction wins when it is at most 5 m further away. A street dead end within 25 m of the middle of a path is joined to it too, which is how the Allées reach the canal. A decision taken from a photo may instead name the street to join, and reach up to 60 m.</p>
 </section>
 <section id="two-ideas-behind-it" class="level2">
 <h2 class="anchored" data-anchor-id="two-ideas-behind-it">Two ideas behind it</h2>
@@ -537,15 +509,80 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Inside or outside?</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">How far can I get?</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>To decide whether a point lies inside the study area, imagine a line going right from it and count how many times it crosses the outline. An odd count means inside. This is called ray casting. S1 applies it to the halfway point of each segment.</p>
+<p>To decide whether a point lies inside the study area, imagine a line going right from it and count how many times it crosses the outline. An odd count means inside. The method is called ray casting, and S1 applies it to the halfway point of each segment.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Start at one junction and take every allowed move, then every move from each place you reached, and so on. This is called breadth-first search, and each round is one step. The reach view in the <a href="./lab.html">Lab</a> plays it round by round.</p>
+<p>Start at one junction and take every allowed move, then every move from each place you reached, and so on. The method is called breadth-first search, and each round is one step. The reach view in the <a href="./lab.html">Lab</a> plays it round by round.</p>
 </div>
 </div>
 </div>
+</section>
+<section id="tests" class="level2">
+<h2 class="anchored" data-anchor-id="tests">Tests</h2>
+<section id="seven-checks" class="level3">
+<h3 class="anchored" data-anchor-id="seven-checks">Seven checks</h3>
+<p>Each test asks one question about the network. When the answer is wrong, the test names what failed and where.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T1</td>
+<td>Does every segment have a length and two different ends?</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>T2</td>
+<td>Can a pedestrian reach every junction?</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>T3</td>
+<td>Where are the dead ends?</td>
+<td>2, at Rue Dalhousie (C03) and the east end of Rue des Bassins (C09), both confirmed</td>
+</tr>
+<tr class="even">
+<td>T4</td>
+<td>Can a car get from anywhere to anywhere, obeying one-way streets?</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>T5</td>
+<td>Can every segment be traced to its source?</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>T6</td>
+<td>Is every street cut at every junction?</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>T7</td>
+<td>Do any lines cross without a junction?</td>
+<td>only the overpass of Autoroute 10 over Rue de la Commune, confirmed (C01)</td>
+</tr>
+</tbody>
+</table>
+<p>T2 and T4 treat the city as connected beyond the exits. T5 matters for later systems, because they join their data to S1 through the city’s ids. The <a href="./lab.html">Lab</a> shows the latest results.</p>
+</section>
+<section id="reach-in-the-lab" class="level3">
+<h3 class="anchored" data-anchor-id="reach-in-the-lab">Reach, in the Lab</h3>
+<p>T2 and T4 ask the question for every junction at once. To watch one case, open the <a href="./lab.html#reach-J080">Lab</a> at Rue Peel and Rue Wellington (J080) and press play. Each step goes one junction further. You can switch between on foot and by car, and choose whether the city beyond the exits counts. Clicking any other junction starts from there.</p>
+<p>From J080, the walker reaches all 212 walkable segments in 18 steps. The car reaches 181 of 182 drivable segments without leaving the area. The last one, Boulevard Georges-Vanier (white dashed), can only be reached by leaving Griffintown and coming back in. The cause lies in where the boundary is drawn; the data is fine.</p>
+<p>Steps count junctions. Distances in metres are in the route tool on <a href="./s1-streets.html">S1 Streets</a>, and time comes later, when S6 and S7 give walkers and cars a speed.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -956,8 +993,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./s1-tests.html" class="pagination-link" aria-label="Tests">
-        <span class="nav-page-text">Tests</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./s1-checks.html" class="pagination-link" aria-label="Checks and decisions">
+        <span class="nav-page-text">Checks and decisions</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

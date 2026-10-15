@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./s2-scores.html" rel="next">
-<link href="./s1-tests.html" rel="prev">
+<link href="./s1-build.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -167,12 +167,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why I use it</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading closely</span></a>
   </div>
@@ -232,13 +226,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S1 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests</span></a>
+ <span class="menu-text">How S1 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -264,18 +252,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">S2 Scores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S2 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S2 tests</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -296,13 +272,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S3 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S3 tests</span></a>
+ <span class="menu-text">How S3 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,13 +301,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S4 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4 tests</span></a>
+ <span class="menu-text">How S4 is built and tested</span></a>
   </div>
 </li>
       </ul>
@@ -354,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">lab.html</span></a>
+ <span class="menu-text">Open the Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,9 +346,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#why-s1-needed-checking" id="toc-why-s1-needed-checking" class="nav-link active" data-scroll-target="#why-s1-needed-checking">Why S1 needed checking</a></li>
-  <li><a href="#the-checkpoints" id="toc-the-checkpoints" class="nav-link" data-scroll-target="#the-checkpoints">The checkpoints</a></li>
   <li><a href="#decisions" id="toc-decisions" class="nav-link" data-scroll-target="#decisions">Decisions</a></li>
-  <li><a href="#what-changed-in-the-network" id="toc-what-changed-in-the-network" class="nav-link" data-scroll-target="#what-changed-in-the-network">What changed in the network</a></li>
   <li><a href="#evidence" id="toc-evidence" class="nav-link" data-scroll-target="#evidence">Evidence</a></li>
   </ul>
 </nav>
@@ -425,21 +387,18 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="why-s1-needed-checking" class="level2">
 <h2 class="anchored" data-anchor-id="why-s1-needed-checking">Why S1 needed checking</h2>
-<p>The tests prove that the network agrees with itself. They cannot prove that it matches the street. So I count S1 as finished only when every doubtful place has a recorded decision.</p>
-<p>To find those places, I compared S1 with two independent sources, both downloaded on 7 October 2026. OpenStreetMap is mapped by volunteers, which makes it a useful second opinion without authority. The city’s bike network holds the off-street paths that are missing from the street file. When both sources agree, my confidence goes up. The final word is a photo or a visit.</p>
-</section>
-<section id="the-checkpoints" class="level2">
-<h2 class="anchored" data-anchor-id="the-checkpoints">The checkpoints</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="outputs/s1/checks/s1_checkpoints.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="18 checkpoints. Circle: crossing. Square: rule. Hexagon: dead end. Diamond: missing link. Grey outline: decided. Pink outline: still open. Click to enlarge."><img src="outputs/s1/checks/s1_checkpoints.png" class="img-fluid figure-img" alt="18 checkpoints. Circle: crossing. Square: rule. Hexagon: dead end. Diamond: missing link. Grey outline: decided. Pink outline: still open. Click to enlarge."></a></p>
-<figcaption>18 checkpoints. Circle: crossing. Square: rule. Hexagon: dead end. Diamond: missing link. Grey outline: decided. Pink outline: still open. Click to enlarge.</figcaption>
-</figure>
-</div>
+<p>The <a href="./s1-build.html#tests">tests</a> show that the network agrees with itself. Whether it matches the street is a separate question, so I count S1 as finished only when every doubtful place has a recorded decision.</p>
+<p>To find those places, I compared S1 with two independent sources, both downloaded on 7 October 2026. OpenStreetMap, mapped by volunteers, gives a second opinion without authority. The city’s bike network holds the off-street paths missing from the street file. Agreement between them raises my confidence; the final word is a photo or a visit.</p>
 </section>
 <section id="decisions" class="level2">
 <h2 class="anchored" data-anchor-id="decisions">Decisions</h2>
-<p>I looked at each checkpoint in Google Street View, and in Mapillary where Street View was old. Each decision is recorded with its evidence and the date of that evidence. The city’s data is never edited; S1 applies my decisions on top of it.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/s1/checks/s1_checkpoints.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The checkpoints. Circle: crossing. Square: rule. Hexagon: dead end. Diamond: missing link. Grey outline: decided. Pink outline: still open."><img src="outputs/s1/checks/s1_checkpoints.png" class="img-fluid figure-img" alt="The checkpoints. Circle: crossing. Square: rule. Hexagon: dead end. Diamond: missing link. Grey outline: decided. Pink outline: still open."></a></p>
+<figcaption>The checkpoints. Circle: crossing. Square: rule. Hexagon: dead end. Diamond: missing link. Grey outline: decided. Pink outline: still open.</figcaption>
+</figure>
+</div>
+<p>I looked at each checkpoint in Google Street View, and in Mapillary where Street View was old. Some of that imagery dates from 2007 to 2016, so every decision keeps the date of its evidence. The city’s data is never edited; S1 applies my decisions on top of it. Their effect on the network is summed up in <a href="./s1-streets.html#what-changed-in-october">S1 Streets</a>.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Decided (14)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Assumed (3)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Settled with photos (1)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Taken in (1)</a></li></ul>
 <div class="tab-content">
@@ -463,13 +422,13 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>C01</td>
 <td>Rue de la Commune under Autoroute 10</td>
-<td>An overpass: the two roads cross without meeting, so there is no junction.</td>
+<td>An overpass: the roads cross without meeting, so no junction.</td>
 <td>Street View; OpenStreetMap marks a bridge (2025-09)</td>
 </tr>
 <tr class="even">
 <td>C02</td>
 <td>Rue Smith (Place des Aiguilleurs)</td>
-<td>Walk only. It is a paved pedestrian plaza, with only service vehicles seen.</td>
+<td>Walk only: a paved pedestrian plaza, with only service vehicles seen.</td>
 <td>Street View; OpenStreetMap (2020-10)</td>
 </tr>
 <tr class="odd">
@@ -523,13 +482,13 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>C15</td>
 <td>Wellington bridge</td>
-<td>No change: the bridge is already in the network beyond the boundary.</td>
+<td>No change: already in the network beyond the boundary.</td>
 <td>Street View (2025-06)</td>
 </tr>
 <tr class="even">
 <td>C16</td>
 <td>Lachine Canal path</td>
-<td>Added, walk only, using the city’s bike network and joined to every street end it passes.</td>
+<td>Added, walk only, from the city’s bike network, and joined to every street end it passes.</td>
 <td>Street View (2024-08); the city’s bike network, with OpenStreetMap as a second opinion</td>
 </tr>
 <tr class="odd">
@@ -548,54 +507,29 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>These are built as connected, as an assumption, and drawn in pink on every sheet. If a photo or a visit confirms one, its status becomes confirmed. If it shows the street really stops, it becomes rejected. The record stays, and S1 treats the street as a dead end again.</p>
-<p>At the end of Rue Brennan (C04), cars stop at the bollards. I assume walkers carry on along a footway through the block to Rue Ann and de la Commune, and that this footway is open (C12). Look for yourself at <a href="https://www.google.com/maps/@?api=1&amp;map_action=pano&amp;viewpoint=45.494612,-73.554901">the end of Brennan</a> and <a href="https://www.google.com/maps/@?api=1&amp;map_action=pano&amp;viewpoint=45.493058,-73.554899">the block</a>.</p>
-<p>At the end of Rue Ann (C05), I assume the street joins the same footway, 24 m away. The only view is <a href="https://www.google.com/maps/@?api=1&amp;map_action=pano&amp;viewpoint=45.493782,-73.554717">Street View from 2007</a>.</p>
-<section id="what-mapillary-showed-october-2026" class="level4">
-<h4 class="anchored" data-anchor-id="what-mapillary-showed-october-2026">What Mapillary showed (October 2026)</h4>
-<p>In October I searched Mapillary for every photo near the footway, leaving out those taken from the motorway above it. The question that would settle most was whether anyone had walked along the footway with a camera. Nobody had: of 292 photos from 2023 to 2025, the few that lie on it were taken from cars at its south tip.</p>
-<p>At the north end, a photo from May 2024 shows the bollards with a no-entry sign for cars that carries a panel for walkers and bicycles, and paving going on past them. The south end was a gravel strip in 2023, then a building site and a parking compound into 2024; the 2025 photos are too tilted to show it. Every photo found is listed in <a href="outputs/s1/checks/evidence/mapillary/C04_photos.csv">this table</a>.</p>
-<p>My reading: the north end invites walkers in, and the south end was closed until at least May 2024. The photos cannot say whether the footway is open today, or whether Ann reaches it, so all three stay assumed. A visit would settle them, with photos at each end.</p>
+<p>These links are built as connected and drawn in pink on every sheet. A photo or a visit showing the way through would make one confirmed. One showing that the street really stops would make it rejected; the record would stay, and S1 would treat the street as a dead end again.</p>
+<p>At the end of Rue Brennan (C04), cars stop at the bollards. I assume walkers carry on along a footway through the block to Rue Ann and de la Commune, and that this footway is open (C12). You can look at <a href="https://www.google.com/maps/@?api=1&amp;map_action=pano&amp;viewpoint=45.494612,-73.554901">the end of Brennan</a> and <a href="https://www.google.com/maps/@?api=1&amp;map_action=pano&amp;viewpoint=45.493058,-73.554899">the block</a> yourself. At the end of Rue Ann (C05), I assume the street joins the same footway, 24 m away; the only view is <a href="https://www.google.com/maps/@?api=1&amp;map_action=pano&amp;viewpoint=45.493782,-73.554717">Street View from 2007</a>.</p>
+<p>In October 2026 I searched Mapillary for photos near the footway, leaving out those taken from the motorway above. Of 292 photos from 2023 to 2025, none was taken walking along it; the few on it were taken from cars at its south tip. At the north end, a May 2024 photo shows the bollards with a no-entry sign for cars that carries a panel for walkers and bicycles, and paving beyond. The south end was a gravel strip in 2023, then a building site and a parking compound into 2024; the 2025 photos are too tilted to show it. Every photo is listed in <a href="outputs/s1/checks/evidence/mapillary/C04_photos.csv">this table</a>.</p>
+<p>I read the north end as inviting walkers in, and the south end as closed until at least May 2024. Whether the footway is open today, or whether Ann reaches it, remains unknown, so all three stay assumed until a visit with photos at each end.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s1/checks/evidence/mapillary/C04_mapillary_sheet.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Every view the search kept, named by end, date and photo id. Photos: VdM and geodz, Mapillary, CC BY-SA 4.0. Click to enlarge."><img src="outputs/s1/checks/evidence/mapillary/C04_mapillary_sheet.jpg" class="img-fluid figure-img" alt="Every view the search kept, named by end, date and photo id. Photos: VdM and geodz, Mapillary, CC BY-SA 4.0. Click to enlarge."></a></p>
-<figcaption>Every view the search kept, named by end, date and photo id. Photos: VdM and geodz, Mapillary, CC BY-SA 4.0. Click to enlarge.</figcaption>
+<p><a href="outputs/s1/checks/evidence/mapillary/C04_mapillary_sheet.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Every view the search kept, named by end, date and photo id. Photos: VdM and geodz, Mapillary, CC BY-SA 4.0."><img src="outputs/s1/checks/evidence/mapillary/C04_mapillary_sheet.jpg" class="img-fluid figure-img" alt="Every view the search kept, named by end, date and photo id. Photos: VdM and geodz, Mapillary, CC BY-SA 4.0."></a></p>
+<figcaption>Every view the search kept, named by end, date and photo id. Photos: VdM and geodz, Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-</section>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>At the end of Rue Smith (C06), walkers continue across the open plaza of Place des Aiguilleurs towards the canal. A straight 41 m line joins the end of Smith to Place des Aiguilleurs. The line is only a drawing of that crossing. The evidence is Mapillary photos from August 2016 and March 2024.</p>
+<p>At the end of Rue Smith (C06), walkers continue across the open plaza of Place des Aiguilleurs towards the canal. A straight 41 m line, only a drawing of that crossing, joins the end of Smith to Place des Aiguilleurs. The evidence is Mapillary photos from August 2016 and March 2024.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s1/checks/evidence/C06_mapillary_2016.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The end of Rue Smith in August 2016, looking towards the canal: an open paved plaza, benches, people. Photo: geodz, Mapillary, CC BY-SA 4.0. Click to enlarge."><img src="outputs/s1/checks/evidence/C06_mapillary_2016.jpg" class="img-fluid figure-img" alt="The end of Rue Smith in August 2016, looking towards the canal: an open paved plaza, benches, people. Photo: geodz, Mapillary, CC BY-SA 4.0. Click to enlarge."></a></p>
-<figcaption>The end of Rue Smith in August 2016, looking towards the canal: an open paved plaza, benches, people. Photo: geodz, Mapillary, CC BY-SA 4.0. Click to enlarge.</figcaption>
+<p><a href="outputs/s1/checks/evidence/C06_mapillary_2016.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The end of Rue Smith in August 2016, looking towards the canal: an open paved plaza, benches, people. Photo: geodz, Mapillary, CC BY-SA 4.0."><img src="outputs/s1/checks/evidence/C06_mapillary_2016.jpg" class="img-fluid figure-img" alt="The end of Rue Smith in August 2016, looking towards the canal: an open paved plaza, benches, people. Photo: geodz, Mapillary, CC BY-SA 4.0."></a></p>
+<figcaption>The end of Rue Smith in August 2016, looking towards the canal: an open paved plaza, benches, people. Photo: geodz, Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>C06 did not come right the first time. The first build joined Smith to the nearest street end, which was the other end of Smith itself, so the link connected nothing. The S2 stress test caught it. Once that was fixed, nothing lay within the automatic 25 m reach, and Smith went back to being a dead end. Then the photos decided: a decision taken from a photo may now name the street to join and reach up to 60 m.</p>
+<p>The first build joined Smith to the nearest street end, which was the other end of Smith itself, so the link connected nothing; the S2 stress test caught it. Once that was fixed, nothing lay within the automatic 25 m reach, and Smith became a dead end again. The photos then decided it, and a decision taken from a photo may now <a href="./s1-build.html">name the street to join</a>.</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>Boulevard Robert-Bourassa (C19): both carriageways now belong to the study area. The city codes them as a pair of one-way roads, and the boundary ran between them. The evidence is the city’s street file and five traffic lights on the east carriageway (October 2026).</p>
-</div>
-</div>
-</div>
-</section>
-<section id="what-changed-in-the-network" class="level2">
-<h2 class="anchored" data-anchor-id="what-changed-in-the-network">What changed in the network</h2>
-<p>The canal path (C16) and the two park paths (C18) are in, for walkers only. Dead ends went from 12 to 2, at Dalhousie and the east end of Bassins, both confirmed. Brennan and Ann are now connected by assumption. Smith is connected from photos. Robert-Bourassa is now in full, and S1 also keeps the edge (<a href="./s1-streets.html#what-changed-in-october">S1 Streets</a>).</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>How an added path is joined
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Each end of the path joins whatever is nearest within 25 m: a junction, or a street that gets cut at that spot. A junction wins when it is at most 5 m further away. A street dead end within 25 m of the middle of a path is joined to it too. This is how the Allées reach the canal.</p>
+<p>Both carriageways of Boulevard Robert-Bourassa (C19) now belong to the study area; the boundary used to run between them. The evidence is the city’s street file, which codes them as a pair of one-way roads, and five traffic lights on the east carriageway (October 2026).</p>
 </div>
 </div>
 </div>
@@ -603,16 +537,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="evidence" class="level2">
 <h2 class="anchored" data-anchor-id="evidence">Evidence</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Photo sheets for each checkpoint (Google Street View and Mapillary screenshots; Mapillary images CC BY-SA)
+<span class="screen-reader-only">Note</span>Photo sheets for each checkpoint (Street View and Mapillary; Mapillary images CC BY-SA)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><a href="outputs/s1/checks/evidence/C01.jpg" class="lightbox" data-gallery="evidence" title="C01"><img src="outputs/s1/checks/evidence/C01.jpg" class="img-fluid" style="width:32.0%" alt="C01"></a> <a href="outputs/s1/checks/evidence/C02.jpg" class="lightbox" data-gallery="evidence" title="C02"><img src="outputs/s1/checks/evidence/C02.jpg" class="img-fluid" style="width:32.0%" alt="C02"></a> <a href="outputs/s1/checks/evidence/C03.jpg" class="lightbox" data-gallery="evidence" title="C03"><img src="outputs/s1/checks/evidence/C03.jpg" class="img-fluid" style="width:32.0%" alt="C03"></a> <a href="outputs/s1/checks/evidence/C04.jpg" class="lightbox" data-gallery="evidence" title="C04"><img src="outputs/s1/checks/evidence/C04.jpg" class="img-fluid" style="width:32.0%" alt="C04"></a> <a href="outputs/s1/checks/evidence/C05.jpg" class="lightbox" data-gallery="evidence" title="C05"><img src="outputs/s1/checks/evidence/C05.jpg" class="img-fluid" style="width:32.0%" alt="C05"></a> <a href="outputs/s1/checks/evidence/C07.jpg" class="lightbox" data-gallery="evidence" title="C07"><img src="outputs/s1/checks/evidence/C07.jpg" class="img-fluid" style="width:32.0%" alt="C07"></a> <a href="outputs/s1/checks/evidence/C08.jpg" class="lightbox" data-gallery="evidence" title="C08"><img src="outputs/s1/checks/evidence/C08.jpg" class="img-fluid" style="width:32.0%" alt="C08"></a> <a href="outputs/s1/checks/evidence/C09.jpg" class="lightbox" data-gallery="evidence" title="C09"><img src="outputs/s1/checks/evidence/C09.jpg" class="img-fluid" style="width:32.0%" alt="C09"></a> <a href="outputs/s1/checks/evidence/C10.jpg" class="lightbox" data-gallery="evidence" title="C10"><img src="outputs/s1/checks/evidence/C10.jpg" class="img-fluid" style="width:32.0%" alt="C10"></a> <a href="outputs/s1/checks/evidence/C11.jpg" class="lightbox" data-gallery="evidence" title="C11"><img src="outputs/s1/checks/evidence/C11.jpg" class="img-fluid" style="width:32.0%" alt="C11"></a> <a href="outputs/s1/checks/evidence/C12.jpg" class="lightbox" data-gallery="evidence" title="C12"><img src="outputs/s1/checks/evidence/C12.jpg" class="img-fluid" style="width:32.0%" alt="C12"></a> <a href="outputs/s1/checks/evidence/C13.jpg" class="lightbox" data-gallery="evidence" title="C13"><img src="outputs/s1/checks/evidence/C13.jpg" class="img-fluid" style="width:32.0%" alt="C13"></a> <a href="outputs/s1/checks/evidence/C14.jpg" class="lightbox" data-gallery="evidence" title="C14"><img src="outputs/s1/checks/evidence/C14.jpg" class="img-fluid" style="width:32.0%" alt="C14"></a> <a href="outputs/s1/checks/evidence/C15.jpg" class="lightbox" data-gallery="evidence" title="C15"><img src="outputs/s1/checks/evidence/C15.jpg" class="img-fluid" style="width:32.0%" alt="C15"></a> <a href="outputs/s1/checks/evidence/C16.jpg" class="lightbox" data-gallery="evidence" title="C16"><img src="outputs/s1/checks/evidence/C16.jpg" class="img-fluid" style="width:32.0%" alt="C16"></a> <a href="outputs/s1/checks/evidence/C17.jpg" class="lightbox" data-gallery="evidence" title="C17"><img src="outputs/s1/checks/evidence/C17.jpg" class="img-fluid" style="width:32.0%" alt="C17"></a> <a href="outputs/s1/checks/evidence/C18.jpg" class="lightbox" data-gallery="evidence" title="C18"><img src="outputs/s1/checks/evidence/C18.jpg" class="img-fluid" style="width:32.0%" alt="C18"></a></p>
 <p>C06 used Mapillary photos from 2016 and 2024.</p>
@@ -1026,8 +960,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./s1-tests.html" class="pagination-link" aria-label="Tests">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tests</span>
+      <a href="./s1-build.html" class="pagination-link" aria-label="How S1 is built and tested">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">How S1 is built and tested</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./s4-buildings.html" rel="next">
-<link href="./s3-tests.html" rel="prev">
+<link href="./s3-build.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -170,12 +170,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why I use it</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading closely</span></a>
   </div>
@@ -235,13 +229,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S1 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests</span></a>
+ <span class="menu-text">How S1 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,18 +255,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">S2 Scores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S2 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S2 tests</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -299,13 +275,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S3 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S3 tests</span></a>
+ <span class="menu-text">How S3 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -334,13 +304,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S4 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4 tests</span></a>
+ <span class="menu-text">How S4 is built and tested</span></a>
   </div>
 </li>
       </ul>
@@ -357,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">lab.html</span></a>
+ <span class="menu-text">Open the Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -386,8 +350,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#why-photos" id="toc-why-photos" class="nav-link active" data-scroll-target="#why-photos">Why photos</a></li>
   <li><a href="#how-i-check-one-place" id="toc-how-i-check-one-place" class="nav-link" data-scroll-target="#how-i-check-one-place">How I check one place</a></li>
-  <li><a href="#the-decisions" id="toc-the-decisions" class="nav-link" data-scroll-target="#the-decisions">The decisions</a></li>
-  <li><a href="#what-changed" id="toc-what-changed" class="nav-link" data-scroll-target="#what-changed">What changed</a></li>
+  <li><a href="#what-the-photos-showed" id="toc-what-the-photos-showed" class="nav-link" data-scroll-target="#what-the-photos-showed">What the photos showed</a></li>
   <li><a href="#limits" id="toc-limits" class="nav-link" data-scroll-target="#limits">Limits</a></li>
   </ul>
 </nav>
@@ -428,7 +391,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="why-photos" class="level2">
 <h2 class="anchored" data-anchor-id="why-photos">Why photos</h2>
-<p>The city’s sign file says where each sign stands and what it says. It never says which way it faces. S3 guesses that from position and meaning, and most guesses are safe. A few places stayed in doubt: two signs that cannot both be true for one street, and no-entry signs on streets the city file calls two-way. For those, I looked at the street itself in <a href="https://www.mapillary.com">Mapillary</a>’s photos.</p>
+<p>S3 guesses which way a sign faces from its position and meaning, and most guesses are safe. A few places stayed in doubt: two signs that cannot both be true for one street, and no-entry signs on streets the city file calls two-way. For those, I looked at the street itself in the street-level photos on <a href="https://www.mapillary.com">Mapillary</a>.</p>
 </section>
 <section id="how-i-check-one-place" class="level2">
 <h2 class="anchored" data-anchor-id="how-i-check-one-place">How I check one place</h2>
@@ -459,135 +422,67 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>I start from a place S3 could not settle, and gather the signs Mapillary detected within 30 m of the junction (<a href="./sources-check.html#getting-the-signs">getting the signs</a>).</p>
-<p>For each sign there are two readings of where it faces. One is Mapillary’s own angle, which <a href="./sources-check.html#testing-the-direction-on-signs-we-already-know">I tested on stop signs</a>. The other comes from the photo itself: a sign whose face I can read is turned towards the camera. Each reading then points to the street whose drivers the sign faces.</p>
-<p>The tool cuts the sign out of each panorama and puts every photo of one junction on one sheet, next to what the machine read. I look at the sheet and write down one decision per finding, with how sure I am and the evidence. The city’s file is never edited. At the next build S3 reads my decisions before its own matching.</p>
-<p>I call a decision likely when the two readings point to the same street and the photo shows a sign that fits. I leave it open when the readings disagree or the photo does not show which way the sign faces. A sign newer than every photo stays open too.</p>
+<p>I gather the signs Mapillary detected within 30 m of the junction (<a href="./sources-check.html#getting-the-signs">getting the signs</a>). Each has two readings of where it faces: Mapillary’s own angle, which <a href="./sources-check.html#testing-the-direction-on-signs-we-already-know">I tested on stop signs</a>, and the photo, since a sign whose face I can read is turned towards the camera. A tool cuts the sign out of each panorama and puts every photo of one junction on one sheet, beside what the machine read. From the sheet I write down one decision per finding, with the evidence, and S3 applies it at its next build (<a href="./s3-build.html">how S3 is built</a>).</p>
+<p>I call a decision likely when both readings point to the same street and the photo shows a sign that fits. I leave it open when the readings disagree or the photo does not show which way the sign faces. A sign newer than every photo stays open too.</p>
 </section>
-<section id="the-decisions" class="level2">
-<h2 class="anchored" data-anchor-id="the-decisions">The decisions</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Place</th>
-<th>Finding</th>
-<th>How sure</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>P01</td>
-<td>Wellington and Ann (J006)</td>
-<td>“straight only” faces Wellington from the west</td>
-<td>likely</td>
-</tr>
-<tr class="even">
-<td>P02</td>
-<td>Wellington and Ann (J006)</td>
-<td>“left or right only” faces Rue Ann from the north</td>
-<td>likely</td>
-</tr>
-<tr class="odd">
-<td>P03</td>
-<td>Wellington and Ann (J006)</td>
-<td>an older sign and a newer city post disagree</td>
-<td>open</td>
-</tr>
-<tr class="even">
-<td>P04</td>
-<td>end of Brennan (J189)</td>
-<td>no-entry at bollards closes the paved area beyond</td>
-<td>likely</td>
-</tr>
-<tr class="odd">
-<td>P05</td>
-<td>east end of Bassins (J122)</td>
-<td>no-entry closes the path into the new park</td>
-<td>likely</td>
-</tr>
-<tr class="even">
-<td>P06</td>
-<td>park path off William (J146)</td>
-<td>the photos do not show which street the signs face</td>
-<td>open</td>
-</tr>
-<tr class="odd">
-<td>P07</td>
-<td>Notre-Dame and Inspecteur (J045)</td>
-<td>no-entry guards one half of a divided entrance</td>
-<td>likely</td>
-</tr>
-</tbody>
-</table>
+<section id="what-the-photos-showed" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-photos-showed">What the photos showed</h2>
+<p>The photos settled the last turn-sign contradiction and all four no-entry disagreements. Six no-entry signs are now explained by a photo, and the places to check fell from 27 to 21.</p>
 <section id="wellington-and-ann-j006" class="level3">
 <h3 class="anchored" data-anchor-id="wellington-and-ann-j006">Wellington and Ann (J006)</h3>
-<p>This was the last place where S3’s turn signs contradicted each other. The photos show three different streets, each with its own sign.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/evidence/sheet_J006.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="J006. Each photo with what Mapillary read and the street that reading points to. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."><img src="outputs/s3/evidence/sheet_J006.jpg" class="img-fluid figure-img" alt="J006. Each photo with what Mapillary read and the street that reading points to. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."></a></p>
-<figcaption>J006. Each photo with what Mapillary read and the street that reading points to. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/evidence/sheet_J006.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="J006. Each photo with what Mapillary read and the street that reading points to. Photos: Mapillary, CC BY-SA 4.0."><img src="outputs/s3/evidence/sheet_J006.jpg" class="img-fluid figure-img" alt="J006. Each photo with what Mapillary read and the street that reading points to. Photos: Mapillary, CC BY-SA 4.0."></a></p>
+<figcaption>J006. Each photo with what Mapillary read and the street that reading points to. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>The green “straight only” on the west elm corner was seen in May 2022 and December 2023, and both readings point to Wellington arriving from the west. S3 had given it to the short split piece of Wellington, and that caused the contradiction. The “left or right only” under the viaduct faces Rue Ann from the north.</p>
-<p>One question stays open (P03). In 2024 a “straight only” sign stood under the viaduct, facing the short split piece of Wellington. In October 2025 the city installed a new post there with a stop and “left or right only”. No photo is newer than that, so S3 follows the city post and keeps the question on the list.</p>
-<p>The machine read the green “straight only” as “no straight through”, its opposite. That is why the photo decides, and the label alone never does.</p>
+<p>This was the last place where S3’s turn signs contradicted each other, and the photos show three streets, each with its own sign. The green “straight only” on the west corner, seen in May 2022 and December 2023, faces Wellington arriving from the west (P01, likely). S3 had given it to the short split piece of Wellington, which caused the contradiction. The “left or right only” under the viaduct faces Rue Ann from the north (P02, likely). Mapillary read the green sign as its opposite, “no straight through”, so the photo decides and the label alone never does.</p>
+<p>One question stays open (P03). In 2024 a “straight only” sign stood under the viaduct, facing the short split piece of Wellington. In October 2025 the city installed a new post there with a stop and “left or right only”. No photo is newer, so S3 follows the city post and keeps the question on the list.</p>
 </section>
 <section id="end-of-brennan-j189" class="level3">
 <h3 class="anchored" data-anchor-id="end-of-brennan-j189">End of Brennan (J189)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/evidence/sheet_J189.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="J189. The end of Brennan in May 2024. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."><img src="outputs/s3/evidence/sheet_J189.jpg" class="img-fluid figure-img" alt="J189. The end of Brennan in May 2024. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."></a></p>
-<figcaption>J189. The end of Brennan in May 2024. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/evidence/sheet_J189.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="J189. The end of Brennan in May 2024. Photos: Mapillary, CC BY-SA 4.0."><img src="outputs/s3/evidence/sheet_J189.jpg" class="img-fluid figure-img" alt="J189. The end of Brennan in May 2024. Photos: Mapillary, CC BY-SA 4.0."></a></p>
+<figcaption>J189. The end of Brennan in May 2024. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>Bollards cross the street, and no-entry signs stand at them, closing the paved area beyond to cars. So the city file is right that cars may drive Brennan up to the bollards. The paving continues past them, which fits S1’s assumption C04 (walkers continue). It does not show where the paving leads, so C04 stays an assumption.</p>
+<p>Bollards cross the street, and the no-entry signs at them close the paved area beyond to cars (P04, likely). The city file is right that cars may drive up to the bollards. The paving continues past them, which fits S1’s assumption C04 that walkers carry on, though it does not show where the paving leads, so C04 stays an assumption.</p>
 </section>
 <section id="east-end-of-bassins-j122" class="level3">
 <h3 class="anchored" data-anchor-id="east-end-of-bassins-j122">East end of Bassins (J122)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/evidence/sheet_J122.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="J122. The east end of Rue des Bassins. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."><img src="outputs/s3/evidence/sheet_J122.jpg" class="img-fluid figure-img" alt="J122. The east end of Rue des Bassins. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."></a></p>
-<figcaption>J122. The east end of Rue des Bassins. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/evidence/sheet_J122.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="J122. The east end of Rue des Bassins. Photos: Mapillary, CC BY-SA 4.0."><img src="outputs/s3/evidence/sheet_J122.jpg" class="img-fluid figure-img" alt="J122. The east end of Rue des Bassins. Photos: Mapillary, CC BY-SA 4.0."></a></p>
+<figcaption>J122. The east end of Rue des Bassins. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>The no-entry sign hangs under a stop sign, and Mapillary’s angle points within 2° at the path into the new park. It closes the park to cars. Rue des Bassins itself stays two-way, as the city file says.</p>
+<p>The no-entry sign hangs under a stop sign, and Mapillary’s angle points within 2° of the path into the new park, closing the park to cars (P05, likely). Rue des Bassins itself stays two-way, as the city file says.</p>
 </section>
 <section id="notre-dame-and-inspecteur-j045" class="level3">
 <h3 class="anchored" data-anchor-id="notre-dame-and-inspecteur-j045">Notre-Dame and Inspecteur (J045)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/evidence/sheet_J045.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="J045. The corner of Notre-Dame and Inspecteur. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."><img src="outputs/s3/evidence/sheet_J045.jpg" class="img-fluid figure-img" alt="J045. The corner of Notre-Dame and Inspecteur. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."></a></p>
-<figcaption>J045. The corner of Notre-Dame and Inspecteur. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/evidence/sheet_J045.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="J045. The corner of Notre-Dame and Inspecteur. Photos: Mapillary, CC BY-SA 4.0."><img src="outputs/s3/evidence/sheet_J045.jpg" class="img-fluid figure-img" alt="J045. The corner of Notre-Dame and Inspecteur. Photos: Mapillary, CC BY-SA 4.0."></a></p>
+<figcaption>J045. The corner of Notre-Dame and Inspecteur. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>Here the two readings disagree, so the photo alone would leave it open. OpenStreetMap settles it: it draws Inspecteur north of Notre-Dame as two one-way halves, and the sign guards the half coming towards Notre-Dame. The city draws one two-way line. That is coarser, and fine for S1, which works at the scale of whole streets.</p>
+<p>The two readings disagree, so the photo alone would leave it open. OpenStreetMap settles it: it draws Inspecteur north of Notre-Dame as two one-way halves, and the sign guards the half coming towards Notre-Dame (P07, likely). The city’s single two-way line is coarser, and fine for S1, which works at the scale of whole streets.</p>
 </section>
 <section id="still-open" class="level3">
 <h3 class="anchored" data-anchor-id="still-open">Still open</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/evidence/sheet_J146.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="J146. The park path off Rue William. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."><img src="outputs/s3/evidence/sheet_J146.jpg" class="img-fluid figure-img" alt="J146. The park path off Rue William. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge."></a></p>
-<figcaption>J146. The park path off Rue William. Photos: Mapillary, CC BY-SA 4.0. Click to enlarge.</figcaption>
+<p><a href="outputs/s3/evidence/sheet_J146.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="J146. The park path off Rue William. Photos: Mapillary, CC BY-SA 4.0."><img src="outputs/s3/evidence/sheet_J146.jpg" class="img-fluid figure-img" alt="J146. The park path off Rue William. Photos: Mapillary, CC BY-SA 4.0."></a></p>
+<figcaption>J146. The park path off Rue William. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>At the park path off William (P06), the two readings are far off, and the photos show the signs without showing which way they face. Two more no-entry signs, at the park connectors (J145), are on recent posts that no Mapillary photo shows. P03 at J006, above, is the last open question.</p>
+<p>At the park path off William (P06), the two readings are far apart, and the photos show the signs without showing which way they face. Two more no-entry signs, at the park connectors (J145), stand on recent posts that no photo shows. With P03 at Wellington and Ann, these remain open.</p>
 </section>
-</section>
-<section id="what-changed" class="level2">
-<h2 class="anchored" data-anchor-id="what-changed">What changed</h2>
-<p>The photos settled the last turn-sign contradiction and all four no-entry disagreements. Six no-entry signs are now explained by a photo, and the places to check went from 27 down to 21.</p>
 </section>
 <section id="limits" class="level2">
 <h2 class="anchored" data-anchor-id="limits">Limits</h2>
-<p>Most of the photos come from the city’s own survey car, taken in 2022 to 2024, so a sign installed after the last photo cannot be checked this way. Mapillary’s labels and angles are only a first guess: here one label said the opposite of the sign, and at J045 the two readings disagreed.</p>
-<p>Each decision is mine. It says how sure I am and why, so anyone can look at a sheet and disagree with a specific row.</p>
+<p>Most of the photos come from the city’s own survey car, taken from 2022 to 2024, so a sign installed after the last photo cannot be checked this way. Mapillary’s labels and angles are only a first guess: one label said the opposite of the sign, and at J045 the two readings disagreed. Each decision is mine and records how sure I am and why, so anyone can look at a sheet and disagree with it.</p>
 <p>Photos: Mapillary contributors VdM (Ville de Montréal), geodz, une_abeille and AlexPL, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
 
 
@@ -996,8 +891,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./s3-tests.html" class="pagination-link" aria-label="S3 tests">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">S3 tests</span>
+      <a href="./s3-build.html" class="pagination-link" aria-label="How S3 is built and tested">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">How S3 is built and tested</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

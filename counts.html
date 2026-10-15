@@ -167,12 +167,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why I use it</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading closely</span></a>
   </div>
@@ -232,13 +226,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S1 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests</span></a>
+ <span class="menu-text">How S1 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -264,18 +252,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">S2 Scores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S2 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S2 tests</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -296,13 +272,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S3 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S3 tests</span></a>
+ <span class="menu-text">How S3 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,13 +301,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S4 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4 tests</span></a>
+ <span class="menu-text">How S4 is built and tested</span></a>
   </div>
 </li>
       </ul>
@@ -354,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">lab.html</span></a>
+ <span class="menu-text">Open the Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,12 +346,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#what-the-city-counted" id="toc-what-the-city-counted" class="nav-link active" data-scroll-target="#what-the-city-counted">What the city counted</a></li>
-  <li><a href="#why-the-lights-need-an-estimate" id="toc-why-the-lights-need-an-estimate" class="nav-link" data-scroll-target="#why-the-lights-need-an-estimate">Why the lights need an estimate</a></li>
-  <li><a href="#websters-method" id="toc-websters-method" class="nav-link" data-scroll-target="#websters-method">Webster’s method</a></li>
-  <li><a href="#what-it-shows" id="toc-what-it-shows" class="nav-link" data-scroll-target="#what-it-shows">What it shows</a></li>
+  <li><a href="#estimating-the-lights-with-websters-method" id="toc-estimating-the-lights-with-websters-method" class="nav-link" data-scroll-target="#estimating-the-lights-with-websters-method">Estimating the lights with Webster’s method</a></li>
   <li><a href="#the-other-29-lights" id="toc-the-other-29-lights" class="nav-link" data-scroll-target="#the-other-29-lights">The other 29 lights</a></li>
   <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
-  <li><a href="#pedestrian-signals" id="toc-pedestrian-signals" class="nav-link" data-scroll-target="#pedestrian-signals">Pedestrian signals</a></li>
   </ul>
 </nav>
     </div>
@@ -427,8 +388,8 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-the-city-counted" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-city-counted">What the city counted</h2>
-<p>The city counts traffic at intersections: every car, truck, bus, bicycle and pedestrian, in 15-minute slices. For vehicles it records each movement (northbound left, northbound through and so on). For pedestrians and bicycles it records each crosswalk. The file covers the whole city, 2024 to 2026 (<a href="https://donnees.montreal.ca/dataset/comptage-vehicules-pietons">donnees.montreal.ca</a>).</p>
-<p>I kept the counts taken within 15 m of an S1 junction. That leaves seven junctions:</p>
+<p>The city counts every car, truck, bus, bicycle and pedestrian at its intersections in 15-minute slices, by movement for vehicles (northbound left, northbound through and so on) and by crosswalk for pedestrians and bicycles. The file covers the whole city, 2024 to 2026 (<a href="https://donnees.montreal.ca/dataset/comptage-vehicules-pietons">donnees.montreal.ca</a>).</p>
+<p>I kept the counts taken within 15 m of an S1 junction, which leaves seven junctions:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -489,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Beyond the lights, these counts are good for two things. S8 will compare simulated movement with space syntax, and these seven junctions let it also compare with movement that was actually counted: what people did on given days. And J040 was counted around the clock for three days, which gives S5 Rhythm a real day to start from.</p>
+<p>Beyond the lights, these counts serve two later systems. S8 will compare simulated movement with <a href="./space-syntax.html">space syntax</a>, the measures of how each street sits in the whole network, and also, at these junctions, with movement actually counted. J040, counted around the clock, gives S5 Rhythm a real day to start from.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/counts/day_profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush."><img src="outputs/counts/day_profile.png" class="img-fluid figure-img" alt="A day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush."></a></p>
@@ -497,103 +458,33 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="why-the-lights-need-an-estimate" class="level2">
-<h2 class="anchored" data-anchor-id="why-the-lights-need-an-estimate">Why the lights need an estimate</h2>
-<p>S3 knows where the 31 lights in S1 are. It does not know how long they stay green, because the city does not publish its timing plans. So the timing has to be estimated, and the estimate is mine.</p>
-</section>
-<section id="websters-method" class="level2">
-<h2 class="anchored" data-anchor-id="websters-method">Webster’s method</h2>
-<p>Webster’s method (Webster 1958) is the classic way to set a fixed light cycle from counted traffic. It asks how full each approach is, and which cycle length keeps the delay smallest. I apply it to the busiest counted hour.</p>
-<p>How full an approach is means the cars arriving per hour (a bus or truck counts as two) divided by what its lanes can pass while green, about 1,800 cars an hour per lane. The lanes come from OpenStreetMap. Each phase of the light takes its fullest approach, and the phases add up to a total load. Webster’s formula turns that total, and the time lost each time the green changes (4 s per phase here), into a cycle length. Each phase then gets green in proportion to its load.</p>
-<p>I add one check Webster does not make. A pedestrian crossing during a phase needs at least 7 s to start, plus the time to cross at a walking speed of 1.2 m/s. Where the green is shorter, I lengthen it.</p>
-<p>The two phases run along Montréal’s north-south, then its east-west. “North” here means the street grid’s north, about 305° on the compass, as in the city’s counts. The counts confirm it: at J040 almost nothing arrives from the north, where Ottawa is the one street no car may arrive along.</p>
+<section id="estimating-the-lights-with-websters-method" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-the-lights-with-websters-method">Estimating the lights with Webster’s method</h2>
+<p>S3 knows where the 31 lights in S1 are, but the city does not publish its timing plans, so the timing is my estimate.</p>
+<p>Webster’s method (Webster 1958) is the classic way to set a fixed light cycle from counted traffic: it asks how full each approach is, and which cycle length keeps the delay smallest. I apply it to the busiest counted hour. An approach’s load is the cars arriving per hour (a bus or truck counts as two) divided by what its lanes, taken from OpenStreetMap, can pass while green, about 1,800 cars an hour per lane. Each phase takes its fullest approach, and the phases add up to a total load. Webster’s formula turns that load, and the time lost each time the green changes (4 s per phase here), into a cycle length, and each phase gets green in proportion to its load. I add one check Webster does not make: a pedestrian crossing needs at least 7 s to start, plus the time to cross at 1.2 m/s, and a shorter green is lengthened.</p>
+<p>The two phases run along the street grid’s north-south, then its east-west, with grid north at about 305° on the compass, as in the city’s counts. At J040 almost nothing arrives from the north, where Ottawa is the one street no car may arrive along, which confirms the orientation.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/counts/light_cycle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="The estimated cycles, second by second. Grey: amber and all-red, the time lost when the green changes."><img src="outputs/counts/light_cycle.png" class="img-fluid figure-img" alt="The estimated cycles, second by second. Grey: amber and all-red, the time lost when the green changes."></a></p>
 <figcaption>The estimated cycles, second by second. Grey: amber and all-red, the time lost when the green changes.</figcaption>
 </figure>
 </div>
-</section>
-<section id="what-it-shows" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-shows">What it shows</h2>
-<p>At J040 (Guy, Ottawa and William), at 16h on 18 December 2024, the total load was 0.29 and Webster’s cycle came to 24 s. At J051 (de la Montagne and Notre-Dame) the load was 0.38 and the cycle 27 s.</p>
-<p>The traffic is far from filling these lights. Cycles of 24 and 27 s are much shorter than any city would use, so the cycle I use is my lower limit of 60 s. The green is then set by pedestrians and by the split of loads: 26 s each way at J040, and 38 s north-south against 14 s east-west at J051. That is a finding about Griffintown’s streets, and also a warning: at these volumes, the timing is more a design choice than a consequence of traffic.</p>
-<p>J181, on Robert-Bourassa, is skipped. Three of its four approaches lie beyond the network, and Webster needs them all.</p>
+<p>At J040, at 16h on 18 December 2024, the total load was 0.29 and Webster’s cycle came to 24 s. At J051 the load was 0.38 and the cycle 27 s. The traffic is far from filling these lights, and both cycles are much shorter than any city would use, so I use my lower limit of 60 s. The green is then set by pedestrians and by the split of loads: 26 s each way at J040, and 38 s north-south against 14 s east-west at J051. That is a finding about Griffintown’s streets, and a warning: at these volumes traffic leaves the timing open, so it becomes a design choice.</p>
+<p>J181, on Robert-Bourassa, is skipped, because three of its four approaches lie beyond the network and Webster needs them all.</p>
 </section>
 <section id="the-other-29-lights" class="level2">
 <h2 class="anchored" data-anchor-id="the-other-29-lights">The other 29 lights</h2>
-<p>I weighed four options. One plan for all lights would be simple, but a main street and a side street would get the same green. Borrowing the split of a counted light on the same streets would use real counts, but only two lights were counted. Timing the lights from space syntax was ruled out: S8 compares movement with space syntax, and lights timed from it would make S8 measure its own input. I chose to share the green by road class, which uses the city’s own street hierarchy, already in S1.</p>
-<section id="why-road-class" class="level3">
-<h3 class="anchored" data-anchor-id="why-road-class">Why road class</h3>
-<p>The city’s 2007 review of its arterial network (<a href="https://ville.montreal.qc.ca/pls/portal/docs/page/commissions_perm_v2_fr/media/documents/Revision_reseau_arteriel_20070412.pdf">PDF</a>) gives each class a daily traffic range: main arteries carry over 30,000 vehicles, collectors 1,000 to 15,000. Managing the flow is “prépondérante” on main arteries and “peu” on collectors (Ville de Montréal 2007). The United States standard says the same: “In general, the higher the traffic volume is, the higher the functional classification will be” (FHWA 2023, p.&nbsp;26, <a href="https://rosap.ntl.bts.gov/view/dot/72430/dot_72430_DS1.pdf">PDF</a>). And Webster (1958) shares the green in proportion to how full each approach is, so a busier street should get more of it.</p>
-</section>
-<section id="testing-it-on-our-counts" class="level3">
-<h3 class="anchored" data-anchor-id="testing-it-on-our-counts">Testing it on our counts</h3>
-<p>At every counted junction where the two streets differ in class, the higher class carried more traffic over the counted day:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Junction</th>
-<th>Higher class</th>
-<th>Lower class</th>
-<th>Ratio</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>J040 Guy, Ottawa and William</td>
-<td>William, collector</td>
-<td>Guy, local</td>
-<td>2.5</td>
-</tr>
-<tr class="even">
-<td>J006 Ann and Wellington</td>
-<td>Wellington, secondary arterial</td>
-<td>Ann, local</td>
-<td>8.5</td>
-</tr>
-<tr class="odd">
-<td>J056 Murray and Wellington</td>
-<td>Wellington</td>
-<td>Murray, local</td>
-<td>10</td>
-</tr>
-<tr class="even">
-<td>J092 Young and Wellington</td>
-<td>Wellington</td>
-<td>Young, local</td>
-<td>22</td>
-</tr>
-<tr class="odd">
-<td>J086 Shannon and Wellington</td>
-<td>Wellington</td>
-<td>Shannon, local</td>
-<td>29</td>
-</tr>
-</tbody>
-</table>
-<p>Five out of five, though four are on Wellington, so the sample is small. And road class does not match Webster at the two counted lights. At J040 it would give 21 and 31 s where Webster gives 26 and 26, because at the busiest hour each lane is about as full on both streets. At J051 it would give 26 and 26 s where Webster gives 38 and 14, because the classes are equal but de la Montagne is busier. So the class tells which street gets more green over a day. It cannot tell how much at a given hour. That is why the counted lights keep Webster, and why the share by class is a cautious 60 %.</p>
-</section>
-<section id="the-rule" class="level3">
-<h3 class="anchored" data-anchor-id="the-rule">The rule</h3>
-<p>Each street arriving at a light belongs to one of the two axes, and each axis takes the highest class among its streets: main arterial (with highway) above secondary arterial, above collector, above local. If both axes have the same class, the two phases share the 52 s of usable green equally. If not, the higher class gets 60 % and the lower 40 %. No phase is shorter than its pedestrians need, and where they need more, the cycle grows. Where cars arrive on one axis only, the other phase is for pedestrians.</p>
-<p>Of the 31 lights, 2 follow Webster from counts, 17 have one street of higher class, 7 have equal classes, and 5 have cars on one axis only, mostly at the edge where the cross street lies beyond the network. In S7 these become the light plans, and the 60 % share and the 60 s cycle will be sliders in the <a href="./lab.html">Lab</a>.</p>
-</section>
+<p>I weighed four options. One plan for all lights would give a main street and a side street the same green. Borrowing the split of a counted light on the same streets would use real counts, but only two lights were counted. Timing the lights from space syntax was ruled out, because S8 compares movement with space syntax and would end up measuring its own input. I chose to share the green by road class, the city’s own street hierarchy, already in S1.</p>
+<p>The city’s 2007 review of its arterial network (<a href="https://ville.montreal.qc.ca/pls/portal/docs/page/commissions_perm_v2_fr/media/documents/Revision_reseau_arteriel_20070412.pdf">PDF</a>) gives each class a daily traffic range: main arteries carry over 30,000 vehicles, collectors 1,000 to 15,000. Managing the flow is “prépondérante” on main arteries and “peu” on collectors (Ville de Montréal 2007). The United States standard agrees: “In general, the higher the traffic volume is, the higher the functional classification will be” (FHWA 2023, p.&nbsp;26, <a href="https://rosap.ntl.bts.gov/view/dot/72430/dot_72430_DS1.pdf">PDF</a>). Since Webster (1958) shares the green by how full each approach is, a busier street should get more of it.</p>
+<p>The counts agree. At all five counted junctions where the two streets differ in class, the higher class carried more traffic over the day: William, a collector, 2.5 times as much as Guy at J040, and Wellington, a secondary arterial, 8.5 to 29 times as much as Ann, Murray, Young and Shannon. Four of the five are on Wellington, so the sample is small.</p>
+<p>Road class does not match Webster at the two counted lights. At J040 it would give 21 and 31 s where Webster gives 26 and 26, because at the busiest hour each lane is about as full on both streets. At J051 it would give 26 and 26 s where Webster gives 38 and 14, because the classes are equal but de la Montagne is busier. So class tells which street gets more green over a day, and says nothing of how much at a given hour. The counted lights therefore keep Webster, and the share by class stays a cautious 60 %.</p>
+<p>The rule: each street arriving at a light belongs to one of the two axes, and each axis takes the highest class among its streets, from main arterial (with highway) down through secondary arterial and collector to local. If both axes have the same class, the two phases share the 52 s of usable green equally. If not, the higher class gets 60 % and the lower 40 %. No phase is shorter than its pedestrians need, and where they need more, the cycle grows. Where cars arrive on one axis only, the other phase is for pedestrians.</p>
+<p>Of the 31 lights, 2 follow Webster from counts, 17 have one street of higher class, 7 have equal classes, and 5 have cars on one axis only, mostly at the edge where the cross street lies beyond the network. In S7 these become the light plans, and the 60 % share and the 60 s cycle will be sliders in the <a href="./lab.html">Lab</a>. The city’s pedestrian-signal file uses the same intersection numbers as its light file: 30 of the 31 lights have pedestrian signals, all but Seigneurs and William.</p>
 </section>
 <section id="assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
-<p>Every number here is a choice, and two are mine alone. The 60 s lower limit on the cycle (with 120 s as the upper) is my guess for a city centre, and it sets every cycle here. The 60 % share is my own choice: the counts show which street is busier, and say nothing of the amount. The other values (lane capacity, time lost per phase, walking speed and walk interval) follow Webster or common practice; real amber and all-red times are not published, and Montréal does not publish its own walking speed. The lane counts from OpenStreetMap cover 866 of 870 car ways, and I checked them at three junctions only.</p>
-<p>The counts themselves are a few days each, in winter or spring. They show those days, not a typical year.</p>
-</section>
-<section id="pedestrian-signals" class="level2">
-<h2 class="anchored" data-anchor-id="pedestrian-signals">Pedestrian signals</h2>
-<p>The city’s pedestrian-signal file uses the same intersection numbers as its light file. 30 of the 31 lights in S1 have pedestrian signals. The one without is Seigneurs and William.</p>
+<p>Two numbers are mine alone. The 60 s lower limit on the cycle (with 120 s as the upper) is my guess for a city centre, and it sets every cycle here. The 60 % share is my own choice too, since the counts show which street is busier and say nothing of the amount. The other values (lane capacity, time lost per phase, walking speed and walk interval) follow Webster or common practice, because Montréal publishes neither its amber and all-red times nor its walking speed. The lane counts from OpenStreetMap cover 866 of 870 car ways, and I checked them at three junctions only.</p>
+<p>The counts themselves cover a few days each, in winter or spring. They show those days; a typical year is beyond them.</p>
 
 
 </section>

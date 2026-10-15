@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mohamed Gharbia">
-<meta name="dcterms.date" content="2026-10-09">
+<meta name="dcterms.date" content="2026-10-15">
 
 <title>What space syntax is – Situ</title>
 <style>
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./space-syntax-why.html" rel="next">
+<link href="./readings-check.html" rel="next">
 <link href="./about.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -80,6 +80,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -167,12 +170,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why I use it</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading closely</span></a>
   </div>
@@ -232,13 +229,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S1 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests</span></a>
+ <span class="menu-text">How S1 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -264,18 +255,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">S2 Scores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S2 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S2 tests</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -296,13 +275,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S3 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S3 tests</span></a>
+ <span class="menu-text">How S3 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,13 +304,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S4 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4 tests</span></a>
+ <span class="menu-text">How S4 is built and tested</span></a>
   </div>
 </li>
       </ul>
@@ -354,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">lab.html</span></a>
+ <span class="menu-text">Open the Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -381,14 +348,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#in-short" id="toc-in-short" class="nav-link active" data-scroll-target="#in-short">What it does</a></li>
-  <li><a href="#where-it-comes-from" id="toc-where-it-comes-from" class="nav-link" data-scroll-target="#where-it-comes-from">Where it comes from</a></li>
+  <li><a href="#in-short" id="toc-in-short" class="nav-link active" data-scroll-target="#in-short">Where it comes from</a></li>
   <li><a href="#segments-and-depth" id="toc-segments-and-depth" class="nav-link" data-scroll-target="#segments-and-depth">Segments and depth</a></li>
   <li><a href="#integration-and-choice" id="toc-integration-and-choice" class="nav-link" data-scroll-target="#integration-and-choice">Integration and choice</a></li>
+  <li><a href="#natural-movement" id="toc-natural-movement" class="nav-link" data-scroll-target="#natural-movement">Natural movement</a></li>
   <li><a href="#radius" id="toc-radius" class="nav-link" data-scroll-target="#radius">Radius</a></li>
   <li><a href="#a-made-up-town" id="toc-a-made-up-town" class="nav-link" data-scroll-target="#a-made-up-town">A made-up town</a></li>
-  <li><a href="#the-values-in-the-results" id="toc-the-values-in-the-results" class="nav-link" data-scroll-target="#the-values-in-the-results">The values in the results</a></li>
   <li><a href="#what-it-leaves-out" id="toc-what-it-leaves-out" class="nav-link" data-scroll-target="#what-it-leaves-out">What it leaves out</a></li>
+  <li><a href="#why-i-use-it" id="toc-why-i-use-it" class="nav-link" data-scroll-target="#why-i-use-it">Why I use it</a></li>
   </ul>
 </nav>
     </div>
@@ -414,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 9, 2026</p>
+      <p class="date">October 15, 2026</p>
     </div>
   </div>
   
@@ -427,81 +394,44 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="in-short" class="level2">
-<h2 class="anchored" data-anchor-id="in-short">What it does</h2>
-<p>Space syntax describes where each street sits in the whole street network. It asks two questions about every street: how easy it is to reach from everywhere else, and how often it lies on the way between other places.</p>
-<p>It looks at the shape of the network and nothing else. Shops and people are outside its view. I find that limit useful, because it lets me ask how much of Griffintown’s movement the layout alone can explain.</p>
+<h2 class="anchored" data-anchor-id="in-short">Where it comes from</h2>
+<p>Space syntax began with Bill Hillier and Julienne Hanson at University College London. Their book <em>The Social Logic of Space</em> (1984) argued that the arrangement of spaces carries social meaning and can be measured. Applied to a city, the method asks two questions about every street: how easy it is to reach from everywhere else, and how often it lies on the way between other places.</p>
+<p>It looks at the shape of the network and nothing else. I find that limit useful, because it lets me ask how much of Griffintown’s movement the layout alone can explain.</p>
 </section>
-<section id="where-it-comes-from" class="level2">
-<h2 class="anchored" data-anchor-id="where-it-comes-from">Where it comes from</h2>
-<p>Bill Hillier and Julienne Hanson started the method at University College London. Their book <em>The Social Logic of Space</em> (1984) argued that the arrangement of spaces carries social meaning and can be measured.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Year</th>
-<th>Work</th>
-<th>What it added</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1993</td>
-<td>Hillier, Penn, Hanson, Grajewski &amp; Xu</td>
-<td>“Natural movement”: the shape of the network is a main driver of how many people walk each street.</td>
-</tr>
-<tr class="even">
-<td>2004</td>
-<td>Ratti</td>
-<td>A critique: results depend on how the map is drawn, and early methods ignored metres.</td>
-</tr>
-<tr class="odd">
-<td>2005</td>
-<td>Hillier &amp; Iida</td>
-<td>Counting turns matched observed movement better than counting metres.</td>
-</tr>
-<tr class="even">
-<td>2007</td>
-<td>Turner</td>
-<td>Ordinary street centrelines can be analysed, so I can use the city’s own street file.</td>
-</tr>
-</tbody>
-</table>
-<p>Full references are on the <a href="./resources.html">Resources</a> page.</p>
+<section id="segments-and-depth" class="level2">
+<h2 class="anchored" data-anchor-id="segments-and-depth">Segments and depth</h2>
+<p>The unit is the segment, a piece of street between two junctions, as in <a href="./s1-streets.html">S1 Streets</a>. Depth is the distance between two segments, counted in angles: a right angle costs 1 and a 45° turn costs 0.5 (Turner 2007, p.&nbsp;542). Hillier and Iida (2005) found that counting turns matched observed movement better than counting metres. Turner also showed that ordinary street centrelines can be analysed this way, so I can use the city’s own street file.</p>
+</section>
+<section id="integration-and-choice" class="level2">
+<h2 class="anchored" data-anchor-id="integration-and-choice">Integration and choice</h2>
+<p>Integration measures how close a segment is, on average, to every other segment: a street with high integration is easy to get to. Network science calls this closeness centrality (Sabidussi 1966).</p>
+<p>Choice imagines the shortest route between every pair of segments and counts how many of those routes pass through each one: a street with high choice is often passed through. Network science calls this betweenness centrality (Freeman 1977).</p>
+<p>The results also report normalised versions (Hillier, Yang &amp; Turner 2012, pp.&nbsp;160, 165 and 191). NAIN rescales integration so that networks of different sizes can be compared. NACH does the same for choice and evens out its skew, where a few streets score very high and most score low. The paper gives two versions of NAIN, so I compare numbers only within one (<a href="./readings-check.html#which-nain">Reading closely</a>).</p>
+</section>
+<section id="natural-movement" class="level2">
+<h2 class="anchored" data-anchor-id="natural-movement">Natural movement</h2>
+<p>Hillier, Penn, Hanson, Grajewski and Xu (1993) called their central claim “natural movement”: the shape of the network is a main driver of how many people walk each street. The full references are in <a href="./resources.html">Resources</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>How settled is it?
+<span class="screen-reader-only">Note</span>Still debated
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The natural movement claim is influential and still debated. Its strength varies from place to place and depends on land use. In the 1993 paper itself, the correlation between integration and movement across ten parts of King’s Cross ranged from 0.25 to 0.80, and shops could outweigh the layout (Hillier et al.&nbsp;1993, pp.&nbsp;31, 46). Ratti (2004, p.&nbsp;492) adds that the method leaves land use out. So in Situ I test the claim in Griffintown. I do not assume it.</p>
+<p>The claim is influential, and its strength varies with place and land use. In the 1993 paper itself, the correlation between integration and movement across ten parts of King’s Cross ranged from 0.25 to 0.80, and shops could multiply movement beyond what the layout predicts (Hillier et al.&nbsp;1993, pp.&nbsp;31, 46). Ratti (2004, p.&nbsp;492) adds that results depend on how the map is drawn and that the method leaves land use out. So in Situ the claim is something I test in Griffintown.</p>
 </div>
 </div>
-</section>
-<section id="segments-and-depth" class="level2">
-<h2 class="anchored" data-anchor-id="segments-and-depth">Segments and depth</h2>
-<p>A segment is a piece of street between two junctions, the same unit as in <a href="./s1-streets.html">S1 Streets</a>. Depth is the distance between two segments. The made-up town below counts one step for each change of street, so it can be checked by hand. The real analysis counts angles: a right angle costs 1 and a 45° turn costs 0.5 (Turner 2007, p.&nbsp;542). People seem to judge a route by how much it turns more than by its length (Hillier &amp; Iida 2005).</p>
-</section>
-<section id="integration-and-choice" class="level2">
-<h2 class="anchored" data-anchor-id="integration-and-choice">Integration and choice</h2>
-<p>Integration measures how close a segment is, on average, to every other segment. A segment with high integration is easy to get to. Network science calls this closeness centrality (Sabidussi 1966).</p>
-<p>Choice imagines the shortest route between every pair of segments and counts how many of those routes pass through each one. A segment with high choice is often passed through. Network science calls this betweenness centrality (Freeman 1977).</p>
 </section>
 <section id="radius" class="level2">
 <h2 class="anchored" data-anchor-id="radius">Radius</h2>
-<p>The analysis can be limited to a distance around each segment, called the radius. At 400 m it asks how central a street is within about five minutes’ walk. Radius n has no limit. In the literature, 400 to 800 m is the usual low radius and 4,000 to 8,000 m the usual high one (van Nes &amp; Yamu 2021, p.&nbsp;65).</p>
-<p>My analysis (Sample 4) uses 200 to 800 m and radius n for pedestrians, and 1200 and 2000 m for vehicles. A street can be central at 400 m and peripheral at radius n, and that contrast often tells me more than any single value.</p>
+<p>The analysis can be limited to a distance around each segment, called the radius. At 400 m it asks how central a street is within about five minutes’ walk; radius n has no limit, which here means the whole island. Studies usually take 400 to 800 m as the low radius and 4,000 to 8,000 m as the high one (van Nes &amp; Yamu 2021, p.&nbsp;65). My analysis uses 200, 400 and 800 m and radius n for walking, and 1200 and 2000 m for driving. A street can be central at 400 m and peripheral at radius n, and that contrast often tells me more than any single value.</p>
 </section>
 <section id="a-made-up-town" class="level2">
 <h2 class="anchored" data-anchor-id="a-made-up-town">A made-up town</h2>
-<p>I invented this town so the numbers can be checked by hand. It has a main street (M1 to M5), cross streets to the north and south, a back street (B1, B2) and a cul-de-sac (C1, C2).</p>
+<p>I invented this town so the numbers can be checked by hand, with depth counted as one step per change of street. It has a main street (M1 to M5), cross streets to the north and south, a back street (B1, B2) and a cul-de-sac (C1, C2).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/space_syntax/toy_space_syntax.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Depth from M1, then integration, then choice, on the same made-up town."><img src="outputs/space_syntax/toy_space_syntax.png" class="img-fluid figure-img" alt="Three copies of a made-up street network showing depth, integration and choice."></a></p>
@@ -535,10 +465,6 @@ ul.task-list li input[type="checkbox"] {
 <p>M3 is the best place to be, and M4 is the best place to pass through. The two measures differ, so I keep both.</p>
 </div>
 </div>
-</section>
-<section id="the-values-in-the-results" class="level2">
-<h2 class="anchored" data-anchor-id="the-values-in-the-results">The values in the results</h2>
-<p>The results also give normalised forms, NAIN for integration and NACH for choice, that can be compared between networks of different sizes (Hillier, Yang &amp; Turner 2012, pp.&nbsp;160, 165 and 191). NACH also evens out raw choice, where a few streets score very high and most score low. The paper gives two slightly different versions of NAIN, so I compare numbers only within one version (<a href="./readings-check.html#which-nain">Reading closely</a>).</p>
 </section>
 <section id="what-it-leaves-out" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-leaves-out">What it leaves out</h2>
@@ -576,10 +502,64 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>In Situ each of these belongs to another system, such as S3 Rules or S5 Rhythm. That keeps space syntax clean as a measure.</p>
-<p>Next: <a href="./space-syntax-why.html">Why I use it</a>.</p>
+<p>In Situ each of these belongs to another system, such as S3 Rules or S5 Rhythm. That keeps space syntax clean enough to serve as a measuring stick for the rest.</p>
+</section>
+<section id="why-i-use-it" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-use-it">Why I use it</h2>
+<section id="a-measuring-stick" class="level3">
+<h3 class="anchored" data-anchor-id="a-measuring-stick">A measuring stick</h3>
+<p>My agents never read space syntax values. I compare their movement with the values afterwards, so the comparison is a real test. Agents that preferred high-scoring streets would make it circular: the answer would go in and come back out.</p>
+<p>Choice is already a route model built on the least-turning route between every pair of segments (Turner 2007, p.&nbsp;544). Walkers who took those routes, spread evenly over all pairs, would match choice by construction, and the match would prove nothing. So the walkers in S6 pick routes for their own reasons, such as where they are going and the time of day. Space syntax enters Situ only at the end, in S8 Observer.</p>
+</section>
+<section id="what-the-comparison-can-show" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-comparison-can-show">What the comparison can show</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  SS[Space syntax&lt;br/&gt;layout only]:::data --&gt; CMP{Compare&lt;br/&gt;street by street}:::test
+  SIM[Simulated walkers&lt;br/&gt;S6]:::step --&gt; CMP
+  REAL[Real counts&lt;br/&gt;Ville de Montréal]:::data --&gt; CMP
+  PLAY[Player traces&lt;br/&gt;in the game]:::step --&gt; CMP
+  CMP --&gt; Q[Where layout accounts for movement,&lt;br/&gt;and where something else does]:::out
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6
+  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff
+  classDef test fill:none,stroke:#fe83cc,color:#fe83cc
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Simulation</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Real counts</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Players</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Where the walkers and choice agree, the layout alone may explain the movement. Where they disagree, something else is at work, such as a building or a rule.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>The city’s <a href="./counts.html">movement counts</a> check the model against reality, and they are thin: seven S1 junctions, one to three days each, between February 2024 and May 2026. Enough to raise a warning, too little to prove anything.</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>In the game I can watch whether players drift toward integrated streets, which bears on my research question about wayfinding.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-this-method" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-method">Why this method</h3>
+<p>It runs in QGIS on the city’s open street file, and the same file with the same settings gives the same values. Forty years of studies use it, so I can set Griffintown beside other cities. It was built to study how layout and social life relate, the subject of my research. Its blind spots are well documented, and each one falls to another Situ system.</p>
+</section>
+<section id="what-this-means-for-my-data" class="level3">
+<h3 class="anchored" data-anchor-id="what-this-means-for-my-data">What this means for my data</h3>
+<p>Values belong to the network they were calculated on. A missing path makes its neighbours look less connected than they are, so I added the city’s off-street paths before the analysis (<a href="./network.html">The walking network</a>).</p>
+<p>The edge of the map also distorts: streets near it look peripheral only because the map stops there (Ratti 2004, p.&nbsp;496; van Nes &amp; Yamu 2021, p.&nbsp;51). So the analysis covers the whole island, and I cut Griffintown out of the results afterwards.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -990,8 +970,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./space-syntax-why.html" class="pagination-link" aria-label="Why I use it">
-        <span class="nav-page-text">Why I use it</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./readings-check.html" class="pagination-link" aria-label="Reading closely">
+        <span class="nav-page-text">Reading closely</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

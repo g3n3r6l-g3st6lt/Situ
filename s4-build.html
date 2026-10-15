@@ -9,7 +9,7 @@
 <meta name="author" content="Mohamed Gharbia">
 <meta name="dcterms.date" content="2026-10-15">
 
-<title>How S4 is built – Situ</title>
+<title>How S4 is built and tested – Situ</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./s4-tests.html" rel="next">
+<link href="./lab.html" rel="next">
 <link href="./s4-buildings.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s4-buildings.html">S4 Buildings</a></li><li class="breadcrumb-item"><a href="./s4-build.html">How S4 is built</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s4-buildings.html">S4 Buildings</a></li><li class="breadcrumb-item"><a href="./s4-build.html">How S4 is built and tested</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -163,12 +163,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./space-syntax.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What space syntax is</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why I use it</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -232,13 +226,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S1 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests</span></a>
+ <span class="menu-text">How S1 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -264,18 +252,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">S2 Scores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S2 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S2 tests</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -296,13 +272,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S3 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S3 tests</span></a>
+ <span class="menu-text">How S3 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,13 +301,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">How S4 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4 tests</span></a>
+ <span class="menu-text">How S4 is built and tested</span></a>
   </div>
 </li>
       </ul>
@@ -354,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">lab.html</span></a>
+ <span class="menu-text">Open the Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -383,24 +347,24 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#blueprint" id="toc-blueprint" class="nav-link active" data-scroll-target="#blueprint">Blueprint</a></li>
   <li><a href="#the-sources" id="toc-the-sources" class="nav-link" data-scroll-target="#the-sources">The sources</a></li>
-  <li><a href="#the-problem" id="toc-the-problem" class="nav-link" data-scroll-target="#the-problem">The problem</a></li>
-  <li><a href="#step-1-the-outlines" id="toc-step-1-the-outlines" class="nav-link" data-scroll-target="#step-1-the-outlines">Step 1: the outlines</a></li>
-  <li><a href="#step-2-the-tax-roll-at-its-address" id="toc-step-2-the-tax-roll-at-its-address" class="nav-link" data-scroll-target="#step-2-the-tax-roll-at-its-address">Step 2: the tax roll at its address</a></li>
-  <li><a href="#step-3-every-row-finds-its-building" id="toc-step-3-every-row-finds-its-building" class="nav-link" data-scroll-target="#step-3-every-row-finds-its-building">Step 3: every row finds its building</a></li>
-  <li><a href="#step-4-the-use" id="toc-step-4-the-use" class="nav-link" data-scroll-target="#step-4-the-use">Step 4: the use</a></li>
-  <li><a href="#step-5-size" id="toc-step-5-size" class="nav-link" data-scroll-target="#step-5-size">Step 5: size</a></li>
-  <li><a href="#step-6-ground-floor-and-places" id="toc-step-6-ground-floor-and-places" class="nav-link" data-scroll-target="#step-6-ground-floor-and-places">Step 6: ground floor and places</a></li>
-  <li><a href="#step-7-the-access-link" id="toc-step-7-the-access-link" class="nav-link" data-scroll-target="#step-7-the-access-link">Step 7: the access link</a></li>
+  <li><a href="#the-outlines" id="toc-the-outlines" class="nav-link" data-scroll-target="#the-outlines">The outlines</a></li>
+  <li><a href="#the-tax-roll-at-its-address" id="toc-the-tax-roll-at-its-address" class="nav-link" data-scroll-target="#the-tax-roll-at-its-address">The tax roll at its address</a></li>
+  <li><a href="#every-row-finds-its-building" id="toc-every-row-finds-its-building" class="nav-link" data-scroll-target="#every-row-finds-its-building">Every row finds its building</a></li>
+  <li><a href="#the-use" id="toc-the-use" class="nav-link" data-scroll-target="#the-use">The use</a></li>
+  <li><a href="#size" id="toc-size" class="nav-link" data-scroll-target="#size">Size</a></li>
+  <li><a href="#ground-floor-and-places" id="toc-ground-floor-and-places" class="nav-link" data-scroll-target="#ground-floor-and-places">Ground floor and places</a></li>
+  <li><a href="#the-access-link" id="toc-the-access-link" class="nav-link" data-scroll-target="#the-access-link">The access link</a></li>
   <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
+  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s4-buildings.html">S4 Buildings</a></li><li class="breadcrumb-item"><a href="./s4-build.html">How S4 is built</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s4-buildings.html">S4 Buildings</a></li><li class="breadcrumb-item"><a href="./s4-build.html">How S4 is built and tested</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">How S4 is built</h1>
+<h1 class="title">How S4 is built and tested</h1>
 </div>
 
 
@@ -438,13 +402,13 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
   IN[/"SIX OPEN FILES&lt;br/&gt;OpenStreetMap · tax roll · lot outlines · address points&lt;br/&gt;commercial survey 2025 · public places"/]:::data
-  IN --&gt; O["1 OUTLINES&lt;br/&gt;centre in the study area"]:::step
-  O --&gt; A["2 THE ROLL AT ITS ADDRESS&lt;br/&gt;street name + civic number"]:::step
-  A --&gt; L["3 EVERY ROW FINDS ITS BUILDING&lt;br/&gt;its lot first, then its address point"]:::step
-  L --&gt; U["4 USE&lt;br/&gt;roll, then tag"]:::step
-  L --&gt; H["5 SIZE&lt;br/&gt;storeys, dwellings"]:::step
-  L --&gt; G["6 GROUND FLOOR&lt;br/&gt;premises, places"]:::step
-  S1[/"S1 walkable streets"/]:::data --&gt; X["7 ACCESS&lt;br/&gt;an assumption"]:::step
+  IN --&gt; O["OUTLINES&lt;br/&gt;centre in the study area"]:::step
+  O --&gt; A["THE ROLL AT ITS ADDRESS&lt;br/&gt;street name + civic number"]:::step
+  A --&gt; L["EVERY ROW FINDS ITS BUILDING&lt;br/&gt;its lot first, then its address point"]:::step
+  L --&gt; U["USE&lt;br/&gt;roll, then tag"]:::step
+  L --&gt; H["SIZE&lt;br/&gt;storeys, dwellings"]:::step
+  L --&gt; G["GROUND FLOOR&lt;br/&gt;premises, places"]:::step
+  S1[/"S1 walkable streets"/]:::data --&gt; X["ACCESS&lt;br/&gt;an assumption"]:::step
   O --&gt; X
   U &amp; H &amp; G &amp; X --&gt; OUT[/"buildings, places,&lt;br/&gt;unplaced rows, checkpoints"/]:::out
   OUT --&gt; T["tests and maps"]:::test
@@ -476,24 +440,16 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>OpenStreetMap</td>
-<td>building outlines and tags; places such as shops and cafés, with opening hours</td>
+<td>OpenStreetMap, with its building parts</td>
+<td>building outlines and tags, including tower parts with their storeys; places such as shops and cafés, with opening hours</td>
 </tr>
 <tr class="even">
-<td>OpenStreetMap building parts</td>
-<td>the storeys of towers, which OpenStreetMap often draws as parts standing on a lower outline</td>
+<td>Ville de Montréal, tax roll (<em>Unités d’évaluation foncière</em>), also with lot outlines (October 2026)</td>
+<td>each property’s use, storeys, dwellings, year built and floor area, and the land it sits on</td>
 </tr>
 <tr class="odd">
-<td>Ville de Montréal, tax roll (<em>Unités d’évaluation foncière</em>)</td>
-<td>for each property: its use, storeys, dwellings, year built and floor area</td>
-</tr>
-<tr class="even">
-<td>Ville de Montréal, address points (<em>Adresse ponctuelle</em>)</td>
+<td>Ville de Montréal, <em>Adresse ponctuelle</em></td>
 <td>where each street number stands</td>
-</tr>
-<tr class="odd">
-<td>Ville de Montréal, the same tax roll with its lot outlines (October 2026 file)</td>
-<td>the piece of land each property sits on</td>
 </tr>
 <tr class="even">
 <td>Ville de Montréal, <em>Locaux commerciaux et statuts d’occupation</em></td>
@@ -509,56 +465,39 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>The city’s files are open under CC BY 4.0 and OpenStreetMap under ODbL.</p>
-<p>I looked at two more and set them aside. The Concordia NGCI building file has no licence, so I cannot publish anything made from it. It also records each condo tower as a single property: 2199 rue Ann, 76 m tall, appears as one dwelling. The other was Québec City’s building file, which does not cover Montréal.</p>
-<p>I also opened the city’s 3D model of 2020 (<em>Bâtiments 3D 2020</em>, CityGML). It measures every roof, which would replace the storey counts with heights in metres. But the 2020 model covers only Ville-Marie, Outremont and Côte-des-Neiges–Notre-Dame-de-Grâce, and Griffintown sits in Le Sud-Ouest. Of its tiles, four reach the edge of the study area, and they hold three small structures by Rue Notre-Dame (certain). For Le Sud-Ouest the city published the 2016 model, which is older than most of the towers here. I have not used it yet.</p>
+<p>The city’s files are open under CC BY 4.0, OpenStreetMap under ODbL.</p>
+<p>The Concordia NGCI building file gives a height and a use for every building in Montréal. It carries no licence, though, so S4 does not use it, and I publish nothing made from it until one is granted; it also records a condo tower such as 2199 rue Ann, 76 m tall, as one dwelling. Québec City’s building file does not cover Montréal. The city’s 3D model of 2020 (<em>Bâtiments 3D 2020</em>) measures roofs but leaves out Le Sud-Ouest, Griffintown’s borough, holding only three small structures by Rue Notre-Dame at the edge of the study area (certain). Its 2016 model of Le Sud-Ouest predates most towers here, and I have not used it yet.</p>
 </section>
-<section id="the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="the-problem">The problem</h2>
-<p>Every source here is a list of points or rows. Only OpenStreetMap draws buildings. So before anything else, S4 has to give each row a building.</p>
+<section id="the-outlines" class="level2">
+<h2 class="anchored" data-anchor-id="the-outlines">The outlines</h2>
+<p>Only OpenStreetMap draws buildings; every other source is a list of points or rows. So S4 starts from its outlines, keeping each one whose centre falls inside the study area. When the centre of one outline lies inside a larger one, S4 treats the smaller as a part of the larger, as with Griffix on Rue Wellington, a 21-storey tower drawn over a 2-storey base.</p>
 </section>
-<section id="step-1-the-outlines" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-the-outlines">Step 1: the outlines</h2>
-<p>A building belongs to the study area when the centre of its outline falls inside the boundary.</p>
-<p>Sometimes OpenStreetMap draws a tower as a second outline on top of its podium. Griffix on Rue Wellington is one: a 2-storey base, and a 21-storey tower drawn over it. When the centre of one outline lies inside a larger one, S4 treats the smaller as a part of the larger, not as a building of its own.</p>
+<section id="the-tax-roll-at-its-address" class="level2">
+<h2 class="anchored" data-anchor-id="the-tax-roll-at-its-address">The tax roll at its address</h2>
+<p>S4 matches each property’s street name and number to the city’s address points. Many rows found no match, because I downloaded the roll for whole streets across the island and the address points only around Griffintown. I once thought none of the missed rows stood in the study area; the lot outlines showed that 64 do, and they now count through their lot.</p>
 </section>
-<section id="step-2-the-tax-roll-at-its-address" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-the-tax-roll-at-its-address">Step 2: the tax roll at its address</h2>
-<p>The roll gives each property a street name and a number. The city’s address points give a position for a range of numbers on a named street, so S4 matches the two. Many roll rows found no match, because I downloaded the roll for whole streets across the island and the address points only around Griffintown.</p>
-<p>I used to think none of the missed rows stood in the study area. The lot outlines showed otherwise: 64 rows have their land in the study area and no address point there. They count now, through their lot.</p>
+<section id="every-row-finds-its-building" class="level2">
+<h2 class="anchored" data-anchor-id="every-row-finds-its-building">Every row finds its building</h2>
+<p>The city also publishes the roll with the outline of each property’s lot, the land it is taxed on, which every condo unit repeats. A lot is firmer ground than an address point, a single dot placed near a door or a curb, so S4 reads the lot first.</p>
+<p>The buildings on a lot are those whose centre it holds or, failing that, any covering at least 30% of it. When the lot holds one building, the row goes there. When it holds several, the address point says which, and if the point stands in none of them, the nearest building within 15 m takes the row. When the lot holds no building, the address point works alone in the same way. Beyond 15 m a row stays unplaced, with the reason, since a longer reach risks the wrong building (<a href="#stress-tests">stress tests</a>).</p>
+<p>Lot and point sometimes disagree. On a lot with one building, the lot decides. On a lot with several, where the point stands in a building off the lot, the point decides, since the lot cannot choose. Each such case becomes a checkpoint, ten so far.</p>
+<p>Griffix is why the lot comes first. Its 197 flats, at 1045 rue Wellington, have their address point inside MaryRobert next door, where S4 used to count them, though their lot holds Griffix alone. Now they count in Griffix, and MaryRobert drops from 678 dwellings to 491.</p>
 </section>
-<section id="step-3-every-row-finds-its-building" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-every-row-finds-its-building">Step 3: every row finds its building</h2>
-<p>The city publishes the roll a second time with the outline of each property’s lot, the piece of land it is taxed on. Every condo unit in a building repeats the lot it shares with its neighbours. A lot is firmer ground than an address point, which is a single dot the city places near a door or a curb.</p>
-<p>So S4 reads the lot first. The buildings on a lot are those whose centre the lot holds. When none does, a building that covers at least 30% of the lot counts.</p>
-<ul>
-<li>When the lot holds one building, the row goes there.</li>
-<li>When it holds several, the address point says which. If the point stands in none of them, the nearest within 15 m takes it. Beyond that the row stays unplaced, with the reason.</li>
-<li>When the lot holds no building, the address point works alone: inside an outline, or the nearest one within 15 m.</li>
-</ul>
-<p>The lot and the address point sometimes disagree. When the lot holds one building, I let the lot decide. When it holds several and the point stands in a building off the lot, I let the point decide, since the lot cannot choose. Both cases go on my list of checkpoints, ten of them so far.</p>
-<p>Griffix is why this step changed. Its 197 flats, at 1045 rue Wellington, have their address point inside MaryRobert next door, so S4 used to count them there. Their lot holds Griffix and nothing else. They now live in Griffix, and MaryRobert drops from 678 dwellings to 491.</p>
-<p>Why 15 m? With no reach at all, 1,322 rows would be left out. At 15 m, 468 are, and 415 of those share one address point that stands 130 m from the two towers on their lot (checkpoint B01). Doubling the reach to 30 m places two more. The further the reach, the more a point risks joining the wrong building.</p>
+<section id="the-use" class="level2">
+<h2 class="anchored" data-anchor-id="the-use">The use</h2>
+<p>Each property’s land-use code begins with a digit naming a broad family, such as residential or commerce. A building takes the commonest family among its properties, leaving out condo parking spaces and storage units. A tie goes to the larger floor area, and a missing area is never read as zero. When the roll cannot decide, the OpenStreetMap tag speaks; a plain “building” tag names no use, so the use stays empty, with the reason. Every tie goes on my list to check, because it often means two buildings share one outline: at Ardent Mills, a 74-dwelling social housing property shares the flour mill’s.</p>
 </section>
-<section id="step-4-the-use" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-the-use">Step 4: the use</h2>
-<p>The roll gives every property a land-use code whose first digit names a broad family, such as residential or commerce. The commonest family among a building’s properties becomes its use, leaving out condo parking spaces and storage units. A tie goes to the larger floor area, and a missing area is never read as zero. When the roll cannot decide, the OpenStreetMap tag speaks next. A plain “building” tag names no use, so the use stays empty, with the reason.</p>
-<p>Every tie goes on my list to check by hand, because it often means two buildings share one outline. Ardent Mills is an example: the roll places a 74-dwelling social housing property and the flour mill inside the same outline.</p>
+<section id="size" class="level2">
+<h2 class="anchored" data-anchor-id="size">Size</h2>
+<p>A building is as tall as its tallest known part. S4 takes the largest storey count from the roll or from OpenStreetMap, where every part inside the outline counts too, and notes its source. Condo units are left out, since the roll gives each only its own floor. I added the parts after an audit found MaryRobert at 2 storeys, its outline carrying only the podium; it now reads 22, from its tower. Where the dwellings cannot fit and no part helps, the building goes on my list to check. Its dwellings are the roll’s dwellings summed over its properties.</p>
 </section>
-<section id="step-5-size" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-size">Step 5: size</h2>
-<p>A building is as tall as its tallest known part. S4 compares the storeys the roll gives, the storeys on the OpenStreetMap outline, and the storeys of every OpenStreetMap part inside it, and keeps the largest, noting where it came from. Condo units are left out of this, since the roll gives each unit only its own floor.</p>
-<p>I added the parts after an audit. Before, MaryRobert’s 678 dwellings stood in a building of 2 storeys, because the outline carried only its podium. Now it reads 22, from its tower. Where no part gives a better number and the dwellings cannot fit, S4 puts the building on my list to check.</p>
-<p>Dwellings are the sum of the roll’s dwellings over the building’s properties.</p>
+<section id="ground-floor-and-places" class="level2">
+<h2 class="anchored" data-anchor-id="ground-floor-and-places">Ground floor and places</h2>
+<p>The premises are the 2025 survey’s spaces inside the building, vacant ones included. The places are anywhere a person might go: some from OpenStreetMap, the rest from the city’s public places and the survey’s occupied shops, leaving out benches and bike racks. A survey shop and an OpenStreetMap shop with exactly the same name in the same building become one place. A looser match, like Orangetheory <em>Fitness</em> against Orangetheory <em>Theory</em>, would be a guess, so S4 leaves it alone.</p>
 </section>
-<section id="step-6-ground-floor-and-places" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-ground-floor-and-places">Step 6: ground floor and places</h2>
-<p>The premises are the 2025 survey’s spaces inside the building, vacant ones included. The places are anywhere a person might go. Some come from OpenStreetMap, and the others are the city’s public places and the survey’s occupied shops. Benches and bike racks are left out.</p>
-<p>Sometimes the survey and OpenStreetMap list the same shop. When the two carry exactly the same name in the same building, S4 links them as one place. A looser match, like Orangetheory <em>Fitness</em> against Orangetheory <em>Theory</em>, is left alone: it would be a guess.</p>
-</section>
-<section id="step-7-the-access-link" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-the-access-link">Step 7: the access link</h2>
-<p>For each building, S4 finds the nearest S1 street people can walk on, within 80 m. This stands in for the door. It is the weakest value in S4, and every building’s record says so.</p>
+<section id="the-access-link" class="level2">
+<h2 class="anchored" data-anchor-id="the-access-link">The access link</h2>
+<p>S4 links each building to the nearest S1 street people can walk on, within 80 m, to stand in for the door. Every building’s record marks it as the weakest value in S4.</p>
 </section>
 <section id="assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
@@ -589,7 +528,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>A property belongs to the building on its lot; on a lot with several, to the one its address point stands in</td>
 <td>the lot is the city’s own outline of the land</td>
-<td>where lot and address point disagree, S4 asks</td>
+<td>where lot and point disagree, S4 asks</td>
 </tr>
 <tr class="even">
 <td>A building is as tall as its tallest known part</td>
@@ -603,8 +542,92 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="tests" class="level2">
+<h2 class="anchored" data-anchor-id="tests">Tests</h2>
+<section id="the-checks" class="level3">
+<h3 class="anchored" data-anchor-id="the-checks">The checks</h3>
+<p>Each check asks one plain question of the finished buildings.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Does every outline appear once, as a building or as part of one?</td>
+<td>Yes: 296 buildings, and one tower drawn over its podium</td>
+</tr>
+<tr class="even">
+<td>Does every value name its source, and every empty one its reason?</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Can every count be rebuilt from the source files?</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Is every property and shop in one building or listed as unplaced, never twice?</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Does each use follow its rule, ties included?</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Is every building linked to a walkable street within 80 m, or does it say why not?</td>
+<td>Yes. Six links exceed 30 m; Hangar 1825 has none</td>
+</tr>
+<tr class="odd">
+<td>Is every place in or next to its building, with each shop listed twice pointing to its twin?</td>
+<td>Yes, with 52 such pairs</td>
+</tr>
+<tr class="even">
+<td>Is any building lower than its tallest known part?</td>
+<td>No.&nbsp;Nine take their storeys from a tower part</td>
+</tr>
+<tr class="odd">
+<td>Does every property sit where its lot or address point puts it, with a checkpoint when the two disagree?</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>One more check reports how much the sources cover; a gap there is a fact about the sources, never a failure. The <a href="./lab.html">Lab</a> shows the latest results.</p>
+</section>
+<section id="what-the-checks-changed" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-checks-changed">What the checks changed</h3>
+<p>The property check failed on its first run: 89 properties were counted twice, because the tax roll came in overlapping pages. S4 now keeps one row per property.</p>
+<p>On the first map of uses, Ardent Mills, the flour mill, was painted residential. The roll puts a residential and an industrial property in its outline, and my first rule broke the tie by the order of a list, a choice I never made on purpose. Ties now follow the floor-area rule in <a href="#the-use">the use</a>.</p>
+<p>The height check came from an audit: I set MaryRobert back to 2 storeys, and the check named it at once, since a part of it has 22. The same audit found an error in the arithmetic. Computed from map coordinates in the millions of metres, some outline centres lost their small digits and fell tens of metres off, enough to put four small outlines falsely inside their neighbours. S4 now measures each outline from its own first corner, and the false overlaps are gone.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Testing the tests
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A test that always passes proves nothing. So I broke the finished buildings file four ways: I removed the reason from an unknown use, added one dwelling to a building, changed one use that came from the roll, and wrote 0 into an empty dwelling count. The checks caught all four. I did the same to the Lab’s copy of the results, which a further check compares with S4 down to every outline point: an unknown dwelling count turned to 0, one use changed, one point moved by 1 m, one place dropped. That check caught all four too.</p>
+</div>
+</div>
+</section>
+<section id="stress-tests" class="level3">
+<h3 class="anchored" data-anchor-id="stress-tests">Stress tests</h3>
+<p>Run twice on the same input, S4 gives the same output, line for line. The other stress tests ask how much the result depends on my choices.</p>
+<p>The 15 m reach, within which a stray address point joins the nearest building, matters a lot at first and then very little. With no reach, 1,322 rows would be left out. At 15 m, 468 are, 415 of them at the one address point of <a href="./s4-buildings.html">checkpoint B01</a>. At 30 m, two more find a building, and no property moves to another.</p>
+<p>The last test shakes every address point by 2 m, then 5 m, as if the city had placed them a little off. At 2 m, 244 properties change building; at 5 m, 278. The total stays at 11,954 dwellings. An earlier run gave 625 at 5 m, partly because each point’s random move depended on the order the points were read in, so adding the lots reshuffled every move; each point now has its own fixed move. Without lots the test gives 291 at 5 m, so the lots barely change this number (certain): most properties sit on lots with several buildings, where the address point still decides.</p>
+<p>That result is the warning. All the units at one address point move together, so where two buildings share a wall, a point a little off carries a whole condo tower into its neighbour. A single building’s count can be wrong while the block’s total is right. S5 and S6 should read dwellings by block, or with that in mind.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1015,8 +1038,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./s4-tests.html" class="pagination-link" aria-label="S4 tests">
-        <span class="nav-page-text">S4 tests</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lab.html" class="pagination-link" aria-label="Open the Lab">
+        <span class="nav-page-text">Open the Lab</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

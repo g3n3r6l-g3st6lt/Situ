@@ -167,12 +167,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space-syntax-why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why I use it</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading closely</span></a>
   </div>
@@ -232,13 +226,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S1 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s1-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests</span></a>
+ <span class="menu-text">How S1 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -264,18 +252,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">S2 Scores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S2 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s2-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S2 tests</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -296,13 +272,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S3 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s3-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S3 tests</span></a>
+ <span class="menu-text">How S3 is built and tested</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,13 +301,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How S4 is built</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./s4-tests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4 tests</span></a>
+ <span class="menu-text">How S4 is built and tested</span></a>
   </div>
 </li>
       </ul>
@@ -354,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">lab.html</span></a>
+ <span class="menu-text">Open the Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -384,8 +348,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-s1-does" id="toc-what-s1-does" class="nav-link active" data-scroll-target="#what-s1-does">What S1 does</a></li>
   <li><a href="#words" id="toc-words" class="nav-link" data-scroll-target="#words">Words</a></li>
   <li><a href="#result" id="toc-result" class="nav-link" data-scroll-target="#result">Result</a></li>
-  <li><a href="#try-it-from-here-to-there" id="toc-try-it-from-here-to-there" class="nav-link" data-scroll-target="#try-it-from-here-to-there">Try it: from here to there</a></li>
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  <li><a href="#from-here-to-there" id="toc-from-here-to-there" class="nav-link" data-scroll-target="#from-here-to-there">From here to there</a></li>
   </ul>
 </nav>
     </div>
@@ -425,8 +388,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-s1-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s1-does">What S1 does</h2>
-<p>S1 turns the city’s street lines into a network of segments and junctions, and records who may use each segment. Every later system walks or drives on this network, so it has to be right first.</p>
-<p><a href="./s1-build.html">How S1 is built</a> sets out the rules I assumed. Two pages then test it: the <a href="./s1-tests.html">tests</a> check the network against itself, and <a href="./s1-checks.html">Checks and decisions</a> check it against the real street, with photos.</p>
+<p>S1 turns the city’s street lines into a network of segments and junctions, and records who may use each segment. Every later system walks or drives on this network, so it has to be right first. The <a href="./s1-build.html">rules I assumed</a> decide who may walk or drive where. I check the result twice: against itself in the <a href="./s1-build.html#tests">tests</a>, and against the street, with photos, in <a href="./s1-checks.html">Checks and decisions</a>.</p>
 </section>
 <section id="words" class="level2">
 <h2 class="anchored" data-anchor-id="words">Words</h2>
@@ -436,47 +398,47 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>A made-up street that shows every word S1 uses.</figcaption>
 </figure>
 </div>
-<p>A segment is a piece of street between two junctions, and a junction is where segment ends meet. Griffintown stays part of the city, so S1 also keeps the streets just outside the boundary that touch the study area. I call them the edge. A gate is where the study area meets the edge, and an exit is the far end of an edge street, where the city carries on. A dead end is a junction with only one segment that is neither a gate nor an exit. A one-way arrow shows the only direction cars may use; pedestrians may always walk both ways.</p>
-<p>S1 starts from the city’s street lines, which already carry the space syntax results, and the outline of the study area. My decisions from the checks are applied on top, each with its evidence. Every segment keeps the city’s own id, so any value can be traced back to its source.</p>
+<p>A segment is a piece of street between two junctions, and a junction is where segment ends meet. Griffintown stays part of the city, so S1 also keeps the streets just outside the boundary that touch the study area. I call them the edge. A gate is where the study area meets the edge, and an exit is the far end of an edge street, where the city carries on. A dead end is a junction with only one segment that is neither a gate nor an exit. A one-way arrow shows the only direction cars may use; pedestrians may always walk both ways. A checkpoint, with an id starting with C, is a place where I doubted the data and took a decision from photos.</p>
+<p>S1 starts from the city’s street lines, the same lines my <a href="./space-syntax.html">space syntax</a> analysis uses. Space syntax is the method Bill Hillier and Julienne Hanson began for describing where each street sits in the whole network; S2 attaches its values to S1. Every segment keeps the city’s own id, so any value can be traced back to its source.</p>
 </section>
 <section id="result" class="level2">
 <h2 class="anchored" data-anchor-id="result">Result</h2>
 <p class="big-number">
 232 segments inside · 32 on the edge
 </p>
-<p>Before the checks, S1 had 190 segments and 12 dead ends. Now it has 2 dead ends.</p>
+<p>Before the checks, S1 had 190 segments and 12 dead ends. Now it has 2 dead ends. A road map is a poor walking map: the city’s file left out the canal path and the new park paths, and 10 of the 12 dead ends turned out to be places where walkers continue.</p>
 <section id="what-changed-in-october" class="level3">
 <h3 class="anchored" data-anchor-id="what-changed-in-october">What changed in October</h3>
-<p>The October rebuild came from decisions about the boundary and about a few street ends. Every segment and junction that existed before kept its number. Pieces from later decisions are numbered last, so confirming or rejecting one never renumbers anything else.</p>
-<p>The boundary first. The city codes Boulevard Robert-Bourassa as a pair of one-way roads about 60 m apart, and the boundary ran between them, so the boulevard carried traffic one way only. S1 now takes in both (C19), and keeps the edge around the whole area.</p>
-<p>Then the street ends. A footway now runs from the end of Brennan through the block to de la Commune (C04, C12), and the end of Ann joins it (C05). These links are assumed, and drawn in pink until a photo or a visit confirms them. From the end of Smith, a 41 m link crosses the plaza of Place des Aiguilleurs (C06). That one was settled with photos.</p>
+<p>The October rebuild came from <a href="./s1-checks.html#decisions">decisions</a> about the boundary and a few street ends. Every segment and junction that existed before kept its number.</p>
+<p>The boundary is a drawing decision. The city codes Boulevard Robert-Bourassa as a pair of one-way roads about 60 m apart, and the boundary ran between them, so inside the study area the boulevard carried traffic one way only. S1 now takes in both carriageways (C19) and keeps the edge around the whole area.</p>
+<p>At the street ends, the Lachine Canal path (C16) and two park paths (C18) came in for walkers. A footway now runs from the end of Brennan through the block to de la Commune (C04, C12), and the end of Ann joins it (C05). These links are assumed, and drawn in pink until a photo or a visit confirms them. From the end of Smith, a 41 m link crosses the plaza of Place des Aiguilleurs (C06); that one was settled with photos.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Names and rules</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Every id</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s1/s1_sheet_A_streets.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Sheet A. Click to enlarge."><img src="outputs/s1/s1_sheet_A_streets.png" class="img-fluid figure-img" alt="Sheet A. Click to enlarge."></a></p>
-<figcaption>Sheet A. Click to enlarge.</figcaption>
+<p><a href="outputs/s1/s1_sheet_A_streets.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Sheet A."><img src="outputs/s1/s1_sheet_A_streets.png" class="img-fluid figure-img" alt="Sheet A."></a></p>
+<figcaption>Sheet A.</figcaption>
 </figure>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s1/s1_sheet_B_ids.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Sheet B: look up any S or J id in the tables. Click to enlarge."><img src="outputs/s1/s1_sheet_B_ids.png" class="img-fluid figure-img" alt="Sheet B: look up any S or J id in the tables. Click to enlarge."></a></p>
-<figcaption>Sheet B: look up any S or J id in the tables. Click to enlarge.</figcaption>
+<p><a href="outputs/s1/s1_sheet_B_ids.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Sheet B: look up any S or J id in the tables."><img src="outputs/s1/s1_sheet_B_ids.png" class="img-fluid figure-img" alt="Sheet B: look up any S or J id in the tables."></a></p>
+<figcaption>Sheet B: look up any S or J id in the tables.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<p>The sheets are turned so the street grid sits level and the labels read easily. The data itself is never turned, and the N arrow always points to true north.</p>
+<p>The sheets are turned so the street grid sits level. The data itself is never turned, and the N arrow points to true north.</p>
 </section>
 </section>
-<section id="try-it-from-here-to-there" class="level2">
-<h2 class="anchored" data-anchor-id="try-it-from-here-to-there">Try it: from here to there</h2>
-<p>In the <a href="./lab.html#s1">Lab</a>, choose S1, then “from here to there”, and click a start junction and an end junction. Everything it shows comes from the network alone:</p>
+<section id="from-here-to-there" class="level2">
+<h2 class="anchored" data-anchor-id="from-here-to-there">From here to there</h2>
+<p>In the <a href="./lab.html#s1">Lab</a>, choose S1, then “from here to there”, and click a start and an end junction. Everything it shows comes from the network alone:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -491,32 +453,24 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Shortest route</td>
-<td>the shortest way along the streets, on foot or by car; every other route is compared with it</td>
+<td>the shortest way along the streets, on foot or by car; the other measures are compared with it</td>
 </tr>
 <tr class="even">
 <td>Directness</td>
-<td>the route’s length divided by the straight line between the two points. A grid gives about 1.3; a barrier such as the canal pushes it higher</td>
+<td>route length divided by the straight line; a grid gives about 1.3, and a barrier such as the canal pushes it higher</td>
 </tr>
 <tr class="odd">
 <td>Variety</td>
-<td>in pink, every street you could pass through on a trip at most 0, 5, 10, 25 or 50 % longer than the shortest. A wide band means many ways to go; a thin one means the layout funnels everyone onto one street</td>
+<td>in pink, every street a trip at most 0, 5, 10, 25 or 50 % longer than the shortest could use; a thin band means the layout funnels everyone onto one street</td>
 </tr>
 <tr class="even">
 <td>Cost of one-way streets</td>
-<td>by car, how much longer the drive is than the walk between the same two junctions</td>
+<td>how much longer the drive is than the walk between the same two junctions</td>
 </tr>
 </tbody>
 </table>
-<p>A good first example is <a href="./lab.html#route-J093-J130">William at Young to further along William</a>. It is 306 m on foot and 966 m by car, because William is one-way and the car has to go round the block.</p>
-<p>Two trips from Rue des Bassins show the difference between the grid and the canal. From <a href="./lab.html#route-J016-J152">Bassins at Rioux to Notre-Dame at Robert-Bourassa</a>, a 10 % detour opens up 82 other segments: walkers have many ways. From <a href="./lab.html#route-J121-J188">Bassins at Allée des Barges to Wellington</a>, the walk is 1.7 times the straight line, because the canal has few crossings.</p>
-<p>These measures say nothing about how anyone actually chooses a route. People do not all take the shortest way, and the turn bans and stops of S3 are not counted here. Routes also stay inside the study area, so by car many trips cannot be made without the city outside, and the Lab says so when that happens. Choice belongs to S6 Walkers and S7 Drivers; these measures are the yardstick their routes will be compared with. <a href="./lab-notes.html#tests">Lab notes</a> shows how the measures are tested.</p>
-</section>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<p>A road map is a poor walking map. The city’s file left out the canal path and the new park paths, and 10 of the 12 dead ends turned out to be places where walkers continue.</p>
-<p>The boundary is a drawing decision. A line through the middle of a boulevard cut its traffic in half.</p>
-<p>Street View can be old. Some of my evidence dates from 2007 to 2016, so every decision keeps its date.</p>
-<p>One step of the reach is one junction. Distances in metres are in the route tool. Time comes later, when S6 and S7 give walkers and cars a speed.</p>
+<p>From <a href="./lab.html#route-J093-J130">William at Young to further along William</a> is 306 m on foot and 966 m by car, because William is one-way and the car has to go round the block. From <a href="./lab.html#route-J016-J152">Bassins at Rioux to Notre-Dame at Robert-Bourassa</a>, a 10 % detour opens up 82 other segments, the grid giving walkers many ways. From <a href="./lab.html#route-J121-J188">Bassins at Allée des Barges to Wellington</a>, the walk is 1.7 times the straight line, because the canal has few crossings.</p>
+<p>These measures say nothing about how anyone actually chooses a route: people do not all take the shortest way, and the turn bans and stops of S3 are left out. Routes also stay inside the study area, so many trips by car need the city outside, and the Lab says so when that happens. How people choose belongs to S6 Walkers and S7 Drivers, whose routes will be measured against this yardstick. The <a href="./lab-notes.html#tests">Lab notes</a> describe how the measures themselves are tested.</p>
 
 
 </section>
@@ -929,8 +883,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./s1-build.html" class="pagination-link" aria-label="How S1 is built">
-        <span class="nav-page-text">How S1 is built</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./s1-build.html" class="pagination-link" aria-label="How S1 is built and tested">
+        <span class="nav-page-text">How S1 is built and tested</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
