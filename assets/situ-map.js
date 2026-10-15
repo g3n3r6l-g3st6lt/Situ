@@ -163,11 +163,25 @@
         const r = this.svg.getBoundingClientRect();
         this.zoomBy(Math.exp(e.deltaY * 0.0015), e.clientX - r.left, e.clientY - r.top);
       }, { passive: false });
+      // two fingers: pinch to zoom around the point between them
+      const touches = new Map();
+      let pinch = null;
+      const gap = () => { const [a, b] = [...touches.values()]; return Math.hypot(a.x - b.x, a.y - b.y); };
+      const middle = () => { const [a, b] = [...touches.values()], r = this.svg.getBoundingClientRect(); return [(a.x + b.x) / 2 - r.left, (a.y + b.y) / 2 - r.top]; };
       this.svg.addEventListener("pointerdown", e => {
+        touches.set(e.pointerId, { x: e.clientX, y: e.clientY });
+        if (touches.size === 2) { pinch = gap(); drag = null; this.moved = true; return; }
         drag = { x: e.clientX, y: e.clientY, vx: this.view.x, vy: this.view.y };
         this.moved = false;
       });
       window.addEventListener("pointermove", e => {
+        if (touches.has(e.pointerId)) touches.set(e.pointerId, { x: e.clientX, y: e.clientY });
+        if (pinch && touches.size === 2) {
+          const now = gap(), [mx, my] = middle();
+          if (now > 0) this.zoomBy(pinch / now, mx, my);
+          pinch = now;
+          return;
+        }
         if (!drag) return;
         const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
         if (Math.abs(dx) + Math.abs(dy) > 4) this.moved = true;
@@ -178,7 +192,9 @@
         this.view.y = drag.vy + dy / k;
         this.apply();
       });
-      window.addEventListener("pointerup", () => { drag = null; });
+      const end = e => { touches.delete(e.pointerId); if (touches.size < 2) pinch = null; drag = null; };
+      window.addEventListener("pointerup", end);
+      window.addEventListener("pointercancel", end);
     }
     // click handlers call this first: a drag is never a click
     wasDrag() { return this.moved; }

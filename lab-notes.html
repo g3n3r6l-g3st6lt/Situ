@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c2228a6dba8593090521243fa9cc0660.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-e55b08e68b755b4307fcfc8526ad6b8e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -348,7 +348,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lab</span></a>
+ <span class="menu-text">lab.html</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -418,56 +418,50 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-the-lab-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-lab-is">What the Lab is</h2>
-<p>The <a href="./lab.html">Lab</a> is one map with every system on it. Each system page keeps its own blueprint and maps. The Lab is where the systems meet, and where I can try them.</p>
-<p>The Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When a slider moves, the Lab switches between runs a stress test already made, or steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.</p>
+<p>The <a href="./lab.html">Lab</a> is one map with a tab for each system. Each system page keeps its own blueprint and maps. The Lab is where I can try a system, see the places it still leaves open, and click anything on the map to read what every system knows about it.</p>
+<p>The Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When the reach slider moves, the Lab steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.</p>
 <p>One tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.</p>
 </section>
 <section id="what-it-shows" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-shows">What it shows</h2>
-<p>Only one system paints the streets at a time, because two colourings on one line cannot be read. The others can be shown on top.</p>
+<p>One system shows at a time, because two colourings on one street cannot be read. Each tab has at most two controls, its checkpoints grouped by kind with the reason each kind matters, and the result of its last tests.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>System</th>
-<th>Paints the streets with</th>
-<th>Shows on top</th>
-<th>Lets you try</th>
+<th>Tab</th>
+<th>What the map shows</th>
+<th>What you can try</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>S1 Streets</td>
-<td>who may use each street</td>
-<td>gates, dead ends, one-way arrows and checkpoints</td>
-<td>how far you can get from a junction, and every street a trip up to 50 % longer than the shortest route could use</td>
+<td>who may use each street, gates and dead ends</td>
+<td>how far you can get from a junction, and every street a trip up to 50 % longer than the shortest could use</td>
 </tr>
 <tr class="even">
 <td>S2 Scores</td>
-<td>choice or integration, on foot or by car, with a radius slider that can play</td>
-<td></td>
-<td></td>
+<td>choice or integration, on foot or by car</td>
+<td>a distance slider that can play</td>
 </tr>
 <tr class="odd">
 <td>S3 Rules</td>
-<td>speed limits</td>
-<td>stops and lights; click a junction for its rules and signs</td>
-<td>its stress tests as sliders, such as moving the signs</td>
+<td>stops and lights, or speed limits</td>
+<td>click a junction, then a street arriving at it, for its rules and signs</td>
 </tr>
 <tr class="even">
 <td>S4 Buildings</td>
-<td></td>
-<td>buildings coloured by use; click one for its values and sources</td>
-<td></td>
+<td>buildings by use, or by where the use came from</td>
+<td>the places people go to</td>
 </tr>
 </tbody>
 </table>
-<p>The latest test reports of every system are listed in the Lab as well.</p>
+<p>I took the stress tests out of the Lab. They are on each system’s tests page, where their numbers can be read in full.</p>
 </section>
 <section id="how-it-is-built" class="level2">
 <h2 class="anchored" data-anchor-id="how-it-is-built">How it is built</h2>
@@ -542,7 +536,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>L4</td>
-<td>Do the sliders give the same counts as the S3 stress tests?</td>
+<td>Do the S3 stress results kept for the Lab give the same counts as the S3 stress tests?</td>
 </tr>
 <tr class="odd">
 <td>L5</td>
@@ -964,8 +958,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./lab.html" class="pagination-link" aria-label="Lab">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lab</span>
+      <a href="./lab.html" class="pagination-link" aria-label="lab.html">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">lab.html</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

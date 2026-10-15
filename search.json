@@ -223,7 +223,7 @@
     "href": "s4-buildings.html#try-it-in-the-lab",
     "title": "S4 Buildings",
     "section": "Try it in the Lab",
-    "text": "Try it in the Lab\nIn the Lab, turn on the S4 buildings layer and click any building. The panel shows each value with its source. It also lists the places inside and the street the building is linked to. You can colour the buildings by their use or by where that use came from. Other layers show every place on the map and the 54 cases I still need to look at.",
+    "text": "Try it in the Lab\nIn the Lab, open the S4 tab and click any building. The panel shows each value with its source. It also lists the places inside and the street the building is linked to. You can colour the buildings by their use or by where that use came from. You can also show every place on the map. The 54 cases I still need to look at are listed beside it, each with the reason it matters.",
     "crumbs": [
       "Method",
       "S4 Buildings",
@@ -547,7 +547,7 @@
     "href": "s1-streets.html#try-it-from-here-to-there",
     "title": "S1 Streets",
     "section": "Try it: from here to there",
-    "text": "Try it: from here to there\nIn the Lab, open S1 · from here to there, click a start junction, then an end junction. Everything it shows comes from the network alone:\n\n\n\n\n\n\n\nMeasure\nWhat it tells you\n\n\n\n\nShortest route\nthe shortest way along the streets, on foot or by car; every other route is compared with it\n\n\nDirectness\nthe route’s length divided by the straight line between the two points. A grid gives about 1.3; a barrier such as the canal pushes it higher\n\n\nVariety\nin pink, every street you could pass through on a trip at most 0, 5, 10, 25 or 50 % longer than the shortest. A wide band means many ways to go; a thin one means the layout funnels everyone onto one street\n\n\nCost of one-way streets\nby car, how much longer the drive is than the walk between the same two junctions\n\n\n\nA good first example is William at Young to further along William. It is 306 m on foot and 966 m by car, because William is one-way and the car has to go round the block.\nTwo trips from Rue des Bassins show the difference between the grid and the canal. From Bassins at Rioux to Notre-Dame at Robert-Bourassa, a 10 % detour opens up 82 other segments: walkers have many ways. From Bassins at Allée des Barges to Wellington, the walk is 1.7 times the straight line, because the canal has few crossings.\nThese measures say nothing about how anyone actually chooses a route. People do not all take the shortest way, and the turn bans and stops of S3 are not counted here. Routes also stay inside the study area, so by car many trips cannot be made without the city outside, and the Lab says so when that happens. Choice belongs to S6 Walkers and S7 Drivers; these measures are the yardstick their routes will be compared with. Lab notes shows how the measures are tested.",
+    "text": "Try it: from here to there\nIn the Lab, choose S1, then “from here to there”, and click a start junction and an end junction. Everything it shows comes from the network alone:\n\n\n\n\n\n\n\nMeasure\nWhat it tells you\n\n\n\n\nShortest route\nthe shortest way along the streets, on foot or by car; every other route is compared with it\n\n\nDirectness\nthe route’s length divided by the straight line between the two points. A grid gives about 1.3; a barrier such as the canal pushes it higher\n\n\nVariety\nin pink, every street you could pass through on a trip at most 0, 5, 10, 25 or 50 % longer than the shortest. A wide band means many ways to go; a thin one means the layout funnels everyone onto one street\n\n\nCost of one-way streets\nby car, how much longer the drive is than the walk between the same two junctions\n\n\n\nA good first example is William at Young to further along William. It is 306 m on foot and 966 m by car, because William is one-way and the car has to go round the block.\nTwo trips from Rue des Bassins show the difference between the grid and the canal. From Bassins at Rioux to Notre-Dame at Robert-Bourassa, a 10 % detour opens up 82 other segments: walkers have many ways. From Bassins at Allée des Barges to Wellington, the walk is 1.7 times the straight line, because the canal has few crossings.\nThese measures say nothing about how anyone actually chooses a route. People do not all take the shortest way, and the turn bans and stops of S3 are not counted here. Routes also stay inside the study area, so by car many trips cannot be made without the city outside, and the Lab says so when that happens. Choice belongs to S6 Walkers and S7 Drivers; these measures are the yardstick their routes will be compared with. Lab notes shows how the measures are tested.",
     "crumbs": [
       "Method",
       "S1 Streets",
@@ -701,18 +701,6 @@
     "crumbs": [
       "Method",
       "Checking the readings"
-    ]
-  },
-  {
-    "objectID": "lab.html",
-    "href": "lab.html",
-    "title": "Lab",
-    "section": "",
-    "text": "This is one map with every system on it. Paint the streets with one system and show others on top of it. Each system’s tools have sliders you can try, and the results of the latest tests are listed at the bottom left. The Lab notes explain how the Lab works and how it is tested.",
-    "crumbs": [
-      "Method",
-      "Lab",
-      "Lab"
     ]
   },
   {
@@ -882,7 +870,7 @@
     "href": "lab-notes.html",
     "title": "Lab notes",
     "section": "",
-    "text": "The Lab is one map with every system on it. Each system page keeps its own blueprint and maps. The Lab is where the systems meet, and where I can try them.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When a slider moves, the Lab switches between runs a stress test already made, or steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "text": "The Lab is one map with a tab for each system. Each system page keeps its own blueprint and maps. The Lab is where I can try a system, see the places it still leaves open, and click anything on the map to read what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When the reach slider moves, the Lab steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
     "crumbs": [
       "Method",
       "Lab",
@@ -894,7 +882,7 @@
     "href": "lab-notes.html#what-the-lab-is",
     "title": "Lab notes",
     "section": "",
-    "text": "The Lab is one map with every system on it. Each system page keeps its own blueprint and maps. The Lab is where the systems meet, and where I can try them.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When a slider moves, the Lab switches between runs a stress test already made, or steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "text": "The Lab is one map with a tab for each system. Each system page keeps its own blueprint and maps. The Lab is where I can try a system, see the places it still leaves open, and click anything on the map to read what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and every slider position shows a result a system already wrote down. When the reach slider moves, the Lab steps through a reach S1 already worked out. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nOne tool is an exception, and I kept it small. Storing every route between every pair of junctions would make a file of many megabytes. So I store only the shortest distances and the last step of each shortest route, and the Lab applies two short rules to them: follow the route back, and test each street against the detour allowed. Those two rules are written twice, once beside the systems and once in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
     "crumbs": [
       "Method",
       "Lab",
@@ -906,7 +894,7 @@
     "href": "lab-notes.html#what-it-shows",
     "title": "Lab notes",
     "section": "What it shows",
-    "text": "What it shows\nOnly one system paints the streets at a time, because two colourings on one line cannot be read. The others can be shown on top.\n\n\n\n\n\n\n\n\n\nSystem\nPaints the streets with\nShows on top\nLets you try\n\n\n\n\nS1 Streets\nwho may use each street\ngates, dead ends, one-way arrows and checkpoints\nhow far you can get from a junction, and every street a trip up to 50 % longer than the shortest route could use\n\n\nS2 Scores\nchoice or integration, on foot or by car, with a radius slider that can play\n\n\n\n\nS3 Rules\nspeed limits\nstops and lights; click a junction for its rules and signs\nits stress tests as sliders, such as moving the signs\n\n\nS4 Buildings\n\nbuildings coloured by use; click one for its values and sources\n\n\n\n\nThe latest test reports of every system are listed in the Lab as well.",
+    "text": "What it shows\nOne system shows at a time, because two colourings on one street cannot be read. Each tab has at most two controls, its checkpoints grouped by kind with the reason each kind matters, and the result of its last tests.\n\n\n\n\n\n\n\n\nTab\nWhat the map shows\nWhat you can try\n\n\n\n\nS1 Streets\nwho may use each street, gates and dead ends\nhow far you can get from a junction, and every street a trip up to 50 % longer than the shortest could use\n\n\nS2 Scores\nchoice or integration, on foot or by car\na distance slider that can play\n\n\nS3 Rules\nstops and lights, or speed limits\nclick a junction, then a street arriving at it, for its rules and signs\n\n\nS4 Buildings\nbuildings by use, or by where the use came from\nthe places people go to\n\n\n\nI took the stress tests out of the Lab. They are on each system’s tests page, where their numbers can be read in full.",
     "crumbs": [
       "Method",
       "Lab",
@@ -930,7 +918,7 @@
     "href": "lab-notes.html#tests",
     "title": "Lab notes",
     "section": "How the Lab is tested",
-    "text": "How the Lab is tested\nThe Lab checks ask one thing: does the Lab show exactly what the systems wrote?\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nL1\nDo the Lab’s streets and junctions match S1, and does each junction reach the same streets? For every 15th junction the reach is worked out again from scratch.\n\n\nL2\nDoes every S2 value equal the S2 table, with missing values still missing?\n\n\nL3\nDo the S3 rules, signs, speeds and checkpoints equal the S3 tables?\n\n\nL4\nDo the sliders give the same counts as the S3 stress tests?\n\n\nL5\nIs every shortest route real and truly shortest, and do the browser’s route rules give the same routes as the originals?\n\n\nL6\nDoes every S4 building and place equal the S4 tables, down to each point of each outline, with empty cells still empty?\n\n\n\nAll six pass, and the Lab lists the latest results.\nI broke the files on purpose before trusting these checks. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, the same check for S3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change.\nThe shortest-route check does not trust the method that found the routes. If a route is real and no single move anywhere could shorten any distance, then no shorter route exists. That is checked separately, for every start and every move.",
+    "text": "How the Lab is tested\nThe Lab checks ask one thing: does the Lab show exactly what the systems wrote?\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nL1\nDo the Lab’s streets and junctions match S1, and does each junction reach the same streets? For every 15th junction the reach is worked out again from scratch.\n\n\nL2\nDoes every S2 value equal the S2 table, with missing values still missing?\n\n\nL3\nDo the S3 rules, signs, speeds and checkpoints equal the S3 tables?\n\n\nL4\nDo the S3 stress results kept for the Lab give the same counts as the S3 stress tests?\n\n\nL5\nIs every shortest route real and truly shortest, and do the browser’s route rules give the same routes as the originals?\n\n\nL6\nDoes every S4 building and place equal the S4 tables, down to each point of each outline, with empty cells still empty?\n\n\n\nAll six pass, and the Lab lists the latest results.\nI broke the files on purpose before trusting these checks. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, the same check for S3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change.\nThe shortest-route check does not trust the method that found the routes. If a route is real and no single move anywhere could shorten any distance, then no shorter route exists. That is checked separately, for every start and every move.",
     "crumbs": [
       "Method",
       "Lab",
@@ -1297,7 +1285,7 @@
     "href": "s2-scores.html#watch-the-scale-change",
     "title": "S2 Scores",
     "section": "Watch the scale change",
-    "text": "Watch the scale change\nIn the Lab, paint the streets with S2 and move the radius slider, or press play. You see walking or driving choice or integration as the radius grows from 200 m to the whole island. Each street is coloured by its rank in Griffintown, from grey for the lowest to pink for the highest. Click a street to read all its values.",
+    "text": "Watch the scale change\nIn the Lab, open the S2 tab and move the distance slider, or press play. You see walking or driving choice or integration as the radius grows from 200 m to the whole island. Each street is coloured by its rank in Griffintown, from grey for the lowest to pink for the highest. Click a street to read all its values.",
     "crumbs": [
       "Method",
       "S2 Scores",
