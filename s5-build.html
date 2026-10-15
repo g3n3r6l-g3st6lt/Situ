@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mohamed Gharbia">
+<meta name="dcterms.date" content="2026-10-15">
+
+<title>How S5 is built and tested – Situ</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./lab.html" rel="next">
+<link href="./s5-rhythm.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-ac2dce0109fdd76b4e106427135faa7f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Situ</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./space-syntax.html" aria-current="page"> 
+<span class="menu-text">Method</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./network.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./s1-streets.html"> 
+<span class="menu-text">Systems</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s5-rhythm.html">S5 Rhythm</a></li><li class="breadcrumb-item"><a href="./s5-build.html">How S5 is built and tested</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Situ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Method</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./space-syntax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What space syntax is</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./readings-check.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading closely</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Data</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./network.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The walking network</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sources-check.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checking the sources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limits of the desk</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./counts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Movement counts and light timing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">S1 Streets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-streets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S1 Streets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S1 is built and tested</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s1-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checks and decisions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 Scores</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">S3 Rules</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S3 Rules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S3 is built and tested</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s3-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S3 checks with photos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">S4 Buildings</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s4-buildings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S4 Buildings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S4 is built and tested</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">S5 Rhythm</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s5-rhythm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S5 Rhythm</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s5-build.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">How S5 is built and tested</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Open the Lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#blueprint" id="toc-blueprint" class="nav-link active" data-scroll-target="#blueprint">Blueprint</a></li>
+  <li><a href="#from-quarter-hours-to-hours" id="toc-from-quarter-hours-to-hours" class="nav-link" data-scroll-target="#from-quarter-hours-to-hours">From quarter-hours to hours</a></li>
+  <li><a href="#the-days-shape" id="toc-the-days-shape" class="nav-link" data-scroll-target="#the-days-shape">The day’s shape</a></li>
+  <li><a href="#bicycle-detectors" id="toc-bicycle-detectors" class="nav-link" data-scroll-target="#bicycle-detectors">Bicycle detectors</a></li>
+  <li><a href="#reading-opening-hours" id="toc-reading-opening-hours" class="nav-link" data-scroll-target="#reading-opening-hours">Reading opening hours</a></li>
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
+  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s5-rhythm.html">S5 Rhythm</a></li><li class="breadcrumb-item"><a href="./s5-build.html">How S5 is built and tested</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">How S5 is built and tested</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mohamed Gharbia </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 15, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="blueprint" class="level2">
+<h2 class="anchored" data-anchor-id="blueprint">Blueprint</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  C[/"City counts&lt;br/&gt;15-minute slices, 2024 to 2026"/]:::data
+  J[/"S1 junctions"/]:::data
+  P[/"S4 places&lt;br/&gt;with their hours text"/]:::data
+  R[/"Rules: within 15 m,&lt;br/&gt;open at half past"/]:::rule
+  subgraph MEASURED["MEASURED"]
+    Q["QUARTERS&lt;br/&gt;every counted slice, zeros kept"]:::step --&gt; H["HOURS&lt;br/&gt;four quarters, or no value"]:::step
+    H --&gt; S["SHAPE&lt;br/&gt;each day over its reference hours"]:::step
+    S --&gt; W["A WEEKDAY&lt;br/&gt;mean, lowest, highest"]:::step
+  end
+  subgraph PROMISED["PROMISED"]
+    O["READ THE HOURS&lt;br/&gt;minute by minute"]:::step --&gt; K["EACH HOUR&lt;br/&gt;open, closed or unknown"]:::step
+  end
+  C --&gt; Q
+  J --&gt; Q
+  R -.-&gt; Q
+  P --&gt; O
+  R -.-&gt; K
+  W --&gt; OUT1[/"weekday shape,&lt;br/&gt;counts by junction"/]:::out
+  K --&gt; OUT2[/"each place's week,&lt;br/&gt;places open per hour"/]:::out
+  OUT1 --&gt; T["TESTS"]:::test
+  OUT2 --&gt; T
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6
+  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff
+  classDef test fill:none,stroke:#fe83cc,color:#fe83cc
+  style MEASURED fill:none,stroke:#3a3a3a
+  style PROMISED fill:none,stroke:#3a3a3a
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="from-quarter-hours-to-hours" class="level2">
+<h2 class="anchored" data-anchor-id="from-quarter-hours-to-hours">From quarter-hours to hours</h2>
+<p>The city counts in 15-minute slices, by kind of road user. S5 keeps every slice counted within 15 m of an S1 junction, the same rule as the <a href="./counts.html">counts page</a>, and sums it by mode, keeping people on foot and bicycles apart from motor vehicles of every kind. A slice with nobody in it stays a counted zero, which differs from a slice nobody counted.</p>
+<p>An hour gets a value only when all four of its quarters were counted. Several of the one-day windows open or close on the half hour, so their edge hours are partial: 16 hours at the junctions, 48 rows across the modes, stay empty, each with the number of quarters it had. S5 never stretches a part of an hour into a whole one.</p>
+</section>
+<section id="the-days-shape" class="level2">
+<h2 class="anchored" data-anchor-id="the-days-shape">The day’s shape</h2>
+<p>A busy junction and a quiet one can share a rhythm, so S5 compares each day with itself. The reference hours are the hours counted in full on every day: 7h, 8h, 11h, 12h, 16h and 17h. Each day, for each mode, is divided by its own mean over those six hours, so 1.0 is an ordinary daytime hour of that day. Two of the six fall in each of the city’s windows, so no window outweighs another.</p>
+<p>A weekday hour takes the mean of every day that counted it, and keeps their lowest and highest values. Each value names the days behind it, so it can be rebuilt by hand. Outside the reference hours, most hours rest on J040 alone, and S5 marks them.</p>
+<p>Only Tuesdays, Wednesdays and Thursdays were counted. S5 lets their shape stand in for Monday and Friday, and says so on every such row. Saturday and Sunday stay empty, with the reason.</p>
+</section>
+<section id="bicycle-detectors" class="level2">
+<h2 class="anchored" data-anchor-id="bicycle-detectors">Bicycle detectors</h2>
+<p>The city’s permanent bicycle detectors report every hour, by site, direction and lane. S5 keeps the detectors whose point lies inside the study area, by the same test S4 uses for buildings: Peel at Ottawa, northbound and southbound, and William at Nazareth, westbound. Two detectors on Peel at Notre-Dame stand 35 and 49 m from junction J187, outside the area, and S5 lists them without using them.</p>
+<p>A recorded hour of 0 stays 0, and a missing hour is a gap. A detector’s day counts only when all 24 hours were recorded, and the Griffintown day sums the three detectors on days when every one is complete: 376 days. Each such day is divided by its own mean over the same reference hours as the counts, then grouped by kind of day (weekday, Saturday, Sunday) and season. A group keeps its mean and its middle half, the range of the central half of its days.</p>
+<p>The seasons are the meteorological ones: winter from December to February, spring from March to May, and so on. Holidays are not set apart, so a public holiday on a Monday counts as a weekday.</p>
+</section>
+<section id="reading-opening-hours" class="level2">
+<h2 class="anchored" data-anchor-id="reading-opening-hours">Reading opening hours</h2>
+<p>OpenStreetMap writes hours in a small grammar, like <code>Mo-Fr 07:00-22:00; Sa 08:00-20:00; Su off</code>. S5 reads the part of it Griffintown’s places use. Rules separated by a semicolon replace what earlier rules said about the same days; a rule after a comma adds to them. A day the text never names is closed, which is the tag’s own convention. Hours that run past midnight carry into the next morning, so a bar open <code>17:00-03:00</code> on Saturday is open early on Sunday. An opening with no closing time, a note such as “sur rdv” (by appointment), or a text S5 cannot parse leaves those hours unknown. Public holidays are set aside, since S5 has no calendar yet.</p>
+<p>The city’s list of public places writes its hours in French, day by day, and sometimes for a season only: the play fountains at Place des Aiguilleurs open from 21 May and close from 22 September. S5 keeps the season with the place.</p>
+<p>A place counts as open in an hour when it is open at half past. A place with no hours is unknown at every hour, never closed.</p>
+</section>
+<section id="assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Assumption</th>
+<th>Why I accept it for now</th>
+<th>What would replace it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a weekday has one shape, Monday to Friday</td>
+<td>only Tuesday to Thursday were counted</td>
+<td>counts on Mondays and Fridays</td>
+</tr>
+<tr class="even">
+<td>seven junctions stand for Griffintown’s streets</td>
+<td>they are the only counts at S1 junctions</td>
+<td>the bicycle counters, field observation</td>
+</tr>
+<tr class="odd">
+<td>winter, spring and autumn days stand for any season</td>
+<td>no summer day was counted</td>
+<td>the bicycle counters, which run all year</td>
+</tr>
+<tr class="even">
+<td>a day the hours never name is closed</td>
+<td>the opening_hours convention</td>
+<td>a look at the door, or the place’s own website</td>
+</tr>
+<tr class="odd">
+<td>open in an hour means open at half past</td>
+<td>simple to explain, and the stress test shows it matters little</td>
+<td>finer steps once S6 runs by the minute</td>
+</tr>
+<tr class="even">
+<td>three detectors on Peel and William stand for Griffintown’s cycling</td>
+<td>the only detectors inside the area</td>
+<td>a counter on the canal path, field observation</td>
+</tr>
+<tr class="odd">
+<td>a holiday behaves like the kind of day it falls on</td>
+<td>the counts carry no calendar</td>
+<td>a list of Québec holidays, to set them apart</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tests" class="level2">
+<h2 class="anchored" data-anchor-id="tests">Tests</h2>
+<section id="twelve-checks" class="level3">
+<h3 class="anchored" data-anchor-id="twelve-checks">Twelve checks</h3>
+<p>Each check asks one plain question of what S5 wrote. Ten must pass, and all ten do; the last two only report. The <a href="./lab.html#s5">Lab</a> shows the latest results.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T1</td>
+<td>Does the evidence hold every counted quarter-hour, with the same totals as the city’s file?</td>
+<td>yes, 1,440 quarters</td>
+</tr>
+<tr class="even">
+<td>T2</td>
+<td>Does an hour get a value only when all four quarters were counted?</td>
+<td>yes; 48 partial hours stay empty</td>
+</tr>
+<tr class="odd">
+<td>T3</td>
+<td>Were the reference hours counted every day, and does each day average 1 over them?</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>T4</td>
+<td>Can every hour of the weekday shape be rebuilt from the days it names?</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>T5</td>
+<td>Do Saturday and Sunday stay empty, with the reason?</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>T6</td>
+<td>Is every S4 place here once, and is a place without readable hours unknown at every hour?</td>
+<td>yes, 610 places</td>
+</tr>
+<tr class="odd">
+<td>T7</td>
+<td>Does the hours reader give the expected week on fixed examples?</td>
+<td>yes, 16 examples</td>
+</tr>
+<tr class="even">
+<td>T8</td>
+<td>Does every place’s week come from its own hours text, and do the counts per hour add up?</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>T9</td>
+<td>Do the detector days hold every recorded hour, with a total only when all 24 were recorded?</td>
+<td>yes; 309 incomplete detector-days left without a total</td>
+</tr>
+<tr class="even">
+<td>T10</td>
+<td>Can every bicycle shape and monthly level be rebuilt from the detector hours?</td>
+<td>yes, 376 days</td>
+</tr>
+<tr class="odd">
+<td>T11</td>
+<td>How much do the sources cover?</td>
+<td>report: 17 of 24 weekday hours rest on J040 alone; 83 of 558 places give hours</td>
+</tr>
+<tr class="even">
+<td>T12</td>
+<td>Do the counts and the detectors agree on a weekday’s bicycles?</td>
+<td>report: correlation 0.87 in winter, 0.89 over all seasons</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Testing the tests
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A test that always passes proves nothing. So I broke the finished files five ways: I gave Saturday at 8h a value, turned one unknown hour of a place without hours into closed, added one person to one counted hour, filled a partial hour, and changed one letter of a place’s week in the Lab’s copy. Each was caught: the first by T4 and T5, the second by T6 and T8, the third by T1 and T4, the fourth by T1 and T2, and the last by the Lab’s check L7. Then I put the files back.</p>
+</div>
+</div>
+</section>
+<section id="stress-tests" class="level3">
+<h3 class="anchored" data-anchor-id="stress-tests">Stress tests</h3>
+<p>Run twice on the same input, S5 gives the same output (X1). The other stress tests ask how much the shape depends on so few days.</p>
+<p>X2 leaves out one counted day at a time. In the reference hours, which nine days share, no value moves by more than 0.12, and for people on foot and cars by no more than 0.06. In the hours J040 holds alone, the three December days disagree more: leaving out one of them moves people on foot by up to 0.12 and bicycles by up to 0.44, since a few cyclists in an hour make a large share. The bicycle values at night and in mid-afternoon are the weakest numbers in S5.</p>
+<p>X3 leaves out one junction at a time. The busiest hour stays 17h for every mode, with one exception: without J040, the bicycles’ busiest hour moves to 8h. So the evening cycling peak leans on J040.</p>
+<p>X5 leaves out one month of detector days at a time. Weekday shapes hold well, moving by at most 0.05 in summer and 0.04 in autumn. Weekend shapes rest on fewer days and move more, up to 0.46 for a winter Sunday, and spring is the thinnest season, with 22 weekdays, 8 Saturdays and 9 Sundays.</p>
+<p>X4 changes what “open in this hour” means. Of the other readings I tried, the strictest, open for the whole hour, removes 75 of the week’s 5,626 open place-hours, and the others move fewer. The choice of half past hardly matters.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/situ-project\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./s5-rhythm.html" class="pagination-link" aria-label="S5 Rhythm">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">S5 Rhythm</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./lab.html" class="pagination-link" aria-label="Open the Lab">
+        <span class="nav-page-text">Open the Lab</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Situ · Griffintown, Montréal</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Mohamed Gharbia · Concordia University</p>
+</div>
+  </div>
+</footer>
+<script src="assets/notes.js"></script>
+
+
+
+
+</body></html>

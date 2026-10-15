@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e55b08e68b755b4307fcfc8526ad6b8e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-ac2dce0109fdd76b4e106427135faa7f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -309,12 +309,35 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Lab</span></a>
+ <span class="menu-text">S5 Rhythm</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s5-rhythm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S5 Rhythm</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s5-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S5 is built and tested</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
@@ -389,7 +412,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-the-city-counted" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-city-counted">What the city counted</h2>
 <p>The city counts every car, truck, bus, bicycle and pedestrian at its intersections in 15-minute slices, by movement for vehicles (northbound left, northbound through and so on) and by crosswalk for pedestrians and bicycles. The file covers the whole city, 2024 to 2026 (<a href="https://donnees.montreal.ca/dataset/comptage-vehicules-pietons">donnees.montreal.ca</a>).</p>
-<p>I kept the counts taken within 15 m of an S1 junction, which leaves seven junctions:</p>
+<p>I kept the counts taken within 15 m of an S1 junction, which leaves seven junctions. A one-day count covers three windows, the two rush hours and two hours at midday, with gaps between them:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -415,19 +438,19 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>J051</td>
 <td>de la Montagne and Notre-Dame</td>
-<td>1 day, 6:30 to 18:15, May 2026</td>
+<td>1 day in three windows, 6:30 to 18:30, May 2026</td>
 <td>lights</td>
 </tr>
 <tr class="odd">
 <td>J181</td>
 <td>Robert-Bourassa and Saint-Jacques</td>
-<td>1 day, 6:30 to 18:15, November 2024</td>
+<td>1 day in three windows, 6:30 to 18:30, November 2024</td>
 <td>lights, at an exit</td>
 </tr>
 <tr class="even">
 <td>J006</td>
 <td>Ann and Wellington</td>
-<td>1 day, 6:00 to 18:15, February 2024</td>
+<td>1 day in three windows, 6:00 to 18:30, February 2024</td>
 <td>all-way stop</td>
 </tr>
 <tr class="odd">
@@ -450,7 +473,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Beyond the lights, these counts serve two later systems. S8 will compare simulated movement with <a href="./space-syntax.html">space syntax</a>, the measures of how each street sits in the whole network, and also, at these junctions, with movement actually counted. J040, counted around the clock, gives S5 Rhythm a real day to start from.</p>
+<p>Beyond the lights, these counts serve two later systems. S8 will compare simulated movement with <a href="./space-syntax.html">space syntax</a>, the measures of how each street sits in the whole network, and also, at these junctions, with movement actually counted. J040, counted around the clock, gives <a href="./s5-rhythm.html">S5 Rhythm</a> a real day to start from.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/counts/day_profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush."><img src="outputs/counts/day_profile.png" class="img-fluid figure-img" alt="A day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush."></a></p>

@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e55b08e68b755b4307fcfc8526ad6b8e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-ac2dce0109fdd76b4e106427135faa7f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -308,13 +308,36 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Lab</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">S5 Rhythm</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s5-rhythm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S5 Rhythm</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s5-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S5 is built and tested</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
@@ -394,7 +417,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-it-shows" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-shows">What it shows</h2>
-<p>One system shows at a time, because two colourings on one street cannot be read. Each tab has at most two controls, and it lists its checkpoints by kind, with the reason each kind matters and the result of its last tests.</p>
+<p>One system shows at a time, because two colourings on one street cannot be read. Each tab has few controls, and it lists its checkpoints by kind, with the reason each kind matters and the result of its last tests.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -428,6 +451,11 @@ ul.task-list li input[type="checkbox"] {
 <td>S4 Buildings</td>
 <td>buildings by use, or by where the use came from</td>
 <td>the places people go to</td>
+</tr>
+<tr class="odd">
+<td>S5 Rhythm</td>
+<td>places open or closed, the counts at the counted junctions, and the bicycle detectors</td>
+<td>a day, an hour and a mode (and a season for bicycles), and a day that plays</td>
 </tr>
 </tbody>
 </table>
@@ -479,7 +507,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="tests" class="level2">
 <h2 class="anchored" data-anchor-id="tests">How the Lab is tested</h2>
-<p>The six Lab checks ask one thing: does the Lab show exactly what the systems wrote?</p>
+<p>The seven Lab checks ask one thing: does the Lab show exactly what the systems wrote?</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -516,9 +544,13 @@ ul.task-list li input[type="checkbox"] {
 <td>L6</td>
 <td>Does every S4 building and place equal the S4 tables, down to each outline point, with empty cells still empty?</td>
 </tr>
+<tr class="odd">
+<td>L7</td>
+<td>Do the S5 weekday shape, junction counts, each place’s week and the open counts equal the S5 tables?</td>
+</tr>
 </tbody>
 </table>
-<p>All six pass; the <a href="./lab.html">Lab</a> shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it; earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change.</p>
+<p>All seven pass; the <a href="./lab.html">Lab</a> shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it; earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change. For L7, I changed one letter of a place’s week, and L7 caught it.</p>
 <p>The shortest-route check does not trust the method that found the routes. If a route is real and no single move anywhere could shorten any distance, then no shorter route exists. That condition is checked separately, for every start and every move.</p>
 
 

@@ -6,13 +6,14 @@
     window.SITU_S2   outputs/s2/web_data.js   space syntax values per segment
     window.SITU_S3   outputs/s3/web_data.js   rules, signs, lights, speed
     window.SITU_S4   outputs/s4/web_data.js   buildings, their uses and sources, places
+    window.SITU_S5   outputs/s5/web_data.js   counts by hour at counted junctions, each place's week
     window.SITU_S1_ROUTES  outputs/s1/routes_data.js  shortest distances and routes between every pair of junctions
 
   It computes nothing about the city. Every colour and every value shows what the Python code already
   produced, and tools/test_lab.py checks that these files match the tables. One exception, kept small:
   the route tool applies the rules in assets/routes.js to the distances routes.py wrote (test L5).
 
-  The page: four tabs, one per system. Each tab paints the map its own way, has at most two controls,
+  The page: five tabs, one per system. Each tab paints the map its own way, has at most two controls,
   lists its checkpoints with the reason each one matters, and shows its tests. Clicking a street,
   a junction, a sign or a building opens its details in every tab.
 
@@ -22,7 +23,7 @@
     3 painting              6 the detail panel
 */
 (function () {
-  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes;
+  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes;
   const host = document.getElementById("situ-lab");
   if (!host || !S1 || !window.SituMap) return;
 
@@ -49,6 +50,11 @@
     S4.places.forEach(p => { place4[p.id] = p; if (p.building) (placesIn[p.building] = placesIn[p.building] || []).push(p); });
   }
 
+  const DAY5 = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
+  const MODE5 = { pedestrian: "people crossing", bicycle: "bicycles", vehicle: "cars, buses and trucks" };
+  const max5 = {};
+  if (S5) Object.keys(MODE5).forEach(m => max5[m] = Math.max(1, ...Object.values(S5.junctions).flatMap(j => j[m].filter(x => x != null))));
+
   const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const short = n => n.replace(/^(Rue|Boulevard|Avenue|Place|Allée|Autoroute) (de la |de l'|des |du |de )?/, "");
   const add = (a, b, k) => [a[0] + b[0] * k, a[1] + b[1] * k];
@@ -73,6 +79,7 @@
     "far from a street": "The nearest street people may walk on is far away, so the link that stands in for the door is weak.",
     "storeys too low?": "The storeys the sources give cannot hold the dwellings the tax roll counts here. The outline probably carries only its podium's storeys.",
     "lot and address disagree": "The city's lot outline and its address point name different buildings. When the lot holds one building, the lot decides; when it holds several and the address point stands in another, the address point decides. Either way it is a choice, so it is asked.",
+    "hours to read": "These opening hours can be read two ways, or leave a time open. S5 follows the tag's own grammar and keeps what it cannot settle unknown; a person should read the text.",
     "missing outline?": "Hundreds of properties sit at one address point with no building drawn. OpenStreetMap may not have this building yet."
   };
 
@@ -84,6 +91,7 @@
     { id: "s2", name: "Scores", ok: !!S2 },
     { id: "s3", name: "Rules", ok: !!S3 },
     { id: "s4", name: "Buildings", ok: !!S4 },
+    { id: "s5", name: "Rhythm", ok: !!S5 && !!S4 },
   ];
   const state = {
     tab: "s1",
@@ -91,6 +99,7 @@
     s2net: "ped", s2measure: "NACH", s2radius: 2,
     s3view: "rules",
     s4colour: "use", s4places: false,
+    s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
     pick: null,                      // {kind: "junction"|"segment"|"building"|"place"|"check", id}
     approach: null,
   };
@@ -177,7 +186,7 @@
           cls += r && r.speed ? " v" + r.speed + (r.speed_status === "by_shape" ? " shaped" : "") : car(s) ? " v-gap" : " v-none";
         } else cls += " plain";
       }
-      if (state.tab === "s4") cls += " plain faint";
+      if (state.tab === "s4" || state.tab === "s5") cls += " plain faint";
       if (state.pick && state.pick.kind === "segment" && state.pick.id === s.id) cls += " picked";
       if (state.approach === s.id) cls += " picked";
       e.setAttribute("class", cls);
@@ -222,6 +231,9 @@
         : `<span><i class="kb src-roll"></i>from the tax roll ${n(b => b.use_source === "roll")}</span><span><i class="kb src-osm_tag"></i>from OpenStreetMap ${n(b => b.use_source === "osm_tag")}</span><span><i class="kb src-none"></i>no source ${n(b => !b.use_source)}</span>`;
       if (state.s4places) html += `<span><i class="kp"></i>place</span><span><i class="kp hours"></i>with opening hours</span>`;
     }
+    if (state.tab === "s5" && S5) html = `<span><i class="kp5 o"></i>open</span><span><i class="kp5 c"></i>closed</span><span><i class="kp5 u"></i>no hours given</span>` +
+      (state.s5mode === "bicycle" && S5.bikes ? `<span><i class="kb5"></i>bicycle detector, sized by this hour</span>` : "") +
+      `<span><i class="kj5"></i>counted junction, sized by this hour's count</span><span><i class="kj5 none"></i>not counted at this hour</span>`;
     key.innerHTML = html + `<span class="lab-check-key"><i class="kc"></i>checkpoint</span>`;
   }
 
@@ -242,6 +254,7 @@
     }
     if (state.tab === "s3" && S3 && state.s3view === "rules") s3Control(marks);
     if (state.tab === "s4" && S4 && state.s4places) placeMarks(marks);
+    if (state.tab === "s5" && S5) s5Marks(marks, labels);
     const checks = checksOf(state.tab);
     if (checks.length) checkMarks(marks, labels, checks);
     junctionHits(marks);
@@ -282,7 +295,7 @@
 
   // checkpoints of one system, with their system name kept in the pick
   function checksOf(tab) {
-    const src = { s1: S1, s3: S3, s4: S4 }[tab];
+    const src = { s1: S1, s3: S3, s4: S4, s5: S5 }[tab];
     return src && src.checkpoints ? src.checkpoints : [];
   }
   const settled = c => c.status === "confirmed";            // S1 checkpoints carry what the photos and checks decided
@@ -308,6 +321,90 @@
       hit.addEventListener("pointerleave", () => map.untip());
       hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "place", id: p.id }); });
     });
+  }
+
+  // S5: places open or closed at the chosen hour, and what was counted at the junctions
+  const letter5 = (id, d, h) => { const p = S5.places[id]; return p ? p.week[d][h] : "?"; };
+  const word5 = l => l === "o" ? "open" : l === "c" ? "closed" : "no hours given";
+  function s5Marks(g, labels) {
+    const d = +state.s5day, h = state.s5hour;
+    S4.places.forEach(p => {
+      if (p.same_as) return;
+      const l = letter5(p.id, d, h), picked = state.pick && state.pick.kind === "place" && state.pick.id === p.id;
+      map.dot(g, p.xy, picked ? 6 : l === "o" ? 4 : l === "c" ? 3 : 2.5, { class: "lab-p5 " + (l === "o" ? "o" : l === "c" ? "c" : "u") + (picked ? " picked" : "") });
+      const hit = map.dot(g, p.xy, 7, { class: "sx-jhit" });
+      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(p.name || "(no name)")}<br><span>${word5(l)} · ${DAY5[d]} ${h}h</span>`));
+      hit.addEventListener("pointerleave", () => map.untip());
+      hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "place", id: p.id }); });
+    });
+    if (S5.bikes && state.s5mode === "bicycle") {
+      const kind = d < 5 ? "weekday" : DAY5[d] === "Sa" ? "Saturday" : "Sunday", sh = S5.bikes.shape[kind][state.s5season];
+      S5.bikes.sites.forEach(s => {
+        const v = sh.index[h];
+        const r = v == null ? 5 : 4 + 9 * Math.sqrt(v);
+        map.square(g, s.xy, r * 2, { class: "lab-b5" + (v == null ? " none" : "") });
+        const hit = map.dot(g, s.xy, 9, { class: "sx-jhit" });
+        hit.addEventListener("pointermove", ev => map.tip(ev, `bicycle detector ${esc(s.id)}<br><span>${esc(s.name)}, ${esc(s.direction.toLowerCase())}bound · ${v == null ? "no day" : v.toFixed(2)}</span>`));
+        hit.addEventListener("pointerleave", () => map.untip());
+      });
+    }
+    Object.entries(S5.junctions).forEach(([j, by]) => {
+      if (!jun[j]) return;
+      const v = d < 5 ? by[state.s5mode][h] : null;
+      if (v == null) { map.dot(g, jun[j].xy, 9, { class: "lab-j5 none" }); return; }
+      const r = 5 + 22 * Math.sqrt(v / max5[state.s5mode]);
+      map.dot(g, jun[j].xy, r, { class: "lab-j5" });
+      map.label(labels, add(jun[j].xy, [0, 1], map.px(r + 9)), String(Math.round(v)), 10, { class: "situ-map-label accent" }, "middle");
+    });
+  }
+  function s5Text() {
+    const d = +state.s5day, h = state.s5hour, o = S5.open[S5.meta.days[d]][h], w = S5.weekday[state.s5mode];
+    let t = `<b>${S5.meta.days[d]}, ${h}h to ${h + 1}h</b><br>${o.open} of the ${S5.with_hours} places that give hours are open. ` +
+      `The other ${S5.places_once - S5.with_hours} give none, so they stay unknown.<br>`;
+    if (state.s5mode === "bicycle" && S5.bikes) {
+      const kind = d < 5 ? "weekday" : DAY5[d] === "Sa" ? "Saturday" : "Sunday", sh = S5.bikes.shape[kind][state.s5season];
+      t += sh.index[h] == null ? `<span class="warn">No complete ${kind} in ${state.s5season}.</span>`
+        : `On a ${kind} in ${state.s5season}, the bicycle detectors at this hour run at <b>${sh.index[h].toFixed(2)}</b> of an ordinary hour of the same day ` +
+          `(the middle half of ${sh.days} days: ${sh.q25[h].toFixed(2)} to ${sh.q75[h].toFixed(2)}).`;
+      if (d < 5 && w.index[h] != null) t += ` <span class="sub">The intersection counts, on weekdays, give ${w.index[h].toFixed(2)}.</span>`;
+      return t;
+    }
+    if (d >= 5) return t + `<span class="warn">${esc(S5.meta.weekend.charAt(0).toUpperCase() + S5.meta.weekend.slice(1))}. The streets have no measured rhythm on this day.</span>`;
+    if (w.index[h] == null) return t + `<span class="warn">No counted weekday covers this hour.</span>`;
+    return t + `On a weekday, ${MODE5[state.s5mode]} at this hour run at <b>${w.index[h].toFixed(2)}</b> of an ordinary daytime hour ` +
+      `(${w.low[h].toFixed(2)} to ${w.high[h].toFixed(2)} over ${w.days[h]} counted day${w.days[h] > 1 ? "s" : ""})` +
+      (w.alone[h] ? `, <span class="warn">from J040 alone</span>.` : ".") + (d === 0 || d === 4 ? ` <span class="sub">No ${S5.meta.days[d]} was counted; the counted weekdays stand in.</span>` : "");
+  }
+  const kind5 = () => +state.s5day < 5 ? "weekday" : DAY5[+state.s5day] === "Sa" ? "Saturday" : "Sunday";
+  function s5Curve() {
+    const bk = state.s5mode === "bicycle" && S5.bikes, sh = bk ? S5.bikes.shape[kind5()][state.s5season] : null;
+    const w = bk ? { index: sh.index, low: sh.q25, high: sh.q75, alone: sh.index.map(() => false) } : S5.weekday[state.s5mode], W = 260, Hh = 70, top = Math.max(...w.high.filter(x => x != null), 1);
+    const X = h => 4 + (W - 8) * (h + 0.5) / 24, Y = v => Hh - 4 - (Hh - 12) * v / top, f = x => x.toFixed(1);
+    const hrs = [...Array(24).keys()].filter(h => w.index[h] != null);
+    const band = hrs.map(h => f(X(h)) + "," + f(Y(w.high[h]))).concat(hrs.slice().reverse().map(h => f(X(h)) + "," + f(Y(w.low[h])))).join(" ");
+    const line = hrs.map((h, i) => `${i ? "L" : "M"}${f(X(h))},${f(Y(w.index[h]))}`).join("");
+    const ref = S5.meta.reference_hours.map(h => `<rect x="${f(X(h) - (W - 8) / 48)}" y="0" width="${f((W - 8) / 24)}" height="${Hh}" class="ref"/>`).join("");
+    const dots = hrs.filter(h => w.alone[h]).map(h => `<circle cx="${f(X(h))}" cy="${f(Y(w.index[h]))}" r="2" class="alone"/>`).join("");
+    const now = bk || +state.s5day < 5 ? `<line x1="${f(X(state.s5hour))}" x2="${f(X(state.s5hour))}" y1="0" y2="${Hh}" class="now"/>`
+      : `<text x="${W / 2}" y="9" text-anchor="middle" class="none">no count on this day: a weekday shown</text>`;
+    return `<svg class="lab-curve" viewBox="0 0 ${W} ${Hh + 12}" role="img" aria-label="A weekday, hour by hour">${ref}<polygon points="${band}" class="band"/>` +
+      `<path d="${line}" class="line"/>${dots}${now}<text x="4" y="${Hh + 10}">0h</text><text x="${W / 2}" y="${Hh + 10}" text-anchor="middle">12h</text>` +
+      `<text x="${W - 4}" y="${Hh + 10}" text-anchor="end">24h</text></svg><p class="sub">${bk ? `The detectors' ${kind5()} in ${state.s5season}: the mean, and the middle half of ${sh.days} days. Dark bands: the reference hours.`
+      : "A weekday's shape. Dark bands: the hours counted at every junction. Pink dots: hours counted at J040 alone."}</p>`;
+  }
+  function weekHTML(id) {
+    const p = S5 && S5.places[id];
+    if (!p) return "";
+    const rows = p.week.map((w, d) => `<tr><td>${DAY5[d]}</td>${w.split("").map(l => `<td class="w5 ${l === "o" ? "o" : l === "c" ? "c" : "u"}"></td>`).join("")}</tr>`).join("");
+    return `<h5>S5 · its week</h5><table class="lab-week">${rows}</table><p class="sub">${p.status === "no hours" ? "No hours given, so every hour is unknown, never closed." : "White: open at half past the hour. Dark: closed."}` +
+      `${p.season ? " Seasonal: " + esc(p.season) + "." : ""}${p.notes ? " " + esc(p.notes) + "." : ""}</p>`;
+  }
+  function count5HTML(id) {
+    const by = S5.junctions[id], days = S5.meta.counted_days.filter(d => d.junction === id);
+    const hrs = [...Array(24).keys()].filter(h => by.pedestrian[h] != null);
+    return `<h5>S5 · counted here</h5><p class="sub">${days.map(d => esc(d.weekday + " " + d.date)).join(", ")}. Mean per full hour counted:</p>
+      <table class="lab-vals"><tr><th></th><th>on foot</th><th>bicycles</th><th>vehicles</th></tr>${hrs.map(h =>
+        `<tr><td>${h}h</td><td>${Math.round(by.pedestrian[h])}</td><td>${Math.round(by.bicycle[h])}</td><td>${Math.round(by.vehicle[h])}</td></tr>`).join("")}</table>`;
   }
 
   // the S3 rules at one junction: arrows for the picked street, its signs, the street names
@@ -407,7 +504,7 @@
     if (p.kind === "junction") return back + junctionHTML(p.id);
     return "";
   }
-  const allChecks = () => [...checksOf("s1"), ...checksOf("s3"), ...checksOf("s4")];
+  const allChecks = () => [...checksOf("s1"), ...checksOf("s3"), ...checksOf("s4"), ...checksOf("s5")];
 
   function checkHTML(c) {
     if (!c) return "";
@@ -451,6 +548,7 @@
   function junctionHTML(id) {
     const j = jun[id];
     let h = `<h4>${id}</h4><p class="sub">S1 · ${esc(j.kind.replace("_", " "))}${j.status ? " (" + esc(j.status) + ")" : ""}</p>`;
+    if (S5 && S5.junctions[id]) h += count5HTML(id);
     if (!S3 || !r3.jun[id]) return h;
     const J = r3.jun[id], list = r3.appsAt[id] || [];
     h += `<p class="sub">${esc(J.streets.join(" × "))}</p><h5>S3 · ${esc(CONTROL[J.control])}</h5>`;
@@ -497,7 +595,7 @@
       <p>From ${esc(SRC4[p.source] || p.source)}</p>
       <p>${p.hours ? `Opening hours: ${esc(p.hours)}` : `<span class="sub">No opening hours given.</span>`}</p>` +
       (p.same_as ? `<p class="sub">The same name in the same building as <button type="button" class="sx-link" data-place="${p.same_as}">${esc(place4[p.same_as].name)}</button>: probably one place, listed by two sources.</p>` : "") +
-      (b ? `<p>In <button type="button" class="sx-link" data-b="${b.id}">${esc(b.name || b.id)}</button>${p.placed === "near" ? ` <span class="sub">(next to it: the nearest outline within ${S4.meta.near_m} m)</span>` : ""}</p>` : `<p class="sub">${esc(p.reason)}</p>`);
+      (b ? `<p>In <button type="button" class="sx-link" data-b="${b.id}">${esc(b.name || b.id)}</button>${p.placed === "near" ? ` <span class="sub">(next to it: the nearest outline within ${S4.meta.near_m} m)</span>` : ""}</p>` : `<p class="sub">${esc(p.reason)}</p>`) + weekHTML(p.id);
   }
 
   // ================================================================ 7 the side: one system at a time
@@ -532,6 +630,14 @@
         ${seg2("s4colour", [["use", "used for"], ["source", "where that came from"]])}
         <label class="lab-check"><input type="checkbox" class="lab-places-on"${state.s4places ? " checked" : ""}> show the places people go to</label>`;
     }
+    if (t === "s5" && S5) {
+      h += `<h3>S5 · Rhythm</h3><p>When the streets are busy, and which places say they are open. The busyness is measured: the city's counts at seven junctions, on weekdays only. The hours are what the places promise, and most places give none.</p>
+        ${seg2("s5day", DAY5.map((d, i) => [String(i), d]))}${seg2("s5mode", [["pedestrian", "on foot"], ["bicycle", "by bicycle"], ["vehicle", "by car"]])}
+        ${state.s5mode === "bicycle" && S5.bikes ? seg2("s5season", [["winter", "winter"], ["spring", "spring"], ["summer", "summer"], ["autumn", "autumn"]]) +
+          `<p class="sub">By bicycle, three city detectors on Peel and William measure every day since ${esc(S5.bikes.first)}, weekends and seasons included.</p>` : ""}
+        <label class="lab-range">hour <b class="lab-hour-label">${state.s5hour}h</b><input type="range" class="lab-hour" min="0" max="23" value="${state.s5hour}"></label>
+        <button type="button" class="lab-play" data-play="day">▶ play the day</button><div class="lab-out">${s5Text()}</div><div class="lab-curve-box">${s5Curve()}</div>`;
+    }
     h += checksHTML(t) + testsHTML(t);
     return h;
   }
@@ -553,7 +659,7 @@
   }
 
   function testsHTML(t) {
-    const D = { s1: S1, s2: S2, s3: S3, s4: S4 }[t];
+    const D = { s1: S1, s2: S2, s3: S3, s4: S4, s5: S5 }[t];
     if (!D) return "";
     const ts = D.tests || [], f = ts.filter(x => x.status === "fail").length, p = ts.filter(x => x.status === "pass").length;
     return `<details class="lab-tests"><summary>Tests <span class="st ${f ? "fail" : "pass"}">${f ? f + " FAIL" : p + " PASS"}</span> <span class="sub">last run ${esc(D.meta.made)}</span></summary>
@@ -572,7 +678,10 @@
   }
   function refreshOut() {        // only the moving parts of the side, so a slider being dragged is not rebuilt
     const out = info.querySelector(".lab-out");
-    if (out) out.innerHTML = state.s1try === "reach" ? reachText() : routeText();
+    if (out) out.innerHTML = state.tab === "s5" ? s5Text() : state.s1try === "reach" ? reachText() : routeText();
+    const hl = info.querySelector(".lab-hour-label"); if (hl) hl.textContent = state.s5hour + "h";
+    const hr = info.querySelector(".lab-hour"); if (hr) hr.value = state.s5hour;
+    const cb = info.querySelector(".lab-curve-box"); if (cb && state.tab === "s5") cb.innerHTML = s5Curve();
     const sl = info.querySelector(".lab-step-label"); if (sl) sl.textContent = state.reachStep;
     const st = info.querySelector(".lab-step"); if (st) { st.max = reachSteps() ? Math.max(...reachSteps()) : 1; st.value = state.reachStep; }
     const rl = info.querySelector(".lab-radius-label"); if (rl) rl.textContent = RADIUS_NAME(RADII[state.s2net][state.s2radius]);
@@ -624,6 +733,7 @@
     if (t.classList.contains("lab-radius")) { state.s2radius = +t.value; paint(); refreshOut(); }
     if (t.classList.contains("lab-step")) { state.reachStep = +t.value; paint(); refreshOut(); }
     if (t.classList.contains("lab-slack")) { state.routeSlack = +t.value; render(); }
+    if (t.classList.contains("lab-hour")) { state.s5hour = +t.value; clearInterval(timer); draw(); refreshOut(); }
   });
   host.addEventListener("click", e => {
     const b = e.target.closest("button");
@@ -646,6 +756,7 @@
     if (b.dataset.seg) select({ kind: "segment", id: b.dataset.seg });
     if (b.dataset.play === "radius") playRadius();
     if (b.dataset.play === "reach") playReach();
+    if (b.dataset.play === "day") playDay();
   });
 
   // sliders that play: one step at a time, so the change is easy to follow
@@ -659,6 +770,14 @@
       const r = info.querySelector(".lab-radius"); if (r) r.value = state.s2radius;
     }, 1400);
   }
+  function playDay() {
+    clearInterval(timer);
+    state.s5hour = 0; draw(); refreshOut();
+    timer = setInterval(() => {
+      if (state.s5hour >= 23) { clearInterval(timer); return; }
+      state.s5hour += 1; draw(); refreshOut();
+    }, 700);
+  }
   function playReach() {
     clearInterval(timer);
     const steps = reachSteps();
@@ -671,11 +790,11 @@
     }, 450);
   }
 
-  // links from the book: #s1 to #s4, #radius, #reach-J080, #route-J093-J130, #J027-S020, #w201008914
+  // links from the book: #s1 to #s5, #radius, #reach-J080, #route-J093-J130, #J027-S020, #w201008914
   function fromHash() {
     const h = location.hash;
     let m;
-    if ((m = /^#(s[1-4])$/.exec(h))) { setTab(m[1]); return; }
+    if ((m = /^#(s[1-5])$/.exec(h))) { setTab(m[1]); return; }
     if (h === "#radius") { setTab("s2"); playRadius(); return; }
     if ((m = /^#reach(?:-(J\d{3}))?$/.exec(h))) {
       state.tab = "s1"; state.s1try = "reach";

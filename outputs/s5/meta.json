@@ -1,0 +1,112 @@
+{
+ "made": "2026-10-15",
+ "reference_hours": [
+  7,
+  8,
+  11,
+  12,
+  16,
+  17
+ ],
+ "open_at_minute": 30,
+ "counted_days": [
+  {
+   "junction": "J006",
+   "date": "2024-02-08",
+   "weekday": "Thursday"
+  },
+  {
+   "junction": "J040",
+   "date": "2024-12-17",
+   "weekday": "Tuesday"
+  },
+  {
+   "junction": "J040",
+   "date": "2024-12-18",
+   "weekday": "Wednesday"
+  },
+  {
+   "junction": "J040",
+   "date": "2024-12-19",
+   "weekday": "Thursday"
+  },
+  {
+   "junction": "J051",
+   "date": "2026-05-12",
+   "weekday": "Tuesday"
+  },
+  {
+   "junction": "J056",
+   "date": "2024-02-08",
+   "weekday": "Thursday"
+  },
+  {
+   "junction": "J086",
+   "date": "2024-02-08",
+   "weekday": "Thursday"
+  },
+  {
+   "junction": "J092",
+   "date": "2024-02-08",
+   "weekday": "Thursday"
+  },
+  {
+   "junction": "J181",
+   "date": "2024-11-13",
+   "weekday": "Wednesday"
+  }
+ ],
+ "counts": {
+  "236": {
+   "junction": "J040",
+   "name": "Guy / Ottawa/William",
+   "metres": 3.4
+  },
+  "240": {
+   "junction": "J051",
+   "name": "Montagne / Notre-Dame",
+   "metres": 2.3
+  },
+  "3832": {
+   "junction": "J092",
+   "name": "rue Young / rue Wellington",
+   "metres": 1.2
+  },
+  "407": {
+   "junction": "J181",
+   "name": "Robert-Bourassa / Saint-Jacques",
+   "metres": 9.6
+  },
+  "5740": {
+   "junction": "J006",
+   "name": "rue Ann / rue Wellington",
+   "metres": 1.4
+  },
+  "6067": {
+   "junction": "J086",
+   "name": "rue du Shannon / rue Wellington",
+   "metres": 0.6
+  },
+  "6876": {
+   "junction": "J056",
+   "name": "rue Murray / rue Wellington",
+   "metres": 5.1
+  }
+ },
+ "set_aside": [],
+ "bikes": {
+  "sites": [
+   "det-00401-01",
+   "det-00401-02",
+   "det-01487-03"
+  ],
+  "full_days": 376,
+  "first": "2025-06-09",
+  "last": "2026-10-14",
+  "days_set_aside": 0,
+  "near_but_outside": [
+   "det-00399-01 Notre-Dame/Peel (35.3 m from J187)",
+   "det-00399-02 Notre-Dame/Peel (48.9 m from J187)"
+  ]
+ }
+}

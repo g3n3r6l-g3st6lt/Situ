@@ -1,0 +1,37 @@
+X1  Same input twice
+    identical: True   PASS
+
+X2  Leave out one counted day at a time (9 days)
+    pedestrian reference hours : largest move 0.06  (17h without J181 2024-11-13)
+    pedestrian other hours     : largest move 0.02  (6h without J086 2024-02-08)
+    pedestrian J040 alone      : largest move 0.12  (18h without J040 2024-12-19)
+    bicycle    reference hours : largest move 0.12  (16h without J040 2024-12-17)
+    bicycle    other hours     : largest move 0.05  (6h without J040 2024-12-17)
+    bicycle    J040 alone      : largest move 0.44  (15h without J040 2024-12-19)
+    vehicle    reference hours : largest move 0.02  (8h without J056 2024-02-08)
+    vehicle    other hours     : largest move 0.03  (6h without J040 2024-12-19)
+    vehicle    J040 alone      : largest move 0.07  (14h without J040 2024-12-17)
+    (an index of 1.00 is an ordinary daytime hour; a move of 0.30 is a third of one)
+
+X3  Leave out one junction at a time, reference hours only
+    without J006: largest move 0.06; busiest hour pedestrian 17h, bicycle 17h, vehicle 17h
+    without J040: largest move 0.20; busiest hour pedestrian 17h, bicycle 8h, vehicle 17h
+    without J051: largest move 0.07; busiest hour pedestrian 17h, bicycle 17h, vehicle 17h
+    without J056: largest move 0.05; busiest hour pedestrian 17h, bicycle 17h, vehicle 17h
+    without J086: largest move 0.07; busiest hour pedestrian 17h, bicycle 17h, vehicle 17h
+    without J092: largest move 0.05; busiest hour pedestrian 17h, bicycle 17h, vehicle 17h
+    without J181: largest move 0.06; busiest hour pedestrian 17h, bicycle 17h, vehicle 17h
+    with all:      busiest hour pedestrian 17h, bicycle 17h, vehicle 17h
+
+X4  What 'open in this hour' means (places with readable hours, each once, a whole week)
+    open at :30 (S5)      :  5626 open place-hours (+0)
+    open on the hour      :  5608 open place-hours (-18)
+    open the whole hour   :  5551 open place-hours (-75)
+    open at any minute    :  5676 open place-hours (+50)
+    (only hours where a place opens or closes mid-hour can change)
+
+X5  Leave out one month of detector days at a time (bicycles all year)
+    weekday  winter 0.17 | spring 0.15 | summer 0.05 | autumn 0.04
+    Saturday winter 0.26 | spring 0.35 | summer 0.12 | autumn 0.12
+    Sunday   winter 0.46 | spring 0.32 | summer 0.15 | autumn 0.14
+    (the largest move of any hour's index when one month is left out)
