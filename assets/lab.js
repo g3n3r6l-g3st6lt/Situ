@@ -71,6 +71,8 @@
     "use unknown": "No source says what this building is used for. It stays unknown: later systems will not guess.",
     "tie": "Two uses have the same number of properties here. That often means two buildings share one outline, or an address point stands in the wrong building.",
     "far from a street": "The nearest street people may walk on is far away, so the link that stands in for the door is weak.",
+    "storeys too low?": "The storeys the sources give cannot hold the dwellings the tax roll counts here. The outline probably carries only its podium's storeys.",
+    "lot and address disagree": "The city's lot outline and its address point name different buildings. When the lot holds one building, the lot decides; when it holds several and the address point stands in another, the address point decides. Either way it is a choice, so it is asked.",
     "missing outline?": "Hundreds of properties sit at one address point with no building drawn. OpenStreetMap may not have this building yet."
   };
 
@@ -470,7 +472,7 @@
     return h;
   }
 
-  const SRC4 = { roll: "the city tax roll", osm_tag: "the OpenStreetMap tag", osm: "OpenStreetMap", premises_2025: "the city's commercial survey, 2025", city_places: "the city's list of public places" };
+  const SRC4 = { roll: "the city tax roll", osm_tag: "the OpenStreetMap tag", osm: "OpenStreetMap", osm_part: "an OpenStreetMap building part", premises_2025: "the city's commercial survey, 2025", city_places: "the city's list of public places" };
   const said = (v, src, why) => v != null && v !== "" ? `<b>${esc(v)}</b>${src ? ` <span class="sub">from ${esc(SRC4[src] || src)}</span>` : ""}` : `<span class="warn">unknown</span> <span class="sub">${esc(why)}</span>`;
   function buildingHTML(b) {
     const inside = (placesIn[b.id] || []).filter(p => !p.same_as);
@@ -478,7 +480,9 @@
       <h5>Used for</h5><p>${said(b.use, b.use_source, b.use_reason)}</p>`;
     if (b.use && b.use_reason) h += `<p class="sub">${esc(b.use_reason)}</p>`;
     if (b.use_mix) h += `<p class="sub">Tax-roll properties by class: ${esc(b.use_mix)}</p>`;
-    h += `<h5>Size</h5><p>Storeys: ${said(b.storeys, b.storeys_source, b.storeys_reason)}${b.height != null ? ` · height ${b.height} m` : ""}</p>
+    h += `<h5>Size</h5><p>Storeys: ${said(b.storeys, b.storeys_source, b.storeys_reason)}${b.height != null ? ` · height ${b.height} m` : ""}</p>` +
+      (b.storeys != null && b.storeys_reason ? `<p class="sub">${esc(b.storeys_reason)}. A building is as tall as its tallest known part.</p>` : "") +
+      (b.parts ? `<p class="sub">${b.parts} part${b.parts > 1 ? "s" : ""} drawn in OpenStreetMap inside this outline.</p>` : "") + `
       <p>Dwellings: ${b.dwellings != null ? `<b>${b.dwellings}</b> <span class="sub">from the tax roll, ${b.properties} properties${b.condo_units ? `, ${b.condo_units} condo units` : ""}${b.year ? `, built ${esc(b.year)}` : ""}</span>` : `<span class="warn">unknown</span> <span class="sub">${esc(b.roll_reason)}</span>`}</p>`;
     if (b.premises) h += `<h5>Ground floor</h5><p>${b.premises} commercial spaces in the 2025 survey, ${b.vacant} vacant.</p>${b.ground_floor ? `<p class="sub">${esc(b.ground_floor)}</p>` : ""}`;
     if (inside.length) h += `<h5>Places inside (${inside.length})</h5><ul class="lab-places">${inside.map(p =>

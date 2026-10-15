@@ -1,17 +1,25 @@
-L1  S1: streets, junctions and reach match the S1 network
-    every segment and junction; reach recomputed for every 15th junction
+L1  S1: streets, junctions, reach and checkpoint status match the S1 network
+    every segment and junction; reach recomputed for every 15th junction; status of every checkpoint
     PASS
 
 L2  S2: every value matches scores.csv, and a missing value stays missing
-    213 segments x 13 measures
+    264 segments x 13 measures
     PASS
 
 L3  S3: rules, signs, speeds and checkpoints match the S3 tables
     approaches, movements, control, signs, speeds and checkpoints, compared one by one
     PASS
 
-L4  S3: the slider variants match the stress report
+L4  S3: the stress results kept for the Lab match the stress report
     sign shake and light distance, count by count
+    PASS
+
+L5  S1 routes: every shortest route is real and shortest, and the Lab's rules give the same routes
+    every pair, on foot and by car; twin check: 45600 routes and corridors compared, from every 10th junction to every other
+    PASS
+
+L6  S4: buildings, places and checkpoints match the S4 tables, and a missing value stays missing
+    296 buildings x 11 fields and every outline point; 571 empty cells stayed empty; 610 places, 61 checkpoints
     PASS
 
 ALL PASS
