@@ -1,0 +1,30 @@
+T1  Is every tree, hydrant, piece of furniture, road work, sidewalk and island here exactly once?
+    1390 objects and 519 surfaces
+    PASS
+
+T2  Does every object, and the centre of every surface, lie inside the study area?
+    PASS
+
+T3  Are the trees' species, trunk sizes, planting dates and positions copied as the city gives them?
+    971 trees; 196 without a planting date, left empty with the reason
+    PASS
+
+T4  Is every object linked to its nearest S1 street within 30 m, or does it say why not?
+    97 objects stand farther, each with its reason
+    PASS
+
+T5  Can every surface's area and estimated width be rebuilt from its outline?
+    PASS
+
+T6  Is every work past its permit, and every very wide sidewalk, a checkpoint, and nothing else?
+    5 checkpoints
+    PASS
+
+T7  What do the sources cover? (report)
+    objects: tree 971, bicycle parking 110, hydrant 104, bench 101, waste basket 38, picnic table 31, road work 29, fountain 3, shelter 2, drinking water 1
+    trees: 538 on streets, 433 in parks; trunk median 7 cm, three quarters under 18 cm; planted since 2013: 651 of 775 dated
+    sidewalks: 487; estimated mean width median 2.3 m; dated 267, of which built since 2020: 175
+    road works listed on 2026-10-16: 29
+    furniture comes from OpenStreetMap and may be incomplete; benches and bins are often unmapped
+
+ALL PASS

@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ac2dce0109fdd76b4e106427135faa7f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f160d84fdeb6cf5ac1dcb42d836c0fa0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -332,12 +332,35 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
- <span class="menu-text">Lab</span></a>
+ <span class="menu-text">S6 Streetscape</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s6-streetscape.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S6 Streetscape</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s6-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S6 is built and tested</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
@@ -516,7 +539,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-edge" class="level2">
 <h2 class="anchored" data-anchor-id="the-edge">The edge</h2>
-<p>People and cars come and go across the boundary, so S1 keeps the <a href="./s1-streets.html">edge</a> and treats it by the same rules as the inside, for walkers and for the direction of cars. The tests, and later the agents, treat the rest of the city as reachable from the exits. S3 reads the signs on the edge too, so a junction on the boundary sees every street that meets it. Later systems decide what to do with the edge: S4 puts no buildings there, and S8 measures inside the boundary only.</p>
+<p>People and cars come and go across the boundary, so S1 keeps the <a href="./s1-streets.html">edge</a> and treats it by the same rules as the inside, for walkers and for the direction of cars. The tests, and later the agents, treat the rest of the city as reachable from the exits. S3 reads the signs on the edge too, so a junction on the boundary sees every street that meets it. Later systems decide what to do with the edge: S4 puts no buildings there, and S9 measures inside the boundary only.</p>
 </section>
 <section id="numbering" class="level2">
 <h2 class="anchored" data-anchor-id="numbering">Numbering</h2>
@@ -602,7 +625,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="reach-in-the-lab">Reach, in the Lab</h3>
 <p>T2 and T4 ask the question for every junction at once. To watch one case, open the <a href="./lab.html#reach-J080">Lab</a> at Rue Peel and Rue Wellington (J080) and press play. Each step goes one junction further. You can switch between on foot and by car, and choose whether the city beyond the exits counts. Clicking any other junction starts from there.</p>
 <p>From J080, the walker reaches all 212 walkable segments in 18 steps. The car reaches 181 of 182 drivable segments without leaving the area. The last one, Boulevard Georges-Vanier (white dashed), can only be reached by leaving Griffintown and coming back in. The cause lies in where the boundary is drawn; the data is fine.</p>
-<p>Steps count junctions. Distances in metres are in the route tool on <a href="./s1-streets.html">S1 Streets</a>, and time comes later, when S6 and S7 give walkers and cars a speed.</p>
+<p>Steps count junctions. Distances in metres are in the route tool on <a href="./s1-streets.html">S1 Streets</a>, and time comes later, when S7 and S8 give walkers and cars a speed.</p>
 
 
 </section>

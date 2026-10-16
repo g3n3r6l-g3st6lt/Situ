@@ -7,13 +7,14 @@
     window.SITU_S3   outputs/s3/web_data.js   rules, signs, lights, speed
     window.SITU_S4   outputs/s4/web_data.js   buildings, their uses and sources, places
     window.SITU_S5   outputs/s5/web_data.js   counts by hour at counted junctions, each place's week
+    window.SITU_S6   outputs/s6/web_data.js   trees, hydrants, furniture, road works, sidewalks and islands
     window.SITU_S1_ROUTES  outputs/s1/routes_data.js  shortest distances and routes between every pair of junctions
 
   It computes nothing about the city. Every colour and every value shows what the Python code already
   produced, and tools/test_lab.py checks that these files match the tables. One exception, kept small:
   the route tool applies the rules in assets/routes.js to the distances routes.py wrote (test L5).
 
-  The page: five tabs, one per system. Each tab paints the map its own way, has at most two controls,
+  The page: six tabs, one per system. Each tab paints the map its own way, has at most two controls,
   lists its checkpoints with the reason each one matters, and shows its tests. Clicking a street,
   a junction, a sign or a building opens its details in every tab.
 
@@ -23,7 +24,7 @@
     3 painting              6 the detail panel
 */
 (function () {
-  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes;
+  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes;
   const host = document.getElementById("situ-lab");
   if (!host || !S1 || !window.SituMap) return;
 
@@ -50,6 +51,9 @@
     S4.places.forEach(p => { place4[p.id] = p; if (p.building) (placesIn[p.building] = placesIn[p.building] || []).push(p); });
   }
 
+  const o6 = {}, s6 = {};
+  if (S6) { S6.objects.forEach(o => o6[o.id] = o); S6.surfaces.forEach(s => s6[s.id] = s); }
+  const FURN6 = ["bench", "waste basket", "bicycle parking", "picnic table", "drinking water", "shelter", "fountain"];
   const DAY5 = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
   const MODE5 = { pedestrian: "people crossing", bicycle: "bicycles", vehicle: "cars, buses and trucks" };
   const max5 = {};
@@ -80,6 +84,8 @@
     "storeys too low?": "The storeys the sources give cannot hold the dwellings the tax roll counts here. The outline probably carries only its podium's storeys.",
     "lot and address disagree": "The city's lot outline and its address point name different buildings. When the lot holds one building, the lot decides; when it holds several and the address point stands in another, the address point decides. Either way it is a choice, so it is asked.",
     "hours to read": "These opening hours can be read two ways, or leave a time open. S5 follows the tag's own grammar and keeps what it cannot settle unknown; a person should read the text.",
+    "work already over": "The city still lists this road work although its permit has ended. It may have been extended, or the list may lag behind the street.",
+    "very wide sidewalk": "This sidewalk piece is much wider on average than the others. It may be a plaza or forecourt, or one drawing that joins several pieces.",
     "missing outline?": "Hundreds of properties sit at one address point with no building drawn. OpenStreetMap may not have this building yet."
   };
 
@@ -92,6 +98,7 @@
     { id: "s3", name: "Rules", ok: !!S3 },
     { id: "s4", name: "Buildings", ok: !!S4 },
     { id: "s5", name: "Rhythm", ok: !!S5 && !!S4 },
+    { id: "s6", name: "Streetscape", ok: !!S6 },
   ];
   const state = {
     tab: "s1",
@@ -100,6 +107,7 @@
     s3view: "rules",
     s4colour: "use", s4places: false,
     s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
+    s6show: "all", s6colour: "material",
     pick: null,                      // {kind: "junction"|"segment"|"building"|"place"|"check", id}
     approach: null,
   };
@@ -130,6 +138,16 @@
     e.addEventListener("pointerleave", () => map.untip());
     e.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "building", id: b.id }); });
     bEl[b.id] = e;
+  });
+
+  const sLayer = map.layer("surfaces");            // sidewalks and islands, under the streets
+  const sfEl = {};
+  if (S6) S6.surfaces.forEach(s => {
+    const e = map.path(sLayer, "M" + s.ring.map(p => map.P(p).join(",")).join("L") + "Z", { class: "lab-surf6" });
+    e.addEventListener("pointermove", ev => map.tip(ev, `${s.kind} ${s.id}<br><span>${esc(s.material || "material not given")}${s.built ? " · built " + s.built : ""}${s.width != null ? " · about " + s.width.toFixed(1) + " m wide" : ""}</span>`));
+    e.addEventListener("pointerleave", () => map.untip());
+    e.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "surf6", id: s.id }); });
+    sfEl[s.id] = e;
   });
 
   const streets = map.layer("streets");
@@ -186,13 +204,14 @@
           cls += r && r.speed ? " v" + r.speed + (r.speed_status === "by_shape" ? " shaped" : "") : car(s) ? " v-gap" : " v-none";
         } else cls += " plain";
       }
-      if (state.tab === "s4" || state.tab === "s5") cls += " plain faint";
+      if (state.tab === "s4" || state.tab === "s5" || state.tab === "s6") cls += " plain faint";
       if (state.pick && state.pick.kind === "segment" && state.pick.id === s.id) cls += " picked";
       if (state.approach === s.id) cls += " picked";
       e.setAttribute("class", cls);
       e.setAttribute("style", style);
     });
     paintBuildings();
+    paintSurfaces();
     drawKey(rk);
   }
 
@@ -205,6 +224,16 @@
       if (state.pick && state.pick.kind === "building" && state.pick.id === b.id) cls += " picked";
       bEl[b.id].setAttribute("class", cls);
     });
+  }
+
+  function paintSurfaces() {
+    const on = state.tab === "s6" && S6;
+    sLayer.style.display = on ? "" : "none";
+    if (!on) return;
+    const band = s => state.s6colour === "material" ? "m-" + (s.material || "none").toLowerCase().replace(/[^a-z]+/g, "-")
+      : !s.built ? "b-none" : s.built >= "2020" ? "b-new" : s.built >= "2010" ? "b-mid" : "b-old";
+    S6.surfaces.forEach(s => sfEl[s.id].setAttribute("class", "lab-surf6 " + band(s) + (s.kind === "island" ? " island" : "") +
+      (state.pick && state.pick.kind === "surf6" && state.pick.id === s.id ? " picked" : "")));
   }
 
   function drawKey(rk) {
@@ -234,6 +263,10 @@
     if (state.tab === "s5" && S5) html = `<span><i class="kp5 o"></i>open</span><span><i class="kp5 c"></i>closed</span><span><i class="kp5 u"></i>no hours given</span>` +
       (state.s5mode === "bicycle" && S5.bikes ? `<span><i class="kb5"></i>bicycle detector, sized by this hour</span>` : "") +
       `<span><i class="kj5"></i>counted junction, sized by this hour's count</span><span><i class="kj5 none"></i>not counted at this hour</span>`;
+    if (state.tab === "s6" && S6) html = (state.s6colour === "material"
+        ? `<span><i class="kb6 m-b-ton"></i>concrete</span><span><i class="kb6 m-asphalte"></i>asphalt</span><span><i class="kb6 m-pav-"></i>pavers</span>`
+        : `<span><i class="kb6 b-new"></i>built since 2020</span><span><i class="kb6 b-mid"></i>2010s</span><span><i class="kb6 b-old"></i>before 2010</span><span><i class="kb6 b-none"></i>no date</span>`) +
+      `<span><i class="kt6"></i>tree, sized by trunk</span><span><i class="kh6"></i>hydrant</span><span><i class="kf6"></i>furniture</span><span><i class="kw6"></i>road work</span>`;
     key.innerHTML = html + `<span class="lab-check-key"><i class="kc"></i>checkpoint</span>`;
   }
 
@@ -255,6 +288,7 @@
     if (state.tab === "s3" && S3 && state.s3view === "rules") s3Control(marks);
     if (state.tab === "s4" && S4 && state.s4places) placeMarks(marks);
     if (state.tab === "s5" && S5) s5Marks(marks, labels);
+    if (state.tab === "s6" && S6) s6Marks(marks);
     const checks = checksOf(state.tab);
     if (checks.length) checkMarks(marks, labels, checks);
     junctionHits(marks);
@@ -295,7 +329,7 @@
 
   // checkpoints of one system, with their system name kept in the pick
   function checksOf(tab) {
-    const src = { s1: S1, s3: S3, s4: S4, s5: S5 }[tab];
+    const src = { s1: S1, s3: S3, s4: S4, s5: S5, s6: S6 }[tab];
     return src && src.checkpoints ? src.checkpoints : [];
   }
   const settled = c => c.status === "confirmed";            // S1 checkpoints carry what the photos and checks decided
@@ -407,6 +441,47 @@
         `<tr><td>${h}h</td><td>${Math.round(by.pedestrian[h])}</td><td>${Math.round(by.bicycle[h])}</td><td>${Math.round(by.vehicle[h])}</td></tr>`).join("")}</table>`;
   }
 
+  // S6: what stands on the streets
+  const show6 = o => state.s6show === "all" || (state.s6show === "trees" && o.kind === "tree") ||
+    (state.s6show === "hydrants" && o.kind === "hydrant") || (state.s6show === "furniture" && FURN6.includes(o.kind)) ||
+    (state.s6show === "works" && o.kind === "road work");
+  function s6Marks(g) {
+    S6.objects.forEach(o => {
+      if (!show6(o)) return;
+      const picked = state.pick && state.pick.kind === "obj6" && state.pick.id === o.id;
+      let e;
+      if (o.kind === "tree") e = map.dot(g, o.xy, Math.min(14, 1.5 + Math.sqrt(o.size || 1) * 0.9), { class: "lab-t6" + (o.date && o.date >= "2013" ? " young" : "") + (picked ? " picked" : "") });
+      else if (o.kind === "hydrant") e = map.square(g, o.xy, 6, { class: "lab-h6" + (picked ? " picked" : "") });
+      else if (o.kind === "road work") e = map.square(g, o.xy, 10, { class: "lab-w6" + (picked ? " picked" : "") });
+      else e = map.square(g, o.xy, 4, { class: "lab-f6" + (picked ? " picked" : "") });
+      const hit = map.dot(g, o.xy, 6, { class: "sx-jhit" });
+      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(o.kind)} ${o.id}<br><span>${esc(o.detail || "")}${o.kind === "tree" && o.size ? " · " + o.size + " cm" : ""}</span>`));
+      hit.addEventListener("pointerleave", () => map.untip());
+      hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "obj6", id: o.id }); });
+    });
+  }
+  const SRC6 = { city_trees: "the city's public tree inventory", city_hydrants: "the city's fire hydrant file", osm: "OpenStreetMap", city_works: "the city's list of road works" };
+  function obj6HTML(o) {
+    if (!o) return "";
+    let h = `<h4>${esc(o.kind)}${o.detail ? ": " + esc(o.detail) : ""}</h4><p class="sub">${o.id} · from ${esc(SRC6[o.source] || o.source)} (${esc(o.source_id)})</p>`;
+    if (o.kind === "tree") h += `<p>${o.detail_latin ? `<i>${esc(o.detail_latin)}</i>, ` : ""}trunk <b>${o.size} cm</b> across at breast height.</p>
+      <p>${o.date ? `Planted ${esc(o.date)}.` : `<span class="warn">Planting date unknown</span> <span class="sub">${esc(o.date_reason)}</span>`}</p><p class="sub">${esc(o.setting)}</p>`;
+    else if (o.kind === "hydrant") h += `<p>Status: ${esc(o.status)}. ${o.date ? "Installed " + esc(o.date) + "." : `<span class="sub">${esc(o.date_reason)}</span>`}</p><p class="sub">${esc(o.setting)}</p>`;
+    else if (o.kind === "road work") h += `<p>Permit: ${esc(o.date)}. ${esc(o.setting)}.</p><p class="sub">Listed on ${esc(S6.meta.snapshot)}; a road work is a moment, and the list changes every day.</p>`;
+    else h += `<p class="sub">${esc(o.setting || "no further tags")}</p>`;
+    h += `<h5>Street</h5>` + (o.segment ? `<p><button type="button" class="sx-link" data-seg="${o.segment}">${esc(o.street)} (${o.segment})</button>, ${o.segment_m} m away</p>`
+      : `<p class="sub">${esc(o.link_reason)} (${o.segment_m} m from the nearest S1 street)</p>`);
+    return h;
+  }
+  function surf6HTML(s) {
+    if (!s) return "";
+    return `<h4>${esc(s.kind)} ${s.id}</h4><p class="sub">city asset ${esc(s.source_id)} · ${esc(s.type)}</p>
+      <p>${esc(s.material || "material not given")}${s.built ? `, built ${esc(s.built)} <span class="sub">(${esc(s.built_precision)})</span>` : ", <span class='sub'>no construction date</span>"}.</p>
+      <p>${Math.round(s.area)} m²${s.width != null ? `, about <b>${s.width.toFixed(1)} m</b> wide on average <span class="sub">(estimated: twice the area over the perimeter)</span>` : ""}.</p>
+      <p class="sub">curb extension: ${esc(s.curb_extension)} · cycling: ${esc(s.cycling)} · trees: ${esc(s.trees)}</p>` +
+      (s.segment ? `<p>Along <button type="button" class="sx-link" data-seg="${s.segment}">${esc(s.street)} (${s.segment})</button></p>` : "");
+  }
+
   // the S3 rules at one junction: arrows for the picked street, its signs, the street names
   function junctionFocus(g, labels) {
     const J = r3.jun[state.pick.id];
@@ -500,11 +575,13 @@
     if (p.kind === "check") return back + checkHTML(checksOf(state.tab).find(x => x.id === p.id) || allChecks().find(x => x.id === p.id));
     if (p.kind === "building") return back + buildingHTML(b4[p.id]);
     if (p.kind === "place") return back + placeHTML(place4[p.id]);
+    if (p.kind === "obj6") return back + obj6HTML(o6[p.id]);
+    if (p.kind === "surf6") return back + surf6HTML(s6[p.id]);
     if (p.kind === "segment") return back + segmentHTML(seg[p.id]);
     if (p.kind === "junction") return back + junctionHTML(p.id);
     return "";
   }
-  const allChecks = () => [...checksOf("s1"), ...checksOf("s3"), ...checksOf("s4"), ...checksOf("s5")];
+  const allChecks = () => [...checksOf("s1"), ...checksOf("s3"), ...checksOf("s4"), ...checksOf("s5"), ...checksOf("s6")];
 
   function checkHTML(c) {
     if (!c) return "";
@@ -638,6 +715,15 @@
         <label class="lab-range">hour <b class="lab-hour-label">${state.s5hour}h</b><input type="range" class="lab-hour" min="0" max="23" value="${state.s5hour}"></label>
         <button type="button" class="lab-play" data-play="day">▶ play the day</button><div class="lab-out">${s5Text()}</div><div class="lab-curve-box">${s5Curve()}</div>`;
     }
+    if (t === "s6" && S6) {
+      const n = k => S6.objects.filter(o => o.kind === k).length;
+      h += `<h3>S6 · Streetscape</h3><p>What stands on the streets besides the buildings: ${n("tree")} public trees, ${n("hydrant")} fire hydrants,
+        ${S6.objects.filter(o => FURN6.includes(o.kind)).length} pieces of furniture mapped in OpenStreetMap, and the ${n("road work")} road works listed on ${esc(S6.meta.snapshot)}.
+        Sidewalks and islands are drawn under the streets. Click anything for its source and values.</p>
+        ${seg2("s6show", [["all", "everything"], ["trees", "trees"], ["hydrants", "hydrants"], ["furniture", "furniture"], ["works", "road works"]])}
+        <h5>Sidewalks by</h5>${seg2("s6colour", [["material", "material"], ["built", "year built"]])}
+        <p class="sub">S6 records what the objects are and where. What they block, slow or forbid is for the systems after it, as written assumptions.</p>`;
+    }
     h += checksHTML(t) + testsHTML(t);
     return h;
   }
@@ -659,7 +745,7 @@
   }
 
   function testsHTML(t) {
-    const D = { s1: S1, s2: S2, s3: S3, s4: S4, s5: S5 }[t];
+    const D = { s1: S1, s2: S2, s3: S3, s4: S4, s5: S5, s6: S6 }[t];
     if (!D) return "";
     const ts = D.tests || [], f = ts.filter(x => x.status === "fail").length, p = ts.filter(x => x.status === "pass").length;
     return `<details class="lab-tests"><summary>Tests <span class="st ${f ? "fail" : "pass"}">${f ? f + " FAIL" : p + " PASS"}</span> <span class="sub">last run ${esc(D.meta.made)}</span></summary>
@@ -693,6 +779,8 @@
     if (pick.kind === "segment") return seg[pick.id].pts[Math.floor(seg[pick.id].pts.length / 2)];
     if (pick.kind === "building") return mid(b4[pick.id].ring);
     if (pick.kind === "place") return place4[pick.id].xy;
+    if (pick.kind === "obj6") return o6[pick.id].xy;
+    if (pick.kind === "surf6") return mid(s6[pick.id].ring);
     const c = allChecks().find(x => x.id === pick.id);
     return c ? c.xy : null;
   }
@@ -790,11 +878,11 @@
     }, 450);
   }
 
-  // links from the book: #s1 to #s5, #radius, #reach-J080, #route-J093-J130, #J027-S020, #w201008914
+  // links from the book: #s1 to #s6, #radius, #reach-J080, #route-J093-J130, #J027-S020, #w201008914
   function fromHash() {
     const h = location.hash;
     let m;
-    if ((m = /^#(s[1-5])$/.exec(h))) { setTab(m[1]); return; }
+    if ((m = /^#(s[1-6])$/.exec(h))) { setTab(m[1]); return; }
     if (h === "#radius") { setTab("s2"); playRadius(); return; }
     if ((m = /^#reach(?:-(J\d{3}))?$/.exec(h))) {
       state.tab = "s1"; state.s1try = "reach";

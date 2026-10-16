@@ -26,4 +26,8 @@ L7  S5: the weekday shape, the junction counts, every place's week and the open 
     72 weekday hours x 3 values (0 empty stayed empty), 192 junction-hours, 610 places x 168 hours, 168 open counts, 288 bicycle hours, the bicycle months
     PASS
 
+L8  S6: every object and surface matches the S6 tables, down to each outline point, with empty cells still empty
+    1390 objects x 8 fields and positions (2122 empty cells stayed empty); 519 surfaces, every outline point
+    PASS
+
 ALL PASS

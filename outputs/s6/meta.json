@@ -1,0 +1,27 @@
+{
+ "made": "2026-10-16",
+ "snapshot": "2026-10-16",
+ "sources": {
+  "arbres-publics.csv": "2026-10-16",
+  "aqu_borneincendie_p.csv": "2026-10-16",
+  "entraves-travaux-en-cours.csv": "2026-10-16",
+  "voi_trottoir_s_t12_geojson/VOI_TROTTOIR_S_T12_GeoJSON.json": "2026-10-16",
+  "voi_ilot_s_m12_geojson/VOI_ILOT_S_M12_GeoJSON.json": "2026-10-16"
+ },
+ "link_m": 30,
+ "osm_file": "osm_places_2026-10-14.json",
+ "counts": {
+  "tree": 971,
+  "hydrant": 104,
+  "bench": 101,
+  "bicycle parking": 110,
+  "drinking water": 1,
+  "fountain": 3,
+  "picnic table": 31,
+  "shelter": 2,
+  "waste basket": 38,
+  "road work": 29,
+  "sidewalk": 487,
+  "island": 32
+ }
+}

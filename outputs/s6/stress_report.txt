@@ -1,0 +1,9 @@
+X1  Same input twice
+    identical: True   PASS
+
+X2  Distance within which an object belongs to the nearest S1 street (now 30 m)
+    10 m:  437 without a street | vs 30 m: 340 lose their street, 0 gain one
+    20 m:  214 without a street | vs 30 m: 117 lose their street, 0 gain one
+    30 m:   97 without a street | vs 30 m: 0 lose their street, 0 gain one
+    50 m:   47 without a street | vs 30 m: 0 lose their street, 50 gain one
+    (an object either has its nearest street or none: the distance never moves it to another street)

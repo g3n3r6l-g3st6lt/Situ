@@ -23,3 +23,11 @@ cyclistes_2025.csv,"Ville de Montréal, Compteurs cyclistes permanents, Velos - 
 cyclistes_2026.csv,"Ville de Montréal, Compteurs cyclistes permanents, Velos - Comptage 2026 - Ville","the same, 2026 to 14 October",2026-10-15,CC BY 4.0,S5,downloaded by Mo,checked 2026-10-15
 comptage_velo_2025.csv,"Ville de Montréal, Compteurs cyclistes permanents, Velos - Comptage 2025 - Eco-Compteur","Eco-Counter sites, 15 minutes; REV Peel/Notre-Dame has 4.4 days of zeros",2026-10-15,CC BY 4.0,not used,downloaded by Mo,checked 2026-10-15
 comptage_velo_2026.csv,"Ville de Montréal, Compteurs cyclistes permanents, Velos - Comptage 2026 - Eco-Compteur","Eco-Counter sites; none inside the study area",2026-10-15,CC BY 4.0,not used,downloaded by Mo,checked 2026-10-15
+arbres-publics.csv,"Ville de Montréal, Arbres publics sur le territoire de la Ville (vmtl-arbres)","public trees city-wide, consolidated file; clipped by tools/clip_streetscape.py",2026-10-16,CC BY 4.0,S6,downloaded by Mo,checked 2026-10-16
+aqu_borneincendie_p.csv,"Ville de Montréal, Bornes d'incendie","fire hydrants city-wide",2026-10-16,CC BY 4.0,S6,downloaded by Mo,checked 2026-10-16
+voi_trottoir_s_t12_geojson,"Ville de Montréal, Trottoir et îlot (Base de données des actifs de voirie), T12 sidewalks","sidewalk polygons city-wide",2026-10-16,CC BY 4.0,S6,downloaded by Mo,checked 2026-10-16
+voi_ilot_s_m12_geojson,"Ville de Montréal, Trottoir et îlot, M12 islands","traffic island polygons city-wide",2026-10-16,CC BY 4.0,S6,downloaded by Mo,checked 2026-10-16
+entraves-travaux-en-cours.csv,"Ville de Montréal, Entraves et travaux en cours","road works listed on the day saved",2026-10-16,CC BY 4.0,S6,downloaded by Mo,checked 2026-10-16
+murales.csv,"Ville de Montréal, Murales subventionnées","subsidized murals; one in the study area",2026-10-16,CC BY 4.0,not used,downloaded by Mo,checked 2026-10-16
+oeuvresdonneesouvertes.json,"Ville de Montréal, Art public, collection municipale (2019 file)","municipal public art; none in the study area",2026-10-16,CC BY 4.0,not used,downloaded by Mo,checked 2026-10-16
+streetscape_study_2026-10-16.json,"clipped from the five S6 city files above","trees 971, hydrants 104, sidewalks 487, islands 32, works 29 inside the study area",2026-10-16,CC BY 4.0,S6,tools/clip_streetscape.py,checked 2026-10-16
