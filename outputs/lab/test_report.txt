@@ -30,4 +30,8 @@ L8  S6: every object and surface matches the S6 tables, down to each outline poi
     2898 objects x 10 fields and positions (7103 empty cells stayed empty); 519 surfaces, every outline point
     PASS
 
+L9  S7: the walkers on every segment in every hour, the stops and the walks begun each hour match the S7 tables
+    189 segments x 24 hours x 2 groups, 29 stops, 6 kinds of walk
+    PASS
+
 ALL PASS

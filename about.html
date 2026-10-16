@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-108efd9874f3ed365adb33176f61e752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b8864e193518359bbe244ff2a7eed920.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -354,12 +354,35 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
- <span class="menu-text">Lab</span></a>
+ <span class="menu-text">S7 Walkers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s7-walkers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S7 Walkers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s7-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How S7 is built</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
@@ -460,13 +483,13 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>conceived space: plans, maps, data</td>
-<td>the network and its rules (S1 to S3), building types (S4) and street objects (S6), from city data and OpenStreetMap</td>
+<td>the network and its rules (S1 to S3), building types (S4) and street objects (S6), from city data, OpenStreetMap and street photos</td>
 <td>built</td>
 </tr>
 <tr class="even">
 <td>perceived space: daily routines</td>
-<td>rhythm and movement (S5 to S9), from the city’s counts and later computer vision</td>
-<td>a weekday measured in S5; movement to come</td>
+<td>rhythm and movement (S5 to S9), from the city’s counts, the census and later computer vision</td>
+<td>a weekday measured in S5; commuting walkers estimated in S7</td>
 </tr>
 <tr class="odd">
 <td>lived space: space as its users live it</td>
@@ -518,10 +541,10 @@ ul.task-list li input[type="checkbox"] {
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-  D[City data&lt;br/&gt;streets, buildings,&lt;br/&gt;signs, lights]:::data --&gt; S[Small systems&lt;br/&gt;S1 to S7]:::step
-  O[Observation&lt;br/&gt;counts, later&lt;br/&gt;computer vision]:::data --&gt; S
-  S --&gt; M[Simulated movement&lt;br/&gt;and rhythm]:::step
-  M --&gt; C{S8 Observer&lt;br/&gt;compare}:::test
+  D[City data, OpenStreetMap,&lt;br/&gt;street photos]:::data --&gt; S[Small systems&lt;br/&gt;S1 to S8]:::step
+  O[Counts&lt;br/&gt;measured on the street]:::data
+  S --&gt; M[Flows built from&lt;br/&gt;the systems]:::step
+  M --&gt; C{S9 Observer&lt;br/&gt;compare}:::test
   SS[Space syntax]:::data --&gt; C
   O --&gt; C
   C --&gt; G[The game:&lt;br/&gt;a place to play&lt;br/&gt;and to keep]:::out
@@ -596,9 +619,9 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>S7</td>
-<td>Walkers</td>
-<td>Pedestrians going from building to building</td>
-<td>next</td>
+<td><a href="./s7-walkers.html">Walkers</a></td>
+<td>Who walks where and when; later, what a walker can see</td>
+<td>first part built, tested</td>
 </tr>
 <tr class="odd">
 <td>S8</td>
@@ -609,7 +632,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>S9</td>
 <td>Observer</td>
-<td>Counts where everyone went and compares</td>
+<td>Builds flows from what the other systems say, and compares them with the counts and space syntax</td>
 <td>later</td>
 </tr>
 </tbody>
