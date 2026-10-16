@@ -7,7 +7,7 @@
     window.SITU_S3   outputs/s3/web_data.js   rules, signs, lights, speed
     window.SITU_S4   outputs/s4/web_data.js   buildings, their uses and sources, places
     window.SITU_S5   outputs/s5/web_data.js   counts by hour at counted junctions, each place's week
-    window.SITU_S6   outputs/s6/web_data.js   trees, hydrants, furniture, road works, sidewalks and islands
+    window.SITU_S6   outputs/s6/web_data.js   trees, hydrants, furniture, lights, cameras, crossings, road works, sidewalks and islands
     window.SITU_S1_ROUTES  outputs/s1/routes_data.js  shortest distances and routes between every pair of junctions
 
   It computes nothing about the city. Every colour and every value shows what the Python code already
@@ -54,6 +54,9 @@
   const o6 = {}, s6 = {};
   if (S6) { S6.objects.forEach(o => o6[o.id] = o); S6.surfaces.forEach(s => s6[s.id] = s); }
   const FURN6 = ["bench", "waste basket", "bicycle parking", "picnic table", "drinking water", "shelter", "fountain"];
+  const S6_SEEN = S6 && S6.meta.seen_since || "";
+  const PHOTO6 = { lights: "street light", cameras: "surveillance camera", crossings: "crossing" };
+  const SLUG6 = { "street light": "light", "surveillance camera": "camera", crossing: "crossing" };
   const DAY5 = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
   const MODE5 = { pedestrian: "people crossing", bicycle: "bicycles", vehicle: "cars, buses and trucks" };
   const max5 = {};
@@ -266,7 +269,8 @@
     if (state.tab === "s6" && S6) html = (state.s6colour === "material"
         ? `<span><i class="kb6 m-b-ton"></i>concrete</span><span><i class="kb6 m-asphalte"></i>asphalt</span><span><i class="kb6 m-pav-"></i>pavers</span>`
         : `<span><i class="kb6 b-new"></i>built since 2020</span><span><i class="kb6 b-mid"></i>2010s</span><span><i class="kb6 b-old"></i>before 2010</span><span><i class="kb6 b-none"></i>no date</span>`) +
-      `<span><i class="kt6"></i>tree, sized by trunk</span><span><i class="kh6"></i>hydrant</span><span><i class="kf6"></i>furniture</span><span><i class="kw6"></i>road work</span>`;
+      `<span><i class="kt6"></i>tree, sized by trunk</span><span><i class="kh6"></i>hydrant</span><span><i class="kf6"></i>furniture</span><span><i class="kw6"></i>road work</span>` +
+      `<span><i class="km6"></i>light, camera, crossing found in photos</span><span><i class="ko6"></i>the same in OpenStreetMap</span>`;
     key.innerHTML = html + `<span class="lab-check-key"><i class="kc"></i>checkpoint</span>`;
   }
 
@@ -444,7 +448,7 @@
   // S6: what stands on the streets
   const show6 = o => state.s6show === "all" || (state.s6show === "trees" && o.kind === "tree") ||
     (state.s6show === "hydrants" && o.kind === "hydrant") || (state.s6show === "furniture" && FURN6.includes(o.kind)) ||
-    (state.s6show === "works" && o.kind === "road work");
+    (state.s6show === "works" && o.kind === "road work") || PHOTO6[state.s6show] === o.kind;
   function s6Marks(g) {
     S6.objects.forEach(o => {
       if (!show6(o)) return;
@@ -453,6 +457,9 @@
       if (o.kind === "tree") e = map.dot(g, o.xy, Math.min(14, 1.5 + Math.sqrt(o.size || 1) * 0.9), { class: "lab-t6" + (o.date && o.date >= "2013" ? " young" : "") + (picked ? " picked" : "") });
       else if (o.kind === "hydrant") e = map.square(g, o.xy, 6, { class: "lab-h6" + (picked ? " picked" : "") });
       else if (o.kind === "road work") e = map.square(g, o.xy, 10, { class: "lab-w6" + (picked ? " picked" : "") });
+      else if (SLUG6[o.kind] && o.source === "osm") e = map.dot(g, o.xy, 4, { class: "lab-o6 k-" + SLUG6[o.kind] + (picked ? " picked" : "") });
+      else if (SLUG6[o.kind]) e = map.dot(g, o.xy, o.kind === "surveillance camera" ? 3 : 1.8,
+        { class: "lab-m6 k-" + SLUG6[o.kind] + (o.surveyed < S6_SEEN ? " old" : "") + (picked ? " picked" : "") });
       else e = map.square(g, o.xy, 4, { class: "lab-f6" + (picked ? " picked" : "") });
       const hit = map.dot(g, o.xy, 6, { class: "sx-jhit" });
       hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(o.kind)} ${o.id}<br><span>${esc(o.detail || "")}${o.kind === "tree" && o.size ? " · " + o.size + " cm" : ""}</span>`));
@@ -460,7 +467,13 @@
       hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "obj6", id: o.id }); });
     });
   }
-  const SRC6 = { city_trees: "the city's public tree inventory", city_hydrants: "the city's fire hydrant file", osm: "OpenStreetMap", city_works: "the city's list of road works" };
+  const SRC6 = { city_trees: "the city's public tree inventory", city_hydrants: "the city's fire hydrant file", osm: "OpenStreetMap", city_works: "the city's list of road works",
+    mapillary: "Mapillary's object detection in street photos" };
+  function vision6() {
+    const h = S6.meta.vision["hydrant (the city's file)"];
+    return `<p class="sub">A machine reading of photos, to check, never truth. As a measure of trust: of the city's ${h.recorded} hydrants,
+      Mapillary's software found ${h.recorded_near_detected}, and ${h.detected_near_recorded} of its ${h.detected} hydrant detections stand at one.</p>`;
+  }
   function obj6HTML(o) {
     if (!o) return "";
     let h = `<h4>${esc(o.kind)}${o.detail ? ": " + esc(o.detail) : ""}</h4><p class="sub">${o.id} · from ${esc(SRC6[o.source] || o.source)} (${esc(o.source_id)})</p>`;
@@ -468,6 +481,11 @@
       <p>${o.date ? `Planted ${esc(o.date)}.` : `<span class="warn">Planting date unknown</span> <span class="sub">${esc(o.date_reason)}</span>`}</p><p class="sub">${esc(o.setting)}</p>`;
     else if (o.kind === "hydrant") h += `<p>Status: ${esc(o.status)}. ${o.date ? "Installed " + esc(o.date) + "." : `<span class="sub">${esc(o.date_reason)}</span>`}</p><p class="sub">${esc(o.setting)}</p>`;
     else if (o.kind === "road work") h += `<p>Permit: ${esc(o.date)}. ${esc(o.setting)}.</p><p class="sub">Listed on ${esc(S6.meta.snapshot)}; a road work is a moment, and the list changes every day.</p>`;
+    else if (SLUG6[o.kind] && o.source === "mapillary") h += `<p>${o.date === o.surveyed ? `Seen in photos taken on <b>${esc(o.date)}</b>` : `Seen in photos from <b>${esc(o.date)}</b> to <b>${esc(o.surveyed)}</b>`}${o.surveyed < S6_SEEN ? ` <span class="warn">not since ${S6_SEEN}</span>` : ""};
+      ${o.size} detection${o.size > 1 ? "s" : ""} merged within ${S6.meta.vision.merge_m} m.</p>
+      <p>${o.same_as ? `OpenStreetMap records a ${esc(o.kind)} within ${S6.meta.vision.match_m} m: ${esc(o.same_as)}.` : `<span class="sub">No ${esc(o.kind)} in OpenStreetMap within ${S6.meta.vision.match_m} m.</span>`}</p>` + vision6();
+    else if (SLUG6[o.kind]) h += `<p class="sub">${esc(o.setting || "no further tags")}</p>
+      <p>${o.same_as ? `Mapillary's software found a ${esc(o.kind)} within ${S6.meta.vision.match_m} m: ${esc(o.same_as)}.` : `<span class="sub">No Mapillary detection within ${S6.meta.vision.match_m} m; the photos may not reach here.</span>`}</p>`;
     else h += `<p class="sub">${esc(o.setting || "no further tags")}</p>`;
     h += `<h5>Street</h5>` + (o.segment ? `<p><button type="button" class="sx-link" data-seg="${o.segment}">${esc(o.street)} (${o.segment})</button>, ${o.segment_m} m away</p>`
       : `<p class="sub">${esc(o.link_reason)} (${o.segment_m} m from the nearest S1 street)</p>`);
@@ -719,8 +737,10 @@
       const n = k => S6.objects.filter(o => o.kind === k).length;
       h += `<h3>S6 · Streetscape</h3><p>What stands on the streets besides the buildings: ${n("tree")} public trees, ${n("hydrant")} fire hydrants,
         ${S6.objects.filter(o => FURN6.includes(o.kind)).length} pieces of furniture mapped in OpenStreetMap, and the ${n("road work")} road works listed on ${esc(S6.meta.snapshot)}.
+        Street lights, surveillance cameras and crossings come from two readers, Mapillary's software looking at street photos and the people who map OpenStreetMap:
+        ${Object.entries(S6.meta.photo_kinds).map(([k, s]) => `${s.either} ${k === "street light" ? "street lights" : k === "surveillance camera" ? "cameras" : k + "s"} (${s.both} in both)`).join(", ")}.
         Sidewalks and islands are drawn under the streets. Click anything for its source and values.</p>
-        ${seg2("s6show", [["all", "everything"], ["trees", "trees"], ["hydrants", "hydrants"], ["furniture", "furniture"], ["works", "road works"]])}
+        ${seg2("s6show", [["all", "everything"], ["trees", "trees"], ["hydrants", "hydrants"], ["furniture", "furniture"], ["lights", "lights"], ["cameras", "cameras"], ["crossings", "crossings"], ["works", "road works"]])}
         <h5>Sidewalks by</h5>${seg2("s6colour", [["material", "material"], ["built", "year built"]])}
         <p class="sub">S6 records what the objects are and where. What they block, slow or forbid is for the systems after it, as written assumptions.</p>`;
     }

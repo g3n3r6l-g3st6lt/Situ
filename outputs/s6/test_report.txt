@@ -1,5 +1,5 @@
-T1  Is every tree, hydrant, piece of furniture, road work, sidewalk and island here exactly once?
-    1390 objects and 519 surfaces
+T1  Is every tree, hydrant, piece of furniture, OpenStreetMap point, road work, sidewalk and island here exactly once?
+    2898 objects and 519 surfaces
     PASS
 
 T2  Does every object, and the centre of every surface, lie inside the study area?
@@ -10,21 +10,38 @@ T3  Are the trees' species, trunk sizes, planting dates and positions copied as 
     PASS
 
 T4  Is every object linked to its nearest S1 street within 30 m, or does it say why not?
-    97 objects stand farther, each with its reason
+    156 objects stand farther, each with its reason
     PASS
 
 T5  Can every surface's area and estimated width be rebuilt from its outline?
     PASS
 
-T6  Is every work past its permit, and every very wide sidewalk, a checkpoint, and nothing else?
-    5 checkpoints
+T6  Is every work past its permit, every very wide sidewalk and every object found in no photo since 2023 a checkpoint, and nothing else?
+    40 checkpoints: 5 works, 0 sidewalks, 35 objects from photos
     PASS
 
-T7  What do the sources cover? (report)
-    objects: tree 971, bicycle parking 110, hydrant 104, bench 101, waste basket 38, picnic table 31, road work 29, fountain 3, shelter 2, drinking water 1
+T7  Is every detection in exactly one object of its kind, joined within 3 m, and is every match with OpenStreetMap mutual?
+    street light: 888 detections make 764; 30 of 72 in OpenStreetMap match one; surveillance camera: 36 detections make 34; 2 of 55 in OpenStreetMap match one; crossing: 111 detections make 102; 91 of 481 in OpenStreetMap match one
+    PASS
+
+T8  What do the sources cover? (report)
+    objects: tree 971, street light 836, crossing 583, bicycle parking 110, hydrant 104, bench 101, surveillance camera 89, waste basket 38, picnic table 31, road work 29, fountain 3, shelter 2, drinking water 1
     trees: 538 on streets, 433 in parks; trunk median 7 cm, three quarters under 18 cm; planted since 2013: 651 of 775 dated
     sidewalks: 487; estimated mean width median 2.3 m; dated 267, of which built since 2020: 175
     road works listed on 2026-10-16: 29
     furniture comes from OpenStreetMap and may be incomplete; benches and bins are often unmapped
+    street light: 72 in OpenStreetMap, 764 found by Mapillary, 30 in both, 806 in either
+    surveillance camera: 55 in OpenStreetMap, 34 found by Mapillary, 2 in both, 87 in either
+    crossing: 481 in OpenStreetMap, 102 found by Mapillary, 91 in both, 492 in either
+
+T9  How often do Mapillary's detections stand within 5 m of an object a person recorded? (report)
+    hydrant (the city's file): 68 of 82 detections stand near one; 68 of 104 recorded are detected; median gap 0.9 m
+    street light (OpenStreetMap): 33 of 764 detections stand near one; 30 of 72 recorded are detected; median gap 2.0 m
+    surveillance camera (OpenStreetMap): 2 of 34 detections stand near one; 2 of 55 recorded are detected; median gap 2.5 m
+    crossing (OpenStreetMap, marked only): 74 of 102 detections stand near one; 83 of 192 recorded are detected; median gap 2.0 m
+    bench (OpenStreetMap): 28 of 81 detections stand near one; 31 of 101 recorded are detected; median gap 1.7 m
+    waste basket (OpenStreetMap): 18 of 320 detections stand near one; 20 of 38 recorded are detected; median gap 1.9 m
+    bicycle parking (OpenStreetMap): 6 of 21 detections stand near one; 5 of 110 recorded are detected; median gap 1.5 m
+    the city's hydrants are the only complete record here; photos cover some streets better than others
 
 ALL PASS

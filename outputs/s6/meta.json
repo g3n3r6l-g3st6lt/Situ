@@ -10,6 +10,82 @@
  },
  "link_m": 30,
  "osm_file": "osm_places_2026-10-14.json",
+ "osm_lamps_file": "osm_lamps_2026-10-16.json",
+ "osm_street_points_file": "osm_street_points_2026-10-16.json",
+ "mapillary_file": "mapillary_points_2026-10-16.json",
+ "vision": {
+  "match_m": 5,
+  "merge_m": 3,
+  "hydrant (the city's file)": {
+   "detected": 82,
+   "recorded": 104,
+   "detected_near_recorded": 68,
+   "recorded_near_detected": 68,
+   "median_m": 0.9
+  },
+  "street light (OpenStreetMap)": {
+   "detected": 764,
+   "recorded": 72,
+   "detected_near_recorded": 33,
+   "recorded_near_detected": 30,
+   "median_m": 2.0
+  },
+  "surveillance camera (OpenStreetMap)": {
+   "detected": 34,
+   "recorded": 55,
+   "detected_near_recorded": 2,
+   "recorded_near_detected": 2,
+   "median_m": 2.5
+  },
+  "crossing (OpenStreetMap, marked only)": {
+   "detected": 102,
+   "recorded": 192,
+   "detected_near_recorded": 74,
+   "recorded_near_detected": 83,
+   "median_m": 2.0
+  },
+  "bench (OpenStreetMap)": {
+   "detected": 81,
+   "recorded": 101,
+   "detected_near_recorded": 28,
+   "recorded_near_detected": 31,
+   "median_m": 1.7
+  },
+  "waste basket (OpenStreetMap)": {
+   "detected": 320,
+   "recorded": 38,
+   "detected_near_recorded": 18,
+   "recorded_near_detected": 20,
+   "median_m": 1.9
+  },
+  "bicycle parking (OpenStreetMap)": {
+   "detected": 21,
+   "recorded": 110,
+   "detected_near_recorded": 6,
+   "recorded_near_detected": 5,
+   "median_m": 1.5
+  }
+ },
+ "photo_kinds": {
+  "street light": {
+   "osm": 72,
+   "mapillary": 764,
+   "both": 30,
+   "either": 806
+  },
+  "surveillance camera": {
+   "osm": 55,
+   "mapillary": 34,
+   "both": 2,
+   "either": 87
+  },
+  "crossing": {
+   "osm": 481,
+   "mapillary": 102,
+   "both": 91,
+   "either": 492
+  }
+ },
  "counts": {
   "tree": 971,
   "hydrant": 104,
@@ -20,6 +96,9 @@
   "picnic table": 31,
   "shelter": 2,
   "waste basket": 38,
+  "street light": 836,
+  "surveillance camera": 89,
+  "crossing": 583,
   "road work": 29,
   "sidewalk": 487,
   "island": 32

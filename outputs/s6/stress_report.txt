@@ -2,8 +2,14 @@ X1  Same input twice
     identical: True   PASS
 
 X2  Distance within which an object belongs to the nearest S1 street (now 30 m)
-    10 m:  437 without a street | vs 30 m: 340 lose their street, 0 gain one
-    20 m:  214 without a street | vs 30 m: 117 lose their street, 0 gain one
-    30 m:   97 without a street | vs 30 m: 0 lose their street, 0 gain one
-    50 m:   47 without a street | vs 30 m: 0 lose their street, 50 gain one
+    10 m:  644 without a street | vs 30 m: 488 lose their street, 0 gain one
+    20 m:  294 without a street | vs 30 m: 138 lose their street, 0 gain one
+    30 m:  156 without a street | vs 30 m: 0 lose their street, 0 gain one
+    50 m:   75 without a street | vs 30 m: 0 lose their street, 81 gain one
     (an object either has its nearest street or none: the distance never moves it to another street)
+
+X3  Distance within which Mapillary's detections of one kind become one object (now 3 m)
+    street light: 0 m 877 (30 of 72 OSM match) | 1 m 833 (30 of 72 OSM match) | 2 m 812 (30 of 72 OSM match) | 3 m 764 (30 of 72 OSM match) | 5 m 693 (30 of 72 OSM match) | 8 m 628 (29 of 72 OSM match)
+    surveillance camera: 0 m 36 (2 of 55 OSM match) | 1 m 35 (2 of 55 OSM match) | 2 m 35 (2 of 55 OSM match) | 3 m 34 (2 of 55 OSM match) | 5 m 34 (2 of 55 OSM match) | 8 m 34 (2 of 55 OSM match)
+    crossing: 0 m 111 (91 of 481 OSM match) | 1 m 111 (91 of 481 OSM match) | 2 m 108 (91 of 481 OSM match) | 3 m 102 (91 of 481 OSM match) | 5 m 93 (91 of 481 OSM match) | 8 m 73 (74 of 481 OSM match)
+    (the counts depend on this rule, lights most of all)

@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f160d84fdeb6cf5ac1dcb42d836c0fa0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-108efd9874f3ed365adb33176f61e752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -393,6 +393,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#what-s6-does" id="toc-what-s6-does" class="nav-link active" data-scroll-target="#what-s6-does">What S6 does</a></li>
   <li><a href="#what-it-found" id="toc-what-it-found" class="nav-link" data-scroll-target="#what-it-found">What it found</a></li>
+  <li><a href="#read-by-a-machine" id="toc-read-by-a-machine" class="nav-link" data-scroll-target="#read-by-a-machine">Read by a machine</a></li>
   <li><a href="#what-s6-leaves-out" id="toc-what-s6-leaves-out" class="nav-link" data-scroll-target="#what-s6-leaves-out">What S6 leaves out</a></li>
   <li><a href="#checkpoints" id="toc-checkpoints" class="nav-link" data-scroll-target="#checkpoints">Checkpoints</a></li>
   <li><a href="#in-the-lab" id="toc-in-the-lab" class="nav-link" data-scroll-target="#in-the-lab">In the Lab</a></li>
@@ -435,13 +436,13 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-s6-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s6-does">What S6 does</h2>
-<p>S6 says what stands on Griffintown’s streets besides the buildings: trees, fire hydrants, benches and other furniture, the sidewalks and traffic islands themselves, and the road works under way on the day I saved the city’s list. Each object keeps its source, its values as the source gives them, and the <a href="./s1-streets.html">S1</a> street it stands on.</p>
-<p>S6 decides nothing about what these objects do. A tree may shade a walker or hide a shop; a hydrant forbids a car to stop beside it. Those effects belong to the systems after S6, S7 Walkers and S8 Drivers, and to a later study of what can be seen from each point, where each effect will be written down as an assumption.</p>
+<p>S6 says what stands on Griffintown’s streets besides the buildings: trees, fire hydrants, benches and other furniture, street lights, surveillance cameras, pedestrian crossings, the sidewalks and traffic islands themselves, and the road works under way on the day I saved the city’s list. Each object keeps its source, its values as the source gives them, and the <a href="./s1-streets.html">S1</a> street it stands on.</p>
+<p>S6 decides nothing about what these objects do. A tree may shade a walker or hide a shop; a hydrant forbids a car to stop beside it. Those effects belong to the systems after S6, S7 Walkers and S8 Drivers, where each effect will be written down as an assumption. What a walker can see from where they stand will be part of S7, built from the S4 buildings and these trees.</p>
 </section>
 <section id="what-it-found" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-found">What it found</h2>
 <p class="big-number">
-971 trees · 104 hydrants · 487 sidewalk pieces · 29 road works
+971 trees · 104 hydrants · 806 street lights · 487 sidewalk pieces · 29 road works
 </p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -453,17 +454,49 @@ ul.task-list li input[type="checkbox"] {
 <p>My reading, and it is an interpretation: Griffintown’s street furniture is as new as its towers, and its trees are still small. A view along a street today is probably more open than it will be in twenty years, so any study of what can be seen here describes a moment in a growing place.</p>
 <p>The 286 pieces of furniture, from benches and bicycle racks to drinking fountains, all come from OpenStreetMap, since the city’s furniture file covers only its large parks. Mappers may have missed some (likely). The city lists 29 road works in the area on 16 October 2026, from sidewalk rebuilding on Saint-Martin to construction work on Young that runs until June 2027.</p>
 </section>
+<section id="read-by-a-machine" class="level2">
+<h2 class="anchored" data-anchor-id="read-by-a-machine">Read by a machine</h2>
+<section id="street-lights" class="level3">
+<h3 class="anchored" data-anchor-id="street-lights">Street lights</h3>
+<p>The city publishes no file of its street lights (certain, for its open data catalogue). OpenStreetMap records 72 in the area. Mapillary, where people and the city upload street photos, runs software over every photo that detects objects, street lights among them, and places each one on the map. It found street lights in 888 places here. Detections less than 3 m apart are joined into one light, since a pole often carries two heads, which leaves 764. Counting a light found by either source once, the area has 806.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/s6/s6_sheet_light.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Street lights. White: found in photos by Mapillary’s software; grey: the same, found in no photo since 2023. Pink rings: lamps in OpenStreetMap."><img src="outputs/s6/s6_sheet_light.png" class="img-fluid figure-img" alt="Street lights. White: found in photos by Mapillary’s software; grey: the same, found in no photo since 2023. Pink rings: lamps in OpenStreetMap."></a></p>
+<figcaption>Street lights. White: found in photos by Mapillary’s software; grey: the same, found in no photo since 2023. Pink rings: lamps in OpenStreetMap.</figcaption>
+</figure>
+</div>
+<p>How far can a machine’s reading be trusted? The hydrants offer a test, since the city’s file lists every one. Of the 82 hydrants Mapillary’s software found, 68 stand within 5 m of one of the city’s, half of them less than a metre away, and it found 68 of the city’s 104. Where its photos reach, it is mostly right and well placed, and it misses about a third (likely; some misses may be streets no photo covers).</p>
+<p>The two sources of lights barely meet. Only 30 of OpenStreetMap’s 72 lamps have a detection within 5 m, and most of the others line the east end of Rue des Bassins and Allée des Barges, where the sheet shows almost no detections at all. Those are walking streets beside the basins, and most photos are taken from cars (likely). The machine sees what the camera passed, and a walker’s street may be the one it knows least.</p>
+</section>
+<section id="crossings-and-cameras" class="level3">
+<h3 class="anchored" data-anchor-id="crossings-and-cameras">Crossings and cameras</h3>
+<p>The same software finds surveillance cameras and the paint of pedestrian crossings, and OpenStreetMap records both. The two readers agree on crossings and barely on cameras.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/s6/s6_sheet_photos.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Cameras and crossings. Filled marks: found in photos by Mapillary’s software, fainter when no photo since 2023 shows them. Rings: the same kinds in OpenStreetMap."><img src="outputs/s6/s6_sheet_photos.png" class="img-fluid figure-img" alt="Cameras and crossings. Filled marks: found in photos by Mapillary’s software, fainter when no photo since 2023 shows them. Rings: the same kinds in OpenStreetMap."></a></p>
+<figcaption>Cameras and crossings. Filled marks: found in photos by Mapillary’s software, fainter when no photo since 2023 shows them. Rings: the same kinds in OpenStreetMap.</figcaption>
+</figure>
+</div>
+<p>Crossings are where the machine and the mappers meet. Of the 102 painted crossings Mapillary’s software found, 74 stand within 5 m of a crossing OpenStreetMap records as painted or signalled, half of them less than 2 m away. OpenStreetMap records 481 crossings, 289 of them unmarked, and the photos find 83 of its 192 painted ones. Six painted crossings in the photos stand where OpenStreetMap says there is no paint: a crossing painted since, or a tag nobody updated (guessing).</p>
+<p>The cameras barely overlap: 34 from the photos, 55 in OpenStreetMap, 2 in both. Most of OpenStreetMap’s cameras are tagged as private outdoor cameras along Wellington, Young and Murray, probably mapped by someone reading building fronts (likely), and a few are the city’s traffic cameras at corners of Peel and de la Montagne. The software’s cameras spread across the area, six of them on Rue William. Each reader finds a different set of watchers, and neither finds them all.</p>
+<p>The software also finds poles, and S6 leaves them out. The street lights already say which streets are lit, and the number of poles depends mostly on how close two detections must be to count as one.</p>
+</section>
+<section id="benches-bins-and-racks" class="level3">
+<h3 class="anchored" data-anchor-id="benches-bins-and-racks">Benches, bins and racks</h3>
+<p>For benches, bins and bicycle racks, the machine and the mappers agree too little for either to fill the other’s gaps. Mapillary’s software finds 320 bins where OpenStreetMap has 38, and many are probably household bins set out on collection day (guessing). S6 keeps those detections out of its objects and reports the comparison in <a href="./s6-build.html#tests">its tests</a>.</p>
+</section>
+</section>
 <section id="what-s6-leaves-out" class="level2">
 <h2 class="anchored" data-anchor-id="what-s6-leaves-out">What S6 leaves out</h2>
-<p>The city’s tree inventory covers public trees only, so trees in courtyards and on private land are missing. The city’s canopy model and aerial LiDAR date from 2015, before most of today’s towers and trees, so S6 does not use them. The city’s art data holds a single subsidized mural in the area and none of its own public art collection; the artworks OpenStreetMap records are already among the <a href="./s4-buildings.html">S4</a> places. Street lamps are in no open file I have found for the area.</p>
+<p>The city’s tree inventory covers public trees only, so trees in courtyards and on private land are missing. The city’s canopy model and aerial LiDAR date from 2015, before most of today’s towers and trees, so S6 does not use them. The city’s art data holds a single subsidized mural in the area and none of its own public art collection; the artworks OpenStreetMap records are already among the <a href="./s4-buildings.html">S4</a> places. The city publishes no file of its street lights, so S6 takes them from OpenStreetMap and from photos.</p>
 </section>
 <section id="checkpoints" class="level2">
 <h2 class="anchored" data-anchor-id="checkpoints">Checkpoints</h2>
-<p>Five road works are still listed although their permits ended the day before I saved the file (K01 to K05). They may have been extended, or the list may lag behind the street.</p>
+<p>Five road works are still listed although their permits ended the day before I saved the file (K01 to K05). They may have been extended, or the list may lag behind the street. Thirty-five objects were found only in photos taken before 2023 (K06 to K40): 26 street lights, 6 painted crossings and 3 cameras. Griffintown has been rebuilt street by street since then, and some may be gone.</p>
 </section>
 <section id="in-the-lab" class="level2">
 <h2 class="anchored" data-anchor-id="in-the-lab">In the Lab</h2>
-<p>In the <a href="./lab.html#s6">Lab</a>, the S6 tab draws the sidewalks under the streets, coloured by material or by the year they were built, with every tree, hydrant, piece of furniture and road work on top. Click anything for its source and values. <a href="./s6-build.html">How S6 is built</a> gives the rules and the tests.</p>
+<p>In the <a href="./lab.html#s6">Lab</a>, the S6 tab draws the sidewalks under the streets, coloured by material or by the year they were built, with every tree, hydrant, piece of furniture, light, camera, crossing and road work on top. Click anything for its source and values. <a href="./s6-build.html">How S6 is built</a> gives the rules and the tests.</p>
 
 
 </section>
