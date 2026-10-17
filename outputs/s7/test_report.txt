@@ -1,46 +1,31 @@
 T1  Is every census value S7 uses the one in Statistics Canada's file?
-    3 tracts with residents
+    6 tracts; 216 leaving bands and 540 arriving bands, each by mode
     PASS
 
-T2  Does every home's number of commuters rebuild from its homes, its tract's 2021 rates and the one correction?
-    132 buildings with homes; correction: working from home is 0.716 of what it was in May 2021
+T2  Is the one correction for working from home applied as stated, to every tract and every band?
+    tracts' share working from home x 0.716; people coming here to work x 1.091
     PASS
 
-T3  Does every workplace's number of workers rebuild from its tract's arrivals, the correction, the tract's share inside the area and its premises?
-    124 workplaces; tracts with workers but no workplace (each a checkpoint): 4620071.00
+T3  Does every home's number of commuters, by mode, rebuild from its homes and its tract's rates?
+    132 buildings with homes; 0 use the pooled rates (each a checkpoint)
     PASS
 
-T4  Does every trip carry exactly the walkers its home or workplace sends, and does every walk out have its walk back?
-    34178 walks
+T4  Is each home's nearest metro entrance and bus stop the nearest along S1, worked out again from scratch?
+    every 4th building (33), both kinds of stop
     PASS
 
-T5  Is every hourly shape the census bands spread evenly, adding to 1, with each walk back the walk out moved 9.5 h (residents) or 8.5 h (workers)?
-    12 shapes
+T5  Are the stops the STM's own, with their departures on the day, and is every home counted at its two nearest stops?
+    295 stops with a departure on 20261014
     PASS
 
-T6  Is every route an unbroken walk on walkable S1 segments, and the shortest one?
-    all 34178 routes checked for breaks; every 40th (428) worked out again from scratch
+T6  Does S7 leave out the counts and space syntax, and draw no imagined walk?
     PASS
 
-T7  Do the walkers on each segment in each hour equal the walks that cross it?
-    4536 segment-hours
-    PASS
-
-T8  Does S7 leave out the counts and space syntax, so that S9 can compare with them?
-    PASS
-
-T9  What does S7 give, and what does it rest on? (report)
-    132 buildings with 11954 homes send 7196.0 commuters a weekday; 124 workplaces receive 4606.8 workers
-    resident bus: 1017.0 walks a day (out and back)
-    resident metro: 1988.2 walks a day (out and back)
-    resident walk: 3712.4 walks a day (out and back)
-    worker bus: 1013.9 walks a day (out and back)
-    worker metro: 1820.3 walks a day (out and back)
-    worker train: 199.0 walks a day (out and back)
-    busiest hours by walkers on segments: 8h, 17h, 7h
-    segments with walkers: 189; S7 sends no one along the others
-    walkers to work who work here: 21%; the others go downtown
-    the census week was May 2021, when many people worked from home; S7 corrects with one number for Canada
-    visitors to shops and cafés, schoolchildren and walks for their own sake are not in S7 yet
+T7  What does S7 give? (report)
+    132 buildings with 11954 homes: about 7196 residents commute on a weekday today
+    by mode: car 47%, walk 26%, metro 14%, bus 7%, bicycle 3%, other 3%, train 0%
+    people who work in the three main tracts, today: about 4997 (whole tracts)
+    walk to the nearest metro entrance: median 724 m over the buildings with homes; longest 1188 m
+    the census week was May 2021; S7 corrects with one number for Canada
 
 ALL PASS

@@ -1,0 +1,48 @@
+T1  Every outline whose centre is in the study area has one row, or is listed as a part of the outline around it
+    296 buildings, 1 outlines that are parts, recounted from the OSM file
+    PASS
+
+T2  A missing value stays empty and carries a reason; a value always names its source
+    PASS
+
+T3  Every count can be rebuilt from trace.csv and the source files
+    properties, dwellings and premises, recomputed from the tax roll itself
+    PASS
+
+T4  Nothing is lost: every property and premises in the area is either in a building or unplaced, once
+    9421 properties, 247 premises
+    PASS
+
+T5  Each use follows its stated source
+    roll: the commonest class among its properties, condo parking and storage left out, a tie settled by floor area; osm_tag: the building tag
+    PASS
+
+T6  Every building is linked to a walkable S1 street within 80 m, or says why not
+    the link is an assumption (entrances unknown); 6 links are longer than 30 m: w1093571773 43.4 m from Rue Richmond; w1163554942 46.1 m from Rue des Seigneurs; w1175945703 31.2 m from Rue Notre-Dame Ouest; w1344783765 35.8 m from Rue Guy; w347458840 33.2 m from Boulevard Georges-Vanier; w614137698 43.1 m from Rue des Seigneurs; 1 with no street within 80 m: w700571090 (Hangar 1825)
+    PASS
+
+T7  Every place is in or next to its building, or says why it has none; a repeat points to its twin
+    610 places; next to = within 15 m; 52 survey rows repeat an OpenStreetMap place
+    PASS
+
+T9  No building is lower than its tallest known part
+    9 buildings take their storeys from an OSM part (a tower on its podium)
+    PASS
+
+T10 Each roll row sits on its lot: in the building its lot holds, or the address point decides and says so
+    lot file lots_study_2026-10-15.json; placed by lot+address 7450, lot 987, address 468, inside 43, near 4, lot overlap 3
+    PASS
+
+T8  Coverage (information, never a failure)
+    buildings 296: use from the roll 188, from the OSM tag 74, unknown 34
+    storeys from the roll 101, from the OSM outline 113, from an OSM part 9, unknown 73
+    dwellings 11954 in 132 buildings
+    tax-roll properties: 8955 placed, 466 unplaced; 15013 rows on the study streets found no address point; 167 duplicate rows dropped
+    places 610 rows, 558 once each: in a building 543, outside 67; with opening hours 83
+     - unplaced: 415 x its lot holds 2 buildings and its address point stands in none of them
+     - unplaced: 43 x no address point, and its lot holds no building outline
+     - unplaced: 7 x its lot holds 2 buildings and it has no address point to say which
+     - unplaced: 2 x no building outline within 15 m
+     - unplaced: 1 x its lot holds 5 buildings and it has no address point to say which
+
+ALL PASS

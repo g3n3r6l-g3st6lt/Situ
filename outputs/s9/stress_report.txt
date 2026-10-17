@@ -1,0 +1,26 @@
+X1  Same input twice
+    identical: True   PASS
+
+X2  Reading 'open': how much longer the most enclosed street feels (S9 uses 0.5)
+    0.25:  12% of walkers change route (434); median walk 584 m; share of counted pedestrians 27% at 7 h, 23% at 8 h; rho with walking choice 0.255
+    0.5 :  13% of walkers change route (460); median walk 587 m; share of counted pedestrians 27% at 7 h, 23% at 8 h; rho with walking choice 0.259
+    1.0 :  14% of walkers change route (499); median walk 589 m; share of counted pedestrians 25% at 7 h, 21% at 8 h; rho with walking choice 0.203
+    2.0 :  18% of walkers change route (629); median walk 594 m; share of counted pedestrians 25% at 7 h, 21% at 8 h; rho with walking choice 0.195
+    (where several routes are almost as short, the view decides; the grid leaves few such choices)
+
+X3  Where walkers to work outside the area are sent (S9: Place Ville Marie)
+    Place Ville Marie    : doors J166 239, J187 228, J167 225; J181 at 7 and 8 h: 0; share of counted pedestrians 27% at 7 h, 22% at 8 h; rho with walking choice 0.238
+    Square-Victoria-OACI : doors J187 523, J172 256, J170 135; J181 at 7 and 8 h: 0; share of counted pedestrians 30% at 7 h, 26% at 8 h; rho with walking choice 0.259
+    Peel                 : doors J187 287, J167 260, J178 197; J181 at 7 and 8 h: 0; share of counted pedestrians 27% at 7 h, 22% at 8 h; rho with walking choice 0.255
+
+X4  Share of resident walkers who work inside the area (S9: q = 0.1887)
+    0.0   : share of counted pedestrians 26% at 7 h, 21% at 8 h; rho with walking choice 0.161
+    0.1887: share of counted pedestrians 27% at 7 h, 22% at 8 h; rho with walking choice 0.239
+    0.5   : share of counted pedestrians 29% at 7 h, 24% at 8 h; rho with walking choice 0.276
+    1.0   : share of counted pedestrians 32% at 7 h, 28% at 8 h; rho with walking choice 0.307
+
+X5  Reading 'straight': degrees of turning one metre is worth (S9: 0, length only breaks ties)
+    0.0  :  34% change route; 15% walk over 25 % further than the shortest; median walk 698 m; share of counted pedestrians 27% at 7 h, 23% at 8 h; rho with walking choice 0.288
+    0.02 :  33% change route; 13% walk over 25 % further than the shortest; median walk 682 m; share of counted pedestrians 26% at 7 h, 22% at 8 h; rho with walking choice 0.291
+    0.1  :  28% change route; 7% walk over 25 % further than the shortest; median walk 628 m; share of counted pedestrians 24% at 7 h, 20% at 8 h; rho with walking choice 0.3
+    (at 0.1 a right angle is worth 900 m of walking)

@@ -1,0 +1,34 @@
+X1  Same input twice
+    identical: True   PASS
+
+X2  Shake every S1 point by up to 0.3 m, then 0.8 m (fixed random seed)
+    +/-0.3 m: 1 status changes, largest ped_NACH_800 change 0.0274  S259 matched->matched_split
+    +/-0.8 m: 6 status changes, largest ped_NACH_800 change 0.0823  S194 matched->partial, S195 matched_split->matched, S196 matched->matched_split, S202 matched->matched_split, S205 matched->matched_split, S259 matched->matched_split
+    (a small value change is expected: a shaken point can fall on the next piece of a split street)
+
+X3  Matching distance (MATCH_TOL_M, now 1.0 m)
+     0.05 m: 251 matched, 6 matched_split, 0 partial, 7 missing   | vs 1 m: 0 status changes, largest change 0.0000
+      0.1 m: 251 matched, 6 matched_split, 0 partial, 7 missing   | vs 1 m: 0 status changes, largest change 0.0000
+     0.25 m: 251 matched, 6 matched_split, 0 partial, 7 missing   | vs 1 m: 0 status changes, largest change 0.0000
+      0.5 m: 251 matched, 6 matched_split, 0 partial, 7 missing   | vs 1 m: 0 status changes, largest change 0.0000
+        1 m: 251 matched, 6 matched_split, 0 partial, 7 missing   | vs 1 m: 0 status changes, largest change 0.0000
+        2 m: 251 matched, 6 matched_split, 0 partial, 7 missing   | vs 1 m: 0 status changes, largest change 0.0000
+        5 m: 251 matched, 6 matched_split, 0 partial, 7 missing   | vs 1 m: 0 status changes, largest change 0.0000
+       10 m: 251 matched, 6 matched_split, 0 partial, 7 missing   | vs 1 m: 0 status changes, largest change 0.0000
+
+X4  Without the same-kind rule (any analysed line within the distance may give values)
+    shake 0.0 m, distance 1 m: 0 segments take at least one test point from another street, largest ped_NACH_800 change 0.0000
+    shake 0.8 m, distance 1 m: 142 segments take at least one test point from another street, largest ped_NACH_800 change 0.2449
+    shake 0.8 m, distance 5 m: 142 segments take at least one test point from another street, largest ped_NACH_800 change 0.2449
+    (the rule only matters once geometry stops lining up exactly; it keeps a street from taking a crossing street's values)
+
+X5  Spacing of test points (MATCH_STEP_M, now 1 m)
+    every 0.25 m: 0 status changes, largest ped_NACH_800 change 0.0025
+    every 5 m: 1 status changes, largest ped_NACH_800 change 0.0104
+
+X6  Shake further, with and without the same-kind rule (for the chart)
+    shake 0 m: 0 segments change by more than 0.005 with the rule, 0 without
+    shake 0.25 m: 1 segments change by more than 0.005 with the rule, 4 without
+    shake 0.5 m: 1 segments change by more than 0.005 with the rule, 27 without
+    shake 0.8 m: 2 segments change by more than 0.005 with the rule, 45 without
+    shake 1.2 m: 2 segments change by more than 0.005 with the rule, 57 without

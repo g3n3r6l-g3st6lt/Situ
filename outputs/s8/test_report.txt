@@ -1,0 +1,29 @@
+T1  Does every walkable segment inside the area have a viewpoint at least every 10 m or so?
+    1798 viewpoints on 231 segments
+    PASS
+
+T2  Does every sight line stop at the first building edge or at the radius, and does the area follow? (worked out again)
+    every 25th viewpoint (72), 360 sight lines each
+    PASS
+
+T3  Do the measures of every viewpoint agree with each other?
+    PASS
+
+T4  Is every segment the mean of its viewpoints, with its middle view kept for the Lab?
+    231 segments
+    PASS
+
+T5  Is every viewpoint inside a building, and every view beyond the mapped buildings, a checkpoint, and nothing else?
+    1 checkpoints
+    PASS
+
+T6  Does S8 measure from the map alone, leaving out the counts, space syntax and the trees?
+    PASS
+
+T7  What does S8 give? (report)
+    1798 viewpoints, 360 sight lines each, followed up to 300 m
+    area seen: median 32458 m2; 10th percentile 9478, 90th 108976
+    viewpoints with at least one sight line open to 300 m: 95%
+    14 OpenStreetMap buildings have no outline in the file and block nothing
+
+ALL PASS

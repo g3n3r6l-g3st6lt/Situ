@@ -92,82 +92,238 @@
     "href": "space-syntax.html#why-i-use-it",
     "title": "What space syntax is",
     "section": "Why I use it",
-    "text": "Why I use it\n\nA measuring stick\nMy agents never read space syntax values. I compare their movement with the values afterwards, so the comparison is a real test. Agents that preferred high-scoring streets would make it circular: the answer would go in and come back out.\nChoice is already a route model built on the least-turning route between every pair of segments (Turner 2007, p. 544). Walkers who took those routes, spread evenly over all pairs, would match choice by construction, and the match would prove nothing. So the walkers in S7 pick routes for their own reasons, such as where they are going and the time of day. Space syntax enters Situ only at the end, in S9 Observer.\n\n\nWhat the comparison can show\n\n\n\n\n\nflowchart LR\n  SS[Space syntax&lt;br/&gt;layout only]:::data --&gt; CMP{Compare&lt;br/&gt;street by street}:::test\n  SIM[Simulated walkers&lt;br/&gt;S7]:::step --&gt; CMP\n  REAL[Real counts&lt;br/&gt;Ville de Montréal]:::data --&gt; CMP\n  PLAY[Player traces&lt;br/&gt;in the game]:::step --&gt; CMP\n  CMP --&gt; Q[Where layout accounts for movement,&lt;br/&gt;and where something else does]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\n\nSimulationReal countsPlayers\n\n\nWhere the walkers and choice agree, the layout alone may explain the movement. Where they disagree, something else is at work, such as a building or a rule.\n\n\nThe city’s movement counts check the model against reality, and they are thin: seven S1 junctions, one to three days each, between February 2024 and May 2026. Enough to raise a warning, too little to prove anything.\n\n\nIn the game I can watch whether players drift toward integrated streets, which bears on my research question about wayfinding.\n\n\n\n\n\nWhy this method\nIt runs in QGIS on the city’s open street file, and the same file with the same settings gives the same values. Forty years of studies use it, so I can set Griffintown beside other cities. It was built to study how layout and social life relate, the subject of my research. Its blind spots are well documented, and each one falls to another Situ system.\n\n\nWhat this means for my data\nValues belong to the network they were calculated on. A missing path makes its neighbours look less connected than they are, so I added the city’s off-street paths before the analysis (The walking network).\nThe edge of the map also distorts: streets near it look peripheral only because the map stops there (Ratti 2004, p. 496; van Nes & Yamu 2021, p. 51). So the analysis covers the whole island, and I cut Griffintown out of the results afterwards.",
+    "text": "Why I use it\n\nA measuring stick\nMy agents never read space syntax values. I compare their movement with the values afterwards, so the comparison is a real test. Agents that preferred high-scoring streets would make it circular: the answer would go in and come back out.\nChoice is already a route model built on the least-turning route between every pair of segments (Turner 2007, p. 544). Walkers who took those routes, spread evenly over all pairs, would match choice by construction, and the match would prove nothing. So the walkers S9 imagines pick routes for their own reasons, such as where they are going and the time of day. Space syntax enters Situ only at the end, in S9 Observer.\n\n\nWhat the comparison can show\n\n\n\n\n\nflowchart LR\n  SS[Space syntax&lt;br/&gt;layout only]:::data --&gt; CMP{Compare&lt;br/&gt;street by street}:::test\n  SIM[Imagined walkers&lt;br/&gt;S9]:::step --&gt; CMP\n  REAL[Real counts&lt;br/&gt;Ville de Montréal]:::data --&gt; CMP\n  PLAY[Player traces&lt;br/&gt;in the game]:::step --&gt; CMP\n  CMP --&gt; Q[Where layout accounts for movement,&lt;br/&gt;and where something else does]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\n\nSimulationReal countsPlayers\n\n\nWhere the walkers and choice agree, the layout alone may explain the movement. Where they disagree, something else is at work, such as a building or a rule.\n\n\nThe city’s movement counts check the model against reality, and they are thin: seven S1 junctions, one to three days each, between February 2024 and May 2026. Enough to raise a warning, too little to prove anything.\n\n\nIn the game I can watch whether players drift toward integrated streets, which bears on my research question about wayfinding.\n\n\n\n\n\nWhy this method\nIt runs in QGIS on the city’s open street file, and the same file with the same settings gives the same values. Forty years of studies use it, so I can set Griffintown beside other cities. It was built to study how layout and social life relate, the subject of my research. Its blind spots are well documented, and each one falls to another Situ system.\n\n\nWhat this means for my data\nValues belong to the network they were calculated on. A missing path makes its neighbours look less connected than they are, so I added the city’s off-street paths before the analysis (The walking network).\nThe edge of the map also distorts: streets near it look peripheral only because the map stops there (Ratti 2004, p. 496; van Nes & Yamu 2021, p. 51). So the analysis covers the whole island, and I cut Griffintown out of the results afterwards.",
     "crumbs": [
       "Method",
       "What space syntax is"
     ]
   },
   {
-    "objectID": "s7-walkers.html",
-    "href": "s7-walkers.html",
-    "title": "S7 Walkers",
+    "objectID": "s9-observer.html",
+    "href": "s9-observer.html",
+    "title": "S9 Observer",
     "section": "",
-    "text": "S7 says who walks where and when on an ordinary weekday. It starts with the two groups the census describes: the people who live here and go out to work, and the people who come here to work. For each building with homes and each workplace, it estimates how many people walk, at what hour, to which stop or street, and along which S1 streets.\nS7 reads neither the city’s counts nor space syntax. Both stay out so that S9 can compare its walkers with them. Visitors to shops and cafés, children going to school and walks taken for their own sake are not here yet. They will come as layers of their own, each with its assumptions written down. What a walker can see along the way, the perception part of S7, comes after them.",
+    "text": "S9 is the mother-analyzer. The systems before it hold the desk’s open data with as few assumptions as I could manage. S9 is where I imagine: it puts the systems together into flows of people, and only then compares those flows with what the city counted and with space syntax.\nImagining needs rules, and S9 writes every one of them in a ledger with its source, or marks it as an assumption. It builds several rival readings, each changing a single rule, so a difference between them points at that rule. No reading is tuned to the counts or to space syntax, and a test checks this by scrambling both and finding that nothing moves.\nS9 grows in slices. The first is a weekday morning on foot.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
-      "S7 Walkers"
+      "S9 Observer",
+      "S9 Observer"
     ]
   },
   {
-    "objectID": "s7-walkers.html#what-s7-does",
-    "href": "s7-walkers.html#what-s7-does",
-    "title": "S7 Walkers",
+    "objectID": "s9-observer.html#what-s9-does",
+    "href": "s9-observer.html#what-s9-does",
+    "title": "S9 Observer",
     "section": "",
-    "text": "S7 says who walks where and when on an ordinary weekday. It starts with the two groups the census describes: the people who live here and go out to work, and the people who come here to work. For each building with homes and each workplace, it estimates how many people walk, at what hour, to which stop or street, and along which S1 streets.\nS7 reads neither the city’s counts nor space syntax. Both stay out so that S9 can compare its walkers with them. Visitors to shops and cafés, children going to school and walks taken for their own sake are not here yet. They will come as layers of their own, each with its assumptions written down. What a walker can see along the way, the perception part of S7, comes after them.",
+    "text": "S9 is the mother-analyzer. The systems before it hold the desk’s open data with as few assumptions as I could manage. S9 is where I imagine: it puts the systems together into flows of people, and only then compares those flows with what the city counted and with space syntax.\nImagining needs rules, and S9 writes every one of them in a ledger with its source, or marks it as an assumption. It builds several rival readings, each changing a single rule, so a difference between them points at that rule. No reading is tuned to the counts or to space syntax, and a test checks this by scrambling both and finding that nothing moves.\nS9 grows in slices. The first is a weekday morning on foot.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
-      "S7 Walkers"
+      "S9 Observer",
+      "S9 Observer"
     ]
   },
   {
-    "objectID": "s7-walkers.html#what-it-found",
-    "href": "s7-walkers.html#what-it-found",
-    "title": "S7 Walkers",
+    "objectID": "s9-observer.html#the-first-slice-a-weekday-morning-on-foot",
+    "href": "s9-observer.html#the-first-slice-a-weekday-morning-on-foot",
+    "title": "S9 Observer",
+    "section": "The first slice: a weekday morning on foot",
+    "text": "The first slice: a weekday morning on foot\nBetween 6 and 10 h, S9 sends four kinds of walker across the S1 streets:\n\n\n\nWho\nFrom\nTo\nPeople\n\n\n\n\nresidents who walk to work outside the area\nhome (S7)\nPlace Ville Marie, through the door that makes the walk shortest\n1,134\n\n\nresidents who walk to work inside it\nhome\na building with business premises (S4)\n262\n\n\nresidents who ride\nhome\nthe nearest metro entrance or bus stop\n1,069\n\n\nworkers who ride in\nthe entrance or stop nearest their workplace\nthe workplace\n1,067\n\n\n\nThat makes about 3,500 walks, the most of them (about 1,500) between 8 and 9 h. Three readings route them:\n\nshortest: the shortest walk.\nopen: enclosed streets feel longer, by up to half, using the area seen from S8.\nstraight: the route with the fewest degrees of turning, which Hillier and Iida (2005) found fits observed movement in London better than the shortest one.",
+    "crumbs": [
+      "Method",
+      "S9 Observer",
+      "S9 Observer"
+    ]
+  },
+  {
+    "objectID": "s9-observer.html#what-it-found",
+    "href": "s9-observer.html#what-it-found",
+    "title": "S9 Observer",
     "section": "What it found",
-    "text": "What it found\n\nabout 4,900 people walk a weekday commute · peak at 8h, again at 17h\n\n\n\n\nWalkers at 8h, the busiest hour. Each street is as thick as the walkers on it; squares are the buildings with homes (grey) and the workplaces (white); pink dots are the bus stops used inside the area.\n\n\nThe 11,954 homes in S4 send about 7,200 residents out to work on a weekday, and about 4,600 people come here to work (likely, for the reasons under What it rests on). Of the residents who commute, about a quarter walk the whole way, and about a fifth walk to the metro or a bus. Most of the people who work here come by car, so only a third of them walk on Griffintown’s streets at all, from a metro entrance or a bus stop.\nTwo streets carry the commute: Peel and de la Montagne, which lead north towards downtown and towards the Bonaventure and Lucien-L’Allier metro stations. On one stretch of Peel, about 290 walkers pass between 8 and 9h. Bonaventure takes about 1,900 walks a day, Lucien-L’Allier about 1,500 and Georges-Vanier, to the west, about 500.\n\n\n\nA weekday, hour by hour: walkers starting a walk, residents above and the people who work here below, by how they travel on from the street.\n\n\nMy reading, and it is an interpretation: the commute uses Griffintown as a passage to downtown, along its north-south streets. The Lachine Canal path carries no commuter at all in S7, so whatever life it has on a weekday comes from walks S7 does not hold yet. That gap is itself something to compare later with the counts and with what people say about the place.",
+    "text": "What it found\n\ncommuters account for about a quarter of the pedestrians counted at 7 and 8 h · the busiest counted junction gets none of them\n\n\n\n\nThe morning’s commuters on each street under the reading “shortest”, with the junctions the city counted (pink circles, sized by pedestrians at 8 h).\n\n\nAcross the seven counted junctions, S9’s commuters pass 22 to 27 % of the pedestrians counted, whichever reading routes them (certain, for these rules). The rest are people this slice does not hold: errands, school runs, dog walks, visitors and people crossing from beyond the area. The counts give the size of that gap; the next slices of S9 will try to fill it.\nThe busiest counted junction, Robert-Bourassa at Saint-Jacques, saw 868 pedestrians at 8 h, and no commuter of S9 passes there in any reading or any stress test. It lies just north of the area, beyond the doors that S9’s walkers take towards downtown and the metro. Whoever walks there comes from outside this slice: probably from Old Montréal or from beyond the area to the east (guessing). It is the clearest question this slice raises, and it is listed as a checkpoint.\nWhere the commuters do pass, they explain more: half to three quarters of the count at Guy and Ottawa, the one junction counted on three days, and a third to a half at de la Montagne and Notre-Dame, the road to Lucien-L’Allier and Bonaventure.\n\n\n\nWhat the commuters explain at each counted junction at 8 h, under each reading.\n\n\nThe four junctions on Wellington were counted on the same February morning. The counts there are even, from 221 to 303 pedestrians at 8 h. The shortest routes crowd the commuters onto Rue Young (164) and leave Rue du Shannon almost empty (18), a ninefold spread; the fewest-turns routes spread them out to a threefold one. Four junctions on one day settle nothing, so I read this as a lead: walkers here may use the parallel streets more evenly than the shortest walk predicts (likely, as a lead).\n\n\n\nWhere the readings move the walkers away from the shortest routes: pink where more walk, grey where fewer.\n\n\nThe reading “open” changes the route of 13 % of the walkers, mostly from Rue Young to Rue Peel, which is more open, and it adds three metres to the median walk. The reading “straight” changes 34 % and sends some on long detours: 15 % of the walkers go more than a quarter further than they need to. In a grid this tight, the view matters little to a commuter’s route, and a pure count of turns sends walkers further than people would plausibly accept.\nAgainst space syntax, the morning’s flows agree only weakly with walking choice: rank correlation 0.24 for the shortest routes and 0.29 for the fewest turns (certain, as computed). Choice counts every route between every pair of streets. The morning sends everyone towards a few doors and stations, so the flows bunch on Peel and de la Montagne where choice is spread out.\nMy reading, and it is an interpretation: in the morning, Griffintown’s streets carry commuters mostly as a route out, towards the stations and downtown, and the larger part of the pedestrians counted are doing something else.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
-      "S7 Walkers"
+      "S9 Observer",
+      "S9 Observer"
     ]
   },
   {
-    "objectID": "s7-walkers.html#what-it-rests-on",
-    "href": "s7-walkers.html#what-it-rests-on",
-    "title": "S7 Walkers",
+    "objectID": "s9-observer.html#what-it-rests-on",
+    "href": "s9-observer.html#what-it-rests-on",
+    "title": "S9 Observer",
     "section": "What it rests on",
-    "text": "What it rests on\nThe census of May 2021 is the only open source that says, tract by tract, when people leave for work, when they arrive and how they travel (certain). Its week fell during the pandemic, and 42 to 56 % of the employed residents of the three tracts worked from home. Across Canada, working from home fell from 24 % in that week to 17 % in May 2025. S7 applies that fall to each tract once, so a tract where 55 % worked from home now counts about 39 %. That is my one correction, and every number of walkers moves with it; the stress test shows by how much.\nThe census also probably undercounts transit and walking today: in 2021 people avoided buses and the metro, and the regional travel survey of 2023 shows walking up 6 points in central Montréal since 2018 (likely). So S7 probably shows too few walkers, and I would rather say so than guess a second correction. The 2026 census should replace all of this, but its commuting results will likely come out after this prototype ends.\nThe number of homes is today’s, from the tax roll in S4, so the towers built since 2021 are counted. Where they go and which streets they take are assumptions, set out in How S7 is built.",
+    "text": "What it rests on\nEverything above stands on the ledger: five pieces of evidence and twelve assumptions. The ones that move the results most are where walkers to work outside the area go (A01), how many resident walkers work inside it (A02) and which stop riders choose (A04). The stress tests move each of them.\nThe counts are thin: seven junctions, six of them counted on a single day, four of them on Wellington on the same day in February 2024. They can show where the imagined morning falls short; they cannot rank the readings, and S9 does not try.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
-      "S7 Walkers"
+      "S9 Observer",
+      "S9 Observer"
     ]
   },
   {
-    "objectID": "s7-walkers.html#checkpoints",
-    "href": "s7-walkers.html#checkpoints",
-    "title": "S7 Walkers",
+    "objectID": "s9-observer.html#checkpoints",
+    "href": "s9-observer.html#checkpoints",
+    "title": "S9 Observer",
     "section": "Checkpoints",
-    "text": "Checkpoints\nThe census places about 44 workers in a corner of a fourth tract inside the area, where S4 lists no business premises (K01). S7 cannot place them yet.",
+    "text": "Checkpoints\nTwo. People arrive to work in the small part of tract 4620071.00 inside the area, and S4 lists no building with business premises there. And nobody in S9 walks through Robert-Bourassa at Saint-Jacques, the busiest junction counted.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
-      "S7 Walkers"
+      "S9 Observer",
+      "S9 Observer"
     ]
   },
   {
-    "objectID": "s7-walkers.html#in-the-lab",
-    "href": "s7-walkers.html#in-the-lab",
-    "title": "S7 Walkers",
+    "objectID": "s9-observer.html#in-the-lab",
+    "href": "s9-observer.html#in-the-lab",
+    "title": "S9 Observer",
     "section": "In the Lab",
-    "text": "In the Lab\nIn the Lab, the S7 tab draws every street as thick as the walkers on it in the chosen hour. Play the day to watch the morning and evening commutes, or show only residents or only the people who work here. Click a street for its walkers by group.",
+    "text": "In the Lab\nIn the Lab, the Observer tab draws the morning’s walkers under each reading and hour, with each counted junction labelled with commuters against pedestrians counted. Click a street for its walkers by reading and hour, or a counted junction for the comparison. The side holds the whole ledger.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
-      "S7 Walkers"
+      "S9 Observer",
+      "S9 Observer"
+    ]
+  },
+  {
+    "objectID": "s8-views.html",
+    "href": "s8-views.html",
+    "title": "S8 Views",
+    "section": "",
+    "text": "S8 says what a person standing on a walkable street can see, measured on the open map. Every 10 m along each walkable S1 street inside the area, it sends 360 sight lines out until each one meets a building outline or reaches 300 m. The shape they enclose is an isovist, the part of the city visible from one point (Benedikt 1979). S8 gives each viewpoint its area, the longest and the mean sight line, and how compact the shape is, and each street the mean of its viewpoints.\nS8 measures and imagines nothing. Who looks, and what an open or closed view does to a walk, belong to S9. Like S7, S8 reads neither the city’s counts nor space syntax, so that S9 can compare with both.",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "S8 Views"
+    ]
+  },
+  {
+    "objectID": "s8-views.html#what-s8-does",
+    "href": "s8-views.html#what-s8-does",
+    "title": "S8 Views",
+    "section": "",
+    "text": "S8 says what a person standing on a walkable street can see, measured on the open map. Every 10 m along each walkable S1 street inside the area, it sends 360 sight lines out until each one meets a building outline or reaches 300 m. The shape they enclose is an isovist, the part of the city visible from one point (Benedikt 1979). S8 gives each viewpoint its area, the longest and the mean sight line, and how compact the shape is, and each street the mean of its viewpoints.\nS8 measures and imagines nothing. Who looks, and what an open or closed view does to a walk, belong to S9. Like S7, S8 reads neither the city’s counts nor space syntax, so that S9 can compare with both.",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "S8 Views"
+    ]
+  },
+  {
+    "objectID": "s8-views.html#what-it-found",
+    "href": "s8-views.html#what-it-found",
+    "title": "S8 Views",
+    "section": "What it found",
+    "text": "What it found\n\n1,798 viewpoints · median area seen 32,000 m² · 9,500 to 109,000 m² for the middle 80 %\n\n\n\n\nEvery walkable street inside the area, coloured by the mean area seen from its viewpoints: dark the most enclosed, light pink the most open. Grey streets are not walkable or lie outside the area.\n\n\nThe views split the neighbourhood in two (certain, for the map S8 reads). The small streets of the old grid, Eleanor, du Shannon, Barré, Murray and Young, see between 5,000 and 13,000 m² from a typical viewpoint. The edge along the canal, Rue Smith and Boulevard Robert-Bourassa see between 90,000 and 115,000 m². Rue Wellington, Rue Ann and Rue des Bassins sit in between, at about 50,000 m².\nAlmost every view is a corridor. From 95 % of the viewpoints at least one sight line runs the full 300 m, along the street itself, and the median compactness is 0.10, where a circle would give 1. The canal path is the most rounded at about 0.2, because the water opens the view sideways.\n\n\n\nThree views drawn whole: from the most enclosed street (Rue Payette), the median one (Rue des Bassins) and the most open (Rue de la Commune Ouest).\n\n\nA street’s mean hides how its view changes as one walks. On 49 of the 231 segments, the most open viewpoint sees more than three times the closest one, usually where the street crosses another or passes an empty lot.\nMy reading, and it is an interpretation: the old grid keeps the narrow, long views of a nineteenth-century working district, and the redevelopment along the canal opened wide views towards the water and the expressways. Whether people walk differently through the two is a question for S9 and the counts.",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "S8 Views"
+    ]
+  },
+  {
+    "objectID": "s8-views.html#what-it-rests-on",
+    "href": "s8-views.html#what-it-rests-on",
+    "title": "S8 Views",
+    "section": "What it rests on",
+    "text": "What it rests on\nOnly the building outlines of OpenStreetMap stop a sight line. Trees, fences, parked trucks and the rail and expressway structures at the south-east corner are not in that file, so they stop nothing, and the views there are wider than a person would see (likely). Trees are left out on purpose: the city records their trunks, and nothing open says how wide their crowns are today. The view is flat, at eye level, with no height: a low wall and a tower block a sight line the same way.\nA building missing from OpenStreetMap opens a view that does not exist. The stress test left out one outline in ten at random: the median area seen grew by 13 to 78 %, and in each draw one street saw between three and nearly eight times as much. The order of the streets held better (rank correlation 0.90 to 0.99). So I trust the order of the streets more than any single area (likely).\nThe 300 m reach is a choice. With 100 m or 500 m the areas change a lot, while the order of the streets stays close (0.95 and 0.99).",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "S8 Views"
+    ]
+  },
+  {
+    "objectID": "s8-views.html#checkpoints",
+    "href": "s8-views.html#checkpoints",
+    "title": "S8 Views",
+    "section": "Checkpoints",
+    "text": "Checkpoints\nOne. On Rue Barré (S006), a viewpoint falls inside a building outline, where the street probably passes under a building or the outline is drawn over it. Its view is measured from inside the outline, so it is close to zero and pulls the street’s mean down.",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "S8 Views"
+    ]
+  },
+  {
+    "objectID": "s8-views.html#in-the-lab",
+    "href": "s8-views.html#in-the-lab",
+    "title": "S8 Views",
+    "section": "In the Lab",
+    "text": "In the Lab\nIn the Lab, the Views tab colours every walkable street by the area seen, the longest sight line or the compactness. Click a street to draw the view from its middle viewpoint and read its measures.",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "S8 Views"
+    ]
+  },
+  {
+    "objectID": "s7-commuters.html",
+    "href": "s7-commuters.html",
+    "title": "S7 Commuters",
+    "section": "",
+    "text": "S7 says, from the open data, who commutes from Griffintown and to it on an ordinary weekday: how many residents of each building go out to work, how they travel, at what hour they leave, and how far each home is from the metro and the bus along the S1 streets. For the people who come here to work, it gives how they come and when they arrive.\nS7 draws no walk. Where each person goes, by which street, and when they come back are not in any open file, and imagining them belongs to S9, which will tell the neighbourhood’s story from all the systems. S7 also reads neither the city’s counts nor space syntax, so that S9 can compare with them. What a walker can see from the street is S8.",
+    "crumbs": [
+      "Method",
+      "S7 Commuters",
+      "S7 Commuters"
+    ]
+  },
+  {
+    "objectID": "s7-commuters.html#what-s7-does",
+    "href": "s7-commuters.html#what-s7-does",
+    "title": "S7 Commuters",
+    "section": "",
+    "text": "S7 says, from the open data, who commutes from Griffintown and to it on an ordinary weekday: how many residents of each building go out to work, how they travel, at what hour they leave, and how far each home is from the metro and the bus along the S1 streets. For the people who come here to work, it gives how they come and when they arrive.\nS7 draws no walk. Where each person goes, by which street, and when they come back are not in any open file, and imagining them belongs to S9, which will tell the neighbourhood’s story from all the systems. S7 also reads neither the city’s counts nor space syntax, so that S9 can compare with them. What a walker can see from the street is S8.",
+    "crumbs": [
+      "Method",
+      "S7 Commuters",
+      "S7 Commuters"
+    ]
+  },
+  {
+    "objectID": "s7-commuters.html#what-it-found",
+    "href": "s7-commuters.html#what-it-found",
+    "title": "S7 Commuters",
+    "section": "What it found",
+    "text": "What it found\n\nabout 7,200 residents commute · a quarter on foot · 71 % of homes are more than 800 m from a metro entrance\n\n\n\n\nEvery building with homes, sized by its residents who commute on a weekday today; the white dot inside is those who walk all the way to work. Grey squares are bus stops.\n\n\nThe 11,954 homes in S4 send about 7,200 residents out to work on a weekday. About a quarter walk all the way, a fifth take the metro or a bus, and close to half drive (likely, for the reasons under What it rests on). Most leave between 7 and 9 in the morning.\nNo metro entrance stands inside the area. Half of the homes are more than 940 m from the nearest one along the streets, and 71 % are more than 800 m away, while no home is more than about 400 m from a bus stop (certain, for the streets of S1). Bonaventure is the nearest metro for half of the homes, Lucien-L’Allier for a third and Georges-Vanier for the rest.\n\n\n\nWhen commuters leave and arrive, in the census’s own hour bands: residents leaving for work above, people arriving to work here below, by mode.\n\n\nAbout 5,000 people work in the three tracts that cover most of the area. Close to 60 % of them come by car, a fifth by metro and fewer than one in ten on foot. They arrive a little later than the residents leave, most of them between 7:30 and 10.\nMy reading, and it is an interpretation: Griffintown’s residents walk to work far more than the people who work here, and its homes are close to buses and far from the metro. The neighbourhood seems to send walkers out and receive drivers in.",
+    "crumbs": [
+      "Method",
+      "S7 Commuters",
+      "S7 Commuters"
+    ]
+  },
+  {
+    "objectID": "s7-commuters.html#what-it-rests-on",
+    "href": "s7-commuters.html#what-it-rests-on",
+    "title": "S7 Commuters",
+    "section": "What it rests on",
+    "text": "What it rests on\nThe census of May 2021 is the only open source that says, tract by tract, when people leave for work, when they arrive and how they travel (certain). Its week fell during the pandemic, and 42 to 56 % of the employed residents of the three tracts worked from home. Across Canada, working from home fell from 24 % in that week to 17 % in May 2025. S7 applies that fall to each tract once, so a tract where 55 % worked from home now counts about 39 %. That is its one correction, and every number of commuters moves with it; the stress test shows by how much. The shares by mode and by hour stay the census’s own.\nIn 2021 people probably avoided transit, so the shares by mode probably give the car too much today (likely). The 2026 census should replace all of this, but its commuting results will likely come out after this prototype ends.\nThe number of homes is today’s, from the tax roll in S4, so the towers built since 2021 are counted.",
+    "crumbs": [
+      "Method",
+      "S7 Commuters",
+      "S7 Commuters"
+    ]
+  },
+  {
+    "objectID": "s7-commuters.html#checkpoints",
+    "href": "s7-commuters.html#checkpoints",
+    "title": "S7 Commuters",
+    "section": "Checkpoints",
+    "text": "Checkpoints\nNone: every building with homes lies in a tract where people lived at the 2021 census.",
+    "crumbs": [
+      "Method",
+      "S7 Commuters",
+      "S7 Commuters"
+    ]
+  },
+  {
+    "objectID": "s7-commuters.html#in-the-lab",
+    "href": "s7-commuters.html#in-the-lab",
+    "title": "S7 Commuters",
+    "section": "In the Lab",
+    "text": "In the Lab\nIn the Lab, the S7 tab draws every building with homes, sized by its commuters: all of them, those on foot, by transit or by car. Click one for its commuters by mode and its walk to the nearest metro entrance and bus stop. The side lists the census’s hour bands.",
+    "crumbs": [
+      "Method",
+      "S7 Commuters",
+      "S7 Commuters"
     ]
   },
   {
@@ -175,7 +331,7 @@
     "href": "s6-streetscape.html",
     "title": "S6 Streetscape",
     "section": "",
-    "text": "S6 says what stands on Griffintown’s streets besides the buildings: trees, fire hydrants, benches and other furniture, street lights, surveillance cameras, pedestrian crossings, the sidewalks and traffic islands themselves, and the road works under way on the day I saved the city’s list. Each object keeps its source, its values as the source gives them, and the S1 street it stands on.\nS6 decides nothing about what these objects do. A tree may shade a walker or hide a shop; a hydrant forbids a car to stop beside it. Those effects belong to the systems after S6, S7 Walkers and S8 Drivers, where each effect will be written down as an assumption. What a walker can see from where they stand will be part of S7, built from the S4 buildings and these trees.",
+    "text": "S6 says what stands on Griffintown’s streets besides the buildings: trees, fire hydrants, benches and other furniture, street lights, surveillance cameras, pedestrian crossings, the sidewalks and traffic islands themselves, and the road works under way on the day I saved the city’s list. Each object keeps its source, its values as the source gives them, and the S1 street it stands on.\nS6 decides nothing about what these objects do. A tree may shade a walker or hide a shop; a hydrant forbids a car to stop beside it. Those effects are assumptions, so they belong to S9, which will write each one down. What a walker can see from where they stand comes from the system after S7, built from the S4 buildings and these trees.",
     "crumbs": [
       "Method",
       "S6 Streetscape",
@@ -187,7 +343,7 @@
     "href": "s6-streetscape.html#what-s6-does",
     "title": "S6 Streetscape",
     "section": "",
-    "text": "S6 says what stands on Griffintown’s streets besides the buildings: trees, fire hydrants, benches and other furniture, street lights, surveillance cameras, pedestrian crossings, the sidewalks and traffic islands themselves, and the road works under way on the day I saved the city’s list. Each object keeps its source, its values as the source gives them, and the S1 street it stands on.\nS6 decides nothing about what these objects do. A tree may shade a walker or hide a shop; a hydrant forbids a car to stop beside it. Those effects belong to the systems after S6, S7 Walkers and S8 Drivers, where each effect will be written down as an assumption. What a walker can see from where they stand will be part of S7, built from the S4 buildings and these trees.",
+    "text": "S6 says what stands on Griffintown’s streets besides the buildings: trees, fire hydrants, benches and other furniture, street lights, surveillance cameras, pedestrian crossings, the sidewalks and traffic islands themselves, and the road works under way on the day I saved the city’s list. Each object keeps its source, its values as the source gives them, and the S1 street it stands on.\nS6 decides nothing about what these objects do. A tree may shade a walker or hide a shop; a hydrant forbids a car to stop beside it. Those effects are assumptions, so they belong to S9, which will write each one down. What a walker can see from where they stand comes from the system after S7, built from the S4 buildings and these trees.",
     "crumbs": [
       "Method",
       "S6 Streetscape",
@@ -259,7 +415,7 @@
     "href": "s5-rhythm.html",
     "title": "S5 Rhythm",
     "section": "",
-    "text": "S5 gives each hour of the week what the open data says about it. Henri Lefebvre proposed reading a city through its rhythms, the repetitions of days and seasons (Lefebvre 2004). S5 is the first system in Situ that holds time, and it starts from two kinds of evidence that I keep apart.\nThe first is measured: how busy the streets are, hour by hour, from the city’s movement counts at S1 junctions. The second is promised: which places say they are open, from the opening hours S4 gathered. A count records what happened on one day. An opening hour records an intention, and a place can be open and empty. S5 never mixes the two, and a later system that reads S5 knows which one it is reading.\nNeither one is a simulation. The promised hours can time the walkers and drivers of S7 and S8. The measured day stays out of them, so that S9 can compare what they do with it.",
+    "text": "S5 gives each hour of the week what the open data says about it. Henri Lefebvre proposed reading a city through its rhythms, the repetitions of days and seasons (Lefebvre 2004). S5 is the first system in Situ that holds time, and it starts from two kinds of evidence that I keep apart.\nThe first is measured: how busy the streets are, hour by hour, from the city’s movement counts at S1 junctions. The second is promised: which places say they are open, from the opening hours S4 gathered. A count records what happened on one day. An opening hour records an intention, and a place can be open and empty. S5 never mixes the two, and a later system that reads S5 knows which one it is reading.\nNeither one is a simulation. The promised hours can time the walkers and drivers S9 will imagine. The measured day stays out of them, so that S9 can compare what they do with it.",
     "crumbs": [
       "Method",
       "S5 Rhythm",
@@ -271,7 +427,7 @@
     "href": "s5-rhythm.html#what-s5-does",
     "title": "S5 Rhythm",
     "section": "",
-    "text": "S5 gives each hour of the week what the open data says about it. Henri Lefebvre proposed reading a city through its rhythms, the repetitions of days and seasons (Lefebvre 2004). S5 is the first system in Situ that holds time, and it starts from two kinds of evidence that I keep apart.\nThe first is measured: how busy the streets are, hour by hour, from the city’s movement counts at S1 junctions. The second is promised: which places say they are open, from the opening hours S4 gathered. A count records what happened on one day. An opening hour records an intention, and a place can be open and empty. S5 never mixes the two, and a later system that reads S5 knows which one it is reading.\nNeither one is a simulation. The promised hours can time the walkers and drivers of S7 and S8. The measured day stays out of them, so that S9 can compare what they do with it.",
+    "text": "S5 gives each hour of the week what the open data says about it. Henri Lefebvre proposed reading a city through its rhythms, the repetitions of days and seasons (Lefebvre 2004). S5 is the first system in Situ that holds time, and it starts from two kinds of evidence that I keep apart.\nThe first is measured: how busy the streets are, hour by hour, from the city’s movement counts at S1 junctions. The second is promised: which places say they are open, from the opening hours S4 gathered. A count records what happened on one day. An opening hour records an intention, and a place can be open and empty. S5 never mixes the two, and a later system that reads S5 knows which one it is reading.\nNeither one is a simulation. The promised hours can time the walkers and drivers S9 will imagine. The measured day stays out of them, so that S9 can compare what they do with it.",
     "crumbs": [
       "Method",
       "S5 Rhythm",
@@ -487,7 +643,7 @@
     "href": "s3-rules.html#what-s3-does-not-know",
     "title": "S3 Rules",
     "section": "What S3 does not know",
-    "text": "What S3 does not know\nThe city’s file says where the lights are and nothing about their timing. Movement counts and light timing estimates it where the city counted traffic, and elsewhere the cycle will be a procedural assumption in S8. Some turn rules hold only at certain hours, and S3 keeps them on at all hours until S5 Rhythm gives the simulation a clock.\nAn exit is where an edge street meets the rest of the city, and S3 cannot see the streets beyond it. A junction there may look like an all-way stop when a street beyond does not stop, and the junction’s note says so.",
+    "text": "What S3 does not know\nThe city’s file says where the lights are and nothing about their timing. Movement counts and light timing estimates it where the city counted traffic, and elsewhere the cycle will be a procedural assumption in S9. Some turn rules hold only at certain hours, and S3 keeps them on at all hours until S9 runs its imagined drivers by the clock of S5 Rhythm.\nAn exit is where an edge street meets the rest of the city, and S3 cannot see the streets beyond it. A junction there may look like an all-way stop when a street beyond does not stop, and the junction’s note says so.",
     "crumbs": [
       "Method",
       "S3 Rules",
@@ -679,7 +835,7 @@
     "href": "s1-streets.html#from-here-to-there",
     "title": "S1 Streets",
     "section": "From here to there",
-    "text": "From here to there\nIn the Lab, choose S1, then “from here to there”, and click a start and an end junction. Everything it shows comes from the network alone:\n\n\n\n\n\n\n\nMeasure\nWhat it tells you\n\n\n\n\nShortest route\nthe shortest way along the streets, on foot or by car; the other measures are compared with it\n\n\nDirectness\nroute length divided by the straight line; a grid gives about 1.3, and a barrier such as the canal pushes it higher\n\n\nVariety\nin pink, every street a trip at most 0, 5, 10, 25 or 50 % longer than the shortest could use; a thin band means the layout funnels everyone onto one street\n\n\nCost of one-way streets\nhow much longer the drive is than the walk between the same two junctions\n\n\n\nFrom William at Young to further along William is 306 m on foot and 966 m by car, because William is one-way and the car has to go round the block. From Bassins at Rioux to Notre-Dame at Robert-Bourassa, a 10 % detour opens up 82 other segments, the grid giving walkers many ways. From Bassins at Allée des Barges to Wellington, the walk is 1.7 times the straight line, because the canal has few crossings.\nThese measures say nothing about how anyone actually chooses a route: people do not all take the shortest way, and the turn bans and stops of S3 are left out. Routes also stay inside the study area, so many trips by car need the city outside, and the Lab says so when that happens. How people choose belongs to S7 Walkers and S8 Drivers, whose routes will be measured against this yardstick. The Lab notes describe how the measures themselves are tested.",
+    "text": "From here to there\nIn the Lab, choose S1, then “from here to there”, and click a start and an end junction. Everything it shows comes from the network alone:\n\n\n\n\n\n\n\nMeasure\nWhat it tells you\n\n\n\n\nShortest route\nthe shortest way along the streets, on foot or by car; the other measures are compared with it\n\n\nDirectness\nroute length divided by the straight line; a grid gives about 1.3, and a barrier such as the canal pushes it higher\n\n\nVariety\nin pink, every street a trip at most 0, 5, 10, 25 or 50 % longer than the shortest could use; a thin band means the layout funnels everyone onto one street\n\n\nCost of one-way streets\nhow much longer the drive is than the walk between the same two junctions\n\n\n\nFrom William at Young to further along William is 306 m on foot and 966 m by car, because William is one-way and the car has to go round the block. From Bassins at Rioux to Notre-Dame at Robert-Bourassa, a 10 % detour opens up 82 other segments, the grid giving walkers many ways. From Bassins at Allée des Barges to Wellington, the walk is 1.7 times the straight line, because the canal has few crossings.\nThese measures say nothing about how anyone actually chooses a route: people do not all take the shortest way, and the turn bans and stops of S3 are left out. Routes also stay inside the study area, so many trips by car need the city outside, and the Lab says so when that happens. How people choose belongs to S9, which can measure any route it imagines against this yardstick. The Lab notes describe how the measures themselves are tested.",
     "crumbs": [
       "Method",
       "S1 Streets",
@@ -775,7 +931,7 @@
     "href": "s1-build.html#tests",
     "title": "How S1 is built and tested",
     "section": "Tests",
-    "text": "Tests\n\nSeven checks\nEach test asks one question about the network. When the answer is wrong, the test names what failed and where.\n\n\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nDoes every segment have a length and two different ends?\nyes\n\n\nT2\nCan a pedestrian reach every junction?\nyes\n\n\nT3\nWhere are the dead ends?\n2, at Rue Dalhousie (C03) and the east end of Rue des Bassins (C09), both confirmed\n\n\nT4\nCan a car get from anywhere to anywhere, obeying one-way streets?\nyes\n\n\nT5\nCan every segment be traced to its source?\nyes\n\n\nT6\nIs every street cut at every junction?\nyes\n\n\nT7\nDo any lines cross without a junction?\nonly the overpass of Autoroute 10 over Rue de la Commune, confirmed (C01)\n\n\n\nT2 and T4 treat the city as connected beyond the exits. T5 matters for later systems, because they join their data to S1 through the city’s ids. The Lab shows the latest results.\n\n\nReach, in the Lab\nT2 and T4 ask the question for every junction at once. To watch one case, open the Lab at Rue Peel and Rue Wellington (J080) and press play. Each step goes one junction further. You can switch between on foot and by car, and choose whether the city beyond the exits counts. Clicking any other junction starts from there.\nFrom J080, the walker reaches all 212 walkable segments in 18 steps. The car reaches 181 of 182 drivable segments without leaving the area. The last one, Boulevard Georges-Vanier (white dashed), can only be reached by leaving Griffintown and coming back in. The cause lies in where the boundary is drawn; the data is fine.\nSteps count junctions. Distances in metres are in the route tool on S1 Streets, and time comes later, when S7 and S8 give walkers and cars a speed.",
+    "text": "Tests\n\nSeven checks\nEach test asks one question about the network. When the answer is wrong, the test names what failed and where.\n\n\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nDoes every segment have a length and two different ends?\nyes\n\n\nT2\nCan a pedestrian reach every junction?\nyes\n\n\nT3\nWhere are the dead ends?\n2, at Rue Dalhousie (C03) and the east end of Rue des Bassins (C09), both confirmed\n\n\nT4\nCan a car get from anywhere to anywhere, obeying one-way streets?\nyes\n\n\nT5\nCan every segment be traced to its source?\nyes\n\n\nT6\nIs every street cut at every junction?\nyes\n\n\nT7\nDo any lines cross without a junction?\nonly the overpass of Autoroute 10 over Rue de la Commune, confirmed (C01)\n\n\n\nT2 and T4 treat the city as connected beyond the exits. T5 matters for later systems, because they join their data to S1 through the city’s ids. The Lab shows the latest results.\n\n\nReach, in the Lab\nT2 and T4 ask the question for every junction at once. To watch one case, open the Lab at Rue Peel and Rue Wellington (J080) and press play. Each step goes one junction further. You can switch between on foot and by car, and choose whether the city beyond the exits counts. Clicking any other junction starts from there.\nFrom J080, the walker reaches all 212 walkable segments in 18 steps. The car reaches 181 of 182 drivable segments without leaving the area. The last one, Boulevard Georges-Vanier (white dashed), can only be reached by leaving Griffintown and coming back in. The cause lies in where the boundary is drawn; the data is fine.\nSteps count junctions. Distances in metres are in the route tool on S1 Streets, and time comes later, when S9 gives its imagined walkers and cars a speed.",
     "crumbs": [
       "Method",
       "S1 Streets",
@@ -890,7 +1046,7 @@
     "href": "limits.html#system-by-system",
     "title": "Limits of the desk",
     "section": "System by system",
-    "text": "System by system\n\n\n\nSystem\nWhat open data gives\nWhat the desk cannot settle\n\n\n\n\nS1 Streets\nstreet lines with their class and direction, plus paths from OpenStreetMap\nwhether a path is open on the ground, and where a closure or building site cuts a route; three links at the end of Brennan and Ann rest on assumption\n\n\nS2 Scores\nspace syntax values, which measure how each street sits in the network I built\nwhere people actually walk; Brennan and Ann gained walking choice only because I assumed they lead somewhere\n\n\nS3 Rules\nwhere each sign and light stands, and the speed limits\nwhich way a sign faces, and how long each light stays green; 21 places remain to check\n\n\nS4 Buildings\nuses and dwellings from the tax roll with its lots, and outlines from OpenStreetMap\nhow tall many buildings are, and which of two towers holds which units; 61 cases remain to check\n\n\nS5 Rhythm\ncounts at 7 junctions on 9 weekdays, three bicycle detectors, and opening hours for 83 of 558 places\nthe weekend on foot and by car, and whether an open place is busy; 17 of the 24 weekday hours rest on one junction\n\n\nS6 Streetscape\npublic trees, hydrants, sidewalks and road works, with lights, cameras and crossings from photos and from mappers\ntrees on private land, and which lights and cameras still stand; 40 places remain to check\n\n\nS7 Walkers\nhomes, work from home, ways to work and hours of leaving and arriving, from the census of May 2021, and the stops of the STM\nwhere each walker works, which way people choose, and how much the pandemic still bends the census; visitors are not in yet",
+    "text": "System by system\n\n\n\nSystem\nWhat open data gives\nWhat the desk cannot settle\n\n\n\n\nS1 Streets\nstreet lines with their class and direction, plus paths from OpenStreetMap\nwhether a path is open on the ground, and where a closure or building site cuts a route; three links at the end of Brennan and Ann rest on assumption\n\n\nS2 Scores\nspace syntax values, which measure how each street sits in the network I built\nwhere people actually walk; Brennan and Ann gained walking choice only because I assumed they lead somewhere\n\n\nS3 Rules\nwhere each sign and light stands, and the speed limits\nwhich way a sign faces, and how long each light stays green; 21 places remain to check\n\n\nS4 Buildings\nuses and dwellings from the tax roll with its lots, and outlines from OpenStreetMap\nhow tall many buildings are, and which of two towers holds which units; 61 cases remain to check\n\n\nS5 Rhythm\ncounts at 7 junctions on 9 weekdays, three bicycle detectors, and opening hours for 83 of 558 places\nthe weekend on foot and by car, and whether an open place is busy; 17 of the 24 weekday hours rest on one junction\n\n\nS6 Streetscape\npublic trees, hydrants, sidewalks and road works, with lights, cameras and crossings from photos and from mappers\ntrees on private land, and which lights and cameras still stand; 40 places remain to check\n\n\nS7 Commuters\nhomes, work from home, ways to work and hours of leaving and arriving, from the census of May 2021, and the stops of the STM\nwhere each commuter goes and by which street, and how much the pandemic still bends the census; nothing open says how many people visit\n\n\nS8 Views\nwhat can be seen from each walkable street past the building outlines of OpenStreetMap\ntrees, walls, viaducts and heights; buildings missing from the map open views that do not exist\n\n\nS9 Observer\na weekday morning of commuters on foot, imagined under three route rules, set against the counts and space syntax\neveryone who is not commuting, which is most of the pedestrians counted; where walkers really work; which reading is closest, with seven junctions to compare",
     "crumbs": [
       "Method",
       "Data",
@@ -986,7 +1142,7 @@
     "href": "lab-notes.html#tests",
     "title": "Lab notes",
     "section": "How the Lab is tested",
-    "text": "How the Lab is tested\nThe nine Lab checks ask one thing: does the Lab show exactly what the systems wrote?\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nL1\nDo the streets and junctions match S1, and does each junction reach the same streets? Every 15th junction’s reach is worked out again from scratch.\n\n\nL2\nDoes every S2 value equal the S2 table, with missing values still missing?\n\n\nL3\nDo the S3 rules, signs, speeds and checkpoints equal the S3 tables?\n\n\nL4\nThe Lab no longer shows the S3 stress results, though its data still holds them. Do they give the same counts as the S3 stress tests?\n\n\nL5\nIs every shortest route real and truly shortest, and do the browser’s route rules give the original routes?\n\n\nL6\nDoes every S4 building and place equal the S4 tables, down to each outline point, with empty cells still empty?\n\n\nL7\nDo the S5 weekday shape, junction counts, each place’s week and the open counts equal the S5 tables?\n\n\nL8\nDoes every S6 object and surface equal the S6 tables, down to each outline point, with empty cells still empty?\n\n\nL9\nDo the S7 walkers on every street in every hour, the stops and the walks begun each hour equal the S7 tables?\n\n\n\nAll nine pass; the Lab shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it; earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change. For L7, I changed one letter of a place’s week, and L7 caught it.\nThe shortest-route check does not trust the method that found the routes. If a route is real and no single move anywhere could shorten any distance, then no shorter route exists. That condition is checked separately, for every start and every move.",
+    "text": "How the Lab is tested\nThe eleven Lab checks ask one thing: does the Lab show exactly what the systems wrote?\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nL1\nDo the streets and junctions match S1, and does each junction reach the same streets? Every 15th junction’s reach is worked out again from scratch.\n\n\nL2\nDoes every S2 value equal the S2 table, with missing values still missing?\n\n\nL3\nDo the S3 rules, signs, speeds and checkpoints equal the S3 tables?\n\n\nL4\nThe Lab no longer shows the S3 stress results, though its data still holds them. Do they give the same counts as the S3 stress tests?\n\n\nL5\nIs every shortest route real and truly shortest, and do the browser’s route rules give the original routes?\n\n\nL6\nDoes every S4 building and place equal the S4 tables, down to each outline point, with empty cells still empty?\n\n\nL7\nDo the S5 weekday shape, junction counts, each place’s week and the open counts equal the S5 tables?\n\n\nL8\nDoes every S6 object and surface equal the S6 tables, down to each outline point, with empty cells still empty?\n\n\nL9\nDo the S7 buildings with homes, their commuters and nearest stops, the stops and the hour bands equal the S7 tables?\n\n\nL10\nDo the S8 view measures and kept views equal the S8 tables, and does each sight line the Lab draws land where S8 cast it?\n\n\nL11\nDo the S9 street flows, counted junctions and ledger equal the S9 tables?\n\n\n\nAll eleven pass; the Lab shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it; earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change. For L7, I changed one letter of a place’s week, and L7 caught it.\nThe shortest-route check does not trust the method that found the routes. If a route is real and no single move anywhere could shorten any distance, then no shorter route exists. That condition is checked separately, for every start and every move.",
     "crumbs": [
       "Method",
       "Lab",
@@ -998,7 +1154,7 @@
     "href": "counts.html",
     "title": "Movement counts and light timing",
     "section": "",
-    "text": "The city counts every car, truck, bus, bicycle and pedestrian at its intersections in 15-minute slices, by movement for vehicles (northbound left, northbound through and so on) and by crosswalk for pedestrians and bicycles. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction, which leaves seven junctions. A one-day count covers three windows, the two rush hours and two hours at midday, with gaps between them:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day in three windows, 6:30 to 18:30, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day in three windows, 6:30 to 18:30, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day in three windows, 6:00 to 18:30, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nBeyond the lights, these counts serve two later systems. S9 will compare simulated movement with space syntax, the measures of how each street sits in the whole network, and also, at these junctions, with movement actually counted. J040, counted around the clock, gives S5 Rhythm its measured day, which no system builds from, so S9 can compare with it. The one exception is below: the counts at J040 and J051 set those two lights, so S9 will not use them to judge the cars there.\n\n\n\nA day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush.",
+    "text": "The city counts every car, truck, bus, bicycle and pedestrian at its intersections in 15-minute slices, by movement for vehicles (northbound left, northbound through and so on) and by crosswalk for pedestrians and bicycles. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction, which leaves seven junctions. A one-day count covers three windows, the two rush hours and two hours at midday, with gaps between them:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day in three windows, 6:30 to 18:30, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day in three windows, 6:30 to 18:30, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day in three windows, 6:00 to 18:30, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nBeyond the lights, these counts serve two later systems. S9 compares simulated movement with space syntax, the measures of how each street sits in the whole network, and also, at these junctions, with movement actually counted. J040, counted around the clock, gives S5 Rhythm its measured day, which no system builds from, so S9 can compare with it. The one exception is below: the counts at J040 and J051 set those two lights, so S9 will not use them to judge the cars there.\n\n\n\nA day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush.",
     "crumbs": [
       "Method",
       "Data",
@@ -1010,7 +1166,7 @@
     "href": "counts.html#what-the-city-counted",
     "title": "Movement counts and light timing",
     "section": "",
-    "text": "The city counts every car, truck, bus, bicycle and pedestrian at its intersections in 15-minute slices, by movement for vehicles (northbound left, northbound through and so on) and by crosswalk for pedestrians and bicycles. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction, which leaves seven junctions. A one-day count covers three windows, the two rush hours and two hours at midday, with gaps between them:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day in three windows, 6:30 to 18:30, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day in three windows, 6:30 to 18:30, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day in three windows, 6:00 to 18:30, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nBeyond the lights, these counts serve two later systems. S9 will compare simulated movement with space syntax, the measures of how each street sits in the whole network, and also, at these junctions, with movement actually counted. J040, counted around the clock, gives S5 Rhythm its measured day, which no system builds from, so S9 can compare with it. The one exception is below: the counts at J040 and J051 set those two lights, so S9 will not use them to judge the cars there.\n\n\n\nA day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush.",
+    "text": "The city counts every car, truck, bus, bicycle and pedestrian at its intersections in 15-minute slices, by movement for vehicles (northbound left, northbound through and so on) and by crosswalk for pedestrians and bicycles. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction, which leaves seven junctions. A one-day count covers three windows, the two rush hours and two hours at midday, with gaps between them:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day in three windows, 6:30 to 18:30, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day in three windows, 6:30 to 18:30, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day in three windows, 6:00 to 18:30, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nBeyond the lights, these counts serve two later systems. S9 compares simulated movement with space syntax, the measures of how each street sits in the whole network, and also, at these junctions, with movement actually counted. J040, counted around the clock, gives S5 Rhythm its measured day, which no system builds from, so S9 can compare with it. The one exception is below: the counts at J040 and J051 set those two lights, so S9 will not use them to judge the cars there.\n\n\n\nA day at J040, hour by hour. Each line is that group’s share of its daily total. Pedestrians and bicycles peak harder than vehicles at the evening rush.",
     "crumbs": [
       "Method",
       "Data",
@@ -1034,7 +1190,7 @@
     "href": "counts.html#the-other-29-lights",
     "title": "Movement counts and light timing",
     "section": "The other 29 lights",
-    "text": "The other 29 lights\nI weighed four options. One plan for all lights would give a main street and a side street the same green. Borrowing the split of a counted light on the same streets would use real counts, but only two lights were counted. Timing the lights from space syntax was ruled out, because S9 compares movement with space syntax and would end up measuring its own input. I chose to share the green by road class, the city’s own street hierarchy, already in S1.\nThe city’s 2007 review of its arterial network (PDF) gives each class a daily traffic range: main arteries carry over 30,000 vehicles, collectors 1,000 to 15,000. Managing the flow is “prépondérante” on main arteries and “peu” on collectors (Ville de Montréal 2007). The United States standard agrees: “In general, the higher the traffic volume is, the higher the functional classification will be” (FHWA 2023, p. 26, PDF). Since Webster (1958) shares the green by how full each approach is, a busier street should get more of it.\nThe counts agree. At all five counted junctions where the two streets differ in class, the higher class carried more traffic over the day: William, a collector, 2.5 times as much as Guy at J040, and Wellington, a secondary arterial, 8.5 to 29 times as much as Ann, Murray, Young and Shannon. Four of the five are on Wellington, so the sample is small.\nRoad class does not match Webster at the two counted lights. At J040 it would give 21 and 31 s where Webster gives 26 and 26, because at the busiest hour each lane is about as full on both streets. At J051 it would give 26 and 26 s where Webster gives 38 and 14, because the classes are equal but de la Montagne is busier. So class tells which street gets more green over a day, and says nothing of how much at a given hour. The counted lights therefore keep Webster, and the share by class stays a cautious 60 %.\nThe rule: each street arriving at a light belongs to one of the two axes, and each axis takes the highest class among its streets, from main arterial (with highway) down through secondary arterial and collector to local. If both axes have the same class, the two phases share the 52 s of usable green equally. If not, the higher class gets 60 % and the lower 40 %. No phase is shorter than its pedestrians need, and where they need more, the cycle grows. Where cars arrive on one axis only, the other phase is for pedestrians.\nOf the 31 lights, 2 follow Webster from counts, 17 have one street of higher class, 7 have equal classes, and 5 have cars on one axis only, mostly at the edge where the cross street lies beyond the network. In S8 these become the light plans, and the 60 % share and the 60 s cycle will be sliders in the Lab. The city’s pedestrian-signal file uses the same intersection numbers as its light file: 30 of the 31 lights have pedestrian signals, all but Seigneurs and William.",
+    "text": "The other 29 lights\nI weighed four options. One plan for all lights would give a main street and a side street the same green. Borrowing the split of a counted light on the same streets would use real counts, but only two lights were counted. Timing the lights from space syntax was ruled out, because S9 compares movement with space syntax and would end up measuring its own input. I chose to share the green by road class, the city’s own street hierarchy, already in S1.\nThe city’s 2007 review of its arterial network (PDF) gives each class a daily traffic range: main arteries carry over 30,000 vehicles, collectors 1,000 to 15,000. Managing the flow is “prépondérante” on main arteries and “peu” on collectors (Ville de Montréal 2007). The United States standard agrees: “In general, the higher the traffic volume is, the higher the functional classification will be” (FHWA 2023, p. 26, PDF). Since Webster (1958) shares the green by how full each approach is, a busier street should get more of it.\nThe counts agree. At all five counted junctions where the two streets differ in class, the higher class carried more traffic over the day: William, a collector, 2.5 times as much as Guy at J040, and Wellington, a secondary arterial, 8.5 to 29 times as much as Ann, Murray, Young and Shannon. Four of the five are on Wellington, so the sample is small.\nRoad class does not match Webster at the two counted lights. At J040 it would give 21 and 31 s where Webster gives 26 and 26, because at the busiest hour each lane is about as full on both streets. At J051 it would give 26 and 26 s where Webster gives 38 and 14, because the classes are equal but de la Montagne is busier. So class tells which street gets more green over a day, and says nothing of how much at a given hour. The counted lights therefore keep Webster, and the share by class stays a cautious 60 %.\nThe rule: each street arriving at a light belongs to one of the two axes, and each axis takes the highest class among its streets, from main arterial (with highway) down through secondary arterial and collector to local. If both axes have the same class, the two phases share the 52 s of usable green equally. If not, the higher class gets 60 % and the lower 40 %. No phase is shorter than its pedestrians need, and where they need more, the cycle grows. Where cars arrive on one axis only, the other phase is for pedestrians.\nOf the 31 lights, 2 follow Webster from counts, 17 have one street of higher class, 7 have equal classes, and 5 have cars on one axis only, mostly at the edge where the cross street lies beyond the network. In S9 these become the light plans its imagined drivers stop at, with the 60 % share and the 60 s cycle written down as assumptions. The city’s pedestrian-signal file uses the same intersection numbers as its light file: 30 of the 31 lights have pedestrian signals, all but Seigneurs and William.",
     "crumbs": [
       "Method",
       "Data",
@@ -1080,7 +1236,7 @@
     "href": "about.html#the-idea",
     "title": "About Situ",
     "section": "The idea",
-    "text": "The idea\n\nSpatial culture\nHillier described a spatial culture as “a distinctive way of ordering space” (Hillier 1989, quoted in Griffiths & von Lünen 2016, p. xxiii). Griffiths and von Lünen see the field as the link between how a built place works and what it comes to mean to the people who live in it (2016, p. xxi). Adams (2024, introduction) wants spatial culture to be “qualified and documented”, which is close to what an archive needs.\n\n\nRhythm\nA street layout holds no time. Space syntax, the method Hillier and Hanson started for measuring how a street network is arranged (What space syntax is), tends to strip social practice of its time (Griffiths & von Lünen 2016, p. xxiii). In Rhythmanalysis, Lefebvre finds rhythm wherever energy is spent in a particular place and time (2004, p. 15). His own example is a Paris junction seen from his window: on red the pedestrians cross, on green the cars rush (p. 28). The light cycles in S3 model that beat. He also holds that where there is rhythm there is measure (p. 8), so counts and timings belong in Situ. I add time on purpose: when places are open and when streets are busy.\n\n\nArchiving\nAn archive keeps two things: the evidence records give of how their maker worked, and the information they hold about people and places (Schellenberg 1956, pp. 139 to 140). Situ keeps both. The city data says what Griffintown is. My decision files and tests record how I turned it into a model, the layer that the London Charter, a set of principles for visualising cultural heritage by computer, calls paradata (2009, principle 4.6). The Seville principles ask that a reconstruction show what is real and what is not (López-Menchero & Grande, principle 4), and that others can test it (principle 7). So every decision in my files carries a status, such as confirmed, assumed, likely or open.\nRhythm is the hard part. Taylor separates the archive of lasting things from the repertoire of embodied practice, like walking to work or lingering at a corner, which needs people to be present (2003, pp. 19 to 20). Situ cannot store a rhythm the way it stores a street. It can keep traces such as counts and timings, and offer a place where the rhythm can be performed again: the game. The Seville principles warn against showing “lifeless cities” (principle 5.3).\n\n\nWhat Situ has and what it lacks\nLefebvre describes three moments of social space (1991, pp. 38 to 40). Each kind of source in Situ lines up with one of them, so I use them as a checklist, with every row open to revision.\n\n\n\n\n\n\n\n\nLefebvre\nIn Situ\nStatus\n\n\n\n\nconceived space: plans, maps, data\nthe network and its rules (S1 to S3), building types (S4) and street objects (S6), from city data, OpenStreetMap and street photos\nbuilt\n\n\nperceived space: daily routines\nrhythm and movement (S5 to S9), from the city’s counts, the census and later computer vision\na weekday measured in S5; commuting walkers estimated in S7\n\n\nlived space: space as its users live it\nthe game, and what people say about the place, through play and later interviews\nnot started\n\n\n\n\n\n\n\n\n\nNoteFour readings I make, and how I defend them\n\n\n\n\n\nThese are my own interpretations of the sources, each with the strongest objection I know and what would show me wrong.\n\nLefebvre’s triad as a checklist\nLefebvre warns that his three moments lose their force as an abstract model (1991, p. 40), and laying them over software comes close to that. So I use the table only to see what is missing; for now the lived row is empty. The rows also leak: the counts are observation, yet the city decided where to count. If the rows cannot be kept apart at all, the table should show the crossings.\n\n\nWhere layout and movement disagree\nA gap between space syntax and observed movement points to something besides the layout, such as a shop or a rule. Griffiths and von Lünen ask research to spell out that kind of gap (2016, p. xxi). The 1993 paper on natural movement, the share of walking the layout alone produces, itself shows shops multiplying the layout’s effect (Hillier et al. 1993, p. 31). A difference may also be plain error, from a wrong network or too few counts, so it counts only after each system’s tests. The reading is wrong if the differences vanish once errors are fixed, or follow no pattern.\n\n\nSchellenberg’s two values\nSchellenberg drew his distinction between evidence and information from government records (1956, pp. 139 to 140, 148), and a research model is no government agency. I borrow only the distinction, which he says he defines “quite arbitrarily” (p. 139), and the London Charter already carries it into visualisation. The borrowing fails if the two layers cannot be kept apart, so my corrections live in their own file and the city’s files stay untouched.\n\n\nThe game as a place to perform rhythm again\nTaylor’s repertoire and Lefebvre’s rhythm both need bodies present, and play is embodied action too. Against this, a player alone in a simulation receives no memory from Griffintown’s people, and the game itself is code and data, an archive object. Lefebvre adds that the rhythmanalyst is closer to the poet than to “the statistician, who counts things” (2004, p. 23).\nI accept most of this. The game keeps traces and sets up a new performance, without holding the original repertoire, so interviews and focus groups are in the plan. If players’ movement bears no relation to the recorded rhythms, the game performs nothing of Griffintown.\n\n\n\n\n\n\nSpace syntax as one measuring stick\nSpace syntax describes the layout. I use it only to measure, and the simulated walkers never read it. At the end, S9 compares where they went with what space syntax predicts and with the city’s counts. Where they agree, the layout may explain the movement. Where they differ, something else is at work, and that difference is what the archive should keep.\n\n\n\n\n\nflowchart LR\n  D[City data, OpenStreetMap,&lt;br/&gt;street photos]:::data --&gt; S[Small systems&lt;br/&gt;S1 to S8]:::step\n  O[Counts&lt;br/&gt;measured on the street]:::data\n  S --&gt; M[Flows built from&lt;br/&gt;the systems]:::step\n  M --&gt; C{S9 Observer&lt;br/&gt;compare}:::test\n  SS[Space syntax]:::data --&gt; C\n  O --&gt; C\n  C --&gt; G[The game:&lt;br/&gt;a place to play&lt;br/&gt;and to keep]:::out\n  L[Lived accounts&lt;br/&gt;interviews, play]:::data --&gt; G\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nI build Situ as small systems, each with a single job. Each has a blueprint and its own tests, and I try it in the Lab before the next one starts.",
+    "text": "The idea\n\nSpatial culture\nHillier described a spatial culture as “a distinctive way of ordering space” (Hillier 1989, quoted in Griffiths & von Lünen 2016, p. xxiii). Griffiths and von Lünen see the field as the link between how a built place works and what it comes to mean to the people who live in it (2016, p. xxi). Adams (2024, introduction) wants spatial culture to be “qualified and documented”, which is close to what an archive needs.\n\n\nRhythm\nA street layout holds no time. Space syntax, the method Hillier and Hanson started for measuring how a street network is arranged (What space syntax is), tends to strip social practice of its time (Griffiths & von Lünen 2016, p. xxiii). In Rhythmanalysis, Lefebvre finds rhythm wherever energy is spent in a particular place and time (2004, p. 15). His own example is a Paris junction seen from his window: on red the pedestrians cross, on green the cars rush (p. 28). The light cycles in S3 model that beat. He also holds that where there is rhythm there is measure (p. 8), so counts and timings belong in Situ. I add time on purpose: when places are open and when streets are busy.\n\n\nArchiving\nAn archive keeps two things: the evidence records give of how their maker worked, and the information they hold about people and places (Schellenberg 1956, pp. 139 to 140). Situ keeps both. The city data says what Griffintown is. My decision files and tests record how I turned it into a model, the layer that the London Charter, a set of principles for visualising cultural heritage by computer, calls paradata (2009, principle 4.6). The Seville principles ask that a reconstruction show what is real and what is not (López-Menchero & Grande, principle 4), and that others can test it (principle 7). So every decision in my files carries a status, such as confirmed, assumed, likely or open.\nRhythm is the hard part. Taylor separates the archive of lasting things from the repertoire of embodied practice, like walking to work or lingering at a corner, which needs people to be present (2003, pp. 19 to 20). Situ cannot store a rhythm the way it stores a street. It can keep traces such as counts and timings, and offer a place where the rhythm can be performed again: the game. The Seville principles warn against showing “lifeless cities” (principle 5.3).\n\n\nWhat Situ has and what it lacks\nLefebvre describes three moments of social space (1991, pp. 38 to 40). Each kind of source in Situ lines up with one of them, so I use them as a checklist, with every row open to revision.\n\n\n\n\n\n\n\n\nLefebvre\nIn Situ\nStatus\n\n\n\n\nconceived space: plans, maps, data\nthe network and its rules (S1 to S3), building types (S4) and street objects (S6), from city data, OpenStreetMap and street photos\nbuilt\n\n\nperceived space: daily routines\nrhythm and movement (S5 to S9), from the city’s counts, the census and later computer vision\na weekday measured in S5; commuters counted by the census in S7; a morning on foot imagined in S9\n\n\nlived space: space as its users live it\nthe game, and what people say about the place, through play and later interviews\nnot started\n\n\n\n\n\n\n\n\n\nNoteFour readings I make, and how I defend them\n\n\n\n\n\nThese are my own interpretations of the sources, each with the strongest objection I know and what would show me wrong.\n\nLefebvre’s triad as a checklist\nLefebvre warns that his three moments lose their force as an abstract model (1991, p. 40), and laying them over software comes close to that. So I use the table only to see what is missing; for now the lived row is empty. The rows also leak: the counts are observation, yet the city decided where to count. If the rows cannot be kept apart at all, the table should show the crossings.\n\n\nWhere layout and movement disagree\nA gap between space syntax and observed movement points to something besides the layout, such as a shop or a rule. Griffiths and von Lünen ask research to spell out that kind of gap (2016, p. xxi). The 1993 paper on natural movement, the share of walking the layout alone produces, itself shows shops multiplying the layout’s effect (Hillier et al. 1993, p. 31). A difference may also be plain error, from a wrong network or too few counts, so it counts only after each system’s tests. The reading is wrong if the differences vanish once errors are fixed, or follow no pattern.\n\n\nSchellenberg’s two values\nSchellenberg drew his distinction between evidence and information from government records (1956, pp. 139 to 140, 148), and a research model is no government agency. I borrow only the distinction, which he says he defines “quite arbitrarily” (p. 139), and the London Charter already carries it into visualisation. The borrowing fails if the two layers cannot be kept apart, so my corrections live in their own file and the city’s files stay untouched.\n\n\nThe game as a place to perform rhythm again\nTaylor’s repertoire and Lefebvre’s rhythm both need bodies present, and play is embodied action too. Against this, a player alone in a simulation receives no memory from Griffintown’s people, and the game itself is code and data, an archive object. Lefebvre adds that the rhythmanalyst is closer to the poet than to “the statistician, who counts things” (2004, p. 23).\nI accept most of this. The game keeps traces and sets up a new performance, without holding the original repertoire, so interviews and focus groups are in the plan. If players’ movement bears no relation to the recorded rhythms, the game performs nothing of Griffintown.\n\n\n\n\n\n\nSpace syntax as one measuring stick\nSpace syntax describes the layout. I use it only to measure, and the simulated walkers never read it. At the end, S9 compares where they went with what space syntax predicts and with the city’s counts. Where they agree, the layout may explain the movement. Where they differ, something else is at work, and that difference is what the archive should keep.\n\n\n\n\n\nflowchart LR\n  D[City data, OpenStreetMap,&lt;br/&gt;street photos]:::data --&gt; S[Small systems&lt;br/&gt;S1 to S8]:::step\n  O[Counts&lt;br/&gt;measured on the street]:::data\n  S --&gt; M[Flows built from&lt;br/&gt;the systems]:::step\n  M --&gt; C{S9 Observer&lt;br/&gt;compare}:::test\n  SS[Space syntax]:::data --&gt; C\n  O --&gt; C\n  C --&gt; G[The game:&lt;br/&gt;a place to play&lt;br/&gt;and to keep]:::out\n  L[Lived accounts&lt;br/&gt;interviews, play]:::data --&gt; G\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nI build Situ as small systems, each with a single job. Each has a blueprint and its own tests, and I try it in the Lab before the next one starts.",
     "crumbs": [
       "Method",
       "About Situ"
@@ -1091,7 +1247,7 @@
     "href": "about.html#the-systems",
     "title": "About Situ",
     "section": "The systems",
-    "text": "The systems\n\n\n\n\nSystem\nJob\nStatus\n\n\n\n\n\nWalking network\nAdd the city’s off-street paths before space syntax is calculated\nbuilt, tested\n\n\nS1\nStreets\nWhich streets connect, and who may use them in which direction\nbuilt, tested\n\n\nS2\nScores\nAttach the space syntax values to each street\nbuilt, tested\n\n\nS3\nRules\nStop signs, traffic lights, forbidden turns, speed limits\nbuilt, tested\n\n\nS4\nBuildings\nWhat each building is, so people have places to go\nbuilt, tested\n\n\nS5\nRhythm\nWhen the streets are busy, and which places say they are open\nbuilt, tested\n\n\nS6\nStreetscape\nWhat stands on the streets: trees, hydrants, lights, cameras, crossings, sidewalks, benches, road works\nbuilt, tested\n\n\nS7\nWalkers\nWho walks where and when; later, what a walker can see\nfirst part built, tested\n\n\nS8\nDrivers\nCars that obey the rules\nlater\n\n\nS9\nObserver\nBuilds flows from what the other systems say, and compares them with the counts and space syntax\nlater",
+    "text": "The systems\n\n\n\n\nSystem\nJob\nStatus\n\n\n\n\n\nWalking network\nAdd the city’s off-street paths before space syntax is calculated\nbuilt, tested\n\n\nS1\nStreets\nWhich streets connect, and who may use them in which direction\nbuilt, tested\n\n\nS2\nScores\nAttach the space syntax values to each street\nbuilt, tested\n\n\nS3\nRules\nStop signs, traffic lights, forbidden turns, speed limits\nbuilt, tested\n\n\nS4\nBuildings\nWhat each building is, so people have places to go\nbuilt, tested\n\n\nS5\nRhythm\nWhen the streets are busy, and which places say they are open\nbuilt, tested\n\n\nS6\nStreetscape\nWhat stands on the streets: trees, hydrants, lights, cameras, crossings, sidewalks, benches, road works\nbuilt, tested\n\n\nS7\nCommuters\nWho commutes, how and when, and how far homes are from transit\nbuilt, tested\n\n\nS8\nViews\nWhat a walker can see from each point of the streets\nbuilt, tested\n\n\nS9\nObserver\nImagines walkers and drivers from what the other systems say, and compares them with the counts and space syntax\nfirst slice: the morning on foot",
     "crumbs": [
       "Method",
       "About Situ"
@@ -1243,7 +1399,7 @@
     "href": "resources.html#data",
     "title": "Resources",
     "section": "Data",
-    "text": "Data\nSources marked “from Sample 4” reached Situ through the files of my earlier space syntax analysis.\n\n\n\nSource\nWhat it gives\nUsed in\n\n\n\n\nVille de Montréal, Géobase, réseau routier (Données Québec)\nstreet centrelines with their class and direction\nS1 and the walking network, through Sample 4\n\n\nVille de Montréal, réseau cyclable (donnees.montreal.ca)\noff-street bike and multi-use paths\nS1 checks, the walking network\n\n\nVille de Montréal, sign inventory, excluding parking signs (donnees.montreal.ca), from Sample 4\nstop, all-way, turn and no-entry signs\nS3\n\n\nVille de Montréal, feux de circulation (donnees.montreal.ca), from Sample 4\nwhere each traffic light stands, and whether it is permanent\nS3\n\n\nVille de Montréal, limites de vitesse, file of 2026-02-26 (donnees.montreal.ca), from Sample 4\nthe speed limit of each street\nS3\n\n\nVille de Montréal, comptage des véhicules, cyclistes et piétons (donnees.montreal.ca), downloaded 2026-10-10\n15-minute counts of each turning movement by kind of road user, at about 23 intersections in and around Griffintown, 2024 to 2026\nMovement counts: light timing at 7 S1 junctions; later S5 and S9\n\n\nVille de Montréal, vélos, comptage sur les pistes cyclables, files “Ville” 2025 and 2026 and the sites’ locations (Données Québec), downloaded 2026-10-15\nhourly bicycles at the city’s permanent detectors, June 2025 to October 2026\nS5: three detectors inside the area\n\n\nVille de Montréal, arbres publics, bornes d’incendie, trottoir et îlot and entraves et travaux en cours (donnees.montreal.ca), downloaded 2026-10-16\npublic trees, fire hydrants, sidewalk and island outlines, road works on one day\nS6\n\n\nVille de Montréal, feux pour piétons (donnees.montreal.ca), downloaded 2026-10-10\nwhich lights have pedestrian signals: 30 of the 31 in S1\nMovement counts\n\n\nOpenStreetMap, through the Overpass API\nfootpaths and park paths, as a second opinion\nS1 checks, C18 park paths\n\n\nMapillary\nstreet-level photos, CC BY-SA 4.0\nS1 checks, M01\n\n\nMapillary map features API (graph.mapillary.com/map_features), fetched 2026-10-10\n1,455 signs detected in photos, with the direction each faces\nChecking the sources, S3 checks\n\n\nMapillary map features API, fetched 2026-10-16\n30,410 objects detected in photos around the area; S6 keeps the street lights, surveillance cameras and painted crossings inside it and uses hydrants, benches, bins and racks to measure agreement\nS6\n\n\nOpenStreetMap street lamps, surveillance cameras and crossings (Overpass API), fetched 2026-10-16\n72 lamps, 55 cameras and 481 crossings inside the area\nS6\n\n\nStatistics Canada, Census of Population 2021, tables 98-10-0014, 98-10-0478, 98-10-0480 and 98-10-0504, through its Web Data Service, extracts saved 2026-10-16\nhomes, people at work, working from home, and when and how commuters travel, for the tracts that cover the area\nS7\n\n\nStatistics Canada, 2021 census tract boundaries (cartographic boundary files)\nthe tracts that cover the study area\nS7\n\n\nSTM, GTFS timetable, feed of 2026-10-07 (stm.info)\nmetro entrances and bus stops, with their departures on a Wednesday\nS7\n\n\nCornelissen, L. (2024), What is the connection between working from home and the languages used at work?, Statistics Canada, 75-006-x; The Canadian Press (26 August 2025), on the Labour Force Survey of May 2025\nworking from home in Canada: 24.3 % in May 2021, 17.4 % in May 2025\nS7\n\n\nMapillary photos by VdM (Ville de Montréal), geodz, une_abeille and AlexPL, 2022 to 2026, CC BY-SA 4.0\nthe evidence behind each S3 decision\nS3 checks with photos\n\n\nGoogle Street View\nstreet-level photos, for looking only\nS1 checks\n\n\nVille de Montréal, Unités d’évaluation foncière (tax roll) (donnees.montreal.ca, resource 2b9dfc3d-91d3-48de-b32c-a2a6d9417079), fetched 2026-09-25\nuse, storeys, dwellings, year built and floor area of each property\nS4\n\n\nVille de Montréal, Unités d’évaluation foncière, the GeoJSON file with lot outlines (donnees.montreal.ca), saved 2026-10-15\nthe outline of the lot each property sits on: 255 distinct lots for 9,379 properties in the study area\nS4, to place each property\n\n\nVille de Montréal, Adresse ponctuelle (address points) (donnees.montreal.ca, resource fed5fd02-5535-458e-b13f-66e7a31a6d78), fetched 2026-09-25\nwhere each civic number stands, to place the tax roll\nS4\n\n\nVille de Montréal, Locaux commerciaux et statuts d’occupation, 2025 survey (Données Québec), from Sample 4\nevery ground-floor commercial space, occupied or vacant, with its use: 247 in the study area\nS4\n\n\nVille de Montréal, Lieux et bâtiments à vocation publique (opendatamontreal.ca)\npublic places with opening hours\nS4\n\n\nOpenStreetMap buildings and places, through the Overpass API, fetched 2026-10-14, ODbL\nbuilding outlines, and shops, cafés, offices and parks, 83 of them with opening hours\nS4\n\n\nOpenStreetMap building parts, through an Overpass mirror, fetched 2026-10-15, ODbL\nthe storeys of towers drawn as parts on their podiums\nS4\n\n\n\nOpened and set aside for now: Ville de Montréal, Bâtiments 3D 2020 (Données Québec), CityGML, CC BY 4.0. Its Ville-Marie tiles stop at the borough line and hold three small structures of the study area. Le Sud-Ouest has only the 2016 model (Données Québec).\nA list of every downloaded file gives each one’s date and licence. The Concordia NGCI building file is listed there too. It carries no licence, so S4 does not use it.",
+    "text": "Data\nSources marked “from Sample 4” reached Situ through the files of my earlier space syntax analysis.\n\n\n\nSource\nWhat it gives\nUsed in\n\n\n\n\nVille de Montréal, Géobase, réseau routier (Données Québec)\nstreet centrelines with their class and direction\nS1 and the walking network, through Sample 4\n\n\nVille de Montréal, réseau cyclable (donnees.montreal.ca)\noff-street bike and multi-use paths\nS1 checks, the walking network\n\n\nVille de Montréal, sign inventory, excluding parking signs (donnees.montreal.ca), from Sample 4\nstop, all-way, turn and no-entry signs\nS3\n\n\nVille de Montréal, feux de circulation (donnees.montreal.ca), from Sample 4\nwhere each traffic light stands, and whether it is permanent\nS3\n\n\nVille de Montréal, limites de vitesse, file of 2026-02-26 (donnees.montreal.ca), from Sample 4\nthe speed limit of each street\nS3\n\n\nVille de Montréal, comptage des véhicules, cyclistes et piétons (donnees.montreal.ca), downloaded 2026-10-10\n15-minute counts of each turning movement by kind of road user, at about 23 intersections in and around Griffintown, 2024 to 2026\nMovement counts: light timing at 7 S1 junctions; later S5 and S9\n\n\nVille de Montréal, vélos, comptage sur les pistes cyclables, files “Ville” 2025 and 2026 and the sites’ locations (Données Québec), downloaded 2026-10-15\nhourly bicycles at the city’s permanent detectors, June 2025 to October 2026\nS5: three detectors inside the area\n\n\nVille de Montréal, arbres publics, bornes d’incendie, trottoir et îlot and entraves et travaux en cours (donnees.montreal.ca), downloaded 2026-10-16\npublic trees, fire hydrants, sidewalk and island outlines, road works on one day\nS6\n\n\nVille de Montréal, feux pour piétons (donnees.montreal.ca), downloaded 2026-10-10\nwhich lights have pedestrian signals: 30 of the 31 in S1\nMovement counts\n\n\nOpenStreetMap, through the Overpass API\nfootpaths and park paths, as a second opinion\nS1 checks, C18 park paths\n\n\nMapillary\nstreet-level photos, CC BY-SA 4.0\nS1 checks, M01\n\n\nMapillary map features API (graph.mapillary.com/map_features), fetched 2026-10-10\n1,455 signs detected in photos, with the direction each faces\nChecking the sources, S3 checks\n\n\nMapillary map features API, fetched 2026-10-16\n30,410 objects detected in photos around the area; S6 keeps the street lights, surveillance cameras and painted crossings inside it and uses hydrants, benches, bins and racks to measure agreement\nS6\n\n\nOpenStreetMap street lamps, surveillance cameras and crossings (Overpass API), fetched 2026-10-16\n72 lamps, 55 cameras and 481 crossings inside the area\nS6\n\n\nStatistics Canada, Census of Population 2021, tables 98-10-0014, 98-10-0478, 98-10-0480 and 98-10-0504, through its Web Data Service, extracts saved 2026-10-16\nhomes, people at work, working from home, and when and how commuters travel, for the tracts that cover the area\nS7\n\n\nStatistics Canada, 2021 census tract boundaries (cartographic boundary files)\nthe tracts that cover the study area\nS7\n\n\nSTM, GTFS timetable, feed of 2026-10-07 (stm.info)\nmetro entrances and bus stops, with their departures on a Wednesday\nS7\n\n\nCornelissen, L. (2024), What is the connection between working from home and the languages used at work?, Statistics Canada, 75-006-x; The Canadian Press (26 August 2025), on the Labour Force Survey of May 2025\nworking from home in Canada: 24.3 % in May 2021, 17.4 % in May 2025\nS7\n\n\nMapillary photos by VdM (Ville de Montréal), geodz, une_abeille and AlexPL, 2022 to 2026, CC BY-SA 4.0\nthe evidence behind each S3 decision\nS3 checks with photos\n\n\nGoogle Street View\nstreet-level photos, for looking only\nS1 checks\n\n\nVille de Montréal, Unités d’évaluation foncière (tax roll) (donnees.montreal.ca, resource 2b9dfc3d-91d3-48de-b32c-a2a6d9417079), fetched 2026-09-25\nuse, storeys, dwellings, year built and floor area of each property\nS4\n\n\nVille de Montréal, Unités d’évaluation foncière, the GeoJSON file with lot outlines (donnees.montreal.ca), saved 2026-10-15\nthe outline of the lot each property sits on: 255 distinct lots for 9,379 properties in the study area\nS4, to place each property\n\n\nVille de Montréal, Adresse ponctuelle (address points) (donnees.montreal.ca, resource fed5fd02-5535-458e-b13f-66e7a31a6d78), fetched 2026-09-25\nwhere each civic number stands, to place the tax roll\nS4\n\n\nVille de Montréal, Locaux commerciaux et statuts d’occupation, 2025 survey (Données Québec), from Sample 4\nevery ground-floor commercial space, occupied or vacant, with its use: 247 in the study area\nS4\n\n\nVille de Montréal, Lieux et bâtiments à vocation publique (opendatamontreal.ca)\npublic places with opening hours\nS4\n\n\nOpenStreetMap buildings and places, through the Overpass API, fetched 2026-10-14, ODbL\nbuilding outlines, and shops, cafés, offices and parks, 83 of them with opening hours\nS4; the outlines also stop the sight lines of S8\n\n\nOpenStreetMap building parts, through an Overpass mirror, fetched 2026-10-15, ODbL\nthe storeys of towers drawn as parts on their podiums\nS4\n\n\n\nOpened and set aside for now: Ville de Montréal, Bâtiments 3D 2020 (Données Québec), CityGML, CC BY 4.0. Its Ville-Marie tiles stop at the borough line and hold three small structures of the study area. Le Sud-Ouest has only the 2016 model (Données Québec).\nA list of every downloaded file gives each one’s date and licence. The Concordia NGCI building file is listed there too. It carries no licence, so S4 does not use it.",
     "crumbs": [
       "Method",
       "Resources"
@@ -1276,7 +1432,7 @@
     "href": "resources.html#readings",
     "title": "Resources",
     "section": "Readings",
-    "text": "Readings\n\nSpace syntax\n\nHillier, B., & Hanson, J. (1984). The Social Logic of Space. Cambridge University Press.\nHillier, B., Penn, A., Hanson, J., Grajewski, T., & Xu, J. (1993). Natural movement: or, configuration and attraction in urban pedestrian movement. Environment and Planning B, 20(1), 29–66.\nHillier, B. (1996). Space is the Machine. Cambridge University Press.\nRatti, C. (2004). Space syntax: some inconsistencies. Environment and Planning B, 31(4), 487–499.\nHillier, B., & Iida, S. (2005). Network and psychological effects in urban movement. In Spatial Information Theory (COSIT 2005), Lecture Notes in Computer Science 3693, 475–490. Springer.\nTurner, A. (2007). From axial to road-centre lines: a new representation for space syntax and a new model of route choice for transport network analysis. Environment and Planning B, 34(3), 539–555.\nHillier, B., Yang, T., & Turner, A. (2012). Normalising least angle choice in Depthmap and how it opens up new perspectives on the global and local analysis of city space. Journal of Space Syntax, 3(2), 155–193.\nvan Nes, A., & Yamu, C. (2021). Introduction to Space Syntax in Urban Studies. Springer. Open access.\n\n\n\nSpatial culture and rhythm\n\nGriffiths, S., & von Lünen, A. (Eds.) (2016). Spatial Cultures: Towards a New Social Morphology of Cities Past and Present. Routledge.\nAdams, R. (2024). Designing Spatial Culture. Routledge.\nLefebvre, H. (1991). The Production of Space (D. Nicholson-Smith, Trans.). Blackwell. (Original work published 1974)\nLefebvre, H. (2004). Rhythmanalysis: Space, Time and Everyday Life (S. Elden & G. Moore, Trans.). Continuum. (Original work published 1992)\n\n\n\nArchives and heritage visualisation\n\nSchellenberg, T. R. (2003). Modern Archives: Principles and Techniques. Society of American Archivists. (Original work published 1956)\nTaylor, D. (2003). The Archive and the Repertoire: Performing Cultural Memory in the Americas. Duke University Press.\nDenard, H. (Ed.) (2009). The London Charter for the Computer-Based Visualisation of Cultural Heritage, version 2.1. london-charter.org\nLópez-Menchero, V. M., & Grande, A. (2011). The principles of the Seville Charter. Proceedings of the XXIII CIPA Symposium, Prague.\n\n\n\nTraffic\n\nWebster, F. V. (1958). Traffic Signal Settings. Road Research Technical Paper 39. Her Majesty’s Stationery Office.\nVille de Montréal (2007). Assemblée publique sur la révision du réseau artériel de Montréal. Commission permanente sur le transport, 12 April 2007. PDF\nFederal Highway Administration (2023). Highway Functional Classification: Concepts, Criteria and Procedures. U.S. Department of Transportation. PDF\n\n\n\nNetwork measures\n\nSabidussi, G. (1966). The centrality index of a graph. Psychometrika, 31(4), 581–603.\nFreeman, L. C. (1977). A set of measures of centrality based on betweenness. Sociometry, 40(1), 35–41.\n\nPage numbers in this site’s citations refer to the editions listed here, and I checked them against the texts in Reading closely.",
+    "text": "Readings\n\nSpace syntax\n\nHillier, B., & Hanson, J. (1984). The Social Logic of Space. Cambridge University Press.\nHillier, B., Penn, A., Hanson, J., Grajewski, T., & Xu, J. (1993). Natural movement: or, configuration and attraction in urban pedestrian movement. Environment and Planning B, 20(1), 29–66.\nHillier, B. (1996). Space is the Machine. Cambridge University Press.\nRatti, C. (2004). Space syntax: some inconsistencies. Environment and Planning B, 31(4), 487–499.\nHillier, B., & Iida, S. (2005). Network and psychological effects in urban movement. In Spatial Information Theory (COSIT 2005), Lecture Notes in Computer Science 3693, 475–490. Springer.\nTurner, A. (2007). From axial to road-centre lines: a new representation for space syntax and a new model of route choice for transport network analysis. Environment and Planning B, 34(3), 539–555.\nHillier, B., Yang, T., & Turner, A. (2012). Normalising least angle choice in Depthmap and how it opens up new perspectives on the global and local analysis of city space. Journal of Space Syntax, 3(2), 155–193.\nvan Nes, A., & Yamu, C. (2021). Introduction to Space Syntax in Urban Studies. Springer. Open access.\n\n\n\nSpatial culture and rhythm\n\nGriffiths, S., & von Lünen, A. (Eds.) (2016). Spatial Cultures: Towards a New Social Morphology of Cities Past and Present. Routledge.\nAdams, R. (2024). Designing Spatial Culture. Routledge.\nLefebvre, H. (1991). The Production of Space (D. Nicholson-Smith, Trans.). Blackwell. (Original work published 1974)\nLefebvre, H. (2004). Rhythmanalysis: Space, Time and Everyday Life (S. Elden & G. Moore, Trans.). Continuum. (Original work published 1992)\n\n\n\nArchives and heritage visualisation\n\nSchellenberg, T. R. (2003). Modern Archives: Principles and Techniques. Society of American Archivists. (Original work published 1956)\nTaylor, D. (2003). The Archive and the Repertoire: Performing Cultural Memory in the Americas. Duke University Press.\nDenard, H. (Ed.) (2009). The London Charter for the Computer-Based Visualisation of Cultural Heritage, version 2.1. london-charter.org\nLópez-Menchero, V. M., & Grande, A. (2011). The principles of the Seville Charter. Proceedings of the XXIII CIPA Symposium, Prague.\n\n\n\nTraffic\n\nWebster, F. V. (1958). Traffic Signal Settings. Road Research Technical Paper 39. Her Majesty’s Stationery Office.\nVille de Montréal (2007). Assemblée publique sur la révision du réseau artériel de Montréal. Commission permanente sur le transport, 12 April 2007. PDF\nFederal Highway Administration (2023). Highway Functional Classification: Concepts, Criteria and Procedures. U.S. Department of Transportation. PDF\n\n\n\nIsovists\n\nBenedikt, M. L. (1979). To take hold of space: isovists and isovist fields. Environment and Planning B, 6(1), 47–65.\nBatty, M. (2001). Exploring isovist fields: space and shape in architectural and urban morphology. Environment and Planning B, 28(1), 123–150.\nTurner, A., Doxa, M., O’Sullivan, D., & Penn, A. (2001). From isovists to visibility graphs: a methodology for the analysis of architectural space. Environment and Planning B, 28(1), 103–121.\n\n\n\nNetwork measures\n\nSabidussi, G. (1966). The centrality index of a graph. Psychometrika, 31(4), 581–603.\nFreeman, L. C. (1977). A set of measures of centrality based on betweenness. Sociometry, 40(1), 35–41.\n\nPage numbers in this site’s citations refer to the editions listed here, and I checked them against the texts in Reading closely.",
     "crumbs": [
       "Method",
       "Resources"
@@ -1707,7 +1863,7 @@
     "href": "s5-build.html#assumptions",
     "title": "How S5 is built and tested",
     "section": "Assumptions",
-    "text": "Assumptions\n\n\n\n\n\n\n\n\nAssumption\nWhy I accept it for now\nWhat would replace it\n\n\n\n\na weekday has one shape, Monday to Friday\nonly Tuesday to Thursday were counted\ncounts on Mondays and Fridays\n\n\nseven junctions stand for Griffintown’s streets\nthey are the only counts at S1 junctions\nthe bicycle counters, field observation\n\n\nwinter, spring and autumn days stand for any season\nno summer day was counted\nthe bicycle counters, which run all year\n\n\na day the hours never name is closed\nthe opening_hours convention\na look at the door, or the place’s own website\n\n\nopen in an hour means open at half past\nsimple to explain, and the stress test shows it matters little\nfiner steps once S7 runs by the minute\n\n\nthree detectors on Peel and William stand for Griffintown’s cycling\nthe only detectors inside the area\na counter on the canal path, field observation\n\n\na holiday behaves like the kind of day it falls on\nthe counts carry no calendar\na list of Québec holidays, to set them apart",
+    "text": "Assumptions\n\n\n\n\n\n\n\n\nAssumption\nWhy I accept it for now\nWhat would replace it\n\n\n\n\na weekday has one shape, Monday to Friday\nonly Tuesday to Thursday were counted\ncounts on Mondays and Fridays\n\n\nseven junctions stand for Griffintown’s streets\nthey are the only counts at S1 junctions\nthe bicycle counters, field observation\n\n\nwinter, spring and autumn days stand for any season\nno summer day was counted\nthe bicycle counters, which run all year\n\n\na day the hours never name is closed\nthe opening_hours convention\na look at the door, or the place’s own website\n\n\nopen in an hour means open at half past\nsimple to explain, and the stress test shows it matters little\nfiner steps once S9 runs by the minute\n\n\nthree detectors on Peel and William stand for Griffintown’s cycling\nthe only detectors inside the area\na counter on the canal path, field observation\n\n\na holiday behaves like the kind of day it falls on\nthe counts carry no calendar\na list of Québec holidays, to set them apart",
     "crumbs": [
       "Method",
       "S5 Rhythm",
@@ -1839,10 +1995,10 @@
     "href": "s7-build.html",
     "title": "How S7 is built",
     "section": "",
-    "text": "flowchart TB\n  C[/\"Census 2021&lt;br/&gt;homes, work from home,&lt;br/&gt;leaving and arriving, mode\"/]:::data --&gt; R[\"TODAY&lt;br/&gt;one correction&lt;br/&gt;for working from home\"]:::rule\n  H[/\"S4 buildings&lt;br/&gt;homes and premises\"/]:::data --&gt; W[\"WHO&lt;br/&gt;commuters per home,&lt;br/&gt;workers per premises\"]:::step\n  R --&gt; W\n  ST[/\"STM stops&lt;br/&gt;metro entrances, bus stops\"/]:::data --&gt; D[\"WHERE&lt;br/&gt;stop, workplace&lt;br/&gt;or downtown\"]:::step\n  W --&gt; D\n  D --&gt; T[\"WHEN&lt;br/&gt;census hours,&lt;br/&gt;the trip back later\"]:::step\n  N[/\"S1 streets\"/]:::data --&gt; P[\"ROUTE&lt;br/&gt;shortest walk\"]:::rule\n  T --&gt; P\n  P --&gt; OUT[/\"walks, walkers per&lt;br/&gt;street and hour\"/]:::out\n  OUT --&gt; TE[\"TESTS\"]:::test\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "text": "flowchart TB\n  C[/\"Census 2021&lt;br/&gt;homes, work from home,&lt;br/&gt;modes, hour bands\"/]:::data --&gt; R[\"TODAY&lt;br/&gt;one correction&lt;br/&gt;for working from home\"]:::rule\n  H[/\"S4 buildings&lt;br/&gt;homes\"/]:::data --&gt; W[\"HOMES&lt;br/&gt;commuters per home,&lt;br/&gt;by mode\"]:::step\n  R --&gt; W\n  R --&gt; BA[\"BANDS&lt;br/&gt;leaving and arriving,&lt;br/&gt;as published\"]:::step\n  ST[/\"STM stops\"/]:::data --&gt; D[\"DISTANCE&lt;br/&gt;nearest metro entrance&lt;br/&gt;and bus stop, along S1\"]:::step\n  N[/\"S1 streets\"/]:::data --&gt; D\n  W --&gt; D\n  D --&gt; OUT[/\"homes, bands, stops\"/]:::out\n  BA --&gt; OUT\n  OUT --&gt; TE[\"TESTS\"]:::test\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
     "crumbs": [
       "Method",
-      "S7 Walkers",
+      "S7 Commuters",
       "How S7 is built"
     ]
   },
@@ -1851,10 +2007,10 @@
     "href": "s7-build.html#blueprint",
     "title": "How S7 is built",
     "section": "",
-    "text": "flowchart TB\n  C[/\"Census 2021&lt;br/&gt;homes, work from home,&lt;br/&gt;leaving and arriving, mode\"/]:::data --&gt; R[\"TODAY&lt;br/&gt;one correction&lt;br/&gt;for working from home\"]:::rule\n  H[/\"S4 buildings&lt;br/&gt;homes and premises\"/]:::data --&gt; W[\"WHO&lt;br/&gt;commuters per home,&lt;br/&gt;workers per premises\"]:::step\n  R --&gt; W\n  ST[/\"STM stops&lt;br/&gt;metro entrances, bus stops\"/]:::data --&gt; D[\"WHERE&lt;br/&gt;stop, workplace&lt;br/&gt;or downtown\"]:::step\n  W --&gt; D\n  D --&gt; T[\"WHEN&lt;br/&gt;census hours,&lt;br/&gt;the trip back later\"]:::step\n  N[/\"S1 streets\"/]:::data --&gt; P[\"ROUTE&lt;br/&gt;shortest walk\"]:::rule\n  T --&gt; P\n  P --&gt; OUT[/\"walks, walkers per&lt;br/&gt;street and hour\"/]:::out\n  OUT --&gt; TE[\"TESTS\"]:::test\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "text": "flowchart TB\n  C[/\"Census 2021&lt;br/&gt;homes, work from home,&lt;br/&gt;modes, hour bands\"/]:::data --&gt; R[\"TODAY&lt;br/&gt;one correction&lt;br/&gt;for working from home\"]:::rule\n  H[/\"S4 buildings&lt;br/&gt;homes\"/]:::data --&gt; W[\"HOMES&lt;br/&gt;commuters per home,&lt;br/&gt;by mode\"]:::step\n  R --&gt; W\n  R --&gt; BA[\"BANDS&lt;br/&gt;leaving and arriving,&lt;br/&gt;as published\"]:::step\n  ST[/\"STM stops\"/]:::data --&gt; D[\"DISTANCE&lt;br/&gt;nearest metro entrance&lt;br/&gt;and bus stop, along S1\"]:::step\n  N[/\"S1 streets\"/]:::data --&gt; D\n  W --&gt; D\n  D --&gt; OUT[/\"homes, bands, stops\"/]:::out\n  BA --&gt; OUT\n  OUT --&gt; TE[\"TESTS\"]:::test\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
     "crumbs": [
       "Method",
-      "S7 Walkers",
+      "S7 Commuters",
       "How S7 is built"
     ]
   },
@@ -1863,46 +2019,46 @@
     "href": "s7-build.html#the-sources",
     "title": "How S7 is built",
     "section": "The sources",
-    "text": "The sources\n\n\n\nSource\nWhat S7 takes from it\n\n\n\n\nStatistics Canada, 2021 census tract boundaries\nwhich tracts cover the study area, and how much of each lies inside it\n\n\nStatistics Canada, table 98-10-0014\nhomes and population in each tract\n\n\nStatistics Canada, table 98-10-0478\npeople at work in each tract, and how many worked from home\n\n\nStatistics Canada, table 98-10-0480\nresidents’ way of getting to work, and the hour they leave\n\n\nStatistics Canada, table 98-10-0504\nthe people who work in each tract: how they come, and the hour they arrive\n\n\nSTM, published timetable (GTFS), feed of 7 October 2026\nmetro entrances and bus stops around the area, kept when a vehicle stops there on a Wednesday\n\n\nS4 Buildings\ntoday’s homes per building, and the business premises in each\n\n\n\nThree tracts cover nine tenths of the study area. Statistics Canada’s tables are open under the Open Government Licence of Canada, and the STM’s under CC BY 4.0.",
+    "text": "The sources\n\n\n\nSource\nWhat S7 takes from it\n\n\n\n\nStatistics Canada, 2021 census tract boundaries\nwhich tracts cover the study area, and how much of each lies inside it\n\n\nStatistics Canada, table 98-10-0014\nhomes and population in each tract\n\n\nStatistics Canada, table 98-10-0478\npeople at work in each tract, and how many worked from home\n\n\nStatistics Canada, table 98-10-0480\nresidents’ way of getting to work, and the hour band they leave in\n\n\nStatistics Canada, table 98-10-0504\nthe people who work in each tract: how they come, and the hour band they arrive in\n\n\nSTM, published timetable (GTFS), feed of 7 October 2026\nmetro entrances and bus stops around the area, kept when a vehicle stops there on a Wednesday\n\n\nS4 Buildings\ntoday’s homes per building\n\n\n\nThree tracts cover nine tenths of the study area. Statistics Canada’s tables are open under the Open Government Licence of Canada, and the STM’s under CC BY 4.0.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
+      "S7 Commuters",
       "How S7 is built"
     ]
   },
   {
-    "objectID": "s7-build.html#who",
-    "href": "s7-build.html#who",
+    "objectID": "s7-build.html#commuters-per-home",
+    "href": "s7-build.html#commuters-per-home",
     "title": "How S7 is built",
-    "section": "Who",
-    "text": "Who\nA building with homes sends out its tract’s commuters per home, by its tract’s mix of ways to work. A workplace receives its tract’s arrivals at work, shared among the buildings with business premises by their number, and scaled down where only part of the tract lies inside the area.\nThe census week fell during the pandemic. S7 reduces each tract’s share working from home by the fall measured across Canada, from 24.3 % in May 2021 to 17.4 % in May 2025. For the people who come here to work, the census does not say how many worked from home, so S7 raises their number by the national change alone, about 9 %.",
+    "section": "Commuters per home",
+    "text": "Commuters per home\nA building with homes takes its tract’s commuters per home and its tract’s mix of ways to work. A building in a tract where nobody lived at the 2021 census would take the rates of the lived-in tracts together and become a checkpoint; none does.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
+      "S7 Commuters",
       "How S7 is built"
     ]
   },
   {
-    "objectID": "s7-build.html#where",
-    "href": "s7-build.html#where",
+    "objectID": "s7-build.html#the-one-correction",
+    "href": "s7-build.html#the-one-correction",
     "title": "How S7 is built",
-    "section": "Where",
-    "text": "Where\n\n\n\n\n\n\n\nWho\nWalks\n\n\n\n\na resident who walks to work\nto a workplace in the area, or to Place Ville Marie, standing in for downtown\n\n\na resident who takes the metro or a bus\nto the nearest metro entrance or bus stop\n\n\na resident who takes a commuter train\nto Lucien-L’Allier or Bonaventure, where the trains of 2021 stopped\n\n\nsomeone who comes here by metro, bus or train\nfrom the nearest stop of that kind to the workplace\n\n\nanyone who drives or cycles\nnowhere on S1: the car is taken to be parked in the building, and S7 holds walkers only\n\n\n\nThe census counts about 390 people who walk to a job in the area. S7 takes them to live here, so about a fifth of the residents who walk to work go to a workplace in the area, and the others go downtown. A place outside the area is reached through the S1 door that makes the whole trip shortest, the part outside counted as a straight line.",
+    "section": "The one correction",
+    "text": "The one correction\nThe census week fell during the pandemic. S7 reduces each tract’s share working from home by the fall measured across Canada, from 24.3 % in May 2021 to 17.4 % in May 2025. For the people who come here to work, the census does not say how many worked from home, so S7 raises their number by the national change alone, about 9 %. The hour bands keep the census’s own widths: S7 does not spread them into hours.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
+      "S7 Commuters",
       "How S7 is built"
     ]
   },
   {
-    "objectID": "s7-build.html#when",
-    "href": "s7-build.html#when",
+    "objectID": "s7-build.html#the-nearest-stops",
+    "href": "s7-build.html#the-nearest-stops",
     "title": "How S7 is built",
-    "section": "When",
-    "text": "When\nThe census gives the hour of leaving or arriving in bands, such as 9 to 11:59. S7 spreads each band evenly over its hours, and pools the three tracts for each way of travelling, since one tract alone holds too few people in some bands. A resident comes home 9.5 hours after leaving; someone who works here leaves 8.5 hours after arriving. The last band of the census, from noon to 4:59 in the morning, is spread over seventeen hours, which flattens the evening and the night.",
+    "section": "The nearest stops",
+    "text": "The nearest stops\nFor every building with homes, S7 measures the walk to the nearest metro entrance and the nearest bus stop with a departure on a weekday, along the walkable S1 streets from the point where the building meets its street. A stop outside the area is reached through the S1 door that makes the walk shortest, and the part beyond the door is measured as a straight line, so a distance to a stop outside is a little short.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
+      "S7 Commuters",
       "How S7 is built"
     ]
   },
@@ -1911,10 +2067,10 @@
     "href": "s7-build.html#assumptions",
     "title": "How S7 is built",
     "section": "Assumptions",
-    "text": "Assumptions\n\n\n\n\n\n\n\n\nAssumption\nWhy I accept it for now\nWhat would replace it\n\n\n\n\nworking from home fell in each tract as it did across Canada\nthe only measure since 2021 is national\nthe 2026 census, or the city’s own survey\n\n\na walker takes the shortest walk\nS7 knows nothing yet of how people choose\nthe perception part of S7, and interviews\n\n\ndowntown is Place Ville Marie\nthe census does not say where each walker works\ncommuting flows by tract of work, if they are published\n\n\na driver parks in the building\nthe new towers have underground garages (likely)\nparking data, or a look on site\n\n\nthe people who walk to a job here live here\na walk to work is short\nthe census flows between tracts\n\n\na resident is away 9.5 hours, a worker stays 8.5\nan office day with lunch, and the trip\nthe time leaving work, which the census does not ask",
+    "text": "Assumptions\n\n\n\n\n\n\n\n\nAssumption\nWhy I accept it for now\nWhat would replace it\n\n\n\n\nworking from home fell in each tract as it did across Canada\nthe only measure since 2021 is national\nthe 2026 census\n\n\na building’s residents commute like its tract\nthe census is published by tract\nnothing finer is open\n\n\na walk beyond the area is a straight line\nS1 stops at the edge\nthe streets beyond the area",
     "crumbs": [
       "Method",
-      "S7 Walkers",
+      "S7 Commuters",
       "How S7 is built"
     ]
   },
@@ -1923,11 +2079,179 @@
     "href": "s7-build.html#tests",
     "title": "How S7 is built",
     "section": "Tests",
-    "text": "Tests\n\nNine checks\nEach check asks one plain question of what S7 wrote. Eight must pass, and all eight do; the ninth only reports.\n\n\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nIs every census value S7 uses the one in Statistics Canada’s file?\nyes\n\n\nT2\nDoes every home’s number of commuters rebuild from its homes, its tract’s 2021 rates and the one correction?\nyes, 132 buildings\n\n\nT3\nDoes every workplace’s number of workers rebuild from its tract’s arrivals, the correction, the share inside and its premises?\nyes, 124 workplaces\n\n\nT4\nDoes every trip carry exactly the walkers its home or workplace sends, and does every walk out have its walk back?\nyes\n\n\nT5\nIs every hourly shape the census bands spread evenly, adding to 1, with each walk back moved by the stated hours?\nyes, 12 shapes\n\n\nT6\nIs every route an unbroken walk on walkable S1 streets, and the shortest one?\nyes; every 40th worked out again from scratch\n\n\nT7\nDo the walkers on each street in each hour equal the walks that cross it?\nyes\n\n\nT8\nDoes S7 leave out the counts and space syntax?\nyes\n\n\nT9\nWhat does S7 give, and what does it rest on?\nreport\n\n\n\n\n\n\n\n\n\nTipTesting the tests\n\n\n\nT4 and T6 failed on their first run. T4 mixed up the buildings that hold both homes and premises, and T6’s own search could not go straight along one street between two points on it; both were faults in the tests. T6 also found a real one: S7 wrote the part of a trip outside the area into the length along the streets as well, so it was counted twice. S7 now keeps the two apart.\n\n\n\n\nStress tests\nRun twice on the same input, S7 gives the same output (X1). X2 changes the one correction. With working from home as in May 2021, about 3,900 people walk a weekday commute; with today’s national figure, 4,900; at the 2016 level, about 6,300. The streets they take stay the same. X3 changes the hours away from home: at 8.5 hours the evening’s busiest hour is 16h, at 9.5 it is 17h, and at 10.5 it is 18h. X4 moves downtown from Place Ville Marie to Peel station or to Square-Victoria. The walkers then leave the area by different streets: towards Square-Victoria, half of them by Peel.",
+    "text": "Tests\n\nSeven checks\nEach check asks one plain question of what S7 wrote. Six must pass, and all six do; the seventh only reports.\n\n\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nIs every census value S7 uses the one in Statistics Canada’s file?\nyes, every band of both tables\n\n\nT2\nIs the one correction applied as stated, to every tract and every band?\nyes\n\n\nT3\nDoes every home’s number of commuters, by mode, rebuild from its homes and its tract’s rates?\nyes, 132 buildings\n\n\nT4\nIs each home’s nearest metro entrance and bus stop the nearest along S1, worked out again from scratch?\nyes, every 4th building\n\n\nT5\nAre the stops the STM’s own, with their departures, and is every home counted at its two nearest stops?\nyes, 295 stops\n\n\nT6\nDoes S7 leave out the counts and space syntax, and draw no imagined walk?\nyes\n\n\nT7\nWhat does S7 give?\nreport\n\n\n\n\n\n\n\n\n\nTipTesting the tests\n\n\n\nThe first S7 drew walkers on every street, hour by hour. To do that it had to imagine where each person goes and when they come back, so I took that part out: it belongs to S9. Its tests had already caught one real fault, a distance outside the area counted twice; the measure of the nearest stops keeps that fix.\n\n\n\n\nStress tests\nRun twice on the same input, S7 gives the same output (X1). X2 changes the one correction. With working from home as in May 2021, about 5,400 residents commute; with today’s national figure, 7,200; at the 2016 level, about 9,700. The shares by mode and hour do not move.",
     "crumbs": [
       "Method",
-      "S7 Walkers",
+      "S7 Commuters",
       "How S7 is built"
+    ]
+  },
+  {
+    "objectID": "s8-build.html",
+    "href": "s8-build.html",
+    "title": "How S8 is built",
+    "section": "",
+    "text": "flowchart TB\n  N[/\"S1 streets&lt;br/&gt;walkable, inside the area\"/]:::data --&gt; P[\"POINTS&lt;br/&gt;a viewpoint every 10 m\"]:::step\n  B[/\"OpenStreetMap&lt;br/&gt;building outlines\"/]:::data --&gt; R[\"RAYS&lt;br/&gt;360 sight lines,&lt;br/&gt;stopped at the first outline&lt;br/&gt;or at 300 m\"]:::step\n  P --&gt; R\n  R --&gt; M[\"MEASURES&lt;br/&gt;area, perimeter, longest&lt;br/&gt;and mean line, compactness\"]:::step\n  M --&gt; S[\"SEGMENTS&lt;br/&gt;the mean of their viewpoints,&lt;br/&gt;and the middle view kept\"]:::step\n  S --&gt; K[\"CHECK&lt;br/&gt;viewpoints inside an outline,&lt;br/&gt;views leaving the map\"]:::step\n  K --&gt; OUT[/\"points, segments,&lt;br/&gt;views, checkpoints\"/]:::out\n  OUT --&gt; TE[\"TESTS\"]:::test\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "How S8 is built"
+    ]
+  },
+  {
+    "objectID": "s8-build.html#blueprint",
+    "href": "s8-build.html#blueprint",
+    "title": "How S8 is built",
+    "section": "",
+    "text": "flowchart TB\n  N[/\"S1 streets&lt;br/&gt;walkable, inside the area\"/]:::data --&gt; P[\"POINTS&lt;br/&gt;a viewpoint every 10 m\"]:::step\n  B[/\"OpenStreetMap&lt;br/&gt;building outlines\"/]:::data --&gt; R[\"RAYS&lt;br/&gt;360 sight lines,&lt;br/&gt;stopped at the first outline&lt;br/&gt;or at 300 m\"]:::step\n  P --&gt; R\n  R --&gt; M[\"MEASURES&lt;br/&gt;area, perimeter, longest&lt;br/&gt;and mean line, compactness\"]:::step\n  M --&gt; S[\"SEGMENTS&lt;br/&gt;the mean of their viewpoints,&lt;br/&gt;and the middle view kept\"]:::step\n  S --&gt; K[\"CHECK&lt;br/&gt;viewpoints inside an outline,&lt;br/&gt;views leaving the map\"]:::step\n  K --&gt; OUT[/\"points, segments,&lt;br/&gt;views, checkpoints\"/]:::out\n  OUT --&gt; TE[\"TESTS\"]:::test\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "How S8 is built"
+    ]
+  },
+  {
+    "objectID": "s8-build.html#the-sources",
+    "href": "s8-build.html#the-sources",
+    "title": "How S8 is built",
+    "section": "The sources",
+    "text": "The sources\n\n\n\nSource\nWhat S8 takes from it\n\n\n\n\nS1 Streets\nthe walkable segments inside the area, and their lines\n\n\nOpenStreetMap buildings, through the Overpass API, fetched 2026-10-14, ODbL\n1,682 building outlines over the area and 150 m around it; 14 buildings recorded as relations have no outline in the file and stop nothing",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "How S8 is built"
+    ]
+  },
+  {
+    "objectID": "s8-build.html#viewpoints",
+    "href": "s8-build.html#viewpoints",
+    "title": "How S8 is built",
+    "section": "Viewpoints",
+    "text": "Viewpoints\nEach walkable segment inside the area is cut into steps of about 10 m, and a viewpoint stands at the middle of each step. A segment shorter than 10 m gets one viewpoint. The viewpoint stands on the street’s centreline, where the S1 line runs.",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "How S8 is built"
+    ]
+  },
+  {
+    "objectID": "s8-build.html#sight-lines",
+    "href": "s8-build.html#sight-lines",
+    "title": "How S8 is built",
+    "section": "Sight lines",
+    "text": "Sight lines\nFrom each viewpoint, 360 sight lines leave at every degree. Each one stops at the first building edge it crosses, or at 300 m. A line that passes exactly through a building’s corner counts as stopped there, so it cannot slip between two edges.",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "How S8 is built"
+    ]
+  },
+  {
+    "objectID": "s8-build.html#measures",
+    "href": "s8-build.html#measures",
+    "title": "How S8 is built",
+    "section": "Measures",
+    "text": "Measures\n\n\n\n\n\n\n\nMeasure\nWhat it says\n\n\n\n\narea\nthe surface enclosed by the ends of the 360 lines, in m²\n\n\nperimeter\nthe length of that outline\n\n\nlongest and mean sight line\nhow far one can see at most, and on average\n\n\ncompactness\n4π × area / perimeter², 1 for a circle, small for a long thin corridor\n\n\nopen share\nthe share of lines that reach 300 m\n\n\nbeyond share\nthe share of lines that end outside the box of buildings S8 read, where the view is unknown\n\n\n\nBenedikt (1979) defined the isovist and several of these measures; Batty (2001) uses compactness to compare the shapes of isovists across a plan. Turner and others (2001) carry isovists into visibility graphs, which S8 does not build.",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "How S8 is built"
+    ]
+  },
+  {
+    "objectID": "s8-build.html#assumptions",
+    "href": "s8-build.html#assumptions",
+    "title": "How S8 is built",
+    "section": "Assumptions",
+    "text": "Assumptions\n\n\n\nAssumption\nWhy I accept it for now\nWhat would replace it\n\n\n\n\nonly building outlines block a view\nthey are the only obstacles mapped openly for the whole area\nthe city’s 3D buildings, trees with their crowns, the rail and road structures\n\n\nthe view is flat, at eye level\nthe outlines carry no reliable height for walls and podiums\na 3D model of the street\n\n\na viewpoint stands on the centreline\nS1 gives the street as one line\nthe sidewalks of S6, when S9 needs sides\n\n\n300 m reach\nfar enough for the length of a block in the old grid and the width of the canal\na stress test shows what changes",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "How S8 is built"
+    ]
+  },
+  {
+    "objectID": "s8-build.html#tests",
+    "href": "s8-build.html#tests",
+    "title": "How S8 is built",
+    "section": "Tests",
+    "text": "Tests\n\nSeven checks\nEach check asks one plain question of what S8 wrote. Six must pass, and all six do; the seventh only reports.\n\n\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nDoes every walkable segment inside the area have a viewpoint at least every 10 m or so?\nyes, 1,798 viewpoints on 231 segments\n\n\nT2\nDoes every sight line stop at the first building edge or at the radius, and does the area follow?\nyes, every 25th viewpoint worked out again in plain Python, one line at a time\n\n\nT3\nDo the measures of every viewpoint agree with each other?\nyes\n\n\nT4\nIs every segment the mean of its viewpoints, with its middle view kept for the Lab?\nyes\n\n\nT5\nIs every viewpoint inside a building, and every view beyond the mapped buildings, a checkpoint, and nothing else?\nyes, 1 checkpoint\n\n\nT6\nDoes S8 measure from the map alone, leaving out the counts, space syntax and the trees?\nyes\n\n\nT7\nWhat does S8 give?\nreport\n\n\n\n\n\n\n\n\n\nTipTesting the tests\n\n\n\nT2 first failed on 16 viewpoints, by up to 9 m². The check started from the positions written in the file, rounded to the centimetre, and a centimetre was enough to let a line graze past a corner it had hit before. T2 now places the viewpoints again from S1. A smaller gap of 0.1 m² remained: the area was summed in coordinates of about five million metres, which loses decimals. S8 now sums it from the viewpoint outwards, and the two agree.\n\n\n\n\nStress tests\n\n\n\n\n\n\n\n\n\nChange\nWhat moves\n\n\n\n\nX1\nthe same input twice\nnothing: identical\n\n\nX2\nreach of 100, 200, 300 and 500 m\nmedian area 11,800 to 44,100 m²; the order of the streets against 300 m holds at 0.95 to 0.99\n\n\nX3\n90, 180, 360 and 720 sight lines\nat 720 the streets move by 0.9 % (median), 4 % at most; at 90, 7 % and 30 %\n\n\nX4\na viewpoint every 5, 10 and 20 m\nthe streets move by under 1 % (median); a few short ones by 14 to 45 %\n\n\nX5\none OpenStreetMap outline in ten left out, three draws\nmedian area up by 13 to 78 %; the streets move by 4 to 21 % (median); order 0.90 to 0.99\n\n\n\nX5 is the one that matters: S8 depends on how complete OpenStreetMap is, and a missing building widens a view more than any setting of S8 does. I read the order of the streets, and treat single areas as approximate.",
+    "crumbs": [
+      "Method",
+      "S8 Views",
+      "How S8 is built"
+    ]
+  },
+  {
+    "objectID": "s9-build.html",
+    "href": "s9-build.html",
+    "title": "How S9 is built",
+    "section": "",
+    "text": "flowchart TB\n  S7[/\"S7 commuters&lt;br/&gt;homes, modes, hour bands, stops\"/]:::data --&gt; W[\"WHO WALKS&lt;br/&gt;residents and workers,&lt;br/&gt;6 to 10 h\"]:::step\n  S4[/\"S4 buildings&lt;br/&gt;business premises\"/]:::data --&gt; W\n  LG[\"LEDGER&lt;br/&gt;every rule, with its source&lt;br/&gt;or marked as an assumption\"]:::rule --&gt; W\n  W --&gt; R1[\"shortest\"]:::step\n  W --&gt; R2[\"open\"]:::step\n  W --&gt; R3[\"straight\"]:::step\n  S1[/\"S1 streets\"/]:::data --&gt; R1\n  S8[/\"S8 views\"/]:::data --&gt; R2\n  S1 --&gt; R3\n  R1 --&gt; F[/\"flows on streets&lt;br/&gt;and junctions\"/]:::out\n  R2 --&gt; F\n  R3 --&gt; F\n  F --&gt; C{\"COMPARE&lt;br/&gt;only after\"}:::test\n  S5[/\"S5 counts\"/]:::data --&gt; C\n  S2[/\"S2 space syntax\"/]:::data --&gt; C\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S9 Observer",
+      "How S9 is built"
+    ]
+  },
+  {
+    "objectID": "s9-build.html#blueprint",
+    "href": "s9-build.html#blueprint",
+    "title": "How S9 is built",
+    "section": "",
+    "text": "flowchart TB\n  S7[/\"S7 commuters&lt;br/&gt;homes, modes, hour bands, stops\"/]:::data --&gt; W[\"WHO WALKS&lt;br/&gt;residents and workers,&lt;br/&gt;6 to 10 h\"]:::step\n  S4[/\"S4 buildings&lt;br/&gt;business premises\"/]:::data --&gt; W\n  LG[\"LEDGER&lt;br/&gt;every rule, with its source&lt;br/&gt;or marked as an assumption\"]:::rule --&gt; W\n  W --&gt; R1[\"shortest\"]:::step\n  W --&gt; R2[\"open\"]:::step\n  W --&gt; R3[\"straight\"]:::step\n  S1[/\"S1 streets\"/]:::data --&gt; R1\n  S8[/\"S8 views\"/]:::data --&gt; R2\n  S1 --&gt; R3\n  R1 --&gt; F[/\"flows on streets&lt;br/&gt;and junctions\"/]:::out\n  R2 --&gt; F\n  R3 --&gt; F\n  F --&gt; C{\"COMPARE&lt;br/&gt;only after\"}:::test\n  S5[/\"S5 counts\"/]:::data --&gt; C\n  S2[/\"S2 space syntax\"/]:::data --&gt; C\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc",
+    "crumbs": [
+      "Method",
+      "S9 Observer",
+      "How S9 is built"
+    ]
+  },
+  {
+    "objectID": "s9-build.html#ledger",
+    "href": "s9-build.html#ledger",
+    "title": "How S9 is built",
+    "section": "The ledger",
+    "text": "The ledger\n\n\n\n\n\n\n\n\n\n\nKind\nRule\nSource or reason\n\n\n\n\nE01\nevidence\nHow many residents of each building commute, and by which mode\nS7: census 2021 by tract, corrected once for working from home\n\n\nE02\nevidence\nWhen residents leave for work and when workers arrive, by mode\nS7: census 2021 hour bands by tract\n\n\nE03\nevidence\nThe streets a person may walk, and the doors out of the area\nS1\n\n\nE04\nevidence\nWhich buildings hold business premises, and how many\nS4: tax roll\n\n\nE05\nevidence\nHow much can be seen from each walkable street\nS8\n\n\nA01\nassumption\nResidents who walk to work outside the area head for Place Ville Marie, through the door that makes the whole walk shortest\ndowntown holds most of the jobs within walking distance; no open table says where Griffintown’s walkers work\n\n\nA02\nassumption\nThe share of resident walkers who work inside the area is the people who walk to work here divided by the residents who walk to work (0.19)\nassumes everyone who walks to a job here lives here, so it is an upper bound\n\n\nA03\nassumption\nInside the area, workers go to the buildings with business premises, in proportion to their number\njobs per premises are not open\n\n\nA04\nassumption\nRiders walk to the metro entrance or bus stop nearest their home along S1\nS7 measures it; nothing says which stop people choose\n\n\nA05\nassumption\nWorkers who arrive by metro or bus come from the entrance or stop nearest their workplace\nas A04\n\n\nA06\nassumption\nDepartures and arrivals spread evenly inside each census band; a walk falls in the hour it starts or ends\nthe census gives bands only; most walks here last under 20 minutes\n\n\nA07\nassumption\nA walker who passes through a junction is counted there once\nthe city counts crossings per crosswalk\n\n\nA08\nassumption\nOnly these walks happen: no errands, school runs, dog walks, visitors or walks from parking\nthis slice holds commuters only\n\n\nA09\nassumption\nStops and doors are chosen by the shortest walk in every reading\nso that the readings differ in the route alone\n\n\nA10\nassumption\nReading “open”: cost = length × (1 + 0.5 × (1 − rank of area seen)); a street S8 did not measure counts as middling\na hypothesis drawn from isovist studies; the weight is a choice, tried from 0.25 to 2\n\n\nA11\nassumption\nReading “straight”: the fewest degrees of turning, length breaking ties\nHillier and Iida (2005)\n\n\nA12\nassumption\nTrain, bicycle, car and other commuters do not walk in this slice\ntheir walks to a station or a car are short or unknown",
+    "crumbs": [
+      "Method",
+      "S9 Observer",
+      "How S9 is built"
+    ]
+  },
+  {
+    "objectID": "s9-build.html#the-readings",
+    "href": "s9-build.html#the-readings",
+    "title": "How S9 is built",
+    "section": "The readings",
+    "text": "The readings\nAll three readings walk on the same S1 streets, from the same starts to the same ends. A route is a chain of streets joined at junctions, and a walker may not turn back along the street just walked. The reading “shortest” adds up metres. The reading “open” adds up metres weighted by how enclosed each street is: the street with the smallest area seen in S8 counts 1.5 times its length, the most open one its length. The reading “straight” adds up the degrees turned at each junction, from the direction a walker arrives in to the direction of the next street; length only breaks ties.",
+    "crumbs": [
+      "Method",
+      "S9 Observer",
+      "How S9 is built"
+    ]
+  },
+  {
+    "objectID": "s9-build.html#the-comparison",
+    "href": "s9-build.html#the-comparison",
+    "title": "How S9 is built",
+    "section": "The comparison",
+    "text": "The comparison\nOnly after the flows are made does S9 read the counts and space syntax. At each counted junction, it sets the commuters of each reading against the mean number of pedestrians the city counted there at 7 and 8 h. For every walkable street inside the area, it ranks the morning’s flow against walking choice and integration, and gives a rank correlation. The comparison describes; it chooses no reading.",
+    "crumbs": [
+      "Method",
+      "S9 Observer",
+      "How S9 is built"
+    ]
+  },
+  {
+    "objectID": "s9-build.html#tests",
+    "href": "s9-build.html#tests",
+    "title": "How S9 is built",
+    "section": "Tests",
+    "text": "Tests\n\nNine checks\nEach check asks one plain question of what S9 wrote. Eight must pass, and all eight do; the ninth only reports.\n\n\n\n\n\n\n\n\n\nQuestion\nAnswer\n\n\n\n\nT1\nDo the walkers add up to what S7 says, kind by kind, worked out again from the S7 tables?\nyes, all six kinds\n\n\nT2\nDoes every trip have a route in every reading, joined end to end, from where it starts to where it ends?\nyes, 16,958 trips × 3 readings\n\n\nT3\nIs the “shortest” route the shortest walk?\nyes, against S7’s own code, every 20th trip\n\n\nT4\nDoes each reading win by its own rule?\nyes: “straight” never turns more than another reading, “open” never walks more than 1.5 times the shortest\n\n\nT5\nAre the flows on streets and junctions the sum of the routes that use them?\nyes\n\n\nT6\nWere the flows made without the counts and space syntax?\nyes: run again with both scrambled, no route moves\n\n\nT7\nDoes the comparison with the counts follow from the flows and the S5 table?\nyes, 7 junctions × 2 hours\n\n\nT8\nIs every rule the code names in the ledger, once?\nyes, 12 assumptions and 5 pieces of evidence\n\n\nT9\nWhat does this slice give?\nreport\n\n\n\n\n\n\n\n\n\nTipTesting the tests\n\n\n\nI added half a person to one street’s flow at 8 h, and T5 caught it. T6 first failed because it found the words “counts” and “space syntax” in the description at the top of the code; it now reads the code alone.\n\n\n\n\nStress tests\n\n\n\n\n\n\n\n\n\nChange\nWhat moves\n\n\n\n\nX1\nthe same input twice\nnothing: identical\n\n\nX2\nreading “open” with weights 0.25, 0.5, 1 and 2\n12 to 18 % of walkers change route; the share of the count explained stays at 21 to 27 %\n\n\nX3\nwalkers to work outside sent to Place Ville Marie, Square-Victoria or Peel\nthe doors change; Robert-Bourassa at Saint-Jacques still gets no one\n\n\nX4\nshare of resident walkers who work inside: 0, 0.19, 0.5, 1\nshare of the count explained 21 to 32 %; agreement with walking choice 0.16 to 0.31\n\n\nX5\nreading “straight” with each metre worth 0, 0.02 and 0.1 degrees\nwalkers going over a quarter further fall from 15 % to 7 %\n\n\n\nNo setting tried brings the commuters above a third of the pedestrians counted, so the gap is in who walks, and the next slices of S9 have to add people (likely).",
+    "crumbs": [
+      "Method",
+      "S9 Observer",
+      "How S9 is built"
     ]
   },
   {

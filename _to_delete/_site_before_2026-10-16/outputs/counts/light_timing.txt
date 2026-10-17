@@ -1,0 +1,55 @@
+Webster estimates for the 3 lit junctions the city counted (of 31 lit junctions in S1)
+
+J040  Guy / Ottawa/William (count 236), busiest hour 2024-12-18 16h
+    approaches: SB: Rue Guy (S030), OSM lanes:forward=1; WB: Rue William (S113), OSM lanes=2, two-way: half; EB: Rue William (S206), OSM lanes=2, two-way: half
+    flow (cars/h): NB 0, SB 259, EB 261, WB 124
+    load: SB 0.14, WB 0.07, EB 0.14; Y = 0.29
+    Webster cycle 24 s -> used 60 s: north-south 26 s, east-west 26 s green, 8 s lost
+    pedestrians need at least 12 s and 10 s
+    warnings: Webster's cycle clipped to 60-120 s
+
+J051  Montagne / Notre-Dame (count 240), busiest hour 2026-05-12 16h
+    approaches: NB: Rue de la Montagne (S041), OSM lanes=2, two-way: half; WB: Rue Notre-Dame Ouest (S054), OSM lanes:forward=2; EB: Rue Notre-Dame Ouest (S055), OSM lanes:backward=2; SB: Rue de la Montagne (S235), OSM lanes=2, two-way: half
+    flow (cars/h): NB 256, SB 505, EB 359, WB 250
+    load: NB 0.14, WB 0.07, EB 0.10, SB 0.28; Y = 0.38
+    Webster cycle 27 s -> used 60 s: north-south 38 s, east-west 14 s green, 8 s lost
+    pedestrians need at least 18 s and 12 s
+    warnings: Webster's cycle clipped to 60-120 s
+
+J181  Robert-Bourassa / Saint-Jacques: skipped. Traffic was counted arriving from SB, EB, WB, but no S1 street arrives from there (the junction is at the edge of the network).
+
+Plan B, the road-class rule, for the other lit junctions (MAJOR_SHARE 0.6)
+
+J001  Georges-Vanier / Notre-Dame: classes north-south Collector, east-west Collector -> 26 / 26 s, cycle 60 s
+J039  Montagne / Wellington: classes north-south Collector, east-west Secondary arterial -> 21 / 31 s, cycle 60 s
+J041  Guy / Notre-Dame: classes north-south Local street, east-west Collector -> 21 / 31 s, cycle 60 s
+J044  Inspecteur / Saint-Maurice: classes north-south Local street, east-west Local street -> 26 / 26 s, cycle 60 s
+J045  Inspecteur / Notre-Dame: classes north-south Local street, east-west Collector -> 21 / 31 s, cycle 60 s
+J048  Montagne / Ottawa: classes north-south Collector, east-west Collector -> 26 / 26 s, cycle 60 s
+J050  Montagne / William: classes north-south Collector, east-west Collector -> 26 / 26 s, cycle 60 s
+J059  Jean-d'Estrées / Murray / Notre-Dame: classes north-south Local street, east-west Collector -> 21 / 31 s, cycle 60 s
+J062  Notre-Dame / Robert-Bourassa Int Ouest: classes north-south Main arterial, east-west Collector -> 31 / 21 s, cycle 60 s
+J065  Cathédrale / Notre-Dame: classes north-south Secondary arterial, east-west Collector -> 31 / 21 s, cycle 60 s
+J066  Notre-Dame / Peel: classes north-south Secondary arterial, east-west Collector -> 31 / 21 s, cycle 60 s
+J068  Notre-Dame / Versailles: classes north-south Local street, east-west Collector -> 21 / 31 s, cycle 60 s
+J071  Notre-Dame / Seigneurs: classes north-south Collector, east-west Collector -> 26 / 26 s, cycle 60 s
+J074  Ottawa / Peel: classes north-south Secondary arterial, east-west Local street -> 31 / 21 s, cycle 60 s
+J080  Peel / Wellington: classes north-south Secondary arterial, east-west Secondary arterial -> 26 / 26 s, cycle 60 s
+J081  Peel / William: classes north-south Secondary arterial, east-west Collector -> 31 / 21 s, cycle 60 s
+J084  Seigneurs / William: classes north-south Collector, east-west Collector -> 26 / 26 s, cycle 60 s
+J096  Nazareth / William: classes north-south Main arterial, east-west Collector -> 31 / 21 s, cycle 60 s
+J100  Robert-Bourassa - Int. Ouest / Wellington: classes north-south Main arterial, east-west Secondary arterial -> 31 / 21 s, cycle 60 s
+J101  Robert-Bourassa - Int. Ouest / Ottawa: classes north-south Main arterial, east-west Local street -> 31 / 21 s, cycle 60 s
+J149  Robert-Bourassa - Int. Est / William: classes north-south Main arterial, east-west Collector -> 31 / 21 s, cycle 60 s
+J150  Robert-Bourassa - Int. Est / Saint-Paul: classes north-south Main arterial, east-west - -> 52 / 18 s, cycle 78 s  (cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the EW green)
+J152  Notre-Dame / Robert-Bourassa Int Est: classes north-south Main arterial, east-west Collector -> 31 / 21 s, cycle 60 s
+J155  Robert-Bourassa - Int. Est / Wellington: classes north-south Highway, east-west Secondary arterial -> 31 / 21 s, cycle 60 s
+J157  Robert-Bourassa - Int. Est / Ottawa: classes north-south Main arterial, east-west Local street -> 31 / 21 s, cycle 60 s
+J167  Montagne / Saint-Jacques: classes north-south Collector, east-west - -> 52 / 12 s, cycle 72 s  (cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the EW green; streets beyond the network meet here and are not counted)
+J178  Jean-d'Estrées / Saint-Jacques: classes north-south Local street, east-west - -> 52 / 12 s, cycle 72 s  (cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the EW green; streets beyond the network meet here and are not counted)
+J181  Robert-Bourassa / Saint-Jacques: classes north-south Main arterial, east-west - -> 52 / 18 s, cycle 78 s  (cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the EW green; streets beyond the network meet here and are not counted)
+J188  Saint-Patrick / Wellington: classes north-south -, east-west Secondary arterial -> 18 / 52 s, cycle 78 s  (cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the NS green; streets beyond the network meet here and are not counted)
+
+Test of plan B where Webster is available:
+    J040 Guy / Ottawa/William: Webster 26 / 26 s, plan B would give 21 / 31 s
+    J051 Montagne / Notre-Dame: Webster 38 / 14 s, plan B would give 26 / 26 s

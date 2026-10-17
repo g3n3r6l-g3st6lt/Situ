@@ -1,0 +1,580 @@
+reading,segment,street,h6,h7,h8,h9,total
+shortest,S004,Rue Ann,9.069,36.8,57.681,14.88,118.43
+shortest,S005,Rue Ann,22.713,80.281,122.632,33.453,259.079
+shortest,S006,Rue Barré,8.783,23.603,35.849,8.602,76.837
+shortest,S007,Rue Barré,4.481,15.387,19.07,4.79,43.728
+shortest,S008,Rue Barré,2.23,6.905,8.881,1.955,19.971
+shortest,S009,Rue Barré,1.338,4.623,5.483,1.474,12.919
+shortest,S010,Rue Barré,4.909,13.898,12.305,4.654,35.766
+shortest,S011,Rue des Bassins,1.609,7.538,12.206,2.135,23.488
+shortest,S012,Rue des Bassins,1.619,7.574,12.266,2.144,23.603
+shortest,S013,Rue des Bassins,3.276,10.647,15.086,2.027,31.036
+shortest,S014,Rue des Bassins,2.937,9.119,12.6,1.601,26.257
+shortest,S015,Rue des Bassins,13.563,31.449,43.674,7.37,96.056
+shortest,S018,Rue Canning,0.12,0.616,0.733,0.448,1.918
+shortest,S019,Rue Canning,3.089,4.434,6.247,1.155,14.925
+shortest,S020,Rue Chatham,0.514,2.634,4.222,0.767,8.138
+shortest,S021,Rue Chatham,2.025,8.13,11.573,1.9,23.629
+shortest,S022,Rue Chatham,2.434,9.297,12.991,2.476,27.198
+shortest,S023,Rue Dalhousie,0.471,2.261,3.085,1.664,7.481
+shortest,S024,Rue Dalhousie,0.007,0.048,0.081,0.016,0.151
+shortest,S025,Rue Eleanor,6.436,22.297,35.603,6.996,71.333
+shortest,S026,Rue Eleanor,8.36,24.66,35.777,7.643,76.44
+shortest,S028,Rue du Square-Gallery,11.008,21.379,31.129,3.966,67.482
+shortest,S029,Rue du Square-Gallery,12.457,28.378,42.44,5.97,89.244
+shortest,S030,Rue Guy,54.388,110.891,127.652,19.992,312.923
+shortest,S031,Rue Guy,44.544,84.741,99.768,18.794,247.847
+shortest,S032,Rue Hunter,4.692,10.597,14.8,2.237,32.326
+shortest,S033,Rue de l'Inspecteur,24.86,90.164,135.407,37.278,287.709
+shortest,S034,Rue de l'Inspecteur,30.357,102.612,153.918,42.26,329.147
+shortest,S035,Rue de l'Inspecteur,30.357,102.612,153.918,42.26,329.147
+shortest,S036,Rue de l'Aqueduc,5.225,15.737,15.447,5.218,41.627
+shortest,S037,Rue Lusignan,2.271,5.201,5.259,1.903,14.634
+shortest,S038,Rue de la Montagne,20.72,47.977,51.557,17.587,137.842
+shortest,S039,Rue de la Montagne,54.269,117.203,143.024,29.795,344.291
+shortest,S040,Rue de la Montagne,67.352,157.528,204.584,52.758,482.223
+shortest,S041,Rue de la Montagne,75.91,168.495,212.645,57.401,514.451
+shortest,S042,Rue Montfort,10.03,29.262,43.852,12.298,95.442
+shortest,S043,Rue Murray,21.447,52.984,74.325,16.973,165.729
+shortest,S044,Rue Murray,26.116,56.956,79.322,10.802,173.196
+shortest,S045,Rue Murray,25.223,60.724,80.321,16.947,183.215
+shortest,S046,Rue Murray,29.957,76.946,106.506,22.961,236.37
+shortest,S049,Rue Notre-Dame Ouest,9.631,26.175,38.639,11.262,85.708
+shortest,S050,Rue Notre-Dame Ouest,0.767,4.542,7.539,1.41,14.258
+shortest,S051,Rue Notre-Dame Ouest,0.767,4.542,7.539,1.41,14.258
+shortest,S052,Rue Notre-Dame Ouest,0.525,3.197,5.288,1.0,10.01
+shortest,S053,Rue Notre-Dame Ouest,10.312,38.469,58.472,14.131,121.385
+shortest,S054,Rue Notre-Dame Ouest,0.796,4.401,6.448,1.406,13.05
+shortest,S055,Rue Notre-Dame Ouest,11.285,31.668,27.936,10.531,81.42
+shortest,S056,Rue Notre-Dame Ouest,3.624,12.686,14.555,4.15,35.015
+shortest,S057,Rue Notre-Dame Ouest,9.294,27.69,25.646,7.602,70.231
+shortest,S058,Rue Notre-Dame Ouest,6.401,19.539,19.378,6.444,51.762
+shortest,S059,Rue Notre-Dame Ouest,2.021,11.43,12.937,4.314,30.702
+shortest,S060,Rue Notre-Dame Ouest,3.173,17.342,24.888,7.355,52.757
+shortest,S061,Rue Notre-Dame Ouest,7.979,16.551,22.219,7.03,53.778
+shortest,S062,Rue Notre-Dame Ouest,4.259,16.6,20.782,6.564,48.205
+shortest,S063,Rue Notre-Dame Ouest,1.458,5.923,7.48,3.785,18.646
+shortest,S064,Rue Notre-Dame Ouest,2.255,5.09,7.111,1.076,15.532
+shortest,S065,Rue Olier,14.321,29.327,40.809,4.866,89.323
+shortest,S066,Rue Ottawa,0.061,0.295,0.481,0.084,0.921
+shortest,S067,Rue Ottawa,12.758,43.92,66.814,18.957,142.45
+shortest,S068,Rue Ottawa,26.132,83.11,121.054,45.721,276.017
+shortest,S069,Rue Ottawa,4.147,19.845,30.593,6.253,60.838
+shortest,S070,Rue Ottawa,3.635,20.144,31.98,8.154,63.913
+shortest,S071,Rue Ottawa,5.168,23.707,36.162,8.291,73.327
+shortest,S072,Rue Ottawa,14.591,51.068,73.869,18.196,157.724
+shortest,S073,Rue Ottawa,7.748,22.578,37.931,7.44,75.698
+shortest,S074,Rue Ottawa,3.332,16.664,27.245,4.847,52.089
+shortest,S075,Rue Payette,5.49,14.94,20.21,5.381,46.021
+shortest,S076,Rue Peel,11.7,23.298,31.749,11.157,77.904
+shortest,S077,Rue Peel,29.061,71.088,99.431,29.588,229.167
+shortest,S078,Rue Peel,33.006,96.496,132.757,58.511,320.77
+shortest,S079,Rue Peel,68.891,203.08,281.507,116.311,669.788
+shortest,S080,Rue Richmond,9.889,24.305,33.673,6.641,74.509
+shortest,S081,Rue Richmond,14.014,37.564,52.085,14.241,117.904
+shortest,S082,Rue Rioux,8.011,16.415,22.841,2.726,49.992
+shortest,S083,Rue des Seigneurs,17.093,42.713,57.834,11.084,128.724
+shortest,S084,Rue des Seigneurs,14.819,38.408,54.427,13.589,121.243
+shortest,S085,Rue des Seigneurs,19.325,49.077,66.981,19.414,154.798
+shortest,S086,Rue du Séminaire,7.813,17.161,22.504,2.435,49.913
+shortest,S087,Rue du Séminaire,33.968,69.696,94.912,10.971,209.546
+shortest,S088,Rue du Séminaire,30.39,65.383,82.674,9.288,187.735
+shortest,S089,Rue du Shannon,0.133,0.842,1.401,0.267,2.643
+shortest,S090,Rue du Shannon,9.575,35.848,51.371,20.941,117.736
+shortest,S091,Rue du Shannon,0.51,2.544,3.562,1.759,8.374
+shortest,S092,Rue Smith,2.233,16.223,27.269,5.393,51.118
+shortest,S093,Rue Smith,14.015,40.213,60.195,16.79,131.213
+shortest,S094,Rue Smith,0.081,0.527,0.884,0.17,1.662
+shortest,S095,Rue Smith,0.072,0.333,0.554,0.095,1.054
+shortest,S096,Rue Saint-Martin,0.879,4.531,5.965,2.883,14.259
+shortest,S097,Rue Saint-Martin,9.998,24.196,33.632,6.262,74.088
+shortest,S098,Rue Saint-Paul Ouest,5.872,15.384,23.689,5.0,49.944
+shortest,S099,Rue Saint-Thomas,17.053,47.577,68.68,15.988,149.297
+shortest,S100,Rue de Versailles,7.139,16.654,17.073,4.442,45.308
+shortest,S101,Rue Wellington,4.329,9.826,16.367,3.348,33.87
+shortest,S102,Rue Wellington,1.553,8.357,13.824,2.518,26.253
+shortest,S103,Rue William,2.942,3.589,7.367,1.483,15.381
+shortest,S104,Rue William,27.797,93.718,142.716,38.75,302.981
+shortest,S105,Rue William,7.226,20.868,31.93,7.716,67.741
+shortest,S106,Rue William,3.497,13.312,19.314,8.05,44.173
+shortest,S107,Rue William,34.815,106.348,149.951,53.887,345.001
+shortest,S108,Rue William,0.831,4.951,8.216,1.538,15.537
+shortest,S109,Rue William,6.563,24.267,37.871,8.493,77.195
+shortest,S110,Rue William,1.802,8.38,13.326,2.71,26.218
+shortest,S111,Rue William,16.11,52.028,76.897,24.274,169.31
+shortest,S112,Rue William,18.468,53.716,76.643,18.042,166.87
+shortest,S113,Rue William,1.505,6.52,8.565,2.154,18.744
+shortest,S114,Rue William,2.535,12.152,18.084,3.745,36.515
+shortest,S115,Rue William,4.229,15.322,19.588,5.23,44.369
+shortest,S116,Rue William,0.623,3.297,5.23,1.016,10.166
+shortest,S117,Rue William,0.184,1.008,1.33,0.613,3.134
+shortest,S118,Rue Young,17.205,54.53,79.821,27.026,178.581
+shortest,S119,Rue Young,35.61,106.534,148.669,51.081,341.895
+shortest,S120,Rue Young,34.854,105.095,146.55,53.472,339.972
+shortest,S122,Rue Notre-Dame Ouest,0.767,4.542,7.539,1.41,14.258
+shortest,S123,Rue Notre-Dame Ouest,0.767,4.542,7.539,1.41,14.258
+shortest,S124,Boulevard Robert-Bourassa,3.137,4.348,8.195,1.72,17.4
+shortest,S126,Rue Notre-Dame Ouest,9.631,26.175,38.639,11.262,85.708
+shortest,S127,Rue Wellington,13.359,33.696,48.963,7.086,103.103
+shortest,S128,Rue Wellington,26.276,63.422,87.137,20.779,197.614
+shortest,S129,Rue Wellington,12.436,32.003,52.04,12.135,108.615
+shortest,S131,Rue Smith,2.172,15.93,26.791,5.31,50.202
+shortest,S132,Rue Smith,0.471,2.261,3.085,1.664,7.481
+shortest,S133,Rue Eleanor,10.466,38.02,56.833,13.946,119.264
+shortest,S136,Rue Wellington,0.944,4.112,6.768,1.128,12.953
+shortest,S138,Boulevard Robert-Bourassa,0.202,0.807,0.908,0.252,2.17
+shortest,S141,Rue de la Montagne,0.944,4.112,6.768,1.128,12.953
+shortest,S145,Rue Ottawa,0.404,1.918,2.523,1.564,6.409
+shortest,S146,Rue Ottawa,0.404,1.918,2.523,1.564,6.409
+shortest,S147,Rue Saint-Paul Ouest,0.269,1.453,2.177,1.412,5.311
+shortest,S148,Rue Saint-Paul Ouest,0.471,2.261,3.085,1.664,7.481
+shortest,S151,Rue Notre-Dame Ouest,4.126,7.046,12.557,2.603,26.332
+shortest,S152,Rue Notre-Dame Ouest,5.74,14.716,22.65,8.861,51.967
+shortest,S154,Rue Ann,2.63,18.024,29.588,6.93,57.172
+shortest,S155,Rue Ann,2.63,18.024,29.588,6.93,57.172
+shortest,S156,Rue Ann,0.048,0.129,0.194,0.039,0.41
+shortest,S157,Rue Ann,0.048,0.129,0.194,0.039,0.41
+shortest,S158,Rue Wellington,2.558,6.78,9.677,3.24,22.256
+shortest,S159,Rue Wellington,0.431,2.259,3.268,2.635,8.593
+shortest,S160,Rue Wellington,0.701,3.409,4.738,2.987,11.835
+shortest,S162,Rue de la Montagne,18.218,41.126,57.704,10.656,127.703
+shortest,S163,Rue de la Montagne,4.658,15.029,19.87,4.29,43.846
+shortest,S166,Rue William,2.834,15.378,24.785,4.593,47.59
+shortest,S167,Rue des Bassins,11.989,29.108,42.419,5.766,89.282
+shortest,S168,Rue des Bassins,2.08,9.153,14.861,2.518,28.611
+shortest,S169,Rue des Bassins,2.046,9.04,14.675,2.491,28.253
+shortest,S170,Rue des Bassins,2.069,9.212,14.923,2.548,28.751
+shortest,S171,Rue des Bassins,1.9,8.599,13.927,2.398,26.824
+shortest,S172,Rue des Bassins,1.879,8.473,13.737,2.359,26.448
+shortest,S173,Rue Ottawa,21.398,72.155,99.675,20.24,213.467
+shortest,S174,Rue Ottawa,27.528,56.264,63.142,7.053,153.986
+shortest,S175,Rue Ottawa,33.118,67.193,78.009,8.776,187.097
+shortest,S176,Rue Ottawa,49.679,101.851,125.89,15.524,292.943
+shortest,S177,Allée des Barges,7.528,16.998,23.717,3.583,51.825
+shortest,S178,Allée des Barges,17.117,37.582,52.341,7.604,114.643
+shortest,S180,Allée des Vraquiers,5.978,12.246,17.031,2.036,37.291
+shortest,S181,Allée des Charbonniers,17.37,35.582,49.505,5.911,108.368
+shortest,S182,Allée des Charbonniers,33.677,68.42,94.815,11.26,208.173
+shortest,S183,Rue William,2.935,3.541,7.287,1.467,15.23
+shortest,S184,Rue William,2.935,3.541,7.287,1.467,15.23
+shortest,S185,Rue William,2.935,3.541,7.287,1.467,15.23
+shortest,S186,Rue Wellington,0.141,0.699,1.147,0.2,2.187
+shortest,S187,Rue Wellington,2.868,8.318,10.628,2.738,24.552
+shortest,S188,Rue Wellington,3.009,9.017,11.775,2.938,26.739
+shortest,S206,Rue William,9.792,35.458,50.945,13.845,110.04
+shortest,S207,Rue William,10.072,36.736,52.94,14.198,113.947
+shortest,S208,connector,0.169,0.613,0.996,0.15,1.928
+shortest,S209,connector,0.169,0.613,0.996,0.15,1.928
+shortest,S210,park path,0.169,0.613,0.996,0.15,1.928
+shortest,S211,connector,0.036,0.217,0.326,0.066,0.645
+shortest,S212,connector,5.485,12.237,17.06,2.559,37.341
+shortest,S213,park path,5.522,12.454,17.386,2.626,37.987
+shortest,S219,Rue Wellington,0.431,2.259,3.268,2.635,8.593
+shortest,S220,Rue Wellington,0.431,2.259,3.268,2.635,8.593
+shortest,S221,Rue Notre-Dame Ouest,0.807,4.441,6.46,5.248,16.956
+shortest,S222,Rue Notre-Dame Ouest,0.807,4.441,6.46,5.248,16.956
+shortest,S225,Rue Ottawa,0.202,1.11,1.615,1.312,4.239
+shortest,S226,Rue Ottawa,0.202,1.11,1.615,1.312,4.239
+shortest,S227,Boulevard Georges-Vanier,1.857,2.694,3.51,0.34,8.4
+shortest,S231,Rue Canning,4.271,8.858,11.475,4.255,28.859
+shortest,S233,Rue Guy,45.215,85.881,99.599,20.9,251.595
+shortest,S234,Rue de l'Inspecteur,35.862,121.742,180.0,50.919,388.524
+shortest,S235,Rue de la Montagne,80.797,174.786,216.198,64.41,536.191
+shortest,S237,Rue Ottawa,0.202,1.11,1.615,1.312,4.239
+shortest,S238,Rue Richmond,13.564,38.087,52.776,15.203,119.629
+shortest,S240,Rue Wellington,0.431,2.259,3.268,2.635,8.593
+shortest,S242,Rue de Versailles,13.195,23.844,24.327,11.659,73.026
+shortest,S246,Rue des Seigneurs,26.339,60.882,82.064,25.91,195.195
+shortest,S247,Rue Jean-D'Estrées,39.508,110.465,156.749,35.527,342.25
+shortest,S249,Rue Notre-Dame Ouest,0.807,4.441,6.46,5.248,16.956
+shortest,S257,Rue Peel,67.659,198.927,275.631,114.972,657.189
+open,S004,Rue Ann,9.157,37.302,58.522,15.036,120.017
+open,S005,Rue Ann,22.783,80.683,123.306,33.578,260.35
+open,S006,Rue Barré,8.783,23.603,35.849,8.602,76.837
+open,S007,Rue Barré,3.966,12.518,14.282,3.921,34.686
+open,S008,Rue Barré,2.227,6.899,8.864,1.951,19.941
+open,S009,Rue Barré,1.356,4.726,5.639,1.502,13.224
+open,S010,Rue Barré,4.892,13.825,12.192,4.63,35.539
+open,S011,Rue des Bassins,2.113,10.071,16.343,2.876,31.403
+open,S012,Rue des Bassins,2.14,10.165,16.499,2.898,31.702
+open,S013,Rue des Bassins,3.996,14.172,20.642,3.036,41.845
+open,S014,Rue des Bassins,3.607,12.409,17.531,2.81,36.357
+open,S015,Rue des Bassins,13.563,31.449,43.674,7.37,96.056
+open,S018,Rue Canning,0.12,0.617,0.734,0.449,1.919
+open,S019,Rue Canning,3.089,4.434,6.248,1.156,14.927
+open,S020,Rue Chatham,0.512,2.621,4.203,0.762,8.098
+open,S021,Rue Chatham,2.023,8.116,11.554,1.896,23.589
+open,S022,Rue Chatham,2.431,9.281,12.968,2.47,27.15
+open,S023,Rue Dalhousie,0.471,2.261,3.085,1.664,7.481
+open,S024,Rue Dalhousie,0.007,0.049,0.082,0.016,0.153
+open,S025,Rue Eleanor,2.427,8.213,12.436,3.6,26.675
+open,S026,Rue Eleanor,8.107,23.368,33.651,7.263,72.388
+open,S028,Rue du Square-Gallery,11.004,21.365,31.106,3.962,67.437
+open,S029,Rue du Square-Gallery,12.902,30.711,46.248,6.663,96.523
+open,S030,Rue Guy,54.603,111.933,129.343,20.287,316.166
+open,S031,Rue Guy,44.792,85.935,101.697,19.129,251.552
+open,S032,Rue Hunter,4.692,10.597,14.799,2.237,32.325
+open,S033,Rue de l'Inspecteur,24.876,90.218,135.495,37.29,287.88
+open,S034,Rue de l'Inspecteur,30.373,102.68,154.028,42.277,329.358
+open,S035,Rue de l'Inspecteur,30.37,102.657,153.991,42.271,329.288
+open,S036,Rue de l'Aqueduc,4.712,12.872,10.673,4.353,32.61
+open,S037,Rue Lusignan,2.227,4.982,4.923,1.84,13.972
+open,S038,Rue de la Montagne,20.842,48.784,52.913,17.85,140.389
+open,S039,Rue de la Montagne,54.363,117.899,144.197,30.028,346.487
+open,S040,Rue de la Montagne,67.576,158.686,206.475,53.1,485.837
+open,S041,Rue de la Montagne,76.62,172.302,218.953,58.54,526.414
+open,S042,Rue Montfort,10.028,29.25,43.834,12.295,95.407
+open,S043,Rue Murray,21.447,52.984,74.325,16.973,165.729
+open,S044,Rue Murray,26.083,56.977,79.364,10.832,173.256
+open,S045,Rue Murray,28.911,73.102,100.637,19.831,222.48
+open,S046,Rue Murray,29.849,76.162,105.193,22.705,233.909
+open,S049,Rue Notre-Dame Ouest,9.618,26.131,38.566,11.252,85.567
+open,S050,Rue Notre-Dame Ouest,0.75,4.488,7.45,1.398,14.087
+open,S051,Rue Notre-Dame Ouest,0.75,4.488,7.45,1.398,14.087
+open,S052,Rue Notre-Dame Ouest,0.657,4.159,6.898,1.314,13.028
+open,S053,Rue Notre-Dame Ouest,10.32,38.523,58.561,14.15,121.553
+open,S054,Rue Notre-Dame Ouest,1.019,5.477,8.211,1.715,16.423
+open,S055,Rue Notre-Dame Ouest,11.73,34.129,32.058,11.276,89.192
+open,S056,Rue Notre-Dame Ouest,3.555,12.273,13.887,4.026,33.741
+open,S057,Rue Notre-Dame Ouest,9.205,27.179,24.824,7.449,68.658
+open,S058,Rue Notre-Dame Ouest,6.364,19.262,18.919,6.357,50.902
+open,S059,Rue Notre-Dame Ouest,2.099,11.66,13.355,4.363,31.477
+open,S060,Rue Notre-Dame Ouest,3.128,17.052,24.425,7.264,51.87
+open,S061,Rue Notre-Dame Ouest,7.941,16.302,21.818,6.952,53.014
+open,S062,Rue Notre-Dame Ouest,4.261,16.614,20.803,6.569,48.246
+open,S063,Rue Notre-Dame Ouest,1.459,5.923,7.481,3.785,18.648
+open,S064,Rue Notre-Dame Ouest,2.255,5.09,7.111,1.076,15.532
+open,S065,Rue Olier,14.321,29.327,40.809,4.866,89.323
+open,S066,Rue Ottawa,0.061,0.294,0.48,0.084,0.919
+open,S067,Rue Ottawa,12.659,43.295,65.778,18.759,140.491
+open,S068,Rue Ottawa,26.006,82.312,119.754,45.468,273.54
+open,S069,Rue Ottawa,6.791,29.995,45.099,15.189,97.074
+open,S070,Rue Ottawa,3.389,18.517,29.313,7.628,58.847
+open,S071,Rue Ottawa,8.576,34.488,53.869,10.684,107.617
+open,S072,Rue Ottawa,14.271,49.582,71.458,17.777,153.089
+open,S073,Rue Ottawa,7.257,20.098,33.877,6.714,67.946
+open,S074,Rue Ottawa,2.451,12.518,20.552,3.672,39.194
+open,S075,Rue Payette,5.49,14.94,20.209,5.381,46.02
+open,S076,Rue Peel,11.755,23.564,32.183,11.233,78.734
+open,S077,Rue Peel,59.772,158.653,221.281,68.911,508.617
+open,S078,Rue Peel,66.521,195.242,270.792,107.099,639.655
+open,S079,Rue Peel,68.987,203.842,282.783,116.565,672.177
+open,S080,Rue Richmond,10.112,25.582,35.767,7.034,78.495
+open,S081,Rue Richmond,13.775,36.389,50.161,13.904,114.229
+open,S082,Rue Rioux,8.011,16.415,22.841,2.726,49.993
+open,S083,Rue des Seigneurs,17.147,42.32,57.122,11.167,127.756
+open,S084,Rue des Seigneurs,14.821,38.386,54.403,13.579,121.189
+open,S085,Rue des Seigneurs,19.328,49.058,66.962,19.404,154.752
+open,S086,Rue du Séminaire,7.817,17.175,22.528,2.438,49.958
+open,S087,Rue du Séminaire,34.312,71.202,97.288,11.381,214.182
+open,S088,Rue du Séminaire,30.374,65.327,82.582,9.275,187.558
+open,S089,Rue du Shannon,0.151,0.903,1.512,0.283,2.849
+open,S090,Rue du Shannon,9.426,34.952,49.87,20.658,114.906
+open,S091,Rue du Shannon,0.498,2.462,3.423,1.731,8.114
+open,S092,Rue Smith,2.279,16.411,27.581,5.443,51.714
+open,S093,Rue Smith,14.186,40.971,61.443,16.999,133.599
+open,S094,Rue Smith,0.203,1.062,1.773,0.318,3.356
+open,S095,Rue Smith,0.164,0.652,1.078,0.17,2.064
+open,S096,Rue Saint-Martin,0.982,5.057,6.81,3.037,15.887
+open,S097,Rue Saint-Martin,10.039,24.416,33.998,6.329,74.782
+open,S098,Rue Saint-Paul Ouest,5.874,15.393,23.705,5.003,49.974
+open,S099,Rue Saint-Thomas,17.0,47.325,68.29,15.917,148.532
+open,S100,Rue de Versailles,7.13,16.623,17.024,4.434,45.211
+open,S101,Rue Wellington,4.304,9.905,16.479,3.396,34.084
+open,S102,Rue Wellington,32.316,96.412,136.45,42.011,307.188
+open,S103,Rue William,2.942,3.59,7.369,1.483,15.384
+open,S104,Rue William,27.814,93.773,142.806,38.762,303.155
+open,S105,Rue William,7.233,20.947,32.064,7.745,67.989
+open,S106,Rue William,3.493,13.328,19.342,8.059,44.222
+open,S107,Rue William,1.154,6.647,10.32,4.995,23.116
+open,S108,Rue William,0.526,3.327,5.511,1.054,10.419
+open,S109,Rue William,2.693,11.168,16.361,5.42,35.642
+open,S110,Rue William,1.641,7.392,11.673,2.396,23.102
+open,S111,Rue William,15.862,50.85,74.966,23.937,165.615
+open,S112,Rue William,18.502,53.993,77.095,18.134,167.724
+open,S113,Rue William,1.595,7.057,9.422,2.319,20.392
+open,S114,Rue William,1.915,9.193,13.446,2.908,27.462
+open,S115,Rue William,3.611,12.337,15.148,4.114,35.21
+open,S116,Rue William,0.621,3.284,5.21,1.011,10.125
+open,S117,Rue William,0.184,1.008,1.33,0.613,3.134
+open,S118,Rue Young,17.205,54.53,79.821,27.026,178.581
+open,S119,Rue Young,4.962,19.137,27.096,11.789,62.985
+open,S120,Rue Young,1.486,6.974,9.554,5.053,23.067
+open,S122,Rue Notre-Dame Ouest,0.75,4.488,7.45,1.398,14.087
+open,S123,Rue Notre-Dame Ouest,0.75,4.488,7.45,1.398,14.087
+open,S124,Boulevard Robert-Bourassa,3.137,4.348,8.195,1.72,17.4
+open,S125,Voie Non-nommée,0.004,0.023,0.037,0.006,0.07
+open,S126,Rue Notre-Dame Ouest,9.621,26.154,38.603,11.258,85.637
+open,S127,Rue Wellington,13.806,35.934,52.631,7.741,110.111
+open,S128,Rue Wellington,26.183,63.104,86.613,20.704,196.604
+open,S129,Rue Wellington,12.856,34.294,55.802,12.83,115.781
+open,S131,Rue Smith,2.219,16.12,27.106,5.36,50.805
+open,S132,Rue Smith,0.471,2.261,3.085,1.664,7.481
+open,S133,Rue Eleanor,10.245,36.97,55.114,13.646,115.975
+open,S136,Rue Wellington,0.944,4.112,6.768,1.128,12.953
+open,S138,Boulevard Robert-Bourassa,0.202,0.807,0.908,0.252,2.17
+open,S141,Rue de la Montagne,0.944,4.112,6.768,1.128,12.953
+open,S145,Rue Ottawa,0.404,1.918,2.523,1.564,6.409
+open,S146,Rue Ottawa,0.404,1.918,2.523,1.564,6.409
+open,S147,Rue Saint-Paul Ouest,0.269,1.453,2.177,1.412,5.311
+open,S148,Rue Saint-Paul Ouest,0.471,2.261,3.085,1.664,7.481
+open,S151,Rue Notre-Dame Ouest,4.126,7.046,12.557,2.603,26.332
+open,S152,Rue Notre-Dame Ouest,5.74,14.716,22.65,8.861,51.967
+open,S154,Rue Ann,2.677,18.216,29.905,6.98,57.779
+open,S155,Rue Ann,2.677,18.216,29.905,6.98,57.779
+open,S156,Rue Ann,0.048,0.129,0.194,0.039,0.41
+open,S157,Rue Ann,0.048,0.129,0.194,0.039,0.41
+open,S158,Rue Wellington,2.558,6.78,9.677,3.24,22.256
+open,S159,Rue Wellington,0.431,2.259,3.268,2.635,8.593
+open,S160,Rue Wellington,0.701,3.409,4.738,2.987,11.835
+open,S162,Rue de la Montagne,18.144,40.746,57.093,10.545,126.528
+open,S163,Rue de la Montagne,4.623,14.815,19.531,4.223,43.192
+open,S166,Rue William,1.845,10.555,17.027,3.208,32.635
+open,S167,Rue des Bassins,12.913,33.404,49.356,6.977,102.649
+open,S168,Rue des Bassins,14.508,29.069,38.436,4.935,86.948
+open,S169,Rue des Bassins,14.519,29.243,38.676,4.997,87.436
+open,S170,Rue des Bassins,2.838,12.893,20.881,3.598,40.212
+open,S171,Rue des Bassins,2.653,12.224,19.792,3.435,38.104
+open,S172,Rue des Bassins,2.79,13.065,21.077,3.695,40.627
+open,S173,Rue Ottawa,20.449,67.711,92.518,18.984,199.663
+open,S174,Rue Ottawa,15.081,36.218,39.375,4.595,95.269
+open,S175,Rue Ottawa,20.626,46.861,53.818,6.229,127.534
+open,S176,Rue Ottawa,48.976,98.465,120.396,14.553,282.391
+open,S177,Allée des Barges,7.528,16.998,23.717,3.583,51.825
+open,S178,Allée des Barges,28.668,53.194,69.022,8.781,159.666
+open,S180,Allée des Vraquiers,6.029,12.554,17.492,2.13,38.206
+open,S181,Allée des Charbonniers,17.37,35.582,49.505,5.911,108.368
+open,S182,Allée des Charbonniers,21.845,51.64,76.285,9.773,159.544
+open,S183,Rue William,2.935,3.541,7.287,1.467,15.23
+open,S184,Rue William,2.935,3.541,7.287,1.467,15.23
+open,S185,Rue William,2.935,3.541,7.287,1.467,15.23
+open,S187,Rue Wellington,3.087,9.533,12.629,3.104,28.354
+open,S188,Rue Wellington,3.087,9.533,12.629,3.104,28.354
+open,S206,Rue William,8.945,31.547,44.569,12.745,97.805
+open,S207,Rue William,9.241,32.882,46.657,13.111,101.891
+open,S208,connector,0.186,0.669,1.089,0.163,2.107
+open,S209,connector,0.186,0.669,1.089,0.163,2.107
+open,S210,park path,0.186,0.669,1.089,0.163,2.107
+open,S211,connector,0.197,1.194,1.814,0.367,3.571
+open,S212,connector,5.598,12.934,18.127,2.774,39.433
+open,S213,park path,5.658,13.291,18.663,2.883,40.495
+open,S219,Rue Wellington,0.431,2.259,3.268,2.635,8.593
+open,S220,Rue Wellington,0.431,2.259,3.268,2.635,8.593
+open,S221,Rue Notre-Dame Ouest,0.807,4.441,6.46,5.248,16.956
+open,S222,Rue Notre-Dame Ouest,0.807,4.441,6.46,5.248,16.956
+open,S225,Rue Ottawa,0.202,1.11,1.615,1.312,4.239
+open,S226,Rue Ottawa,0.202,1.11,1.615,1.312,4.239
+open,S227,Boulevard Georges-Vanier,1.857,2.694,3.51,0.34,8.4
+open,S231,Rue Canning,4.271,8.858,11.475,4.255,28.859
+open,S233,Rue Guy,45.215,85.881,99.599,20.9,251.595
+open,S234,Rue de l'Inspecteur,35.862,121.742,180.0,50.919,388.524
+open,S235,Rue de la Montagne,80.797,174.786,216.198,64.41,536.191
+open,S237,Rue Ottawa,0.202,1.11,1.615,1.312,4.239
+open,S238,Rue Richmond,13.564,38.087,52.776,15.203,119.629
+open,S240,Rue Wellington,0.431,2.259,3.268,2.635,8.593
+open,S242,Rue de Versailles,13.195,23.844,24.327,11.659,73.026
+open,S246,Rue des Seigneurs,26.339,60.882,82.064,25.91,195.195
+open,S247,Rue Jean-D'Estrées,39.508,110.465,156.749,35.527,342.25
+open,S249,Rue Notre-Dame Ouest,0.807,4.441,6.46,5.248,16.956
+open,S257,Rue Peel,67.659,198.927,275.631,114.972,657.189
+straight,S004,Rue Ann,11.699,43.59,70.053,17.149,142.492
+straight,S005,Rue Ann,14.612,52.16,81.27,19.724,167.765
+straight,S006,Rue Barré,8.784,23.61,35.86,8.603,76.857
+straight,S007,Rue Barré,5.139,22.034,30.3,7.17,64.643
+straight,S008,Rue Barré,3.785,18.363,28.16,5.773,56.081
+straight,S009,Rue Barré,3.59,17.203,25.776,6.035,52.604
+straight,S010,Rue Barré,6.51,25.645,32.148,8.57,72.873
+straight,S011,Rue des Bassins,0.295,1.363,2.189,0.383,4.23
+straight,S012,Rue des Bassins,9.966,20.629,28.577,3.491,62.663
+straight,S013,Rue des Bassins,3.342,10.618,14.772,1.957,30.689
+straight,S014,Rue des Bassins,9.66,20.114,26.909,6.054,62.737
+straight,S015,Rue des Bassins,13.563,31.449,43.674,7.37,96.056
+straight,S017,Rue Brennan,0.018,0.131,0.22,0.044,0.413
+straight,S018,Rue Canning,1.409,7.493,11.111,2.807,22.82
+straight,S019,Rue Canning,4.52,8.59,11.651,2.137,26.898
+straight,S020,Rue Chatham,0.557,2.337,3.467,0.946,7.307
+straight,S021,Rue Chatham,0.561,2.364,3.507,0.954,7.387
+straight,S022,Rue Chatham,1.333,3.676,4.156,1.112,10.278
+straight,S023,Rue Dalhousie,0.471,2.261,3.085,1.664,7.481
+straight,S024,Rue Dalhousie,0.033,0.195,0.321,0.06,0.609
+straight,S025,Rue Eleanor,2.201,6.696,9.888,3.106,21.891
+straight,S026,Rue Eleanor,0.072,0.397,0.657,0.121,1.247
+straight,S028,Rue du Square-Gallery,6.467,11.391,18.017,2.545,38.419
+straight,S029,Rue du Square-Gallery,6.623,12.282,19.426,2.814,41.145
+straight,S030,Rue Guy,56.979,128.055,156.429,25.537,367.001
+straight,S031,Rue Guy,45.483,89.713,107.943,20.269,263.408
+straight,S032,Rue Hunter,4.691,10.593,14.794,2.236,32.314
+straight,S033,Rue de l'Inspecteur,24.691,89.073,133.585,36.928,284.277
+straight,S034,Rue de l'Inspecteur,35.862,121.742,180.0,50.919,388.524
+straight,S035,Rue de l'Inspecteur,35.862,121.742,180.0,50.919,388.524
+straight,S036,Rue de l'Aqueduc,4.712,12.869,10.669,4.353,32.603
+straight,S037,Rue Lusignan,1.556,3.828,3.862,1.074,10.321
+straight,S038,Rue de la Montagne,49.716,117.368,153.223,37.102,357.408
+straight,S039,Rue de la Montagne,72.6,166.971,217.086,45.758,502.415
+straight,S040,Rue de la Montagne,69.884,163.256,213.627,53.813,500.58
+straight,S041,Rue de la Montagne,79.537,180.167,231.617,60.249,551.571
+straight,S042,Rue Montfort,11.418,31.06,47.725,13.037,103.241
+straight,S043,Rue Murray,25.031,59.131,84.65,19.254,188.066
+straight,S044,Rue Murray,21.556,47.13,66.486,9.46,144.632
+straight,S045,Rue Murray,28.525,77.556,108.491,22.029,236.602
+straight,S046,Rue Murray,37.448,102.572,144.009,31.787,315.817
+straight,S049,Rue Notre-Dame Ouest,4.13,7.072,12.597,2.611,26.41
+straight,S050,Rue Notre-Dame Ouest,0.802,4.752,7.879,1.475,14.908
+straight,S051,Rue Notre-Dame Ouest,0.802,4.752,7.879,1.475,14.908
+straight,S052,Rue Notre-Dame Ouest,1.454,8.262,13.666,2.53,25.912
+straight,S053,Rue Notre-Dame Ouest,5.442,22.541,36.581,8.195,72.758
+straight,S054,Rue Notre-Dame Ouest,5.488,22.164,35.533,6.14,69.325
+straight,S055,Rue Notre-Dame Ouest,13.096,40.015,41.661,12.876,107.649
+straight,S056,Rue Notre-Dame Ouest,5.149,19.353,25.458,5.981,55.942
+straight,S057,Rue Notre-Dame Ouest,10.515,35.236,38.822,9.276,93.848
+straight,S058,Rue Notre-Dame Ouest,8.442,29.135,35.077,9.16,81.815
+straight,S059,Rue Notre-Dame Ouest,3.965,20.843,28.31,7.012,60.13
+straight,S060,Rue Notre-Dame Ouest,4.498,23.727,35.373,9.185,72.783
+straight,S061,Rue Notre-Dame Ouest,2.869,13.027,18.71,6.003,40.609
+straight,S062,Rue Notre-Dame Ouest,4.121,15.419,19.426,6.187,45.153
+straight,S063,Rue Notre-Dame Ouest,2.41,9.201,11.961,4.038,27.611
+straight,S064,Rue Notre-Dame Ouest,2.255,5.09,7.111,1.076,15.532
+straight,S065,Rue Olier,14.365,29.479,41.06,4.903,89.807
+straight,S066,Rue Ottawa,0.173,0.994,1.653,0.307,3.126
+straight,S067,Rue Ottawa,12.342,39.505,59.336,17.369,128.552
+straight,S068,Rue Ottawa,29.425,93.482,138.259,44.106,305.273
+straight,S069,Rue Ottawa,10.999,41.51,62.453,17.579,132.542
+straight,S070,Rue Ottawa,12.061,46.709,70.565,21.03,150.365
+straight,S071,Rue Ottawa,19.928,72.124,107.452,26.244,225.748
+straight,S072,Rue Ottawa,26.169,88.841,128.033,33.932,276.975
+straight,S073,Rue Ottawa,33.56,107.415,159.03,37.775,337.78
+straight,S074,Rue Ottawa,27.821,93.726,141.973,35.176,298.696
+straight,S075,Rue Payette,5.485,14.906,20.158,5.37,45.918
+straight,S076,Rue Peel,45.052,127.474,173.799,71.597,417.922
+straight,S077,Rue Peel,67.94,188.375,262.853,96.358,615.526
+straight,S078,Rue Peel,67.937,202.778,282.138,112.344,665.197
+straight,S079,Rue Peel,69.501,206.508,287.159,117.358,680.525
+straight,S080,Rue Richmond,10.257,26.29,36.73,7.227,80.505
+straight,S081,Rue Richmond,13.95,37.568,51.924,14.272,117.714
+straight,S082,Rue Rioux,17.586,35.357,48.694,5.758,107.396
+straight,S083,Rue des Seigneurs,23.097,49.39,65.619,14.222,152.327
+straight,S084,Rue des Seigneurs,21.308,48.831,68.795,16.614,155.549
+straight,S085,Rue des Seigneurs,25.329,59.401,82.542,22.623,189.896
+straight,S086,Rue du Séminaire,12.407,27.336,35.925,3.901,79.57
+straight,S087,Rue du Séminaire,29.232,62.124,84.351,9.745,185.452
+straight,S088,Rue du Séminaire,24.693,51.219,67.685,8.326,151.923
+straight,S089,Rue du Shannon,4.978,16.534,22.4,14.686,58.598
+straight,S090,Rue du Shannon,9.356,34.502,49.114,20.513,113.485
+straight,S091,Rue du Shannon,1.446,9.337,14.928,4.013,29.725
+straight,S092,Rue Smith,3.208,21.44,35.932,6.965,67.545
+straight,S093,Rue Smith,19.566,59.281,86.776,32.176,197.799
+straight,S094,Rue Smith,36.88,107.184,152.346,52.51,348.92
+straight,S095,Rue Smith,20.845,51.237,72.229,16.649,160.96
+straight,S096,Rue Saint-Martin,7.031,13.089,17.736,5.354,43.209
+straight,S097,Rue Saint-Martin,9.931,23.96,33.247,6.206,73.344
+straight,S098,Rue Saint-Paul Ouest,12.842,36.865,54.575,14.581,118.863
+straight,S099,Rue Saint-Thomas,0.929,2.545,2.093,0.866,6.432
+straight,S100,Rue de Versailles,7.957,18.838,19.821,5.54,52.156
+straight,S101,Rue Wellington,3.608,6.263,10.517,2.314,22.703
+straight,S102,Rue Wellington,6.884,16.52,25.217,7.433,56.054
+straight,S103,Rue William,1.319,2.119,3.807,0.803,8.047
+straight,S104,Rue William,26.005,91.157,137.333,37.72,292.215
+straight,S105,Rue William,16.214,54.008,81.577,22.983,174.782
+straight,S106,Rue William,11.989,42.091,61.113,21.838,137.031
+straight,S107,Rue William,9.08,32.993,49.252,15.136,106.461
+straight,S108,Rue William,9.352,34.731,52.058,15.687,111.828
+straight,S109,Rue William,19.104,63.276,92.561,26.485,201.425
+straight,S110,Rue William,17.408,57.38,84.05,22.719,181.557
+straight,S111,Rue William,23.744,79.016,116.288,37.506,256.553
+straight,S112,Rue William,11.283,40.137,56.677,17.502,125.6
+straight,S113,Rue William,10.428,37.947,55.146,16.736,120.257
+straight,S114,Rue William,1.974,9.895,14.62,3.175,29.664
+straight,S115,Rue William,3.514,12.296,16.067,3.096,34.972
+straight,S116,Rue William,1.427,8.742,13.57,2.748,26.488
+straight,S117,Rue William,1.473,7.886,11.71,2.972,24.041
+straight,S118,Rue Young,22.087,73.68,107.123,41.749,244.64
+straight,S119,Rue Young,7.017,29.854,42.866,18.06,97.797
+straight,S120,Rue Young,1.882,9.683,14.011,5.933,31.509
+straight,S122,Rue Notre-Dame Ouest,0.802,4.752,7.879,1.475,14.908
+straight,S123,Rue Notre-Dame Ouest,0.802,4.752,7.879,1.475,14.908
+straight,S124,Boulevard Robert-Bourassa,3.275,5.256,9.716,2.012,20.26
+straight,S126,Rue Notre-Dame Ouest,4.13,7.072,12.597,2.611,26.41
+straight,S127,Rue Wellington,7.008,14.222,20.259,2.838,44.327
+straight,S128,Rue Wellington,13.551,28.607,42.347,9.821,94.327
+straight,S129,Rue Wellington,10.732,23.033,37.31,9.458,80.532
+straight,S130,Rue de la Commune Ouest,0.018,0.131,0.22,0.044,0.413
+straight,S131,Rue Smith,3.172,21.254,35.627,6.91,66.963
+straight,S132,Rue Smith,0.471,2.261,3.086,1.665,7.483
+straight,S133,Rue Eleanor,0.957,4.619,6.334,3.362,15.271
+straight,S136,Rue Wellington,0.236,1.022,1.67,0.278,3.206
+straight,S137,Boulevard Robert-Bourassa,1.708,1.967,4.38,0.832,8.888
+straight,S138,Boulevard Robert-Bourassa,2.0,3.407,6.351,1.292,13.05
+straight,S139,Rue Richmond,0.144,0.49,0.808,0.115,1.557
+straight,S140,Rue Richmond,0.144,0.49,0.808,0.115,1.557
+straight,S141,Rue de la Montagne,0.236,1.022,1.67,0.278,3.206
+straight,S145,Rue Ottawa,0.542,2.763,3.935,1.831,9.071
+straight,S146,Rue Ottawa,0.542,2.763,3.935,1.831,9.071
+straight,S147,Rue Saint-Paul Ouest,0.333,1.995,3.092,1.598,7.018
+straight,S148,Rue Saint-Paul Ouest,0.572,2.985,4.304,1.904,9.765
+straight,S151,Rue Notre-Dame Ouest,4.13,7.072,12.597,2.611,26.41
+straight,S152,Rue Notre-Dame Ouest,5.745,14.743,22.689,8.869,52.046
+straight,S154,Rue Ann,3.673,23.587,38.82,8.603,74.683
+straight,S155,Rue Ann,3.673,23.587,38.82,8.603,74.683
+straight,S156,Rue Ann,0.066,0.26,0.413,0.083,0.82
+straight,S157,Rue Ann,0.066,0.26,0.413,0.083,0.822
+straight,S158,Rue Wellington,4.197,8.399,13.49,3.971,30.058
+straight,S159,Rue Wellington,2.144,4.252,7.688,3.474,17.559
+straight,S160,Rue Wellington,2.377,5.216,8.855,3.772,20.219
+straight,S162,Rue de la Montagne,25.815,54.457,73.071,11.64,164.983
+straight,S163,Rue de la Montagne,3.713,9.651,10.901,2.633,26.897
+straight,S166,Rue William,1.708,10.74,17.338,3.381,33.167
+straight,S167,Rue des Bassins,10.944,24.214,34.411,4.375,73.944
+straight,S168,Rue des Bassins,1.408,5.501,8.908,1.413,17.23
+straight,S169,Rue des Bassins,1.492,5.835,9.442,1.5,18.27
+straight,S170,Rue des Bassins,1.606,6.438,10.359,1.677,20.08
+straight,S171,Rue des Bassins,1.606,6.438,10.359,1.677,20.08
+straight,S172,Rue des Bassins,1.634,6.605,10.61,1.729,20.578
+straight,S173,Rue Ottawa,29.83,104.615,148.536,35.583,318.564
+straight,S174,Rue Ottawa,36.342,90.243,114.511,22.795,263.891
+straight,S175,Rue Ottawa,41.913,101.058,129.206,24.484,296.661
+straight,S176,Rue Ottawa,58.506,135.945,177.423,31.305,403.178
+straight,S177,Allée des Barges,7.528,16.998,23.717,3.583,51.825
+straight,S178,Allée des Barges,17.208,38.132,53.162,7.772,116.274
+straight,S180,Allée des Vraquiers,5.996,12.355,17.195,2.069,37.615
+straight,S181,Allée des Charbonniers,17.441,35.822,49.902,5.967,109.132
+straight,S182,Allée des Charbonniers,33.932,69.263,96.211,11.456,210.862
+straight,S183,Rue William,1.286,1.923,3.486,0.744,7.438
+straight,S184,Rue William,1.286,1.923,3.486,0.744,7.438
+straight,S185,Rue William,1.286,1.923,3.486,0.744,7.438
+straight,S186,Rue Wellington,0.026,0.13,0.215,0.038,0.408
+straight,S187,Rue Wellington,2.877,8.375,10.724,2.756,24.733
+straight,S188,Rue Wellington,2.904,8.505,10.938,2.794,25.141
+straight,S198,connector,0.144,0.49,0.808,0.115,1.557
+straight,S201,connector,0.144,0.49,0.808,0.115,1.557
+straight,S203,Lachine Canal path,0.144,0.49,0.808,0.115,1.557
+straight,S204,Lachine Canal path,0.144,0.49,0.808,0.115,1.557
+straight,S205,Lachine Canal path,0.144,0.49,0.808,0.115,1.557
+straight,S206,Rue William,8.68,30.742,43.346,12.589,95.357
+straight,S207,Rue William,8.866,31.742,44.902,12.885,98.395
+straight,S211,connector,0.033,0.194,0.292,0.06,0.579
+straight,S212,connector,5.489,12.26,17.094,2.566,37.408
+straight,S213,park path,5.522,12.454,17.386,2.626,37.987
+straight,S214,Boulevard Robert-Bourassa,0.005,0.026,0.04,0.007,0.078
+straight,S215,Boulevard Robert-Bourassa,0.005,0.026,0.04,0.007,0.078
+straight,S216,Boulevard Robert-Bourassa,0.005,0.026,0.04,0.007,0.078
+straight,S219,Rue Wellington,0.436,2.285,3.308,2.642,8.671
+straight,S220,Rue Wellington,0.436,2.285,3.308,2.642,8.671
+straight,S221,Rue Notre-Dame Ouest,0.812,4.467,6.499,5.256,17.034
+straight,S222,Rue Notre-Dame Ouest,0.812,4.467,6.499,5.256,17.034
+straight,S223,Boulevard Robert-Bourassa,0.005,0.026,0.04,0.007,0.078
+straight,S224,Boulevard Robert-Bourassa,0.005,0.026,0.04,0.007,0.078
+straight,S225,Rue Ottawa,0.202,1.11,1.615,1.312,4.239
+straight,S226,Rue Ottawa,0.202,1.11,1.615,1.312,4.239
+straight,S227,Boulevard Georges-Vanier,1.857,2.694,3.51,0.34,8.4
+straight,S231,Rue Canning,4.271,8.858,11.475,4.255,28.859
+straight,S233,Rue Guy,45.215,85.881,99.599,20.9,251.595
+straight,S234,Rue de l'Inspecteur,35.862,121.742,180.0,50.919,388.524
+straight,S235,Rue de la Montagne,80.797,174.786,216.198,64.41,536.191
+straight,S237,Rue Ottawa,0.202,1.11,1.615,1.312,4.239
+straight,S238,Rue Richmond,13.564,38.087,52.776,15.203,119.629
+straight,S240,Rue Wellington,0.431,2.259,3.268,2.635,8.593
+straight,S242,Rue de Versailles,13.195,23.844,24.327,11.659,73.026
+straight,S246,Rue des Seigneurs,26.339,60.882,82.064,25.91,195.195
+straight,S247,Rue Jean-D'Estrées,39.508,110.465,156.749,35.527,342.25
+straight,S249,Rue Notre-Dame Ouest,0.807,4.441,6.46,5.248,16.956
+straight,S257,Rue Peel,67.659,198.927,275.631,114.972,657.189

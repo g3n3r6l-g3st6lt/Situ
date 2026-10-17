@@ -1,0 +1,38 @@
+T1  Do the walkers add up to what S7 says, kind by kind, worked out again from the S7 tables?
+    resident walks to the bus 303, resident walks to the metro 766, resident walks to work downtown 1134, resident walks to work here 262, worker walks from the bus 338, worker walks from the metro 729
+    PASS
+
+T2  Does every trip have a route in every reading, joined end to end, from where it starts to where it ends?
+    16958 trips x 3 readings
+    PASS
+
+T3  Is the 'shortest' route the shortest walk? (S7's own shortest-walk code, every 20th trip)
+    848 trips
+    PASS
+
+T4  Does each reading win by its own rule: 'straight' never turns more, 'open' never walks more than its weight allows?
+    'open' may walk at most 1.50 times the shortest
+    PASS
+
+T5  Are the flows on streets and junctions the sum of the routes that use them?
+    PASS
+
+T6  Were the flows made without the counts and space syntax? (run again with both scrambled: nothing may move)
+    PASS
+
+T7  Does the comparison with the counts follow from the flows and the S5 table?
+    7 counted junctions x 2 hours
+    PASS
+
+T8  Is every rule the code names in the ledger, once?
+    12 assumptions, 5 pieces of evidence
+    PASS
+
+T9  What does this slice of S9 give? (report)
+    3532 walks between 6:00 and 9:59: resident walks to the bus 303, resident walks to the metro 766, resident walks to work downtown 1134, resident walks to work here 262, worker walks from the bus 338, worker walks from the metro 729
+    shortest: median walk 584 m; share of counted pedestrians at 7 h and 8 h: 27%, 22%; rho with walking choice (whole island) 0.238
+    open: median walk 587 m; share of counted pedestrians at 7 h and 8 h: 27%, 23%; rho with walking choice (whole island) 0.259
+    straight: median walk 698 m; share of counted pedestrians at 7 h and 8 h: 27%, 23%; rho with walking choice (whole island) 0.288
+    rho with the counts rests on 7 junctions: too few to tell readings apart
+
+ALL PASS

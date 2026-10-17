@@ -1,0 +1,32 @@
+junction,name,method,count_id,busiest_hour,q_NB,q_SB,q_EB,q_WB,lanes_NB,lanes_SB,lanes_EB,lanes_WB,Y,cycle_webster_s,cycle_s,green_NS_s,green_EW_s,lost_s,ped_min_NS_s,ped_min_EW_s,pedestrians_set_the_green,warnings,class_NS,class_EW
+J040,Guy / Ottawa/William,"Webster, from counts",236,2024-12-18 16h,0,259,261,124,0,1,1,1,0.29,24,60,26,26,8,12,10,,Webster's cycle clipped to 60-120 s,,
+J051,Montagne / Notre-Dame,"Webster, from counts",240,2026-05-12 16h,256,505,359,250,1,1,2,2,0.38,27,60,38,14,8,18,12,,Webster's cycle clipped to 60-120 s,,
+J001,Georges-Vanier / Notre-Dame,"plan B, road class",,,,,,,,,,,,,60,26,26,8,12,12,,,Collector,Collector
+J039,Montagne / Wellington,"plan B, road class",,,,,,,,,,,,,60,21,31,8,12,12,,,Collector,Secondary arterial
+J041,Guy / Notre-Dame,"plan B, road class",,,,,,,,,,,,,60,21,31,8,15,18,,,Local street,Collector
+J044,Inspecteur / Saint-Maurice,"plan B, road class",,,,,,,,,,,,,60,26,26,8,12,12,,,Local street,Local street
+J045,Inspecteur / Notre-Dame,"plan B, road class",,,,,,,,,,,,,60,21,31,8,18,12,,,Local street,Collector
+J048,Montagne / Ottawa,"plan B, road class",,,,,,,,,,,,,60,26,26,8,10,12,,,Collector,Collector
+J050,Montagne / William,"plan B, road class",,,,,,,,,,,,,60,26,26,8,10,12,,,Collector,Collector
+J059,Jean-d'Estrées / Murray / Notre-Dame,"plan B, road class",,,,,,,,,,,,,60,21,31,8,18,12,,,Local street,Collector
+J062,Notre-Dame / Robert-Bourassa Int Ouest,"plan B, road class",,,,,,,,,,,,,60,31,21,8,18,18,,,Main arterial,Collector
+J065,Cathédrale / Notre-Dame,"plan B, road class",,,,,,,,,,,,,60,31,21,8,24,15,,,Secondary arterial,Collector
+J066,Notre-Dame / Peel,"plan B, road class",,,,,,,,,,,,,60,31,21,8,21,15,,,Secondary arterial,Collector
+J068,Notre-Dame / Versailles,"plan B, road class",,,,,,,,,,,,,60,21,31,8,15,12,,,Local street,Collector
+J071,Notre-Dame / Seigneurs,"plan B, road class",,,,,,,,,,,,,60,26,26,8,18,12,,,Collector,Collector
+J074,Ottawa / Peel,"plan B, road class",,,,,,,,,,,,,60,31,21,8,10,12,,,Secondary arterial,Local street
+J080,Peel / Wellington,"plan B, road class",,,,,,,,,,,,,60,26,26,8,21,15,,,Secondary arterial,Secondary arterial
+J081,Peel / William,"plan B, road class",,,,,,,,,,,,,60,31,21,8,10,12,,,Secondary arterial,Collector
+J084,Seigneurs / William,"plan B, road class",,,,,,,,,,,,,60,26,26,8,12,12,,,Collector,Collector
+J096,Nazareth / William,"plan B, road class",,,,,,,,,,,,,60,31,21,8,15,21,,,Main arterial,Collector
+J100,Robert-Bourassa - Int. Ouest / Wellington,"plan B, road class",,,,,,,,,,,,,60,31,21,8,18,21,,,Main arterial,Secondary arterial
+J101,Robert-Bourassa - Int. Ouest / Ottawa,"plan B, road class",,,,,,,,,,,,,60,31,21,8,12,21,,,Main arterial,Local street
+J149,Robert-Bourassa - Int. Est / William,"plan B, road class",,,,,,,,,,,,,60,31,21,8,15,18,,,Main arterial,Collector
+J150,Robert-Bourassa - Int. Est / Saint-Paul,"plan B, road class",,,,,,,,,,,,,78,52,18,8,12,18,,cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the EW green,Main arterial,
+J152,Notre-Dame / Robert-Bourassa Int Est,"plan B, road class",,,,,,,,,,,,,60,31,21,8,18,18,,,Main arterial,Collector
+J155,Robert-Bourassa - Int. Est / Wellington,"plan B, road class",,,,,,,,,,,,,60,31,21,8,15,18,,,Highway,Secondary arterial
+J157,Robert-Bourassa - Int. Est / Ottawa,"plan B, road class",,,,,,,,,,,,,60,31,21,8,12,18,,,Main arterial,Local street
+J167,Montagne / Saint-Jacques,"plan B, road class",,,,,,,,,,,,,72,52,12,8,7,12,,cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the EW green; streets beyond the network meet here and are not counted,Collector,
+J178,Jean-d'Estrées / Saint-Jacques,"plan B, road class",,,,,,,,,,,,,72,52,12,8,7,12,,cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the EW green; streets beyond the network meet here and are not counted,Local street,
+J181,Robert-Bourassa / Saint-Jacques,"plan B, road class",,,,,,,,,,,,,78,52,18,8,7,18,,cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the EW green; streets beyond the network meet here and are not counted,Main arterial,
+J188,Saint-Patrick / Wellington,"plan B, road class",,,,,,,,,,,,,78,18,52,8,18,7,,cars arrive on one axis only; the other phase serves pedestrians; pedestrians set the NS green; streets beyond the network meet here and are not counted,,Secondary arterial

@@ -1,0 +1,541 @@
+tract,mode,census_mode,band,start,end,count_2021,now
+4620069.02,bicycle,Bicycle,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620069.02,bicycle,Bicycle,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620069.02,bus,Bus,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620069.02,bus,Bus,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620069.02,bus,Bus,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620069.02,bus,Bus,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620069.02,bus,Bus,Between 6:30 a.m. and 6:59 a.m.,6.5,7,10.0,10.91
+4620069.02,bus,Bus,Between 7 a.m. and 7:29 a.m.,7,7.5,20.0,21.82
+4620069.02,bus,Bus,Between 7:30 a.m. and 7:59 a.m.,7.5,8,35.0,38.19
+4620069.02,bus,Bus,Between 8 a.m. and 8:29 a.m.,8,8.5,10.0,10.91
+4620069.02,bus,Bus,Between 8:30 a.m. and 8:59 a.m.,8.5,9,15.0,16.37
+4620069.02,bus,Bus,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620069.02,bus,Bus,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620069.02,bus,Bus,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620069.02,bus,Bus,Between 12 p.m. and 3:59 p.m.,12,16,20.0,21.82
+4620069.02,bus,Bus,Between 4 p.m. and 7:59 p.m.,16,20,10.0,10.91
+4620069.02,bus,Bus,Between 8 p.m. and 11:59 p.m.,20,24,15.0,16.37
+4620069.02,car,"Car, truck or van",Between 12 a.m. and 4:59 a.m.,0,5,40.0,43.65
+4620069.02,car,"Car, truck or van",Between 5 a.m. and 5:29 a.m.,5,5.5,15.0,16.37
+4620069.02,car,"Car, truck or van",Between 5:30 a.m. and 5:59 a.m.,5.5,6,55.0,60.01
+4620069.02,car,"Car, truck or van",Between 6 a.m. and 6:29 a.m.,6,6.5,50.0,54.56
+4620069.02,car,"Car, truck or van",Between 6:30 a.m. and 6:59 a.m.,6.5,7,105.0,114.57
+4620069.02,car,"Car, truck or van",Between 7 a.m. and 7:29 a.m.,7,7.5,100.0,109.11
+4620069.02,car,"Car, truck or van",Between 7:30 a.m. and 7:59 a.m.,7.5,8,70.0,76.38
+4620069.02,car,"Car, truck or van",Between 8 a.m. and 8:29 a.m.,8,8.5,70.0,76.38
+4620069.02,car,"Car, truck or van",Between 8:30 a.m. and 8:59 a.m.,8.5,9,100.0,109.11
+4620069.02,car,"Car, truck or van",Between 9 a.m. and 9:59 a.m.,9,10,100.0,109.11
+4620069.02,car,"Car, truck or van",Between 10 a.m. and 10:59 a.m.,10,11,15.0,16.37
+4620069.02,car,"Car, truck or van",Between 11 a.m. and 11:59 a.m.,11,12,20.0,21.82
+4620069.02,car,"Car, truck or van",Between 12 p.m. and 3:59 p.m.,12,16,60.0,65.47
+4620069.02,car,"Car, truck or van",Between 4 p.m. and 7:59 p.m.,16,20,115.0,125.48
+4620069.02,car,"Car, truck or van",Between 8 p.m. and 11:59 p.m.,20,24,140.0,152.76
+4620069.02,train,"Light rail, streetcar or commuter train",Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620069.02,train,"Light rail, streetcar or commuter train",Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620069.02,other,"Motorcycle, scooter or moped",Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620069.02,other,Other method,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620069.02,other,Other method,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620069.02,other,Other method,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620069.02,other,Other method,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620069.02,other,Other method,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620069.02,other,Other method,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620069.02,other,Other method,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620069.02,other,Other method,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620069.02,other,Other method,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620069.02,other,Other method,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620069.02,other,Other method,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620069.02,other,Other method,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620069.02,other,Other method,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620069.02,other,Other method,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620069.02,other,Other method,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620069.02,other,Passenger ferry,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620069.02,other,Passenger ferry,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620069.02,other,Passenger ferry,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620069.02,other,Passenger ferry,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620069.02,other,Passenger ferry,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620069.02,other,Passenger ferry,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620069.02,other,Passenger ferry,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620069.02,other,Passenger ferry,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620069.02,other,Passenger ferry,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620069.02,other,Passenger ferry,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620069.02,other,Passenger ferry,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620069.02,other,Passenger ferry,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620069.02,other,Passenger ferry,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620069.02,other,Passenger ferry,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620069.02,other,Passenger ferry,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620069.02,metro,Subway or elevated rail,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620069.02,metro,Subway or elevated rail,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620069.02,metro,Subway or elevated rail,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620069.02,metro,Subway or elevated rail,Between 6 a.m. and 6:29 a.m.,6,6.5,10.0,10.91
+4620069.02,metro,Subway or elevated rail,Between 6:30 a.m. and 6:59 a.m.,6.5,7,25.0,27.28
+4620069.02,metro,Subway or elevated rail,Between 7 a.m. and 7:29 a.m.,7,7.5,20.0,21.82
+4620069.02,metro,Subway or elevated rail,Between 7:30 a.m. and 7:59 a.m.,7.5,8,40.0,43.65
+4620069.02,metro,Subway or elevated rail,Between 8 a.m. and 8:29 a.m.,8,8.5,30.0,32.73
+4620069.02,metro,Subway or elevated rail,Between 8:30 a.m. and 8:59 a.m.,8.5,9,25.0,27.28
+4620069.02,metro,Subway or elevated rail,Between 9 a.m. and 9:59 a.m.,9,10,40.0,43.65
+4620069.02,metro,Subway or elevated rail,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620069.02,metro,Subway or elevated rail,Between 11 a.m. and 11:59 a.m.,11,12,10.0,10.91
+4620069.02,metro,Subway or elevated rail,Between 12 p.m. and 3:59 p.m.,12,16,10.0,10.91
+4620069.02,metro,Subway or elevated rail,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620069.02,metro,Subway or elevated rail,Between 8 p.m. and 11:59 p.m.,20,24,20.0,21.82
+4620069.02,walk,Walked,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620069.02,walk,Walked,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620069.02,walk,Walked,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620069.02,walk,Walked,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620069.02,walk,Walked,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620069.02,walk,Walked,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620069.02,walk,Walked,Between 7:30 a.m. and 7:59 a.m.,7.5,8,10.0,10.91
+4620069.02,walk,Walked,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620069.02,walk,Walked,Between 8:30 a.m. and 8:59 a.m.,8.5,9,10.0,10.91
+4620069.02,walk,Walked,Between 9 a.m. and 9:59 a.m.,9,10,40.0,43.65
+4620069.02,walk,Walked,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620069.02,walk,Walked,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620069.02,walk,Walked,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620069.02,walk,Walked,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620069.02,walk,Walked,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 8 a.m. and 8:29 a.m.,8,8.5,20.0,21.82
+4620070.02,bicycle,Bicycle,Between 8:30 a.m. and 8:59 a.m.,8.5,9,15.0,16.37
+4620070.02,bicycle,Bicycle,Between 9 a.m. and 9:59 a.m.,9,10,25.0,27.28
+4620070.02,bicycle,Bicycle,Between 10 a.m. and 10:59 a.m.,10,11,10.0,10.91
+4620070.02,bicycle,Bicycle,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620070.02,bicycle,Bicycle,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620070.02,bus,Bus,Between 12 a.m. and 4:59 a.m.,0,5,10.0,10.91
+4620070.02,bus,Bus,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620070.02,bus,Bus,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620070.02,bus,Bus,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620070.02,bus,Bus,Between 6:30 a.m. and 6:59 a.m.,6.5,7,20.0,21.82
+4620070.02,bus,Bus,Between 7 a.m. and 7:29 a.m.,7,7.5,25.0,27.28
+4620070.02,bus,Bus,Between 7:30 a.m. and 7:59 a.m.,7.5,8,55.0,60.01
+4620070.02,bus,Bus,Between 8 a.m. and 8:29 a.m.,8,8.5,35.0,38.19
+4620070.02,bus,Bus,Between 8:30 a.m. and 8:59 a.m.,8.5,9,55.0,60.01
+4620070.02,bus,Bus,Between 9 a.m. and 9:59 a.m.,9,10,25.0,27.28
+4620070.02,bus,Bus,Between 10 a.m. and 10:59 a.m.,10,11,15.0,16.37
+4620070.02,bus,Bus,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620070.02,bus,Bus,Between 12 p.m. and 3:59 p.m.,12,16,15.0,16.37
+4620070.02,bus,Bus,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620070.02,bus,Bus,Between 8 p.m. and 11:59 p.m.,20,24,10.0,10.91
+4620070.02,car,"Car, truck or van",Between 12 a.m. and 4:59 a.m.,0,5,25.0,27.28
+4620070.02,car,"Car, truck or van",Between 5 a.m. and 5:29 a.m.,5,5.5,10.0,10.91
+4620070.02,car,"Car, truck or van",Between 5:30 a.m. and 5:59 a.m.,5.5,6,50.0,54.56
+4620070.02,car,"Car, truck or van",Between 6 a.m. and 6:29 a.m.,6,6.5,100.0,109.11
+4620070.02,car,"Car, truck or van",Between 6:30 a.m. and 6:59 a.m.,6.5,7,80.0,87.29
+4620070.02,car,"Car, truck or van",Between 7 a.m. and 7:29 a.m.,7,7.5,70.0,76.38
+4620070.02,car,"Car, truck or van",Between 7:30 a.m. and 7:59 a.m.,7.5,8,130.0,141.85
+4620070.02,car,"Car, truck or van",Between 8 a.m. and 8:29 a.m.,8,8.5,115.0,125.48
+4620070.02,car,"Car, truck or van",Between 8:30 a.m. and 8:59 a.m.,8.5,9,75.0,81.84
+4620070.02,car,"Car, truck or van",Between 9 a.m. and 9:59 a.m.,9,10,125.0,136.39
+4620070.02,car,"Car, truck or van",Between 10 a.m. and 10:59 a.m.,10,11,45.0,49.1
+4620070.02,car,"Car, truck or van",Between 11 a.m. and 11:59 a.m.,11,12,25.0,27.28
+4620070.02,car,"Car, truck or van",Between 12 p.m. and 3:59 p.m.,12,16,65.0,70.92
+4620070.02,car,"Car, truck or van",Between 4 p.m. and 7:59 p.m.,16,20,15.0,16.37
+4620070.02,car,"Car, truck or van",Between 8 p.m. and 11:59 p.m.,20,24,40.0,43.65
+4620070.02,train,"Light rail, streetcar or commuter train",Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 7:30 a.m. and 7:59 a.m.,7.5,8,25.0,27.28
+4620070.02,train,"Light rail, streetcar or commuter train",Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 8:30 a.m. and 8:59 a.m.,8.5,9,20.0,21.82
+4620070.02,train,"Light rail, streetcar or commuter train",Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620070.02,train,"Light rail, streetcar or commuter train",Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620070.02,other,"Motorcycle, scooter or moped",Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620070.02,other,Other method,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620070.02,other,Other method,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620070.02,other,Other method,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620070.02,other,Other method,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620070.02,other,Other method,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620070.02,other,Other method,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620070.02,other,Other method,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620070.02,other,Other method,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620070.02,other,Other method,Between 8:30 a.m. and 8:59 a.m.,8.5,9,10.0,10.91
+4620070.02,other,Other method,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620070.02,other,Other method,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620070.02,other,Other method,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620070.02,other,Other method,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620070.02,other,Other method,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620070.02,other,Other method,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620070.02,other,Passenger ferry,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620070.02,other,Passenger ferry,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620070.02,other,Passenger ferry,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620070.02,other,Passenger ferry,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620070.02,other,Passenger ferry,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620070.02,other,Passenger ferry,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620070.02,other,Passenger ferry,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620070.02,other,Passenger ferry,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620070.02,other,Passenger ferry,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620070.02,other,Passenger ferry,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620070.02,other,Passenger ferry,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620070.02,other,Passenger ferry,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620070.02,other,Passenger ferry,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620070.02,other,Passenger ferry,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620070.02,other,Passenger ferry,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620070.02,metro,Subway or elevated rail,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620070.02,metro,Subway or elevated rail,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620070.02,metro,Subway or elevated rail,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620070.02,metro,Subway or elevated rail,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620070.02,metro,Subway or elevated rail,Between 6:30 a.m. and 6:59 a.m.,6.5,7,20.0,21.82
+4620070.02,metro,Subway or elevated rail,Between 7 a.m. and 7:29 a.m.,7,7.5,20.0,21.82
+4620070.02,metro,Subway or elevated rail,Between 7:30 a.m. and 7:59 a.m.,7.5,8,90.0,98.2
+4620070.02,metro,Subway or elevated rail,Between 8 a.m. and 8:29 a.m.,8,8.5,55.0,60.01
+4620070.02,metro,Subway or elevated rail,Between 8:30 a.m. and 8:59 a.m.,8.5,9,105.0,114.57
+4620070.02,metro,Subway or elevated rail,Between 9 a.m. and 9:59 a.m.,9,10,130.0,141.85
+4620070.02,metro,Subway or elevated rail,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620070.02,metro,Subway or elevated rail,Between 11 a.m. and 11:59 a.m.,11,12,10.0,10.91
+4620070.02,metro,Subway or elevated rail,Between 12 p.m. and 3:59 p.m.,12,16,25.0,27.28
+4620070.02,metro,Subway or elevated rail,Between 4 p.m. and 7:59 p.m.,16,20,20.0,21.82
+4620070.02,metro,Subway or elevated rail,Between 8 p.m. and 11:59 p.m.,20,24,15.0,16.37
+4620070.02,walk,Walked,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620070.02,walk,Walked,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620070.02,walk,Walked,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620070.02,walk,Walked,Between 6 a.m. and 6:29 a.m.,6,6.5,10.0,10.91
+4620070.02,walk,Walked,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620070.02,walk,Walked,Between 7 a.m. and 7:29 a.m.,7,7.5,10.0,10.91
+4620070.02,walk,Walked,Between 7:30 a.m. and 7:59 a.m.,7.5,8,35.0,38.19
+4620070.02,walk,Walked,Between 8 a.m. and 8:29 a.m.,8,8.5,30.0,32.73
+4620070.02,walk,Walked,Between 8:30 a.m. and 8:59 a.m.,8.5,9,30.0,32.73
+4620070.02,walk,Walked,Between 9 a.m. and 9:59 a.m.,9,10,60.0,65.47
+4620070.02,walk,Walked,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620070.02,walk,Walked,Between 11 a.m. and 11:59 a.m.,11,12,10.0,10.91
+4620070.02,walk,Walked,Between 12 p.m. and 3:59 p.m.,12,16,20.0,21.82
+4620070.02,walk,Walked,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620070.02,walk,Walked,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 8:30 a.m. and 8:59 a.m.,8.5,9,10.0,10.91
+4620071.00,bicycle,Bicycle,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620071.00,bicycle,Bicycle,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620071.00,bus,Bus,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620071.00,bus,Bus,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620071.00,bus,Bus,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620071.00,bus,Bus,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620071.00,bus,Bus,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620071.00,bus,Bus,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620071.00,bus,Bus,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620071.00,bus,Bus,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620071.00,bus,Bus,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620071.00,bus,Bus,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620071.00,bus,Bus,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620071.00,bus,Bus,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620071.00,bus,Bus,Between 12 p.m. and 3:59 p.m.,12,16,25.0,27.28
+4620071.00,bus,Bus,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620071.00,bus,Bus,Between 8 p.m. and 11:59 p.m.,20,24,10.0,10.91
+4620071.00,car,"Car, truck or van",Between 12 a.m. and 4:59 a.m.,0,5,55.0,60.01
+4620071.00,car,"Car, truck or van",Between 5 a.m. and 5:29 a.m.,5,5.5,45.0,49.1
+4620071.00,car,"Car, truck or van",Between 5:30 a.m. and 5:59 a.m.,5.5,6,30.0,32.73
+4620071.00,car,"Car, truck or van",Between 6 a.m. and 6:29 a.m.,6,6.5,60.0,65.47
+4620071.00,car,"Car, truck or van",Between 6:30 a.m. and 6:59 a.m.,6.5,7,40.0,43.65
+4620071.00,car,"Car, truck or van",Between 7 a.m. and 7:29 a.m.,7,7.5,60.0,65.47
+4620071.00,car,"Car, truck or van",Between 7:30 a.m. and 7:59 a.m.,7.5,8,20.0,21.82
+4620071.00,car,"Car, truck or van",Between 8 a.m. and 8:29 a.m.,8,8.5,55.0,60.01
+4620071.00,car,"Car, truck or van",Between 8:30 a.m. and 8:59 a.m.,8.5,9,35.0,38.19
+4620071.00,car,"Car, truck or van",Between 9 a.m. and 9:59 a.m.,9,10,60.0,65.47
+4620071.00,car,"Car, truck or van",Between 10 a.m. and 10:59 a.m.,10,11,25.0,27.28
+4620071.00,car,"Car, truck or van",Between 11 a.m. and 11:59 a.m.,11,12,10.0,10.91
+4620071.00,car,"Car, truck or van",Between 12 p.m. and 3:59 p.m.,12,16,85.0,92.75
+4620071.00,car,"Car, truck or van",Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620071.00,car,"Car, truck or van",Between 8 p.m. and 11:59 p.m.,20,24,15.0,16.37
+4620071.00,train,"Light rail, streetcar or commuter train",Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620071.00,train,"Light rail, streetcar or commuter train",Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620071.00,other,"Motorcycle, scooter or moped",Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620071.00,other,Other method,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620071.00,other,Other method,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620071.00,other,Other method,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620071.00,other,Other method,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620071.00,other,Other method,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620071.00,other,Other method,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620071.00,other,Other method,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620071.00,other,Other method,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620071.00,other,Other method,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620071.00,other,Other method,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620071.00,other,Other method,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620071.00,other,Other method,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620071.00,other,Other method,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620071.00,other,Other method,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620071.00,other,Other method,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620071.00,other,Passenger ferry,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620071.00,other,Passenger ferry,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620071.00,other,Passenger ferry,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620071.00,other,Passenger ferry,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620071.00,other,Passenger ferry,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620071.00,other,Passenger ferry,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620071.00,other,Passenger ferry,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620071.00,other,Passenger ferry,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620071.00,other,Passenger ferry,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620071.00,other,Passenger ferry,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620071.00,other,Passenger ferry,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620071.00,other,Passenger ferry,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620071.00,other,Passenger ferry,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620071.00,other,Passenger ferry,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620071.00,other,Passenger ferry,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 6:30 a.m. and 6:59 a.m.,6.5,7,10.0,10.91
+4620071.00,metro,Subway or elevated rail,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 12 p.m. and 3:59 p.m.,12,16,10.0,10.91
+4620071.00,metro,Subway or elevated rail,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620071.00,metro,Subway or elevated rail,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620071.00,walk,Walked,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620071.00,walk,Walked,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620071.00,walk,Walked,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620071.00,walk,Walked,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620071.00,walk,Walked,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620071.00,walk,Walked,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620071.00,walk,Walked,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620071.00,walk,Walked,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620071.00,walk,Walked,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620071.00,walk,Walked,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620071.00,walk,Walked,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620071.00,walk,Walked,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620071.00,walk,Walked,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620071.00,walk,Walked,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620071.00,walk,Walked,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 8 a.m. and 8:29 a.m.,8,8.5,10.0,10.91
+4620077.00,bicycle,Bicycle,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620077.00,bicycle,Bicycle,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620077.00,bus,Bus,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620077.00,bus,Bus,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620077.00,bus,Bus,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620077.00,bus,Bus,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620077.00,bus,Bus,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620077.00,bus,Bus,Between 7 a.m. and 7:29 a.m.,7,7.5,10.0,10.91
+4620077.00,bus,Bus,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620077.00,bus,Bus,Between 8 a.m. and 8:29 a.m.,8,8.5,10.0,10.91
+4620077.00,bus,Bus,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620077.00,bus,Bus,Between 9 a.m. and 9:59 a.m.,9,10,10.0,10.91
+4620077.00,bus,Bus,Between 10 a.m. and 10:59 a.m.,10,11,20.0,21.82
+4620077.00,bus,Bus,Between 11 a.m. and 11:59 a.m.,11,12,10.0,10.91
+4620077.00,bus,Bus,Between 12 p.m. and 3:59 p.m.,12,16,20.0,21.82
+4620077.00,bus,Bus,Between 4 p.m. and 7:59 p.m.,16,20,10.0,10.91
+4620077.00,bus,Bus,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620077.00,car,"Car, truck or van",Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620077.00,car,"Car, truck or van",Between 5 a.m. and 5:29 a.m.,5,5.5,15.0,16.37
+4620077.00,car,"Car, truck or van",Between 5:30 a.m. and 5:59 a.m.,5.5,6,35.0,38.19
+4620077.00,car,"Car, truck or van",Between 6 a.m. and 6:29 a.m.,6,6.5,25.0,27.28
+4620077.00,car,"Car, truck or van",Between 6:30 a.m. and 6:59 a.m.,6.5,7,50.0,54.56
+4620077.00,car,"Car, truck or van",Between 7 a.m. and 7:29 a.m.,7,7.5,80.0,87.29
+4620077.00,car,"Car, truck or van",Between 7:30 a.m. and 7:59 a.m.,7.5,8,55.0,60.01
+4620077.00,car,"Car, truck or van",Between 8 a.m. and 8:29 a.m.,8,8.5,35.0,38.19
+4620077.00,car,"Car, truck or van",Between 8:30 a.m. and 8:59 a.m.,8.5,9,75.0,81.84
+4620077.00,car,"Car, truck or van",Between 9 a.m. and 9:59 a.m.,9,10,105.0,114.57
+4620077.00,car,"Car, truck or van",Between 10 a.m. and 10:59 a.m.,10,11,35.0,38.19
+4620077.00,car,"Car, truck or van",Between 11 a.m. and 11:59 a.m.,11,12,15.0,16.37
+4620077.00,car,"Car, truck or van",Between 12 p.m. and 3:59 p.m.,12,16,55.0,60.01
+4620077.00,car,"Car, truck or van",Between 4 p.m. and 7:59 p.m.,16,20,25.0,27.28
+4620077.00,car,"Car, truck or van",Between 8 p.m. and 11:59 p.m.,20,24,15.0,16.37
+4620077.00,train,"Light rail, streetcar or commuter train",Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620077.00,train,"Light rail, streetcar or commuter train",Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620077.00,other,"Motorcycle, scooter or moped",Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620077.00,other,Other method,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620077.00,other,Other method,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620077.00,other,Other method,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620077.00,other,Other method,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620077.00,other,Other method,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620077.00,other,Other method,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620077.00,other,Other method,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620077.00,other,Other method,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620077.00,other,Other method,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620077.00,other,Other method,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620077.00,other,Other method,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620077.00,other,Other method,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620077.00,other,Other method,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620077.00,other,Other method,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620077.00,other,Other method,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620077.00,other,Passenger ferry,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620077.00,other,Passenger ferry,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620077.00,other,Passenger ferry,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620077.00,other,Passenger ferry,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620077.00,other,Passenger ferry,Between 6:30 a.m. and 6:59 a.m.,6.5,7,0.0,0.0
+4620077.00,other,Passenger ferry,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620077.00,other,Passenger ferry,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620077.00,other,Passenger ferry,Between 8 a.m. and 8:29 a.m.,8,8.5,0.0,0.0
+4620077.00,other,Passenger ferry,Between 8:30 a.m. and 8:59 a.m.,8.5,9,0.0,0.0
+4620077.00,other,Passenger ferry,Between 9 a.m. and 9:59 a.m.,9,10,0.0,0.0
+4620077.00,other,Passenger ferry,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620077.00,other,Passenger ferry,Between 11 a.m. and 11:59 a.m.,11,12,0.0,0.0
+4620077.00,other,Passenger ferry,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620077.00,other,Passenger ferry,Between 4 p.m. and 7:59 p.m.,16,20,0.0,0.0
+4620077.00,other,Passenger ferry,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620077.00,metro,Subway or elevated rail,Between 12 a.m. and 4:59 a.m.,0,5,10.0,10.91
+4620077.00,metro,Subway or elevated rail,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620077.00,metro,Subway or elevated rail,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620077.00,metro,Subway or elevated rail,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620077.00,metro,Subway or elevated rail,Between 6:30 a.m. and 6:59 a.m.,6.5,7,10.0,10.91
+4620077.00,metro,Subway or elevated rail,Between 7 a.m. and 7:29 a.m.,7,7.5,30.0,32.73
+4620077.00,metro,Subway or elevated rail,Between 7:30 a.m. and 7:59 a.m.,7.5,8,15.0,16.37
+4620077.00,metro,Subway or elevated rail,Between 8 a.m. and 8:29 a.m.,8,8.5,10.0,10.91
+4620077.00,metro,Subway or elevated rail,Between 8:30 a.m. and 8:59 a.m.,8.5,9,30.0,32.73
+4620077.00,metro,Subway or elevated rail,Between 9 a.m. and 9:59 a.m.,9,10,50.0,54.56
+4620077.00,metro,Subway or elevated rail,Between 10 a.m. and 10:59 a.m.,10,11,0.0,0.0
+4620077.00,metro,Subway or elevated rail,Between 11 a.m. and 11:59 a.m.,11,12,10.0,10.91
+4620077.00,metro,Subway or elevated rail,Between 12 p.m. and 3:59 p.m.,12,16,25.0,27.28
+4620077.00,metro,Subway or elevated rail,Between 4 p.m. and 7:59 p.m.,16,20,15.0,16.37
+4620077.00,metro,Subway or elevated rail,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0
+4620077.00,walk,Walked,Between 12 a.m. and 4:59 a.m.,0,5,0.0,0.0
+4620077.00,walk,Walked,Between 5 a.m. and 5:29 a.m.,5,5.5,0.0,0.0
+4620077.00,walk,Walked,Between 5:30 a.m. and 5:59 a.m.,5.5,6,0.0,0.0
+4620077.00,walk,Walked,Between 6 a.m. and 6:29 a.m.,6,6.5,0.0,0.0
+4620077.00,walk,Walked,Between 6:30 a.m. and 6:59 a.m.,6.5,7,10.0,10.91
+4620077.00,walk,Walked,Between 7 a.m. and 7:29 a.m.,7,7.5,0.0,0.0
+4620077.00,walk,Walked,Between 7:30 a.m. and 7:59 a.m.,7.5,8,0.0,0.0
+4620077.00,walk,Walked,Between 8 a.m. and 8:29 a.m.,8,8.5,35.0,38.19
+4620077.00,walk,Walked,Between 8:30 a.m. and 8:59 a.m.,8.5,9,25.0,27.28
+4620077.00,walk,Walked,Between 9 a.m. and 9:59 a.m.,9,10,15.0,16.37
+4620077.00,walk,Walked,Between 10 a.m. and 10:59 a.m.,10,11,10.0,10.91
+4620077.00,walk,Walked,Between 11 a.m. and 11:59 a.m.,11,12,10.0,10.91
+4620077.00,walk,Walked,Between 12 p.m. and 3:59 p.m.,12,16,0.0,0.0
+4620077.00,walk,Walked,Between 4 p.m. and 7:59 p.m.,16,20,15.0,16.37
+4620077.00,walk,Walked,Between 8 p.m. and 11:59 p.m.,20,24,0.0,0.0

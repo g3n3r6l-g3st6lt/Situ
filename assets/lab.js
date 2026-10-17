@@ -8,14 +8,16 @@
     window.SITU_S4   outputs/s4/web_data.js   buildings, their uses and sources, places
     window.SITU_S5   outputs/s5/web_data.js   counts by hour at counted junctions, each place's week
     window.SITU_S6   outputs/s6/web_data.js   trees, hydrants, furniture, lights, cameras, crossings, road works, sidewalks and islands
-    window.SITU_S7   outputs/s7/web_data.js   walkers on each segment, each hour of a weekday, and the stops they use
+    window.SITU_S7   outputs/s7/web_data.js   commuters from each building with homes, the census's hour bands, the STM stops
+    window.SITU_S8   outputs/s8/web_data.js   what can be seen from each walkable street: isovist measures, one view per segment
+    window.SITU_S9   outputs/s9/web_data.js   the morning on foot, imagined under three readings, and the counted junctions
     window.SITU_S1_ROUTES  outputs/s1/routes_data.js  shortest distances and routes between every pair of junctions
 
   It computes nothing about the city. Every colour and every value shows what the Python code already
   produced, and tools/test_lab.py checks that these files match the tables. One exception, kept small:
   the route tool applies the rules in assets/routes.js to the distances routes.py wrote (test L5).
 
-  The page: seven tabs, one per system. Each tab paints the map its own way, has at most two controls,
+  The page: nine tabs, one per system. Each tab paints the map its own way, has at most two controls,
   lists its checkpoints with the reason each one matters, and shows its tests. Clicking a street,
   a junction, a sign or a building opens its details in every tab.
 
@@ -25,7 +27,7 @@
     3 painting              6 the detail panel
 */
 (function () {
-  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes;
+  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes;
   const host = document.getElementById("situ-lab");
   if (!host || !S1 || !window.SituMap) return;
 
@@ -92,9 +94,11 @@
     "very wide sidewalk": "This sidewalk piece is much wider on average than the others. It may be a plaza or forecourt, or one drawing that joins several pieces.",
     "missing outline?": "Hundreds of properties sit at one address point with no building drawn. OpenStreetMap may not have this building yet.",
     "not seen lately": "Mapillary's software found this object only in photos taken before 2023. Griffintown has been rebuilt street by street since, and it may be gone.",
-    "workers with no workplace": "The census says people work in this tract, inside my area, but S4 lists no business premises there. S7 cannot place them, so they walk nowhere yet.",
     "homes in a tract with no 2021 residents": "These homes stand in a tract where nobody lived at the 2021 census, probably because the building is newer. S7 gives them the rates of the lived-in tracts.",
-    "no route": "S7 found no walk on the S1 streets for this trip."
+    "viewpoint inside a building": "A viewpoint on this street falls inside a building outline. The street may pass under a building, or the outline may be drawn over the street. Its view is measured from inside the outline, so it is near zero.",
+"workers with no workplace": "People arrive to work in this part of a census tract, but S4 lists no building with business premises in it. S9 cannot send them anywhere, so it leaves them out.",
+    "counted, but no commuter passes": "The city counted many pedestrians here, and none of S9's commuters walks through in any reading. Whoever they are, they come from outside this slice of S9.",
+    "view beyond the mapped buildings": "Many sight lines from this street leave the box of buildings S8 read. Past that box the view is unknown, not open."
   };
 
   // ================================================================ 2 the page
@@ -107,7 +111,9 @@
     { id: "s4", name: "Buildings", ok: !!S4 },
     { id: "s5", name: "Rhythm", ok: !!S5 && !!S4 },
     { id: "s6", name: "Streetscape", ok: !!S6 },
-    { id: "s7", name: "Walkers", ok: !!S7 },
+    { id: "s7", name: "Commuters", ok: !!S7 },
+    { id: "s8", name: "Views", ok: !!S8 },
+    { id: "s9", name: "Observer", ok: !!S9 },
   ];
   const state = {
     tab: "s1",
@@ -117,7 +123,9 @@
     s4colour: "use", s4places: false,
     s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
     s6show: "all", s6colour: "material",
-    s7group: "all",
+    s7show: "all",
+    s8measure: "area_m2",
+    s9reading: "shortest", s9hour: "all",
     pick: null,                      // {kind: "junction"|"segment"|"building"|"place"|"check", id}
     approach: null,
   };
@@ -178,6 +186,15 @@
     const rank = v => { let lo = 0, hi = vals.length; while (lo < hi) { const m = (lo + hi) >> 1; vals[m] < v ? lo = m + 1 : hi = m; } return lo / Math.max(1, vals.length - 1); };
     return { rank, vals };
   }
+  function ranks8(col) {
+    const vals = Object.values(S8.segments).map(v => v[col]).sort((a, b) => a - b);
+    const rank = v => { let lo = 0, hi = vals.length; while (lo < hi) { const m = (lo + hi) >> 1; vals[m] < v ? lo = m + 1 : hi = m; } return lo / Math.max(1, vals.length - 1); };
+    return { rank, vals };
+  }
+  const flow9 = (id, rd) => { const f = S9 && S9.flows[id] && S9.flows[id][rd || state.s9reading]; if (!f) return 0;
+    return state.s9hour === "all" ? f.reduce((a, b) => a + b, 0) : f[S9.meta.hours.indexOf(+state.s9hour)]; };
+  const hour9 = () => state.s9hour === "7" ? "7" : "8";          // the counts are compared at 7 and 8 h
+  const MEASURE8 = { area_m2: ["area seen", "m²"], longest_m: ["longest sight line", "m"], compactness: ["compactness", ""] };
   function ramp(t) {                         // dark grey to white to pink
     const stops = [[60, 60, 60], [235, 235, 235], [254, 131, 204]];
     const k = t < 0.5 ? 0 : 1, u = t < 0.5 ? t / 0.5 : (t - 0.5) / 0.5;
@@ -188,11 +205,14 @@
   function tipValue(s) {
     if (state.tab === "s2" && S2) { const v = S2.scores[s.id] && S2.scores[s.id][s2col()]; return `<br><span>${esc(s2col())}: ${fmt(v)}</span>`; }
     if (state.tab === "s3" && state.s3view === "speed") { const r = r3.speed[s.id]; return `<br><span>${r && r.speed ? r.speed + " km/h" : "no limit"}</span>`; }
+    if (state.tab === "s9" && S9) return `<br><span>${Math.round(flow9(s.id))} walkers${state.s9hour === "all" ? " between 6 and 10 h" : " at " + state.s9hour + " h"}, ${state.s9reading}</span>`;
+    if (state.tab === "s8" && S8) { const v = S8.segments[s.id]; return `<br><span>${v ? MEASURE8[state.s8measure][0] + ": " + fmt8(v[state.s8measure]) : "no viewpoint: not walkable, or outside the area"}</span>`; }
     return "";
   }
 
   function paint() {
-    const col = state.tab === "s2" ? s2col() : null, rk = col ? ranks(col) : null;
+    const col = state.tab === "s2" ? s2col() : null, rk = col ? ranks(col) : state.tab === "s8" && S8 ? ranks8(state.s8measure) : null;
+    const top9 = state.tab === "s9" && S9 ? Math.max(1, ...S1.segments.map(x => flow9(x.id))) : 1;
     const reach = reachSteps(), rt = routeNow();
     S1.segments.forEach((s, i) => {
       const e = segEl[s.id];
@@ -215,10 +235,16 @@
         } else cls += " plain";
       }
       if (state.tab === "s4" || state.tab === "s5" || state.tab === "s6") cls += " plain faint";
-      if (state.tab === "s7") {
-        const w = s7at(s.id, state.s5hour), top = s7top();
-        if (w > 0.05) { const t = Math.sqrt(w / top); cls += " lab-walk7"; style = `stroke-width:${(0.8 + 6.5 * t).toFixed(2)}px;stroke-opacity:${(0.35 + 0.65 * t).toFixed(2)}`; }
-        else cls += " plain faint";
+      if (state.tab === "s7") cls += " plain faint";
+      if (state.tab === "s9") {
+        const v = flow9(s.id), top = top9;
+        if (v < 0.5) cls += " plain faint";
+        else { const t = Math.pow(v / top, 0.6); style = `stroke:${ramp(0.5 + t / 2)};stroke-width:${(1 + 6 * t).toFixed(2)}px`; }
+      }
+      if (state.tab === "s8") {
+        const v = S8.segments[s.id];
+        if (!v) cls += " plain faint";
+        else { const t = rk.rank(v[state.s8measure]); style = `stroke:${ramp(t)};stroke-width:${(1.2 + 2.6 * t).toFixed(2)}px`; }
       }
       if (state.pick && state.pick.kind === "segment" && state.pick.id === s.id) cls += " picked";
       if (state.approach === s.id) cls += " picked";
@@ -231,9 +257,10 @@
   }
 
   function paintBuildings() {
-    const on = state.tab === "s4" && S4;
+    const on = (state.tab === "s4" || state.tab === "s8") && S4;
     bLayer.style.display = on ? "" : "none";
     if (!on) return;
+    if (state.tab === "s8") { S4.buildings.forEach(b => bEl[b.id].setAttribute("class", "lab-bld view8")); return; }   // what stops a sight line
     S4.buildings.forEach(b => {
       let cls = "lab-bld " + (state.s4colour === "use" ? USE_CLASS(b.use) : "src-" + (b.use_source || "none"));
       if (state.pick && state.pick.kind === "building" && state.pick.id === b.id) cls += " picked";
@@ -266,7 +293,15 @@
     if (state.tab === "s3") html = state.s3view === "speed"
       ? `<span><i class="k v40"></i>40 km/h</span><span><i class="k v30"></i>30</span><span><i class="k v20"></i>20</span><span><i class="k gap"></i>cars allowed, no limit</span>`
       : `<span><i class="kd lights"></i>traffic lights</span><span><i class="kd allway"></i>all-way stop</span><span><i class="kb2"></i>a street that must stop</span>`;
-    if (state.tab === "s7" && S7) html = `<span><i class="k walk7"></i>walkers in the hour, thicker for more</span><span><i class="kd stop7"></i>bus stop used</span>`;
+    if (state.tab === "s8" && rk) {
+      const q = p => rk.vals[Math.min(rk.vals.length - 1, Math.round(p * (rk.vals.length - 1)))];
+      html = `<span class="lab-ramp"><em>${fmt8(q(0))}</em><i></i><em>${fmt8(q(0.5))}</em><i></i><em>${fmt8(q(1))}</em></span>
+        <span>${MEASURE8[state.s8measure][0]}: lowest grey, highest pink</span><span><i class="k faint"></i>no viewpoint</span><span><i class="kb8"></i>building outline</span>` +
+        (state.pick && state.pick.kind === "segment" && S8.segments[state.pick.id] ? `<span><i class="kv8"></i>what the middle viewpoint sees</span>` : "");
+    }
+    if (state.tab === "s9" && S9) html = `<span><i class="k s9w"></i>commuters walking, wider for more</span><span><i class="k faint"></i>none</span>` +
+      `<span><i class="kd count9"></i>junction the city counted, sized by pedestrians at ${hour9()} h</span>`;
+    if (state.tab === "s7" && S7) html = `<span><i class="kd home7"></i>building with homes, sized by its commuters</span><span><i class="kd metro7"></i>metro entrance</span><span><i class="kd stop7"></i>bus stop</span>`;
     if (state.tab === "s4" && S4) {
       const n = f => S4.buildings.filter(f).length;
       html = state.s4colour === "use"
@@ -307,6 +342,8 @@
     if (state.tab === "s5" && S5) s5Marks(marks, labels);
     if (state.tab === "s6" && S6) s6Marks(marks);
     if (state.tab === "s7" && S7) s7Marks(marks);
+    if (state.tab === "s8" && S8) s8View(focus);
+    if (state.tab === "s9" && S9) s9Marks(marks, labels);
     const checks = checksOf(state.tab);
     if (checks.length) checkMarks(marks, labels, checks);
     junctionHits(marks);
@@ -345,13 +382,42 @@
     if (state.pick && state.pick.kind === "junction") map.dot(g, jun[state.pick.id].xy, 7, { class: "lab-picked-j" });
   }
 
+  // S8: the view from the middle viewpoint of the picked street, drawn from its sight lines
+  const fmt8 = v => v == null ? "–" : v >= 100 ? Math.round(v).toLocaleString("en") : (+v).toFixed(v < 1 ? 2 : 1);
+  function viewPolygon(view) {
+    const m = S8.meta, n = view.rays.length;
+    return view.rays.map((r, k) => {
+      const a = (k * m.view_step_deg + m.turn_deg) * Math.PI / 180;
+      return [view.xy[0] + r * Math.cos(a), view.xy[1] + r * Math.sin(a)];
+    });
+  }
+  function s8View(g) {
+    if (!state.pick || state.pick.kind !== "segment") return;
+    const v = S8.segments[state.pick.id];
+    if (!v || !v.view) return;
+    const poly = viewPolygon(v.view);
+    map.line(g, [...poly, poly[0]], { class: "lab-view8" });
+    map.dot(g, v.view.xy, 4, { class: "lab-viewpt8" });
+  }
+
+  // S9: the counted junctions, with the commuters each reading sends through them
+  function s9Marks(g, labels) {
+    S9.counted.forEach(c => {
+      const h = c.hours[hour9()];
+      if (!h) return;
+      map.dot(g, c.xy, 4 + Math.sqrt(h.counted) * 0.7, { class: "lab-count9" });
+      map.label(labels, c.xy, `${Math.round(h[state.s9reading])} / ${Math.round(h.counted)}`, 9, { class: "situ-map-label num" }, "start");
+    });
+  }
+
   // checkpoints of one system, with their system name kept in the pick
   function checksOf(tab) {
-    const src = { s1: S1, s3: S3, s4: S4, s5: S5, s6: S6, s7: S7 }[tab];
+    const src = { s1: S1, s3: S3, s4: S4, s5: S5, s6: S6, s7: S7, s8: S8, s9: S9 }[tab];
     return src && src.checkpoints ? src.checkpoints : [];
   }
   const settled = c => c.status === "confirmed";            // S1 checkpoints carry what the photos and checks decided
   function checkMarks(g, labels, list) {
+    list = list.filter(c => c.xy);                 // a checkpoint about a whole tract has no point to draw
     list.forEach(c => {
       const picked = state.pick && state.pick.kind === "check" && state.pick.id === c.id;
       map.dot(g, c.xy, picked ? 11 : settled(c) ? 5 : 8, { class: "sx-check" + (settled(c) ? " settled" : "") + (picked ? " picked" : "") });
@@ -481,34 +547,39 @@
       hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "obj6", id: o.id }); });
     });
   }
-  // S7: walkers, hour by hour
-  const s7at = (id, h) => {
-    const w = S7 && S7.seg[id];
-    if (!w) return 0;
-    return state.s7group === "resident" ? w.r[h] : state.s7group === "worker" ? w.w[h] : w.r[h] + w.w[h];
-  };
-  let s7max = {};
-  const s7top = () => {
-    const k = state.s7group;
-    if (!s7max[k]) { let m = 0.1; Object.keys(S7.seg).forEach(id => { for (let h = 0; h < 24; h++) m = Math.max(m, s7at(id, h)); }); s7max[k] = m; }
-    return s7max[k];
-  };
-  function s7Text() {
-    const h = state.s5hour;
-    let total = 0, best = null;
-    Object.keys(S7.seg).forEach(id => { const v = s7at(id, h); total += v; if (!best || v > best[1]) best = [id, v]; });
-    const start = k => Object.entries(S7.starts).filter(([g]) => state.s7group === "all" || g.startsWith(state.s7group)).reduce((a, [, v]) => a + v[k], 0);
-    const s = seg[best[0]];
-    return `<p>At <b>${h}h</b>, about <b>${Math.round(start(h))}</b> people start a walk${state.s7group === "all" ? "" : state.s7group === "resident" ? " from or to home" : " to or from work here"}.</p>` +
-      (best[1] > 0.5 ? `<p class="sub">The busiest street: ${esc(s.street)} (${best[0]}), with about ${Math.round(best[1])} walkers passing in the hour.</p>` : `<p class="sub">Almost no one walks to or from work in this hour.</p>`);
-  }
+  // S7: who commutes, from the census, and how far each home is from the metro and the bus
+  const h7 = {};
+  if (S7) S7.homes.forEach(h => h7[h.id] = h);
+  const MODES7 = { all: ["commuters"], walk: ["walk"], transit: ["metro", "bus", "train"], car: ["car"] };
+  const show7 = h => MODES7[state.s7show].reduce((a, m) => a + (h[m] || 0), 0);
   function s7Marks(g) {
-    S7.stops.filter(s => s.inside).forEach(s => {
-      map.dot(g, s.xy, 3.5, { class: "lab-stop7" });
-      const hit = map.dot(g, s.xy, 7, { class: "sx-jhit" });
-      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(s.name)}<br><span>bus stop · ${Math.round(s.to + s.from)} walkers a day to and from it</span>`));
+    S7.stops.forEach(s => {
+      if (s.kind === "metro entrance") map.dot(g, s.xy, 4.5, { class: "lab-metro7" });
+      else if (s.inside) map.square(g, s.xy, 4, { class: "lab-stop7" });
+      const hit = map.dot(g, s.xy, 6, { class: "sx-jhit" });
+      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(s.name)}<br><span>${esc(s.kind)} · ${s.departures} departures on a weekday · nearest for ${s.homes} buildings with homes</span>`));
       hit.addEventListener("pointerleave", () => map.untip());
     });
+    S7.homes.forEach(h => {
+      const picked = state.pick && state.pick.kind === "home7" && state.pick.id === h.id;
+      map.dot(g, h.xy, 2 + Math.sqrt(show7(h)) * 0.9, { class: "lab-home7" + (picked ? " picked" : "") });
+      const hit = map.dot(g, h.xy, 7, { class: "sx-jhit" });
+      hit.addEventListener("pointermove", ev => map.tip(ev, `${h.id}<br><span>${Math.round(show7(h))} ${state.s7show === "all" ? "commuters" : "commuters " + (state.s7show === "walk" ? "on foot" : state.s7show === "car" ? "by car" : "by transit")}</span>`));
+      hit.addEventListener("pointerleave", () => map.untip());
+      hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "home7", id: h.id }); });
+    });
+  }
+  function home7HTML(h) {
+    if (!h) return "";
+    const pct = m => h.commuters ? Math.round(100 * h[m] / h.commuters) + " %" : "";
+    return `<h4>Homes · ${h.id}</h4><p class="sub">census tract ${esc(h.tract)} · ${h.dwellings} homes in S4</p>
+      <p>About <b>${Math.round(h.commuters)}</b> residents commute on a weekday today.</p>
+      <table class="lab-vals"><tr><th></th><th>people</th><th>share</th></tr>${[["walk", "on foot"], ["metro", "metro"], ["bus", "bus"], ["car", "car"], ["bicycle", "bicycle"], ["other", "other"]]
+        .map(([m, w]) => `<tr><td>${w}</td><td>${h[m].toFixed(1)}</td><td>${pct(m)}</td></tr>`).join("")}</table>
+      <h5>Nearest stops, along the streets</h5><p>${esc(h.metro_name.replace("STATION ", "").toLowerCase().replace(/(^|[ -'])\w/g, c => c.toUpperCase()))} metro: <b>${Math.round(h.metro_m)} m</b>
+      ${h.metro_out ? `<span class="sub">(${Math.round(h.metro_out)} m of it beyond the area, as a straight line)</span>` : ""}</p>
+      <p>${esc(h.bus_name)} bus stop: <b>${Math.round(h.bus_m)} m</b></p>
+      <p class="sub">The tract's census rates, corrected once for working from home today. Where these people go is not known.</p>`;
   }
   const SRC6 = { city_trees: "the city's public tree inventory", city_hydrants: "the city's fire hydrant file", osm: "OpenStreetMap", city_works: "the city's list of road works",
     mapillary: "Mapillary's object detection in street photos" };
@@ -638,11 +709,12 @@
     if (p.kind === "place") return back + placeHTML(place4[p.id]);
     if (p.kind === "obj6") return back + obj6HTML(o6[p.id]);
     if (p.kind === "surf6") return back + surf6HTML(s6[p.id]);
+    if (p.kind === "home7") return back + home7HTML(h7[p.id]);
     if (p.kind === "segment") return back + segmentHTML(seg[p.id]);
     if (p.kind === "junction") return back + junctionHTML(p.id);
     return "";
   }
-  const allChecks = () => [...checksOf("s1"), ...checksOf("s3"), ...checksOf("s4"), ...checksOf("s5"), ...checksOf("s6"), ...checksOf("s7")];
+  const allChecks = () => [...checksOf("s1"), ...checksOf("s3"), ...checksOf("s4"), ...checksOf("s5"), ...checksOf("s6"), ...checksOf("s7"), ...checksOf("s8"), ...checksOf("s9")];
 
   function checkHTML(c) {
     if (!c) return "";
@@ -674,12 +746,18 @@
                     zero_in_file: "the file gives 0: no limit", missing: "not in the speed file", not_a_road: "a path: not in the speed file" }[r.speed_status] || "";
       h += `<h5>S3 · speed</h5><p><b>${r.speed ? r.speed + " km/h" : "no limit"}</b> · ${how}</p>${r.speed_note ? `<p class="sub">${esc(r.speed_note)}</p>` : ""}`;
     }
-    const w = S7 && S7.seg[s.id];
-    if (w) {
-      const day = a => Math.round(a.reduce((x, y) => x + y, 0)), hh = state.s5hour;
-      h += `<h5>S7 · walkers</h5><p>About <b>${day(w.r) + day(w.w)}</b> walks a weekday: ${day(w.r)} by residents, ${day(w.w)} by people who work here.</p>
-        <p class="sub">At ${hh}h: ${Math.round(w.r[hh] + w.w[hh])}. Shortest walks only, an assumption.</p>`;
+    if (S9 && S9.flows[s.id]) {
+      const f = S9.flows[s.id], hs = S9.meta.hours;
+      h += `<h5>S9 · commuters walking here, imagined</h5><table class="lab-vals"><tr><th></th>${hs.map(x => `<th>${x}h</th>`).join("")}</tr>${S9.meta.readings.map(rd =>
+        `<tr><td>${rd}</td>${(f[rd] || hs.map(() => 0)).map(v => `<td>${Math.round(v)}</td>`).join("")}</tr>`).join("")}</table>`;
     }
+    const w = S8 && S8.segments[s.id];
+    if (w) h += `<h5>S8 · views</h5><p class="sub">mean of its ${w.points} viewpoint${w.points > 1 ? "s" : ""}, about one every ${S8.meta.step_m} m${w.in_building ? ` · ${w.in_building} inside a building outline` : ""}</p>
+      <table class="lab-vals"><tr><td>area seen</td><td>${fmt8(w.area_m2)} m²</td></tr><tr><td>longest sight line</td><td>${fmt8(w.longest_m)} m</td></tr>
+      <tr><td>mean sight line</td><td>${fmt8(w.mean_m)} m</td></tr><tr><td>compactness</td><td>${fmt8(w.compactness)}</td></tr>
+      <tr><td>lines open to ${S8.meta.radius_m} m</td><td>${Math.round(100 * w.open_share)} %</td></tr>
+      <tr><td>lines leaving the map</td><td>${Math.round(100 * w.beyond_share)} %</td></tr></table>` +
+      (state.tab === "s8" ? `<p class="sub">The pink shape is what can be seen from ${esc(w.view.point)}, the middle viewpoint, past no building outline.</p>` : "");
     return h;
   }
 
@@ -693,6 +771,9 @@
     const j = jun[id];
     let h = `<h4>${id}</h4><p class="sub">S1 · ${esc(j.kind.replace("_", " "))}${j.status ? " (" + esc(j.status) + ")" : ""}</p>`;
     if (S5 && S5.junctions[id]) h += count5HTML(id);
+    const c9 = S9 && S9.counted.find(c => c.id === id);
+    if (c9) h += `<h5>S9 · commuters against the count</h5><table class="lab-vals"><tr><th></th><th>counted</th>${S9.meta.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${Object.entries(c9.hours).map(([hh, v]) =>
+      `<tr><td>${hh}h</td><td>${Math.round(v.counted)}</td>${S9.meta.readings.map(rd => `<td>${Math.round(v[rd])}</td>`).join("")}</tr>`).join("")}</table>`;
     if (!S3 || !r3.jun[id]) return h;
     const J = r3.jun[id], list = r3.appsAt[id] || [];
     h += `<p class="sub">${esc(J.streets.join(" × "))}</p><h5>S3 · ${esc(CONTROL[J.control])}</h5>`;
@@ -793,15 +874,44 @@
         <h5>Sidewalks by</h5>${seg2("s6colour", [["material", "material"], ["built", "year built"]])}
         <p class="sub">S6 records what the objects are and where. What they block, slow or forbid is for the systems after it, as written assumptions.</p>`;
     }
+    if (t === "s9" && S9) {
+      const m = S9.meta, k = m.people_by_kind, e = m.explained_share, pc = v => Math.round(100 * v) + " %";
+      const rows = S9.counted.slice().sort((a, b) => (b.hours[hour9()] || {}).counted - (a.hours[hour9()] || {}).counted).map(c => {
+        const v = c.hours[hour9()]; return v ? `<tr><td>${c.id}</td><td>${Math.round(v.counted)}</td>${m.readings.map(rd => `<td>${Math.round(v[rd])}</td>`).join("")}</tr>` : ""; }).join("");
+      h += `<h3>S9 · Observer</h3><p>The first slice of the mother-analyzer: a weekday morning on foot, imagined from the other systems.
+        About ${(Math.round(m.people / 100) * 100).toLocaleString("en")} walks between 6 and 10 h: residents to the metro, the bus and work, and workers from the metro and the bus.
+        Three readings change one rule, the route; who walks, when and where to stay the same.</p>
+        <h5>Route</h5>${seg2("s9reading", [["shortest", "shortest"], ["open", "open views"], ["straight", "fewest turns"]])}
+        <h5>Hour</h5>${seg2("s9hour", [["all", "6 to 10"], ["6", "6h"], ["7", "7h"], ["8", "8h"], ["9", "9h"]])}
+        <h5>At the counted junctions, ${hour9()} h</h5><table class="lab-vals"><tr><th></th><th>counted</th>${m.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${rows}</table>
+        <p class="sub">Commuters pass ${m.readings.map(rd => pc(e[rd][hour9()]) + " (" + rd + ")").join(", ")} of the pedestrians counted. Seven junctions, most counted on one day:
+        enough to see where the imagined morning falls short, too few to say which reading is right. Nothing in S9 was tuned to the counts or to space syntax.</p>
+        <details class="lab-cgroup"><summary>What S9 assumes <span class="sub">${S9.ledger.filter(x => x.kind === "assumption").length}</span></summary><ul class="lab-clist">${S9.ledger.map(x =>
+          `<li><b>${x.id}</b> ${esc(x.rule)}<br><span class="sub">${esc(x.source)}</span></li>`).join("")}</ul></details>`;
+    }
+    if (t === "s8" && S8) {
+      const m = S8.meta;
+      h += `<h3>S8 · Views</h3><p>What a person can see from each walkable street, measured on the open map: from a viewpoint every ${m.step_m} m, ${m.rays} sight lines run
+        until they meet a building outline or reach ${m.radius_m} m. Across the ${m.points.toLocaleString("en")} viewpoints the median area seen is ${fmt8(m.area_median)} m²
+        (from ${fmt8(m.area_p10)} to ${fmt8(m.area_p90)} m² for the middle 80 %). Click a street to draw its view.</p>
+        ${seg2("s8measure", [["area_m2", "area seen"], ["longest_m", "longest line"], ["compactness", "compactness"]])}
+        <p class="sub">Compactness is 1 for a circle and falls as the view stretches into corridors. Only building outlines stop a sight line: trees, viaducts, fences and parked trucks do not.
+        A missing building opens a view that is not there, so single values carry the gaps of the map; the order of the streets holds better (see the stress tests).
+        S8 measures. What a view means to someone walking is for S9.</p>`;
+    }
     if (t === "s7" && S7) {
-      const m = S7.meta;
-      h += `<h3>S7 · Walkers</h3><p>Who walks where and when on a weekday: ${Math.round(m.commuters).toLocaleString("en")} residents who go out to work,
-        and ${Math.round(m.workers).toLocaleString("en")} people who come here to work, from the 2021 census, corrected once for working from home today.
-        Each street is as thick as the walkers on it in the hour. Car and bicycle trips are not drawn, and visitors come later.</p>
-        ${seg2("s7group", [["all", "everyone"], ["resident", "residents"], ["worker", "workers"]])}
-        <label class="lab-range">hour <b class="lab-hour-label">${state.s5hour}h</b><input type="range" class="lab-hour" min="0" max="23" value="${state.s5hour}"></label>
-        <button type="button" class="lab-play" data-play="day">▶ play the day</button><div class="lab-out">${s7Text()}</div>
-        <p class="sub">The shortest walk along S1 for every trip, an assumption until S7 learns how people choose. Counts and space syntax stay out, so that S9 can compare with them.</p>`;
+      const m = S7.meta, mm = m.commuters_by_mode, tot = Object.values(mm).reduce((a, b) => a + b, 0), pc = k => Math.round(100 * mm[k] / tot);
+      const row = (b, keys) => keys.reduce((a, k) => a + (b[k] || 0), 0);
+      const table = (list, label) => `<table class="lab-vals"><tr><th>${label}</th><th>on foot</th><th>transit</th><th>car</th><th>all</th></tr>${list.map(b =>
+        `<tr><td>${esc(b.band.replace("Between ", "").replace(/ and /, " to "))}</td><td>${Math.round(row(b, ["walk"]))}</td><td>${Math.round(row(b, ["metro", "bus", "train"]))}</td>
+        <td>${Math.round(row(b, ["car"]))}</td><td>${Math.round(row(b, ["walk", "metro", "bus", "train", "car", "bicycle", "other"]))}</td></tr>`).join("")}</table>`;
+      h += `<h3>S7 · Commuters</h3><p>Who commutes from Griffintown and to it on a weekday, from the 2021 census, corrected once for working from home today:
+        about ${(Math.round(m.commuters / 100) * 100).toLocaleString("en")} residents of the ${m.homes} buildings with homes, ${pc("walk")} % of them on foot, ${pc("metro") + pc("bus")} % by transit and ${pc("car")} % by car.
+        Click a building for its commuters and how far it is from the metro and the bus.</p>
+        ${seg2("s7show", [["all", "everyone"], ["walk", "on foot"], ["transit", "transit"], ["car", "car"]])}
+        <h5>Residents leaving for work</h5>${table(S7.bands.leaving, "hour")}
+        <h5>People arriving to work here</h5>${table(S7.bands.arriving, "hour")}
+        <p class="sub">The census's own hour bands, for the three tracts that cover most of the area. S7 draws no walk: where people go, and by which street, is for S9.</p>`;
     }
     h += checksHTML(t) + testsHTML(t);
     return h;
@@ -824,7 +934,7 @@
   }
 
   function testsHTML(t) {
-    const D = { s1: S1, s2: S2, s3: S3, s4: S4, s5: S5, s6: S6, s7: S7 }[t];
+    const D = { s1: S1, s2: S2, s3: S3, s4: S4, s5: S5, s6: S6, s7: S7, s8: S8, s9: S9 }[t];
     if (!D) return "";
     const ts = D.tests || [], f = ts.filter(x => x.status === "fail").length, p = ts.filter(x => x.status === "pass").length;
     return `<details class="lab-tests"><summary>Tests <span class="st ${f ? "fail" : "pass"}">${f ? f + " FAIL" : p + " PASS"}</span> <span class="sub">last run ${esc(D.meta.made)}</span></summary>
@@ -843,7 +953,7 @@
   }
   function refreshOut() {        // only the moving parts of the side, so a slider being dragged is not rebuilt
     const out = info.querySelector(".lab-out");
-    if (out) out.innerHTML = state.tab === "s5" ? s5Text() : state.tab === "s7" ? s7Text() : state.s1try === "reach" ? reachText() : routeText();
+    if (out) out.innerHTML = state.tab === "s5" ? s5Text() : state.s1try === "reach" ? reachText() : routeText();
     const hl = info.querySelector(".lab-hour-label"); if (hl) hl.textContent = state.s5hour + "h";
     const hr = info.querySelector(".lab-hour"); if (hr) hr.value = state.s5hour;
     const cb = info.querySelector(".lab-curve-box"); if (cb && state.tab === "s5") cb.innerHTML = s5Curve();
@@ -860,7 +970,8 @@
     if (pick.kind === "place") return place4[pick.id].xy;
     if (pick.kind === "obj6") return o6[pick.id].xy;
     if (pick.kind === "surf6") return mid(s6[pick.id].ring);
-    const c = allChecks().find(x => x.id === pick.id);
+    if (pick.kind === "home7") return h7[pick.id].xy;
+    const c = checksOf(state.tab).find(x => x.id === pick.id) || allChecks().find(x => x.id === pick.id);   // ids repeat across systems
     return c ? c.xy : null;
   }
   function select(pick, approach) {
@@ -869,8 +980,17 @@
     render(true);
     if (!pick) return;
     if (before && before.kind === pick.kind && before.id === pick.id) return;
-    const xy = centreOf(pick);
-    if (xy) map.zoomTo(xy, pick.kind === "junction" ? 220 : 380);
+    const v8 = state.tab === "s8" && S8 && pick.kind === "segment" && S8.segments[pick.id] && S8.segments[pick.id].view;
+    if (v8) {                                   // frame the whole view, so its far ends stay on screen
+      const poly = viewPolygon(v8), xs = poly.map(q => q[0]), ys = poly.map(q => q[1]);
+      if (!map.cw) map.measure();
+      const cw = map.cw, free = Math.max(200, cw - map.cover());          // the part of the map the side panel leaves open
+      const w = Math.max((Math.max(...xs) - Math.min(...xs)) * cw / free, (Math.max(...ys) - Math.min(...ys)) * cw / map.ch);
+      map.zoomTo([(Math.max(...xs) + Math.min(...xs)) / 2, (Math.max(...ys) + Math.min(...ys)) / 2], Math.max(380, w * 1.1));
+    } else {
+      const xy = centreOf(pick);
+      if (xy) map.zoomTo(xy, pick.kind === "junction" ? 220 : 380);
+    }
     if (narrow() && pick.kind !== "junction") side.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
@@ -900,7 +1020,7 @@
     if (t.classList.contains("lab-radius")) { state.s2radius = +t.value; paint(); refreshOut(); }
     if (t.classList.contains("lab-step")) { state.reachStep = +t.value; paint(); refreshOut(); }
     if (t.classList.contains("lab-slack")) { state.routeSlack = +t.value; render(); }
-    if (t.classList.contains("lab-hour")) { state.s5hour = +t.value; clearInterval(timer); if (state.tab === "s7") paint(); draw(); refreshOut(); }
+    if (t.classList.contains("lab-hour")) { state.s5hour = +t.value; clearInterval(timer); draw(); refreshOut(); }
   });
   host.addEventListener("click", e => {
     const b = e.target.closest("button");
@@ -939,10 +1059,10 @@
   }
   function playDay() {
     clearInterval(timer);
-    state.s5hour = 0; if (state.tab === "s7") paint(); draw(); refreshOut();
+    state.s5hour = 0; draw(); refreshOut();
     timer = setInterval(() => {
       if (state.s5hour >= 23) { clearInterval(timer); return; }
-      state.s5hour += 1; if (state.tab === "s7") paint(); draw(); refreshOut();
+      state.s5hour += 1; draw(); refreshOut();
     }, 700);
   }
   function playReach() {
@@ -957,11 +1077,11 @@
     }, 450);
   }
 
-  // links from the book: #s1 to #s7, #radius, #reach-J080, #route-J093-J130, #J027-S020, #w201008914
+  // links from the book: #s1 to #s9, #radius, #reach-J080, #route-J093-J130, #J027-S020, #w201008914
   function fromHash() {
     const h = location.hash;
     let m;
-    if ((m = /^#(s[1-7])$/.exec(h))) { setTab(m[1]); return; }
+    if ((m = /^#(s[1-9])$/.exec(h))) { setTab(m[1]); return; }
     if (h === "#radius") { setTab("s2"); playRadius(); return; }
     if ((m = /^#reach(?:-(J\d{3}))?$/.exec(h))) {
       state.tab = "s1"; state.s1try = "reach";

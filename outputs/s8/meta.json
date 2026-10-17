@@ -1,0 +1,22 @@
+{
+ "made": "2026-10-17",
+ "step_m": 10,
+ "rays": 360,
+ "radius_m": 300,
+ "osm_file": "osm_places_2026-10-14.json",
+ "outlines": 1682,
+ "edges": 13478,
+ "buildings_without_outline": 14,
+ "box": [
+  299035.6,
+  5037972.1,
+  300785.3,
+  5039939.9
+ ],
+ "points": 1798,
+ "segments": 231,
+ "area_median": 32458.3,
+ "area_p10": 9478.3,
+ "area_p90": 108975.6,
+ "open_any_share": 0.9483
+}

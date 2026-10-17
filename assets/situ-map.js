@@ -53,7 +53,10 @@
     clear(name) { const g = this.layer(name); while (g.firstChild) g.removeChild(g.firstChild); return g; }
     onRedraw(fn) { this.redraws.push(fn); }
 
-    k() { return (this.svg.clientWidth || 600) / this.view.w; }      // pixels per metre
+    // the drawing's size in pixels, read once and kept until the view changes: reading it for every dot
+    // made the browser lay the page out again each time, which slowed tabs with thousands of marks
+    measure() { this.cw = this.svg.clientWidth || 600; this.ch = this.svg.clientHeight || 400; }
+    k() { if (!this.cw) this.measure(); return this.cw / this.view.w; }      // pixels per metre
     px(p) { return p / this.k(); }                                    // p pixels, in metres
 
     // world metres to SVG units: from the origin, y flipped
@@ -105,8 +108,9 @@
       const k = this.k();
       return [this.view.x - this.view.w / 2 + sx / k, -(-this.view.y - this.viewH() / 2 + sy / k)];
     }
-    viewH() { return this.view.w * (this.svg.clientHeight || 400) / (this.svg.clientWidth || 600); }
+    viewH() { if (!this.cw) this.measure(); return this.view.w * this.ch / this.cw; }
     apply() {
+      this.measure();
       const h = this.viewH();
       const [cx, cy] = this.P([this.view.x, this.view.y]);
       this.svg.setAttribute("viewBox", [cx - this.view.w / 2, cy - h / 2, this.view.w, h].join(" "));
@@ -116,7 +120,8 @@
     // the whole area, in the part of the map a floating panel leaves free
     fit(animate) {
       const [x0, y0, x1, y1] = this.bounds, pad = 1.06;
-      const W = this.svg.clientWidth || 600, H = this.svg.clientHeight || 400, free = Math.max(W - this.cover(), W * 0.4);
+      this.measure();
+      const W = this.cw, H = this.ch, free = Math.max(W - this.cover(), W * 0.4);
       const wFree = Math.max((x1 - x0) * pad, (y1 - y0) * pad * free / H);
       const w = wFree * W / free;
       this.go({ x: (x0 + x1) / 2 + (W - free) / 2 * w / W, y: (y0 + y1) / 2, w }, animate);
@@ -125,7 +130,7 @@
     zoomTo(p, w, coverPx) {
       this.autoFit = false;
       if (coverPx === undefined) coverPx = this.cover();
-      const shift = coverPx / 2 * w / (this.svg.clientWidth || 600);
+      const shift = coverPx / 2 * w / this.cw;
       this.go({ x: p[0] + shift, y: p[1], w }, true);
     }
     go(target, animate) {

@@ -1,0 +1,98 @@
+{
+ "made": "2026-10-17",
+ "hours": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "compare_hours": [
+  7,
+  8
+ ],
+ "readings": [
+  "shortest",
+  "open",
+  "straight"
+ ],
+ "open_weight": 0.5,
+ "downtown_lonlat": [
+  -73.569,
+  45.5017
+ ],
+ "q_walk_here": 0.1887,
+ "walkers_to_work_here_per_day": 350.2,
+ "resident_walkers_per_day": 1856.2,
+ "trips": 16958,
+ "people": 3531.7,
+ "people_by_kind": {
+  "resident walks to the bus": 303.1,
+  "resident walks to the metro": 766.1,
+  "resident walks to work downtown": 1133.7,
+  "resident walks to work here": 262.1,
+  "worker walks from the bus": 338.0,
+  "worker walks from the metro": 728.7
+ },
+ "people_by_hour": {
+  "6": 439.3,
+  "7": 1141.1,
+  "8": 1518.9,
+  "9": 432.0
+ },
+ "median_route_m": {
+  "shortest": 584.0,
+  "open": 586.7,
+  "straight": 698.2
+ },
+ "rho_counts": {
+  "7": {
+   "shortest": 0.179,
+   "open": 0.179,
+   "straight": 0.071,
+   "junctions": 7
+  },
+  "8": {
+   "shortest": 0.214,
+   "open": 0.214,
+   "straight": 0.071,
+   "junctions": 7
+  }
+ },
+ "rho_s2": {
+  "ped_NACH_n": {
+   "segments": 231,
+   "without_value": 0,
+   "shortest": 0.238,
+   "open": 0.259,
+   "straight": 0.288
+  },
+  "ped_NACH_800": {
+   "segments": 231,
+   "without_value": 0,
+   "shortest": 0.183,
+   "open": 0.203,
+   "straight": 0.204
+  },
+  "ped_NAIN_n": {
+   "segments": 231,
+   "without_value": 0,
+   "shortest": 0.285,
+   "open": 0.29,
+   "straight": 0.302
+  }
+ },
+ "explained_share": {
+  "shortest": {
+   "7": 0.271,
+   "8": 0.225
+  },
+  "open": {
+   "7": 0.274,
+   "8": 0.229
+  },
+  "straight": {
+   "7": 0.27,
+   "8": 0.228
+  }
+ }
+}

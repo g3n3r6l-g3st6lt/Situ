@@ -1,0 +1,27 @@
+X1  Same input twice
+    identical: True   PASS
+
+X2  How far a sight line goes (S8 uses 300 m)
+    100 m: median area   11776 m2; viewpoints with a line open to the end 100%; order of the streets against 300 m: rho 0.951
+    200 m: median area   24286 m2; viewpoints with a line open to the end 99%; order of the streets against 300 m: rho 0.990
+    300 m: median area   32458 m2; viewpoints with a line open to the end 95%; order of the streets against 300 m: rho 1.000
+    500 m: median area   44121 m2; viewpoints with a line open to the end 83%; order of the streets against 300 m: rho 0.987
+    (a shorter reach cuts the long views along the straight streets first; the order says whether
+     the same streets stay the open ones)
+
+X3  How many sight lines (S8 uses 360)
+     90: median area   29663 m2; street means move by 7.0% (median), 30.4% (most); rho 0.999
+    180: median area   31406 m2; street means move by 2.2% (median), 9.7% (most); rho 1.000
+    360: median area   32458 m2; street means move by 0.0% (median), 0.0% (most); rho 1.000
+    720: median area   32700 m2; street means move by 0.9% (median), 4.0% (most); rho 1.000
+
+X4  Viewpoints every (S8 uses 10 m)
+     5 m: 3602 viewpoints; street means move by 0.4% (median), 13.6% (most); rho 1.000
+    10 m: 1798 viewpoints; street means move by 0.0% (median), 0.0% (most); rho 1.000
+    20 m:  908 viewpoints; street means move by 0.9% (median), 44.6% (most); rho 0.999
+
+X5  One OpenStreetMap building in ten left out (the map may miss some; three draws)
+    draw 1: 1522 outlines; median area   57834 m2; street means move by 21.2% (median), 666% (most); rho 0.896
+    draw 2: 1527 outlines; median area   36761 m2; street means move by 4.0% (median), 195% (most); rho 0.986
+    draw 3: 1514 outlines; median area   44420 m2; street means move by 5.3% (median), 305% (most); rho 0.975
+    (the order of the streets is what S9 can lean on; single values carry the gaps of the map)

@@ -1,0 +1,30 @@
+0. left out (not walkable): 2127 x highway (class 8), 73 x projected street (not built) (class 9)
+   added instead: 77 separated bike/walk paths the city files under those highways (bridges etc.)
+1. read  45812 city street lines, 869 off-street bike paths (8616 on-street bike lanes skipped), 3 checked park paths
+2. dropped 91 paths lying on top of a street (parallel duplicates); 781 kept
+   checked places (data/merge_corrections.csv): M01
+   S1 decision C06: dead end of 4017500 joined to the nearest street end, 40.5 m
+3. joined paths with 419 connectors; 212 city streets cut where a path joins
+4. dropped 53 added pieces that join nothing (islands), 6.91 km
+
+CHECKS
+C1 every walkable city street kept, same length (within 1 mm): PASS  [45812 of 45812 ids]
+C2 on-street bike lanes added: 0 (skipped 8616)  PASS
+C3 connectors in island: 384, longest 14.8 m, median 7.2 m (limit 15 m): PASS
+C3 connectors in griffintown: 29, longest 24.3 m, median 9.0 m (limit 25 m): PASS
+C3 connectors in checked place: 5, longest 23.1 m, median 18.5 m (limit 25 m): PASS
+C3 connectors in photo decision: 1, longest 40.5 m, median 40.5 m (limit 60 m): PASS
+C4 places where an added path crosses a street with no junction: 73 (not joined on purpose: could be a bridge or tunnel; joining them would invent connections)
+C6 parts cut off from the main network: 6 (58 lines). They stay in the file, but get values only within their own part:
+     - 48 lines near x=286238 y=5032600: Avenue Ash, Avenue Balsam, Avenue Birch, Avenue Cecil
+     - 3 lines near x=268501 y=5031485: Voie Privée
+     - 3 lines near x=280950 y=5034066: Avenue de la Gare
+     - 2 lines near x=268350 y=5031360: Voie Privée
+     - 1 lines near x=286091 y=5034240: Boulevard Montréal-Toronto
+     - 1 lines near x=284470 y=5034373: Voie Non-nommée
+C5 Griffintown matches S1 (10 ends joined, 2 dead ends kept, 3 OSM paths): PASS
+
+RESULT  47197 lines  (Sample 4: 45812)  = 46041 city street pieces + 740 path pieces (160.9 km) + 416 connectors
+
+wrote /sessions/rcw-01atekzwfaddsn2wwvkc9cuk/mnt/Prototype/QGIS/Sample4-200926/Layers/ped_network_merged.gpkg
+wrote /sessions/rcw-01atekzwfaddsn2wwvkc9cuk/mnt/Prototype/Situ/outputs/network_merge/merge_connectors.csv
