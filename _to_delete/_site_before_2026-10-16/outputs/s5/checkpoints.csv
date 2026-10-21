@@ -1,3 +1,0 @@
-checkpoint,place,name,hours,question,x,y
-H01,P0230,Henden,Th-Sa 19:00+,"The place opens with no closing time given, so it stays unknown after opening.",299451.31,5038703.35
-H02,P0357,SHAY Restaurant,"Mo-Th 17:00-23:00; Fr 17:00-00:00; Sa 18:00-00:00; Su 18:00-23:00; Sa-Su 10:00-15:00 ""Brunch""","A later rule replaces an earlier one on the same day, as the tag's grammar says. The text may mean both.",299656.31,5039052.88

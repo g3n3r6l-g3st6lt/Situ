@@ -29,7 +29,11 @@
 (function () {
   const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes;
   const host = document.getElementById("situ-lab");
-  if (!host || !S1 || !window.SituMap) return;
+  if (!host) return;
+  if (!S1 || !window.SituMap) {                 // the streets or the map code did not load: say so, never a blank page
+    host.innerHTML = `<p class="lab-loading lab-failed" role="alert">The Lab could not load ${!S1 ? "the streets (outputs/s1/web_data.js)" : "the map code (assets/situ-map.js)"}. Reload the page; if this stays, the file is missing from the site.</p>`;
+    return;
+  }
 
   // ================================================================ 1 data and indexes
   const seg = {}, jun = {};
@@ -141,7 +145,13 @@
     `<button type="button" role="tab" data-tab="${t.id}"${t.ok ? "" : " disabled"}><span>${t.id.toUpperCase()}</span>${t.name}</button>`).join("")}</div>
   <div class="lab-main">
     <div class="lab-map"></div>
-    <aside class="sx-panel lab-panel" hidden></aside>
+    <form class="lab-find" role="search" autocomplete="off">
+      <label for="lab-find-in">Find a street</label>
+      <input id="lab-find-in" type="search" list="lab-find-list" placeholder="a street, or an id like S101">
+      <datalist id="lab-find-list">${[...new Set(S1.segments.map(s => s.street).filter(Boolean))].sort((a, b) => a.localeCompare(b, "fr")).map(n => `<option value="${esc(n)}"></option>`).join("")}</datalist>
+      <span class="lab-find-out" role="status"></span>
+    </form>
+    <aside class="sx-panel lab-panel" hidden aria-live="polite" aria-label="Details of what is selected"></aside>
     <div class="lab-key"></div>
   </div>
   <div class="lab-side"></div>`;
@@ -1188,7 +1198,7 @@
     const html = panelHTML();
     side.innerHTML = html;
     side.hidden = !html;
-    host.querySelectorAll(".lab-tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === state.tab));
+    host.querySelectorAll(".lab-tabs button").forEach(b => { b.classList.toggle("on", b.dataset.tab === state.tab); b.setAttribute("aria-selected", b.dataset.tab === state.tab ? "true" : "false"); });
     if (!keepSide) info.innerHTML = sideHTML();
     paint();
     draw();
@@ -1235,6 +1245,28 @@
     }
     if (narrow() && pick.kind !== "junction") side.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
+
+  // find a street by name, or a segment or junction by its id, without the pointer (added 2026-10-21)
+  function find(q) {
+    q = (q || "").trim();
+    if (!q) return "";
+    const id = q.toUpperCase();
+    if (seg[id]) { select({ kind: "segment", id }); return `${seg[id].street || "a path"}, ${id}`; }
+    if (jun[id]) { select({ kind: "junction", id }); return `junction ${id}`; }
+    const low = q.toLowerCase();
+    let list = S1.segments.filter(x => x.street && x.street.toLowerCase() === low);
+    if (!list.length) list = S1.segments.filter(x => x.street && x.street.toLowerCase().includes(low));
+    if (!list.length) return `no street or id matches "${q}"`;
+    const name = list[0].street, all = list.filter(x => x.street === name), pts = all.flatMap(x => x.pts);
+    const c = [pts.reduce((a, p) => a + p[0], 0) / pts.length, pts.reduce((a, p) => a + p[1], 0) / pts.length];
+    const d = x => { const m = centreOf({ kind: "segment", id: x.id }); return Math.hypot(m[0] - c[0], m[1] - c[1]); };
+    const best = all.reduce((a, b) => d(b) < d(a) ? b : a);         // the piece nearest the middle of the street
+    select({ kind: "segment", id: best.id });
+    return `${name}: ${all.length} segment${all.length > 1 ? "s" : ""}, showing ${best.id}`;
+  }
+  const findForm = $(".lab-find"), findIn = $("#lab-find-in"), findOut = $(".lab-find-out");
+  findForm.addEventListener("submit", e => { e.preventDefault(); findOut.textContent = find(findIn.value); });
+  findIn.addEventListener("change", () => { findOut.textContent = find(findIn.value); });
 
   function setTab(t) {
     if (!TABS.find(x => x.id === t && x.ok)) return;

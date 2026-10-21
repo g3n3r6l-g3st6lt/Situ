@@ -38,9 +38,14 @@
       this.tipEl = document.createElement("div");
       this.tipEl.className = "situ-map-tip";
       host.appendChild(this.tipEl);
+      this.crossEl = document.createElement("div");      // the centre cross: what Enter picks when the map has the keyboard
+      this.crossEl.className = "situ-map-cross";
+      this.crossEl.setAttribute("aria-hidden", "true");
+      host.appendChild(this.crossEl);
       this.controls();
       this.fit(false);           // a first view; the explorer fits again once its panel exists
       this.events();
+      this.keys();
       this.autoFit = true;                       // until someone zooms or drags, a resize refits the whole area
       new ResizeObserver(() => { this.dirty = true; this.autoFit ? this.fit(false) : this.apply(); }).observe(host);
     }
@@ -165,6 +170,7 @@
       const h = this.viewH();
       const [cx, cy] = this.P([this.view.x, this.view.y]);
       this.svg.setAttribute("viewBox", [cx - this.view.w / 2, cy - h / 2, this.view.w, h].join(" "));
+      if (this.crossEl) this.crossEl.style.left = Math.round((this.cw - this.cover()) / 2) + "px";
       if (later) { this.redrawSoon(later === true ? 140 : later); return; }
       this.redraw();
     }
@@ -265,6 +271,37 @@
       };
       window.addEventListener("pointerup", end);
       window.addEventListener("pointercancel", end);
+    }
+    // the keyboard: the map can take the focus (Tab); arrows move it, + and - zoom, 0 shows the whole area,
+    // Enter or Space hands the point under the centre cross to the explorer (onEnter). Added 2026-10-21: before,
+    // the map could only be used with a pointer.
+    centre() { if (!this.cw) this.measure(); return this.toWorld((this.cw - this.cover()) / 2, this.ch / 2); }
+    // a click at the centre cross, as if the pointer were there: every click rule of the explorer applies unchanged
+    clickCentre() {
+      const r = this.svg.getBoundingClientRect(), x = r.left + (this.cw - this.cover()) / 2, y = r.top + this.ch / 2;
+      this.moved = false;
+      const t = document.elementFromPoint(x, y);
+      (t && this.svg.contains(t) ? t : this.svg).dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true, clientX: x, clientY: y, view: window }));
+    }
+    keys() {
+      this.onEnter = null;
+      const s = this.svg;
+      s.setAttribute("tabindex", "0");
+      s.setAttribute("role", "application");
+      s.setAttribute("aria-roledescription", "map");
+      s.setAttribute("aria-label", "Map of Griffintown. Arrow keys move the map, plus and minus zoom, 0 shows the whole area, Enter clicks under the centre cross.");
+      s.addEventListener("keydown", e => {
+        if (e.altKey || e.ctrlKey || e.metaKey) return;
+        const dx = 0.15 * this.view.w, dy = 0.15 * this.viewH();
+        const pan = { ArrowLeft: [-dx, 0], ArrowRight: [dx, 0], ArrowUp: [0, dy], ArrowDown: [0, -dy] }[e.key];
+        if (pan) { this.autoFit = false; this.view.x += pan[0]; this.view.y += pan[1]; this.apply(150); }
+        else if (e.key === "+" || e.key === "=") this.zoomBy(0.6);
+        else if (e.key === "-" || e.key === "_") this.zoomBy(1 / 0.6);
+        else if (e.key === "0" || e.key === "Home") { this.autoFit = true; this.fit(true); }
+        else if (e.key === "Enter" || e.key === " ") (this.onEnter || (() => this.clickCentre()))(this.centre());
+        else return;
+        e.preventDefault();
+      });
     }
     // click handlers call this first: a drag is never a click
     wasDrag() { return this.moved; }

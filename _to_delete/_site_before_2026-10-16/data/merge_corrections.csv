@@ -1,2 +1,0 @@
-id,place,lat,lon,radius_m,decision,evidence,evidence_date,status
-M01,Bike path meets Boulevard de l'Île-des-Soeurs (north end of the island),45.468212,-73.546418,50,"Join: the path crosses the boulevard at a painted crossing. The gap in the data is 15.2 m, just over the 15 m island rule.","Mapillary photo by Sacha862 (M01_mapillary_2024-12-02.jpg); Mapillary coverage map",2024-12,confirmed

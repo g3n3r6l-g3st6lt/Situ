@@ -1,7 +1,0 @@
-Mapillary file: mapillary_signs_2026-10-10.json (235 stop sign detections)
-city stop posts: 139; with a Mapillary stop within 15 m: 99
-  within 20 deg of facing the drivers: 48
-  within 45 deg: 69
-  within 90 deg: 76
-  pointing the way drivers travel (within 45 deg of it): 1
-  median difference: 21 deg
