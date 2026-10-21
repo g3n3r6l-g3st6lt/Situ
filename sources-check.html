@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a82541dfa2575562b76294c4a998c207.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -583,7 +583,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="planx-how-far-is-a-radius">PlanX: how far is a radius?</h2>
 <p>PlanX is the QGIS tool that gives each street segment its space syntax values (<a href="./space-syntax.html">what these are</a>). Two of them are choice, roughly how often a street lies on the way between other places, and integration, roughly how easy it is to reach. Each is measured within a radius. <a href="https://geophilo.com/planx/#spacesyntax">Its manual</a> (version 4.18, September 2026) calls the radius “metric radii in map units”. It does not say whether 800 m runs along the streets or in a straight line, and those give two very different neighbourhoods.</p>
 <p>PlanX reports how many other segments each one found within the radius. For twelve Griffintown segments I counted again in two ways. The first count was the segments I can walk to within the radius. The second was those whose middle lies inside a circle of that radius. At 800 m, PlanX’s counts came to 0.89 of the walking counts and 0.57 of the circle counts. At 400 m they came to 0.92 and 0.53.</p>
-<p>So the radius is measured along the streets (certain), and S2 reads it that way. PlanX’s counts sit a little under mine. Most likely it measures metres along the path with the fewest turns, which is a bit longer than the shortest (likely). I could not reproduce the counts exactly, so that detail stays open.</p>
+<p>So the radius is measured along the streets (verified), and S2 reads it that way. PlanX’s counts sit a little under mine. Most likely it measures metres along the path with the fewest turns, which is a bit longer than the shortest (assumption). I could not reproduce the counts exactly, so that detail stays open.</p>
 <p>The manual also says the network has no direction. So the vehicle values describe the street layout without its one-way rules. I checked PlanX’s normalised forms of choice and integration against the published papers in <a href="./readings-check.html#which-nain">Reading closely</a>. These forms, NACH and NAIN, can be compared between networks of different sizes. NACH matches Hillier, Yang and Turner (2012, p.&nbsp;191) exactly. PlanX also counts each pair of segments once, the same definition as Turner (2007, p.&nbsp;544) (<a href="./readings-check.html#does-planx-count-a-journey-once-or-once-each-way">how I found out</a>). For NAIN the paper gives two other forms. They put the streets in the same order, and the numbers compare only within one form.</p>
 </section>
 <section id="mapillary-which-way-does-a-sign-face" class="level2">
@@ -603,7 +603,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Of 139 city stop posts, 99 had a Mapillary stop sign within 15 m. For 69 of those, the angle was within 45° of facing the drivers. Only one pointed the way they travel. The typical (median) difference was 21°.</p>
-<p>So the angle is the way the sign faces (likely). A smaller group sits near 90° off, and the cause is simple (likely). At an all-way stop, four stop signs stand within a few metres, and the nearest one can face the cross street. The main peak sits about 15° off zero, and I do not know why yet. Fifteen degrees never confuses two streets meeting at a junction, so it does not change how I use the angle. Still, a machine reading is evidence to check. Where a sign’s placement was in doubt, S3 uses Mapillary’s facing and then the photo itself (<a href="./s3-checks.html">S3 checks with photos</a>).</p>
+<p>So the angle is the way the sign faces (partial). A smaller group sits near 90° off, and the cause is simple (partial). At an all-way stop, four stop signs stand within a few metres, and the nearest one can face the cross street. The main peak sits about 15° off zero, and I do not know why yet. Fifteen degrees never confuses two streets meeting at a junction, so it does not change how I use the angle. Still, a machine reading is evidence to check. Where a sign’s placement was in doubt, S3 uses Mapillary’s facing and then the photo itself (<a href="./s3-checks.html">S3 checks with photos</a>).</p>
 
 
 </section>

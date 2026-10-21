@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a82541dfa2575562b76294c4a998c207.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -515,6 +515,10 @@ ul.task-list li input[type="checkbox"] {
 <p class="big-number">
 9 counted days at 7 junctions · no weekend
 </p>
+<div class="number-note">
+<p><strong>Counts:</strong> the days on which the city counted people and vehicles at S1 junctions, between 8 February 2024 and 12 May 2026, in its intersection counts file.</p>
+<p><strong>Does not show:</strong> an ordinary week. Six of the seven junctions were counted on a single day.</p>
+</div>
 <p>The city counted seven S1 junctions on nine days, all from Tuesday to Thursday. Only J040, where Guy meets Ottawa and William, was counted around the clock, for three days in December 2024. The other six were counted on one day each, in three windows covering both rush hours and midday.</p>
 <p>Junctions differ in size: J051 on Notre-Dame sees about four times the people of J006 on Ann. So S5 compares shapes. Each day is divided by its own average over the six hours every day counted (7h, 8h, 11h, 12h, 16h and 17h), which makes 1.0 an ordinary daytime hour of that day. A weekday hour then takes the mean of the days that counted it, with their lowest and highest. <a href="./s5-build.html">How S5 is built</a> gives the rules.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -523,7 +527,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>A weekday, hour by hour. White: the mean of the counted days. Grey band: lowest to highest. Pink: hours counted at J040 alone.</figcaption>
 </figure>
 </div>
-<p>Every weekday hour has a value, but 17 of the 24 rest on J040’s three December days alone (certain). From 18:00 to 6:00, the shape is one junction in winter.</p>
+<p>Every weekday hour has a value, but 17 of the 24 rest on J040’s three December days alone (verified). From 18:00 to 6:00, the shape is one junction in winter.</p>
 <p>My first reading, and it is an interpretation: people on foot have a sharper evening than morning, peaking at 17h at about one and a half times an ordinary hour, against just over one at 8h. Bicycles peak at 8h and 17h, while cars spread their busy hours from 16h to 19h. On Wellington, where four junctions were counted on one Thursday in February, Murray and Young carried the most vehicles at 8h, and Ann and Shannon at 17h. Only one day stands behind that difference, so it stays a question for the field.</p>
 </section>
 <section id="bicycles-every-day-of-the-year" class="level2">
@@ -531,6 +535,10 @@ ul.task-list li input[type="checkbox"] {
 <p class="big-number">
 376 days from 3 detectors · 59 Saturdays and 57 Sundays
 </p>
+<div class="number-note">
+<p><strong>Counts:</strong> the days on which all three bicycle detectors in the area recorded every hour, between 9 June 2025 and 14 October 2026, from the city’s permanent bicycle counters.</p>
+<p><strong>Does not show:</strong> walking or driving. Two of the detectors stand at one place, Peel at Ottawa, one per direction.</p>
+</div>
 <p>The city also keeps permanent bicycle detectors that record every hour of every day. Three stand inside the study area: two on Peel at Ottawa, one per direction, and one on William at Nazareth, westbound. All three were complete on 376 days between 9 June 2025 and 14 October 2026, so for bicycles S5 can speak about weekends and seasons. Each day is read like the counts, against its own reference hours.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -538,15 +546,19 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Bicycles all year. Above: the shape of the day, by kind of day and season. Below: bicycles on an average day, month by month.</figcaption>
 </figure>
 </div>
-<p>The year swings hard (certain, for these three detectors). An average day in August or September brings about 1,800 to 1,900 bicycles past them. From December to February it brings 130 to 180, roughly ten times fewer. The week matters less: in summer a Saturday brings nine tenths of a weekday’s bicycles, and a Sunday about three quarters.</p>
+<p>The year swings hard (verified, for these three detectors). An average day in August or September brings about 1,800 to 1,900 bicycles past them. From December to February it brings 130 to 180, roughly ten times fewer. The week matters less: in summer a Saturday brings nine tenths of a weekday’s bicycles, and a Sunday about three quarters.</p>
 <p>The kind of day changes the shape more than the amount. Weekdays, in every season, peak sharply at 8h and 17h. Saturdays and Sundays have no morning peak: bicycles build to a long afternoon, highest from 13h to 17h. My reading, and it is an interpretation: on weekdays these streets carry a commute, and on weekends an outing.</p>
-<p>The two sources agree where they meet. On weekdays the counts’ bicycle shape follows the detectors’ closely, with a correlation of 0.89 over the 24 hours, where 1 would mean the two move in perfect step (likely a real agreement, since the streets and the years differ). The largest gap is at 19h in winter, where the counts rest on J040 alone. Two more detectors stand on Peel at Notre-Dame, just outside the area, and S5 leaves them out.</p>
+<p>The two sources agree where they meet. On weekdays the counts’ bicycle shape follows the detectors’ closely, with a correlation of 0.89 over the 24 hours, where 1 would mean the two move in perfect step (partial: the agreement is probably real, since the streets and the years differ). The largest gap is at 19h in winter, where the counts rest on J040 alone. Two more detectors stand on Peel at Notre-Dame, just outside the area, and S5 leaves them out.</p>
 </section>
 <section id="what-the-places-promise" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-places-promise">What the places promise</h2>
 <p class="big-number">
 83 of 558 places give their hours
 </p>
+<div class="number-note">
+<p><strong>Counts:</strong> the places S4 found that publish opening hours: 79 through OpenStreetMap and 4 through the city’s list of public places.</p>
+<p><strong>Does not show:</strong> whether a place keeps its hours. The other 475 stay unknown at every hour.</p>
+</div>
 <p>Of the 558 places S4 found, 83 give opening hours (15 %), almost all through OpenStreetMap. Restaurants and cafés lead, then mostly shops, bars, banks and parks. The other 475 stay unknown at every hour: S5 never reads a missing hour as closed.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -558,7 +570,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-ring-around-the-area" class="level2">
 <h2 class="anchored" data-anchor-id="the-ring-around-the-area">The ring around the area</h2>
-<p>Between November 2024 and May 2026 the city counted 23 more intersections outside the study area, within 600 m of its edge (certain). S5 keeps them as a ring, read exactly like the counts inside. They build nothing: they let <a href="./s9-observer.html">S9</a> compare what it imagines with what was counted just beyond the area.</p>
+<p>Between November 2024 and May 2026 the city counted 23 more intersections outside the study area, within 600 m of its edge (verified). S5 keeps them as a ring, read exactly like the counts inside. They build nothing: they let <a href="./s9-observer.html">S9</a> compare what it imagines with what was counted just beyond the area.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s5/s5_sheet_ring.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The ring: weekday pedestrians at 8 h at the intersections counted around the area (squares) and at the S1 junctions inside it (circles)."><img src="outputs/s5/s5_sheet_ring.png" class="img-fluid figure-img" alt="The ring: weekday pedestrians at 8 h at the intersections counted around the area (squares) and at the S1 junctions inside it (circles)."></a></p>

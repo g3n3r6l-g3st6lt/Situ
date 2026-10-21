@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a82541dfa2575562b76294c4a998c207.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -512,13 +512,17 @@ ul.task-list li input[type="checkbox"] {
 <p class="big-number">
 1,798 viewpoints · median area seen 32,000 m², the middle 80 % between 9,500 and 109,000 m²
 </p>
+<div class="number-note">
+<p><strong>Counts:</strong> viewpoints every 10 m along the walkable S1 streets, and the area each one sees within 300 m along 360 sight lines. The walls come from OpenStreetMap’s building outlines, saved on 14 October 2026.</p>
+<p><strong>Does not show:</strong> what a walker notices. Trees, fences, parked trucks and the rail structures stop no sight line here, and a building missing from the map opens a view that is not there.</p>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s8/s8_sheet_area.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Walkable streets in the area, coloured by mean area seen: dark is most enclosed, light pink most open. Grey streets are not walkable or lie outside the area."><img src="outputs/s8/s8_sheet_area.png" class="img-fluid figure-img" alt="Walkable streets in the area, coloured by mean area seen: dark is most enclosed, light pink most open. Grey streets are not walkable or lie outside the area."></a></p>
 <figcaption>Walkable streets in the area, coloured by mean area seen: dark is most enclosed, light pink most open. Grey streets are not walkable or lie outside the area.</figcaption>
 </figure>
 </div>
-<p>The views split the neighbourhood in two (certain, for the map S8 reads). The small streets of the old grid (Eleanor, du Shannon, Barré, Murray and Young) see 5,000 to 13,000 m² from a typical viewpoint. The canal edge sees 90,000 to 115,000 m², and so do Rue Smith and Boulevard Robert-Bourassa. Rue Wellington and Rue Ann sit in between at about 50,000 m², with Rue des Bassins.</p>
+<p>The views split the neighbourhood in two (verified, for the map S8 reads). The small streets of the old grid (Eleanor, du Shannon, Barré, Murray and Young) see 5,000 to 13,000 m² from a typical viewpoint. The canal edge sees 90,000 to 115,000 m², and so do Rue Smith and Boulevard Robert-Bourassa. Rue Wellington and Rue Ann sit in between at about 50,000 m², with Rue des Bassins.</p>
 <p>Almost every view is a corridor. From 95 % of viewpoints, at least one sight line runs the full 300 m along the street. The median compactness is 0.10, where a circle scores 1. The canal path is the most rounded, at about 0.2, because the water opens the view sideways.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -531,8 +535,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-it-rests-on" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-rests-on">What it rests on</h2>
-<p>Only OpenStreetMap’s building outlines stop a sight line. Trees, fences, parked trucks and the rail and expressway structures at the south-east corner are not in that file. They stop nothing, so views there are wider than a person would see (likely). I left trees out on purpose: the city records their trunks, and nothing open says how wide their crowns are today. The view is flat, at eye level: a low wall blocks a sight line just as a tower does.</p>
-<p>A building missing from OpenStreetMap opens a view that does not exist. The <a href="./s8-build.html#tests">stress test</a> left out one outline in ten at random. The median area seen grew by 13 to 78 %, and in each draw one street saw three to nearly eight times as much. The order of the streets held better (rank correlation 0.90 to 0.99, where 1 means the same order). So I trust how streets rank more than any single area (likely).</p>
+<p>Only OpenStreetMap’s building outlines stop a sight line. Trees, fences, parked trucks and the rail and expressway structures at the south-east corner are not in that file. They stop nothing, so views there are wider than a person would see (partial). I left trees out on purpose: the city records their trunks, and nothing open says how wide their crowns are today. The view is flat, at eye level: a low wall blocks a sight line just as a tower does.</p>
+<p>A building missing from OpenStreetMap opens a view that does not exist. The <a href="./s8-build.html#tests">stress test</a> left out one outline in ten at random. The median area seen grew by 13 to 78 %, and in each draw one street saw three to nearly eight times as much. The order of the streets held better (rank correlation 0.90 to 0.99, where 1 means the same order). So I trust how streets rank more than any single area (partial).</p>
 <p>The 300 m reach is my choice. At 100 m or 500 m the areas change a lot, but the order of the streets stays close (0.95 and 0.99).</p>
 </section>
 <section id="checkpoints" class="level2">

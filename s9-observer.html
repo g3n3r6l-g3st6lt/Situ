@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a82541dfa2575562b76294c4a998c207.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -560,14 +560,18 @@ ul.task-list li input[type="checkbox"] {
 <p class="big-number">
 commuters make up about a quarter of the pedestrians counted at 7 and 8 h · the busiest counted junction gets none of them
 </p>
+<div class="number-note">
+<p><strong>Counts:</strong> S9’s imagined commuters at the seven junctions the city counted, as a share of the pedestrians counted there at 7 and 8 h. The commuters come from S7, routed on S1 under three rival rules.</p>
+<p><strong>Does not show:</strong> that the routes are right. They rest on the <a href="./s9-build.html#ledger">assumptions in the ledger</a>, and six of the seven junctions were counted on one day.</p>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s9/s9_sheet_morning.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The morning’s commuters on each street in the reading “shortest”. Pink circles are the junctions the city counted, sized by pedestrians at 8 h."><img src="outputs/s9/s9_sheet_morning.png" class="img-fluid figure-img" alt="The morning’s commuters on each street in the reading “shortest”. Pink circles are the junctions the city counted, sized by pedestrians at 8 h."></a></p>
 <figcaption>The morning’s commuters on each street in the reading “shortest”. Pink circles are the junctions the city counted, sized by pedestrians at 8 h.</figcaption>
 </figure>
 </div>
-<p>At the seven counted junctions, S9’s commuters make up 22 to 27 % of the pedestrians counted, whichever reading routes them (certain, for these rules). The rest are people this slice does not hold: errands, school runs, dog walks, visitors and people crossing from beyond the area. The counts give the size of that gap, and later slices will try to fill it.</p>
-<p>The busiest counted junction, Robert-Bourassa at Saint-Jacques, saw 868 pedestrians at 8 h. No S9 commuter passes there, in any reading or stress test. It lies just north of the area, beyond the doors S9’s walkers take towards downtown and the metro. Its walkers come from outside this slice, probably from Old Montréal or from beyond the area to the east (guessing). It is the clearest question this slice raises, and it is listed as a checkpoint.</p>
+<p>At the seven counted junctions, S9’s commuters make up 22 to 27 % of the pedestrians counted, whichever reading routes them (verified, for these rules). The rest are people this slice does not hold: errands, school runs, dog walks, visitors and people crossing from beyond the area. The counts give the size of that gap, and later slices will try to fill it.</p>
+<p>The busiest counted junction, Robert-Bourassa at Saint-Jacques, saw 868 pedestrians at 8 h. No S9 commuter passes there, in any reading or stress test. It lies just north of the area, beyond the doors S9’s walkers take towards downtown and the metro. Its walkers come from outside this slice, probably from Old Montréal or from beyond the area to the east (assumption). It is the clearest question this slice raises, and it is listed as a checkpoint.</p>
 <p>Where commuters do pass, they explain more: half to three quarters of the count at Guy and Ottawa (the one junction counted on three days), and a third to a half at de la Montagne and Notre-Dame, on the road to Lucien-L’Allier and Bonaventure.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -575,7 +579,7 @@ commuters make up about a quarter of the pedestrians counted at 7 and 8 h · the
 <figcaption>What the commuters explain at each counted junction at 8 h, in each reading.</figcaption>
 </figure>
 </div>
-<p>The four Wellington junctions were counted on the same February morning. Their counts are even, from 221 to 303 pedestrians at 8 h. The shortest routes crowd the commuters onto Rue Young (164) and leave Rue du Shannon almost empty (18), a ninefold spread. The fewest-turns routes spread them out to a threefold one. Four junctions on one day settle nothing, so I read this as a lead: walkers here may use the parallel streets more evenly than the shortest walk predicts (likely, as a lead).</p>
+<p>The four Wellington junctions were counted on the same February morning. Their counts are even, from 221 to 303 pedestrians at 8 h. The shortest routes crowd the commuters onto Rue Young (164) and leave Rue du Shannon almost empty (18), a ninefold spread. The fewest-turns routes spread them out to a threefold one. Four junctions on one day settle nothing, so I read this as a lead: walkers here may use the parallel streets more evenly than the shortest walk predicts (assumption, a lead).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s9/s9_sheet_readings.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Where the readings move walkers off the shortest routes: pink where more walk, grey where fewer."><img src="outputs/s9/s9_sheet_readings.png" class="img-fluid figure-img" alt="Where the readings move walkers off the shortest routes: pink where more walk, grey where fewer."></a></p>
@@ -583,7 +587,7 @@ commuters make up about a quarter of the pedestrians counted at 7 and 8 h · the
 </figure>
 </div>
 <p>“Open” changes the route of 13 % of walkers, mostly from Rue Young to the more open Rue Peel, and adds three metres to the median walk. “Straight” changes 34 % and sends some on long detours: 15 % walk more than a quarter further than needed. In a grid this tight, the view matters little to a commuter’s route, and counting turns alone sends walkers further than people would plausibly accept.</p>
-<p>Walking choice, in space syntax, is how often a street lies on the way between other places. The morning’s flows agree with it only weakly: rank correlation 0.24 for the shortest routes and 0.29 for the fewest turns, where 1 means the same order (certain, as computed). Choice counts every route between every pair of streets. The morning sends everyone to a few doors and stations, so flows bunch on Peel and de la Montagne where choice is spread out.</p>
+<p>Walking choice, in space syntax, is how often a street lies on the way between other places. The morning’s flows agree with it only weakly: rank correlation 0.24 for the shortest routes and 0.29 for the fewest turns, where 1 means the same order (verified, as computed). Choice counts every route between every pair of streets. The morning sends everyone to a few doors and stations, so flows bunch on Peel and de la Montagne where choice is spread out.</p>
 <p>My reading, and it is an interpretation: in the morning, Griffintown’s streets carry commuters mostly as a way out, towards the stations and downtown. Most of the pedestrians counted are doing something else.</p>
 </section>
 <section id="beyond-the-doors-the-ring" class="level2">
@@ -631,7 +635,7 @@ commuters make up about a quarter of the pedestrians counted at 7 and 8 h · the
 <figcaption>Beyond the doors: the commuters’ straight legs at 8 h against the ring of counts (commuters / counted).</figcaption>
 </figure>
 </div>
-<p>The clearest sign is on the east edge. Just past the area towards the Cité du Multimédia, de la Commune at Mill and Brennan at Prince each counted about 120 pedestrians at 8 h on two weekdays in May 2026. S9 sends nobody that way. With the empty Robert-Bourassa junction, this points to movement between Griffintown and the east that this slice does not hold (likely, as a lead). Across the canal, the counts are small and S9 is empty too. The canal may act as an edge in the morning (guessing).</p>
+<p>The clearest sign is on the east edge. Just past the area towards the Cité du Multimédia, de la Commune at Mill and Brennan at Prince each counted about 120 pedestrians at 8 h on two weekdays in May 2026. S9 sends nobody that way. With the empty Robert-Bourassa junction, this points to movement between Griffintown and the east that this slice does not hold (assumption, a lead). Across the canal, the counts are small and S9 is empty too. The canal may act as an edge in the morning (assumption).</p>
 </section>
 <section id="what-it-rests-on" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-rests-on">What it rests on</h2>

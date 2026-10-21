@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a82541dfa2575562b76294c4a998c207.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -512,14 +512,18 @@ ul.task-list li input[type="checkbox"] {
 <p class="big-number">
 about 7,200 residents commute, a quarter on foot · 71 % of homes are more than 800 m from a metro entrance
 </p>
+<div class="number-note">
+<p><strong>Counts:</strong> an estimate of the residents who leave the area’s homes for work on a weekday, and the share of homes more than 800 m from a metro entrance along S1’s streets. It comes from the 2021 census for four tracts, scaled to S4’s 11,954 homes with a correction for working from home, and from the STM schedule of October 2026.</p>
+<p><strong>Does not show:</strong> where anyone goes. The shares by mode come from May 2021 and may give the car too much today (assumption).</p>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s7/s7_sheet_homes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Every building with homes, sized by its residents who commute on a weekday today. The white dot inside shows those who walk all the way to work. Grey squares are bus stops."><img src="outputs/s7/s7_sheet_homes.png" class="img-fluid figure-img" alt="Every building with homes, sized by its residents who commute on a weekday today. The white dot inside shows those who walk all the way to work. Grey squares are bus stops."></a></p>
 <figcaption>Every building with homes, sized by its residents who commute on a weekday today. The white dot inside shows those who walk all the way to work. Grey squares are bus stops.</figcaption>
 </figure>
 </div>
-<p>The 11,954 homes in <a href="./s4-buildings.html">S4</a> send about 7,200 residents out to work on a weekday. About a quarter walk all the way and close to half drive, while a fifth take the metro or a bus (likely, for the reasons under <a href="#what-it-rests-on">What it rests on</a>). Most leave between 7 and 9 in the morning.</p>
-<p>No metro entrance stands inside the area. Half of the homes are more than 940 m from the nearest one along the streets, and 71 % are more than 800 m away. Yet no home is more than about 400 m from a bus stop (certain, for the streets of S1). Bonaventure is the nearest metro for half of the homes and Lucien-L’Allier for a third. Georges-Vanier is nearest for the rest.</p>
+<p>The 11,954 homes in <a href="./s4-buildings.html">S4</a> send about 7,200 residents out to work on a weekday. About a quarter walk all the way and close to half drive, while a fifth take the metro or a bus (partial, for the reasons under <a href="#what-it-rests-on">What it rests on</a>). Most leave between 7 and 9 in the morning.</p>
+<p>No metro entrance stands inside the area. Half of the homes are more than 940 m from the nearest one along the streets, and 71 % are more than 800 m away. Yet no home is more than about 400 m from a bus stop (verified, for the streets of S1). Bonaventure is the nearest metro for half of the homes and Lucien-L’Allier for a third. Georges-Vanier is nearest for the rest.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s7/s7_sheet_hours.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="When commuters leave and arrive, in the census’s own hour bands. Above: residents leaving for work. Below: people arriving to work here. Both by mode."><img src="outputs/s7/s7_sheet_hours.png" class="img-fluid figure-img" alt="When commuters leave and arrive, in the census’s own hour bands. Above: residents leaving for work. Below: people arriving to work here. Both by mode."></a></p>
@@ -531,8 +535,8 @@ about 7,200 residents commute, a quarter on foot · 71 % of homes are more than 
 </section>
 <section id="what-it-rests-on" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-rests-on">What it rests on</h2>
-<p>The census of May 2021 is the only open source that says, tract by tract, how people travel to work and at what hour they leave or arrive (certain). Its week fell during the pandemic, and 42 to 56 % of the employed residents of the three tracts worked from home. Across Canada, working from home fell from 24 % in that week to 17 % in May 2025. S7 applies that fall to each tract once, so a tract where 55 % worked from home now counts about 39 %. That is its one correction, and every number of commuters moves with it; the <a href="./s7-build.html#tests">stress test</a> shows by how much. The shares by mode and by hour stay the census’s own.</p>
-<p>In 2021 people probably avoided transit, so the shares by mode probably give the car too much today (likely). The 2026 census should replace all of this, but its commuting results will likely come out after this prototype ends.</p>
+<p>The census of May 2021 is the only open source that says, tract by tract, how people travel to work and at what hour they leave or arrive (verified). Its week fell during the pandemic, and 42 to 56 % of the employed residents of the three tracts worked from home. Across Canada, working from home fell from 24 % in that week to 17 % in May 2025. S7 applies that fall to each tract once, so a tract where 55 % worked from home now counts about 39 %. That is its one correction, and every number of commuters moves with it; the <a href="./s7-build.html#tests">stress test</a> shows by how much. The shares by mode and by hour stay the census’s own.</p>
+<p>In 2021 people probably avoided transit, so the shares by mode probably give the car too much today (assumption). The 2026 census should replace all of this, but its commuting results will likely come out after this prototype ends.</p>
 <p>The number of homes is today’s, from the tax roll in S4, so the towers built since 2021 are counted.</p>
 </section>
 <section id="checkpoints" class="level2">

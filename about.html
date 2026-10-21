@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a82541dfa2575562b76294c4a998c207.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -507,7 +507,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="archiving" class="level3">
 <h3 class="anchored" data-anchor-id="archiving">Archiving</h3>
-<p>An archive keeps two things (Schellenberg 1956, pp.&nbsp;139 to 140). One is the evidence records give of how their maker worked. The other is the information they hold about people and places. Situ keeps both. The city data says what Griffintown is. My decision files and tests record how I turned it into a model. The London Charter, a set of principles for visualising cultural heritage by computer, calls this layer paradata (2009, principle 4.6). The Seville principles ask that a reconstruction show what is real and what is not (López-Menchero &amp; Grande, principle 4), and that others can test it (principle 7). So every decision in my files carries a status, such as confirmed, assumed, likely or open.</p>
+<p>An archive keeps two things (Schellenberg 1956, pp.&nbsp;139 to 140). One is the evidence records give of how their maker worked. The other is the information they hold about people and places. Situ keeps both. The city data says what Griffintown is. My decision files and tests record how I turned it into a model. The London Charter, a set of principles for visualising cultural heritage by computer, calls this layer paradata (2009, principle 4.6). The Seville principles ask that a reconstruction show what is real and what is not (López-Menchero &amp; Grande, principle 4), and that others can test it (principle 7). So every decision in my files carries a status, such as confirmed or assumed, and every claim on these pages carries one of <a href="#status">four words</a>.</p>
 <p>Rhythm is the hard part. Taylor separates the archive of lasting things from the repertoire of embodied practice, like walking to work or lingering at a corner (2003, pp.&nbsp;19 to 20). The repertoire needs people to be present. Situ cannot store a rhythm the way it stores a street. It can keep traces, such as counts and timings. It can also offer a place where the rhythm is performed again: the game. The Seville principles warn against showing “lifeless cities” (principle 5.3).</p>
 </section>
 <section id="what-situ-has-and-what-it-lacks" class="level3">
@@ -530,17 +530,17 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>conceived space: plans and maps</td>
 <td>the network, its rules, building types and street objects (S1 to S4, S6), from open data (the city’s and OpenStreetMap’s) and street photos</td>
-<td>built</td>
+<td>verified</td>
 </tr>
 <tr class="even">
 <td>perceived space: daily routines</td>
 <td>rhythm and movement (S5 to S9), from the city’s counts and the census, and later from computer vision</td>
-<td>measured: a weekday (S5) and commuters, from the census (S7). Imagined: a morning on foot (S9)</td>
+<td>partial: a weekday measured (S5), commuters from the census (S7), a morning on foot imagined (S9)</td>
 </tr>
 <tr class="odd">
 <td>lived space: space as its users live it</td>
 <td>the game, and what people say about the place, through play and later interviews</td>
-<td>not started</td>
+<td>planned</td>
 </tr>
 </tbody>
 </table>
@@ -609,6 +609,17 @@ ul.task-list li input[type="checkbox"] {
 <p>I build Situ as small systems, each with a single job. Each has a blueprint and its own tests. I try it in the <a href="./lab.html">Lab</a> before the next one starts.</p>
 </section>
 </section>
+<section id="status" class="level2">
+<h2 class="anchored" data-anchor-id="status">How I mark what I know</h2>
+<p>Each claim on these pages, and each system, carries one of four words.</p>
+<ul>
+<li><strong>verified</strong>: the data, a count or a test shows it. A system is verified when it is built and its tests pass.</li>
+<li><strong>partial</strong>: some evidence supports it, and a gap remains. A system is partial when only part of it is built.</li>
+<li><strong>planned</strong>: not built yet.</li>
+<li><strong>assumption</strong>: a reading of mine, or a rule I chose because no source settles it. It may be wrong, and where I can, I say what would show it.</li>
+</ul>
+<p>The decision files behind the systems keep their own words, such as confirmed and assumed, because the code reads them.</p>
+</section>
 <section id="the-systems" class="level2">
 <h2 class="anchored" data-anchor-id="the-systems">The systems</h2>
 <table class="caption-top table">
@@ -625,61 +636,61 @@ ul.task-list li input[type="checkbox"] {
 <td></td>
 <td><a href="./network.html">Walking network</a></td>
 <td>Add the city’s off-street paths before space syntax is calculated</td>
-<td>built, tested</td>
+<td>verified, by the checks in its report</td>
 </tr>
 <tr class="even">
 <td>S1</td>
 <td><a href="./s1-streets.html">Streets</a></td>
 <td>Which streets connect, and who may use them in which direction</td>
-<td>built, tested</td>
+<td>verified</td>
 </tr>
 <tr class="odd">
 <td>S2</td>
 <td><a href="./s2-scores.html">Scores</a></td>
 <td>Attach the space syntax values to each street</td>
-<td>built, tested</td>
+<td>verified</td>
 </tr>
 <tr class="even">
 <td>S3</td>
 <td><a href="./s3-rules.html">Rules</a></td>
 <td>Stop signs, traffic lights, forbidden turns, speed limits</td>
-<td>built, tested</td>
+<td>verified</td>
 </tr>
 <tr class="odd">
 <td>S4</td>
 <td><a href="./s4-buildings.html">Buildings</a></td>
-<td>What each building is, so people have places to go</td>
-<td>built, tested</td>
+<td>What each building is, and where a walker reaches it</td>
+<td>verified</td>
 </tr>
 <tr class="even">
 <td>S5</td>
 <td><a href="./s5-rhythm.html">Rhythm</a></td>
 <td>When the streets are busy, and which places say they are open</td>
-<td>built, tested</td>
+<td>verified</td>
 </tr>
 <tr class="odd">
 <td>S6</td>
 <td><a href="./s6-streetscape.html">Streetscape</a></td>
 <td>What stands on the streets: trees, hydrants, lights, cameras, crossings, sidewalks, benches, road works</td>
-<td>built, tested</td>
+<td>verified</td>
 </tr>
 <tr class="even">
 <td>S7</td>
 <td><a href="./s7-commuters.html">Commuters</a></td>
 <td>How people commute and when, and how far homes are from transit</td>
-<td>built, tested</td>
+<td>verified</td>
 </tr>
 <tr class="odd">
 <td>S8</td>
 <td><a href="./s8-views.html">Views</a></td>
 <td>What a walker can see from each point of the streets</td>
-<td>built, tested</td>
+<td>verified</td>
 </tr>
 <tr class="even">
 <td>S9</td>
 <td><a href="./s9-observer.html">Observer</a></td>
-<td>Imagines walkers and drivers from what the other systems say, and compares them with the counts and space syntax</td>
-<td>first slice: the morning on foot</td>
+<td>Imagines people moving from what the other systems say, and compares them with the counts and space syntax</td>
+<td>partial: commuters on foot on a weekday morning; drivers planned</td>
 </tr>
 </tbody>
 </table>

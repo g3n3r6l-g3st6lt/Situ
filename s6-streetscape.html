@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a82541dfa2575562b76294c4a998c207.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -513,29 +513,33 @@ ul.task-list li input[type="checkbox"] {
 <p class="big-number">
 971 trees · 104 hydrants · 806 street lights · 487 sidewalk pieces · 29 road works
 </p>
+<div class="number-note">
+<p><strong>Counts:</strong> objects inside the study area. Trees, hydrants, sidewalks and road works come from the city’s files saved on 16 October 2026. Street lights come from OpenStreetMap and from Mapillary’s photo detections, each light counted once.</p>
+<p><strong>Does not show:</strong> everything that stands there. Trees on private land are missing, and the detections miss what no photo shows.</p>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s6/s6_sheet_street.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="What stands on the streets. White circles: older or undated trees. Grey: trees planted since 2013, each sized by its trunk. Pink: hydrants and road works."><img src="outputs/s6/s6_sheet_street.png" class="img-fluid figure-img" alt="What stands on the streets. White circles: older or undated trees. Grey: trees planted since 2013, each sized by its trunk. Pink: hydrants and road works."></a></p>
 <figcaption>What stands on the streets. White circles: older or undated trees. Grey: trees planted since 2013, each sized by its trunk. Pink: hydrants and road works.</figcaption>
 </figure>
 </div>
-<p>The streetscape is young (certain, for what the city records). Of the 775 public trees with a planting date, 651 were planted in 2013 or later, and three quarters of all trunks are less than 18 cm across. Of the 267 sidewalk pieces with a construction date, 175 were built in 2020 or later. The commonest species are elms, honey-locusts, poplars and Kentucky coffeetrees.</p>
+<p>The streetscape is young (verified, for what the city records). Of the 775 public trees with a planting date, 651 were planted in 2013 or later, and three quarters of all trunks are less than 18 cm across. Of the 267 sidewalk pieces with a construction date, 175 were built in 2020 or later. The commonest species are elms, honey-locusts, poplars and Kentucky coffeetrees.</p>
 <p>My reading, and it is an interpretation: Griffintown’s street furniture is as new as its towers, and its trees are still small. A view along a street today is probably more open than it will be in twenty years. Any study of what can be seen here describes one moment in a growing place.</p>
-<p>All 286 pieces of furniture, from benches and bicycle racks to drinking fountains, come from OpenStreetMap, since the city’s furniture file covers only its large parks. Mappers may have missed some (likely). On 16 October 2026 the city listed 29 road works in the area, from sidewalk rebuilding on Saint-Martin to construction on Young that runs until June 2027.</p>
+<p>All 286 pieces of furniture, from benches and bicycle racks to drinking fountains, come from OpenStreetMap, since the city’s furniture file covers only its large parks. Mappers may have missed some (assumption). On 16 October 2026 the city listed 29 road works in the area, from sidewalk rebuilding on Saint-Martin to construction on Young that runs until June 2027.</p>
 </section>
 <section id="read-by-a-machine" class="level2">
 <h2 class="anchored" data-anchor-id="read-by-a-machine">Read by a machine</h2>
 <section id="street-lights" class="level3">
 <h3 class="anchored" data-anchor-id="street-lights">Street lights</h3>
-<p>The city publishes no file of its street lights (certain, for its open data catalogue). OpenStreetMap records 72 in the area. Mapillary is a site where people and the city upload street photos. Its software scans every photo for objects, street lights among them, and places each one on the map. It found street lights in 888 places here. Detections less than 3 m apart are joined into one light, since a pole often carries two heads, which leaves 764. Counting each light found by either source once, the area has 806.</p>
+<p>The city publishes no file of its street lights (verified, for its open data catalogue). OpenStreetMap records 72 in the area. Mapillary is a site where people and the city upload street photos. Its software scans every photo for objects, street lights among them, and places each one on the map. It found street lights in 888 places here. Detections less than 3 m apart are joined into one light, since a pole often carries two heads, which leaves 764. Counting each light found by either source once, the area has 806.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s6/s6_sheet_light.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Street lights. White: found in photos by Mapillary’s software. Grey: the same, found in no photo since 2023. Pink rings: lamps in OpenStreetMap."><img src="outputs/s6/s6_sheet_light.png" class="img-fluid figure-img" alt="Street lights. White: found in photos by Mapillary’s software. Grey: the same, found in no photo since 2023. Pink rings: lamps in OpenStreetMap."></a></p>
 <figcaption>Street lights. White: found in photos by Mapillary’s software. Grey: the same, found in no photo since 2023. Pink rings: lamps in OpenStreetMap.</figcaption>
 </figure>
 </div>
-<p>The hydrants show how far the machine can be trusted, since the city’s file lists every one. Mapillary’s software found 82 hydrants, and 68 of them stand within 5 m of one of the city’s, half of them less than a metre away. So it found 68 of the city’s 104. Where its photos reach, it is mostly right and well placed, and it misses about a third (likely; some misses may be streets no photo covers).</p>
-<p>The two sources of lights barely meet. Only 30 of OpenStreetMap’s 72 lamps have a detection within 5 m. Most of the others line the east end of Rue des Bassins and Allée des Barges, where the sheet shows almost no detections. Those are walking streets beside the basins, and most photos are taken from cars (likely). The machine sees what the camera passed, so a walker’s street may be the one it knows least.</p>
+<p>The hydrants show how far the machine can be trusted, since the city’s file lists every one. Mapillary’s software found 82 hydrants, and 68 of them stand within 5 m of one of the city’s, half of them less than a metre away. So it found 68 of the city’s 104. Where its photos reach, it is mostly right and well placed, and it misses about a third (partial; some misses may be streets no photo covers).</p>
+<p>The two sources of lights barely meet. Only 30 of OpenStreetMap’s 72 lamps have a detection within 5 m. Most of the others line the east end of Rue des Bassins and Allée des Barges, where the sheet shows almost no detections. Those are walking streets beside the basins, and most photos are taken from cars (assumption). The machine sees what the camera passed, so a walker’s street may be the one it knows least.</p>
 </section>
 <section id="crossings-and-cameras" class="level3">
 <h3 class="anchored" data-anchor-id="crossings-and-cameras">Crossings and cameras</h3>
@@ -546,13 +550,13 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Cameras and crossings. Filled marks: found in photos by Mapillary’s software, fainter when no photo since 2023 shows them. Rings: the same kinds in OpenStreetMap.</figcaption>
 </figure>
 </div>
-<p>Crossings are where the machine and the mappers meet. Of the 102 painted crossings Mapillary’s software found, 74 stand within 5 m of a crossing OpenStreetMap records as painted or signalled, half of them less than 2 m away. OpenStreetMap records 481 crossings, 289 of them unmarked, and the photos find 83 of its 192 painted ones. Six painted crossings in the photos stand where OpenStreetMap says there is no paint: either a crossing painted since, or a tag nobody updated (guessing).</p>
-<p>The cameras barely overlap. The photos show 34 and OpenStreetMap has 55, with only 2 in both. Most of OpenStreetMap’s cameras are tagged as private outdoor cameras along Wellington, Young and Murray, probably mapped by someone reading building fronts (likely). A few are the city’s traffic cameras at corners of Peel and de la Montagne. The software’s cameras spread across the area, six of them on Rue William. Each source finds a different set of watchers, and neither finds them all.</p>
+<p>Crossings are where the machine and the mappers meet. Of the 102 painted crossings Mapillary’s software found, 74 stand within 5 m of a crossing OpenStreetMap records as painted or signalled, half of them less than 2 m away. OpenStreetMap records 481 crossings, 289 of them unmarked, and the photos find 83 of its 192 painted ones. Six painted crossings in the photos stand where OpenStreetMap says there is no paint: either a crossing painted since, or a tag nobody updated (assumption).</p>
+<p>The cameras barely overlap. The photos show 34 and OpenStreetMap has 55, with only 2 in both. Most of OpenStreetMap’s cameras are tagged as private outdoor cameras along Wellington, Young and Murray, probably mapped by someone reading building fronts (assumption). A few are the city’s traffic cameras at corners of Peel and de la Montagne. The software’s cameras spread across the area, six of them on Rue William. Each source finds a different set of watchers, and neither finds them all.</p>
 <p>The software also finds poles, and S6 leaves them out. The street lights already show which streets are lit, and the number of poles depends mostly on how close two detections must be to count as one.</p>
 </section>
 <section id="benches-bins-and-racks" class="level3">
 <h3 class="anchored" data-anchor-id="benches-bins-and-racks">Street furniture</h3>
-<p>For benches and bicycle racks, the machine and the mappers agree too little for either to fill the other’s gaps. Bins are the same: Mapillary’s software finds 320 where OpenStreetMap has 38, and many are probably household bins set out on collection day (guessing). S6 keeps those detections out of its objects and reports the comparison in <a href="./s6-build.html#tests">its tests</a>.</p>
+<p>For benches and bicycle racks, the machine and the mappers agree too little for either to fill the other’s gaps. Bins are the same: Mapillary’s software finds 320 where OpenStreetMap has 38, and many are probably household bins set out on collection day (assumption). S6 keeps those detections out of its objects and reports the comparison in <a href="./s6-build.html#tests">its tests</a>.</p>
 </section>
 </section>
 <section id="what-s6-leaves-out" class="level2">
