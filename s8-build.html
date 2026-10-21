@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -548,18 +548,18 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>OpenStreetMap buildings, through the Overpass API, fetched 2026-10-14, ODbL</td>
-<td>1,682 building outlines over the area and 150 m around it; 14 buildings recorded as relations have no outline in the file and stop nothing</td>
+<td>1,682 building outlines over the area and 150 m around it; 14 buildings stored as “relations” have no outline in the file, so they stop nothing</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="viewpoints" class="level2">
 <h2 class="anchored" data-anchor-id="viewpoints">Viewpoints</h2>
-<p>Each walkable segment inside the area is cut into steps of about 10 m, and a viewpoint stands at the middle of each step. A segment shorter than 10 m gets one viewpoint. The viewpoint stands on the street’s centreline, where the S1 line runs.</p>
+<p>Each walkable segment (a stretch of street as S1 draws it) inside the area is cut into steps of about 10 m. A viewpoint stands at the middle of each step, on the street’s centreline where the S1 line runs. A segment shorter than 10 m gets one viewpoint.</p>
 </section>
 <section id="sight-lines" class="level2">
 <h2 class="anchored" data-anchor-id="sight-lines">Sight lines</h2>
-<p>From each viewpoint, 360 sight lines leave at every degree. Each one stops at the first building edge it crosses, or at 300 m. A line that passes exactly through a building’s corner counts as stopped there, so it cannot slip between two edges.</p>
+<p>From each viewpoint, 360 sight lines leave, one per degree. Each stops at the first building edge it crosses, or at 300 m. A line passing exactly through a building’s corner counts as stopped there, so it cannot slip between two edges.</p>
 </section>
 <section id="measures" class="level2">
 <h2 class="anchored" data-anchor-id="measures">Measures</h2>
@@ -577,19 +577,19 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>area</td>
-<td>the surface enclosed by the ends of the 360 lines, in m²</td>
+<td>the surface inside the ends of the 360 lines, in m²</td>
 </tr>
 <tr class="even">
 <td>perimeter</td>
-<td>the length of that outline</td>
+<td>the length of that shape’s outline</td>
 </tr>
 <tr class="odd">
 <td>longest and mean sight line</td>
-<td>how far one can see at most, and on average</td>
+<td>the furthest you can see, and how far on average</td>
 </tr>
 <tr class="even">
 <td>compactness</td>
-<td>4π × area / perimeter², 1 for a circle, small for a long thin corridor</td>
+<td>4π × area / perimeter²: 1 for a circle, small for a long thin corridor</td>
 </tr>
 <tr class="odd">
 <td>open share</td>
@@ -601,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Benedikt (1979) defined the isovist and several of these measures; Batty (2001) uses compactness to compare the shapes of isovists across a plan. Turner and others (2001) carry isovists into visibility graphs, which S8 does not build.</p>
+<p>Benedikt (1979) defined the isovist and several of these measures. Batty (2001) uses compactness to compare isovist shapes across a plan. Turner and others (2001) extend isovists into visibility graphs, which S8 does not build.</p>
 </section>
 <section id="assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
@@ -617,7 +617,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>only building outlines block a view</td>
 <td>they are the only obstacles mapped openly for the whole area</td>
-<td>the city’s 3D buildings, trees with their crowns, the rail and road structures</td>
+<td>the city’s 3D buildings, plus trees with their crowns and the rail and road structures</td>
 </tr>
 <tr class="even">
 <td>the view is flat, at eye level</td>
@@ -626,12 +626,12 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>a viewpoint stands on the centreline</td>
-<td>S1 gives the street as one line</td>
-<td>the sidewalks of <a href="./s6-streetscape.html">S6</a>, when S9 needs sides</td>
+<td>S1 draws each street as one line</td>
+<td>the sidewalks of <a href="./s6-streetscape.html">S6</a>, when S9 needs each side</td>
 </tr>
 <tr class="even">
-<td>300 m reach</td>
-<td>far enough for the length of a block in the old grid and the width of the canal</td>
+<td>a reach of 300 m</td>
+<td>far enough for a block of the old grid and the width of the canal</td>
 <td>a stress test shows what changes</td>
 </tr>
 </tbody>
@@ -641,7 +641,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="tests">Tests</h2>
 <section id="seven-checks" class="level3">
 <h3 class="anchored" data-anchor-id="seven-checks">Seven checks</h3>
-<p>Each check asks one plain question of what S8 wrote. Six must pass, and all six do; the seventh only reports.</p>
+<p>Each check asks one plain question of what S8 wrote. Six must pass, and all six do. The seventh only reports.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -658,32 +658,32 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>T1</td>
-<td>Does every walkable segment inside the area have a viewpoint at least every 10 m or so?</td>
-<td>yes, 1,798 viewpoints on 231 segments</td>
+<td>Does every walkable segment inside the area have a viewpoint roughly every 10 m?</td>
+<td>yes: 1,798 viewpoints on 231 segments</td>
 </tr>
 <tr class="even">
 <td>T2</td>
-<td>Does every sight line stop at the first building edge or at the radius, and does the area follow?</td>
-<td>yes, every 25th viewpoint worked out again in plain Python, one line at a time</td>
+<td>Does each sight line stop at the first building edge or at the reach, and does the area follow?</td>
+<td>yes: every 25th viewpoint worked out again in plain Python, one line at a time</td>
 </tr>
 <tr class="odd">
 <td>T3</td>
-<td>Do the measures of every viewpoint agree with each other?</td>
+<td>Do each viewpoint’s measures agree with each other?</td>
 <td>yes</td>
 </tr>
 <tr class="even">
 <td>T4</td>
-<td>Is every segment the mean of its viewpoints, with its middle view kept for the Lab?</td>
+<td>Is each segment the mean of its viewpoints, with its middle view kept for the Lab?</td>
 <td>yes</td>
 </tr>
 <tr class="odd">
 <td>T5</td>
-<td>Is every viewpoint inside a building, and every view beyond the mapped buildings, a checkpoint, and nothing else?</td>
+<td>Are the checkpoints exactly the viewpoints inside a building and the views beyond the mapped buildings?</td>
 <td>yes, 1 checkpoint</td>
 </tr>
 <tr class="even">
 <td>T6</td>
-<td>Does S8 measure from the map alone, leaving out the counts, space syntax and the trees?</td>
+<td>Does S8 measure from the map alone, without the counts, space syntax or the trees?</td>
 <td>yes</td>
 </tr>
 <tr class="odd">
@@ -703,7 +703,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>T2 first failed on 16 viewpoints, by up to 9 m². The check started from the positions written in the file, rounded to the centimetre, and a centimetre was enough to let a line graze past a corner it had hit before. T2 now places the viewpoints again from S1. A smaller gap of 0.1 m² remained: the area was summed in coordinates of about five million metres, which loses decimals. S8 now sums it from the viewpoint outwards, and the two agree.</p>
+<p>T2 first failed on 16 viewpoints, by up to 9 m². The check started from the positions saved in the file, rounded to the centimetre. A centimetre was enough to let a line graze past a corner it had hit before. T2 now places the viewpoints again from S1. A smaller gap of 0.1 m² remained: the area was summed in coordinates of about five million metres, which loses decimals. S8 now sums it from the viewpoint outwards, and the two agree.</p>
 </div>
 </div>
 </section>
@@ -731,26 +731,26 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>X2</td>
 <td>reach of 100, 200, 300 and 500 m</td>
-<td>median area 11,800 to 44,100 m²; the order of the streets against 300 m holds at 0.95 to 0.99</td>
+<td>median area 11,800 to 44,100 m²; street order against 300 m holds at 0.95 to 0.99</td>
 </tr>
 <tr class="odd">
 <td>X3</td>
 <td>90, 180, 360 and 720 sight lines</td>
-<td>at 720 the streets move by 0.9 % (median), 4 % at most; at 90, 7 % and 30 %</td>
+<td>at 720, streets move by 0.9 % (median), 4 % at most; at 90, by 7 % and 30 %</td>
 </tr>
 <tr class="even">
 <td>X4</td>
 <td>a viewpoint every 5, 10 and 20 m</td>
-<td>the streets move by under 1 % (median); a few short ones by 14 to 45 %</td>
+<td>streets move by under 1 % (median); a few short ones by 14 to 45 %</td>
 </tr>
 <tr class="odd">
 <td>X5</td>
 <td>one OpenStreetMap outline in ten left out, three draws</td>
-<td>median area up by 13 to 78 %; the streets move by 4 to 21 % (median); order 0.90 to 0.99</td>
+<td>median area up 13 to 78 %. Streets move by 4 to 21 % (median), and their order holds at 0.90 to 0.99</td>
 </tr>
 </tbody>
 </table>
-<p>X5 is the one that matters: S8 depends on how complete OpenStreetMap is, and a missing building widens a view more than any setting of S8 does. I read the order of the streets, and treat single areas as approximate.</p>
+<p>X5 is the one that matters. S8 depends on how complete OpenStreetMap is, and a missing building widens a view more than any setting of S8 does. So I read the order of the streets, and treat single areas as approximate.</p>
 
 
 </section>

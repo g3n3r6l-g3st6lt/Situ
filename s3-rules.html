@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -507,7 +507,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-s3-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s3-does">What S3 does</h2>
 <p>S3 gives the S1 streets their traffic rules. Picture a driver arriving at a junction. S3 answers four questions for them: must I stop here, are there traffic lights, where may I go next, and how fast may I drive. It reads three of the city’s files, and every rule points back to the sign or city record it came from.</p>
-<p>The city lists lights and speed limits directly. Stops and turns are harder. The sign file says where each sign stands and what it says, never which street it faces, and a corner sign often stands close to two or three streets at once. S3 works out the street from where the sign stands and what it would mean there (<a href="./s3-build.html">how S3 is built</a>), and street photos settle the few places I could not decide from the desk (<a href="./s3-checks.html">S3 checks with photos</a>).</p>
+<p>The city lists lights and speed limits directly. Stops and turns are harder. The sign file says where each sign stands and what it says. It never says which street the sign faces, and a corner sign often stands close to two or three streets at once. S3 works out the street from where the sign stands and what it would mean there (<a href="./s3-build.html">how S3 is built</a>). Street photos settle the few places I could not decide from the desk (<a href="./s3-checks.html">S3 checks with photos</a>).</p>
 </section>
 <section id="one-junction-step-by-step" class="level2">
 <h2 class="anchored" data-anchor-id="one-junction-step-by-step">One junction, step by step</h2>
@@ -520,17 +520,17 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <ol type="1">
 <li>Three street ends touch J027: Rue Chatham, and Rue William on each side of it. A car can arrive along each, so S3 makes three approaches. An approach is one street, driven towards the corner.</li>
-<li>A stop sign stands 10 m before the junction and 5 m to the right of Chatham, where a stop sign for Chatham would stand. It fits no other street, so Chatham must stop.</li>
+<li>A stop sign stands 10 m before the junction and 5 m to the right of Chatham. That is where a stop sign for Chatham would stand, and it fits no other street. So Chatham must stop.</li>
 <li>Two more posts carry “left turn only” signs, both on the right of Chatham, 4 to 8 m before the junction.</li>
-<li>From Chatham a car can turn onto William to the left or to the right. S3 names each move by how much the car’s heading changes: about 90° to the left is a left.</li>
-<li>The signs allow only the left, so the right is forbidden, with the reason written beside it.</li>
+<li>From Chatham a car can turn left or right onto William. S3 names each move by how much the car’s heading changes: about 90° to the left is a left.</li>
+<li>The signs allow only the left. So the right is forbidden, and the reason is written beside it.</li>
 <li>One end of William has its own stop sign and the other has none. So at J027 some streets stop, and there are no lights.</li>
 </ol>
-<p>In the <a href="./lab.html#J027-S020">Lab</a>, click any junction, then a street arriving at it, to see each rule with the sign behind it.</p>
+<p>In the <a href="./lab.html#J027-S020">Lab</a>, click any junction, then a street arriving at it. You will see each rule with the sign behind it.</p>
 </section>
 <section id="result" class="level2">
 <h2 class="anchored" data-anchor-id="result">Result</h2>
-<p>Over the whole S1 network, inside Griffintown and on the edge (the streets just outside the boundary that touch it), the junctions fall into four kinds:</p>
+<p>Across the whole S1 network, inside Griffintown and on its edge (the streets just outside the boundary that touch it), the junctions fall into four kinds:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -558,12 +558,12 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>Turn signs forbid 86 of the 578 possible moves. Most car streets have a limit of 30 km/h, and some 40.</p>
-<p>Each link between a sign and a street is an inference, so S3 records how sure it is. Most stop signs fit only one street. Turn signs more often went to a best fit or found no street at all. Lights and stop signs never share a junction, and since they come from separate files, that agreement speaks well of both.</p>
+<p>Linking a sign to a street is always an inference, so S3 records how sure it is. Most stop signs fit only one street. Turn signs more often went to a best fit, or found no street at all. Lights and stop signs never share a junction. They come from separate files, so that agreement speaks well of both.</p>
 </section>
 <section id="what-changed-in-october" class="level2">
 <h2 class="anchored" data-anchor-id="what-changed-in-october">What changed in October</h2>
-<p>S1 gained its edge this month. I also rewrote how a sign finds its street, because I suspected my own matching caused the turn conflicts and no-entry disagreements. The new rules are mostly common sense about how signs are put up: a sign belongs only to a street it actually stands on, and panels on one post face the same drivers unless they contradict each other. Turn signs that fit only one street more than doubled, and the places to check fell from 83 to 27.</p>
-<p>Mapillary’s street photos then settled the last turn contradiction, at Wellington and Ann (<a href="./s3-checks.html#wellington-and-ann-j006">J006</a>), and every no-entry disagreement, bringing the places to check down to 21.</p>
+<p>S1 gained its edge this month. I also rewrote how a sign finds its street. I suspected my own matching caused the turn conflicts and the no-entry disagreements. The new rules are mostly common sense about how signs are put up. A sign belongs only to a street it actually stands on. Panels on one post face the same drivers unless they contradict each other. Turn signs that fit only one street more than doubled, and the places to check fell from 83 to 27.</p>
+<p>Mapillary’s street photos then settled the last turn contradiction, at Wellington and Ann (<a href="./s3-checks.html#wellington-and-ann-j006">J006</a>). They also settled every no-entry disagreement, which brought the places to check down to 21.</p>
 </section>
 <section id="maps" class="level2">
 <h2 class="anchored" data-anchor-id="maps">Maps</h2>
@@ -581,8 +581,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s3/s3_sheet_turns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Where a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside."><img src="outputs/s3/s3_sheet_turns.png" class="img-fluid figure-img" alt="Where a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside."></a></p>
-<figcaption>Where a sign limits the turns, the small arrows show the turns still allowed. Dashed: the sign holds only at some hours. Pink x: contradicting signs, set aside.</figcaption>
+<p><a href="outputs/s3/s3_sheet_turns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Where a sign limits the turns, small arrows show the turns still allowed. A dashed arrow means the sign holds only at some hours, and a pink x marks contradicting signs, set aside."><img src="outputs/s3/s3_sheet_turns.png" class="img-fluid figure-img" alt="Where a sign limits the turns, small arrows show the turns still allowed. A dashed arrow means the sign holds only at some hours, and a pink x marks contradicting signs, set aside."></a></p>
+<figcaption>Where a sign limits the turns, small arrows show the turns still allowed. A dashed arrow means the sign holds only at some hours, and a pink x marks contradicting signs, set aside.</figcaption>
 </figure>
 </div>
 </div>
@@ -607,12 +607,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="places-still-to-check" class="level2">
 <h2 class="anchored" data-anchor-id="places-still-to-check">Places still to check</h2>
-<p>Seven of the 21 are Autoroute 10 and its ramps, which the city’s speed file does not cover. Six are signs I could not give to any street, and three are signs the photos could not settle (decisions P03 and P06) (<a href="./s3-checks.html#still-open">still open</a>). Three are lights just beyond the edge, such as the one at Queen and Wellington, and two are recent no-entry posts at the park connectors, newer than every photo. Signs at exits that face streets beyond the network are left off: they are not mine to check.</p>
+<p>Seven of the 21 are Autoroute 10 and its ramps, which the city’s speed file does not cover. Six are signs I could not give to any street. Three are signs the photos could not settle (decisions P03 and P06, <a href="./s3-checks.html#still-open">still open</a>). Three are lights just beyond the edge, such as the one at Queen and Wellington. Two are recent no-entry posts at the park connectors, newer than every photo. Signs at exits that face streets beyond the network are left off, since they are not mine to check.</p>
 </section>
 <section id="what-s3-does-not-know" class="level2">
 <h2 class="anchored" data-anchor-id="what-s3-does-not-know">What S3 does not know</h2>
-<p>The city’s file says where the lights are and nothing about their timing. <a href="./counts.html">Movement counts and light timing</a> estimates it where the city counted traffic, and elsewhere the cycle will be a procedural assumption in S9. Some turn rules hold only at certain hours, and S3 keeps them on at all hours until S9 runs its imagined drivers by the clock of S5 Rhythm.</p>
-<p>An exit is where an edge street meets the rest of the city, and S3 cannot see the streets beyond it. A junction there may look like an all-way stop when a street beyond does not stop, and the junction’s note says so.</p>
+<p>The city’s file says where the lights are and nothing about their timing. <a href="./counts.html">Movement counts and light timing</a> estimates the timing where the city counted traffic. Elsewhere, the cycle will be a procedural assumption in S9: a rule I set for the simulation. Some turn rules hold only at certain hours. S3 keeps them on at all hours until S9 runs its imagined drivers by the clock of S5 Rhythm.</p>
+<p>An exit is where an edge street meets the rest of the city, and S3 cannot see the streets beyond it. A junction there may look like an all-way stop when a street beyond does not stop. The junction’s note says so.</p>
 
 
 </section>

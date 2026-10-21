@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -561,7 +561,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="approaches" class="level2">
 <h2 class="anchored" data-anchor-id="approaches">Approaches</h2>
-<p>A sign speaks to drivers arriving from one direction, so S3 starts from the approaches: each segment end, as a car drives towards the junction. For each one it records the arriving car’s heading, whether the one-way rules let a car arrive or leave along it, the segment’s length, and whether the junction is an exit, where the edge street meets the rest of the city. A one-way street pointing away from a junction gets no rules there, since no car arrives that way.</p>
+<p>A sign speaks to drivers arriving from one direction, so S3 starts from the approaches. An approach is one segment end (a segment is one piece of S1 street), seen as a car drives towards the junction. For each one, S3 records the arriving car’s heading, whether the one-way rules let a car arrive or leave along it, the segment’s length, and whether the junction is an exit (where the edge street meets the rest of the city). A one-way street pointing away from a junction gets no rules there, since no car arrives that way.</p>
 </section>
 <section id="how-a-stop-sign-finds-its-street" class="level2">
 <h2 class="anchored" data-anchor-id="how-a-stop-sign-finds-its-street">How a stop sign finds its street</h2>
@@ -571,23 +571,23 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>A made-up junction. Left: where a stop sign must stand to belong to a street. Right: how a turn gets its name. To try it on real junctions, open the <a href="./lab.html">Lab</a>.</figcaption>
 </figure>
 </div>
-<p>In Québec a stop sign usually stands on the right of the street, just before the junction, and S3 relies on that. A post fits an approach when it stands up to 35 m before the junction and 1 to 20 m to the right of the centre line, on that same segment: a post further back belongs to the previous junction, which matters on short pieces like the 20 m stretches where Wellington splits in two. When several approaches fit, the one closest to the usual spot (about 7 m to the right, near the junction) wins, and S3 marks the link as less sure. On a one-way street signs often stand on both sides, so a post on the left is accepted too. A sign that fits nothing goes on the list to check.</p>
+<p>In Québec a stop sign usually stands on the right of the street, just before the junction. S3 relies on that. A post fits an approach when it stands on that same segment, up to 35 m before the junction and 1 to 20 m to the right of the centre line. A post further back belongs to the previous junction. This matters on short pieces, like the 20 m stretches where Wellington splits in two. When several approaches fit, the one closest to the usual spot wins (about 7 m to the right, near the junction), and S3 marks the link as less sure. On a one-way street, signs often stand on both sides, so a post on the left is accepted too. A sign that fits nothing goes on the list to check.</p>
 </section>
 <section id="how-a-turn-sign-finds-its-street" class="level2">
 <h2 class="anchored" data-anchor-id="how-a-turn-sign-finds-its-street">How a turn sign finds its street</h2>
-<p>Turn signs often stand across the junction or on a median, so their position is a weak clue. S3 adds a second one: what the sign would mean on each nearby street. At <a href="./s3-rules.html#one-junction-step-by-step">J027</a>, “left turn only” on Rue Chatham keeps the left onto William and removes the right. On Rue William a car can only go straight on, since Chatham is one-way towards William, so the same sign would remove the only move and trap every car. The signs therefore belong to Chatham.</p>
-<p>A turn sign thus belongs to a street only when it keeps at least one of its moves and removes at least one. When several streets pass, the post decides first: panels on one post usually face the same drivers, so a turn sign that means something on the street of a stop sign on the same post goes there. Position decides next, with a sign before the junction, on the right, preferred, and one past the junction used only when nothing before it fits.</p>
-<p>Two contradicting panels on one post, like “straight only” above “left or right only”, stand back to back, so the second one looks for another street. If none fits, it goes on the list, since only a photo can tell which way each faces. A turn sign at an exit is ignored, because the streets it points to lie outside the network. If the turn signs on one street together leave no move at all, S3 sets them aside and keeps every move open; after the photo checks, no street is in that state.</p>
+<p>Turn signs often stand across the junction or on a median, so their position is a weak clue. S3 adds a second clue: what the sign would mean on each nearby street. At <a href="./s3-rules.html#one-junction-step-by-step">J027</a>, “left turn only” on Rue Chatham keeps the left onto William and removes the right. On Rue William a car can only go straight on, since Chatham is one-way towards William. There the same sign would remove the only move and trap every car. So the signs belong to Chatham.</p>
+<p>A turn sign belongs to a street only when it keeps at least one of its moves and removes at least one. When several streets pass this test, the post decides first. Panels on one post usually face the same drivers. So if a turn sign means something on the street of a stop sign on the same post, it goes to that street. Position decides next. A sign before the junction and on the right is preferred. A sign past the junction is used only when nothing before it fits.</p>
+<p>Two panels on one post that contradict each other, like “straight only” above “left or right only”, stand back to back. So the second one looks for another street. If none fits, it goes on the list, since only a photo can tell which way each faces. A turn sign at an exit is ignored, because the streets it points to lie outside the network. If the turn signs on one street together leave no move at all, S3 sets them aside and keeps every move open. After the photo checks, no street is in that state.</p>
 <p>My first version placed turn signs by position alone, like stop signs, and left many streets with no way out (<a href="#stress-tests">X5</a> repeats it).</p>
-<p>To name a turn, S3 compares the arriving heading with the direction of the street the car leaves along. Less than 30° either way counts as straight on, and anything sharper is a left or a right (Chatham onto William turns 89° to the left). S3 never makes a U-turn.</p>
+<p>To name a turn, S3 compares the arriving heading with the direction of the street the car leaves along. Less than 30° either way counts as straight on. Anything sharper is a left or a right (Chatham onto William turns 89° to the left). S3 never makes a U-turn.</p>
 </section>
 <section id="decisions-from-photos" class="level2">
 <h2 class="anchored" data-anchor-id="decisions-from-photos">Decisions from photos</h2>
-<p>For the few signs I could not place from the desk, I wrote down what Mapillary’s street-level photos show (<a href="./s3-checks.html">S3 checks with photos</a>). S3 reads those decisions before its own matching, so a photo outranks a guess. The city’s file is never edited, so removing a decision brings back S3’s own matching.</p>
+<p>For the few signs I could not place from the desk, I wrote down what Mapillary’s street-level photos show (<a href="./s3-checks.html">S3 checks with photos</a>). S3 reads those decisions before its own matching, so a photo outranks a guess. The city’s file is never edited. Removing a decision brings back S3’s own matching.</p>
 </section>
 <section id="no-entry-signs" class="level2">
 <h2 class="anchored" data-anchor-id="no-entry-signs">No-entry signs</h2>
-<p>S1 already takes its one-way streets from the city, so S3 uses no-entry signs only to check S1. A sign agrees when a street near it is one-way towards the junction, or closed to cars. When only a path I added in S1 explains it, it goes on the list, because my own decision cannot confirm itself.</p>
+<p>S1 already takes its one-way streets from the city, so S3 uses no-entry signs only to check S1. A sign agrees when a street near it is one-way towards the junction, or closed to cars. When only a path I added in S1 explains a sign, it goes on the list, because my own decision cannot confirm itself.</p>
 </section>
 <section id="traffic-lights" class="level2">
 <h2 class="anchored" data-anchor-id="traffic-lights">Traffic lights</h2>
@@ -595,7 +595,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="speed-limits" class="level2">
 <h2 class="anchored" data-anchor-id="speed-limits">Speed limits</h2>
-<p>The city’s speed file uses the same street ids as S1, so most segments simply take their own limit. Seven segments have a limit of 0, and all seven are closed to cars, so S3 reads 0 as “no limit given”. Three Wellington pieces were redrawn after the file was made and have new ids. For those, S3 takes the speed of same-name lines lying along the segment within 5 m, when they cover nearly all of it and agree. I chose 5 m by looking at those three segments, as the smallest distance that covers the two short pieces where Wellington splits; a <a href="#stress-tests">stress test</a> shows what other distances give.</p>
+<p>The city’s speed file uses the same street ids as S1, so most segments simply take their own limit. Seven segments have a limit of 0. All seven are closed to cars, so S3 reads 0 as “no limit given”. Three Wellington pieces were redrawn after the file was made and have new ids. For those, S3 takes the speed of lines with the same name lying along the segment within 5 m, when they cover nearly all of it and agree. I chose 5 m by looking at those three segments. It is the smallest distance that covers the two short pieces where Wellington splits. A <a href="#stress-tests">stress test</a> shows what other distances give.</p>
 </section>
 <section id="assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
@@ -622,7 +622,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>a turn sign must mean something on its street</td>
 <td>signs are put up to change what drivers do</td>
-<td>a sign truly redundant on the ground</td>
+<td>a sign that really is redundant on the ground</td>
 </tr>
 <tr class="odd">
 <td>panels on one post face the same drivers, unless they contradict</td>
@@ -661,7 +661,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="tests">Tests</h2>
 <section id="ten-checks" class="level3">
 <h3 class="anchored" data-anchor-id="ten-checks">Ten checks</h3>
-<p>Each check asks one plain question of the rules S3 writes. Eight must pass, and all eight do; the other two only report. The <a href="./lab.html">Lab</a> shows the latest results.</p>
+<p>Each check asks one plain question of the rules S3 writes. Eight must pass, and all eight do. The other two only report. The <a href="./lab.html">Lab</a> shows the latest results.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -734,24 +734,24 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A test that always passes proves nothing. Before trusting T9 and T10, I moved one light by 30 m and changed two speed cells, one from 30 to 50 and one empty cell to 0. T9 caught the light and T10 caught both speeds. Then I put the files back.</p>
+<p>A test that always passes proves nothing. Before trusting T9 and T10, I broke the data on purpose. I moved one light by 30 m and changed two speed cells: one from 30 to 50, and one empty cell to 0. T9 caught the light and T10 caught both speeds. Then I put the files back.</p>
 </div>
 </div>
 </section>
 <section id="stress-tests" class="level3">
 <h3 class="anchored" data-anchor-id="stress-tests">Stress tests</h3>
 <p>Each stress test changes one thing on purpose and counts how many rules move. Run twice on the same input (X1), S3 gives identical results.</p>
-<p>X2 moves every sign post at random, by up to 1, 2, 4 and 8 m. Up to 2 m almost nothing changes. Beyond that, ten streets change their stop at 4 m, and 28 at 8 m. So the city’s sign positions would have to be off by more than 2 m to shift the stop rules. I do not know yet how accurate they are, and a few corners are worth checking on the ground.</p>
+<p>X2 moves every sign post at random, by up to 1, 2, 4 and 8 m. Up to 2 m, almost nothing changes. At 4 m, ten streets change their stop, and at 8 m, 28 do. So the city’s sign positions would have to be off by more than 2 m to shift the stop rules. I do not know yet how accurate they are, and a few corners are worth checking on the ground.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s3/stress_shake.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="X2: the further every post moves, the more rules change."><img src="outputs/s3/stress_shake.png" class="img-fluid figure-img" alt="X2: the further every post moves, the more rules change."></a></p>
 <figcaption>X2: the further every post moves, the more rules change.</figcaption>
 </figure>
 </div>
-<p>X3 and X4 change how far before the junction, and how far to the right, a sign may stand. Both sit on a plateau: a little more or less than my 35 m and 20 m changes nothing, and only the tightest values lose signs. Most signs without a street stand at exits or beyond the edge.</p>
-<p>X5 places turn signs by position alone, as my first version did, and leaves 25 streets with no turn at all. With the meaning test and the photo decisions, none is left that way.</p>
-<p>X6 changes how close a light must be to its junction. From 25 to 40 m the same 31 junctions get lights. At 5 m eight are lost, mostly on Robert-Bourassa and on edge streets, where the city places the light 5 to 10 m away on a wide corner. At 80 m, lights start landing on the wrong junctions.</p>
-<p>X7 changes how far a same-name line may lie when a street is missing from the speed file, and it is the one setting with no plateau below it. Under 5 m, two Wellington pieces open to cars lose their limit; from 5 m on, all three redrawn pieces are covered, which is what I chose 5 m for (<a href="#speed-limits">speed limits</a>). Autoroute 10 and its ramps are never in the file, at any distance.</p>
+<p>X3 and X4 change how far before the junction, and how far to the right, a sign may stand. Both sit on a plateau, a range where small changes do nothing: a little more or less than my 35 m and 20 m changes no rule. Only the tightest values lose signs. Most signs without a street stand at exits or beyond the edge.</p>
+<p>X5 places turn signs by position alone, as my first version did. It leaves 25 streets with no turn at all. With the meaning test and the photo decisions, no street is left that way.</p>
+<p>X6 changes how close a light must be to its junction. From 25 to 40 m, the same 31 junctions get lights. At 5 m, eight are lost, mostly on Robert-Bourassa and on edge streets. There the city places the light 5 to 10 m away on a wide corner. At 80 m, lights start landing on the wrong junctions.</p>
+<p>X7 changes how far a same-name line may lie when a street is missing from the speed file. It is the one setting with no plateau below it. Under 5 m, two Wellington pieces open to cars lose their limit. From 5 m on, all three redrawn pieces are covered, which is why I chose 5 m (<a href="#speed-limits">speed limits</a>). Autoroute 10 and its ramps are never in the file, at any distance.</p>
 
 
 </section>

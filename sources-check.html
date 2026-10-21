@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -506,7 +506,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="a-question-for-each-source" class="level2">
 <h2 class="anchored" data-anchor-id="a-question-for-each-source">A question for each source</h2>
-<p>Some parts of Situ lean on sources I did not make. Before trusting one, I ask it a plain question and answer with a test I can run again.</p>
+<p>Some parts of Situ lean on sources I did not make. Before trusting one, I ask it a plain question. Then I answer it with a test I can run again.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
@@ -529,7 +529,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="signs-what-they-mean" class="level2">
 <h2 class="anchored" data-anchor-id="signs-what-they-mean">Signs: what they mean</h2>
-<p>The Québec standard for road signs, <em>Tome V, Signalisation routière</em>, is sold and was out of my reach, so I used free sources. The <em>Règlement sur la signalisation routière</em> on <a href="https://www.legisquebec.gouv.qc.ca/fr/document/rc/C-24.2,%20r.%2041">LégisQuébec</a>, current to 1 June 2026, gives the legal meaning of each kind of sign. The ministry’s 2026 posters (<a href="https://www.quebec.ca/transports/circulation-securite-routiere/signalisation-routiere/panneaux/panneaux-prescription">Québec.ca</a>) and its online catalogue, the <a href="https://www.rsr.transports.gouv.qc.ca">Répertoire des dispositifs</a>, give their names and pictures.</p>
+<p>The Québec standard for road signs, <em>Tome V, Signalisation routière</em>, costs money and was out of my reach, so I used free sources. The <em>Règlement sur la signalisation routière</em> on <a href="https://www.legisquebec.gouv.qc.ca/fr/document/rc/C-24.2,%20r.%2041">LégisQuébec</a>, current to 1 June 2026, gives the legal meaning of each kind of sign. The ministry’s 2026 posters (<a href="https://www.quebec.ca/transports/circulation-securite-routiere/signalisation-routiere/panneaux/panneaux-prescription">Québec.ca</a>) and its online catalogue, the <a href="https://www.rsr.transports.gouv.qc.ca">Répertoire des dispositifs</a>, give their names and pictures.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -576,34 +576,34 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>The code numbers differ between sources: the regulation numbers the turn bans P-110-6 to P-110-8, while the 2026 poster shows P-110-62 for “no left turn”. So S3 reads a sign’s written meaning and ignores its code.</p>
-<p>None of these sources says where a sign stands, before or after the junction. The only text on placement I found is a 2001 provincial guide quoting Tome V: turn signs stand “à proximité de l’endroit où la manœuvre doit être effectuée”, near where the turn is made (<a href="https://collections.banq.qc.ca/document/s/t/a8LhO4CJb0wE_8r-jzW0bQ">BAnQ</a>). That does not say which corner, so placement has to be read from photos, one junction at a time.</p>
+<p>The code numbers differ between sources. The regulation numbers the turn bans P-110-6 to P-110-8, while the 2026 poster shows P-110-62 for “no left turn”. So S3 reads a sign’s written meaning and ignores its code.</p>
+<p>None of these sources says where a sign stands, before or after the junction. The only text on placement I found is a 2001 provincial guide quoting Tome V. It says turn signs stand “à proximité de l’endroit où la manœuvre doit être effectuée”, near where the turn is made (<a href="https://collections.banq.qc.ca/document/s/t/a8LhO4CJb0wE_8r-jzW0bQ">BAnQ</a>). That does not say which corner. So placement has to be read from photos, one junction at a time.</p>
 </section>
 <section id="planx-how-far-is-a-radius" class="level2">
 <h2 class="anchored" data-anchor-id="planx-how-far-is-a-radius">PlanX: how far is a radius?</h2>
-<p>PlanX is the QGIS tool that gives each street segment its space syntax values, such as choice (roughly how often a street lies on the way between other places) and integration (roughly how easy it is to reach), each measured within a radius (<a href="./space-syntax.html">what these are</a>). <a href="https://geophilo.com/planx/#spacesyntax">Its manual</a> (version 4.18, September 2026) calls the radius “metric radii in map units”, without saying whether 800 m runs along the streets or in a straight line, two very different neighbourhoods.</p>
-<p>PlanX reports how many other segments each one found within the radius. For twelve Griffintown segments I counted again in two ways: the segments I can walk to within the radius, and those whose middle lies inside a circle of that radius. At 800 m, PlanX’s counts came to 0.89 of the walking counts and 0.57 of the circle counts; at 400 m, 0.92 and 0.53.</p>
-<p>So the radius is measured along the streets (certain), and S2 reads it that way. PlanX’s counts sit a little under mine, most likely because it measures metres along the path with the fewest turns, which is a bit longer than the shortest (likely). I could not reproduce the counts exactly, so that detail stays open.</p>
-<p>The manual also says the network has no direction, so the vehicle values describe the street layout without its one-way rules. I checked its normalised forms of choice and integration (NACH and NAIN, which can be compared between networks of different sizes) against the published papers in <a href="./readings-check.html#which-nain">Reading closely</a>. NACH matches Hillier, Yang and Turner (2012, p.&nbsp;191) exactly, and PlanX counts each pair of segments once, the same definition as Turner (2007, p.&nbsp;544) (<a href="./readings-check.html#does-planx-count-a-journey-once-or-once-each-way">how I found out</a>). For NAIN the paper gives two other forms, which put the streets in the same order; the numbers compare only within one form.</p>
+<p>PlanX is the QGIS tool that gives each street segment its space syntax values (<a href="./space-syntax.html">what these are</a>). Two of them are choice, roughly how often a street lies on the way between other places, and integration, roughly how easy it is to reach. Each is measured within a radius. <a href="https://geophilo.com/planx/#spacesyntax">Its manual</a> (version 4.18, September 2026) calls the radius “metric radii in map units”. It does not say whether 800 m runs along the streets or in a straight line, and those give two very different neighbourhoods.</p>
+<p>PlanX reports how many other segments each one found within the radius. For twelve Griffintown segments I counted again in two ways. The first count was the segments I can walk to within the radius. The second was those whose middle lies inside a circle of that radius. At 800 m, PlanX’s counts came to 0.89 of the walking counts and 0.57 of the circle counts. At 400 m they came to 0.92 and 0.53.</p>
+<p>So the radius is measured along the streets (certain), and S2 reads it that way. PlanX’s counts sit a little under mine. Most likely it measures metres along the path with the fewest turns, which is a bit longer than the shortest (likely). I could not reproduce the counts exactly, so that detail stays open.</p>
+<p>The manual also says the network has no direction. So the vehicle values describe the street layout without its one-way rules. I checked PlanX’s normalised forms of choice and integration against the published papers in <a href="./readings-check.html#which-nain">Reading closely</a>. These forms, NACH and NAIN, can be compared between networks of different sizes. NACH matches Hillier, Yang and Turner (2012, p.&nbsp;191) exactly. PlanX also counts each pair of segments once, the same definition as Turner (2007, p.&nbsp;544) (<a href="./readings-check.html#does-planx-count-a-journey-once-or-once-each-way">how I found out</a>). For NAIN the paper gives two other forms. They put the streets in the same order, and the numbers compare only within one form.</p>
 </section>
 <section id="mapillary-which-way-does-a-sign-face" class="level2">
 <h2 class="anchored" data-anchor-id="mapillary-which-way-does-a-sign-face">Mapillary: which way does a sign face?</h2>
-<p><a href="https://www.mapillary.com">Mapillary</a> reads its street photos with a machine and maps every sign it sees, with a compass angle. If that angle is the way the sign faces, it can settle which street a sign controls.</p>
+<p><a href="https://www.mapillary.com">Mapillary</a> reads its street photos by machine and maps every sign it sees, with a compass angle. If that angle is the way the sign faces, it can settle which street a sign controls.</p>
 <section id="getting-the-signs" class="level3">
 <h3 class="anchored" data-anchor-id="getting-the-signs">Getting the signs</h3>
-<p>I asked Mapillary for every feature it has mapped around the S1 network, in squares of about 400 m because it refuses large ones, and kept the traffic signs unchanged, with their dates. On 10 October that gave 1,455 signs, 838 of them regulatory, among them 235 stop detections and 88 no-entry signs.</p>
+<p>I asked Mapillary for every feature it has mapped around the S1 network. I asked in squares of about 400 m, because it refuses large ones. I kept the traffic signs unchanged, with their dates. On 10 October that gave 1,455 signs. Of these, 838 were regulatory, among them 235 stop detections and 88 no-entry signs.</p>
 </section>
 <section id="testing-the-direction-on-signs-we-already-know" class="level3">
 <h3 class="anchored" data-anchor-id="testing-the-direction-on-signs-we-already-know">Testing the direction on signs we already know</h3>
-<p>A stop sign faces the drivers it stops, and S3 already knows, for every city stop post, which street those drivers arrive along. So the right answer is known in advance. For each city stop post I took the nearest Mapillary stop sign within 15 m and compared.</p>
+<p>A stop sign faces the drivers it stops. For every city stop post, S3 already knows which street those drivers arrive along. So the right answer is known in advance. For each city stop post I took the nearest Mapillary stop sign within 15 m and compared.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/sources/mapillary_facing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Left: the idea. Right: the test. Pink bars are posts where Mapillary’s angle is within 45° of facing the drivers."><img src="outputs/sources/mapillary_facing.png" class="img-fluid figure-img" alt="Left: the idea. Right: the test. Pink bars are posts where Mapillary’s angle is within 45° of facing the drivers."></a></p>
 <figcaption>Left: the idea. Right: the test. Pink bars are posts where Mapillary’s angle is within 45° of facing the drivers.</figcaption>
 </figure>
 </div>
-<p>Of 139 city stop posts, 99 had a Mapillary stop sign within 15 m. For 69 of those, the angle was within 45° of facing the drivers, and only one pointed the way they travel. The median difference was 21°.</p>
-<p>So the angle is the way the sign faces (likely). A smaller group sits near 90° off, with a simple cause (likely): at an all-way stop, four stop signs stand within a few metres, and the nearest one can face the cross street. The main peak sits about 15° off zero, and I do not know why yet. Fifteen degrees never confuses two streets meeting at a junction, so it does not change how I use the angle. Still, a machine reading is evidence to check. Where a sign’s placement was in doubt, S3 uses Mapillary’s facing and then the photo itself (<a href="./s3-checks.html">S3 checks with photos</a>).</p>
+<p>Of 139 city stop posts, 99 had a Mapillary stop sign within 15 m. For 69 of those, the angle was within 45° of facing the drivers. Only one pointed the way they travel. The typical (median) difference was 21°.</p>
+<p>So the angle is the way the sign faces (likely). A smaller group sits near 90° off, and the cause is simple (likely). At an all-way stop, four stop signs stand within a few metres, and the nearest one can face the cross street. The main peak sits about 15° off zero, and I do not know why yet. Fifteen degrees never confuses two streets meeting at a junction, so it does not change how I use the angle. Still, a machine reading is evidence to check. Where a sign’s placement was in doubt, S3 uses Mapillary’s facing and then the photo itself (<a href="./s3-checks.html">S3 checks with photos</a>).</p>
 
 
 </section>

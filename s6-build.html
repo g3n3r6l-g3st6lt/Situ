@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -552,11 +552,11 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Ville de Montréal, <em>Arbres publics sur le territoire de la Ville</em></td>
-<td>each public tree: species, trunk diameter at breast height, planting date, street or park</td>
+<td>each public tree: species, trunk diameter at chest height, planting date, street or park</td>
 </tr>
 <tr class="even">
 <td>Ville de Montréal, <em>Bornes d’incendie</em></td>
-<td>each fire hydrant: position, status, installation date</td>
+<td>each fire hydrant, with its position, status and installation date</td>
 </tr>
 <tr class="odd">
 <td>Ville de Montréal, <em>Trottoir et îlot</em> (road asset database)</td>
@@ -564,7 +564,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Ville de Montréal, <em>Entraves et travaux en cours</em></td>
-<td>the road works listed on the day the file was saved</td>
+<td>the road works listed on the day I saved the file</td>
 </tr>
 <tr class="odd">
 <td>OpenStreetMap</td>
@@ -572,28 +572,28 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Mapillary map features (graph.mapillary.com), fetched 2026-10-16</td>
-<td>each street light, surveillance camera and painted crossing its software detected in photos, with the dates of the first and last photo; its hydrants, benches, bins and racks only to measure how often it agrees with the other sources</td>
+<td>each street light, surveillance camera and painted crossing its software found in photos, with the dates of the first and last photo; its hydrants, benches, bins and racks only to measure how often it agrees with the other sources</td>
 </tr>
 </tbody>
 </table>
-<p>The city’s files are open under CC BY 4.0, OpenStreetMap under ODbL, Mapillary’s map features under CC BY-SA 4.0. The large city files are clipped once to the study area, and S6 reads only the clipped copy. A point is kept when it lies inside the study area, and a sidewalk or island when its centre does, the rule <a href="./s4-build.html">S4</a> uses for buildings.</p>
+<p>The city’s files are open under CC BY 4.0 and OpenStreetMap under ODbL. Mapillary’s map features are under CC BY-SA 4.0. The large city files are clipped once to the study area, and S6 reads only the clipped copy. A point is kept when it lies inside the study area, and a sidewalk or island when its centre does, the rule <a href="./s4-build.html">S4</a> uses for buildings.</p>
 </section>
 <section id="values-as-the-source-gives-them" class="level2">
 <h2 class="anchored" data-anchor-id="values-as-the-source-gives-them">Values as the source gives them</h2>
-<p>S6 copies each value and changes none. A tree with no planting date keeps an empty date and the reason. A hydrant whose installation date is the city’s placeholder, 1 January 1900, keeps no date. A bench whose OpenStreetMap entry has no tags keeps none.</p>
+<p>S6 copies each value and changes none. A tree with no planting date keeps an empty date and the reason, and a bench with no tags in OpenStreetMap keeps none. A hydrant whose installation date is the city’s placeholder, 1 January 1900, keeps no date.</p>
 </section>
 <section id="objects-found-in-photos" class="level2">
 <h2 class="anchored" data-anchor-id="objects-found-in-photos">Objects found in photos</h2>
-<p>Mapillary’s software may place the same object twice, or see the two heads of one pole as two lights. S6 joins detections of one kind that lie within 3 m of each other, in a chain, and places the object at their mean. Each object keeps every detection it holds, the date of the first photo that shows it and the date of the last. Zebra stripes and plain crosswalk lines are both a crossing.</p>
-<p>An object found by Mapillary’s software and one of the same kind in OpenStreetMap less than 5 m apart are taken to be the same object, and each names the other. An object the software has found in no photo since 2023 becomes a checkpoint.</p>
+<p>Mapillary’s software may place one object twice, or see a pole’s two heads as two lights. So S6 joins detections of one kind lying within 3 m of each other, in a chain, and places the object at their mean. Each object keeps every detection it holds, with the dates of the first and last photo that show it. Zebra stripes and plain crosswalk lines both count as a crossing.</p>
+<p>An object from the photos and one of the same kind in OpenStreetMap less than 5 m apart count as one object, and each names the other. An object the software has found in no photo since 2023 becomes a checkpoint, a case set aside for a closer look.</p>
 </section>
 <section id="the-street-each-object-stands-on" class="level2">
 <h2 class="anchored" data-anchor-id="the-street-each-object-stands-on">The street each object stands on</h2>
-<p>Each object belongs to the nearest S1 segment within 30 m. An object farther away keeps no street and says why: most are trees in parks, or benches and tables along the canal path. The stress test below shows that the distance only decides whether an object has a street, never which one.</p>
+<p>Each object belongs to the nearest S1 segment, a stretch of street, within 30 m. An object farther away has no street and says why: most are trees in parks, or benches and tables along the canal path. The stress test below shows that the distance only decides whether an object has a street, never which one.</p>
 </section>
 <section id="width-of-a-sidewalk" class="level2">
 <h2 class="anchored" data-anchor-id="width-of-a-sidewalk">Width of a sidewalk</h2>
-<p>The city draws sidewalks as outlines and gives no width. S6 estimates a mean width as twice the area divided by the perimeter, which is exact for a long thin strip and a little low for short pieces. The median piece comes out about 2.3 m wide. A piece wider than 10 m on average would be listed for a look, since it is more likely a plaza or a joined drawing; none is.</p>
+<p>The city draws sidewalks as outlines and gives no width. S6 estimates a mean width as twice the area divided by the perimeter. This is exact for a long thin strip and a little low for short pieces. The typical (median) piece is about 2.3 m wide. A piece wider than 10 m on average would be listed for a look, since it is more likely a plaza or a joined drawing; none is.</p>
 </section>
 <section id="assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
@@ -622,7 +622,7 @@ ul.task-list li input[type="checkbox"] {
 <td>widths measured on site or from the curb lines</td>
 </tr>
 <tr class="odd">
-<td>the road works on one day stand for that day only</td>
+<td>the road works listed on one day stand for that day only</td>
 <td>the city’s list changes daily</td>
 <td>a copy of the list saved each week</td>
 </tr>
@@ -726,8 +726,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="stress-tests" class="level3">
 <h3 class="anchored" data-anchor-id="stress-tests">Stress tests</h3>
-<p>Run twice on the same input, S6 gives the same output (X1). X2 changes the link distance. At 10 m, 644 objects have no street; at 20 m, 294; at 30 m, 156; at 50 m, 75. No object ever moves to another street, so the distance decides only how far an object may stand from its street. Of the 75 objects still without one at 50 m, 39 are benches, tables, bins and racks and 28 are street lights, most likely in parks or along the canal, and 8 are park trees.</p>
-<p>X3 changes the distance within which detections of one kind become one object, from none to 8 m. Lights go from 877 to 628 and crossings from 111 to 73, while cameras barely change. The count of lights depends on this rule more than on anything else in S6. The matches with OpenStreetMap hold until 5 m and then fall a little.</p>
+<p>Run twice on the same input, S6 gives the same output (X1). X2 changes the link distance. At 10 m, 644 objects have no street; at 20 m, 294; at 30 m, 156; at 50 m, 75. No object ever moves to another street, so the distance decides only how far an object may stand from its street. Of the 75 objects still without one at 50 m, 39 are benches, tables, bins and racks, and 28 are street lights, most likely in parks or along the canal. The other 8 are park trees.</p>
+<p>X3 changes the distance within which detections of one kind become one object, from none to 8 m. Lights go from 877 to 628 and crossings from 111 to 73, while cameras barely change. The number of lights depends on this rule more than on anything else in S6. The matches with OpenStreetMap hold up to 5 m, then fall a little.</p>
 
 
 </section>

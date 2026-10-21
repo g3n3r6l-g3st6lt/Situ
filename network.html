@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -510,7 +510,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="why-i-made-it" class="level2">
 <h2 class="anchored" data-anchor-id="why-i-made-it">Why I made it</h2>
-<p>The city’s street file (Géobase) draws streets and leaves out most paths away from them, including the Lachine Canal path and the park paths in Griffintown. Space syntax, the method I use to measure how each street sits within the whole network (<a href="./space-syntax.html">what it is</a>), reads that network all at once (<a href="./space-syntax.html#what-this-means-for-my-data">why that matters</a>). So a missing path does double harm: its own place is empty, and the streets around it look less connected than they are.</p>
+<p>The city’s street file (Géobase) draws streets and leaves out most paths away from them. These include the Lachine Canal path and the park paths in Griffintown. Space syntax measures how each street sits within the whole network (<a href="./space-syntax.html">what it is</a>), so it reads the network all at once (<a href="./space-syntax.html#what-this-means-for-my-data">why that matters</a>). A missing path therefore does double harm. Its own place is empty, and the streets around it look less connected than they are.</p>
 <p>Before running the analysis, I built one walking network for the whole island of Montréal, with the paths people actually use. My earlier analysis files (Sample 4) stay untouched beside it. Cars get <a href="#the-driving-network">their own network</a>.</p>
 </section>
 <section id="what-changed" class="level2">
@@ -519,17 +519,17 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Taken out</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Added</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Highways come out, because nobody walks on them, and so do streets that exist only as plans. Painted bike lanes and paths lying on top of a street stay out, since the street is already there. Added pieces that join nothing are dropped, because a piece on its own would get meaningless values.</p>
+<p>Highways come out, because nobody walks on them. So do streets that exist only as plans. Painted bike lanes and paths drawn on top of a street stay out, since the street is already there. Added pieces that join nothing are dropped, because a piece on its own would get meaningless values.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>I added the off-street bike and multi-use paths from the city’s bike network, because people walk on them, including the separated paths on bridges that are filed under a highway. I also added the two Griffintown park paths I checked on photos in S1 (decision C18). Where a path end and a street do not quite touch in the data, a short straight line, which I call a connector, joins them. Every connector is listed.</p>
+<p>I added the off-street bike and multi-use paths from the city’s bike network, because people walk on them. That includes the separated paths on bridges, which the city files under a highway. I also added the two Griffintown park paths I checked on photos in S1 (decision C18). Sometimes a path end and a street do not quite touch in the data. There a short straight line joins them, which I call a connector. Every connector is listed.</p>
 </div>
 </div>
 </div>
 <p class="big-number">
 47,197 lines
 </p>
-<p>Of these, 740 are added path pieces, 161 km in all, and 416 are connectors.</p>
+<p>Of these, 740 are added path pieces (161 km in all) and 416 are connectors.</p>
 <p>The network carries the same October decisions as S1: the footway behind Brennan and Ann (C04), and the link across Place des Aiguilleurs from the end of Smith (C06).</p>
 </section>
 <section id="how-it-is-built" class="level2">
@@ -580,15 +580,15 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>A path counts as a duplicate when most of its length runs within 10 m of a street. Joining follows the S1 rules: a path end joins the nearest junction or street, and a street dead end may join the middle of a path. The gap may be 15 m across the island, and 25 m in Griffintown and at places I have checked on a photo, because only there have I looked. A path crossing a street with no junction stays unjoined, since it could be a bridge or a tunnel. Where a connector lands mid-street, the street is split there. Last, added pieces cut off from the main network are dropped; city streets never are.</p>
+<p>A path counts as a duplicate when most of its length runs within 10 m of a street. Joining follows the S1 rules. A path end joins the nearest junction or street, and a street dead end may join the middle of a path. Across the island the gap may be at most 15 m. In Griffintown, and at places I have checked on a photo, it may be 25 m, because only there have I looked. A path that crosses a street with no junction stays unjoined, since it could be a bridge or a tunnel. Where a connector lands mid-street, the street is split there. Last, added pieces cut off from the main network are dropped; city streets never are.</p>
 </div>
 </div>
 </div>
-<p>Six checks follow. They confirm that every walkable city street is still there at its full length and that no painted bike lane slipped in. Every connector is within its limit, and Griffintown matches S1. Two checks list what remains to look at: 73 places where an added path crosses a street with no junction, and six small parts cut off from the main network.</p>
+<p>Six checks follow. They confirm that every walkable city street is still there at its full length, and that no painted bike lane slipped in. Every connector is within its limit, and Griffintown matches S1. Two checks list what is left to look at: 73 places where an added path crosses a street with no junction, and six small parts cut off from the main network.</p>
 </section>
 <section id="a-checked-place-île-des-sœurs" class="level2">
 <h2 class="anchored" data-anchor-id="a-checked-place-île-des-sœurs">A checked place: Île-des-Sœurs</h2>
-<p>On the first run Île-des-Sœurs was cut off: the bike path from the bridge ends 15.2 m from the boulevard. Raising the limit for the whole island would have created joins everywhere else, so I checked this one place on a photo.</p>
+<p>On the first run, Île-des-Sœurs was cut off. The bike path from the bridge ends 15.2 m from the boulevard. Raising the limit for the whole island would have created joins everywhere else. So I checked this one place on a photo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/network_merge/evidence/M01_mapillary_2024-12-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The path meets Boulevard de l’Île-des-Sœurs at a painted crossing. Photo: Sacha862, December 2024, via Mapillary (CC BY-SA 4.0)."><img src="outputs/network_merge/evidence/M01_mapillary_2024-12-02.jpg" class="img-fluid figure-img" style="width:75.0%" alt="Street-level photo where the bike path meets Boulevard de l'Île-des-Soeurs."></a></p>
@@ -623,12 +623,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="risks" class="level2">
 <h2 class="anchored" data-anchor-id="risks">Risks</h2>
-<p>Every added path is a claim about where people can walk, so I want each to carry its evidence, a dated photo, that anyone can dispute. A connector could join two things that are separate in reality, which is why the gaps are short and every connector is listed. A real link could also stay unjoined, and the 73 crossings are listed so I can check them one by one. Near Griffintown the risk is low: one unjoined crossing within 800 m, four within 2 km.</p>
-<p>Bike paths stand in for footpaths, and a few may be unpleasant or closed to walking, so I took only separated paths and multi-use trails. The city maps park footpaths less well than bike paths, and I checked only Griffintown on photos, so values far from it are less certain.</p>
+<p>Every added path is a claim about where people can walk. I want each one to carry its evidence, a dated photo that anyone can dispute. A connector could join two things that are separate in reality. That is why the gaps are short and every connector is listed. A real link could also stay unjoined, so the 73 crossings are listed for me to check one by one. Near Griffintown the risk is low: one unjoined crossing within 800 m, four within 2 km.</p>
+<p>Bike paths stand in for footpaths, and a few may be unpleasant or closed to walking. So I took only separated paths and multi-use trails. The city maps park footpaths less well than bike paths, and I checked only Griffintown on photos. Values far from Griffintown are therefore less certain.</p>
 </section>
 <section id="the-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="the-analysis">The analysis</h2>
-<p>On 10 October I ran PlanX, the QGIS tool that computes the values, with the Sample 4 pedestrian settings: angular segment analysis at radii of 200, 400 and 800 m and the whole network. Every line kept its number and shape, so S2 can trace each value to one line. The first run that day used a faulty Smith link (C06) that joined Smith to itself (<a href="./s1-checks.html#decisions">how it was found</a>); the evening rerun, checked line by line, matches the network.</p>
+<p>On 10 October I ran PlanX, the QGIS tool that computes the values, with the Sample 4 pedestrian settings. That means angular segment analysis at radii of 200, 400 and 800 m and across the whole network. Every line kept its number and shape, so S2 can trace each value to one line. The first run that day used a faulty Smith link (C06) that joined Smith to itself (<a href="./s1-checks.html#decisions">how it was found</a>). The evening rerun, checked line by line, matches the network.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -639,13 +639,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>These values come from a different network, so they are a new measurement that replaces the Sample 4 pedestrian values. I keep both and say which one each figure uses.</p>
+<p>These values come from a different network, so they are a new measurement. They replace the Sample 4 pedestrian values. I keep both and say which one each figure uses.</p>
 </div>
 </div>
 </section>
 <section id="the-driving-network" class="level2">
 <h2 class="anchored" data-anchor-id="the-driving-network">The driving network</h2>
-<p>The vehicle network starts from every city line and leaves out the lines cars may not use under the S1 road classes, plus one small group of streets no car can reach. The rest stay exactly as the city drew them, highways included. Segment analysis reads every line as two-way, though one-way streets keep their direction in the data. I ran PlanX on it on 10 October, at radii of 1200 and 2000 m. The Sample 4 vehicle values came from a network with pedestrian ways in it; now no segment closed to cars carries a vehicle value (<a href="./s2-scores.html">S2</a>).</p>
+<p>The vehicle network starts from every city line. It leaves out the lines cars may not use under the S1 road classes, plus one small group of streets no car can reach. The rest stay exactly as the city drew them, highways included. Segment analysis reads every line as two-way, though one-way streets keep their direction in the data. I ran PlanX on it on 10 October, at radii of 1200 and 2000 m. The Sample 4 vehicle values came from a network that included pedestrian ways. Now no segment closed to cars carries a vehicle value (<a href="./s2-scores.html">S2</a>).</p>
 
 
 </section>

@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -549,7 +549,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="rules-i-assumed" class="level2">
 <h2 class="anchored" data-anchor-id="rules-i-assumed">Rules I assumed</h2>
-<p>The city publishes what each class of road is. Who may use it is my decision, so I wrote it down.</p>
+<p>The city publishes the class of each road. Who may use it is my decision, so I wrote it down.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -600,23 +600,23 @@ ul.task-list li input[type="checkbox"] {
 <td>Projected street</td>
 <td>no</td>
 <td>no</td>
-<td>removed, since it is not built yet</td>
+<td>removed: not built yet</td>
 </tr>
 </tbody>
 </table>
-<p>Which way cars may go comes from the city’s own one-way code for each street. Source for the road classes: Ville de Montréal, <em>Géobase, réseau routier</em> (<a href="./resources.html">Resources</a>).</p>
+<p>Which way cars may go comes from the city’s own one-way code for each street. The road classes come from Ville de Montréal, <em>Géobase, réseau routier</em> (<a href="./resources.html">Resources</a>).</p>
 </section>
 <section id="the-edge" class="level2">
 <h2 class="anchored" data-anchor-id="the-edge">The edge</h2>
-<p>People and cars come and go across the boundary, so S1 keeps the <a href="./s1-streets.html">edge</a> and treats it by the same rules as the inside, for walkers and for the direction of cars. The tests, and later the agents, treat the rest of the city as reachable from the exits. S3 reads the signs on the edge too, so a junction on the boundary sees every street that meets it. Later systems decide what to do with the edge: S4 puts no buildings there, and S9 measures inside the boundary only.</p>
+<p>People and cars cross the boundary, so S1 keeps the <a href="./s1-streets.html">edge</a> and applies the same rules there as inside, for walkers and for the direction of cars. The tests, and later the agents, assume the rest of the city can be reached from the exits. S3 reads the signs on the edge too, so a junction on the boundary sees every street that meets it. Later systems decide what to do with the edge: S4 puts no buildings there, and S9 measures inside the boundary only.</p>
 </section>
 <section id="numbering" class="level2">
 <h2 class="anchored" data-anchor-id="numbering">Numbering</h2>
-<p>Pieces from decisions taken after the October rebuild are numbered after everything else, the edge included. Confirming or rejecting one of them then never changes another id.</p>
+<p>Pieces added by decisions after the October rebuild are numbered after everything else, the edge included. That way, confirming or rejecting one of them never changes another id.</p>
 </section>
 <section id="joining-an-added-path" class="level2">
 <h2 class="anchored" data-anchor-id="joining-an-added-path">Joining an added path</h2>
-<p>Each end of an added path joins whatever is nearest within 25 m: a junction, or a street that gets cut at that spot. A junction wins when it is at most 5 m further away. A street dead end within 25 m of the middle of a path is joined to it too, which is how the Allées reach the canal. A decision taken from a photo may instead name the street to join, and reach up to 60 m.</p>
+<p>Each end of an added path joins whatever is nearest within 25 m: a junction, or a street that gets cut at that spot. A junction wins if it is at most 5 m further away. A street dead end within 25 m of the middle of a path is joined to it too. That is how the Allées reach the canal. A decision taken from a photo may instead name the street to join, up to 60 m away.</p>
 </section>
 <section id="two-ideas-behind-it" class="level2">
 <h2 class="anchored" data-anchor-id="two-ideas-behind-it">Two ideas behind it</h2>
@@ -624,10 +624,10 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Inside or outside?</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">How far can I get?</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>To decide whether a point lies inside the study area, imagine a line going right from it and count how many times it crosses the outline. An odd count means inside. The method is called ray casting, and S1 applies it to the halfway point of each segment.</p>
+<p>To tell whether a point lies inside the study area, imagine a line running right from it and count how often it crosses the outline. An odd count means inside. This is called ray casting. S1 applies it to the halfway point of each segment.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Start at one junction and take every allowed move, then every move from each place you reached, and so on. The method is called breadth-first search, and each round is one step. The reach view in the <a href="./lab.html">Lab</a> plays it round by round.</p>
+<p>Start at one junction and take every allowed move. Then take every move from each place you reached, and so on. This is called breadth-first search, and each round is one step. The reach view in the <a href="./lab.html">Lab</a> plays it round by round.</p>
 </div>
 </div>
 </div>
@@ -684,17 +684,17 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>T7</td>
 <td>Do any lines cross without a junction?</td>
-<td>only the overpass of Autoroute 10 over Rue de la Commune, confirmed (C01)</td>
+<td>only where Autoroute 10 passes over Rue de la Commune, confirmed (C01)</td>
 </tr>
 </tbody>
 </table>
-<p>T2 and T4 treat the city as connected beyond the exits. T5 matters for later systems, because they join their data to S1 through the city’s ids. The <a href="./lab.html">Lab</a> shows the latest results.</p>
+<p>T2 and T4 treat the city as connected beyond the exits. T5 matters later, because other systems join their data to S1 through the city’s ids. The <a href="./lab.html">Lab</a> shows the latest results.</p>
 </section>
 <section id="reach-in-the-lab" class="level3">
 <h3 class="anchored" data-anchor-id="reach-in-the-lab">Reach, in the Lab</h3>
-<p>T2 and T4 ask the question for every junction at once. To watch one case, open the <a href="./lab.html#reach-J080">Lab</a> at Rue Peel and Rue Wellington (J080) and press play. Each step goes one junction further. You can switch between on foot and by car, and choose whether the city beyond the exits counts. Clicking any other junction starts from there.</p>
-<p>From J080, the walker reaches all 212 walkable segments in 18 steps. The car reaches 181 of 182 drivable segments without leaving the area. The last one, Boulevard Georges-Vanier (white dashed), can only be reached by leaving Griffintown and coming back in. The cause lies in where the boundary is drawn; the data is fine.</p>
-<p>Steps count junctions. Distances in metres are in the route tool on <a href="./s1-streets.html">S1 Streets</a>, and time comes later, when S9 gives its imagined walkers and cars a speed.</p>
+<p>T2 and T4 ask their question for every junction at once. To watch one case, open the <a href="./lab.html#reach-J080">Lab</a> at Rue Peel and Rue Wellington (J080) and press play. Each step goes one junction further. You can switch between walking and driving, and choose whether the city beyond the exits counts. Click any other junction to start from there.</p>
+<p>From J080, a walker reaches all 212 walkable segments in 18 steps. A car reaches 181 of 182 drivable segments without leaving the area. The last one, Boulevard Georges-Vanier (white dashed), can only be reached by leaving Griffintown and coming back in. That comes from where the boundary is drawn. The data is fine.</p>
+<p>Steps count junctions. Distances in metres are in the route tool on <a href="./s1-streets.html">S1 Streets</a>. Time comes later, when S9 gives its imagined walkers and cars a speed.</p>
 
 
 </section>

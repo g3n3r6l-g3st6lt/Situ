@@ -25,14 +25,19 @@ T7  Does the comparison with the counts follow from the flows and the S5 table?
     PASS
 
 T8  Is every rule the code names in the ledger, once?
-    12 assumptions, 5 pieces of evidence
+    13 assumptions, 5 pieces of evidence
     PASS
 
-T9  What does this slice of S9 give? (report)
+T9  Does the comparison with the ring outside the area follow from the doors, the targets and S5's ring, weekdays only?
+    23 sites x 2 hours, 389 trips leave or enter through a door
+    PASS
+
+T10 What does this slice of S9 give? (report)
     3532 walks between 6:00 and 9:59: resident walks to the bus 303, resident walks to the metro 766, resident walks to work downtown 1134, resident walks to work here 262, worker walks from the bus 338, worker walks from the metro 729
     shortest: median walk 584 m; share of counted pedestrians at 7 h and 8 h: 27%, 22%; rho with walking choice (whole island) 0.238
     open: median walk 587 m; share of counted pedestrians at 7 h and 8 h: 27%, 23%; rho with walking choice (whole island) 0.259
     straight: median walk 698 m; share of counted pedestrians at 7 h and 8 h: 27%, 23%; rho with walking choice (whole island) 0.288
+    ring outside the area: commuters pass 0.5% of the weekday pedestrians counted at 8 h, at 3 of 23 sites
     rho with the counts rests on 7 junctions: too few to tell readings apart
 
 ALL PASS

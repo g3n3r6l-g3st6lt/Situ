@@ -42,7 +42,7 @@
       this.fit(false);           // a first view; the explorer fits again once its panel exists
       this.events();
       this.autoFit = true;                       // until someone zooms or drags, a resize refits the whole area
-      new ResizeObserver(() => this.autoFit ? this.fit(false) : this.apply()).observe(host);
+      new ResizeObserver(() => { this.dirty = true; this.autoFit ? this.fit(false) : this.apply(); }).observe(host);
     }
 
     // ---------------------------------------------------------------- layers and drawing
@@ -71,6 +71,54 @@
       const [A, C, B] = [a, c, b].map(p => this.P(p));
       return this.path(g, `M${A} Q${C} ${B}`, attrs);
     }
+    // many dots as ONE element: zero-length strokes with round (or square) caps keep their size on screen at any
+    // zoom, so a layer of thousands of objects is a handful of paths that never need redrawing
+    dots(g, pts, sizepx, attrs) {
+      if (!pts.length) return null;
+      const d = pts.map(p => { const [x, y] = this.P(p); return "M" + x + "," + y + "h0"; }).join("");
+      return el("path", Object.assign({ d, fill: "none", "stroke-width": sizepx, "stroke-linecap": "round",
+        "vector-effect": "non-scaling-stroke" }, attrs), g);
+    }
+    // an icon from the explorer's <symbol> set, sizepx wide on screen
+    icon(g, p, id, sizepx, attrs) {
+      const s = this.px(sizepx), [x, y] = this.P(p);
+      return el("use", Object.assign({ href: "#" + id, x: x - s / 2, y: y - s / 2, width: s, height: s }, attrs), g);
+    }
+    defs() { return this.defsEl || (this.defsEl = el("defs", {}, this.svg)); }
+    // things to point at without one hidden circle each: a grid of {xy, tip, click}; the nearest within 10 px answers
+    setHits(list) {
+      const cell = 40, grid = new Map();
+      for (const h of list) {
+        const k = Math.floor(h.xy[0] / cell) + ":" + Math.floor(h.xy[1] / cell);
+        if (!grid.has(k)) grid.set(k, []);
+        grid.get(k).push(h);
+      }
+      this.hits = { cell, grid };
+      if (!this.hitsOn) {
+        this.hitsOn = true;
+        const near = e => {
+          if (!this.hits) return null;
+          const r = this.svg.getBoundingClientRect(), w = this.toWorld(e.clientX - r.left, e.clientY - r.top), reach = this.px(10);
+          const { cell, grid } = this.hits, cx = Math.floor(w[0] / cell), cy = Math.floor(w[1] / cell), n = Math.ceil(reach / cell);
+          let best = null, bd = reach;
+          for (let i = cx - n; i <= cx + n; i++) for (let j = cy - n; j <= cy + n; j++)
+            for (const h of grid.get(i + ":" + j) || []) { const d = Math.hypot(h.xy[0] - w[0], h.xy[1] - w[1]); if (d < bd) { bd = d; best = h; } }
+          return best;
+        };
+        this.svg.addEventListener("pointermove", e => {
+          if (e.buttons) return;
+          const h = near(e);
+          if (h) { this.tip(e, h.tip()); this.svg.style.cursor = h.click ? "pointer" : ""; this.hitShown = true; }
+          else if (this.hitShown) { this.untip(); this.svg.style.cursor = ""; this.hitShown = false; }
+        });
+        this.svg.addEventListener("click", e => {
+          if (this.wasDrag() || e.target.closest(".sx-hit, .sx-jhit")) return;
+          const h = near(e);
+          if (h && h.click) h.click();
+        });
+      }
+    }
+    clearHits() { this.hits = null; }
     dot(g, p, rpx, attrs) { const [x, y] = this.P(p); return el("circle", Object.assign({ cx: x, cy: y, r: this.px(rpx) }, attrs), g); }
     square(g, p, spx, attrs) {
       const s = this.px(spx), [x, y] = this.P(p);
@@ -109,14 +157,27 @@
       return [this.view.x - this.view.w / 2 + sx / k, -(-this.view.y - this.viewH() / 2 + sy / k)];
     }
     viewH() { if (!this.cw) this.measure(); return this.view.w * this.ch / this.cw; }
-    apply() {
+    // apply(): move the view, then redraw what depends on the zoom. While someone drags, wheels or a view glides,
+    // only the view moves; the marks are redrawn once, when the gesture stops. Rebuilding thousands of marks
+    // on every frame was what made the busy tabs slow.
+    apply(later) {
       this.measure();
       const h = this.viewH();
       const [cx, cy] = this.P([this.view.x, this.view.y]);
       this.svg.setAttribute("viewBox", [cx - this.view.w / 2, cy - h / 2, this.view.w, h].join(" "));
+      if (later) { this.redrawSoon(later === true ? 140 : later); return; }
+      this.redraw();
+    }
+    redraw() {
+      clearTimeout(this.pending);
+      this.pending = null;
+      if (this.drawnW === this.view.w && this.drawnX === this.view.x && this.drawnY === this.view.y && !this.dirty) return;
+      this.drawnW = this.view.w; this.drawnX = this.view.x; this.drawnY = this.view.y; this.dirty = false;
       this.boxes = [];
       for (const fn of this.redraws) fn();
     }
+    redrawSoon(ms) { clearTimeout(this.pending); this.pending = setTimeout(() => this.redraw(), ms); }
+    refresh() { this.dirty = true; this.redraw(); }       // the explorer changed what is drawn: draw again now
     // the whole area, in the part of the map a floating panel leaves free
     fit(animate) {
       const [x0, y0, x1, y1] = this.bounds, pad = 1.06;
@@ -141,7 +202,7 @@
         const t = ease(Math.min(1, (now - t0) / ms));
         this.view = { x: from.x + (target.x - from.x) * t, y: from.y + (target.y - from.y) * t,
                       w: from.w * Math.pow(target.w / from.w, t) };
-        this.apply();
+        this.apply(t < 1 ? 400 : false);
         if (t < 1) this.anim = requestAnimationFrame(step);
       };
       this.anim = requestAnimationFrame(step);
@@ -156,7 +217,7 @@
       const after = this.toWorld(sx, sy);
       this.view.x += before[0] - after[0];
       this.view.y += before[1] - after[1];
-      this.apply();
+      this.apply(true);
     }
 
     // ---------------------------------------------------------------- pointer
@@ -195,9 +256,13 @@
         const k = this.k();
         this.view.x = drag.vx - dx / k;
         this.view.y = drag.vy + dy / k;
-        this.apply();
+        if (!this.frame) this.frame = requestAnimationFrame(() => { this.frame = null; this.apply(400); });
       });
-      const end = e => { touches.delete(e.pointerId); if (touches.size < 2) pinch = null; drag = null; };
+      const end = e => {
+        touches.delete(e.pointerId); if (touches.size < 2) pinch = null;
+        if (drag && this.moved) this.apply(60);
+        drag = null;
+      };
       window.addEventListener("pointerup", end);
       window.addEventListener("pointercancel", end);
     }

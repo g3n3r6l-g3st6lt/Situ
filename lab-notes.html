@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -503,13 +503,13 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-the-lab-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-lab-is">What the Lab is</h2>
-<p>The <a href="./lab.html">Lab</a> is one map with a tab for each system, where I try a system and see the places it still leaves open. Clicking anything shows what every system knows about it.</p>
-<p>The Lab replays results and never recomputes them. Every street colour and slider position shows something a system already wrote down; the reach slider, for instance, steps through how far S1 found you can get from a junction. Each rule therefore lives in one place, and the Lab cannot quietly disagree with it.</p>
-<p>Routes are the one small exception. Storing every route between every pair of junctions would take many megabytes, so I store only the shortest distances and the last step of each shortest route. The browser then follows each route back and tests each street against the detour allowed. Those two rules exist twice, beside the systems and in the browser, and a test runs both on 45,600 cases to check they give the same streets.</p>
+<p>The <a href="./lab.html">Lab</a> is one map with a tab for each system. There I try a system and see the places it still leaves open. Click anything to see what every system knows about it.</p>
+<p>The Lab replays results. It never recomputes them. Every street colour and slider position shows something a system already wrote down: the reach slider, for instance, steps through how far S1 found you can get from a junction. So each rule lives in one place, and the Lab cannot quietly disagree with it.</p>
+<p>Routes are the one small exception. Storing every route between every pair of junctions would take many megabytes. So I store only the shortest distances and the last step of each shortest route. The browser follows each route back and tests each street against the detour allowed. Those two rules exist twice, beside the systems and in the browser, and a test runs both on 45,600 cases to check they give the same streets.</p>
 </section>
 <section id="what-it-shows" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-shows">What it shows</h2>
-<p>One system shows at a time, because two colourings on one street cannot be read. Each tab has few controls, and it lists its checkpoints by kind, with the reason each kind matters and the result of its last tests.</p>
+<p>One system shows at a time, because two colourings on one street cannot be read. Each tab has few controls. It lists its checkpoints by kind, with why each kind matters and the result of its last tests.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -526,18 +526,18 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>S1 Streets</td>
-<td>who may use each street, and where gates and dead ends stand</td>
-<td>how far you can get from a junction, and every street a trip up to 50 % longer than the shortest could use</td>
+<td>who may use each street, and where gates and dead ends are</td>
+<td>how far you can get from a junction, how many minutes on foot it takes to reach each street, and every street a trip up to 50 % longer than the shortest could use</td>
 </tr>
 <tr class="even">
 <td>S2 Scores</td>
 <td>choice or integration, on foot or by car</td>
-<td>a distance slider that can play</td>
+<td>a distance slider you can play</td>
 </tr>
 <tr class="odd">
 <td>S3 Rules</td>
 <td>stops and lights, or speed limits</td>
-<td>click a junction, then a street arriving at it, for its rules and signs</td>
+<td>click a junction, then a street arriving at it, to see its rules and signs</td>
 </tr>
 <tr class="even">
 <td>S4 Buildings</td>
@@ -549,9 +549,29 @@ ul.task-list li input[type="checkbox"] {
 <td>places open or closed, the counts at the counted junctions, and the bicycle detectors</td>
 <td>a day, an hour and a mode (and a season for bicycles), and a day that plays</td>
 </tr>
+<tr class="even">
+<td>S6 Streetscape</td>
+<td>trees, hydrants, furniture, lights, cameras, crossings and road works, each with its own icon once you zoom in; sidewalks by material or age</td>
+<td>one kind of object at a time</td>
+</tr>
+<tr class="odd">
+<td>S7 Commuters</td>
+<td>buildings with homes, sized by their commuters, with metro entrances and bus stops</td>
+<td>one way of travelling at a time</td>
+</tr>
+<tr class="even">
+<td>S8 Views</td>
+<td>how much each street lets you see</td>
+<td>walk and look: pick two points, and a walker shows what it sees along the way</td>
+</tr>
+<tr class="odd">
+<td>S9 Observer</td>
+<td>the morning’s imagined walkers, and the counts inside and around the area</td>
+<td>a reading and an hour</td>
+</tr>
 </tbody>
 </table>
-<p>Integration and choice are the <a href="./space-syntax.html">space syntax</a> measures S2 attaches to each street: how easy it is to reach, and how often it lies on the way between other places. The stress tests sit with each system’s tests, where their numbers can be read in full.</p>
+<p>Integration and choice are the <a href="./space-syntax.html">space syntax</a> measures S2 gives each street. Integration is how easy a street is to reach. Choice is how often it lies on the way between other places. The stress tests sit with each system’s tests, where their numbers can be read in full.</p>
 </section>
 <section id="how-it-is-built" class="level2">
 <h2 class="anchored" data-anchor-id="how-it-is-built">How it is built</h2>
@@ -561,30 +581,15 @@ ul.task-list li input[type="checkbox"] {
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-  B1["S1 Streets&lt;br/&gt;results and checks"]:::step --&gt; W1["copy for the Lab"]:::step
-  B2["S2 Scores&lt;br/&gt;results and checks"]:::step --&gt; W2["copy for the Lab"]:::step
-  B3["S3 Rules&lt;br/&gt;results and checks"]:::step --&gt; W3["copy for the Lab"]:::step
-  C["shared way of copying"]:::rule --&gt; W1
-  C --&gt; W2
-  C --&gt; W3
-  W1 --&gt; D1[/"S1 data"/]:::out
-  W2 --&gt; D2[/"S2 data"/]:::out
-  W3 --&gt; D3[/"S3 data"/]:::out
-  B1 --&gt; R1["shortest routes"]:::step
-  R1 --&gt; D4[/"route data"/]:::out
-  D4 --&gt; L
-  D4 --&gt; T
-  D1 --&gt; L["the Lab"]:::test
-  D2 --&gt; L
-  D3 --&gt; L
-  B4["S4 Buildings&lt;br/&gt;results and checks"]:::step --&gt; W4["copy for the Lab"]:::step
-  C --&gt; W4
-  W4 --&gt; D5[/"S4 data"/]:::out
-  D5 --&gt; L
-  D5 --&gt; T
-  D1 --&gt; T["the Lab checks&lt;br/&gt;L1 to L6"]:::test
-  D2 --&gt; T
-  D3 --&gt; T
+  S["each system, S1 to S9&lt;br/&gt;results and checks"]:::step --&gt; W["copy for the Lab"]:::step
+  C["shared way of copying"]:::rule --&gt; W
+  W --&gt; D[/"one data file&lt;br/&gt;per system"/]:::out
+  S1["S1 streets"]:::step --&gt; R["shortest routes"]:::step
+  R --&gt; D
+  K["walk tools&lt;br/&gt;minutes and views"]:::step --&gt; L
+  D --&gt; L["the Lab"]:::test
+  D --&gt; T["the Lab checks&lt;br/&gt;L1 to L12"]:::test
+  K --&gt; T
   classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
   classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6
   classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff
@@ -595,11 +600,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Each system copies its tables into one file for the Lab. A browser may refuse to read a data file from the disk, yet it always runs a script, so each file is written as a small script and the Lab works even without a server.</p>
+<p>Each system copies its tables into one file for the Lab. A browser may refuse to read a data file from the disk, yet it always runs a script. So each file is written as a small script, and the Lab works even without a server.</p>
 </section>
 <section id="tests" class="level2">
 <h2 class="anchored" data-anchor-id="tests">How the Lab is tested</h2>
-<p>The eleven Lab checks ask one thing: does the Lab show exactly what the systems wrote?</p>
+<p>The twelve Lab checks ask one thing: does the Lab show exactly what the systems wrote?</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -626,11 +631,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>L4</td>
-<td>The Lab no longer shows the S3 stress results, though its data still holds them. Do they give the same counts as the S3 stress tests?</td>
+<td>The Lab no longer shows the S3 stress results, but its data still holds them. Do they give the same counts as the S3 stress tests?</td>
 </tr>
 <tr class="odd">
 <td>L5</td>
-<td>Is every shortest route real and truly shortest, and do the browser’s route rules give the original routes?</td>
+<td>Is every shortest route real and truly the shortest, and do the browser’s route rules give back the original routes?</td>
 </tr>
 <tr class="even">
 <td>L6</td>
@@ -638,7 +643,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>L7</td>
-<td>Do the S5 weekday shape, junction counts, each place’s week and the open counts equal the S5 tables?</td>
+<td>Do the S5 weekday shape, junction counts, each place’s week, the open counts and the ring outside the area equal the S5 tables?</td>
 </tr>
 <tr class="even">
 <td>L8</td>
@@ -654,12 +659,16 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>L11</td>
-<td>Do the S9 street flows, counted junctions and ledger equal the S9 tables?</td>
+<td>Do the S9 street flows, counted junctions, ring comparison, expectations and ledger equal the S9 tables?</td>
+</tr>
+<tr class="even">
+<td>L12</td>
+<td>Do the walk tools measure what the systems measure? Sixty walks between random points equal S7’s shortest walks, and thirty views equal S8’s within 2 % (0.04 % on average).</td>
 </tr>
 </tbody>
 </table>
-<p>All eleven pass; the <a href="./lab.html">Lab</a> shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it; earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught each change. For L7, I changed one letter of a place’s week, and L7 caught it.</p>
-<p>The shortest-route check does not trust the method that found the routes. If a route is real and no single move anywhere could shorten any distance, then no shorter route exists. That condition is checked separately, for every start and every move.</p>
+<p>All twelve pass, and the <a href="./lab.html">Lab</a> shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught both. For L7, I changed one letter of a place’s week, and L7 caught it.</p>
+<p>The shortest-route check does not trust the method that found the routes. It uses a simple test instead: if a route is real, and no single move anywhere could shorten any distance, then no shorter route exists. That condition is checked separately, for every start and every move.</p>
 
 
 </section>

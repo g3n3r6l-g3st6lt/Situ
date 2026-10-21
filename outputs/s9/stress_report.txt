@@ -10,8 +10,11 @@ X2  Reading 'open': how much longer the most enclosed street feels (S9 uses 0.5)
 
 X3  Where walkers to work outside the area are sent (S9: Place Ville Marie)
     Place Ville Marie    : doors J166 239, J187 228, J167 225; J181 at 7 and 8 h: 0; share of counted pedestrians 27% at 7 h, 22% at 8 h; rho with walking choice 0.238
+                           ring sites reached: C1404, C1511, C392; share of the ring's count at 8 h 0.5%
     Square-Victoria-OACI : doors J187 523, J172 256, J170 135; J181 at 7 and 8 h: 0; share of counted pedestrians 30% at 7 h, 26% at 8 h; rho with walking choice 0.259
+                           ring sites reached: C392; share of the ring's count at 8 h 0.1%
     Peel                 : doors J187 287, J167 260, J178 197; J181 at 7 and 8 h: 0; share of counted pedestrians 27% at 7 h, 22% at 8 h; rho with walking choice 0.255
+                           ring sites reached: C1511, C392; share of the ring's count at 8 h 0.2%
 
 X4  Share of resident walkers who work inside the area (S9: q = 0.1887)
     0.0   : share of counted pedestrians 26% at 7 h, 21% at 8 h; rho with walking choice 0.161
@@ -24,3 +27,10 @@ X5  Reading 'straight': degrees of turning one metre is worth (S9: 0, length onl
     0.02 :  33% change route; 13% walk over 25 % further than the shortest; median walk 682 m; share of counted pedestrians 26% at 7 h, 22% at 8 h; rho with walking choice 0.291
     0.1  :  28% change route; 7% walk over 25 % further than the shortest; median walk 628 m; share of counted pedestrians 24% at 7 h, 20% at 8 h; rho with walking choice 0.3
     (at 0.1 a right angle is worth 900 m of walking)
+
+X6  Beyond the doors: how close the straight leg must come to a ring site (S9: 40 m)
+    20 m: Lucien-L'Allier / Saint-Jacques 40; share of the ring's count at 8 h 0.4%
+    40 m: Lucien-L'Allier / Saint-Jacques 40; Saint-Jacques / Square Victoria Est 11; Guy / Saint-Jacques 3; share of the ring's count at 8 h 0.5%
+    80 m: Lucien-L'Allier / Saint-Jacques 95; Guy / Saint-Jacques 37; Saint-Jacques / Square Victoria Est 11; McGill / Notre-Dame 5; rue McGill / rue des Récollets 3; share of the ring's count at 8 h 1.5%
+    (across the canal no site gets a commuter at any distance tried; towards Old Montreal only the widest band
+     catches a handful at McGill, against counts in the hundreds and thousands)

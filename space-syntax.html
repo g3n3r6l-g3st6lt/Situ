@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -510,22 +510,22 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="in-short" class="level2">
 <h2 class="anchored" data-anchor-id="in-short">Where it comes from</h2>
-<p>Space syntax began with Bill Hillier and Julienne Hanson at University College London. Their book <em>The Social Logic of Space</em> (1984) argued that the arrangement of spaces carries social meaning and can be measured. Applied to a city, the method asks two questions about every street: how easy it is to reach from everywhere else, and how often it lies on the way between other places.</p>
-<p>It looks at the shape of the network and nothing else. I find that limit useful, because it lets me ask how much of Griffintown’s movement the layout alone can explain.</p>
+<p>Space syntax began with Bill Hillier and Julienne Hanson at University College London. Their book <em>The Social Logic of Space</em> (1984) argued that the way spaces are arranged carries social meaning, and that it can be measured. In a city, the method asks two questions about every street: how easy it is to reach from everywhere else, and how often it lies on the way between other places.</p>
+<p>It looks at the shape of the network and nothing else. I find that limit useful. It lets me ask how much of Griffintown’s movement the layout alone can explain.</p>
 </section>
 <section id="segments-and-depth" class="level2">
 <h2 class="anchored" data-anchor-id="segments-and-depth">Segments and depth</h2>
-<p>The unit is the segment, a piece of street between two junctions, as in <a href="./s1-streets.html">S1 Streets</a>. Depth is the distance between two segments, counted in angles: a right angle costs 1 and a 45° turn costs 0.5 (Turner 2007, p.&nbsp;542). Hillier and Iida (2005) found that counting turns matched observed movement better than counting metres. Turner also showed that ordinary street centrelines can be analysed this way, so I can use the city’s own street file.</p>
+<p>The unit is the segment: a piece of street between two junctions, as in <a href="./s1-streets.html">S1 Streets</a>. Depth is the distance between two segments, counted by how much you turn. A right angle costs 1 and a 45° turn costs 0.5 (Turner 2007, p.&nbsp;542). Hillier and Iida (2005) found that counting turns matched observed movement better than counting metres. Turner also showed that ordinary street centrelines can be analysed this way, so I can use the city’s own street file.</p>
 </section>
 <section id="integration-and-choice" class="level2">
 <h2 class="anchored" data-anchor-id="integration-and-choice">Integration and choice</h2>
-<p>Integration measures how close a segment is, on average, to every other segment: a street with high integration is easy to get to. Network science calls this closeness centrality (Sabidussi 1966).</p>
-<p>Choice imagines the shortest route between every pair of segments and counts how many of those routes pass through each one: a street with high choice is often passed through. Network science calls this betweenness centrality (Freeman 1977).</p>
-<p>The results also report normalised versions (Hillier, Yang &amp; Turner 2012, pp.&nbsp;160, 165 and 191). NAIN rescales integration so that networks of different sizes can be compared. NACH does the same for choice and evens out its skew, where a few streets score very high and most score low. The paper gives two versions of NAIN, so I compare numbers only within one (<a href="./readings-check.html#which-nain">Reading closely</a>).</p>
+<p>Integration measures how close a segment is, on average, to every other segment. A street with high integration is easy to get to. Network science calls this closeness centrality (Sabidussi 1966).</p>
+<p>Choice imagines the shortest route between every pair of segments and counts how many of those routes pass through each one. A street with high choice is often passed through. Network science calls this betweenness centrality (Freeman 1977).</p>
+<p>The results also include normalised versions (Hillier, Yang &amp; Turner 2012, pp.&nbsp;160, 165 and 191). NAIN rescales integration so that networks of different sizes can be compared. NACH does the same for choice. It also evens out a skew in choice, where a few streets score very high and most score low. The paper gives two versions of NAIN, so I compare NAIN numbers only within one version (<a href="./readings-check.html#which-nain">Reading closely</a>).</p>
 </section>
 <section id="natural-movement" class="level2">
 <h2 class="anchored" data-anchor-id="natural-movement">Natural movement</h2>
-<p>Hillier, Penn, Hanson, Grajewski and Xu (1993) called their central claim “natural movement”: the shape of the network is a main driver of how many people walk each street. The full references are in <a href="./resources.html">Resources</a>.</p>
+<p>Hillier, Penn, Hanson, Grajewski and Xu (1993) called their central claim “natural movement”. It says the shape of the network is a main driver of how many people walk each street. The full references are in <a href="./resources.html">Resources</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -536,34 +536,34 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The claim is influential, and its strength varies with place and land use. In the 1993 paper itself, the correlation between integration and movement across ten parts of King’s Cross ranged from 0.25 to 0.80, and shops could multiply movement beyond what the layout predicts (Hillier et al.&nbsp;1993, pp.&nbsp;31, 46). Ratti (2004, p.&nbsp;492) adds that results depend on how the map is drawn and that the method leaves land use out. So in Situ the claim is something I test in Griffintown.</p>
+<p>The claim is influential, and its strength varies with place and land use. In the 1993 paper itself, the correlation between integration and movement across ten parts of King’s Cross ranged from 0.25 to 0.80. Shops could also multiply movement beyond what the layout predicts (Hillier et al.&nbsp;1993, pp.&nbsp;31, 46). Ratti (2004, p.&nbsp;492) adds that results depend on how the map is drawn, and that the method leaves land use out. So in Situ the claim is something I test in Griffintown.</p>
 </div>
 </div>
 </section>
 <section id="radius" class="level2">
 <h2 class="anchored" data-anchor-id="radius">Radius</h2>
-<p>The analysis can be limited to a distance around each segment, called the radius. At 400 m it asks how central a street is within about five minutes’ walk; radius n has no limit, which here means the whole island. Studies usually take 400 to 800 m as the low radius and 4,000 to 8,000 m as the high one (van Nes &amp; Yamu 2021, p.&nbsp;65). My analysis uses 200, 400 and 800 m and radius n for walking, and 1200 and 2000 m for driving. A street can be central at 400 m and peripheral at radius n, and that contrast often tells me more than any single value.</p>
+<p>The analysis can be limited to a distance around each segment, called the radius. At 400 m it asks how central a street is within about five minutes’ walk. Radius n has no limit, which here means the whole island. Studies usually take 400 to 800 m as the low radius and 4,000 to 8,000 m as the high one (van Nes &amp; Yamu 2021, p.&nbsp;65). For walking I use 200, 400 and 800 m and radius n.&nbsp;For driving I use 1200 and 2000 m. A street can be central at 400 m and remote at radius n.&nbsp;That contrast often tells me more than any single value.</p>
 </section>
 <section id="a-made-up-town" class="level2">
 <h2 class="anchored" data-anchor-id="a-made-up-town">A made-up town</h2>
-<p>I invented this town so the numbers can be checked by hand, with depth counted as one step per change of street. It has a main street (M1 to M5), cross streets to the north and south, a back street (B1, B2) and a cul-de-sac (C1, C2).</p>
+<p>I invented this town so the numbers can be checked by hand. Here depth counts one step per change of street. The town has a main street (M1 to M5), cross streets to the north and south, a back street (B1, B2) and a cul-de-sac (C1, C2).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/space_syntax/toy_space_syntax.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Depth from M1, then integration, then choice, on the same made-up town."><img src="outputs/space_syntax/toy_space_syntax.png" class="img-fluid figure-img" alt="Three copies of a made-up street network showing depth, integration and choice."></a></p>
-<figcaption>Depth from M1, then integration, then choice, on the same made-up town.</figcaption>
+<p><a href="outputs/space_syntax/toy_space_syntax.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The made-up town, drawn once for each measure in the tabs below."><img src="outputs/space_syntax/toy_space_syntax.png" class="img-fluid figure-img" alt="A made-up street network, drawn once for each measure."></a></p>
+<figcaption>The made-up town, drawn once for each measure in the tabs below.</figcaption>
 </figure>
 </div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Depth</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Integration</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Choice</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Starting from M1 at depth 0, every street one step away has depth 1, the next ones depth 2, and so on. C2, at the end of the cul-de-sac, is six steps away.</p>
+<p>Start from M1 at depth 0. Every street one step away has depth 1, the next ones depth 2, and so on. C2, at the end of the cul-de-sac, is six steps away.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>M3 has the highest integration (0.55), because it sits in the middle. C2 has the lowest (0.24), because every other street is far from it.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>M4 has the highest choice (55), because routes from the west side to the east side and to the cul-de-sac must cross it. C1 has 15, since every route to C2 passes through it. A dead end like C2 scores 0.</p>
+<p>M4 has the highest choice (55). Routes from the west side to the east side and to the cul-de-sac must all cross it. C1 has 15, since every route to C2 passes through it. A dead end like C2 scores 0.</p>
 </div>
 </div>
 </div>
@@ -623,8 +623,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="why-i-use-it">Why I use it</h2>
 <section id="a-measuring-stick" class="level3">
 <h3 class="anchored" data-anchor-id="a-measuring-stick">A measuring stick</h3>
-<p>My agents never read space syntax values. I compare their movement with the values afterwards, so the comparison is a real test. Agents that preferred high-scoring streets would make it circular: the answer would go in and come back out.</p>
-<p>Choice is already a route model built on the least-turning route between every pair of segments (Turner 2007, p.&nbsp;544). Walkers who took those routes, spread evenly over all pairs, would match choice by construction, and the match would prove nothing. So the walkers S9 imagines pick routes for their own reasons, such as where they are going and the time of day. Space syntax enters Situ only at the end, in S9 Observer.</p>
+<p>My simulated walkers (agents) never read space syntax values. I compare their movement with the values afterwards, so the comparison is a real test. If the agents preferred high-scoring streets, the test would be circular: the answer would go in and come back out.</p>
+<p>Choice is already a route model. It is built on the route with the least turning between every pair of segments (Turner 2007, p.&nbsp;544). Walkers who took those routes, spread evenly over all pairs, would match choice by construction, and the match would prove nothing. So the walkers S9 imagines pick routes for their own reasons, such as where they are going and the time of day. Space syntax enters Situ only at the end, in S9 Observer.</p>
 </section>
 <section id="what-the-comparison-can-show" class="level3">
 <h3 class="anchored" data-anchor-id="what-the-comparison-can-show">What the comparison can show</h3>
@@ -656,22 +656,22 @@ ul.task-list li input[type="checkbox"] {
 <p>Where the walkers and choice agree, the layout alone may explain the movement. Where they disagree, something else is at work, such as a building or a rule.</p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>The city’s <a href="./counts.html">movement counts</a> check the model against reality, and they are thin: seven S1 junctions, one to three days each, between February 2024 and May 2026. Enough to raise a warning, too little to prove anything.</p>
+<p>The city’s <a href="./counts.html">movement counts</a> check the model against reality, and they are thin: seven S1 junctions, one to three days each, between February 2024 and May 2026. They are enough to raise a warning and too few to prove anything.</p>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>In the game I can watch whether players drift toward integrated streets, which bears on my research question about wayfinding.</p>
+<p>In the game I can watch whether players drift toward well-integrated streets, the ones that are easy to reach. That bears on my research question about wayfinding.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="why-this-method" class="level3">
 <h3 class="anchored" data-anchor-id="why-this-method">Why this method</h3>
-<p>It runs in QGIS on the city’s open street file, and the same file with the same settings gives the same values. Forty years of studies use it, so I can set Griffintown beside other cities. It was built to study how layout and social life relate, the subject of my research. Its blind spots are well documented, and each one falls to another Situ system.</p>
+<p>It runs in QGIS on the city’s open street file, and the same file with the same settings gives the same values. Forty years of studies use it, so I can set Griffintown beside other cities. It was built to study how layout and social life relate, which is the subject of my research. Its blind spots are well documented, and each one is handled by another Situ system.</p>
 </section>
 <section id="what-this-means-for-my-data" class="level3">
 <h3 class="anchored" data-anchor-id="what-this-means-for-my-data">What this means for my data</h3>
-<p>Values belong to the network they were calculated on. A missing path makes its neighbours look less connected than they are, so I added the city’s off-street paths before the analysis (<a href="./network.html">The walking network</a>).</p>
-<p>The edge of the map also distorts: streets near it look peripheral only because the map stops there (Ratti 2004, p.&nbsp;496; van Nes &amp; Yamu 2021, p.&nbsp;51). So the analysis covers the whole island, and I cut Griffintown out of the results afterwards.</p>
+<p>Values belong to the network they were calculated on. A missing path makes its neighbours look less connected than they are. So I added the city’s off-street paths before the analysis (<a href="./network.html">The walking network</a>).</p>
+<p>The edge of the map also distorts. Streets near it look remote only because the map stops there (Ratti 2004, p.&nbsp;496; van Nes &amp; Yamu 2021, p.&nbsp;51). So the analysis covers the whole island, and I cut Griffintown out of the results afterwards.</p>
 
 
 </section>

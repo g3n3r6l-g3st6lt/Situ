@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -464,6 +464,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#from-quarter-hours-to-hours" id="toc-from-quarter-hours-to-hours" class="nav-link" data-scroll-target="#from-quarter-hours-to-hours">From quarter-hours to hours</a></li>
   <li><a href="#the-days-shape" id="toc-the-days-shape" class="nav-link" data-scroll-target="#the-days-shape">The day’s shape</a></li>
   <li><a href="#bicycle-detectors" id="toc-bicycle-detectors" class="nav-link" data-scroll-target="#bicycle-detectors">Bicycle detectors</a></li>
+  <li><a href="#the-ring" id="toc-the-ring" class="nav-link" data-scroll-target="#the-ring">The ring</a></li>
   <li><a href="#reading-opening-hours" id="toc-reading-opening-hours" class="nav-link" data-scroll-target="#reading-opening-hours">Reading opening hours</a></li>
   <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
   <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
@@ -549,26 +550,31 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="from-quarter-hours-to-hours" class="level2">
 <h2 class="anchored" data-anchor-id="from-quarter-hours-to-hours">From quarter-hours to hours</h2>
-<p>The city counts in 15-minute slices, by kind of road user. S5 keeps every slice counted within 15 m of an S1 junction, the same rule as the <a href="./counts.html">counts page</a>, and sums it by mode, keeping people on foot and bicycles apart from motor vehicles of every kind. A slice with nobody in it stays a counted zero, which differs from a slice nobody counted.</p>
-<p>An hour gets a value only when all four of its quarters were counted. Several of the one-day windows open or close on the half hour, so their edge hours are partial: 16 hours at the junctions, 48 rows across the modes, stay empty, each with the number of quarters it had. S5 never stretches a part of an hour into a whole one.</p>
+<p>The city counts in 15-minute slices, by kind of road user. S5 keeps every slice counted within 15 m of an S1 junction, the same rule as the <a href="./counts.html">counts page</a>. It adds them up by mode, keeping people on foot and bicycles apart from motor vehicles of every kind. A slice with nobody in it stays a counted zero, which differs from a slice nobody counted.</p>
+<p>An hour gets a value only when all four of its quarters were counted. Several one-day windows open or close on the half hour, so their edge hours are partial. Sixteen hours at the junctions, 48 rows across the modes, stay empty, each noting how many quarters it had. S5 never stretches part of an hour into a whole one.</p>
 </section>
 <section id="the-days-shape" class="level2">
 <h2 class="anchored" data-anchor-id="the-days-shape">The day’s shape</h2>
-<p>A busy junction and a quiet one can share a rhythm, so S5 compares each day with itself. The reference hours are the hours counted in full on every day: 7h, 8h, 11h, 12h, 16h and 17h. Each day, for each mode, is divided by its own mean over those six hours, so 1.0 is an ordinary daytime hour of that day. Two of the six fall in each of the city’s windows, so no window outweighs another.</p>
+<p>A busy junction and a quiet one can share a rhythm, so S5 compares each day with itself. The reference hours are those counted in full on every day: 7h, 8h, 11h, 12h, 16h and 17h. For each mode, each day is divided by its own mean over those six hours, so 1.0 is an ordinary daytime hour of that day. Two of the six fall in each of the city’s windows, so no window outweighs another.</p>
 <p>A weekday hour takes the mean of every day that counted it, and keeps their lowest and highest values. Each value names the days behind it, so it can be rebuilt by hand. Outside the reference hours, most hours rest on J040 alone, and S5 marks them.</p>
-<p>Only Tuesdays, Wednesdays and Thursdays were counted. S5 lets their shape stand in for Monday and Friday, and says so on every such row. Saturday and Sunday stay empty, with the reason.</p>
+<p>Only Tuesdays to Thursdays were counted. S5 lets their shape stand in for Monday and Friday, and says so on every such row. Saturday and Sunday stay empty, with the reason.</p>
 </section>
 <section id="bicycle-detectors" class="level2">
 <h2 class="anchored" data-anchor-id="bicycle-detectors">Bicycle detectors</h2>
-<p>The city’s permanent bicycle detectors report every hour, by site, direction and lane. S5 keeps the detectors whose point lies inside the study area, by the same test S4 uses for buildings: Peel at Ottawa, northbound and southbound, and William at Nazareth, westbound. Two detectors on Peel at Notre-Dame stand 35 and 49 m from junction J187, outside the area, and S5 lists them without using them.</p>
-<p>A recorded hour of 0 stays 0, and a missing hour is a gap. A detector’s day counts only when all 24 hours were recorded, and the Griffintown day sums the three detectors on days when every one is complete: 376 days. Each such day is divided by its own mean over the same reference hours as the counts, then grouped by kind of day (weekday, Saturday, Sunday) and season. A group keeps its mean and its middle half, the range of the central half of its days.</p>
-<p>The seasons are the meteorological ones: winter from December to February, spring from March to May, and so on. Holidays are not set apart, so a public holiday on a Monday counts as a weekday.</p>
+<p>The city’s permanent bicycle detectors report every hour, for each site by direction and lane. S5 keeps the detectors that stand inside the study area, by the same test S4 uses for buildings: Peel at Ottawa, northbound and southbound, and William at Nazareth, westbound. Two detectors on Peel at Notre-Dame stand 35 and 49 m from junction J187, outside the area. S5 lists them without using them.</p>
+<p>A recorded hour of 0 stays 0, and a missing hour is a gap. A detector’s day counts only when all 24 hours were recorded. The Griffintown day adds up the three detectors on the days when every one is complete: 376 days. Each such day is divided by its own mean over the same reference hours as the counts, then grouped by season and by kind of day (weekday, Saturday, Sunday). A group keeps its mean and its middle half, the range of the central half of its days.</p>
+<p>The seasons follow whole months, as weather services count them: winter is December to February, spring is March to May, and so on. Holidays are not set apart, so a public holiday on a Monday counts as a weekday.</p>
+</section>
+<section id="the-ring" class="level2">
+<h2 class="anchored" data-anchor-id="the-ring">The ring</h2>
+<p>A counted intersection joins the ring when it lies outside the study area and within 600 m of its edge. It must also stand more than 15 m from any S1 junction, the distance within which a count belongs to S1. S5 reads its quarter-hours and hours by the same rules as inside, and keeps each site’s mean per hour with weekdays and weekends apart. The ring feeds no shape or table S5 builds, and a test checks this.</p>
 </section>
 <section id="reading-opening-hours" class="level2">
 <h2 class="anchored" data-anchor-id="reading-opening-hours">Reading opening hours</h2>
-<p>OpenStreetMap writes hours in a small grammar, like <code>Mo-Fr 07:00-22:00; Sa 08:00-20:00; Su off</code>. S5 reads the part of it Griffintown’s places use. Rules separated by a semicolon replace what earlier rules said about the same days; a rule after a comma adds to them. A day the text never names is closed, which is the tag’s own convention. Hours that run past midnight carry into the next morning, so a bar open <code>17:00-03:00</code> on Saturday is open early on Sunday. An opening with no closing time, a note such as “sur rdv” (by appointment), or a text S5 cannot parse leaves those hours unknown. Public holidays are set aside, since S5 has no calendar yet.</p>
-<p>The city’s list of public places writes its hours in French, day by day, and sometimes for a season only: the play fountains at Place des Aiguilleurs open from 21 May and close from 22 September. S5 keeps the season with the place.</p>
-<p>A place counts as open in an hour when it is open at half past. A place with no hours is unknown at every hour, never closed.</p>
+<p>OpenStreetMap writes hours in a small grammar, like <code>Mo-Fr 07:00-22:00; Sa 08:00-20:00; Su off</code>. S5 reads the part of it Griffintown’s places use. A rule after a semicolon replaces what earlier rules said about the same days; a rule after a comma adds to them. A day the text never names is closed, which is the tag’s own convention. Hours past midnight carry into the next morning, so a bar open <code>17:00-03:00</code> on Saturday is open early on Sunday.</p>
+<p>An opening with no closing time leaves those hours unknown. So does a note such as “sur rdv” (by appointment), or a text S5 cannot parse. Public holidays are set aside, since S5 has no calendar yet.</p>
+<p>The city’s list of public places gives its hours in French, day by day, and sometimes for one season: the play fountains at Place des Aiguilleurs open from 21 May and close from 22 September. S5 keeps the season with the place.</p>
+<p>A place counts as open in an hour when it is open at half past. A place with no hours is unknown at every hour, and S5 never marks it closed.</p>
 </section>
 <section id="assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
@@ -597,7 +603,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the bicycle counters, field observation</td>
 </tr>
 <tr class="odd">
-<td>winter, spring and autumn days stand for any season</td>
+<td>days outside summer stand for any season</td>
 <td>no summer day was counted</td>
 <td>the bicycle counters, which run all year</td>
 </tr>
@@ -626,9 +632,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="tests" class="level2">
 <h2 class="anchored" data-anchor-id="tests">Tests</h2>
-<section id="twelve-checks" class="level3">
-<h3 class="anchored" data-anchor-id="twelve-checks">Twelve checks</h3>
-<p>Each check asks one plain question of what S5 wrote. Ten must pass, and all ten do; the last two only report. The <a href="./lab.html#s5">Lab</a> shows the latest results.</p>
+<section id="fourteen-checks" class="level3">
+<h3 class="anchored" data-anchor-id="fourteen-checks">Fourteen checks</h3>
+<p>Each check asks one plain question of what S5 wrote. Twelve must pass, and all twelve do; T11 and T12 only report. The <a href="./lab.html#s5">Lab</a> shows the latest results.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -686,7 +692,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>T9</td>
 <td>Do the detector days hold every recorded hour, with a total only when all 24 were recorded?</td>
-<td>yes; 309 incomplete detector-days left without a total</td>
+<td>yes; 309 incomplete detector-days have no total</td>
 </tr>
 <tr class="even">
 <td>T10</td>
@@ -702,6 +708,16 @@ ul.task-list li input[type="checkbox"] {
 <td>T12</td>
 <td>Do the counts and the detectors agree on a weekday’s bicycles?</td>
 <td>report: correlation 0.87 in winter, 0.89 over all seasons</td>
+</tr>
+<tr class="odd">
+<td>T13</td>
+<td>Is the ring every counted intersection outside the area within 600 m, at no S1 junction, and kept out of what S5 builds?</td>
+<td>yes, 23 sites</td>
+</tr>
+<tr class="even">
+<td>T14</td>
+<td>Can every hour of the ring be rebuilt from the city’s file, with weekdays and weekends apart?</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -722,9 +738,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="stress-tests" class="level3">
 <h3 class="anchored" data-anchor-id="stress-tests">Stress tests</h3>
 <p>Run twice on the same input, S5 gives the same output (X1). The other stress tests ask how much the shape depends on so few days.</p>
-<p>X2 leaves out one counted day at a time. In the reference hours, which nine days share, no value moves by more than 0.12, and for people on foot and cars by no more than 0.06. In the hours J040 holds alone, the three December days disagree more: leaving out one of them moves people on foot by up to 0.12 and bicycles by up to 0.44, since a few cyclists in an hour make a large share. The bicycle values at night and in mid-afternoon are the weakest numbers in S5.</p>
+<p>X2 leaves out one counted day at a time. In the reference hours, which all nine days share, no value moves by more than 0.12, and for people on foot and cars by no more than 0.06. In the hours J040 holds alone, its three December days disagree more. Leaving one out moves people on foot by up to 0.12 and bicycles by up to 0.44, since a few cyclists in an hour make a large share. The bicycle values at night and in mid-afternoon are the weakest numbers in S5.</p>
 <p>X3 leaves out one junction at a time. The busiest hour stays 17h for every mode, with one exception: without J040, the bicycles’ busiest hour moves to 8h. So the evening cycling peak leans on J040.</p>
-<p>X5 leaves out one month of detector days at a time. Weekday shapes hold well, moving by at most 0.05 in summer and 0.04 in autumn. Weekend shapes rest on fewer days and move more, up to 0.46 for a winter Sunday, and spring is the thinnest season, with 22 weekdays, 8 Saturdays and 9 Sundays.</p>
+<p>X5 leaves out one month of detector days at a time. Weekday shapes hold well, moving by at most 0.05 in summer and 0.04 in autumn. Weekend shapes rest on fewer days and move more, up to 0.46 for a winter Sunday. Spring is the thinnest season, with 22 weekdays, 8 Saturdays and 9 Sundays.</p>
 <p>X4 changes what “open in this hour” means. Of the other readings I tried, the strictest, open for the whole hour, removes 75 of the week’s 5,626 open place-hours, and the others move fewer. The choice of half past hardly matters.</p>
 
 

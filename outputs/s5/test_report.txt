@@ -51,4 +51,12 @@ T12  Do the intersection counts and the detectors agree on a weekday's bicycles?
     all seasons : correlation over 24 hours 0.89; largest gap at 9h (counts 1.26, detectors 0.73)
     (different streets and different years: agreement would be a sign, disagreement a question)
 
+T13  Is the ring every counted intersection outside the area within 600 m, at no S1 junction, and kept out of what S5 builds?
+    23 sites, 740 intersections in the city's file
+    PASS
+
+T14  Can every hour of the ring be rebuilt from the city's file, weekdays and weekends kept apart?
+    2460 site-hours; 960 site-hours counted on a weekend, kept apart
+    PASS
+
 ALL PASS

@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -558,7 +558,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Statistics Canada, table 98-10-0480</td>
-<td>residents’ way of getting to work, and the hour band they leave in</td>
+<td>how residents get to work, and the hour band they leave in</td>
 </tr>
 <tr class="odd">
 <td>Statistics Canada, table 98-10-0504</td>
@@ -574,19 +574,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Three tracts cover nine tenths of the study area. Statistics Canada’s tables are open under the Open Government Licence of Canada, and the STM’s under CC BY 4.0.</p>
+<p>Three census tracts, the small areas the census reports on, cover nine tenths of the study area. Statistics Canada’s tables are open under the Open Government Licence of Canada, and the STM’s under CC BY 4.0.</p>
 </section>
 <section id="commuters-per-home" class="level2">
 <h2 class="anchored" data-anchor-id="commuters-per-home">Commuters per home</h2>
-<p>A building with homes takes its tract’s commuters per home and its tract’s mix of ways to work. A building in a tract where nobody lived at the 2021 census would take the rates of the lived-in tracts together and become a checkpoint; none does.</p>
+<p>A building with homes takes its tract’s commuters per home and its tract’s mix of ways to work. A building in a tract where nobody lived at the 2021 census would take the combined rates of the lived-in tracts and become a checkpoint, a case set aside for a closer look. None does.</p>
 </section>
 <section id="the-one-correction" class="level2">
 <h2 class="anchored" data-anchor-id="the-one-correction">The one correction</h2>
-<p>The census week fell during the pandemic. S7 reduces each tract’s share working from home by the fall measured across Canada, from 24.3 % in May 2021 to 17.4 % in May 2025. For the people who come here to work, the census does not say how many worked from home, so S7 raises their number by the national change alone, about 9 %. The hour bands keep the census’s own widths: S7 does not spread them into hours.</p>
+<p>The census week fell during the pandemic. S7 reduces each tract’s share working from home by the fall measured across Canada, from 24.3 % in May 2021 to 17.4 % in May 2025. For the people who come here to work, the census does not say how many worked from home. So S7 raises their number by the national change alone, about 9 %. The hour bands keep the census’s own widths: S7 does not spread them into single hours.</p>
 </section>
 <section id="the-nearest-stops" class="level2">
 <h2 class="anchored" data-anchor-id="the-nearest-stops">The nearest stops</h2>
-<p>For every building with homes, S7 measures the walk to the nearest metro entrance and the nearest bus stop with a departure on a weekday, along the walkable S1 streets from the point where the building meets its street. A stop outside the area is reached through the S1 door that makes the walk shortest, and the part beyond the door is measured as a straight line, so a distance to a stop outside is a little short.</p>
+<p>For every building with homes, S7 measures the walk to the nearest metro entrance and to the nearest bus stop with a weekday departure. The walk follows the walkable S1 streets, from the point where the building meets its street. A stop outside the area is reached through the S1 door (a point where a street leaves the area) that makes the walk shortest. The part beyond the door is measured as a straight line, so a distance to a stop outside is a little short.</p>
 </section>
 <section id="assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
@@ -610,7 +610,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the 2026 census</td>
 </tr>
 <tr class="even">
-<td>a building’s residents commute like its tract</td>
+<td>a building’s residents commute like the rest of its tract</td>
 <td>the census is published by tract</td>
 <td>nothing finer is open</td>
 </tr>
@@ -653,7 +653,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>T3</td>
-<td>Does every home’s number of commuters, by mode, rebuild from its homes and its tract’s rates?</td>
+<td>Can every home’s number of commuters, by mode, be rebuilt from its homes and its tract’s rates?</td>
 <td>yes, 132 buildings</td>
 </tr>
 <tr class="even">
@@ -688,13 +688,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The first S7 drew walkers on every street, hour by hour. To do that it had to imagine where each person goes and when they come back, so I took that part out: it belongs to S9. Its tests had already caught one real fault, a distance outside the area counted twice; the measure of the nearest stops keeps that fix.</p>
+<p>The first version of S7 drew walkers on every street, hour by hour. To do that it had to imagine where each person goes and when they come back, so I took that part out: it belongs to S9. Its tests had already caught one real fault, a distance outside the area counted twice. The measure of the nearest stops keeps that fix.</p>
 </div>
 </div>
 </section>
 <section id="stress-tests" class="level3">
 <h3 class="anchored" data-anchor-id="stress-tests">Stress tests</h3>
-<p>Run twice on the same input, S7 gives the same output (X1). X2 changes the one correction. With working from home as in May 2021, about 5,400 residents commute; with today’s national figure, 7,200; at the 2016 level, about 9,700. The shares by mode and hour do not move.</p>
+<p>Run twice on the same input, S7 gives the same output (X1). X2 changes the one correction. With working from home as in May 2021, about 5,400 residents commute. With today’s national figure it is 7,200, and at the 2016 level about 9,700. The shares by mode and hour do not move.</p>
 
 
 </section>

@@ -58,6 +58,11 @@
   if (S6) { S6.objects.forEach(o => o6[o.id] = o); S6.surfaces.forEach(s => s6[s.id] = s); }
   const FURN6 = ["bench", "waste basket", "bicycle parking", "picnic table", "drinking water", "shelter", "fountain"];
   const S6_SEEN = S6 && S6.meta.seen_since || "";
+  if (S6) S6.objects.forEach(o => {                         // the file leaves empty fields out; here they are empty again
+    for (const k of S6.meta.fields || []) if (o[k] === undefined) o[k] = "";
+    if (o.size === undefined) o.size = null;
+    o.size_unit = (S6.meta.size_unit || {})[o.kind] || "";
+  });
   const PHOTO6 = { lights: "street light", cameras: "surveillance camera", crossings: "crossing" };
   const SLUG6 = { "street light": "light", "surveillance camera": "camera", crossing: "crossing" };
   const DAY5 = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
@@ -126,6 +131,7 @@
     s7show: "all",
     s8measure: "area_m2",
     s9reading: "shortest", s9hour: "all",
+    s8tool: "colour", walkA: null, walkB: null, walkPos: 0, minA: null,
     pick: null,                      // {kind: "junction"|"segment"|"building"|"place"|"check", id}
     approach: null,
   };
@@ -144,6 +150,23 @@
   const side = $(".lab-panel"), key = $(".lab-key"), info = $(".lab-side");
   const narrow = () => window.matchMedia("(max-width: 900px)").matches;
   const map = new SituMap($(".lab-map"), S1.segments.flatMap(s => s.pts));
+  // icons, drawn in a 24-unit box around 0,0 and coloured by their class (currentColor)
+  const ICONS = {
+    tree: '<circle r="8" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle r="2" fill="currentColor"/>',
+    hydrant: '<path d="M-4 9V-4a4 4 0 0 1 8 0V9ZM-7-1h3M4-1h3M-5-7h10" fill="currentColor" stroke="currentColor" stroke-width="1.5"/>',
+    bench: '<path d="M-10-3h20M-10 2h20M-8 2v7M8 2v7" fill="none" stroke="currentColor" stroke-width="2.4"/>',
+    bin: '<path d="M-7-6h14M-5-6l1.5 14h7L5-6M-2-9h4" fill="none" stroke="currentColor" stroke-width="2"/>',
+    bike: '<g fill="none" stroke="currentColor" stroke-width="2"><circle cx="-5" cy="3" r="4.5"/><circle cx="5" cy="3" r="4.5"/><path d="M-5 3l4-8h6l1 8M-1-5h-3"/></g>',
+    table: '<path d="M-10-3h20M-6-3l-3 11M6-3l3 11M-8 3h16" fill="none" stroke="currentColor" stroke-width="2.2"/>',
+    water: '<path d="M0-10C5-3 7 0 7 3A7 7 0 0 1-7 3C-7 0-5-3 0-10Z" fill="currentColor" fill-opacity="0.5" stroke="currentColor" stroke-width="1.8"/>',
+    shelter: '<path d="M-10-4L0-9 10-4M-8-4v12M8-4v12" fill="none" stroke="currentColor" stroke-width="2.2"/>',
+    light: '<path d="M-2 10V-6h7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="6" cy="-4" r="3.2" fill="currentColor"/>',
+    camera: '<path d="M-9-5h11v10H-9ZM2-2l7-4v12l-7-4" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-width="1.8"/>',
+    crossing: '<path d="M-8-8v16M-3-8v16M2-8v16M7-8v16" fill="none" stroke="currentColor" stroke-width="2.6"/>',
+    work: '<path d="M0-10L10 8H-10Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><path d="M-5 2h10" stroke="currentColor" stroke-width="2"/>',
+    other: '<rect x="-5" y="-5" width="10" height="10" fill="currentColor"/>',
+  };
+  map.defs().innerHTML = Object.entries(ICONS).map(([k, v]) => `<symbol id="i-${k}" viewBox="-12 -12 24 24" overflow="visible">${v}</symbol>`).join("");
   map.cover = () => side.hidden || narrow() ? 0 : side.offsetWidth + 16;
 
   // ================================================================ 3 painting
@@ -195,8 +218,8 @@
     return state.s9hour === "all" ? f.reduce((a, b) => a + b, 0) : f[S9.meta.hours.indexOf(+state.s9hour)]; };
   const hour9 = () => state.s9hour === "7" ? "7" : "8";          // the counts are compared at 7 and 8 h
   const MEASURE8 = { area_m2: ["area seen", "m²"], longest_m: ["longest sight line", "m"], compactness: ["compactness", ""] };
-  function ramp(t) {                         // dark grey to white to pink
-    const stops = [[60, 60, 60], [235, 235, 235], [254, 131, 204]];
+  function ramp(t) {                         // blue, through teal, to yellow: low to high
+    const stops = [[70, 90, 170], [46, 196, 182], [250, 225, 100]];
     const k = t < 0.5 ? 0 : 1, u = t < 0.5 ? t / 0.5 : (t - 0.5) / 0.5;
     const c = stops[k].map((x, i) => Math.round(x + (stops[k + 1][i] - x) * u));
     return `rgb(${c.join(",")})`;
@@ -222,6 +245,7 @@
         if (s.source !== "geobase") cls += " added";
         if (reach) cls += reach[i] && reach[i] <= state.reachStep ? " reached" : " unreached";     // the reach replaces the paint
         if (rt) cls += rt.path.has(i) ? " route" : rt.wide.has(i) ? " corridor" : " unreached";      // so does a route
+        if (state.s1try === "minutes" && state.minA) cls += " unreached";                             // and the minutes on foot
       }
       if (state.tab === "s2") {
         const v = S2.scores[s.id] && S2.scores[s.id][col];
@@ -241,7 +265,8 @@
         if (v < 0.5) cls += " plain faint";
         else { const t = Math.pow(v / top, 0.6); style = `stroke:${ramp(0.5 + t / 2)};stroke-width:${(1 + 6 * t).toFixed(2)}px`; }
       }
-      if (state.tab === "s8") {
+      if (state.tab === "s8" && state.s8tool === "walk") cls += " plain faint";
+      else if (state.tab === "s8") {
         const v = S8.segments[s.id];
         if (!v) cls += " plain faint";
         else { const t = rk.rank(v[state.s8measure]); style = `stroke:${ramp(t)};stroke-width:${(1.2 + 2.6 * t).toFixed(2)}px`; }
@@ -281,26 +306,28 @@
   function drawKey(rk) {
     let html = "";
     if (state.tab === "s1") {
-      if (state.s1try === "reach" && reachSteps()) html = `<span><i class="k both"></i>reached by this step</span><span><i class="k faint"></i>not yet</span>`;
+      if (state.s1try === "minutes") html = BANDS.map((m, b) => `<span><i class="k min${b}"></i>${b ? BANDS[b - 1] + " to " : "within "}${m} minutes</span>`).join("") + `<span><i class="k minbeyond"></i>further</span>`;
+      else if (state.s1try === "reach" && reachSteps()) html = `<span><i class="k both"></i>reached by this step</span><span><i class="k faint"></i>not yet</span>`;
       else if (state.s1try === "route" && routeNow()) html = `<span><i class="k route"></i>shortest route</span><span><i class="k corridor"></i>a trip at most ${RT.meta.slacks[state.routeSlack]} % longer can pass here</span>`;
       else html = `<span><i class="k both"></i>walk and drive</span><span><i class="k walk"></i>walk only</span><span><i class="k drive"></i>drive only</span><span><i class="k added"></i>path I added</span><span><i class="kd gate"></i>gate</span><span><i class="kd dead"></i>dead end</span>`;
     }
     if (state.tab === "s2" && rk) {
       const q = p => rk.vals[Math.min(rk.vals.length - 1, Math.round(p * (rk.vals.length - 1)))];
       html = `<span class="lab-ramp"><em>${fmt(q(0))}</em><i></i><em>${fmt(q(0.5))}</em><i></i><em>${fmt(q(1))}</em></span>
-        <span>lowest grey, highest pink</span><span><i class="k novalue"></i>no value</span>`;
+        <span>lowest blue, highest yellow</span><span><i class="k novalue"></i>no value</span>`;
     }
     if (state.tab === "s3") html = state.s3view === "speed"
       ? `<span><i class="k v40"></i>40 km/h</span><span><i class="k v30"></i>30</span><span><i class="k v20"></i>20</span><span><i class="k gap"></i>cars allowed, no limit</span>`
       : `<span><i class="kd lights"></i>traffic lights</span><span><i class="kd allway"></i>all-way stop</span><span><i class="kb2"></i>a street that must stop</span>`;
-    if (state.tab === "s8" && rk) {
+    if (state.tab === "s8" && state.s8tool === "walk") html = `<span><i class="kd walka"></i>start and end</span><span><i class="k walkpath"></i>the walk</span><span><i class="kv8"></i>what the walker sees now</span><span><i class="kb8"></i>building outline</span>`;
+    else if (state.tab === "s8" && rk) {
       const q = p => rk.vals[Math.min(rk.vals.length - 1, Math.round(p * (rk.vals.length - 1)))];
       html = `<span class="lab-ramp"><em>${fmt8(q(0))}</em><i></i><em>${fmt8(q(0.5))}</em><i></i><em>${fmt8(q(1))}</em></span>
-        <span>${MEASURE8[state.s8measure][0]}: lowest grey, highest pink</span><span><i class="k faint"></i>no viewpoint</span><span><i class="kb8"></i>building outline</span>` +
+        <span>${MEASURE8[state.s8measure][0]}: lowest blue, highest yellow</span><span><i class="k faint"></i>no viewpoint</span><span><i class="kb8"></i>building outline</span>` +
         (state.pick && state.pick.kind === "segment" && S8.segments[state.pick.id] ? `<span><i class="kv8"></i>what the middle viewpoint sees</span>` : "");
     }
     if (state.tab === "s9" && S9) html = `<span><i class="k s9w"></i>commuters walking, wider for more</span><span><i class="k faint"></i>none</span>` +
-      `<span><i class="kd count9"></i>junction the city counted, sized by pedestrians at ${hour9()} h</span>`;
+      `<span><i class="kd count9"></i>junction the city counted, sized by pedestrians at ${hour9()} h</span><span><i class="kr9"></i>counted outside the area (weekdays)</span>`;
     if (state.tab === "s7" && S7) html = `<span><i class="kd home7"></i>building with homes, sized by its commuters</span><span><i class="kd metro7"></i>metro entrance</span><span><i class="kd stop7"></i>bus stop</span>`;
     if (state.tab === "s4" && S4) {
       const n = f => S4.buildings.filter(f).length;
@@ -313,12 +340,16 @@
     }
     if (state.tab === "s5" && S5) html = `<span><i class="kp5 o"></i>open</span><span><i class="kp5 c"></i>closed</span><span><i class="kp5 u"></i>no hours given</span>` +
       (state.s5mode === "bicycle" && S5.bikes ? `<span><i class="kb5"></i>bicycle detector, sized by this hour</span>` : "") +
-      `<span><i class="kj5"></i>counted junction, sized by this hour's count</span><span><i class="kj5 none"></i>not counted at this hour</span>`;
+      `<span><i class="kj5"></i>counted junction, sized by this hour's count</span><span><i class="kj5 none"></i>not counted at this hour</span>` +
+      (S5.ring ? `<span><i class="kr5"></i>counted outside the area, for comparison</span>` : "");
     if (state.tab === "s6" && S6) html = (state.s6colour === "material"
         ? `<span><i class="kb6 m-b-ton"></i>concrete</span><span><i class="kb6 m-asphalte"></i>asphalt</span><span><i class="kb6 m-pav-"></i>pavers</span>`
         : `<span><i class="kb6 b-new"></i>built since 2020</span><span><i class="kb6 b-mid"></i>2010s</span><span><i class="kb6 b-old"></i>before 2010</span><span><i class="kb6 b-none"></i>no date</span>`) +
-      `<span><i class="kt6"></i>tree, sized by trunk</span><span><i class="kh6"></i>hydrant</span><span><i class="kf6"></i>furniture</span><span><i class="kw6"></i>road work</span>` +
-      `<span><i class="km6"></i>light, camera, crossing found in photos</span><span><i class="ko6"></i>the same in OpenStreetMap</span>`;
+      [["tree", "tree", "tree, sized by its trunk"], ["tree young", "tree", "planted since 2013"], ["hydrant", "hydrant", "hydrant"],
+       ["bench", "bench", "bench and other furniture"], ["light", "light", "street light"], ["camera", "camera", "camera"],
+       ["crossing", "crossing", "crossing"], ["work", "work", "road work"]].map(([c, i, w]) =>
+        `<span><svg class="ki lab-i6 k-${c}" viewBox="-12 -12 24 24"><use href="#i-${i}"/></svg>${w}</span>`).join("") +
+      `<span class="sub">round: seen in street photos · square: mapped in OpenStreetMap · faint: not seen since ${esc(S6_SEEN)}</span>`;
     key.innerHTML = html + `<span class="lab-check-key"><i class="kc"></i>checkpoint</span>`;
   }
 
@@ -326,6 +357,7 @@
   map.onRedraw(draw);
   function draw() {
     map.boxes = [];
+    map.clearHits();
     for (const n of ["marks", "focus", "labels"]) map.clear(n);
     const marks = map.layer("marks"), focus = map.layer("focus"), labels = map.layer("labels");
     if (state.tab === "s1") {
@@ -342,7 +374,9 @@
     if (state.tab === "s5" && S5) s5Marks(marks, labels);
     if (state.tab === "s6" && S6) s6Marks(marks);
     if (state.tab === "s7" && S7) s7Marks(marks);
-    if (state.tab === "s8" && S8) s8View(focus);
+    if (state.tab === "s8" && S8 && state.s8tool !== "walk") s8View(focus);
+    if (state.tab === "s8" && state.s8tool === "walk") walkMarks(focus);
+    if (state.tab === "s1" && state.s1try === "minutes") minutesMarks(marks);
     if (state.tab === "s9" && S9) s9Marks(marks, labels);
     const checks = checksOf(state.tab);
     if (checks.length) checkMarks(marks, labels, checks);
@@ -402,6 +436,12 @@
 
   // S9: the counted junctions, with the commuters each reading sends through them
   function s9Marks(g, labels) {
+    (S9.ring || []).filter(r => String(r.hour) === hour9() && r.counted != null).forEach(r => {
+      const xy = S5 && S5.ring && (S5.ring.sites.find(s => s.id === r.site) || {}).xy;
+      if (!xy) return;
+      map.square(g, xy, 2 * (4 + Math.sqrt(r.counted) * 0.7), { class: "lab-count9 ring" });
+      map.label(labels, xy, `${Math.round(r.commuters)} / ${Math.round(r.counted)}`, 9, { class: "situ-map-label num" }, "start");
+    });
     S9.counted.forEach(c => {
       const h = c.hours[hour9()];
       if (!h) return;
@@ -466,6 +506,15 @@
         hit.addEventListener("pointerleave", () => map.untip());
       });
     }
+    if (S5.ring) S5.ring.sites.forEach(s => {               // the ring outside the area: compared with, never built from
+      const day = d < 5 ? s.weekday : DAY5[d] === "Sa" ? s.weekend : null, v = day ? day[state.s5mode][h] : null;
+      const r = v == null ? 4 : 4 + 22 * Math.sqrt(v / max5[state.s5mode]);
+      map.square(g, s.xy, r * 2, { class: "lab-r5" + (v == null ? " none" : "") });
+      if (v != null) map.label(labels, add(s.xy, [0, 1], map.px(r + 9)), String(Math.round(v)), 10, { class: "situ-map-label" }, "middle");
+      const hit = map.dot(g, s.xy, 9, { class: "sx-jhit" });
+      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(s.name)} · outside the area, ${Math.round(s.edge_m)} m<br><span>${v == null ? "not counted at this hour" : Math.round(v) + " " + state.s5mode + "s"} · counted ${esc(s.days.join(", "))}</span>`));
+      hit.addEventListener("pointerleave", () => map.untip());
+    });
     Object.entries(S5.junctions).forEach(([j, by]) => {
       if (!jun[j]) return;
       const v = d < 5 ? by[state.s5mode][h] : null;
@@ -508,13 +557,13 @@
     return `<svg class="lab-curve" viewBox="0 0 ${W} ${Hh + 12}" role="img" aria-label="A weekday, hour by hour">${ref}<polygon points="${band}" class="band"/>` +
       `<path d="${line}" class="line"/>${dots}${now}<text x="4" y="${Hh + 10}">0h</text><text x="${W / 2}" y="${Hh + 10}" text-anchor="middle">12h</text>` +
       `<text x="${W - 4}" y="${Hh + 10}" text-anchor="end">24h</text></svg><p class="sub">${bk ? `The detectors' ${kind5()} in ${state.s5season}: the mean, and the middle half of ${sh.days} days. Dark bands: the reference hours.`
-      : "A weekday's shape. Dark bands: the hours counted at every junction. Pink dots: hours counted at J040 alone."}</p>`;
+      : "A weekday's shape. Dark bands: the hours counted at every junction. Teal dots: hours counted at J040 alone."}</p>`;
   }
   function weekHTML(id) {
     const p = S5 && S5.places[id];
     if (!p) return "";
     const rows = p.week.map((w, d) => `<tr><td>${DAY5[d]}</td>${w.split("").map(l => `<td class="w5 ${l === "o" ? "o" : l === "c" ? "c" : "u"}"></td>`).join("")}</tr>`).join("");
-    return `<h5>S5 · its week</h5><table class="lab-week">${rows}</table><p class="sub">${p.status === "no hours" ? "No hours given, so every hour is unknown, never closed." : "White: open at half past the hour. Dark: closed."}` +
+    return `<h5>S5 · its week</h5><table class="lab-week">${rows}</table><p class="sub">${p.status === "no hours" ? "No hours given, so every hour is unknown, never closed." : "Green: open at half past the hour. Dark: closed."}` +
       `${p.season ? " Seasonal: " + esc(p.season) + "." : ""}${p.notes ? " " + esc(p.notes) + "." : ""}</p>`;
   }
   function count5HTML(id) {
@@ -529,23 +578,49 @@
   const show6 = o => state.s6show === "all" || (state.s6show === "trees" && o.kind === "tree") ||
     (state.s6show === "hydrants" && o.kind === "hydrant") || (state.s6show === "furniture" && FURN6.includes(o.kind)) ||
     (state.s6show === "works" && o.kind === "road work") || PHOTO6[state.s6show] === o.kind;
+  const ICON6 = { tree: "tree", hydrant: "hydrant", bench: "bench", "waste basket": "bin", "bicycle parking": "bike", "picnic table": "table",
+                  "drinking water": "water", fountain: "water", shelter: "shelter", "street light": "light", "surveillance camera": "camera",
+                  crossing: "crossing", "road work": "work" };
+  const ICON_W = 650;                                  // icons appear once the view is narrower than this many metres
+  const trunk6 = o => !o.size ? "s" : o.size <= 20 ? "s" : o.size <= 40 ? "m" : "l";
   function s6Marks(g) {
-    S6.objects.forEach(o => {
-      if (!show6(o)) return;
-      const picked = state.pick && state.pick.kind === "obj6" && state.pick.id === o.id;
-      let e;
-      if (o.kind === "tree") e = map.dot(g, o.xy, Math.min(14, 1.5 + Math.sqrt(o.size || 1) * 0.9), { class: "lab-t6" + (o.date && o.date >= "2013" ? " young" : "") + (picked ? " picked" : "") });
-      else if (o.kind === "hydrant") e = map.square(g, o.xy, 6, { class: "lab-h6" + (picked ? " picked" : "") });
-      else if (o.kind === "road work") e = map.square(g, o.xy, 10, { class: "lab-w6" + (picked ? " picked" : "") });
-      else if (SLUG6[o.kind] && o.source === "osm") e = map.dot(g, o.xy, 4, { class: "lab-o6 k-" + SLUG6[o.kind] + (picked ? " picked" : "") });
-      else if (SLUG6[o.kind]) e = map.dot(g, o.xy, o.kind === "surveillance camera" ? 3 : 1.8,
-        { class: "lab-m6 k-" + SLUG6[o.kind] + (o.surveyed < S6_SEEN ? " old" : "") + (picked ? " picked" : "") });
-      else e = map.square(g, o.xy, 4, { class: "lab-f6" + (picked ? " picked" : "") });
-      const hit = map.dot(g, o.xy, 6, { class: "sx-jhit" });
-      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(o.kind)} ${o.id}<br><span>${esc(o.detail || "")}${o.kind === "tree" && o.size ? " · " + o.size + " cm" : ""}</span>`));
-      hit.addEventListener("pointerleave", () => map.untip());
-      hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "obj6", id: o.id }); });
-    });
+    const shown = S6.objects.filter(show6);
+    const close = map.view.w < ICON_W;
+    if (!close) {
+      // far: one path per kind, sized dots; nothing to redraw when the view moves
+      const groups = {};
+      shown.forEach(o => {
+        const base = o.kind === "tree" ? "tree-" + trunk6(o) : SLUG6[o.kind] || (o.kind === "hydrant" ? "hydrant" : o.kind === "road work" ? "work" : "furniture");
+        const flags = [o.kind === "tree" && o.date >= "2013" ? "young" : "", SLUG6[o.kind] && o.source === "osm" ? "osm" : "",
+                       SLUG6[o.kind] && o.source !== "osm" && o.surveyed < S6_SEEN ? "old" : ""].filter(Boolean);
+        const key = [base, ...flags].join(" ");
+        (groups[key] = groups[key] || []).push(o.xy);
+      });
+      const SIZE = { "tree-s": 3, "tree-m": 5, "tree-l": 8, hydrant: 5, work: 9, light: 3, camera: 4.5, crossing: 3.5, furniture: 4 };
+      Object.entries(groups).forEach(([key, pts]) => {
+        const [base, ...flags] = key.split(" ");
+        map.dots(g, pts, SIZE[base] || 4, { class: ["lab-d6", "k-" + base.replace(/-[sml]$/, ""), ...flags].join(" "),
+          "stroke-linecap": flags.includes("osm") || base === "hydrant" || base === "work" ? "square" : "round" });
+      });
+    } else {
+      // near: an icon for every object in view
+      const [x0, y0] = map.toWorld(-40, map.ch + 40), [x1, y1] = map.toWorld(map.cw + 40, -40);
+      shown.forEach(o => {
+        if (o.xy[0] < x0 || o.xy[0] > x1 || o.xy[1] < y0 || o.xy[1] > y1) return;
+        const size = o.kind === "tree" ? { s: 12, m: 16, l: 22 }[trunk6(o)] : o.kind === "road work" ? 18 : 15;
+        map.icon(g, o.xy, "i-" + (ICON6[o.kind] || "other"), size, { class: "lab-i6 k-" + (ICON6[o.kind] || "other") +
+          (o.kind === "tree" && o.date >= "2013" ? " young" : "") + (o.source === "osm" ? " osm" : "") +
+          (SLUG6[o.kind] && o.source !== "osm" && o.surveyed < S6_SEEN ? " old" : "") });
+      });
+    }
+    if (state.pick && state.pick.kind === "obj6" && o6[state.pick.id]) {
+      const o = o6[state.pick.id];
+      map.dot(g, o.xy, 14, { class: "lab-pick-ring" });
+      map.icon(g, o.xy, "i-" + (ICON6[o.kind] || "other"), 22, { class: "lab-i6 k-" + (ICON6[o.kind] || "other") });
+    }
+    map.setHits(shown.map(o => ({ xy: o.xy,
+      tip: () => `${esc(o.kind)} ${o.id}<br><span>${esc(o.detail || "")}${o.kind === "tree" && o.size ? " · trunk " + o.size + " cm" : ""}</span>`,
+      click: () => select({ kind: "obj6", id: o.id }) })));
   }
   // S7: who commutes, from the census, and how far each home is from the metro and the bus
   const h7 = {};
@@ -695,7 +770,7 @@
     let h = `<b>${metres(d)}</b> ${state.s1mode === "walk" ? "on foot" : "by car"}, ${(d / line).toFixed(2)} times the straight line.<br><span class="sub">along ${esc(streetsOf(rt.list))}</span><br>`;
     const other = state.s1mode === "walk" ? "drive" : "walk", od = RT[other].dist[o][t];
     if (od != null && od !== d) h += `<span class="sub">${other === "walk" ? "On foot" : "By car"} it is ${metres(od)}.</span><br>`;
-    h += extra ? `Accept a trip ${RT.meta.slacks[state.routeSlack]} % longer and ${extra} more streets (pink) become possible ways.` : `At ${RT.meta.slacks[state.routeSlack]} % there is only one way.`;
+    h += extra ? `Accept a trip ${RT.meta.slacks[state.routeSlack]} % longer and ${extra} more streets (blue) become possible ways.` : `At ${RT.meta.slacks[state.routeSlack]} % there is only one way.`;
     return h;
   }
 
@@ -757,7 +832,7 @@
       <tr><td>mean sight line</td><td>${fmt8(w.mean_m)} m</td></tr><tr><td>compactness</td><td>${fmt8(w.compactness)}</td></tr>
       <tr><td>lines open to ${S8.meta.radius_m} m</td><td>${Math.round(100 * w.open_share)} %</td></tr>
       <tr><td>lines leaving the map</td><td>${Math.round(100 * w.beyond_share)} %</td></tr></table>` +
-      (state.tab === "s8" ? `<p class="sub">The pink shape is what can be seen from ${esc(w.view.point)}, the middle viewpoint, past no building outline.</p>` : "");
+      (state.tab === "s8" ? `<p class="sub">The green shape is what can be seen from ${esc(w.view.point)}, the middle viewpoint, past no building outline.</p>` : "");
     return h;
   }
 
@@ -830,16 +905,17 @@
     const t = state.tab;
     let h = "";
     if (t === "s1") {
-      h += `<h3>S1 · Streets</h3><p>Which streets connect, and who may use them. White streets take people and cars, dashed ones only people. Click a street or a junction for its details, or try the network.</p>
-        <h5>Try it</h5>${seg2("s1try", [["details", "details"], ["reach", "how far can I get?"], ["route", "from here to there"]])}`;
-      if (state.s1try !== "details") h += seg2("s1mode", [["walk", "on foot"], ["drive", "by car"]]);
+      h += `<h3>S1 · Streets</h3><p>Which streets connect, and who may use them. White streets are for people and cars, green dashed ones for people only, grey ones for cars only. Click a street or a junction for its details, or try one of the tools.</p>
+        <h5>Try it</h5>${seg2("s1try", [["details", "details"], ["reach", "how far can I get?"], ["minutes", "minutes on foot"], ["route", "from here to there"]])}`;
+      if (state.s1try === "reach" || state.s1try === "route") h += seg2("s1mode", [["walk", "on foot"], ["drive", "by car"]]);
+      if (state.s1try === "minutes") h += `<p class="lab-out lab-min-out">${minutesText()}</p>`;
       if (state.s1try === "reach") h += `<label class="lab-range">step <b class="lab-step-label">${state.reachStep}</b><input type="range" class="lab-step" min="0" max="${reachSteps() ? Math.max(...reachSteps()) : 1}" value="${state.reachStep}"></label>
         <button type="button" class="lab-play" data-play="reach">▶ play</button><p class="lab-out">${reachText()}</p>`;
       if (state.s1try === "route") h += `<label class="lab-range">allow a detour of <b>${RT ? RT.meta.slacks[state.routeSlack] : 0} %</b><input type="range" class="lab-slack" min="0" max="4" value="${state.routeSlack}"></label><p class="lab-out">${routeText()}</p>`;
     }
     if (t === "s2") {
       const what = state.s2measure === "NACH" ? "Choice: how often a street lies on the way between other places." : "Integration: how easy a street is to reach from everywhere else.";
-      h += `<h3>S2 · Scores</h3><p>The space syntax values of each street, coloured by rank: grey lowest, pink highest. ${what}</p>
+      h += `<h3>S2 · Scores</h3><p>Space syntax gives every street a number for how it sits in the whole street network. Here each street is coloured by its rank in Griffintown: blue lowest, yellow highest. ${what}</p>
         ${seg2("s2net", [["ped", "walking"], ["veh", "driving"]])}${seg2("s2measure", [["NACH", "choice"], ["NAIN", "integration"]])}
         <label class="lab-range">within <b class="lab-radius-label">${RADIUS_NAME(RADII[state.s2net][state.s2radius])}</b>
         <input type="range" class="lab-radius" min="0" max="${RADII[state.s2net].length - 1}" value="${state.s2radius}"></label>
@@ -851,12 +927,12 @@
         ${seg2("s3view", [["rules", "stops and lights"], ["speed", "speed limits"]])}`;
     }
     if (t === "s4") {
-      h += `<h3>S4 · Buildings</h3><p>What each building is used for, and where that answer came from. Click a building for everything S4 knows about it. Unknown stays unknown.</p>
+      h += `<h3>S4 · Buildings</h3><p>What each building is used for, and where that answer comes from. Click a building to see everything S4 knows about it. When no source says, the use stays unknown.</p>
         ${seg2("s4colour", [["use", "used for"], ["source", "where that came from"]])}
         <label class="lab-check"><input type="checkbox" class="lab-places-on"${state.s4places ? " checked" : ""}> show the places people go to</label>`;
     }
     if (t === "s5" && S5) {
-      h += `<h3>S5 · Rhythm</h3><p>When the streets are busy, and which places say they are open. The busyness is measured: the city's counts at seven junctions, on weekdays only. The hours are what the places promise, and most places give none.</p>
+      h += `<h3>S5 · Rhythm</h3><p>When the streets are busy, and which places say they are open. How busy is measured: the city counted people at seven junctions inside the area, on weekdays, and at a ring of crossings around it. Opening hours are what places promise, and most places give none.</p>
         ${seg2("s5day", DAY5.map((d, i) => [String(i), d]))}${seg2("s5mode", [["pedestrian", "on foot"], ["bicycle", "by bicycle"], ["vehicle", "by car"]])}
         ${state.s5mode === "bicycle" && S5.bikes ? seg2("s5season", [["winter", "winter"], ["spring", "spring"], ["summer", "summer"], ["autumn", "autumn"]]) +
           `<p class="sub">By bicycle, three city detectors on Peel and William measure every day since ${esc(S5.bikes.first)}, weekends and seasons included.</p>` : ""}
@@ -866,38 +942,44 @@
     if (t === "s6" && S6) {
       const n = k => S6.objects.filter(o => o.kind === k).length;
       h += `<h3>S6 · Streetscape</h3><p>What stands on the streets besides the buildings: ${n("tree")} public trees, ${n("hydrant")} fire hydrants,
-        ${S6.objects.filter(o => FURN6.includes(o.kind)).length} pieces of furniture mapped in OpenStreetMap, and the ${n("road work")} road works listed on ${esc(S6.meta.snapshot)}.
-        Street lights, surveillance cameras and crossings come from two readers, Mapillary's software looking at street photos and the people who map OpenStreetMap:
-        ${Object.entries(S6.meta.photo_kinds).map(([k, s]) => `${s.either} ${k === "street light" ? "street lights" : k === "surveillance camera" ? "cameras" : k + "s"} (${s.both} in both)`).join(", ")}.
-        Sidewalks and islands are drawn under the streets. Click anything for its source and values.</p>
+        ${S6.objects.filter(o => FURN6.includes(o.kind)).length} benches and other pieces of furniture, and the ${n("road work")} road works the city listed on ${esc(S6.meta.snapshot)}.
+        Lights, cameras and crossings were found two ways: by software reading street photos (Mapillary), and by the people who map OpenStreetMap.
+        That gives ${Object.entries(S6.meta.photo_kinds).map(([k, s]) => `${s.either} ${k === "street light" ? "street lights" : k === "surveillance camera" ? "cameras" : k + "s"} (${s.both} found both ways)`).join(", ")}.
+        Sidewalks are drawn under the streets. Zoom in to see each object's icon, and click anything for its source.</p>
         ${seg2("s6show", [["all", "everything"], ["trees", "trees"], ["hydrants", "hydrants"], ["furniture", "furniture"], ["lights", "lights"], ["cameras", "cameras"], ["crossings", "crossings"], ["works", "road works"]])}
         <h5>Sidewalks by</h5>${seg2("s6colour", [["material", "material"], ["built", "year built"]])}
-        <p class="sub">S6 records what the objects are and where. What they block, slow or forbid is for the systems after it, as written assumptions.</p>`;
+        <p class="sub">S6 only records what each object is and where it stands. Whether it slows anyone down is left to later systems, as a written assumption.</p>`;
     }
     if (t === "s9" && S9) {
-      const m = S9.meta, k = m.people_by_kind, e = m.explained_share, pc = v => Math.round(100 * v) + " %";
+      const m = S9.meta, k = m.people_by_kind, e = m.explained_share, pc = v => (v < 0.1 ? (100 * v).toFixed(1) : Math.round(100 * v)) + " %";
       const rows = S9.counted.slice().sort((a, b) => (b.hours[hour9()] || {}).counted - (a.hours[hour9()] || {}).counted).map(c => {
         const v = c.hours[hour9()]; return v ? `<tr><td>${c.id}</td><td>${Math.round(v.counted)}</td>${m.readings.map(rd => `<td>${Math.round(v[rd])}</td>`).join("")}</tr>` : ""; }).join("");
-      h += `<h3>S9 · Observer</h3><p>The first slice of the mother-analyzer: a weekday morning on foot, imagined from the other systems.
-        About ${(Math.round(m.people / 100) * 100).toLocaleString("en")} walks between 6 and 10 h: residents to the metro, the bus and work, and workers from the metro and the bus.
-        Three readings change one rule, the route; who walks, when and where to stay the same.</p>
+      h += `<h3>S9 · Observer</h3><p>S9 puts the other systems together and imagines a weekday morning on foot: about ${(Math.round(m.people / 100) * 100).toLocaleString("en")} walks between 6 and 10 h.
+        Residents walk to the metro, the bus and work; workers walk in from the metro and the bus.
+        You can switch the rule for the route. The walkers and where they go stay the same, so any difference comes from the route alone.</p>
         <h5>Route</h5>${seg2("s9reading", [["shortest", "shortest"], ["open", "open views"], ["straight", "fewest turns"]])}
         <h5>Hour</h5>${seg2("s9hour", [["all", "6 to 10"], ["6", "6h"], ["7", "7h"], ["8", "8h"], ["9", "9h"]])}
         <h5>At the counted junctions, ${hour9()} h</h5><table class="lab-vals"><tr><th></th><th>counted</th>${m.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${rows}</table>
-        <p class="sub">Commuters pass ${m.readings.map(rd => pc(e[rd][hour9()]) + " (" + rd + ")").join(", ")} of the pedestrians counted. Seven junctions, most counted on one day:
-        enough to see where the imagined morning falls short, too few to say which reading is right. Nothing in S9 was tuned to the counts or to space syntax.</p>
+        <p class="sub">The imagined commuters make up ${m.readings.map(rd => pc(e[rd][hour9()]) + " (" + rd + ")").join(", ")} of the people the city counted. Seven junctions, most counted on one day,
+        are enough to see where the imagined morning falls short, and too few to say which route rule is right. S9 never looked at the counts or space syntax while making its walks.</p>
+        <h5>The ring outside the area, ${hour9()} h</h5><p class="sub">Around the area, the imagined commuters make up only ${pc(m.ring.explained_share[hour9()])} of the people counted on weekdays at ${m.ring.sites} crossings,
+        and reach ${m.ring.sites_reached.length} of them. Before looking at those counts, I wrote down what I expected:</p><ul class="lab-clist">${S9.expected.map(x => `<li><b>${x.id}</b> ${esc(x.expected)}</li>`).join("")}</ul>
         <details class="lab-cgroup"><summary>What S9 assumes <span class="sub">${S9.ledger.filter(x => x.kind === "assumption").length}</span></summary><ul class="lab-clist">${S9.ledger.map(x =>
           `<li><b>${x.id}</b> ${esc(x.rule)}<br><span class="sub">${esc(x.source)}</span></li>`).join("")}</ul></details>`;
     }
     if (t === "s8" && S8) {
       const m = S8.meta;
-      h += `<h3>S8 · Views</h3><p>What a person can see from each walkable street, measured on the open map: from a viewpoint every ${m.step_m} m, ${m.rays} sight lines run
-        until they meet a building outline or reach ${m.radius_m} m. Across the ${m.points.toLocaleString("en")} viewpoints the median area seen is ${fmt8(m.area_median)} m²
-        (from ${fmt8(m.area_p10)} to ${fmt8(m.area_p90)} m² for the middle 80 %). Click a street to draw its view.</p>
-        ${seg2("s8measure", [["area_m2", "area seen"], ["longest_m", "longest line"], ["compactness", "compactness"]])}
-        <p class="sub">Compactness is 1 for a circle and falls as the view stretches into corridors. Only building outlines stop a sight line: trees, viaducts, fences and parked trucks do not.
-        A missing building opens a view that is not there, so single values carry the gaps of the map; the order of the streets holds better (see the stress tests).
-        S8 measures. What a view means to someone walking is for S9.</p>`;
+      h += `<h3>S8 · Views</h3><p>How much of the city a person can see from each street. Every ${m.step_m} m, ${m.rays} lines of sight go out until they hit a building or reach ${m.radius_m} m;
+        the shape they draw is what can be seen from that spot. A typical spot sees about ${fmt8(m.area_median)} m², and most spots see between ${fmt8(m.area_p10)} and ${fmt8(m.area_p90)} m².
+        Click a street to draw its view, or take a walk.</p>
+        ${seg2("s8tool", [["colour", "colour the streets"], ["walk", "walk and look"]])}
+        ${state.s8tool === "walk" ? `<p class="sub">Click two points near the streets. A walker takes the shortest way between them, thirty times faster than walking, and the map shows what it can see at each step: the open space around it, and the trees, lights, cameras, benches and places in view.</p>
+          <button type="button" class="lab-play" data-play="walk">▶ walk</button> <button type="button" class="lab-play" data-play="walkstop">❚❚ pause</button>
+          ${walk && !walk.none ? `<label class="lab-range">where the walker is<input type="range" class="lab-walkpos" min="0" max="${Math.round(walk.L)}" value="${Math.round(state.walkPos)}"></label>` : ""}
+          <div class="lab-out lab-walk-out">${walkText()}</div>` : seg2("s8measure", [["area_m2", "area seen"], ["longest_m", "longest line"], ["compactness", "compactness"]])}
+        <p class="sub">Compactness is 1 for a round view and gets smaller as the view stretches into a corridor. Only buildings block the view here; trees, viaducts, fences and parked trucks do not.
+        A building missing from the map opens a view that is not really there, so trust the order of the streets more than any single number.
+        S8 only measures; what a view means to someone walking is left to S9.</p>`;
     }
     if (t === "s7" && S7) {
       const m = S7.meta, mm = m.commuters_by_mode, tot = Object.values(mm).reduce((a, b) => a + b, 0), pc = k => Math.round(100 * mm[k] / tot);
@@ -905,13 +987,13 @@
       const table = (list, label) => `<table class="lab-vals"><tr><th>${label}</th><th>on foot</th><th>transit</th><th>car</th><th>all</th></tr>${list.map(b =>
         `<tr><td>${esc(b.band.replace("Between ", "").replace(/ and /, " to "))}</td><td>${Math.round(row(b, ["walk"]))}</td><td>${Math.round(row(b, ["metro", "bus", "train"]))}</td>
         <td>${Math.round(row(b, ["car"]))}</td><td>${Math.round(row(b, ["walk", "metro", "bus", "train", "car", "bicycle", "other"]))}</td></tr>`).join("")}</table>`;
-      h += `<h3>S7 · Commuters</h3><p>Who commutes from Griffintown and to it on a weekday, from the 2021 census, corrected once for working from home today:
-        about ${(Math.round(m.commuters / 100) * 100).toLocaleString("en")} residents of the ${m.homes} buildings with homes, ${pc("walk")} % of them on foot, ${pc("metro") + pc("bus")} % by transit and ${pc("car")} % by car.
-        Click a building for its commuters and how far it is from the metro and the bus.</p>
+      h += `<h3>S7 · Commuters</h3><p>Who travels to work from Griffintown, and to it, on a weekday. The numbers come from the 2021 census, adjusted once because fewer people work from home today.
+        About ${(Math.round(m.commuters / 100) * 100).toLocaleString("en")} residents of the ${m.homes} buildings with homes commute. ${pc("car")} % go by car; ${pc("walk")} % walk, and ${pc("metro") + pc("bus")} % take the bus or the metro.
+        Click a building to see its commuters and how far it is from the metro and the bus.</p>
         ${seg2("s7show", [["all", "everyone"], ["walk", "on foot"], ["transit", "transit"], ["car", "car"]])}
         <h5>Residents leaving for work</h5>${table(S7.bands.leaving, "hour")}
         <h5>People arriving to work here</h5>${table(S7.bands.arriving, "hour")}
-        <p class="sub">The census's own hour bands, for the three tracts that cover most of the area. S7 draws no walk: where people go, and by which street, is for S9.</p>`;
+        <p class="sub">The hours are the census's own groupings, for the three census areas that cover most of Griffintown. S7 draws no walks: where people go, and by which street, is left to S9.</p>`;
     }
     h += checksHTML(t) + testsHTML(t);
     return h;
@@ -927,7 +1009,7 @@
     const doneHTML = done.length ? `<details class="lab-cgroup done"><summary>settled <span class="sub">${done.length}</span></summary>
       <p class="why">Checked against photos or other sources; each one says what was decided.</p><ul class="lab-clist">${done.map(c =>
         `<li><button type="button" class="sx-link" data-check="${c.id}">${c.id}</button> <span class="sub">${esc(c.kind)} · ${esc(c.place)}</span></li>`).join("")}</ul></details>` : "";
-    return `<h5>Checkpoints still open (${open.length})</h5><p class="sub">Places I cannot settle from the desk. Each one needs a look on site or in photos.</p>` +
+    return `<h5>Checkpoints still open (${open.length})</h5><p class="sub">Questions I cannot answer from my desk. Each one needs a look on site or in photos.</p>` +
       Object.entries(groups).map(([k, cs]) => `<details class="lab-cgroup"><summary>${esc(k)} <span class="sub">${cs.length}</span></summary>
         <p class="why">${esc(WHY[k] || "")}</p><ul class="lab-clist">${cs.map(c =>
           `<li><button type="button" class="sx-link" data-check="${c.id}">${c.id}</button> <span class="sub">${esc(c.place || (b4[c.where] && b4[c.where].name) || c.where || "")}</span></li>`).join("")}</ul></details>`).join("") + doneHTML;
@@ -941,6 +1023,166 @@
       <ul class="lab-testlist">${ts.map(x => `<li><span class="st ${x.status}">${x.status === "pass" ? "PASS" : x.status === "fail" ? "FAIL" : "info"}</span> ${esc(x.title)}</li>`).join("")}</ul></details>`;
   }
 
+  // ================================================================ 7b walk tools: minutes on foot (S1) and walk and look (S8)
+  // An ordinary walking pace, used only to turn metres into minutes. Many people walk slower.
+  const PACE = 1.3, BANDS = [5, 10, 15];
+  const WK = window.SituWalk;
+  let WG = null, OUT8 = null, walkEls = {}, walkAnim = null;
+  const wgraph = () => WG || (WG = WK.graph(S1));
+  function needOutlines(then) {
+    if (window.SITU_S8_OUTLINES) { OUT8 = OUT8 || WK.outlines(window.SITU_S8_OUTLINES); then(); return; }
+    const s = document.createElement("script");
+    s.src = "outputs/s8/outlines_data.js";
+    s.onload = () => { OUT8 = WK.outlines(window.SITU_S8_OUTLINES); then(); };
+    document.head.appendChild(s);
+  }
+  const toolOn = () => state.tab === "s8" && state.s8tool === "walk" ? "walk" : state.tab === "s1" && state.s1try === "minutes" ? "minutes" : null;
+  map.svg.addEventListener("click", e => {
+    const tool = toolOn();
+    if (!tool || !WK || map.wasDrag()) return;
+    e.stopPropagation(); e.preventDefault();
+    const r = map.svg.getBoundingClientRect(), p = map.toWorld(e.clientX - r.left, e.clientY - r.top), s = WK.snap(wgraph(), p);
+    if (tool === "minutes") { state.minA = s; minutesCompute(); render(true); refreshOut(); return; }
+    if (!state.walkA || state.walkB) { stopWalk(); state.walkA = s; state.walkB = null; walk = null; render(true); refreshOut(); }
+    else { state.walkB = s; needOutlines(() => { walkCompute(); render(true); refreshOut(); playWalk(); }); }
+  }, true);
+
+  // ---- minutes on foot
+  let minutes = null;
+  function minutesCompute() {
+    const G = wgraph(), R = WK.from(G, state.minA), pieces = BANDS.map(() => []), beyond = [];
+    G.segs.forEach((s, i) => {
+      const L = G.len[i], n = Math.max(1, Math.ceil(L / 8));
+      for (let k = 0; k < n; k++) {
+        const x0 = L * k / n, x1 = L * (k + 1) / n, t = WK.timeAlong(G, R, i, (x0 + x1) / 2) / PACE / 60;
+        const b = BANDS.findIndex(m => t <= m);
+        (b < 0 ? beyond : pieces[b]).push(WK.piece(G, i, x0, x1));
+      }
+    });
+    const at = p => { const q = WK.snap(G, p); return WK.timeAlong(G, R, q.seg, q.along) / PACE / 60; };
+    const within = BANDS.map(m => ({ m, homes: 0, places: 0, stops: 0 }));
+    if (S4) S4.buildings.forEach(b => { if (!b.dwellings) return; const t = at(b.ring[0]); within.forEach(w => { if (t <= w.m) w.homes += b.dwellings; }); });
+    if (S4) S4.places.forEach(p => { if (p.same_as) return; const t = at(p.xy); within.forEach(w => { if (t <= w.m) w.places += 1; }); });
+    if (S7) S7.stops.filter(s => s.inside).forEach(s => { const t = at(s.xy); within.forEach(w => { if (t <= w.m) w.stops += 1; }); });
+    minutes = { pieces, beyond, within, street: G.segs[state.minA.seg].street };
+  }
+  function minutesMarks(g) {
+    if (!state.minA) return;
+    if (!minutes) minutesCompute();
+    const d = list => list.map(pts => "M" + pts.map(p => map.P(p).join(",")).join("L")).join("");
+    map.path(g, d(minutes.beyond), { class: "lab-min beyond" });
+    minutes.pieces.forEach((list, b) => map.path(g, d(list), { class: "lab-min b" + b }));
+    map.dot(g, state.minA.xy, 6, { class: "lab-walk-a" });
+  }
+  function minutesText() {
+    if (!state.minA) return "Click anywhere near a street to start from there.";
+    const w = minutes.within;
+    return `From ${esc(minutes.street)}, at ${PACE} m a second:<table class="lab-vals"><tr><th></th>${w.map(x => `<th>${x.m} min</th>`).join("")}</tr>` +
+      `<tr><td>homes</td>${w.map(x => `<td>${x.homes.toLocaleString("en")}</td>`).join("")}</tr>` +
+      `<tr><td>places</td>${w.map(x => `<td>${x.places}</td>`).join("")}</tr>` +
+      `<tr><td>bus and metro stops</td>${w.map(x => `<td>${x.stops}</td>`).join("")}</tr></table>` +
+      `<span class="sub">Only the streets of the area are walked: a place just past its edge may be closer than it looks here.</span>`;
+  }
+
+  // ---- walk and look
+  let walk = null;
+  const STEP8 = 8, RAYS8 = 144, R8 = 300;
+  function walkCompute() {
+    const G = wgraph(), path = WK.between(G, state.walkA, state.walkB);
+    if (!path) { walk = { none: true }; return; }
+    const pts = path.pts, cum = [0];
+    for (let i = 1; i < pts.length; i++) cum.push(cum[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+    const L = cum[cum.length - 1];
+    const at = d => { let i = 1; while (i < cum.length - 1 && cum[i] < d) i++; const t = (d - cum[i - 1]) / ((cum[i] - cum[i - 1]) || 1);
+      return [pts[i - 1][0] + t * (pts[i][0] - pts[i - 1][0]), pts[i - 1][1] + t * (pts[i][1] - pts[i - 1][1])]; };
+    const things = [];
+    if (S6) S6.objects.forEach(o => things.push({ id: o.id, kind: ICON6[o.kind] ? o.kind : "furniture", xy: o.xy, o }));
+    if (S4) S4.places.forEach(p => { if (!p.same_as) things.push({ id: p.id, kind: "place", xy: p.xy, name: p.name }); });
+    const samples = [], seen = new Map();
+    for (let d = 0; d <= L + 1e-6; d += STEP8) {
+      const p = at(Math.min(d, L)), r = WK.cast(OUT8, p, RAYS8, R8), poly = WK.polygon(p, r);
+      const inView = things.filter(t => Math.abs(t.xy[0] - p[0]) < R8 && Math.abs(t.xy[1] - p[1]) < R8 && WK.inside(poly, t.xy));
+      inView.forEach(t => { if (!seen.has(t.id)) seen.set(t.id, { t, at: samples.length }); });
+      const q = WK.snap(G, p);
+      samples.push({ d, p, poly, area: WK.area(r), far: Math.max(...r), inView, street: G.segs[q.seg].street, seenSoFar: seen.size });
+    }
+    walk = { pts, L, samples, seen, at };
+    state.walkPos = 0;
+  }
+  const sampleAt = d => walk.samples[Math.min(walk.samples.length - 1, Math.round(d / STEP8))];
+  function walkMarks(g) {
+    if (state.walkA) map.dot(g, state.walkA.xy, 6, { class: "lab-walk-a" });
+    if (state.walkB) map.dot(g, state.walkB.xy, 6, { class: "lab-walk-a" });
+    if (!walk || walk.none) return;
+    map.line(g, walk.pts, { class: "lab-walk-path" });
+    walkEls.poly = map.path(g, "", { class: "lab-view8 walk" });
+    walkEls.icons = map.layer("focus").appendChild(document.createElementNS("http://www.w3.org/2000/svg", "g"));
+    walkEls.dot = map.dot(g, walk.samples[0].p, 6, { class: "lab-walk-dot" });
+    walkEls.shown = null;
+    walkShow();
+  }
+  function walkShow() {
+    if (!walk || walk.none || !walkEls.poly) return;
+    const s = sampleAt(state.walkPos);
+    const [x, y] = map.P(walk.at(state.walkPos)); walkEls.dot.setAttribute("cx", x); walkEls.dot.setAttribute("cy", y);   // the dot glides
+    if (walkEls.shown === s && walkEls.zoom === map.view.w) return;   // a new view only every 8 m
+    walkEls.shown = s; walkEls.zoom = map.view.w;
+    walkEls.poly.setAttribute("d", "M" + s.poly.map(p => map.P(p).join(",")).join("L") + "Z");
+    const g = walkEls.icons; while (g.firstChild) g.removeChild(g.firstChild);
+    if (map.view.w < ICON_W) s.inView.forEach(t => {               // close: icons
+      if (t.kind === "place") map.dot(g, t.xy, 3.5, { class: "lab-walk-place" });
+      else map.icon(g, t.xy, "i-" + (ICON6[t.kind] || "other"), 14, { class: "lab-i6 k-" + (ICON6[t.kind] || "other") });
+    });
+    else {                                                           // far: one path of dots per kind
+      const by = {};
+      s.inView.forEach(t => { const k = t.kind === "place" ? "place" : (ICON6[t.kind] || "furniture"); (by[k] = by[k] || []).push(t.xy); });
+      Object.entries(by).forEach(([k, pts]) => map.dots(g, pts, k === "place" ? 5 : 4,
+        { class: k === "place" ? "lab-walk-place-d" : "lab-d6 k-" + ({ bench: "furniture", bin: "furniture", bike: "furniture", table: "furniture", water: "furniture", shelter: "furniture" }[k] || k) }));
+    }
+    const out = info.querySelector(".lab-walk-out"); if (out) out.innerHTML = walkText();
+    const sl = info.querySelector(".lab-walkpos"); if (sl) sl.value = state.walkPos;
+  }
+  function count(list) {
+    const c = {};
+    list.forEach(t => { const k = t.kind === "place" ? "places" : t.kind === "tree" ? "trees" : t.kind === "street light" ? "street lights"
+      : t.kind === "surveillance camera" ? "cameras" : t.kind === "crossing" ? "crossings" : t.kind === "hydrant" ? "hydrants" : t.kind === "road work" ? "road works" : "benches and other furniture";
+      c[k] = (c[k] || 0) + 1; });
+    const one = { trees: "tree", "street lights": "street light", cameras: "camera", crossings: "crossing", hydrants: "hydrant",
+                  "road works": "road work", places: "place", "benches and other furniture": "bench or other piece of furniture" };
+    return Object.entries(c).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} ${n === 1 ? one[k] : k}`).join(", ") || "nothing on the list";
+  }
+  function walkText() {
+    if (!state.walkA) return "Click a first point near a street.";
+    if (!state.walkB) return "Now click a second point.";
+    if (!walk || walk.none) return walk && walk.none ? "No walk joins these two points." : "Loading the buildings…";
+    const s = sampleAt(state.walkPos), mins = state.walkPos / PACE / 60, total = walk.L / PACE / 60;
+    const names = s.inView.filter(t => t.kind === "place" && t.name).slice(0, 4).map(t => esc(t.name));
+    const spark = (() => {
+      const w = 260, h = 46, max = Math.max(...walk.samples.map(x => x.area)), X = d => w * d / walk.L, Y = a => h - 4 - (h - 8) * a / max;
+      const line = walk.samples.map((x, i) => (i ? "L" : "M") + X(x.d).toFixed(1) + "," + Y(x.area).toFixed(1)).join("");
+      return `<svg class="lab-spark" viewBox="0 0 ${w} ${h}" width="100%" height="${h}"><path d="${line}" class="l"/><line x1="${X(state.walkPos)}" x2="${X(state.walkPos)}" y1="0" y2="${h}" class="now"/></svg>`;
+    })();
+    return `<b>${Math.round(state.walkPos)} m</b> of ${Math.round(walk.L)} m · ${mins.toFixed(1)} of ${total.toFixed(1)} minutes · ${esc(s.street)}
+      <br>You can see <b>${Math.round(s.area).toLocaleString("en")} m²</b> around you, and as far as ${Math.round(s.far)} m.
+      <br>In view now: ${count(s.inView)}.${names.length ? `<br><span class="sub">Places in view: ${names.join(", ")}</span>` : ""}
+      ${spark}<span class="sub">How much you can see along the walk, from start to end.</span>
+      <br>Seen so far along the way: ${count([...walk.seen.values()].filter(x => x.at <= Math.round(state.walkPos / STEP8)).map(x => x.t))}.`;
+  }
+  function playWalk() {
+    stopWalk();
+    if (!walk || walk.none) return;
+    if (state.walkPos >= walk.L) state.walkPos = 0;
+    let last = performance.now();
+    const tick = now => {
+      state.walkPos = Math.min(walk.L, state.walkPos + (now - last) / 1000 * PACE * 30);   // thirty times faster than walking
+      last = now;
+      walkShow();
+      if (state.walkPos < walk.L) walkAnim = requestAnimationFrame(tick); else walkAnim = null;
+    };
+    walkAnim = requestAnimationFrame(tick);
+  }
+  function stopWalk() { if (walkAnim) cancelAnimationFrame(walkAnim); walkAnim = null; }
+
   // ================================================================ 8 selection and start-up
   function render(keepSide) {
     const html = panelHTML();
@@ -953,7 +1195,7 @@
   }
   function refreshOut() {        // only the moving parts of the side, so a slider being dragged is not rebuilt
     const out = info.querySelector(".lab-out");
-    if (out) out.innerHTML = state.tab === "s5" ? s5Text() : state.s1try === "reach" ? reachText() : routeText();
+    if (out) out.innerHTML = state.tab === "s5" ? s5Text() : state.tab === "s8" ? walkText() : state.s1try === "minutes" ? minutesText() : state.s1try === "reach" ? reachText() : routeText();
     const hl = info.querySelector(".lab-hour-label"); if (hl) hl.textContent = state.s5hour + "h";
     const hr = info.querySelector(".lab-hour"); if (hr) hr.value = state.s5hour;
     const cb = info.querySelector(".lab-curve-box"); if (cb && state.tab === "s5") cb.innerHTML = s5Curve();
@@ -997,7 +1239,7 @@
   function setTab(t) {
     if (!TABS.find(x => x.id === t && x.ok)) return;
     state.tab = t; state.pick = null; state.approach = null;
-    clearInterval(timer);
+    clearInterval(timer); stopWalk();
     render();
   }
 
@@ -1021,6 +1263,7 @@
     if (t.classList.contains("lab-step")) { state.reachStep = +t.value; paint(); refreshOut(); }
     if (t.classList.contains("lab-slack")) { state.routeSlack = +t.value; render(); }
     if (t.classList.contains("lab-hour")) { state.s5hour = +t.value; clearInterval(timer); draw(); refreshOut(); }
+    if (t.classList.contains("lab-walkpos")) { stopWalk(); state.walkPos = +t.value; walkShow(); }
   });
   host.addEventListener("click", e => {
     const b = e.target.closest("button");
@@ -1031,6 +1274,7 @@
       state[group.dataset.key] = b.dataset.v;
       if (group.dataset.key === "s2net" && state.s2radius > RADII[state.s2net].length - 1) state.s2radius = RADII[state.s2net].length - 1;
       if (group.dataset.key === "s1mode") state.reachStep = 0;
+      if (group.dataset.key === "s8tool") stopWalk();
       render();
       if (group.dataset.key === "s1mode" && state.s1try === "reach") playReach();
       return;
@@ -1044,6 +1288,8 @@
     if (b.dataset.play === "radius") playRadius();
     if (b.dataset.play === "reach") playReach();
     if (b.dataset.play === "day") playDay();
+    if (b.dataset.play === "walk") playWalk();
+    if (b.dataset.play === "walkstop") stopWalk();
   });
 
   // sliders that play: one step at a time, so the change is easy to follow

@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -558,13 +558,13 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>E01</td>
 <td>evidence</td>
-<td>How many residents of each building commute, and by which mode</td>
+<td>How many residents of each building commute, and how</td>
 <td>S7: census 2021 by tract, corrected once for working from home</td>
 </tr>
 <tr class="even">
 <td>E02</td>
 <td>evidence</td>
-<td>When residents leave for work and when workers arrive, by mode</td>
+<td>When residents leave for work and workers arrive, by mode</td>
 <td>S7: census 2021 hour bands by tract</td>
 </tr>
 <tr class="odd">
@@ -595,7 +595,7 @@ ul.task-list li input[type="checkbox"] {
 <td>A02</td>
 <td>assumption</td>
 <td>The share of resident walkers who work inside the area is the people who walk to work here divided by the residents who walk to work (0.19)</td>
-<td>assumes everyone who walks to a job here lives here, so it is an upper bound</td>
+<td>this assumes everyone who walks to a job here lives here, so it is an upper bound</td>
 </tr>
 <tr class="even">
 <td>A03</td>
@@ -607,7 +607,7 @@ ul.task-list li input[type="checkbox"] {
 <td>A04</td>
 <td>assumption</td>
 <td>Riders walk to the metro entrance or bus stop nearest their home along S1</td>
-<td>S7 measures it; nothing says which stop people choose</td>
+<td>S7 measures this; nothing says which stop people choose</td>
 </tr>
 <tr class="even">
 <td>A05</td>
@@ -618,13 +618,13 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>A06</td>
 <td>assumption</td>
-<td>Departures and arrivals spread evenly inside each census band; a walk falls in the hour it starts or ends</td>
-<td>the census gives bands only; most walks here last under 20 minutes</td>
+<td>Departures and arrivals spread evenly within each census band; a walk falls in the hour it starts or ends</td>
+<td>the census gives only bands; most walks here take under 20 minutes</td>
 </tr>
 <tr class="even">
 <td>A07</td>
 <td>assumption</td>
-<td>A walker who passes through a junction is counted there once</td>
+<td>A walker passing through a junction is counted there once</td>
 <td>the city counts crossings per crosswalk</td>
 </tr>
 <tr class="odd">
@@ -636,43 +636,49 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>A09</td>
 <td>assumption</td>
-<td>Stops and doors are chosen by the shortest walk in every reading</td>
-<td>so that the readings differ in the route alone</td>
+<td>In every reading, stops and doors are chosen by the shortest walk</td>
+<td>so that the readings differ only in the route</td>
 </tr>
 <tr class="odd">
 <td>A10</td>
 <td>assumption</td>
 <td>Reading “open”: cost = length × (1 + 0.5 × (1 − rank of area seen)); a street S8 did not measure counts as middling</td>
-<td>a hypothesis drawn from isovist studies; the weight is a choice, tried from 0.25 to 2</td>
+<td>a hypothesis drawn from isovist studies; the weight is my choice, tried from 0.25 to 2</td>
 </tr>
 <tr class="even">
 <td>A11</td>
 <td>assumption</td>
-<td>Reading “straight”: the fewest degrees of turning, length breaking ties</td>
+<td>Reading “straight”: the fewest degrees of turning, with length breaking ties</td>
 <td>Hillier and Iida (2005)</td>
 </tr>
 <tr class="odd">
 <td>A12</td>
 <td>assumption</td>
-<td>Train, bicycle, car and other commuters do not walk in this slice</td>
+<td>Commuters by train, bicycle, car and other modes do not walk in this slice</td>
 <td>their walks to a station or a car are short or unknown</td>
+</tr>
+<tr class="even">
+<td>A13</td>
+<td>assumption</td>
+<td>Beyond a door, a walker goes in a straight line to where it is going, and passes a counted intersection of the ring when that line comes within 40 m of it</td>
+<td>S1 has no streets outside the area; the line shows the general direction only</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="the-readings" class="level2">
 <h2 class="anchored" data-anchor-id="the-readings">The readings</h2>
-<p>All three readings walk on the same S1 streets, from the same starts to the same ends. A route is a chain of streets joined at junctions, and a walker may not turn back along the street just walked. The reading “shortest” adds up metres. The reading “open” adds up metres weighted by how enclosed each street is: the street with the smallest area seen in S8 counts 1.5 times its length, the most open one its length. The reading “straight” adds up the degrees turned at each junction, from the direction a walker arrives in to the direction of the next street; length only breaks ties.</p>
+<p>All three readings use the same S1 streets, with the same starts and ends. A route is a chain of streets joined at junctions, and a walker may not turn back along the street just walked. “Shortest” adds up metres. “Open” adds up metres weighted by how enclosed each street is: the street with the smallest area seen in S8 counts at 1.5 times its length, and the most open one at its plain length. “Straight” adds up the degrees turned at each junction, from the direction a walker arrives in to the direction of the next street. Length only breaks ties.</p>
 </section>
 <section id="the-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="the-comparison">The comparison</h2>
-<p>Only after the flows are made does S9 read the counts and space syntax. At each counted junction, it sets the commuters of each reading against the mean number of pedestrians the city counted there at 7 and 8 h. For every walkable street inside the area, it ranks the morning’s flow against walking choice and integration, and gives a rank correlation. The comparison describes; it chooses no reading.</p>
+<p>S9 reads the counts and space syntax only after the flows are made. At each counted junction, it sets each reading’s commuters against the mean number of pedestrians the city counted there at 7 and 8 h. For every walkable street inside the area, it ranks the morning’s flow against walking choice and integration, and gives a rank correlation. Beyond the doors, it sets the commuters’ straight legs against the ring’s weekday counts, next to the expectations I wrote before reading the ring (outputs/s9/expected.csv). The comparison describes. It does not pick a reading.</p>
 </section>
 <section id="tests" class="level2">
 <h2 class="anchored" data-anchor-id="tests">Tests</h2>
-<section id="nine-checks" class="level3">
-<h3 class="anchored" data-anchor-id="nine-checks">Nine checks</h3>
-<p>Each check asks one plain question of what S9 wrote. Eight must pass, and all eight do; the ninth only reports.</p>
+<section id="ten-checks" class="level3">
+<h3 class="anchored" data-anchor-id="ten-checks">Ten checks</h3>
+<p>Each check asks one plain question of what S9 wrote. Nine must pass, and all nine do. The tenth only reports.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -694,18 +700,18 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>T2</td>
-<td>Does every trip have a route in every reading, joined end to end, from where it starts to where it ends?</td>
-<td>yes, 16,958 trips × 3 readings</td>
+<td>Does every trip have a route in every reading, joined end to end from start to finish?</td>
+<td>yes: 16,958 trips × 3 readings</td>
 </tr>
 <tr class="odd">
 <td>T3</td>
-<td>Is the “shortest” route the shortest walk?</td>
-<td>yes, against S7’s own code, every 20th trip</td>
+<td>Is the “shortest” route really the shortest walk?</td>
+<td>yes, against S7’s own code, on every 20th trip</td>
 </tr>
 <tr class="even">
 <td>T4</td>
 <td>Does each reading win by its own rule?</td>
-<td>yes: “straight” never turns more than another reading, “open” never walks more than 1.5 times the shortest</td>
+<td>yes: “straight” never turns more than another reading, and “open” never walks more than 1.5 times the shortest</td>
 </tr>
 <tr class="odd">
 <td>T5</td>
@@ -720,15 +726,20 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>T7</td>
 <td>Does the comparison with the counts follow from the flows and the S5 table?</td>
-<td>yes, 7 junctions × 2 hours</td>
+<td>yes: 7 junctions × 2 hours</td>
 </tr>
 <tr class="even">
 <td>T8</td>
-<td>Is every rule the code names in the ledger, once?</td>
-<td>yes, 12 assumptions and 5 pieces of evidence</td>
+<td>Is every rule the code names in the ledger, exactly once?</td>
+<td>yes: 13 assumptions and 5 pieces of evidence</td>
 </tr>
 <tr class="odd">
 <td>T9</td>
+<td>Does the ring comparison follow from the doors, the targets and S5’s ring, on weekdays only?</td>
+<td>yes, worked out again: 23 sites</td>
+</tr>
+<tr class="even">
+<td>T10</td>
 <td>What does this slice give?</td>
 <td>report</td>
 </tr>
@@ -744,7 +755,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>I added half a person to one street’s flow at 8 h, and T5 caught it. T6 first failed because it found the words “counts” and “space syntax” in the description at the top of the code; it now reads the code alone.</p>
+<p>I added half a person to one street’s flow at 8 h, and T5 caught it. T6 first failed because it found the words “counts” and “space syntax” in the description at the top of the code. It now reads the code alone.</p>
 </div>
 </div>
 </section>
@@ -782,16 +793,21 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>X4</td>
 <td>share of resident walkers who work inside: 0, 0.19, 0.5, 1</td>
-<td>share of the count explained 21 to 32 %; agreement with walking choice 0.16 to 0.31</td>
+<td>share of the count explained: 21 to 32 %; agreement with walking choice: 0.16 to 0.31</td>
 </tr>
 <tr class="odd">
 <td>X5</td>
 <td>reading “straight” with each metre worth 0, 0.02 and 0.1 degrees</td>
-<td>walkers going over a quarter further fall from 15 % to 7 %</td>
+<td>walkers going over a quarter further drop from 15 % to 7 %</td>
+</tr>
+<tr class="even">
+<td>X6</td>
+<td>a ring site counts as passed within 20, 40 or 80 m of a commuter’s straight leg</td>
+<td>1 to 5 sites reached, 0.4 to 1.5 % of the ring’s count. Across the canal, none at any distance; towards Old Montréal, a handful at 80 m only</td>
 </tr>
 </tbody>
 </table>
-<p>No setting tried brings the commuters above a third of the pedestrians counted, so the gap is in who walks, and the next slices of S9 have to add people (likely).</p>
+<p>No setting I tried brings the commuters above a third of the pedestrians counted. So the gap is in who walks, and the next slices of S9 have to add people (likely).</p>
 
 
 </section>

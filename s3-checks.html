@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -506,7 +506,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="why-photos" class="level2">
 <h2 class="anchored" data-anchor-id="why-photos">Why photos</h2>
-<p>S3 guesses which way a sign faces from its position and meaning, and most guesses are safe. A few places stayed in doubt: two signs that cannot both be true for one street, and no-entry signs on streets the city file calls two-way. For those, I looked at the street itself in the street-level photos on <a href="https://www.mapillary.com">Mapillary</a>.</p>
+<p>S3 guesses which way a sign faces from where it stands and what it means, and most guesses are safe. A few places stayed in doubt: two signs that cannot both be true for one street, and no-entry signs on streets the city file calls two-way. For those, I looked at the street itself in the street-level photos on <a href="https://www.mapillary.com">Mapillary</a>.</p>
 </section>
 <section id="how-i-check-one-place" class="level2">
 <h2 class="anchored" data-anchor-id="how-i-check-one-place">How I check one place</h2>
@@ -537,12 +537,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>I gather the signs Mapillary detected within 30 m of the junction (<a href="./sources-check.html#getting-the-signs">getting the signs</a>). Each has two readings of where it faces: Mapillary’s own angle, which <a href="./sources-check.html#testing-the-direction-on-signs-we-already-know">I tested on stop signs</a>, and the photo, since a sign whose face I can read is turned towards the camera. A tool cuts the sign out of each panorama and puts every photo of one junction on one sheet, beside what the machine read. From the sheet I write down one decision per finding, with the evidence, and S3 applies it at its next build (<a href="./s3-build.html">how S3 is built</a>).</p>
-<p>I call a decision likely when both readings point to the same street and the photo shows a sign that fits. I leave it open when the readings disagree or the photo does not show which way the sign faces. A sign newer than every photo stays open too.</p>
+<p>I gather the signs Mapillary detected within 30 m of the junction (<a href="./sources-check.html#getting-the-signs">getting the signs</a>). Each sign has two readings of where it faces. One is Mapillary’s own angle, which <a href="./sources-check.html#testing-the-direction-on-signs-we-already-know">I tested on stop signs</a>. The other is the photo: if I can read a sign’s face, it is turned towards the camera. A tool cuts the sign out of each panorama and puts every photo of one junction on one sheet, beside what the machine read. From the sheet I write down one decision per finding, with the evidence. S3 applies it at its next build (<a href="./s3-build.html">how S3 is built</a>).</p>
+<p>I call a decision likely when both readings point to the same street and the photo shows a sign that fits. I leave it open when the readings disagree, or when the photo does not show which way the sign faces. A sign newer than every photo stays open too.</p>
 </section>
 <section id="what-the-photos-showed" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-photos-showed">What the photos showed</h2>
-<p>The photos settled the last turn-sign contradiction and all four no-entry disagreements. Six no-entry signs are now explained by a photo, and the places to check fell from 27 to 21.</p>
+<p>The photos settled the last turn-sign contradiction and all four no-entry disagreements. A photo now explains six no-entry signs, and the places to check fell from 27 to 21.</p>
 <section id="wellington-and-ann-j006" class="level3">
 <h3 class="anchored" data-anchor-id="wellington-and-ann-j006">Wellington and Ann (J006)</h3>
 <div class="quarto-figure quarto-figure-center">
@@ -551,7 +551,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>J006. Each photo with what Mapillary read and the street that reading points to. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>This was the last place where S3’s turn signs contradicted each other, and the photos show three streets, each with its own sign. The green “straight only” on the west corner, seen in May 2022 and December 2023, faces Wellington arriving from the west (P01, likely). S3 had given it to the short split piece of Wellington, which caused the contradiction. The “left or right only” under the viaduct faces Rue Ann from the north (P02, likely). Mapillary read the green sign as its opposite, “no straight through”, so the photo decides and the label alone never does.</p>
+<p>This was the last place where S3’s turn signs contradicted each other. The photos show three streets, each with its own sign. The green “straight only” on the west corner, seen in May 2022 and December 2023, faces Wellington arriving from the west (P01, likely). S3 had given it to the short split piece of Wellington, which caused the contradiction. The “left or right only” under the viaduct faces Rue Ann from the north (P02, likely). Mapillary read the green sign as its opposite, “no straight through”. So the photo decides, and the label alone never does.</p>
 <p>One question stays open (P03). In 2024 a “straight only” sign stood under the viaduct, facing the short split piece of Wellington. In October 2025 the city installed a new post there with a stop and “left or right only”. No photo is newer, so S3 follows the city post and keeps the question on the list.</p>
 </section>
 <section id="end-of-brennan-j189" class="level3">
@@ -562,7 +562,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>J189. The end of Brennan in May 2024. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>Bollards cross the street, and the no-entry signs at them close the paved area beyond to cars (P04, likely). The city file is right that cars may drive up to the bollards. The paving continues past them, which fits S1’s assumption C04 that walkers carry on, though it does not show where the paving leads, so C04 stays an assumption.</p>
+<p>Bollards cross the street, and the no-entry signs at them close the paved area beyond to cars (P04, likely). The city file is right that cars may drive up to the bollards. The paving continues past them, which fits S1’s assumption C04 that walkers carry on. This does not show where the paving leads, though, so C04 stays an assumption.</p>
 </section>
 <section id="east-end-of-bassins-j122" class="level3">
 <h3 class="anchored" data-anchor-id="east-end-of-bassins-j122">East end of Bassins (J122)</h3>
@@ -572,7 +572,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>J122. The east end of Rue des Bassins. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>The no-entry sign hangs under a stop sign, and Mapillary’s angle points within 2° of the path into the new park, closing the park to cars (P05, likely). Rue des Bassins itself stays two-way, as the city file says.</p>
+<p>The no-entry sign hangs under a stop sign. Mapillary’s angle points within 2° of the path into the new park, so the sign closes the park to cars (P05, likely). Rue des Bassins itself stays two-way, as the city file says.</p>
 </section>
 <section id="notre-dame-and-inspecteur-j045" class="level3">
 <h3 class="anchored" data-anchor-id="notre-dame-and-inspecteur-j045">Notre-Dame and Inspecteur (J045)</h3>
@@ -582,7 +582,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>J045. The corner of Notre-Dame and Inspecteur. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>The two readings disagree, so the photo alone would leave it open. OpenStreetMap settles it: it draws Inspecteur north of Notre-Dame as two one-way halves, and the sign guards the half coming towards Notre-Dame (P07, likely). The city’s single two-way line is coarser, and fine for S1, which works at the scale of whole streets.</p>
+<p>The two readings disagree, so the photo alone would leave this open. OpenStreetMap settles it. It draws Inspecteur north of Notre-Dame as two one-way halves, and the sign guards the half coming towards Notre-Dame (P07, likely). The city’s single two-way line is coarser. That is fine for S1, which works at the scale of whole streets.</p>
 </section>
 <section id="still-open" class="level3">
 <h3 class="anchored" data-anchor-id="still-open">Still open</h3>
@@ -592,12 +592,12 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>J146. The park path off Rue William. Photos: Mapillary, CC BY-SA 4.0.</figcaption>
 </figure>
 </div>
-<p>At the park path off William (P06), the two readings are far apart, and the photos show the signs without showing which way they face. Two more no-entry signs, at the park connectors (J145), stand on recent posts that no photo shows. With P03 at Wellington and Ann, these remain open.</p>
+<p>At the park path off William (P06), the two readings are far apart. The photos show the signs without showing which way they face. Two more no-entry signs, at the park connectors (J145), stand on recent posts that no photo shows. These stay open, along with P03 at Wellington and Ann.</p>
 </section>
 </section>
 <section id="limits" class="level2">
 <h2 class="anchored" data-anchor-id="limits">Limits</h2>
-<p>Most of the photos come from the city’s own survey car, taken from 2022 to 2024, so a sign installed after the last photo cannot be checked this way. Mapillary’s labels and angles are only a first guess: one label said the opposite of the sign, and at J045 the two readings disagreed. Each decision is mine and records how sure I am and why, so anyone can look at a sheet and disagree with it.</p>
+<p>Most of the photos come from the city’s own survey car, taken from 2022 to 2024. So a sign installed after the last photo cannot be checked this way. Mapillary’s labels and angles are only a first guess: one label said the opposite of the sign, and at J045 the two readings disagreed. Each decision is mine. It records how sure I am and why, so anyone can look at a sheet and disagree with it.</p>
 <p>Photos: Mapillary contributors VdM (Ville de Montréal), geodz, une_abeille and AlexPL, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
 
 

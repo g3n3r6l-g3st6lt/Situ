@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -503,19 +503,19 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-s4-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s4-does">What S4 does</h2>
-<p>S4 says what each building in the study area is: what it is used for, how tall it is, how many people live in it, and what is on its ground floor. S1 to S3 say where people can move, and nothing about why they would go anywhere. A street is busy at noon because of what lines it: a bank, a café, a gym, five hundred condos. <a href="./s5-rhythm.html">S5 Rhythm</a> reads S4 to know which places open when, and S7 will read it for where trips start and end.</p>
-<p>Most answers come from the city’s tax roll, the official list of every property and what it is. When the roll is silent, I fall back on OpenStreetMap, the open map anyone can edit, and the ground floor comes from the city’s 2025 survey of street-level commercial spaces. Each answer keeps its source, and a value no file knows stays empty, with the reason. One value is an assumption: no open file says where the doors are, so I link each building to the nearest walkable street. <a href="./s4-build.html">How S4 is built</a> gives every source and rule.</p>
+<p>S4 says what each building in the study area is: what it is used for, how tall it is, how many people live in it, and what is on its ground floor. S1 to S3 say where people can move. They say nothing about why anyone would go somewhere. A street is busy at noon because of what lines it: a bank, a café, a gym, five hundred condos. <a href="./s5-rhythm.html">S5 Rhythm</a> reads S4 to know which places open when. S7 will read it for where trips start and end.</p>
+<p>Most answers come from the city’s tax roll, the official list of every property and what it is. When the roll is silent, I fall back on OpenStreetMap, the open map anyone can edit. The ground floor comes from the city’s 2025 survey of street-level commercial spaces. Each answer keeps its source. A value no file knows stays empty, with the reason. One value is an assumption: no open file says where the doors are, so I link each building to the nearest walkable street. <a href="./s4-build.html">How S4 is built</a> gives every source and rule.</p>
 </section>
 <section id="one-building-step-by-step" class="level2">
 <h2 class="anchored" data-anchor-id="one-building-step-by-step">One building, step by step</h2>
-<p>District Griffin sur Peel is the long low block on Rue Peel between Ottawa and William, with towers on top. OpenStreetMap draws it as one outline tagged retail. The tax roll places 496 properties on its lot: 494 condo dwellings, a shopping centre and a condo parking space. The roll speaks first, so S4 calls the building residential and keeps the retail tag on record, unused.</p>
-<p>The 2025 survey finds ten premises on the ground floor, among them three banks and two restaurants; one space is vacant. Seven of the shops also appear in OpenStreetMap under the same name, and S4 counts each once. The nearest walkable street is Rue Ottawa, 6.5 m away.</p>
-<p>The block shows the main weakness of S4. Counted by property, the condos outvote the shops 494 to 1, yet on the street the block reads as a shopping strip. So S4 keeps the ground floor apart from the use: “used for” says what most of the building is, and “ground floor” what a walker passes.</p>
+<p>District Griffin sur Peel is the long low block on Rue Peel between Ottawa and William, with towers on top. OpenStreetMap draws it as one outline tagged retail. The tax roll places 496 properties on its lot. Of these, 494 are condo dwellings. The other two are a shopping centre and a condo parking space. The roll speaks first, so S4 calls the building residential. It keeps the retail tag on record, unused.</p>
+<p>The 2025 survey finds ten premises on the ground floor, among them three banks and two restaurants. One space is vacant. Seven of the shops also appear in OpenStreetMap under the same name, and S4 counts each once. The nearest walkable street is Rue Ottawa, 6.5 m away.</p>
+<p>This block shows the main weakness of S4. Counted by property, the condos outvote the shops 494 to 1. Yet on the street, the block reads as a shopping strip. So S4 keeps the ground floor apart from the use. “Used for” says what most of the building is. “Ground floor” says what a walker passes.</p>
 </section>
 <section id="what-it-found" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-found">What it found</h2>
-<p>There are 296 buildings in the study area. The tax roll gave the use of 188 and OpenStreetMap of 74. The other 34 stay unknown, mostly small sheds and annexes. Most buildings with a known use are residential, and together they hold 11,954 dwellings, a total the <a href="./s4-build.html#stress-tests">stress tests</a> show to be steadier than any single tower’s count.</p>
-<p>In the <a href="./lab.html#w201008914">Lab</a>, the S4 tab colours the buildings by use or by source. Click one to see each value with its source, along with the places inside it and its street.</p>
+<p>There are 296 buildings in the study area. The tax roll gave the use of 188, and OpenStreetMap of 74. The other 34 stay unknown, mostly small sheds and annexes. Most buildings with a known use are residential. Together they hold 11,954 dwellings. The <a href="./s4-build.html#stress-tests">stress tests</a> show this total is steadier than any single tower’s count.</p>
+<p>In the <a href="./lab.html#w201008914">Lab</a>, the S4 tab colours the buildings by use or by source. Click one to see each value with its source. You also see the places inside it and its street.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Use</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Source</a></li></ul>
 <div class="tab-content">
@@ -530,8 +530,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s4/s4_sheet_source.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Where each building’s use came from. White: the tax roll. Grey: OpenStreetMap. Pink dashed: nowhere, so it stays unknown."><img src="outputs/s4/s4_sheet_source.png" class="img-fluid figure-img" alt="Where each building’s use came from. White: the tax roll. Grey: OpenStreetMap. Pink dashed: nowhere, so it stays unknown."></a></p>
-<figcaption>Where each building’s use came from. White: the tax roll. Grey: OpenStreetMap. Pink dashed: nowhere, so it stays unknown.</figcaption>
+<p><a href="outputs/s4/s4_sheet_source.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Where each building’s use came from. White means the tax roll and grey means OpenStreetMap. Pink dashed means no source, so the use stays unknown."><img src="outputs/s4/s4_sheet_source.png" class="img-fluid figure-img" alt="Where each building’s use came from. White means the tax roll and grey means OpenStreetMap. Pink dashed means no source, so the use stays unknown."></a></p>
+<figcaption>Where each building’s use came from. White means the tax roll and grey means OpenStreetMap. Pink dashed means no source, so the use stays unknown.</figcaption>
 </figure>
 </div>
 </div>
@@ -540,8 +540,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-i-still-need-to-check" class="level2">
 <h2 class="anchored" data-anchor-id="what-i-still-need-to-check">What I still need to check</h2>
-<p>S4 flags 61 cases for me to look at by hand, also listed in the Lab. Most are buildings whose use no source gives. Some are ties between two uses. A few stand far from any walkable street, Hangar 1825 most of all. In ten, the lot and the address point name different buildings; the largest, Griffix, is why S4 now <a href="./s4-build.html#every-row-finds-its-building">reads the lot first</a>.</p>
-<p>The case that matters most is 1485 rue des Bassins (B01): 415 properties built in 2024, 290 dwellings and 125 condo parking spaces, all at one address point with no building on it. I first took it for a building OpenStreetMap had not drawn yet. The lot outlines changed my reading. The lot of 1485 holds Bass 4 and Le Vittorio, 130 m from the address point, and neither tower has a single property placed in it. So the dwellings most likely belong to those two towers, and the address point is what is out of place (likely). No file says which tower holds how many. Until a door number or a site visit settles it, I leave them unplaced, outside the 11,954 dwellings, and split nothing by guess.</p>
+<p>S4 flags 61 cases for me to look at by hand. They are also listed in the Lab. Most are buildings whose use no source gives. Some are ties between two uses. A few stand far from any walkable street, Hangar 1825 most of all. In ten, the lot and the address point name different buildings. The largest of these, Griffix, is why S4 now <a href="./s4-build.html#every-row-finds-its-building">reads the lot first</a>.</p>
+<p>The case that matters most is 1485 rue des Bassins (B01). It has 415 properties built in 2024, 290 dwellings and 125 condo parking spaces, all at one address point with no building on it. I first took it for a building OpenStreetMap had not drawn yet. The lot outlines changed my reading. The lot of 1485 holds Bass 4 and Le Vittorio, 130 m from the address point. Neither tower has a single property placed in it. So the dwellings most likely belong to those two towers, and the address point is what is out of place (likely). No file says which tower holds how many. Until a door number or a site visit settles it, I leave them unplaced and outside the 11,954 dwellings. I split nothing by guess.</p>
 
 
 </section>

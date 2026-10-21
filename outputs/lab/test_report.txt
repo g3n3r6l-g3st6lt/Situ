@@ -22,7 +22,7 @@ L6  S4: buildings, places and checkpoints match the S4 tables, and a missing val
     296 buildings x 11 fields and every outline point; 571 empty cells stayed empty; 610 places, 61 checkpoints
     PASS
 
-L7  S5: the weekday shape, the junction counts, every place's week and the open counts match the S5 tables
+L7  S5: the weekday shape, the junction counts, every place's week, the open counts and the ring match the S5 tables
     72 weekday hours x 3 values (0 empty stayed empty), 192 junction-hours, 610 places x 168 hours, 168 open counts, 288 bicycle hours, the bicycle months
     PASS
 
@@ -38,8 +38,12 @@ L10 S8: every street's view measures and its kept view match the S8 tables, and 
     231 segments x 6 measures, 231 views x 72 sight lines, 1 checkpoints
     PASS
 
-L11 S9: every street's imagined walkers, the counted junctions and the ledger match the S9 tables
-    579 street flows x 4 hours, 14 junction-hours compared, 17 ledger rules
+L11 S9: every street's imagined walkers, the counted junctions, the ring and the ledger match the S9 tables
+    579 street flows x 4 hours, 14 junction-hours compared, 18 ledger rules
+    PASS
+
+L12 Walk tools: the Lab's walking distances equal S7's shortest walks, and its sight lines give S8's areas
+    60 walks between random points, 30 views from S8's viewpoints, 360 sight lines each; views within 0.75 % of S8's, 0.038 % on average
     PASS
 
 ALL PASS

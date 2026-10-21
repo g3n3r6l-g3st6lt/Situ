@@ -1,0 +1,47 @@
+site,name,edge_m,hour,counted,days,commuters,share
+C261,Bridge / Saint-Patrick,116.7,7,2.0,1,0.0,0.0
+C261,Bridge / Saint-Patrick,116.7,8,9.0,1,0.0,0.0
+C5326,rue De Montmorency / rue Saint-Patrick,128.5,7,32.0,1,0.0,0.0
+C5326,rue De Montmorency / rue Saint-Patrick,128.5,8,61.0,1,0.0,0.0
+C265,Saint-Patrick / Seigneurs,148.4,7,12.0,1,0.0,0.0
+C265,Saint-Patrick / Seigneurs,148.4,8,44.0,1,0.0,0.0
+C1551,Brennan/Commune / Prince,163.9,7,48.0,2,0.0,0.0
+C1551,Brennan/Commune / Prince,163.9,8,123.0,2,0.0,0.0
+C1550,Commune de la / Mill,192.5,7,81.0,2,0.0,0.0
+C1550,Commune de la / Mill,192.5,8,122.5,2,0.0,0.0
+C1511,Lucien-L'Allier / Saint-Jacques,244.7,7,223.0,1,25.5,0.115
+C1511,Lucien-L'Allier / Saint-Jacques,244.7,8,325.0,1,39.5,0.122
+C1404,Guy / Saint-Jacques,258.6,7,129.0,1,1.9,0.015
+C1404,Guy / Saint-Jacques,258.6,8,162.0,1,2.9,0.018
+C390,McGill / Notre-Dame,366.2,7,962.0,1,0.0,0.0
+C390,McGill / Notre-Dame,366.2,8,2148.0,1,0.0,0.0
+C5943,rue McGill / rue des Récollets,368.7,7,280.0,1,0.0,0.0
+C5943,rue McGill / rue des Récollets,368.7,8,518.0,1,0.0,0.0
+C392,Saint-Jacques / Square Victoria Est,373.1,7,1171.0,2,7.8,0.007
+C392,Saint-Jacques / Square Victoria Est,373.1,8,2355.0,2,11.3,0.005
+C19237,McGill / Le Moyne,374.3,7,158.0,1,0.0,0.0
+C19237,McGill / Le Moyne,374.3,8,411.0,1,0.0,0.0
+C394,McGill / Saint-Paul,378.1,7,566.0,1,0.0,0.0
+C394,McGill / Saint-Paul,378.1,8,1000.0,1,0.0,0.0
+C263,Centre / Wellington,380.3,7,30.0,1,0.0,0.0
+C263,Centre / Wellington,380.3,8,37.0,1,0.0,0.0
+C19238,McGill / Place D'Youville int Nord,381.1,7,173.0,1,0.0,0.0
+C19238,McGill / Place D'Youville int Nord,381.1,8,198.0,1,0.0,0.0
+C4081,McGill / William / Place Youville,382.1,7,513.0,1,0.0,0.0
+C4081,McGill / William / Place Youville,382.1,8,853.0,1,0.0,0.0
+C9310,rue McGill / rue Marguerite-D'Youville,393.5,7,104.0,1,0.0,0.0
+C9310,rue McGill / rue Marguerite-D'Youville,393.5,8,91.0,1,0.0,0.0
+C264,Charlevoix / Saint-Patrick,402.9,7,83.0,1,0.0,0.0
+C264,Charlevoix / Saint-Patrick,402.9,8,108.0,1,0.0,0.0
+C2869,Commune de la / McGill,408.1,7,122.3,3,0.0,0.0
+C2869,Commune de la / McGill,408.1,8,130.0,3,0.0,0.0
+C6643,rue De Condé / rue Wellington,455.3,7,19.0,1,0.0,0.0
+C6643,rue De Condé / rue Wellington,455.3,8,30.0,1,0.0,0.0
+C2038,rue Saint-Pierre / rue Saint-Paul,513.1,7,107.0,1,0.0,0.0
+C2038,rue Saint-Pierre / rue Saint-Paul,513.1,8,214.0,1,0.0,0.0
+C260,Bridge / Mill,521.4,7,7.0,1,0.0,0.0
+C260,Bridge / Mill,521.4,8,11.0,1,0.0,0.0
+C455,Notre-Dame / Saint-Pierre,531.9,7,232.0,1,0.0,0.0
+C455,Notre-Dame / Saint-Pierre,531.9,8,517.0,1,0.0,0.0
+C436,Jean-Paul-Riopel pl. / Saint-Antoine / Saint-Pierre,582.4,7,298.0,1,0.0,0.0
+C436,Jean-Paul-Riopel pl. / Saint-Antoine / Saint-Pierre,582.4,8,533.0,1,0.0,0.0

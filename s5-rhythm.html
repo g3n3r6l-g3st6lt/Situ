@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -464,6 +464,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-was-measured" id="toc-what-was-measured" class="nav-link" data-scroll-target="#what-was-measured">What was measured</a></li>
   <li><a href="#bicycles-every-day-of-the-year" id="toc-bicycles-every-day-of-the-year" class="nav-link" data-scroll-target="#bicycles-every-day-of-the-year">Bicycles, every day of the year</a></li>
   <li><a href="#what-the-places-promise" id="toc-what-the-places-promise" class="nav-link" data-scroll-target="#what-the-places-promise">What the places promise</a></li>
+  <li><a href="#the-ring-around-the-area" id="toc-the-ring-around-the-area" class="nav-link" data-scroll-target="#the-ring-around-the-area">The ring around the area</a></li>
   <li><a href="#what-s5-cannot-say-yet" id="toc-what-s5-cannot-say-yet" class="nav-link" data-scroll-target="#what-s5-cannot-say-yet">What S5 cannot say yet</a></li>
   <li><a href="#in-the-lab" id="toc-in-the-lab" class="nav-link" data-scroll-target="#in-the-lab">In the Lab</a></li>
   </ul>
@@ -505,64 +506,76 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-s5-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s5-does">What S5 does</h2>
-<p>S5 gives each hour of the week what the open data says about it. Henri Lefebvre proposed reading a city through its rhythms, the repetitions of days and seasons (Lefebvre 2004). S5 is the first system in Situ that holds time, and it starts from two kinds of evidence that I keep apart.</p>
-<p>The first is measured: how busy the streets are, hour by hour, from the city’s <a href="./counts.html">movement counts</a> at S1 junctions. The second is promised: which places say they are open, from the opening hours <a href="./s4-buildings.html">S4</a> gathered. A count records what happened on one day. An opening hour records an intention, and a place can be open and empty. S5 never mixes the two, and a later system that reads S5 knows which one it is reading.</p>
-<p>Neither one is a simulation. The promised hours can time the walkers and drivers S9 will imagine. The measured day stays out of them, so that S9 can compare what they do with it.</p>
+<p>S5 gives each hour of the week what the open data says about it. Henri Lefebvre proposed reading a city through its rhythms, the repetitions of days and seasons (Lefebvre 2004). S5 is the first Situ system that holds time, and it keeps two kinds of evidence apart.</p>
+<p>The first is measured: how busy the streets are, hour by hour, from the city’s <a href="./counts.html">movement counts</a> at S1 junctions, the points where streets meet. The second is promised: the opening hours <a href="./s4-buildings.html">S4</a> gathered. A count records one day. An opening hour records an intention, and a place can be open and empty. S5 never mixes the two, so a later system always knows which one it is reading.</p>
+<p>Neither is a simulation. The promised hours can time the walkers and drivers S9 will imagine. The measured day stays out of them, so S9 can compare what they do with it.</p>
 </section>
 <section id="what-was-measured" class="level2">
 <h2 class="anchored" data-anchor-id="what-was-measured">What was measured</h2>
 <p class="big-number">
-9 counted days · 7 junctions · no weekend
+9 counted days at 7 junctions · no weekend
 </p>
-<p>The city counted seven S1 junctions on nine days, all of them midweek, from Tuesday to Thursday. Only J040, where Guy meets Ottawa and William, was counted around the clock, for three days in December 2024. The other six were counted on a single day, in three windows that cover the two rush hours and midday.</p>
-<p>Junctions differ in size: J051 on Notre-Dame sees about four times the people J006 on Ann sees. So S5 compares shapes. Each day is divided by its own average over the six hours every day counted (7h, 8h, 11h, 12h, 16h and 17h), which makes 1.0 an ordinary daytime hour of that day. A weekday hour then takes the mean of the days that counted it, with their lowest and highest. <a href="./s5-build.html">How S5 is built</a> gives the rules.</p>
+<p>The city counted seven S1 junctions on nine days, all from Tuesday to Thursday. Only J040, where Guy meets Ottawa and William, was counted around the clock, for three days in December 2024. The other six were counted on one day each, in three windows covering both rush hours and midday.</p>
+<p>Junctions differ in size: J051 on Notre-Dame sees about four times the people of J006 on Ann. So S5 compares shapes. Each day is divided by its own average over the six hours every day counted (7h, 8h, 11h, 12h, 16h and 17h), which makes 1.0 an ordinary daytime hour of that day. A weekday hour then takes the mean of the days that counted it, with their lowest and highest. <a href="./s5-build.html">How S5 is built</a> gives the rules.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s5/s5_sheet_day.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A weekday, hour by hour. White: the mean of the counted days. Grey band: lowest to highest. Pink: hours counted at J040 alone."><img src="outputs/s5/s5_sheet_day.png" class="img-fluid figure-img" alt="A weekday, hour by hour. White: the mean of the counted days. Grey band: lowest to highest. Pink: hours counted at J040 alone."></a></p>
 <figcaption>A weekday, hour by hour. White: the mean of the counted days. Grey band: lowest to highest. Pink: hours counted at J040 alone.</figcaption>
 </figure>
 </div>
-<p>The shape has a value for every hour of a weekday, and 17 of the 24 hours rest on J040’s three December days alone (certain). Everything from 18:00 to 6:00 is one junction in winter.</p>
-<p>My first reading, and it is an interpretation: people on foot have a sharper evening than morning, peaking at 17h at about one and a half times an ordinary hour, against just over one at 8h. Bicycles peak twice, at 8h and 17h. Cars spread their busy hours from 16h to 19h. On Wellington, on the one Thursday in February when four of its junctions were counted, Murray and Young carried the most vehicles at 8h, and Ann and Shannon at 17h. Only one day stands behind that difference, so it stays a question for the field.</p>
+<p>Every weekday hour has a value, but 17 of the 24 rest on J040’s three December days alone (certain). From 18:00 to 6:00, the shape is one junction in winter.</p>
+<p>My first reading, and it is an interpretation: people on foot have a sharper evening than morning, peaking at 17h at about one and a half times an ordinary hour, against just over one at 8h. Bicycles peak at 8h and 17h, while cars spread their busy hours from 16h to 19h. On Wellington, where four junctions were counted on one Thursday in February, Murray and Young carried the most vehicles at 8h, and Ann and Shannon at 17h. Only one day stands behind that difference, so it stays a question for the field.</p>
 </section>
 <section id="bicycles-every-day-of-the-year" class="level2">
 <h2 class="anchored" data-anchor-id="bicycles-every-day-of-the-year">Bicycles, every day of the year</h2>
 <p class="big-number">
-376 days · 3 detectors · 59 Saturdays, 57 Sundays
+376 days from 3 detectors · 59 Saturdays and 57 Sundays
 </p>
-<p>The city also keeps permanent bicycle detectors, which record every hour of every day. Three stand inside the study area: two on Peel at Ottawa, one for each direction, and one on William at Nazareth, westbound. All three were complete on 376 days between 9 June 2025 and 14 October 2026. For bicycles, S5 can therefore speak about weekends and seasons. Each day is read the same way as the counts, against its own reference hours.</p>
+<p>The city also keeps permanent bicycle detectors that record every hour of every day. Three stand inside the study area: two on Peel at Ottawa, one per direction, and one on William at Nazareth, westbound. All three were complete on 376 days between 9 June 2025 and 14 October 2026, so for bicycles S5 can speak about weekends and seasons. Each day is read like the counts, against its own reference hours.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/s5/s5_sheet_bikes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Bicycles all year. Above, the day’s shape by kind of day and season. Below, the bicycles of an average day, month by month."><img src="outputs/s5/s5_sheet_bikes.png" class="img-fluid figure-img" alt="Bicycles all year. Above, the day’s shape by kind of day and season. Below, the bicycles of an average day, month by month."></a></p>
-<figcaption>Bicycles all year. Above, the day’s shape by kind of day and season. Below, the bicycles of an average day, month by month.</figcaption>
+<p><a href="outputs/s5/s5_sheet_bikes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Bicycles all year. Above: the shape of the day, by kind of day and season. Below: bicycles on an average day, month by month."><img src="outputs/s5/s5_sheet_bikes.png" class="img-fluid figure-img" alt="Bicycles all year. Above: the shape of the day, by kind of day and season. Below: bicycles on an average day, month by month."></a></p>
+<figcaption>Bicycles all year. Above: the shape of the day, by kind of day and season. Below: bicycles on an average day, month by month.</figcaption>
 </figure>
 </div>
-<p>The year has a strong swing (certain, for these three detectors). An average day in August or September brings about 1,800 to 1,900 bicycles past them, against 130 to 180 from December to February, roughly ten times fewer. The week matters less: in summer a Saturday brings nine tenths of a weekday’s bicycles, and a Sunday about three quarters.</p>
-<p>The kind of day changes the shape more than the amount. Every weekday, in every season, has two sharp peaks, at 8h and 17h. Saturdays and Sundays have no morning peak at all: bicycles build through the day to a long afternoon, highest between 13h and 17h. My reading, and it is an interpretation: on weekdays these streets carry a commute, and on weekends an outing.</p>
-<p>The two sources agree where they meet. On weekdays the counts’ bicycle shape follows the detectors’ closely, with a correlation of 0.89 over the 24 hours (likely a real agreement, since the streets and the years differ). The largest gap is at 19h in winter, where the counts rest on J040 alone. Two more detectors stand on Peel at Notre-Dame, just outside the area, and S5 leaves them out.</p>
+<p>The year swings hard (certain, for these three detectors). An average day in August or September brings about 1,800 to 1,900 bicycles past them. From December to February it brings 130 to 180, roughly ten times fewer. The week matters less: in summer a Saturday brings nine tenths of a weekday’s bicycles, and a Sunday about three quarters.</p>
+<p>The kind of day changes the shape more than the amount. Weekdays, in every season, peak sharply at 8h and 17h. Saturdays and Sundays have no morning peak: bicycles build to a long afternoon, highest from 13h to 17h. My reading, and it is an interpretation: on weekdays these streets carry a commute, and on weekends an outing.</p>
+<p>The two sources agree where they meet. On weekdays the counts’ bicycle shape follows the detectors’ closely, with a correlation of 0.89 over the 24 hours, where 1 would mean the two move in perfect step (likely a real agreement, since the streets and the years differ). The largest gap is at 19h in winter, where the counts rest on J040 alone. Two more detectors stand on Peel at Notre-Dame, just outside the area, and S5 leaves them out.</p>
 </section>
 <section id="what-the-places-promise" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-places-promise">What the places promise</h2>
 <p class="big-number">
 83 of 558 places give their hours
 </p>
-<p>Of the 558 places S4 found, 83 give opening hours (15 %), almost all through OpenStreetMap. Restaurants and cafés lead; the rest are mostly shops, bars, banks and parks. The other 475 stay unknown at every hour. S5 never reads a missing hour as closed.</p>
+<p>Of the 558 places S4 found, 83 give opening hours (15 %), almost all through OpenStreetMap. Restaurants and cafés lead, then mostly shops, bars, banks and parks. The other 475 stay unknown at every hour: S5 never reads a missing hour as closed.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/s5/s5_sheet_week.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Places open each hour of the week, among the 83 that give hours. A place counts as open in an hour when it is open at half past."><img src="outputs/s5/s5_sheet_week.png" class="img-fluid figure-img" alt="Places open each hour of the week, among the 83 that give hours. A place counts as open in an hour when it is open at half past."></a></p>
 <figcaption>Places open each hour of the week, among the 83 that give hours. A place counts as open in an hour when it is open at half past.</figcaption>
 </figure>
 </div>
-<p>The promised week peaks around midday from Tuesday to Friday, with 73 places open at its height, and thins on Sunday to about 56. By 21h fewer than 30 remain. Two places give hours S5 cannot read with certainty, and they are its checkpoints: Henden opens at 19:00 with no closing time (H01), and SHAY’s brunch rule, read the way the tag’s grammar says, replaces its weekend dinner hours (H02).</p>
+<p>The promised week peaks around midday from Tuesday to Friday, with 73 places open, and thins to about 56 on Sunday. By 21h fewer than 30 remain. Two places give hours S5 cannot read with certainty, so they become checkpoints, cases set aside for a closer look. Henden opens at 19:00 with no closing time (H01). SHAY’s brunch rule, read the way the tag’s grammar says, replaces its weekend dinner hours (H02).</p>
+</section>
+<section id="the-ring-around-the-area" class="level2">
+<h2 class="anchored" data-anchor-id="the-ring-around-the-area">The ring around the area</h2>
+<p>Between November 2024 and May 2026 the city counted 23 more intersections outside the study area, within 600 m of its edge (certain). S5 keeps them as a ring, read exactly like the counts inside. They build nothing: they let <a href="./s9-observer.html">S9</a> compare what it imagines with what was counted just beyond the area.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/s5/s5_sheet_ring.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The ring: weekday pedestrians at 8 h at the intersections counted around the area (squares) and at the S1 junctions inside it (circles)."><img src="outputs/s5/s5_sheet_ring.png" class="img-fluid figure-img" alt="The ring: weekday pedestrians at 8 h at the intersections counted around the area (squares) and at the S1 junctions inside it (circles)."></a></p>
+<figcaption>The ring: weekday pedestrians at 8 h at the intersections counted around the area (squares) and at the S1 junctions inside it (circles).</figcaption>
+</figure>
+</div>
+<p>The ring is lopsided. Towards Old Montréal, along McGill and at Square-Victoria, the counts reach 1,000 to 2,355 pedestrians at 8 h, more than at any junction inside the area. Across the canal, on Saint-Patrick and in Pointe-Saint-Charles, they stay under 110. Most ring sites were counted on one or two weekdays in September, November, December or May, and the junctions inside mostly in February and December. So the two sides of the edge also differ by season.</p>
+<p>Fifteen of the ring’s counted days are Saturdays. S5 keeps them apart from the weekdays: they are the only Saturday counts of people on foot near the area.</p>
 </section>
 <section id="what-s5-cannot-say-yet" class="level2">
 <h2 class="anchored" data-anchor-id="what-s5-cannot-say-yet">What S5 cannot say yet</h2>
-<p>The bicycles now have weekends and seasons; people on foot and cars still have neither. The places say Saturday is almost as open as a weekday, and no count of walkers exists to tell whether they come. The counts fall in February, May, November and December, while the bicycles show how much summer changes a street. The three detectors stand on two streets, so they tell the rhythm of cycling on Peel and William, which may differ from the canal path’s. Lingering escapes every count, since a count records people passing a point and says nothing of those who stay.</p>
+<p>The bicycles now have weekends and seasons. People on foot and cars have Saturdays only in the ring. The places say Saturday is almost as open as a weekday, and no count of walkers tells whether people come. The counts fall in February, May, November and December, while the bicycles show how much summer changes a street. The three detectors stand on Peel and William, and cycling on the canal path may keep another rhythm. Lingering escapes every count, since a count records people passing a point and says nothing of those who stay.</p>
 <p>The rhythm diaries and rhythm maps of my fieldwork will add a third kind of evidence, people’s own account of their week, once ethics approval comes (<a href="./limits.html">Limits of the desk</a>).</p>
 </section>
 <section id="in-the-lab" class="level2">
 <h2 class="anchored" data-anchor-id="in-the-lab">In the Lab</h2>
-<p>In the <a href="./lab.html#s5">Lab</a>, the S5 tab sets a day and an hour. Places light up when they say they are open, and each counted junction grows with that hour’s count. Play the day to watch it fill and empty. On a Saturday or a Sunday the junctions stay empty rings, since nothing was counted. Switch to bicycles and choose a season, and the three detectors grow with the hour on any day of the week.</p>
+<p>In the <a href="./lab.html#s5">Lab</a>, the S5 tab sets a day and an hour. Places light up when they say they are open, and each counted junction grows with that hour’s count. Play the day to watch it fill and empty. On a Saturday or Sunday the junctions inside stay empty rings, since nothing was counted there, while the ring’s squares show their Saturday counts. Switch to bicycles and pick a season, and the three detectors grow with the hour on any day of the week.</p>
 
 
 </section>

@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df4bf8f10a0bcfb6de5fa9b17a8f50b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3bb65974d615a9ece140d350b162299c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -498,28 +498,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Many sentences on this site lean on a book or a paper. In October I went back to each of those texts with the page open, to see whether my sentence still said what the author said. Most did. A few had drifted, usually by a small step, and the drift was always in the same direction: towards what my model needed the reading to say. Those few cases taught me the most.</p>
+<p>Many sentences on this site lean on a book or a paper. In October I went back to each of those texts with the page open. I wanted to see whether my sentence still said what the author said. Most did. A few had drifted, usually by a small step, and always in the same direction: towards what my model needed the reading to say. Those few cases taught me the most.</p>
 <section id="where-my-sentences-had-drifted" class="level2">
 <h2 class="anchored" data-anchor-id="where-my-sentences-had-drifted">Where my sentences had drifted</h2>
-<p>I had written that people “tend to keep going roughly straight”, citing Hillier and Iida. Their claim is narrower. People judge routes by how much they turn (Hillier &amp; Iida 2005, p.&nbsp;476), which is a statement about how routes are compared, and says little about what a walker does at each corner. The difference will matter when S7 gives walkers a way to choose their routes.</p>
+<p>I had written that people “tend to keep going roughly straight”, citing Hillier and Iida. Their claim is narrower. People judge routes by how much they turn (Hillier &amp; Iida 2005, p.&nbsp;476). That is about how people compare routes. It says little about what a walker does at each corner. The difference will matter when S7 gives walkers a way to choose their routes.</p>
 <p>I had also written that 2000 m is a common radius for driving. Hillier, Yang and Turner call radius 2000 “safe to use” for cities in general (2012, p.&nbsp;165). They say nothing about cars. Using it for driving is my choice, and the <a href="./s2-scores.html">S2 page</a> now says so.</p>
-<p>A third sentence claimed that walkers who always take the route with the least turning would reproduce the <a href="./space-syntax.html">choice</a> values (how often a street lies on the way between other places) by construction. That holds only if trips are spread evenly over every pair of places (Turner 2007, p.&nbsp;544). Real trips are not, since people go to work and to shops far more often than to a random corner. I added the condition.</p>
-<p>The last case is about my own reading. The definition of a spatial culture I use, “a distinctive way of ordering space”, comes from Hillier (1989), but I know it only through Griffiths and von Lünen’s quotation of it (2016, p.&nbsp;xxiii). I have kept it, and I say plainly that it is second-hand.</p>
+<p>A third sentence claimed that walkers who always take the route with the least turning would reproduce the <a href="./space-syntax.html">choice</a> values by construction. (Choice is how often a street lies on the way between other places.) That holds only if trips are spread evenly over every pair of places (Turner 2007, p.&nbsp;544). Real trips are not. People go to work and to shops far more often than to a random corner. I added the condition.</p>
+<p>The last case is about my own reading. My definition of a spatial culture, “a distinctive way of ordering space”, comes from Hillier (1989). I know it only through Griffiths and von Lünen’s quotation of it (2016, p.&nbsp;xxiii). I have kept it, and I say plainly that it is second-hand.</p>
 </section>
 <section id="what-held-and-what-it-leaves-open" class="level2">
 <h2 class="anchored" data-anchor-id="what-held-and-what-it-leaves-open">What held, and what it leaves open</h2>
-<p>The claim the whole method rests on did hold. Hillier and his colleagues found that the layout of the street network is “the main generator of patterns of movement” (1993, p.&nbsp;29). The same paper also shows how much that depends on place: across ten parts of King’s Cross, the correlation between layout and counted movement ranges from 0.25 to 0.80 (p.&nbsp;46), and shops can multiply movement beyond what the layout predicts (p.&nbsp;31). Ratti (2004) adds that the results shift with how the map is drawn. Together they are my reason for keeping space syntax out of the simulation and using it only as a <a href="./space-syntax.html#why-i-use-it">measuring stick</a>.</p>
+<p>The claim the whole method rests on did hold. Hillier and his colleagues found that the layout of the street network is “the main generator of patterns of movement” (1993, p.&nbsp;29). The same paper shows how much that depends on place. Across ten parts of King’s Cross, the correlation between layout and counted movement ranges from 0.25 to 0.80 (p.&nbsp;46). Shops can also multiply movement beyond what the layout predicts (p.&nbsp;31). Ratti (2004) adds that the results shift with how the map is drawn. Together these are my reason for keeping space syntax out of the simulation and using it only as a <a href="./space-syntax.html#why-i-use-it">measuring stick</a>.</p>
 </section>
 <section id="checking-the-software-against-the-papers" class="level2">
 <h2 class="anchored" data-anchor-id="checking-the-software-against-the-papers">Checking the software against the papers</h2>
 <p>PlanX, the QGIS plugin I use for the analysis, follows the published measures. Two details matter before comparing its numbers with other studies.</p>
 <section id="does-planx-count-a-journey-once-or-once-each-way" class="level3">
 <h3 class="anchored" data-anchor-id="does-planx-count-a-journey-once-or-once-each-way">Does PlanX count a journey once, or once each way?</h3>
-<p>PlanX’s manual leaves this open, and its own output answers it. Take a street segment that leads into a dead end and meets only two other lines at its far end. Every journey from the dead end passes through it, and no other journey does, so its choice value is simply the number of those journeys. In 103 such cases, PlanX’s value is the number counted once per pair of places, never the doubled one. So PlanX counts each pair once, as Turner defines choice (2007, p.&nbsp;544). Another tool that counted both ways would give somewhat higher normalised choice values (likely), which matters before comparing Griffintown with a published study.</p>
+<p>PlanX’s manual leaves this open, and its own output answers it. Take a street segment that leads into a dead end and meets only two other lines at its far end. Every journey from the dead end passes through it, and no other journey does. So its choice value is simply the number of those journeys. In 103 such cases, PlanX’s value counts each pair of places once, and never gives the doubled number. So PlanX counts each pair once, as Turner defines choice (2007, p.&nbsp;544). A tool that counted both ways would give somewhat higher normalised choice values (likely). That matters before comparing Griffintown with a published study.</p>
 </section>
 <section id="which-nain" class="level3">
 <h3 class="anchored" data-anchor-id="which-nain">Which NAIN?</h3>
-<p>For normalised choice (NACH), PlanX reproduces the published formula exactly. For normalised integration (NAIN), the paper gives one form in its text and another in its appendix, and PlanX uses a third.</p>
+<p>For normalised choice (NACH), PlanX reproduces the published formula exactly. For normalised integration (NAIN), the paper gives one form in its text and another in its appendix. PlanX uses a third.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -546,14 +546,14 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>The three forms rank the streets almost identically, so the maps do not change. The numbers themselves do differ, so a NAIN from this site should only be compared with one computed the same way.</p>
-<p>As a last check, Hillier, Yang and Turner (2012, p.&nbsp;162) report that real cities have a mean NACH between about 0.7 and 1.2. Montréal on my walking network has 0.80, which suggests the network was built and analysed in an ordinary way.</p>
+<p>The three forms rank the streets almost identically, so the maps do not change. The numbers themselves differ, so compare a NAIN from this site only with one computed the same way.</p>
+<p>As a last check, Hillier, Yang and Turner (2012, p.&nbsp;162) report that real cities have a mean NACH between about 0.7 and 1.2. Montréal on my walking network has 0.80. This suggests the network was built and analysed in an ordinary way.</p>
 </section>
 </section>
 <section id="still-to-read" class="level2">
 <h2 class="anchored" data-anchor-id="still-to-read">Still to read</h2>
-<p><em>Decoding the City</em> by Offenhuber and Ratti (2014) will matter once the project turns to images and video of the street. The Depthmap handbook and manual will matter when I compare PlanX with Depthmap. Where this site cites Lefebvre’s <em>Rhythmanalysis</em> and the archival readings, the pages are given beside each quotation.</p>
-<p>Close reading tells me whether a sentence matches its source. Whether the source is right is a separate question: several of these readings are still debated, and I try to say so where I use them.</p>
+<p><em>Decoding the City</em> by Offenhuber and Ratti (2014) will matter once the project turns to images and video of the street. The Depthmap handbook and manual will matter when I compare PlanX with Depthmap. Where this site cites Lefebvre’s <em>Rhythmanalysis</em> and the archival readings, the page numbers sit beside each quotation.</p>
+<p>Close reading tells me whether a sentence matches its source. Whether the source is right is a separate question. Several of these readings are still debated, and I try to say so where I use them.</p>
 
 
 </section>
