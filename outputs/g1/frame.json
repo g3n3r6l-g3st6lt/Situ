@@ -1,6 +1,6 @@
 {
  "format": "situ-g1",
- "format_version": "0.1",
+ "format_version": "0.2",
  "made": "2026-10-22",
  "crs": "EPSG:32188",
  "origin": [
@@ -9,16 +9,28 @@
  ],
  "axes": "x east, y north, z up",
  "units": "metres",
- "storey_height_m": 3.3333,
- "storey_height_from": 27,
+ "storey_height_m": 3.745,
+ "storey_height_from": 157,
+ "storey_height_by_use": {
+  "commerce": 4.32,
+  "industry": 4.2025,
+  "residential": 3.4492,
+  "services": 4.11
+ },
+ "height_source": {
+  "none": 15,
+  "storeys": 53,
+  "surface model 2015": 215,
+  "OpenStreetMap": 13
+ },
  "counts": {
   "segments": 264,
   "junctions": 191,
   "blocks": 296,
   "height_rule": {
-   "unknown": 73,
-   "assumption": 196,
-   "measured": 27
+   "unknown": 15,
+   "assumption": 53,
+   "measured": 228
   },
   "public_use": {
    "public use, hours unknown": 123,
@@ -46,9 +58,11 @@
   "possibly_gone": 34,
   "surfaces": 519,
   "checkpoints": {
-   "height unknown": 73,
+   "height unknown": 15,
    "street through building": 1,
+   "empty in 2015": 3,
    "no door": 1,
+   "heights disagree": 1,
    "not seen lately": 34,
    "count unsure": 26
   }

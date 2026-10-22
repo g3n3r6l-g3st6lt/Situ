@@ -552,7 +552,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page is the agreement between the parts. A file that keeps it can be read by any <a href="./g7-engine.html#plugins">engine plugin</a>, for Griffintown or any other city. It is a draft: version <strong>0.1</strong>. Each file states its version, and the version changes whenever a field is added, renamed or changes meaning.</p>
+<p>This page is the agreement between the parts. A file that keeps it can be read by any <a href="./g7-engine.html#plugins">engine plugin</a>, for Griffintown or any other city. It is a draft: version <strong>0.2</strong> (0.2 added the measured-height fields of G1b). Each file states its version, and the version changes whenever a field is added, renamed or changes meaning.</p>
 <section id="rules" class="level2">
 <h2 class="anchored" data-anchor-id="rules">Rules for every file</h2>
 <table class="caption-top table">
@@ -619,7 +619,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td><code>format_version</code></td>
 <td>text</td>
-<td><code>0.1</code></td>
+<td><code>0.2</code></td>
 </tr>
 <tr class="odd">
 <td><code>made</code></td>
@@ -642,11 +642,16 @@ ul.task-list li input[type="checkbox"] {
 <td><code>x east, y north, z up</code>; <code>metres</code></td>
 </tr>
 <tr class="odd">
-<td><code>storey_height_m</code>, <code>storey_height_from</code></td>
-<td>number</td>
-<td>the storey height used where only storeys are known, and how many buildings it came from</td>
+<td><code>storey_height_m</code>, <code>storey_height_from</code>, <code>storey_height_by_use</code></td>
+<td>number, object</td>
+<td>the height per storey used where only storeys are known: for all uses, how many buildings it came from, and by use</td>
 </tr>
 <tr class="even">
+<td><code>height_source</code></td>
+<td>object</td>
+<td>how many heights come from each source</td>
+</tr>
+<tr class="odd">
 <td><code>counts</code></td>
 <td>object</td>
 <td>how many of each element the files hold</td>
@@ -696,6 +701,30 @@ ul.task-list li input[type="checkbox"] {
 <td>yes</td>
 <td>text</td>
 <td>the rule in words</td>
+</tr>
+<tr class="odd">
+<td><code>height_source</code></td>
+<td>no</td>
+<td>text or null</td>
+<td><code>surface model 2015</code>, <code>OpenStreetMap</code> or <code>storeys</code>; null when unknown</td>
+</tr>
+<tr class="even">
+<td><code>height_2015_m</code>, <code>present_2015</code></td>
+<td>no</td>
+<td>number or null; <code>yes</code>, <code>no</code> or <code>unclear</code></td>
+<td>what the 2015 surface measured on the outline, and whether a building stood there</td>
+</tr>
+<tr class="odd">
+<td><code>ground_m</code></td>
+<td>no</td>
+<td>number or null</td>
+<td>the ground’s height above sea level under the building, from the 2015 terrain</td>
+</tr>
+<tr class="even">
+<td><code>year_built</code></td>
+<td>no</td>
+<td>text or null</td>
+<td>the tax roll’s year built, as given (a range when the roll gives several)</td>
 </tr>
 <tr class="odd">
 <td><code>door_x</code>, <code>door_y</code></td>

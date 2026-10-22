@@ -524,6 +524,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#what-the-engine-is-allowed-to-hold" id="toc-what-the-engine-is-allowed-to-hold" class="nav-link active" data-scroll-target="#what-the-engine-is-allowed-to-hold">What the engine is allowed to hold</a></li>
   <li><a href="#plugins" id="toc-plugins" class="nav-link" data-scroll-target="#plugins">Small plugins that stack</a></li>
+  <li><a href="#look" id="toc-look" class="nav-link" data-scroll-target="#look">The greybox look</a></li>
   <li><a href="#why-unreal" id="toc-why-unreal" class="nav-link" data-scroll-target="#why-unreal">Why Unreal</a></li>
   <li><a href="#why-not-city-sample" id="toc-why-not-city-sample" class="nav-link" data-scroll-target="#why-not-city-sample">Why not City Sample</a></li>
   <li><a href="#what-unreal-costs" id="toc-what-unreal-costs" class="nav-link" data-scroll-target="#what-unreal-costs">What Unreal costs</a></li>
@@ -805,6 +806,63 @@ flowchart BT
 </tr>
 </tbody>
 </table>
+</section>
+<section id="look" class="level2">
+<h2 class="anchored" data-anchor-id="look">The greybox look</h2>
+<p>The engine shows the world as a greybox: plain masses with a measuring grid, lit by a physical sun. Nothing is textured to look finished, because almost nothing about the facades is known. The materials come from the FancyDev grid set in the Unreal project. Their grid is laid in world space, so it never stretches on a raised footprint, and at its default scale one square is one metre. A reader can count storeys and metres off any wall.</p>
+<p>Colour carries meaning, and the meaning comes from the files. Each plugin reads which material to use from its settings, so another project can swap the set without touching the code.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Element</th>
+<th>What the colour says</th>
+<th>Material</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>building, height measured</td>
+<td>the 2015 surface or OpenStreetMap measured it</td>
+<td>light grid</td>
+</tr>
+<tr class="even">
+<td>building, height from storeys</td>
+<td>an assumption (W05)</td>
+<td>azure grid</td>
+</tr>
+<tr class="odd">
+<td>building, height unknown</td>
+<td>no source gives a height; drawn flat on its outline</td>
+<td>pink grid, the colour the site uses for gaps</td>
+</tr>
+<tr class="even">
+<td>a checkpoint on screen</td>
+<td>a conflict to look at, such as a street through a building</td>
+<td>red grid</td>
+</tr>
+<tr class="odd">
+<td>street open to cars</td>
+<td>from G1’s ground</td>
+<td>dark grid</td>
+</tr>
+<tr class="even">
+<td>sidewalk and walk-only ground</td>
+<td>from G1’s surfaces and ground</td>
+<td>default grid</td>
+</tr>
+<tr class="odd">
+<td>work zone</td>
+<td>a road work with its permit dates</td>
+<td>orange grid</td>
+</tr>
+</tbody>
+</table>
+<p>The building colours also differ in lightness, so they stay apart for readers who do not see colour well. The FancyDev files stay in the private Unreal project: the shop’s licence most likely allows their use in a project and forbids passing the files on (to confirm on the listing). A public plugin ships with plain materials and the same settings.</p>
 </section>
 <section id="why-unreal" class="level2">
 <h2 class="anchored" data-anchor-id="why-unreal">Why Unreal</h2>
