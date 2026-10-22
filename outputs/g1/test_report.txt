@@ -1,0 +1,41 @@
+T1  Is the ground exactly S1's segments and junctions, once each?
+    264 segments, 191 junctions
+    PASS
+
+T2  Does the local frame give S1's coordinates and lengths back, to the centimetre?
+    origin (299180, 5038120), rounded to 10 m
+    PASS
+
+T3  Does every height come from S4 (measured, or storeys x the median), and stay empty when S4 has neither?
+    storey height recomputed: 3.3333 m from 27 buildings; frame says 3.3333
+    PASS
+
+T4  Is every S4 building one block, with its outline unchanged?
+    296 blocks
+    PASS
+
+T5  Does every door sit on its outline, no further from its street than S4 measured (S4 samples every 3 m)?
+    a second, independent check of the closest-point rule
+    PASS
+
+T6  Is every S6 row either a prop or a photo detection matched to one, and every mapped object one prop?
+    2898 S6 rows, 2783 props
+    PASS
+
+T7  Does every prop take its class from the table, and every element name its source row?
+    PASS
+
+T8  Does the ledger cover every layer, with every row of a known kind?
+    14 rows
+    PASS
+
+T9  What the world leaves to be checked (report only)
+    height unknown: 73
+    not seen lately: 34
+    count unsure: 26
+    street through building: 1
+    no door: 1
+    public use: {'public use, hours unknown': 123, 'vacant premises only': 9, 'none recorded': 115, 'public use, hours known': 49}
+    props: {'tree': 971, 'hydrant': 104, 'seat': 101, 'bike rack': 110, 'water': 4, 'table': 31, 'shelter': 2, 'bin': 38, 'lamp': 803, 'camera': 87, 'crossing mark': 503, 'work zone': 29}
+
+ALL PASS

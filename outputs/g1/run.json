@@ -1,0 +1,130 @@
+{
+ "system": "g1",
+ "made": "2026-10-22T12:38:32Z",
+ "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
+ "code": {
+  "git_commit": "775ddac02805d10851bc05556fc095e8bdaafee4",
+  "differs_from_commit": true,
+  "files": [
+   {
+    "path": "Situ/g1_world/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/g1_world/build.py",
+    "sha256": "d83339ed5f7af2a1b2b7cbc26477dd8f448ad5bfff7400d376d4e5708ba48fa2"
+   },
+   {
+    "path": "Situ/g1_world/test.py",
+    "sha256": "44be72e2871ff914f9555e112bc0d1f7e1a8e55670f7049ce27a4f6050ee3d68"
+   },
+   {
+    "path": "Situ/g1_world/visualize.py",
+    "sha256": "40f6ad04a76a95c203e5357b23932864a37d27a1c3cc756cd23bb946852fd34a"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "50633b225cc853ccfc06bfa2d442c90401a9f3b8ff06f25d1ca217abdf2307a4"
+   }
+  ]
+ },
+ "inputs": [
+  {
+   "name": "BOUNDARY_FILE",
+   "path": "QGIS/Sample4-200926/Layers/griffintown_boundary.gpkg",
+   "bytes": 106496,
+   "modified": "2026-09-21T21:59:46Z",
+   "sha256": "27072d38e13201cca9c6a40a9399c7d58207307d126deb19d914dfbc4239ef72"
+  }
+ ],
+ "upstream": [
+  {
+   "system": "s1",
+   "run_json_sha256": "4ba35c2c5e8b66507474a11a5817b5bae95dc0c14fcdbcd8431eb3e099ee7ac6"
+  },
+  {
+   "system": "s4",
+   "run_json_sha256": "fd20d5b1c04fe541247e71957d1474d28205b65e7b8ae980f1756ad57c4b2089"
+  },
+  {
+   "system": "s6",
+   "run_json_sha256": "6c3c5976f6e5991b30459c60563a5b3adc9378a46f52c850ab33f262c1a924c4"
+  }
+ ],
+ "settings": {
+  "BOUNDARY_LAYER": "griffintown_boundary",
+  "CRS": "EPSG:32188",
+  "G1_ORIGIN_ROUND_M": 10,
+  "G1_PROP_CLASS": {
+   "tree": "tree",
+   "street light": "lamp",
+   "bench": "seat",
+   "picnic table": "table",
+   "bicycle parking": "bike rack",
+   "hydrant": "hydrant",
+   "waste basket": "bin",
+   "surveillance camera": "camera",
+   "fountain": "water",
+   "drinking water": "water",
+   "shelter": "shelter",
+   "crossing": "crossing mark",
+   "road work": "work zone"
+  },
+  "PHOTO_SEEN_SINCE": "2023"
+ },
+ "outputs": [
+  {
+   "path": "Situ/outputs/g1/blocks.geojson",
+   "bytes": 233741,
+   "sha256": "ea128452b3cd3e1d6c344e6cfc12e5c107319e1150823ca8cb57329042e220bb"
+  },
+  {
+   "path": "Situ/outputs/g1/checkpoints.csv",
+   "bytes": 12445,
+   "sha256": "a90b5d44111cd61f7f91aee48f3c19be33d6709857a99927df834506d717a35c"
+  },
+  {
+   "path": "Situ/outputs/g1/frame.json",
+   "bytes": 991,
+   "sha256": "e1e5b86f524dde1bb2f0e17718a199869d62015d4adc2001b970cebec08f0d17"
+  },
+  {
+   "path": "Situ/outputs/g1/g1_sheet_world.png",
+   "bytes": 191413,
+   "sha256": "cad83887fb5a341a6c318a7bdab0ef01d9611d889de7e0132691c33fee6d5af6"
+  },
+  {
+   "path": "Situ/outputs/g1/ground.geojson",
+   "bytes": 157395,
+   "sha256": "5e99e2dcbc8b660e753bde3b3db815ef1a37b3fa46d02ca035ab23818d50ab8e"
+  },
+  {
+   "path": "Situ/outputs/g1/ledger.csv",
+   "bytes": 3503,
+   "sha256": "517c7bffeb06d67da4c4863c1cee600a523eedf050927cd68eea240ca2449f35"
+  },
+  {
+   "path": "Situ/outputs/g1/props.csv",
+   "bytes": 462883,
+   "sha256": "17de58b27b258ce0fa08abb51bea5bb2d201532af3af76f9dfb4690f8625beb3"
+  },
+  {
+   "path": "Situ/outputs/g1/surfaces.geojson",
+   "bytes": 344072,
+   "sha256": "10e7bd02b0c57c530cab0329d31d9e9d521c2baf2e034d529938670a13c64514"
+  },
+  {
+   "path": "Situ/outputs/g1/test_report.txt",
+   "bytes": 1541,
+   "sha256": "f0da361604dd5c199d350caf94bde0e7d9d0ac45f0b683a752f3d6e8aacf7ec5"
+  }
+ ],
+ "tests": {
+  "report": "Situ/outputs/g1/test_report.txt",
+  "made": "2026-10-22T12:38:29Z",
+  "checks": 9,
+  "pass": 8,
+  "fail": 0,
+  "info": 1
+ }
+}

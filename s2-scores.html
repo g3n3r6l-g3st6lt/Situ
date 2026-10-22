@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./s3-rules.html" rel="next">
+<link href="./s2-build.html" rel="next">
 <link href="./s1-checks.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -80,9 +80,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -111,6 +108,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./systems.html"> 
 <span class="menu-text">Systems</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./play.html"> 
+<span class="menu-text">Game</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -178,12 +179,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./play.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">From systems to play</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Glossary</span></a>
   </div>
@@ -229,8 +224,21 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">S2 Scores</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="./s2-scores.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How it is built</span></a>
+  </div>
+</li>
+      </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -362,12 +370,35 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">Explore</span></a>
+ <span class="menu-text">Game</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./play.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From systems to a game</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./g1-world.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">G1 World</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
@@ -384,13 +415,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
  <span class="menu-text">Data</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./resources.html" class="sidebar-item-text sidebar-link">
@@ -438,8 +469,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-changed-in-october" id="toc-what-changed-in-october" class="nav-link" data-scroll-target="#what-changed-in-october">What changed in October</a></li>
   <li><a href="#maps" id="toc-maps" class="nav-link" data-scroll-target="#maps">Maps</a></li>
   <li><a href="#what-the-values-say" id="toc-what-the-values-say" class="nav-link" data-scroll-target="#what-the-values-say">What the values say</a></li>
-  <li><a href="#how-s2-is-built" id="toc-how-s2-is-built" class="nav-link" data-scroll-target="#how-s2-is-built">How S2 is built</a></li>
-  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
   </ul>
 </nav>
     </div>
@@ -482,8 +511,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Found</strong> 257 of 264 segments carry walking values and 227 carry vehicle values. No value is invented.</p>
 <p><strong>Stands</strong> verified: 6 tests pass. Compared with walking only through S9, where the agreement is weak.</p>
 <p><strong>Leaves out</strong> What people do on the streets. Values far from Griffintown rest on paths I did not check on photos.</p>
-<p><strong>Opens</strong> Do players drift towards high-choice streets without being told? (<a href="./play.html#q-s2">planned</a>)</p>
-<p><strong>Trace</strong> <a href="#how-s2-is-built">How it is built</a> · <a href="outputs/s2/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a> · <a href="./s9-observer.html">S9</a> compares with it</p>
+<p><strong>In the game</strong> Check: a measure the game’s routes are compared with. NPCs do not read it (<a href="./play.html#check">planned</a>).</p>
+<p><strong>Trace</strong> <a href="./s2-build.html">How it is built</a> · <a href="outputs/s2/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a> · <a href="./s9-observer.html">S9</a> compares with it</p>
 </div>
 <section id="what-s2-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s2-does">What S2 does</h2>
@@ -597,147 +626,9 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Each street’s value is the average over its segments inside Griffintown, weighted by length. Streets shorter than 100 m are left out, and so are connectors and footways.</p>
 <p>My first reading, and it is an interpretation: the long north-south streets (Guy, de la Montagne, des Seigneurs, Peel) carry the most potential for through-movement, on foot and by car. The canal path is easy to pass along and hard to reach, with low integration at 800 m. S9 will test whether simulated and real movement agree.</p>
-</section>
-<section id="how-s2-is-built" class="level2">
-<h2 class="anchored" data-anchor-id="how-s2-is-built">How S2 is built</h2>
-<p>The values come from PlanX, the QGIS tool I use for the analysis, run on <a href="./network.html">the walking network</a> and <a href="./network.html#the-driving-network">the driving network</a>. Each S1 segment takes the values of the analysed lines lying under it, within 1 m. A segment that finds too little gets no value (never a zero) and a written reason.</p>
-<section id="blueprint" class="level3">
-<h3 class="anchored" data-anchor-id="blueprint">Blueprint</h3>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  IN1[/"S1 segments&lt;br/&gt;264 segments"/]:::data
-  IN2[/"Walking values&lt;br/&gt;47,197 analysed lines"/]:::data
-  IN3[/"Vehicle values&lt;br/&gt;47,730 analysed lines"/]:::data
-  CFG[/"Settings&lt;br/&gt;a test point every metre, within 1 m&lt;br/&gt;cover 95 % or 50 %"/]:::rule
-
-  IN1 --&gt; R["READ&lt;br/&gt;segments and analysed lines"]:::step
-  IN2 --&gt; R
-  IN3 --&gt; R
-  R --&gt; G["SORT&lt;br/&gt;walking lines into a 20 m grid"]:::step
-  G --&gt; W["WALKING MATCH&lt;br/&gt;test points and the same-kind rule,&lt;br/&gt;cover and a mean by length"]:::step
-  CFG --&gt; W
-  R --&gt; V["VEHICLE MATCH&lt;br/&gt;may cars use it, then the same street"]:::step
-  W --&gt; S["STATUS&lt;br/&gt;matched, split,&lt;br/&gt;partial or missing"]:::step
-  V --&gt; S
-  S --&gt; O1[/"values for every segment"/]:::out
-  S --&gt; O2[/"trace of every line used"/]:::out
-  O1 --&gt; T["checks"]:::test
-  O2 --&gt; T
-  T --&gt; X["stress tests"]:::test
-  X --&gt; VZ["maps"]:::test
-  VZ --&gt; WB["data for the Lab"]:::test
-
-  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
-  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
-  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6
-  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff
-  classDef test fill:none,stroke:#fe83cc,color:#fe83cc
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="the-problem" class="level3">
-<h3 class="anchored" data-anchor-id="the-problem">The problem</h3>
-<p>S1 and the walking network were built from the same city lines, and each cut them in its own places. S1 cuts where a park path joins a street. The walking network cuts wherever a bike path joins one. So an S1 segment and an analysed line are often the same street with different ends. Rue des Seigneurs is one S1 segment lying over two analysed pieces with different values. Matching by id alone would hide that. Matching by shape finds both.</p>
-</section>
-<section id="the-matching-rule" class="level3">
-<h3 class="anchored" data-anchor-id="the-matching-rule">The matching rule</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="outputs/s2/s2_concepts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="A made-up segment and the analysed lines under it."><img src="outputs/s2/s2_concepts.png" class="img-fluid figure-img" alt="A made-up segment and the analysed lines under it."></a></p>
-<figcaption>A made-up segment and the analysed lines under it.</figcaption>
-</figure>
-</div>
-<p>I place a test point about every metre along each S1 segment. Each point looks for the closest analysed line within 1 m, but only among lines of the same kind. A city street looks only at pieces of the same street in the city’s records. A path or connector looks only at its own kind.</p>
-<p>The cover is the share of the segment’s length that found a line. The value is the mean of the lines found, each weighted by the metres it shares with the segment. With one line, it is exactly that line’s value. With 95 % cover or more, the segment counts as matched, or as split when its value comes from two lines. Between 50 and 95 % it keeps its value and is marked partial, so the gap stays visible. Below 50 % it gets no value and a written reason. Today no segment is partial.</p>
-<p>The same-kind rule matters near junctions. There, a test point at the end of a street also lies within 1 m of the crossing street. Without the rule, a street could take some of its neighbour’s values. The <a href="#stress-tests">stress tests</a> measure that risk.</p>
-</section>
-<section id="vehicle-values" class="level3">
-<h3 class="anchored" data-anchor-id="vehicle-values">Vehicle values</h3>
-<p>The <a href="./network.html#the-driving-network">driving network</a> keeps the city’s lines uncut. So every S1 piece of a street simply takes the vehicle value of the same city street id. First, S2 asks whether cars may use the street, by the same rule S1 uses. Streets closed to cars, and every added path or connector, are marked as not roads, with a written reason. A street open to cars and missing from the analysis would be marked missing. Today there are none.</p>
-</section>
-</section>
-<section id="tests" class="level2">
-<h2 class="anchored" data-anchor-id="tests">Tests</h2>
-<section id="checks" class="level3">
-<h3 class="anchored" data-anchor-id="checks">Checks</h3>
-<p>Each check asks a plain question of the result, and all of them pass. The <a href="./lab.html">Lab</a> lists the latest run.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Question</th>
-<th>Answer</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Does every S1 segment have exactly one row?</td>
-<td>Yes</td>
-</tr>
-<tr class="even">
-<td>Is a value present exactly when it should be, and is every missing value empty, with a reason?</td>
-<td>Yes</td>
-</tr>
-<tr class="odd">
-<td>Can every walking value be rebuilt from the trace of analysed lines behind it?</td>
-<td>Yes</td>
-</tr>
-<tr class="even">
-<td>Is any value invented, or outside the values of its lines?</td>
-<td>No</td>
-</tr>
-<tr class="odd">
-<td>Do values come only from the same kind of line, and from the same street for city streets?</td>
-<td>Yes</td>
-</tr>
-<tr class="even">
-<td>Do vehicle values equal the vehicle analysis for the same street?</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<p>A seventh check only reports coverage: the numbers under <a href="#result">Result</a>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>The trace check caught a real problem
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>On the first run the trace check failed. The trace rounded the shared metres to two decimals, too coarse to rebuild the values exactly. I now store them to six.</p>
-</div>
-</div>
-</section>
-<section id="stress-tests" class="level3">
-<h3 class="anchored" data-anchor-id="stress-tests">Stress tests</h3>
-<p>The stress tests ask how easily the result could go wrong. Each one changes one thing on purpose and measures what moves.</p>
-<p>Two runs on the same input give identical results. Any matching distance from 5 cm to 10 m gives the same result, and test points every 25 cm or every 5 m move a value by about 0.01 at most. Shaking every S1 point by up to 0.3 m changes one segment: a 15 m connector at Brennan, which then takes part of its value from the next connector. At 0.8 m, six segments change status, mostly paths and connectors along the canal, and no value moves by more than 0.08.</p>
-<p>The test that matters most turns the same-kind rule off. With nothing shaken, no segment then takes values from another line. Shaken by 0.8 m, 142 segments do. The worst is the short Smith link, which moves by 0.24 as it takes values from the streets at both its ends.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="outputs/s2/stress_shake.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="As the S1 points are shaken further, segments without the same-kind rule start taking values from crossing streets. With the rule, almost nothing moves."><img src="outputs/s2/stress_shake.png" class="img-fluid figure-img" alt="As the S1 points are shaken further, segments without the same-kind rule start taking values from crossing streets. With the rule, almost nothing moves."></a></p>
-<figcaption>As the S1 points are shaken further, segments without the same-kind rule start taking values from crossing streets. With the rule, almost nothing moves.</figcaption>
-</figure>
-</div>
-<p>Today the match is exact because S1 and the walking network share coordinates, so the matching distance has no effect. If the geometry drifted, for example after someone edits S1 in QGIS, the same-kind rule would keep S2 honest.</p>
-<p>The rule test also found a fault upstream. Before a fix, Rue Smith picked up 21 m from a connector lying on top of it. That was the C06 link, which joined Smith to its own other end. I fixed the rule in S1 (<a href="./s1-checks.html#decisions">C06</a>), and after the new PlanX run no such segment remains.</p>
+<p>How S2 is built and tested, step by step: <a href="./s2-build.html">How S2 is built</a>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1148,8 +1039,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./s3-rules.html" class="pagination-link" aria-label="S3 Rules">
-        <span class="nav-page-text">S3 Rules</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./s2-build.html" class="pagination-link" aria-label="How it is built">
+        <span class="nav-page-text">How it is built</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

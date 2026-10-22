@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>From systems to play – Situ</title>
+<title>From systems to a game – Situ</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,8 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./glossary.html" rel="next">
-<link href="./limits.html" rel="prev">
+<link href="./g1-world.html" rel="next">
+<link href="./s9-build.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -105,6 +105,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Systems</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./play.html"> 
+<span class="menu-text">Game</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
@@ -123,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">Research</a></li><li class="breadcrumb-item"><a href="./play.html">From systems to play</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./play.html">Game</a></li><li class="breadcrumb-item"><a href="./play.html">From systems to a game</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -137,13 +141,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Research</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./about.html" class="sidebar-item-text sidebar-link">
@@ -166,12 +170,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./limits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limits of the desk</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./play.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">From systems to play</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -221,8 +219,21 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">S2 Scores</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="./s2-scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How it is built</span></a>
+  </div>
+</li>
+      </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -353,13 +364,36 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">Explore</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+ <span class="menu-text">Game</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./play.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">From systems to a game</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./g1-world.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">G1 World</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
@@ -376,13 +410,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
  <span class="menu-text">Data</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./resources.html" class="sidebar-item-text sidebar-link">
@@ -425,20 +459,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#kinds" id="toc-kinds" class="nav-link active" data-scroll-target="#kinds">Four kinds of knowledge</a></li>
-  <li><a href="#systems" id="toc-systems" class="nav-link" data-scroll-target="#systems">System by system</a></li>
-  <li><a href="#evidence" id="toc-evidence" class="nav-link" data-scroll-target="#evidence">Which claims need which evidence</a></li>
-  <li><a href="#waits" id="toc-waits" class="nav-link" data-scroll-target="#waits">What waits</a></li>
+  <li><a href="#roles" id="toc-roles" class="nav-link active" data-scroll-target="#roles">Four jobs</a></li>
+  <li><a href="#world" id="toc-world" class="nav-link" data-scroll-target="#world">World</a></li>
+  <li><a href="#rhythm" id="toc-rhythm" class="nav-link" data-scroll-target="#rhythm">Rhythm</a></li>
+  <li><a href="#points" id="toc-points" class="nav-link" data-scroll-target="#points">Points</a></li>
+  <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">Check</a></li>
+  <li><a href="#prototype" id="toc-prototype" class="nav-link" data-scroll-target="#prototype">The prototype</a></li>
+  <li><a href="#waits" id="toc-waits" class="nav-link" data-scroll-target="#waits">What no system gives the game</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">Research</a></li><li class="breadcrumb-item"><a href="./play.html">From systems to play</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./play.html">Game</a></li><li class="breadcrumb-item"><a href="./play.html">From systems to a game</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">From systems to play</h1>
-<p class="subtitle lead">How the systems inform the game’s design, and what they cannot give it</p>
+<h1 class="title">From systems to a game</h1>
+<p class="subtitle lead">What each system supplies, the job it does in the game, and what it cannot supply</p>
 </div>
 
 
@@ -455,174 +492,264 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The systems describe Griffintown as its open files and street photos record it. The game is where that description would meet people: players, and the residents whose accounts the systems lack. Nothing on this page is built or found. Each row is a question I could put to play, and every one is <strong>planned</strong>.</p>
-<p>I treat the move from system to game as a translation. A system is a source. I read it, decide what can become a rule or a space, and build that into the game’s grammar. Then I read the play back, and the play becomes a source in turn. Part of a system is lost in the move, and play adds things no system held (assumption: this is how I choose to work, and the questions below test it).</p>
-<section id="kinds" class="level2">
-<h2 class="anchored" data-anchor-id="kinds">Four kinds of knowledge</h2>
+<p>The systems describe Griffintown. A game needs them for four jobs: a world to stand in, people moving through it on time, places where something can happen, and a way to check the result. Each system does one of these jobs first. This page says which, with the counts each system holds today.</p>
+<p>I treat the move from a system to the game as a translation. A system is the source. Each decision that turns part of it into a game element is written down, with its kind (source observation, researcher decision, assumption or gap) and an alternative. The first part of that translation is built: <a href="./g1-world.html">G1 World</a> (verified). The rest is planned.</p>
+<section id="roles" class="level2">
+<h2 class="anchored" data-anchor-id="roles">Four jobs</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Kind</th>
-<th>In Situ now</th>
-<th>Status</th>
-<th>What it needs</th>
+<th>Job</th>
+<th>What the game needs</th>
+<th>Systems</th>
+<th>What no system supplies</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>present-day data: city files, OpenStreetMap, street photos, the census</td>
-<td>S1 to S8</td>
-<td>verified or partial, system by system</td>
-<td>already traced (<a href="./provenance.html">Tracing a result</a>)</td>
+<td><a href="#world">World</a></td>
+<td>ground, buildings and objects to stand among</td>
+<td>S1, S4, S6</td>
+<td>roofs, facades, interiors, terrain, entrances</td>
 </tr>
 <tr class="even">
-<td>historical evidence: Griffintown in the 1920s to 1940s</td>
-<td>not yet in any system</td>
-<td>planned</td>
-<td>historical maps and records</td>
+<td><a href="#rhythm">Rhythm</a></td>
+<td>people and vehicles that move by rules, at the right hours</td>
+<td>S3, S5, S7, S9</td>
+<td>every trip besides a commute; evenings; weekends on foot</td>
 </tr>
 <tr class="odd">
-<td>model inference: what S9 imagines</td>
-<td>S9’s morning on foot</td>
-<td>assumption</td>
-<td>comparison with counts, then fieldwork</td>
+<td><a href="#points">Points</a></td>
+<td>places where people could stop or gather, or the player could act</td>
+<td>S4, S5, S6, S7, S8</td>
+<td>any record of people gathering</td>
 </tr>
 <tr class="even">
-<td>what residents know: routines and memories</td>
-<td>nothing yet</td>
-<td>planned</td>
-<td>fieldwork: interviews and focus groups, after research ethics approval</td>
+<td><a href="#check">Check</a></td>
+<td>measures the game’s movement is compared with</td>
+<td>S2, S5, S9</td>
+<td>counts beyond seven junctions and 23 sites</td>
 </tr>
 </tbody>
 </table>
-<p>None of these stands in for another. A simulated walk is not a resident’s routine, and a space syntax value is not a feeling about a street.</p>
+<p>S5 appears twice on purpose. Its opening hours time the people in the game. Its counts stay out of the game, so they can check it.</p>
 </section>
-<section id="systems" class="level2">
-<h2 class="anchored" data-anchor-id="systems">System by system</h2>
+<section id="world" class="level2">
+<h2 class="anchored" data-anchor-id="world">World</h2>
+<p>These systems become the ground and the masses the player moves among. The NPCs, the people and vehicles the game moves by its own rules, use the same ground.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>System</th>
-<th>Represents</th>
-<th>Leaves out</th>
-<th>A question for play</th>
-<th>What would answer it</th>
+<th>Supplies</th>
+<th>In the game</th>
+<th>Translation decision</th>
+<th>Gap</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><span id="q-s1"></span><a href="./s1-streets.html">S1 Streets</a></td>
-<td>where one may walk or drive, as the city files it</td>
-<td>shortcuts nobody filed; streets closed for a while</td>
-<td>When the network becomes the game’s ground, do players find the paths the city file missed?</td>
-<td>play logs of routes; my observation on site</td>
-</tr>
-<tr class="even">
-<td><span id="q-s2"></span><a href="./s2-scores.html">S2 Scores</a></td>
-<td>how each street sits in the whole layout</td>
-<td>what people do there</td>
-<td>Without being told, do players drift towards the streets with high choice, as the idea of natural movement proposes (<a href="./space-syntax.html#natural-movement">space syntax</a>)?</td>
-<td>play routes compared with S2, the same test S9 runs</td>
-</tr>
-<tr class="odd">
-<td><span id="q-s3"></span><a href="./s3-rules.html">S3 Rules</a></td>
-<td>stops, lights, turns and speeds</td>
-<td>whether the rules are kept</td>
-<td>If players must wait at lights and stop at signs, does a junction’s beat appear in play?</td>
-<td>play timing at junctions, set against the city’s counts</td>
+<td>264 segments and 191 junctions, each with walk and car flags</td>
+<td>the walkable and drivable ground, as a graph</td>
+<td>taken as filed, no path added (<a href="./g1-world.html#ledger">W03</a>, researcher decision)</td>
+<td>paths nobody filed: the canal path and park paths found in S1’s checks</td>
 </tr>
 <tr class="even">
 <td><span id="q-s4"></span><a href="./s4-buildings.html">S4 Buildings</a></td>
-<td>what each building is used for, and how many live in it</td>
-<td>what a place means, and what happens upstairs</td>
-<td>Which buildings become destinations in play, and are they the ones residents name?</td>
-<td>play logs, and interviews</td>
+<td>296 outlines; storeys for 223; a measured height for 27; uses</td>
+<td>building masses with a height and a door</td>
+<td>height from storeys x 3.33 m (<a href="./g1-world.html#ledger">W05</a>, assumption); 73 heights left empty (<a href="./g1-world.html#ledger">W06</a>)</td>
+<td>entrances, roofs, facades, interiors</td>
 </tr>
 <tr class="odd">
-<td><span id="q-s5"></span><a href="./s5-rhythm.html">S5 Rhythm</a></td>
-<td>busy hours that were counted, open hours that were promised</td>
-<td>weekends on foot, and lingering</td>
-<td>Can a game day carry the counted shape of a weekday, and can players read the hour from the street?</td>
-<td>counts on weekends; play sessions at different game hours</td>
-</tr>
-<tr class="even">
 <td><span id="q-s6"></span><a href="./s6-streetscape.html">S6 Streetscape</a></td>
-<td>the objects on the street</td>
-<td>private trees; how the objects are used</td>
-<td>Do benches, lights and cameras work as landmarks or as reasons to stop, for players and for residents?</td>
-<td>interviews, and play logs</td>
-</tr>
-<tr class="odd">
-<td><span id="q-s7"></span><a href="./s7-commuters.html">S7 Commuters</a></td>
-<td>who commutes, how and when, from the 2021 census</td>
-<td>every trip that is not a commute, and every route</td>
-<td>What changes when the player is given a census commuter’s trip, compared with free walking?</td>
-<td>two versions of one play session</td>
-</tr>
-<tr class="even">
-<td><span id="q-s8"></span><a href="./s8-views.html">S8 Views</a></td>
-<td>what can be seen from each point of the streets</td>
-<td>attention, and everything that blocks a view besides buildings</td>
-<td>Do open and closed views change where players pause or turn?</td>
-<td>play logs of pauses, and observation of where people linger</td>
-</tr>
-<tr class="odd">
-<td><span id="q-s9"></span><a href="./s9-observer.html">S9 Observer</a></td>
-<td>an imagined morning, built on stated assumptions</td>
-<td>most of the people in the street</td>
-<td>When S9’s walkers fill a game street, can players tell the model’s gaps from Griffintown’s, such as the empty Robert-Bourassa junction?</td>
-<td>play sessions with the <a href="./s9-build.html#ledger">ledger</a> at hand, and interviews</td>
+<td>2,898 object rows, among them 971 trees, 806 street lights and 101 benches; 487 sidewalks and 32 islands</td>
+<td>2,783 props and the sidewalk surfaces</td>
+<td>one prop per physical object (<a href="./g1-world.html#ledger">W09</a>, researcher decision)</td>
+<td>private trees, canopies, how each object is used</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="evidence" class="level2">
-<h2 class="anchored" data-anchor-id="evidence">Which claims need which evidence</h2>
+<section id="rhythm" class="level2">
+<h2 class="anchored" data-anchor-id="rhythm">Rhythm</h2>
+<p>These systems would run the NPCs: who is out, when, by which mode, under which rules, and by which route. A city’s rhythm in the game can only be as complete as these sources. Today they cover commuting on a weekday morning.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>A claim about</th>
-<th>Needs</th>
-<th>In Situ</th>
+<th>System</th>
+<th>Supplies</th>
+<th>In the game</th>
+<th>Translation decision</th>
+<th>Gap</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>how a street is laid out or regulated</td>
-<td>the city’s files and photos</td>
-<td>done, S1 to S3</td>
+<td><span id="q-s3"></span><a href="./s3-rules.html">S3 Rules</a></td>
+<td>86 banned moves out of 578; 34 signal lights at 32 junctions; 493 sign panels; a speed limit for each of the 227 drivable segments</td>
+<td>what NPC drivers may do at each junction, and how fast</td>
+<td>planned: rules obeyed as filed; light timing estimated from the counts where the city counted (<a href="./counts.html">Movement counts</a>), an assumption elsewhere</td>
+<td>light timing at most lights; whether the rules are kept</td>
 </tr>
 <tr class="even">
-<td>how many people pass, and when</td>
-<td>counts and observation</td>
-<td>partly: nine counted weekdays, three bicycle detectors</td>
+<td><span id="q-s5"></span><a href="./s5-rhythm.html">S5 Rhythm</a></td>
+<td>opening hours read for 82 places</td>
+<td>when shops and services open their doors to NPCs</td>
+<td>planned: a place with no hours stays closed to NPC visits, and says so</td>
+<td>hours of the other 527 places</td>
 </tr>
 <tr class="odd">
-<td>what a place means to the people who use it</td>
-<td>interviews and focus groups</td>
-<td>not yet</td>
+<td><span id="q-s7"></span><a href="./s7-commuters.html">S7 Commuters</a></td>
+<td>about 7,200 commuters living in 132 residential buildings, by mode and by hour of leaving; 295 transit stops</td>
+<td>how many NPCs leave home, by what mode and at what hour</td>
+<td>planned: one NPC per commuter or a stated fraction</td>
+<td>errands, school runs, visitors, people passing through</td>
 </tr>
 <tr class="even">
-<td>how Griffintown was</td>
-<td>historical maps and records</td>
-<td>not yet</td>
+<td><span id="q-s9"></span><a href="./s9-observer.html">S9 Observer</a></td>
+<td>16,958 weighted trips of commuters on foot, routed under three route rules, resting on 13 assumptions</td>
+<td>the route each NPC takes</td>
+<td>planned: the route rule chosen per run and shown to the player</td>
+<td>most of the people counted on the street (S9 holds about a quarter at 7 and 8 h)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="points" class="level2">
+<h2 class="anchored" data-anchor-id="points">Points</h2>
+<p>These systems mark places where people could stop, wait or gather, and where a player could act on a building or an object. No source records people gathering, so every point is a candidate.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>System</th>
+<th>Supplies</th>
+<th>In the game</th>
+<th>Translation decision</th>
+<th>Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S4 Buildings</td>
+<td>610 places: 425 inside buildings, 118 next to one, 67 outside any (parks, pitches, playgrounds); 83 with hours</td>
+<td>destinations and doors a player could use</td>
+<td>buildings with a recorded public use marked: 172 of 296 (<a href="./g1-world.html#ledger">W08</a>, assumption)</td>
+<td>what a place means; what happens upstairs</td>
+</tr>
+<tr class="even">
+<td>S6 Streetscape</td>
+<td>101 benches, 31 picnic tables, 4 water points, 2 shelters, 110 bike racks</td>
+<td>places to sit, wait or lock a bicycle</td>
+<td>planned: each is a candidate stop for an NPC</td>
+<td>whether anyone sits there</td>
 </tr>
 <tr class="odd">
-<td>whether play carries something of Griffintown</td>
-<td>playtesting, read against all of the above</td>
-<td>not yet</td>
+<td>S7 Commuters</td>
+<td>27 bus stops inside the area; 22 metro entrances nearby</td>
+<td>places where NPCs wait</td>
+<td>planned: waiting time from the STM timetable</td>
+<td>the queue itself</td>
+</tr>
+<tr class="even">
+<td>S5 Rhythm</td>
+<td>7 counted junctions; 23 counted sites around the area</td>
+<td>corners known to be busy at counted hours</td>
+<td>planned: marked as measured busy points</td>
+<td>lingering, which no count records</td>
+</tr>
+<tr class="odd">
+<td><span id="q-s8"></span><a href="./s8-views.html">S8 Views</a></td>
+<td>1,798 viewpoints with what each can see</td>
+<td>where a view opens or closes along a route</td>
+<td>planned: open views as candidate pauses</td>
+<td>attention; what blocks a view besides buildings</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="check" class="level2">
+<h2 class="anchored" data-anchor-id="check">Check</h2>
+<p>These systems stay outside the game’s decisions, so the game can be compared with them. A measure used to steer the NPCs can no longer test them.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>System</th>
+<th>Supplies</th>
+<th>In the game</th>
+<th>Translation decision</th>
+<th>Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span id="q-s2"></span><a href="./s2-scores.html">S2 Scores</a></td>
+<td>space syntax values for 257 of 264 segments on foot, 227 by car</td>
+<td>a measure the NPC and player routes are compared with</td>
+<td>researcher decision: NPCs do not read it (the same rule as S9). An NPC rule that uses it would be a separate, labelled reading</td>
+<td>7 segments without a walking value (Autoroute 10 and its ramps); the 37 closed to cars have no vehicle value, by rule</td>
+</tr>
+<tr class="even">
+<td>S5 Rhythm</td>
+<td>counts by hour at 7 junctions on 9 weekdays; 376 bicycle days</td>
+<td>the counts a game day is compared with</td>
+<td>planned: the game counts at the same junctions and hours</td>
+<td>weekends and seasons on foot</td>
+</tr>
+<tr class="odd">
+<td>S9 Observer</td>
+<td>its ledger and its comparisons</td>
+<td>the template for comparing a game run</td>
+<td>planned: each game run gets a ledger like S9’s</td>
+<td>the comparison of play with residents’ accounts</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prototype" class="level2">
+<h2 class="anchored" data-anchor-id="prototype">The prototype</h2>
+<p>The translation is built as code next to the systems, in the same way: each step reads the systems’ outputs, writes files any engine can read, and keeps a ledger and tests. No engine is chosen at this stage.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Job</th>
+<th>Status</th>
+<th>Reads</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="./g1-world.html">G1 World</a></td>
+<td>the ground, building masses with doors, props and surfaces in one local frame</td>
+<td>verified: 8 tests pass</td>
+<td>S1, S4, S6</td>
+</tr>
+<tr class="even">
+<td>G2 Rhythm</td>
+<td>NPC schedules and routes</td>
+<td>planned</td>
+<td>S3, S5, S7, S9</td>
+</tr>
+<tr class="odd">
+<td>G3 Points</td>
+<td>candidate stops and interactions</td>
+<td>planned</td>
+<td>S4, S5, S6, S7, S8</td>
+</tr>
+<tr class="even">
+<td>G4 Check</td>
+<td>a game run’s counts set against S5 and S2</td>
+<td>planned</td>
+<td>S2, S5, S9</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="waits" class="level2">
-<h2 class="anchored" data-anchor-id="waits">What waits</h2>
-<p>Nothing that involves residents or players gets built before the questions and the ethics approval are in place. Until then, the systems stay descriptions of the files, and the game stays planned.</p>
+<h2 class="anchored" data-anchor-id="waits">What no system gives the game</h2>
+<p>Two kinds of knowledge are missing from every system. Griffintown in the 1920s to 1940s needs historical maps and records. What residents know needs interviews and focus groups, after research ethics approval. Until then, the game can hold Griffintown’s present layout and its weekday commute, and every other part of its rhythm is an assumption the ledger names.</p>
 
 
 </section>
@@ -1030,13 +1157,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./limits.html" class="pagination-link" aria-label="Limits of the desk">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Limits of the desk</span>
+      <a href="./s9-build.html" class="pagination-link" aria-label="How it is built">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">How it is built</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./glossary.html" class="pagination-link" aria-label="Glossary">
-        <span class="nav-page-text">Glossary</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./g1-world.html" class="pagination-link" aria-label="G1 World">
+        <span class="nav-page-text">G1 World</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

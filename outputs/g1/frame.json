@@ -1,0 +1,54 @@
+{
+ "made": "2026-10-22",
+ "crs_of_sources": "EPSG:32188",
+ "origin_epsg32188": [
+  299180,
+  5038120
+ ],
+ "axes": "x east, y north, z up",
+ "units": "metres",
+ "storey_height_m": 3.3333,
+ "storey_height_from": 27,
+ "counts": {
+  "segments": 264,
+  "junctions": 191,
+  "blocks": 296,
+  "height_rule": {
+   "unknown": 73,
+   "assumption": 196,
+   "measured": 27
+  },
+  "public_use": {
+   "public use, hours unknown": 123,
+   "vacant premises only": 9,
+   "none recorded": 115,
+   "public use, hours known": 49
+  },
+  "doors": 295,
+  "s6_rows": 2898,
+  "props": 2783,
+  "prop_class": {
+   "tree": 971,
+   "hydrant": 104,
+   "seat": 101,
+   "bike rack": 110,
+   "water": 4,
+   "table": 31,
+   "shelter": 2,
+   "bin": 38,
+   "lamp": 803,
+   "camera": 87,
+   "crossing mark": 503,
+   "work zone": 29
+  },
+  "possibly_gone": 34,
+  "surfaces": 519,
+  "checkpoints": {
+   "height unknown": 73,
+   "street through building": 1,
+   "no door": 1,
+   "not seen lately": 34,
+   "count unsure": 26
+  }
+ }
+}

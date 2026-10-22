@@ -109,6 +109,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Systems</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./play.html"> 
+<span class="menu-text">Game</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
@@ -174,12 +178,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./play.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">From systems to play</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Glossary</span></a>
   </div>
@@ -225,8 +223,21 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">S2 Scores</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="./s2-scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How it is built</span></a>
+  </div>
+</li>
+      </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -358,12 +369,35 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">Explore</span></a>
+ <span class="menu-text">Game</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./play.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From systems to a game</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./g1-world.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">G1 World</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lab.html" class="sidebar-item-text sidebar-link">
@@ -380,13 +414,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
  <span class="menu-text">Data</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./resources.html" class="sidebar-item-text sidebar-link">
@@ -469,7 +503,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="research-creation">Research-creation: systems made for a game</h2>
 <p>Situ is research-creation: the research and the making answer each other. The research half is the systems. They hold what open data and photos say about Griffintown, with every source and gap in view, and each is tested before the next one uses it. The making half is the game, which is planned.</p>
 <p>The systems are made to inform the game’s design. Each one prepares a part of Griffintown a game needs: the ground one can move on (S1), how that ground is laid out (S2), the rules of the road (S3), places to go (S4), the hours (S5), the objects in the street (S6), who commutes and when (S7), what can be seen (S8), and movement imagined from all of these (S9). Designing the game means reading each system as a source and translating it into rules and spaces. Playing it sends something back to the research: routes to compare with the counts and with space syntax, and questions to bring to residents.</p>
-<p><a href="./play.html">From systems to play</a> sets out, system by system, what each could give the game and what it cannot. Until the game exists, every one of those questions is planned.</p>
+<p><a href="./play.html">From systems to a game</a> sorts the systems by the job each does in a game: the world, the rhythm of the NPCs, the points where something can happen, and the check. The first step of that translation, <a href="./g1-world.html">G1 World</a>, is built and tested. The rest is planned.</p>
 </section>
 <section id="the-idea" class="level2">
 <h2 class="anchored" data-anchor-id="the-idea">The idea</h2>
@@ -510,7 +544,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>lived space: space as its users live it</td>
-<td>the game, and what people say about the place, through play and later interviews (<a href="./play.html">From systems to play</a>)</td>
+<td>the game, and what people say about the place, through play and later interviews (<a href="./play.html">From systems to a game</a>)</td>
 <td>planned</td>
 </tr>
 </tbody>
