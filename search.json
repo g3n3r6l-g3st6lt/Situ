@@ -4,7 +4,7 @@
     "href": "systems.html",
     "title": "The systems",
     "section": "",
-    "text": "I build Situ as small systems. Each has one job, a blueprint and its own tests, and I try it in the Lab before the next one may use it. The status word says how far each one stands (what the words mean).\nEach system has an overview page, which says what it found, and a page on how it is built and tested. To follow one number from its source to the Lab, see Tracing a result.",
+    "text": "I build Situ as small systems. Each has one job, a blueprint and its own tests, and I try it in the Lab before the next one may use it. The status word says how far each one stands (what the words mean).\nEach system has an overview page, which says what it found, and a page on how it is built and tested. What each one could bring to a game, and what it cannot, is on From systems to play. To follow one number from its source to the Lab, see Tracing a result.",
     "crumbs": [
       "Explore",
       "Systems",
@@ -829,7 +829,7 @@
     "href": "s2-scores.html",
     "title": "S2 Scores",
     "section": "",
-    "text": "Asks Where each street sits in the whole network, by space syntax, with each value traced to the analysed line it came from.\nFound 257 of 264 segments carry walking values and 227 carry vehicle values. No value is invented.\nStands verified: 6 tests pass. Compared with walking only through S9, where the agreement is weak.\nLeaves out The version of PlanX that computed the values was not recorded. Values far from Griffintown rest on paths I did not check on photos.\nTrace How it is built · run record · uses S1 · S9 compares with it",
+    "text": "Asks Where each street sits in the whole network, by space syntax, with each value traced to the analysed line it came from.\nFound 257 of 264 segments carry walking values and 227 carry vehicle values. No value is invented.\nStands verified: 6 tests pass. Compared with walking only through S9, where the agreement is weak.\nLeaves out The version of PlanX that computed the values was not recorded. Values far from Griffintown rest on paths I did not check on photos.\nOpens Do players drift towards high-choice streets without being told? (planned)\nTrace How it is built · run record · uses S1 · S9 compares with it",
     "crumbs": [
       "Explore",
       "Systems",
@@ -989,7 +989,7 @@
     "href": "resources.html#data",
     "title": "Resources",
     "section": "Data",
-    "text": "Data\nSources marked “from Sample 4” came to Situ through the files of my earlier space syntax analysis.\n\n\n\nSource\nWhat it gives\nUsed in\n\n\n\n\nVille de Montréal, Géobase, réseau routier (Données Québec)\nstreet centrelines with their class and direction\nS1 and the walking network, through Sample 4\n\n\nVille de Montréal, réseau cyclable (donnees.montreal.ca)\noff-street bike and multi-use paths\nS1 checks, the walking network\n\n\nVille de Montréal, sign inventory, excluding parking signs (donnees.montreal.ca), from Sample 4\nstop, all-way, turn and no-entry signs\nS3\n\n\nVille de Montréal, feux de circulation (donnees.montreal.ca), from Sample 4\nwhere each traffic light stands, and whether it is permanent\nS3\n\n\nVille de Montréal, limites de vitesse, file of 2026-02-26 (donnees.montreal.ca), from Sample 4\nthe speed limit of each street\nS3\n\n\nVille de Montréal, comptage des véhicules, cyclistes et piétons (donnees.montreal.ca), downloaded 2026-10-10\n15-minute counts of each turning movement by kind of road user, at about 23 intersections in and around Griffintown, 2024 to 2026\nMovement counts: light timing at 7 S1 junctions; later S5 and S9\n\n\nVille de Montréal, vélos, comptage sur les pistes cyclables, files “Ville” 2025 and 2026 and the sites’ locations (Données Québec), downloaded 2026-10-15\nbicycles per hour at the city’s permanent detectors, June 2025 to October 2026\nS5: three detectors inside the area\n\n\nVille de Montréal, arbres publics, bornes d’incendie, trottoir et îlot and entraves et travaux en cours (donnees.montreal.ca), downloaded 2026-10-16\npublic trees, fire hydrants, sidewalk and island outlines, road works on one day\nS6\n\n\nVille de Montréal, feux pour piétons (donnees.montreal.ca), downloaded 2026-10-10\nwhich lights have pedestrian signals: 30 of the 31 in S1\nMovement counts\n\n\nOpenStreetMap, through the Overpass API\nfootpaths and park paths, as a second opinion\nS1 checks, C18 park paths\n\n\nMapillary\nstreet-level photos, CC BY-SA 4.0\nS1 checks, M01\n\n\nMapillary map features API (graph.mapillary.com/map_features), fetched 2026-10-10\n1,455 signs detected in photos, with the direction each faces\nChecking the sources, S3 checks\n\n\nMapillary map features API, fetched 2026-10-16\n30,410 objects detected in photos around the area. S6 keeps the street lights, surveillance cameras and painted crossings inside the area, and uses hydrants, benches, bins and racks to measure agreement\nS6\n\n\nOpenStreetMap street lamps, surveillance cameras and crossings (Overpass API), fetched 2026-10-16\n72 lamps, 55 cameras and 481 crossings inside the area\nS6\n\n\nStatistics Canada, Census of Population 2021, tables 98-10-0014, 98-10-0478, 98-10-0480 and 98-10-0504, through its Web Data Service, extracts saved 2026-10-16\nhomes, people at work, working from home, and when and how commuters travel, for the tracts that cover the area\nS7\n\n\nStatistics Canada, 2021 census tract boundaries (cartographic boundary files)\nthe tracts that cover the study area\nS7\n\n\nSTM, GTFS timetable, feed of 2026-10-07 (stm.info)\nmetro entrances and bus stops, with their departures on a Wednesday\nS7\n\n\nCornelissen, L. (2024), What is the connection between working from home and the languages used at work?, Statistics Canada, 75-006-x; The Canadian Press (26 August 2025), on the Labour Force Survey of May 2025\nworking from home in Canada: 24.3 % in May 2021, 17.4 % in May 2025\nS7\n\n\nMapillary photos by VdM (Ville de Montréal), geodz, une_abeille and AlexPL, 2022 to 2026, CC BY-SA 4.0\nthe evidence for each S3 decision\nS3 checks with photos\n\n\nGoogle Street View\nstreet-level photos, for looking only\nS1 checks\n\n\nVille de Montréal, Unités d’évaluation foncière (tax roll) (donnees.montreal.ca, resource 2b9dfc3d-91d3-48de-b32c-a2a6d9417079), fetched 2026-09-25\nuse, storeys, dwellings, year built and floor area of each property\nS4\n\n\nVille de Montréal, Unités d’évaluation foncière, the GeoJSON file with lot outlines (donnees.montreal.ca), saved 2026-10-15\nthe outline of the lot each property sits on: 255 distinct lots for 9,379 properties in the study area\nS4, to place each property\n\n\nVille de Montréal, Adresse ponctuelle (address points) (donnees.montreal.ca, resource fed5fd02-5535-458e-b13f-66e7a31a6d78), fetched 2026-09-25\nwhere each civic number stands, to place the tax roll\nS4\n\n\nVille de Montréal, Locaux commerciaux et statuts d’occupation, 2025 survey (Données Québec), from Sample 4\nevery ground-floor commercial space, occupied or vacant, with its use: 247 in the study area\nS4\n\n\nVille de Montréal, Lieux et bâtiments à vocation publique (opendatamontreal.ca)\npublic places with opening hours\nS4\n\n\nOpenStreetMap buildings and places, through the Overpass API, fetched 2026-10-14, ODbL\nbuilding outlines, and shops, cafés, offices and parks, 83 of them with opening hours\nS4; the outlines also stop the sight lines of S8\n\n\nOpenStreetMap building parts, through an Overpass mirror, fetched 2026-10-15, ODbL\nthe storeys of towers drawn as parts on their podiums\nS4\n\n\n\nI opened one source and set it aside for now: Ville de Montréal, Bâtiments 3D 2020 (Données Québec), CityGML, CC BY 4.0. Its Ville-Marie tiles stop at the borough line and hold three small structures in the study area. For Le Sud-Ouest there is only the 2016 model (Données Québec).\nA list of the files I downloaded, and of the layers I made from them in QGIS, gives each one’s date and licence. For the files I saved for Sample 4, the date is the date of the file on my computer, since I did not record the download. Two things are still not known: where the study area outline comes from, and which version of PlanX ran the analysis. The Concordia NGCI building file is listed there too. It has no licence, so S4 does not use it.",
+    "text": "Data\nSources marked “from Sample 4” came to Situ through the files of my earlier space syntax analysis.\n\n\n\nSource\nWhat it gives\nUsed in\n\n\n\n\nVille de Montréal, Géobase, réseau routier (Données Québec)\nstreet centrelines with their class and direction\nS1 and the walking network, through Sample 4\n\n\nVille de Montréal, réseau cyclable (donnees.montreal.ca)\noff-street bike and multi-use paths\nS1 checks, the walking network\n\n\nVille de Montréal, sign inventory, excluding parking signs (donnees.montreal.ca), from Sample 4\nstop, all-way, turn and no-entry signs\nS3\n\n\nVille de Montréal, feux de circulation (donnees.montreal.ca), from Sample 4\nwhere each traffic light stands, and whether it is permanent\nS3\n\n\nVille de Montréal, limites de vitesse, file of 2026-02-26 (donnees.montreal.ca), from Sample 4\nthe speed limit of each street\nS3\n\n\nVille de Montréal, comptage des véhicules, cyclistes et piétons (donnees.montreal.ca), downloaded 2026-10-10\n15-minute counts of each turning movement by kind of road user, at about 23 intersections in and around Griffintown, 2024 to 2026\nMovement counts: light timing at 7 S1 junctions; later S5 and S9\n\n\nVille de Montréal, vélos, comptage sur les pistes cyclables, files “Ville” 2025 and 2026 and the sites’ locations (Données Québec), downloaded 2026-10-15\nbicycles per hour at the city’s permanent detectors, June 2025 to October 2026\nS5: three detectors inside the area\n\n\nVille de Montréal, arbres publics, bornes d’incendie, trottoir et îlot and entraves et travaux en cours (donnees.montreal.ca), downloaded 2026-10-16\npublic trees, fire hydrants, sidewalk and island outlines, road works on one day\nS6\n\n\nVille de Montréal, feux pour piétons (donnees.montreal.ca), downloaded 2026-10-10\nwhich lights have pedestrian signals: 30 of the 31 in S1\nMovement counts\n\n\nOpenStreetMap, through the Overpass API\nfootpaths and park paths, as a second opinion\nS1 checks, C18 park paths\n\n\nMapillary\nstreet-level photos, CC BY-SA 4.0\nS1 checks, M01\n\n\nMapillary map features API (graph.mapillary.com/map_features), fetched 2026-10-10\n1,455 signs detected in photos, with the direction each faces\nChecking the sources, S3 checks\n\n\nMapillary map features API, fetched 2026-10-16\n30,410 objects detected in photos around the area. S6 keeps the street lights, surveillance cameras and painted crossings inside the area, and uses hydrants, benches, bins and racks to measure agreement\nS6\n\n\nOpenStreetMap street lamps, surveillance cameras and crossings (Overpass API), fetched 2026-10-16\n72 lamps, 55 cameras and 481 crossings inside the area\nS6\n\n\nStatistics Canada, Census of Population 2021, tables 98-10-0014, 98-10-0478, 98-10-0480 and 98-10-0504, through its Web Data Service, extracts saved 2026-10-16\nhomes, people at work, working from home, and when and how commuters travel, for the tracts that cover the area\nS7\n\n\nStatistics Canada, 2021 census tract boundaries (cartographic boundary files)\nthe tracts that cover the study area\nS7\n\n\nSTM, GTFS timetable, feed of 2026-10-07 (stm.info)\nmetro entrances and bus stops, with their departures on a Wednesday\nS7\n\n\nCornelissen, L. (2024), What is the connection between working from home and the languages used at work?, Statistics Canada, 75-006-x; The Canadian Press (26 August 2025), on the Labour Force Survey of May 2025\nworking from home in Canada: 24.3 % in May 2021, 17.4 % in May 2025\nS7\n\n\nMapillary photos by VdM (Ville de Montréal), geodz, une_abeille and AlexPL, 2022 to 2026, CC BY-SA 4.0\nthe evidence for each S3 decision\nS3 checks with photos\n\n\nGoogle Street View\nstreet-level photos, for looking only\nS1 checks\n\n\nVille de Montréal, Unités d’évaluation foncière (tax roll) (donnees.montreal.ca, resource 2b9dfc3d-91d3-48de-b32c-a2a6d9417079), fetched 2026-09-25\nuse, storeys, dwellings, year built and floor area of each property\nS4\n\n\nVille de Montréal, Unités d’évaluation foncière, the GeoJSON file with lot outlines (donnees.montreal.ca), saved 2026-10-15\nthe outline of the lot each property sits on: 255 distinct lots for 9,379 properties in the study area\nS4, to place each property\n\n\nVille de Montréal, Adresse ponctuelle (address points) (donnees.montreal.ca, resource fed5fd02-5535-458e-b13f-66e7a31a6d78), fetched 2026-09-25\nwhere each civic number stands, to place the tax roll\nS4\n\n\nVille de Montréal, Locaux commerciaux et statuts d’occupation, 2025 survey (Données Québec), from Sample 4\nevery ground-floor commercial space, occupied or vacant, with its use: 247 in the study area\nS4\n\n\nVille de Montréal, Lieux et bâtiments à vocation publique (Données Québec)\npublic places with opening hours\nS4\n\n\nOpenStreetMap buildings and places, through the Overpass API, fetched 2026-10-14, ODbL\nbuilding outlines, and shops, cafés, offices and parks, 83 of them with opening hours\nS4; the outlines also stop the sight lines of S8\n\n\nOpenStreetMap building parts, through an Overpass mirror, fetched 2026-10-15, ODbL\nthe storeys of towers drawn as parts on their podiums\nS4\n\n\n\nI opened one source and set it aside for now: Ville de Montréal, Bâtiments 3D 2020 (Données Québec), CityGML, CC BY 4.0. Its Ville-Marie tiles stop at the borough line and hold three small structures in the study area. For Le Sud-Ouest there is only the 2016 model (Données Québec).\nA list of the files I downloaded, and of the layers I made from them in QGIS, gives each one’s date and licence. For the files I saved for Sample 4, the date is the date of the file on my computer, since I did not record the download. Two things are still not known: where the study area outline comes from, and which version of PlanX ran the analysis. The Concordia NGCI building file is listed there too. It has no licence, so S4 does not use it.",
     "crumbs": [
       "Explore",
       "Data",
@@ -1025,7 +1025,7 @@
     "href": "resources.html#readings",
     "title": "Resources",
     "section": "Readings",
-    "text": "Readings\n\nSpace syntax\n\nHillier, B., & Hanson, J. (1984). The Social Logic of Space. Cambridge University Press.\nHillier, B., Penn, A., Hanson, J., Grajewski, T., & Xu, J. (1993). Natural movement: or, configuration and attraction in urban pedestrian movement. Environment and Planning B, 20(1), 29–66.\nHillier, B. (1996). Space is the Machine. Cambridge University Press.\nRatti, C. (2004). Space syntax: some inconsistencies. Environment and Planning B, 31(4), 487–499.\nHillier, B., & Iida, S. (2005). Network and psychological effects in urban movement. In Spatial Information Theory (COSIT 2005), Lecture Notes in Computer Science 3693, 475–490. Springer.\nTurner, A. (2007). From axial to road-centre lines: a new representation for space syntax and a new model of route choice for transport network analysis. Environment and Planning B, 34(3), 539–555.\nHillier, B., Yang, T., & Turner, A. (2012). Normalising least angle choice in Depthmap and how it opens up new perspectives on the global and local analysis of city space. Journal of Space Syntax, 3(2), 155–193.\nvan Nes, A., & Yamu, C. (2021). Introduction to Space Syntax in Urban Studies. Springer. Open access.\n\n\n\nSpatial culture and rhythm\n\nGriffiths, S., & von Lünen, A. (Eds.) (2016). Spatial Cultures: Towards a New Social Morphology of Cities Past and Present. Routledge.\nAdams, R. (2024). Designing Spatial Culture. Routledge.\nLefebvre, H. (1991). The Production of Space (D. Nicholson-Smith, Trans.). Blackwell. (Original work published 1974)\nLefebvre, H. (2004). Rhythmanalysis: Space, Time and Everyday Life (S. Elden & G. Moore, Trans.). Continuum. (Original work published 1992)\n\n\n\nArchives and heritage visualisation\n\nSchellenberg, T. R. (2003). Modern Archives: Principles and Techniques. Society of American Archivists. (Original work published 1956)\nTaylor, D. (2003). The Archive and the Repertoire: Performing Cultural Memory in the Americas. Duke University Press.\nDenard, H. (Ed.) (2009). The London Charter for the Computer-Based Visualisation of Cultural Heritage, version 2.1. london-charter.org\nLópez-Menchero, V. M., & Grande, A. (2011). The principles of the Seville Charter. Proceedings of the XXIII CIPA Symposium, Prague.\n\n\n\nTraffic\n\nWebster, F. V. (1958). Traffic Signal Settings. Road Research Technical Paper 39. Her Majesty’s Stationery Office.\nVille de Montréal (2007). Assemblée publique sur la révision du réseau artériel de Montréal. Commission permanente sur le transport, 12 April 2007. PDF\nFederal Highway Administration (2023). Highway Functional Classification: Concepts, Criteria and Procedures. U.S. Department of Transportation. PDF\n\n\n\nIsovists\n\nBenedikt, M. L. (1979). To take hold of space: isovists and isovist fields. Environment and Planning B, 6(1), 47–65.\nBatty, M. (2001). Exploring isovist fields: space and shape in architectural and urban morphology. Environment and Planning B, 28(1), 123–150.\nTurner, A., Doxa, M., O’Sullivan, D., & Penn, A. (2001). From isovists to visibility graphs: a methodology for the analysis of architectural space. Environment and Planning B, 28(1), 103–121.\n\n\n\nNetwork measures\n\nSabidussi, G. (1966). The centrality index of a graph. Psychometrika, 31(4), 581–603.\nFreeman, L. C. (1977). A set of measures of centrality based on betweenness. Sociometry, 40(1), 35–41.\n\nPage numbers in this site’s citations refer to the editions listed here. I checked them against the texts in Reading closely.",
+    "text": "Readings\n\nSpace syntax\n\nHillier, B., & Hanson, J. (1984). The Social Logic of Space. Cambridge University Press.\nHillier, B., Penn, A., Hanson, J., Grajewski, T., & Xu, J. (1993). Natural movement: or, configuration and attraction in urban pedestrian movement. Environment and Planning B, 20(1), 29–66.\nHillier, B. (1996). Space is the Machine. Cambridge University Press.\nRatti, C. (2004). Space syntax: some inconsistencies. Environment and Planning B, 31(4), 487–499.\nHillier, B., & Iida, S. (2005). Network and psychological effects in urban movement. In Spatial Information Theory (COSIT 2005), Lecture Notes in Computer Science 3693, 475–490. Springer.\nTurner, A. (2007). From axial to road-centre lines: a new representation for space syntax and a new model of route choice for transport network analysis. Environment and Planning B, 34(3), 539–555.\nHillier, B., Yang, T., & Turner, A. (2012). Normalising least angle choice in Depthmap and how it opens up new perspectives on the global and local analysis of city space. Journal of Space Syntax, 3(2), 155–193.\nvan Nes, A., & Yamu, C. (2021). Introduction to Space Syntax in Urban Studies. Springer. Open access.\n\n\n\nSpatial culture and rhythm\n\nGriffiths, S., & von Lünen, A. (Eds.) (2016). Spatial Cultures: Towards a New Social Morphology of Cities Past and Present. Routledge.\nAdams, R. (2024). Designing Spatial Culture. Routledge.\nLefebvre, H. (1991). The Production of Space (D. Nicholson-Smith, Trans.). Blackwell. (Original work published 1974)\nLefebvre, H. (2004). Rhythmanalysis: Space, Time and Everyday Life (S. Elden & G. Moore, Trans.). Continuum. (Original work published 1992)\n\n\n\nArchives and heritage visualisation\n\nSchellenberg, T. R. (2003). Modern Archives: Principles and Techniques. Society of American Archivists. (Original work published 1956)\nTaylor, D. (2003). The Archive and the Repertoire: Performing Cultural Memory in the Americas. Duke University Press.\nDenard, H. (Ed.) (2009). The London Charter for the Computer-Based Visualisation of Cultural Heritage, version 2.1. london-charter.org\nLópez-Menchero, V. M., & Grande, A. (2011). The principles of the Seville Charter. Proceedings of the XXIII CIPA Symposium, Prague.\n\n\n\nData and the city\n\nGitelman, L. (Ed.) (2013). “Raw Data” Is an Oxymoron. MIT Press.\nKitchin, R. (2014). The Data Revolution: Big Data, Open Data, Data Infrastructures and Their Consequences. SAGE.\nOffenhuber, D., & Ratti, C. (Eds.) (2014). Decoding the City: Urbanism in the Age of Big Data. Birkhäuser.\n\n\n\nTraffic\n\nWebster, F. V. (1958). Traffic Signal Settings. Road Research Technical Paper 39. Her Majesty’s Stationery Office.\nVille de Montréal (2007). Assemblée publique sur la révision du réseau artériel de Montréal. Commission permanente sur le transport, 12 April 2007. PDF\nFederal Highway Administration (2023). Highway Functional Classification: Concepts, Criteria and Procedures. U.S. Department of Transportation. PDF\n\n\n\nIsovists\n\nBenedikt, M. L. (1979). To take hold of space: isovists and isovist fields. Environment and Planning B, 6(1), 47–65.\nBatty, M. (2001). Exploring isovist fields: space and shape in architectural and urban morphology. Environment and Planning B, 28(1), 123–150.\nTurner, A., Doxa, M., O’Sullivan, D., & Penn, A. (2001). From isovists to visibility graphs: a methodology for the analysis of architectural space. Environment and Planning B, 28(1), 103–121.\n\n\n\nNetwork measures\n\nSabidussi, G. (1966). The centrality index of a graph. Psychometrika, 31(4), 581–603.\nFreeman, L. C. (1977). A set of measures of centrality based on betweenness. Sociometry, 40(1), 35–41.\n\nPage numbers in this site’s citations refer to the editions listed here. I checked them against the texts in Reading closely.",
     "crumbs": [
       "Explore",
       "Data",
@@ -1102,371 +1102,6 @@
       "Explore",
       "Data",
       "Tracing a result"
-    ]
-  },
-  {
-    "objectID": "limits.html",
-    "href": "limits.html",
-    "title": "Limits of the desk",
-    "section": "",
-    "text": "So far I have built Situ from open data: files that public bodies or volunteers publish for anyone to use, such as the city’s tax roll or OpenStreetMap. I have seen Griffintown mostly through other people’s photos and videos. I have not yet checked this desk research by walking the area with a notebook, and that limits what every system can claim.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Limits of the desk"
-    ]
-  },
-  {
-    "objectID": "limits.html#working-from-a-screen",
-    "href": "limits.html#working-from-a-screen",
-    "title": "Limits of the desk",
-    "section": "",
-    "text": "So far I have built Situ from open data: files that public bodies or volunteers publish for anyone to use, such as the city’s tax roll or OpenStreetMap. I have seen Griffintown mostly through other people’s photos and videos. I have not yet checked this desk research by walking the area with a notebook, and that limits what every system can claim.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Limits of the desk"
-    ]
-  },
-  {
-    "objectID": "limits.html#where-the-files-fall-short",
-    "href": "limits.html#where-the-files-fall-short",
-    "title": "Limits of the desk",
-    "section": "Where the files fall short",
-    "text": "Where the files fall short\nThe first limit is purpose. Each file was made by an institution to do a job, and its categories serve that job. Scholars of data say the same: data are shaped for a purpose before anyone analyses them (Gitelman 2013; Kitchin 2014). When I borrow a file for a new question, its categories come with it.\nThe city’s street file is a road file. It left out the canal path and the new park paths, and 10 of the first 12 dead ends in S1 turned out to be places where walkers carry on. The tax roll is for taxing property. It counts a condo parking space as a property, just as it counts a home, and gives a tower’s storeys only for some kinds of property.\nThe second limit is time. Every file has its own date, and Griffintown changes faster than most of them. The city’s sign post at one corner under the Wellington viaduct dates from October 2025, while every photo of it is older (P03). The city’s 3D model of 2020 stops at the Ville-Marie borough line. Griffintown is in Le Sud-Ouest, so it only has the 2016 model, older than many of its towers. When two files disagree, the cause is often a gap in time.\nThe third limit is coverage. The speed file has no limits for Autoroute 10 and its ramps. The traffic light file says where the lights are and nothing about their timing. No open file says where building doors are. OpenStreetMap is drawn by volunteers, so a building appears only once someone draws it.\nThe fourth limit is position. A point in a file stands for a thing on the street, and the two are rarely in the same spot. An address point often sits at the curb, a shop’s point on its façade. At 1485 rue des Bassins, 290 dwellings share one address point, 130 m from the two towers on their lot (B01). Even my own arithmetic can move things: an early version of S4 put some building centres tens of metres off, because of how it handled large map coordinates.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Limits of the desk"
-    ]
-  },
-  {
-    "objectID": "limits.html#seeing-from-the-desk",
-    "href": "limits.html#seeing-from-the-desk",
-    "title": "Limits of the desk",
-    "section": "Seeing from the desk",
-    "text": "Seeing from the desk\nPhotos and videos let me look at the street without being there. They settled real questions, including most of the no-entry disagreements in S3. Mapillary photos from 2016 and 2024 showed that walkers cross Place des Aiguilleurs at the end of Rue Smith (C06). A walking video filmed on 11 July 2026 shows the signs at the entrance of Allée des Vraquiers: a pedestrian zone, closed to bicycles and to every vehicle except emergency ones.\nStill, a camera goes where its owner walks, and it records one moment. Neither of the two recent walking videos reaches the end of Rue Brennan, so the footway I assumed there (C04) is still unconfirmed. A sign seen edge-on hides which street it faces. A photo older than the sign it shows can mislead.\nSo every decision keeps its source and its date, and I grade the evidence. A link I assume is drawn in pink. A photo or video can make it likely. Only a visit makes it confirmed. Videos are cited by link and timestamp, and no frame appears here unless its owner agrees.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Limits of the desk"
-    ]
-  },
-  {
-    "objectID": "limits.html#system-by-system",
-    "href": "limits.html#system-by-system",
-    "title": "Limits of the desk",
-    "section": "System by system",
-    "text": "System by system\n\n\n\nSystem\nWhat open data gives\nWhat the desk cannot settle\n\n\n\n\nS1 Streets\nstreet lines with their class and direction, plus paths from OpenStreetMap\nwhether a path is open on the ground, and where a closure or building site cuts a route; three links at the end of Brennan and Ann are assumed\n\n\nS2 Scores\nspace syntax values, which measure how each street sits in the network I built\nwhere people actually walk; Brennan and Ann gained walking choice only because I assumed they lead somewhere\n\n\nS3 Rules\nwhere each sign and light stands, and the speed limits\nwhich way a sign faces, and how long each light stays green; 21 places to check\n\n\nS4 Buildings\nuses and dwellings from the tax roll with its lots, and outlines from OpenStreetMap\nhow tall many buildings are, and which of two towers holds which units; 61 cases to check\n\n\nS5 Rhythm\nmovement counts (7 junctions on 9 weekdays, plus three bicycle detectors), and opening hours for 83 of 558 places\nthe weekend on foot and by car, and whether an open place is busy; 17 of the 24 weekday hours rest on one junction\n\n\nS6 Streetscape\npublic trees, hydrants, sidewalks, road works, lights, cameras and crossings, the last three from photos and mappers\ntrees on private land, and which lights and cameras still stand; 40 places to check\n\n\nS7 Commuters\nhomes, work from home, ways to work and hours of leaving and arriving, from the census of May 2021, and the STM stops\nwhere each commuter goes and by which street, and how much the pandemic still bends the census; nothing open says how many people visit\n\n\nS8 Views\nwhat can be seen from each walkable street past the OpenStreetMap building outlines\ntrees, walls, viaducts and heights; buildings missing from the map open views that do not exist\n\n\nS9 Observer\na weekday morning of commuters on foot, imagined under three route rules, set against the counts and space syntax\neveryone who is not commuting, which is most of the pedestrians counted. Also where walkers really work, and which reading is closest with only seven junctions to compare",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Limits of the desk"
-    ]
-  },
-  {
-    "objectID": "limits.html#people-are-missing",
-    "href": "limits.html#people-are-missing",
-    "title": "Limits of the desk",
-    "section": "People are missing",
-    "text": "People are missing\nThe deepest limit is about people. Open data records a city’s infrastructure. Apart from the city’s movement counts at a few intersections (Movement counts) and its bicycle detectors, it says almost nothing about how people use the streets: where they linger, or when a corner fills. Situ aims to mediate and archive Griffintown’s urban rhythm and its spatial culture, which Hillier described as a distinctive way of ordering space (About). Both live in what people do. From the desk I can describe the stage. I cannot yet describe the play.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Limits of the desk"
-    ]
-  },
-  {
-    "objectID": "limits.html#carrying-the-gaps",
-    "href": "limits.html#carrying-the-gaps",
-    "title": "Limits of the desk",
-    "section": "Carrying the gaps",
-    "text": "Carrying the gaps\nA value no source gives stays empty, with the reason written beside it. It never becomes a zero or a guess. Every assumption is labelled as one on the page and in the Lab. Every place the desk could not settle becomes a checkpoint: a question to answer on site.\nSo Situ describes Griffintown as its files and other people’s cameras record it, at dates I can name. It shows how the layout and the rules shape the movement that is possible. How people actually live in the area is still beyond it. Each system says which of the two it is doing.\nMost remaining checkpoints can only be closed on site. The next step is a walk through Griffintown with these questions in hand, photographing and dating each answer. Later, watching people in place will add to S5 Rhythm, the first system about time, which so far knows only weekdays.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Limits of the desk"
-    ]
-  },
-  {
-    "objectID": "limits.html#references",
-    "href": "limits.html#references",
-    "title": "Limits of the desk",
-    "section": "References",
-    "text": "References\n\nGitelman, L. (ed.) (2013). “Raw Data” Is an Oxymoron. MIT Press.\nKitchin, R. (2014). The Data Revolution: Big Data, Open Data, Data Infrastructures and Their Consequences. SAGE.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Limits of the desk"
-    ]
-  },
-  {
-    "objectID": "lab-notes.html",
-    "href": "lab-notes.html",
-    "title": "Lab notes",
-    "section": "",
-    "text": "The Lab is one map with a tab for each system. There I try a system and see the places it still leaves open. Click anything to see what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and slider position shows something a system already wrote down: the reach slider, for instance, steps through how far S1 found you can get from a junction. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nRoutes are the one small exception. Storing every route between every pair of junctions would take many megabytes. So I store only the shortest distances and the last step of each shortest route. The browser follows each route back and tests each street against the detour allowed. Those two rules exist twice, beside the systems and in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
-    "crumbs": [
-      "Explore",
-      "How the Lab works"
-    ]
-  },
-  {
-    "objectID": "lab-notes.html#what-the-lab-is",
-    "href": "lab-notes.html#what-the-lab-is",
-    "title": "Lab notes",
-    "section": "",
-    "text": "The Lab is one map with a tab for each system. There I try a system and see the places it still leaves open. Click anything to see what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and slider position shows something a system already wrote down: the reach slider, for instance, steps through how far S1 found you can get from a junction. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nRoutes are the one small exception. Storing every route between every pair of junctions would take many megabytes. So I store only the shortest distances and the last step of each shortest route. The browser follows each route back and tests each street against the detour allowed. Those two rules exist twice, beside the systems and in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
-    "crumbs": [
-      "Explore",
-      "How the Lab works"
-    ]
-  },
-  {
-    "objectID": "lab-notes.html#what-it-shows",
-    "href": "lab-notes.html#what-it-shows",
-    "title": "Lab notes",
-    "section": "What it shows",
-    "text": "What it shows\nOne system shows at a time, because two colourings on one street cannot be read. Each tab has few controls. It lists its checkpoints by kind, with why each kind matters and the result of its last tests.\n\n\n\n\n\n\n\n\nTab\nWhat the map shows\nWhat you can try\n\n\n\n\nS1 Streets\nwho may use each street, and where gates and dead ends are\nhow far you can get from a junction, how many minutes on foot it takes to reach each street, and every street a trip up to 50 % longer than the shortest could use\n\n\nS2 Scores\nchoice or integration, on foot or by car\na distance slider you can play\n\n\nS3 Rules\nstops and lights, or speed limits\nclick a junction, then a street arriving at it, to see its rules and signs\n\n\nS4 Buildings\nbuildings by use, or by where the use came from\nthe places people go to\n\n\nS5 Rhythm\nplaces open or closed, the counts at the counted junctions, and the bicycle detectors\na day, an hour and a mode (and a season for bicycles), and a day that plays\n\n\nS6 Streetscape\ntrees, hydrants, furniture, lights, cameras, crossings and road works, each with its own icon once you zoom in; sidewalks by material or age\none kind of object at a time\n\n\nS7 Commuters\nbuildings with homes, sized by their commuters, with metro entrances and bus stops\none way of travelling at a time\n\n\nS8 Views\nhow much each street lets you see\nwalk and look: pick two points, and a walker shows what it sees along the way\n\n\nS9 Observer\nthe morning’s imagined walkers, and the counts inside and around the area\na reading and an hour\n\n\n\nIntegration and choice are the space syntax measures S2 gives each street. Integration is how easy a street is to reach. Choice is how often it lies on the way between other places. The stress tests sit with each system’s tests, where their numbers can be read in full.",
-    "crumbs": [
-      "Explore",
-      "How the Lab works"
-    ]
-  },
-  {
-    "objectID": "lab-notes.html#how-it-is-built",
-    "href": "lab-notes.html#how-it-is-built",
-    "title": "Lab notes",
-    "section": "How it is built",
-    "text": "How it is built\n\n\n\n\n\nflowchart LR\n  S[\"each system, S1 to S9&lt;br/&gt;results and checks\"]:::step --&gt; W[\"copy for the Lab\"]:::step\n  C[\"shared way of copying\"]:::rule --&gt; W\n  W --&gt; D[/\"one data file&lt;br/&gt;per system\"/]:::out\n  S1[\"S1 streets\"]:::step --&gt; R[\"shortest routes\"]:::step\n  R --&gt; D\n  K[\"walk tools&lt;br/&gt;minutes and views\"]:::step --&gt; L\n  D --&gt; L[\"the Lab\"]:::test\n  D --&gt; T[\"the Lab checks&lt;br/&gt;L1 to L12\"]:::test\n  K --&gt; T\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nEach system copies its tables into one file for the Lab. A browser may refuse to read a data file from the disk, yet it always runs a script. So each file is written as a small script, and the Lab works even without a server.",
-    "crumbs": [
-      "Explore",
-      "How the Lab works"
-    ]
-  },
-  {
-    "objectID": "lab-notes.html#two-orders",
-    "href": "lab-notes.html#two-orders",
-    "title": "Lab notes",
-    "section": "Two orders on one map",
-    "text": "Two orders on one map\nTwo views put two measures on the same street. In S2, “local or whole” compares a street’s place within 200, 400 or 800 m with its place across the whole island. In S9, “against space syntax” compares a street’s place among the imagined walkers with its place in walking choice or integration. A street’s place runs from 0, the lowest, to 1, the highest; the view shows the first place minus the second. Yellow means higher in the first order, blue higher in the second, grey about the same, and the line widens with the gap. Python works out the gaps (common/ranks.py) and the Lab only draws them; check L13 counts them again a different way.\nThe gaps describe the data. Why a street is high in one order and low in the other is a question for the pages and for fieldwork (assumption).",
-    "crumbs": [
-      "Explore",
-      "How the Lab works"
-    ]
-  },
-  {
-    "objectID": "lab-notes.html#unresolved",
-    "href": "lab-notes.html#unresolved",
-    "title": "Lab notes",
-    "section": "Only what is unresolved",
-    "text": "Only what is unresolved\nUnder the map, a button dims everything except what is still open on that tab: checkpoints not yet settled, streets without a value, buildings of unknown use, photo detections not seen recently, streets with no viewpoint. Its label gives the count.",
-    "crumbs": [
-      "Explore",
-      "How the Lab works"
-    ]
-  },
-  {
-    "objectID": "lab-notes.html#tests",
-    "href": "lab-notes.html#tests",
-    "title": "Lab notes",
-    "section": "How the Lab is tested",
-    "text": "How the Lab is tested\nThe thirteen Lab checks ask one thing: does the Lab show exactly what the systems wrote?\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nL1\nDo the streets and junctions match S1, and does each junction reach the same streets? Every 15th junction’s reach is worked out again from scratch.\n\n\nL2\nDoes every S2 value equal the S2 table, with missing values still missing?\n\n\nL3\nDo the S3 rules, signs, speeds and checkpoints equal the S3 tables?\n\n\nL4\nThe Lab no longer shows the S3 stress results, but its data still holds them. Do they give the same counts as the S3 stress tests?\n\n\nL5\nIs every shortest route real and truly the shortest, and do the browser’s route rules give back the original routes?\n\n\nL6\nDoes every S4 building and place equal the S4 tables, down to each outline point, with empty cells still empty?\n\n\nL7\nDo the S5 weekday shape, junction counts, each place’s week, the open counts and the ring outside the area equal the S5 tables?\n\n\nL8\nDoes every S6 object and surface equal the S6 tables, down to each outline point, with empty cells still empty?\n\n\nL9\nDo the S7 buildings with homes, their commuters and nearest stops, the stops and the hour bands equal the S7 tables?\n\n\nL10\nDo the S8 view measures and kept views equal the S8 tables, and does each sight line the Lab draws land where S8 cast it?\n\n\nL11\nDo the S9 street flows, counted junctions, ring comparison, expectations and ledger equal the S9 tables?\n\n\nL12\nDo the walk tools measure what the systems measure? Sixty walks between random points equal S7’s shortest walks, and thirty views equal S8’s within 2 % (0.04 % on average).\n\n\nL13\nDo the gaps the two-order views show (S2 local or whole, S9 against space syntax) equal a fresh count from the S2 and S9 tables? A street missing a value gets no gap, never 0.\n\n\n\nAll thirteen pass, and the Lab shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught both. For L7, I changed one letter of a place’s week, and L7 caught it.\nThe shortest-route check does not trust the method that found the routes. It uses a simple test instead: if a route is real, and no single move anywhere could shorten any distance, then no shorter route exists. That condition is checked separately, for every start and every move.\n\nIn a browser\nThe checks above read the Lab’s data. Eleven more open the Lab itself in a browser, the way a visitor does, and click through it (last results).\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nU1\nDoes every tab open, draw its map, show a key and a text, and mark itself as the one selected?\n\n\nU2\nFor every one of the 264 segments, does its panel show exactly the values of S1, S2, S3, S8 and S9, with “none” where a value is missing?\n\n\nU3\nDoes every junction open, and do the counted ones show S9’s numbers exactly?\n\n\nU4\nDoes a building opened from a link show that building?\n\n\nU5\nDoes “Whole area” bring back the first view, and do close, Escape and a new tab empty the panel?\n\n\nU6\nDo the keys say how a missing value is drawn, and does the S2 key name its measure and radius?\n\n\nU7\nWhen a system’s data fails to load, does its tab say so? When the streets fail, does the Lab say which file?\n\n\nU8\nAt phone width, does any page scroll sideways?\n\n\nU9\nWith the keyboard alone, can a visitor reach the map, move it and open what lies under the centre cross?\n\n\nU10\nIn the two-order views, does each list start with the largest gap in the data, open that street when clicked, and does S9 quote its own correlation?\n\n\nU11\nDoes “only what is unresolved” count what is open and dim everything else?\n\n\n\nAll eleven pass. The first run of U8 failed: a table on Tracing a result was wider than a phone. Wide tables now scroll inside themselves.",
-    "crumbs": [
-      "Explore",
-      "How the Lab works"
-    ]
-  },
-  {
-    "objectID": "glossary.html",
-    "href": "glossary.html",
-    "title": "Glossary",
-    "section": "",
-    "text": "Each definition repeats what a page already says. Follow the link for the full account.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "glossary.html#space-syntax",
-    "href": "glossary.html#space-syntax",
-    "title": "Glossary",
-    "section": "Space syntax",
-    "text": "Space syntax\n\n\n\nTerm\nWhat it means here\nMore\n\n\n\n\nspace syntax\nA way of measuring where each street sits in the whole street network, begun by Bill Hillier and Julienne Hanson.\nWhat space syntax is\n\n\nsegment\nA piece of street between two junctions.\nS1\n\n\ndepth\nThe distance between two segments, counted by how much you turn: a right angle costs 1, a 45° turn 0.5.\nSegments and depth\n\n\nangular segment analysis\nThe kind of space syntax analysis Situ runs, with depth counted in turns.\nThe walking network\n\n\nintegration\nHow close a segment is, on average, to every other segment: how easy a street is to reach.\nIntegration and choice\n\n\nchoice\nHow often a segment lies on the shortest routes between every pair of segments: how often a street is passed through.\nIntegration and choice\n\n\nNAIN, NACH\nNormalised integration and normalised choice, rescaled so that networks of different sizes can be compared.\nIntegration and choice\n\n\nradius\nHow far the analysis looks around each segment, measured along the streets. Radius n has no limit, which here means the whole island.\nRadius\n\n\nnatural movement\nThe share of walking the layout alone produces, as Hillier and colleagues argued in 1993.\nNatural movement\n\n\nPlanX\nThe QGIS tool that computes the values.\nThe walking network",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "glossary.html#network",
-    "href": "glossary.html#network",
-    "title": "Glossary",
-    "section": "The network",
-    "text": "The network\n\n\n\nTerm\nWhat it means here\nMore\n\n\n\n\njunction\nWhere segment ends meet.\nS1\n\n\nedge\nThe streets just outside the study area’s boundary that touch it.\nS1\n\n\ngate\nWhere the study area meets the edge.\nS1\n\n\nexit\nThe far end of an edge street, where the city carries on.\nS1\n\n\ndead end\nA junction with only one segment that is neither a gate nor an exit.\nS1\n\n\nconnector\nA short straight line I added where a path end and a street do not quite touch in the data. Every one is listed.\nThe walking network\n\n\ncheckpoint\nA place where I doubted the data. Each one has an id and is listed in the Lab, settled or still open.\nChecks and decisions",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "glossary.html#views-and-flows",
-    "href": "glossary.html#views-and-flows",
-    "title": "Glossary",
-    "section": "What S8 and S9 measure",
-    "text": "What S8 and S9 measure\n\n\n\nTerm\nWhat it means here\nMore\n\n\n\n\nisovist\nThe part of the city visible from one spot (Benedikt 1979).\nS8\n\n\ncompactness\n1 for a round view, smaller as the view stretches into a corridor.\nS8\n\n\nreading\nOne version of S9’s imagined morning, changing a single rule (the route), so a difference between readings points at that rule.\nS9\n\n\nledger\nThe list of every rule S9 adds, each with its source or marked as an assumption.\nS9 build\n\n\nrank correlation\nHow alike two orders are: 1 means the same order.\nS8\n\n\ncensus tract\nOne of the small areas the census reports on.\nS7",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "glossary.html#status",
-    "href": "glossary.html#status",
-    "title": "Glossary",
-    "section": "How sure, and from where",
-    "text": "How sure, and from where\n\n\n\nTerm\nWhat it means here\nMore\n\n\n\n\nverified\nThe data or a test shows it. A system is verified when it is built and its tests pass.\nAbout\n\n\npartial\nSome evidence supports it, and a gap remains.\nAbout\n\n\nplanned\nNot built yet.\nAbout\n\n\nassumption\nA reading of mine, or a rule I chose because no source settles it.\nAbout\n\n\nrun record\nThe file each system writes beside its results, with a fingerprint of every input and output.\nTracing a result\n\n\nMapillary\nA site where people and the city upload street photos; its software finds objects in them.\nS6\n\n\ntax roll\nThe city’s official list of every property and what it is.\nS4\n\n\nOpenStreetMap\nThe open map anyone can edit.\nS4",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Situ",
-    "section": "",
-    "text": "Situ is the prototype for my PhD research-creation project. It asks whether a game-like 3D experience can pass on and archive the spatial culture and urban rhythm of Griffintown, Montréal. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from my own observation, and I read both through urban theory. Game design then carries the result to a player.\nNothing in Situ archives anything yet. What exists so far is a foundation: the street network with its rules and buildings, and the measures I will test it against.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "About Situ"
-    ]
-  },
-  {
-    "objectID": "about.html#what-situ-is",
-    "href": "about.html#what-situ-is",
-    "title": "About Situ",
-    "section": "",
-    "text": "Situ is the prototype for my PhD research-creation project. It asks whether a game-like 3D experience can pass on and archive the spatial culture and urban rhythm of Griffintown, Montréal. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from my own observation, and I read both through urban theory. Game design then carries the result to a player.\nNothing in Situ archives anything yet. What exists so far is a foundation: the street network with its rules and buildings, and the measures I will test it against.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "About Situ"
-    ]
-  },
-  {
-    "objectID": "about.html#the-idea",
-    "href": "about.html#the-idea",
-    "title": "About Situ",
-    "section": "The idea",
-    "text": "The idea\n\nSpatial culture\nHillier described a spatial culture as “a distinctive way of ordering space” (Hillier 1989, quoted in Griffiths & von Lünen 2016, p. xxiii). Griffiths and von Lünen see the field as the link between how a built place works and what it comes to mean to the people who live there (2016, p. xxi). Adams (2024, introduction) wants spatial culture to be “qualified and documented”. That is close to what an archive needs.\n\n\nRhythm\nA street layout holds no time. Space syntax is the method Hillier and Hanson started for measuring how a street network is arranged (What space syntax is). It tends to strip social practice of its time (Griffiths & von Lünen 2016, p. xxiii). In Rhythmanalysis, Lefebvre finds rhythm wherever energy is spent in a particular place and time (2004, p. 15). His own example is a Paris junction seen from his window: on red the pedestrians cross, on green the cars rush (p. 28). The light cycles in S3 model that beat. He also holds that where there is rhythm there is measure (p. 8), so counts and timings belong in Situ. I add time on purpose: when places are open and when streets are busy.\n\n\nArchiving\nAn archive keeps two things (Schellenberg 1956, pp. 139 to 140). One is the evidence records give of how their maker worked. The other is the information they hold about people and places. Situ keeps both. The city data says what Griffintown is. My decision files and tests record how I turned it into a model. The London Charter, a set of principles for visualising cultural heritage by computer, calls this layer paradata (2009, principle 4.6). The Seville principles ask that a reconstruction show what is real and what is not (López-Menchero & Grande, principle 4), and that others can test it (principle 7). So every decision in my files carries a status, such as confirmed or assumed, and every claim on these pages carries one of four words.\nRhythm is the hard part. Taylor separates the archive of lasting things from the repertoire of embodied practice, like walking to work or lingering at a corner (2003, pp. 19 to 20). The repertoire needs people to be present. Situ cannot store a rhythm the way it stores a street. It can keep traces, such as counts and timings. It can also offer a place where the rhythm is performed again: the game. The Seville principles warn against showing “lifeless cities” (principle 5.3).\n\n\nWhat Situ has and what it lacks\nLefebvre describes three moments of social space (1991, pp. 38 to 40). Each kind of source in Situ lines up with one of them, so I use them as a checklist. Every row is open to revision.\n\n\n\n\n\n\n\n\nLefebvre\nIn Situ\nStatus\n\n\n\n\nconceived space: plans and maps\nthe network, its rules, building types and street objects (S1 to S4, S6), from open data (the city’s and OpenStreetMap’s) and street photos\nverified\n\n\nperceived space: daily routines\nrhythm and movement (S5 to S9), from the city’s counts and the census, and later from computer vision\npartial: a weekday measured (S5), commuters from the census (S7), a morning on foot imagined (S9)\n\n\nlived space: space as its users live it\nthe game, and what people say about the place, through play and later interviews\nplanned\n\n\n\n\n\n\n\n\n\nNoteFour readings I make, and how I defend them\n\n\n\n\n\nThese are my own interpretations of the sources. For each one I give the strongest objection I know, and what would show me wrong.\n\nLefebvre’s triad as a checklist\nLefebvre warns that his three moments lose their force once they become an abstract model (1991, p. 40). Laying them over software comes close to that. So I use the table only to see what is missing, and for now the lived row is empty. The rows also leak: the counts are observation, yet the city decided where to count. If the rows cannot be kept apart at all, the table should show where they cross.\n\n\nWhere layout and movement disagree\nA gap between space syntax and observed movement points to something besides the layout, such as a shop or a rule. Griffiths and von Lünen ask research to spell out that kind of gap (2016, p. xxi). The 1993 paper on natural movement (the share of walking the layout alone produces) itself shows shops multiplying the layout’s effect (Hillier et al. 1993, p. 31). A difference may also be plain error, from a wrong network or too few counts. So it counts only after each system’s tests. The reading is wrong if the differences vanish once errors are fixed, or if they follow no pattern.\n\n\nSchellenberg’s two values\nSchellenberg drew his line between evidence and information from government records (1956, pp. 139 to 140, 148). A research model is no government agency. I borrow only the distinction, which he says he defines “quite arbitrarily” (p. 139), and the London Charter already carries it into visualisation. The borrowing fails if the two layers cannot be kept apart. So my corrections live in their own file, and the city’s files stay untouched.\n\n\nThe game as a place to perform rhythm again\nTaylor’s repertoire and Lefebvre’s rhythm both need bodies present, and play is embodied action too. Against this, a player alone in a simulation receives no memory from Griffintown’s people. The game itself is code and data, an archive object. Lefebvre adds that the rhythmanalyst is closer to the poet than to “the statistician, who counts things” (2004, p. 23).\nI accept most of this. The game keeps traces and sets up a new performance. It does not hold the original repertoire, so interviews and focus groups are in the plan. If players’ movement bears no relation to the recorded rhythms, the game performs nothing of Griffintown.\n\n\n\n\n\n\nSpace syntax as one measuring stick\nSpace syntax describes the layout. I use it only to measure, and the simulated walkers never read it. At the end, S9 compares where they went with what space syntax predicts and with the city’s counts. Where they agree, the layout may explain the movement. Where they differ, something else is at work, and that difference is what the archive should keep.\n\n\n\n\n\nflowchart LR\n  D[City data, OpenStreetMap,&lt;br/&gt;street photos]:::data --&gt; S[Small systems&lt;br/&gt;S1 to S8]:::step\n  O[Counts&lt;br/&gt;measured on the street]:::data\n  S --&gt; M[Flows built from&lt;br/&gt;the systems]:::step\n  M --&gt; C{S9 Observer&lt;br/&gt;compare}:::test\n  SS[Space syntax]:::data --&gt; C\n  O --&gt; C\n  C --&gt; G[The game:&lt;br/&gt;a place to play&lt;br/&gt;and to keep]:::out\n  L[Lived accounts&lt;br/&gt;interviews, play]:::data --&gt; G\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nI build Situ as small systems, each with a single job. Each has a blueprint and its own tests. I try it in the Lab before the next one starts.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "About Situ"
-    ]
-  },
-  {
-    "objectID": "about.html#status",
-    "href": "about.html#status",
-    "title": "About Situ",
-    "section": "How I mark what I know",
-    "text": "How I mark what I know\nEach claim on these pages, and each system, carries one of four words.\n\nverified: the data or a test shows it. A system is verified when it is built and its tests pass.\npartial: some evidence supports it, and a gap remains. A system is partial when only part of it is built.\nplanned: not built yet.\nassumption: a reading of mine, or a rule I chose because no source settles it. It may be wrong, and where I can, I say what would show it.\n\nThe decision files behind the systems keep their own words, such as confirmed and assumed, because the code reads them.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "About Situ"
-    ]
-  },
-  {
-    "objectID": "about.html#the-systems",
-    "href": "about.html#the-systems",
-    "title": "About Situ",
-    "section": "The systems",
-    "text": "The systems\nThe nine systems, what each does and how far each stands, are on The systems.",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "About Situ"
-    ]
-  },
-  {
-    "objectID": "about.html#where-to-start",
-    "href": "about.html#where-to-start",
-    "title": "About Situ",
-    "section": "Where to start",
-    "text": "Where to start\n\nIf space syntax is new to you: What space syntax is\nFor the systems, one by one: The systems\nTo follow one number to its source: Tracing a result\nTo see every system on one map: the Lab\nFor every data source and reading: Resources",
-    "crumbs": [
-      "Explore",
-      "Research",
-      "About Situ"
-    ]
-  },
-  {
-    "objectID": "counts.html",
-    "href": "counts.html",
-    "title": "Movement counts and light timing",
-    "section": "",
-    "text": "The city counts every car, truck, bus, bicycle and pedestrian at its intersections, in 15-minute slices. Vehicles are counted by movement (northbound left, northbound through and so on), pedestrians and bicycles by crosswalk. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction, which leaves seven junctions. A one-day count has three windows (the two rush hours and two hours at midday) with gaps between them:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day in three windows, 6:30 to 18:30, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day in three windows, 6:30 to 18:30, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day in three windows, 6:00 to 18:30, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nThese counts also serve two later systems. S9 compares simulated movement with space syntax (how each street sits in the whole network), and at these junctions with movement actually counted. J040, counted around the clock, gives S5 Rhythm its measured day. No system is built from it, so S9 can compare with it. The exception comes below: the counts at J040 and J051 set those two lights, so S9 will not use them to judge the cars there.\n\n\n\nA day at J040, hour by hour. Each line is one group’s share of its daily total. At the evening rush, pedestrians and bicycles peak harder than vehicles.",
-    "crumbs": [
-      "Explore",
-      "Data",
-      "Movement counts and light timing"
-    ]
-  },
-  {
-    "objectID": "counts.html#what-the-city-counted",
-    "href": "counts.html#what-the-city-counted",
-    "title": "Movement counts and light timing",
-    "section": "",
-    "text": "The city counts every car, truck, bus, bicycle and pedestrian at its intersections, in 15-minute slices. Vehicles are counted by movement (northbound left, northbound through and so on), pedestrians and bicycles by crosswalk. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction, which leaves seven junctions. A one-day count has three windows (the two rush hours and two hours at midday) with gaps between them:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day in three windows, 6:30 to 18:30, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day in three windows, 6:30 to 18:30, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day in three windows, 6:00 to 18:30, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nThese counts also serve two later systems. S9 compares simulated movement with space syntax (how each street sits in the whole network), and at these junctions with movement actually counted. J040, counted around the clock, gives S5 Rhythm its measured day. No system is built from it, so S9 can compare with it. The exception comes below: the counts at J040 and J051 set those two lights, so S9 will not use them to judge the cars there.\n\n\n\nA day at J040, hour by hour. Each line is one group’s share of its daily total. At the evening rush, pedestrians and bicycles peak harder than vehicles.",
-    "crumbs": [
-      "Explore",
-      "Data",
-      "Movement counts and light timing"
-    ]
-  },
-  {
-    "objectID": "counts.html#estimating-the-lights-with-websters-method",
-    "href": "counts.html#estimating-the-lights-with-websters-method",
-    "title": "Movement counts and light timing",
-    "section": "Estimating the lights with Webster’s method",
-    "text": "Estimating the lights with Webster’s method\nS3 knows where the 31 lights in S1 are. The city does not publish their timing, so the timing is my estimate.\nWebster’s method (Webster 1958) is the classic way to set a fixed light cycle from counted traffic. A cycle is one full round of greens. The method asks how full each approach is, and which cycle length keeps the delay smallest. I apply it to the busiest counted hour.\nAn approach’s load is the cars arriving per hour (a bus or truck counts as two) divided by what its lanes can pass while green. Each lane, counted from OpenStreetMap, passes about 1,800 cars an hour. Each phase (one turn of green) takes the load of its fullest approach, and the phases add up to a total load. Webster’s formula turns that load, and the time lost each time the green changes (4 s per phase here), into a cycle length. Each phase then gets green in proportion to its load. I add one check Webster does not make. A pedestrian crossing needs at least 7 s to start, plus the time to cross at 1.2 m/s. A shorter green is lengthened.\nThe two phases follow the street grid: north-south, then east-west. Grid north is at about 305° on the compass, as in the city’s counts. At J040 almost nothing arrives from the north, where Ottawa is the one street no car may arrive along. That confirms the orientation.\n\n\n\nThe estimated cycles, second by second. Grey is amber and all-red: the time lost when the green changes.\n\n\nAt J040, at 16h on 18 December 2024, the total load was 0.29 and Webster’s cycle came to 24 s. At J051 the load was 0.38 and the cycle 27 s. Traffic is far from filling these lights, and both cycles are much shorter than any city would use, so I apply my lower limit of 60 s. The green is then set by pedestrians and by the split of loads: 26 s each way at J040, and 38 s north-south against 14 s east-west at J051. That is a finding about Griffintown’s streets, and a warning. At these volumes traffic leaves the timing open, so it becomes a design choice.\nJ181, on Robert-Bourassa, is skipped. Three of its four approaches lie beyond the network, and Webster needs them all.",
-    "crumbs": [
-      "Explore",
-      "Data",
-      "Movement counts and light timing"
-    ]
-  },
-  {
-    "objectID": "counts.html#the-other-29-lights",
-    "href": "counts.html#the-other-29-lights",
-    "title": "Movement counts and light timing",
-    "section": "The other 29 lights",
-    "text": "The other 29 lights\nI weighed four options. A single plan would give a main street and a side street the same green. Borrowing the split of a counted light on the same streets would use real counts, but only two lights were counted. Timing the lights from space syntax was ruled out, because S9 would then measure its own input. I chose to share the green by road class, the city’s own street hierarchy, which S1 already holds.\nThe city’s 2007 review of its arterial network (PDF) gives each class a daily traffic range: main arteries carry over 30,000 vehicles, collectors 1,000 to 15,000. Managing the flow is “prépondérante” on main arteries and “peu” on collectors (Ville de Montréal 2007). The United States standard agrees: “In general, the higher the traffic volume is, the higher the functional classification will be” (FHWA 2023, p. 26, PDF). Webster (1958) shares the green by how full each approach is, so a busier street should get more of it.\nThe counts agree. At all five counted junctions where the two streets differ in class, the higher class carried more traffic over the day. At J040, William, a collector, carried 2.5 times as much as Guy. Wellington, a secondary arterial, carried 8.5 to 29 times as much as Ann, Murray, Young and Shannon. Four of the five are on Wellington, so the sample is small.\nAt the two counted lights, road class and Webster disagree. At J040 it would give 21 and 31 s where Webster gives 26 and 26, because at the busiest hour each lane is about as full on both streets. At J051 it would give 26 and 26 s where Webster gives 38 and 14: the classes are equal, but de la Montagne is busier. So class tells which street gets more green over a day, and says nothing of how much at a given hour. The counted lights therefore keep Webster, and the share by class stays a cautious 60 %.\nThe rule: each street arriving at a light belongs to one of the two axes. Each axis takes the highest class among its streets, from main arterial (with highway) down through secondary arterial and collector to local. If both axes have the same class, the two phases share the 52 s of usable green equally. If not, the higher class gets 60 % and the lower 40 %. No phase is shorter than its pedestrians need, and where they need more, the cycle grows. Where cars arrive on one axis only, the other phase is for pedestrians.\nOf the 31 lights, 2 follow Webster from counts, 17 have one street of higher class, 7 have equal classes, and 5 have cars on one axis only (mostly at the edge, where the cross street lies beyond the network). In S9 these become the light plans its imagined drivers stop at, with the 60 % share and the 60 s cycle written down as assumptions. The city’s pedestrian-signal file uses the same intersection numbers as its light file: 30 of the 31 lights have pedestrian signals, all but Seigneurs and William.",
-    "crumbs": [
-      "Explore",
-      "Data",
-      "Movement counts and light timing"
-    ]
-  },
-  {
-    "objectID": "counts.html#assumptions",
-    "href": "counts.html#assumptions",
-    "title": "Movement counts and light timing",
-    "section": "Assumptions",
-    "text": "Assumptions\nTwo numbers are mine alone. The 60 s lower limit on the cycle (120 s is the upper) is my guess for a city centre, and it sets every cycle here. The 60 % share is my choice too: the counts show which street is busier and say nothing of the amount. The other values (lane capacity, time lost per phase, walking speed and walk interval) follow Webster or common practice. Montréal publishes neither its amber and all-red times nor its walking speed. The OpenStreetMap lane counts cover 866 of 870 car ways, and I checked them at three junctions only.\nThe counts themselves cover a few days each, in winter or spring. They show those days. A typical year is beyond them.",
-    "crumbs": [
-      "Explore",
-      "Data",
-      "Movement counts and light timing"
     ]
   },
   {
@@ -1575,6 +1210,431 @@
       "Explore",
       "Data",
       "The walking network"
+    ]
+  },
+  {
+    "objectID": "counts.html",
+    "href": "counts.html",
+    "title": "Movement counts and light timing",
+    "section": "",
+    "text": "The city counts every car, truck, bus, bicycle and pedestrian at its intersections, in 15-minute slices. Vehicles are counted by movement (northbound left, northbound through and so on), pedestrians and bicycles by crosswalk. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction, which leaves seven junctions. A one-day count has three windows (the two rush hours and two hours at midday) with gaps between them:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day in three windows, 6:30 to 18:30, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day in three windows, 6:30 to 18:30, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day in three windows, 6:00 to 18:30, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nThese counts also serve two later systems. S9 compares simulated movement with space syntax (how each street sits in the whole network), and at these junctions with movement actually counted. J040, counted around the clock, gives S5 Rhythm its measured day. No system is built from it, so S9 can compare with it. The exception comes below: the counts at J040 and J051 set those two lights, so S9 will not use them to judge the cars there.\n\n\n\nA day at J040, hour by hour. Each line is one group’s share of its daily total. At the evening rush, pedestrians and bicycles peak harder than vehicles.",
+    "crumbs": [
+      "Explore",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#what-the-city-counted",
+    "href": "counts.html#what-the-city-counted",
+    "title": "Movement counts and light timing",
+    "section": "",
+    "text": "The city counts every car, truck, bus, bicycle and pedestrian at its intersections, in 15-minute slices. Vehicles are counted by movement (northbound left, northbound through and so on), pedestrians and bicycles by crosswalk. The file covers the whole city, 2024 to 2026 (donnees.montreal.ca).\nI kept the counts taken within 15 m of an S1 junction, which leaves seven junctions. A one-day count has three windows (the two rush hours and two hours at midday) with gaps between them:\n\n\n\n\n\n\n\n\n\nJunction\nWhere\nWhen\nControl in S3\n\n\n\n\nJ040\nGuy, Ottawa and William\n3 days, around the clock, December 2024\nlights\n\n\nJ051\nde la Montagne and Notre-Dame\n1 day in three windows, 6:30 to 18:30, May 2026\nlights\n\n\nJ181\nRobert-Bourassa and Saint-Jacques\n1 day in three windows, 6:30 to 18:30, November 2024\nlights, at an exit\n\n\nJ006\nAnn and Wellington\n1 day in three windows, 6:00 to 18:30, February 2024\nall-way stop\n\n\nJ056\nMurray and Wellington\nthe same day\nnone\n\n\nJ086\nShannon and Wellington\nthe same day\nstop\n\n\nJ092\nYoung and Wellington\nthe same day\nstop\n\n\n\nThese counts also serve two later systems. S9 compares simulated movement with space syntax (how each street sits in the whole network), and at these junctions with movement actually counted. J040, counted around the clock, gives S5 Rhythm its measured day. No system is built from it, so S9 can compare with it. The exception comes below: the counts at J040 and J051 set those two lights, so S9 will not use them to judge the cars there.\n\n\n\nA day at J040, hour by hour. Each line is one group’s share of its daily total. At the evening rush, pedestrians and bicycles peak harder than vehicles.",
+    "crumbs": [
+      "Explore",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#estimating-the-lights-with-websters-method",
+    "href": "counts.html#estimating-the-lights-with-websters-method",
+    "title": "Movement counts and light timing",
+    "section": "Estimating the lights with Webster’s method",
+    "text": "Estimating the lights with Webster’s method\nS3 knows where the 31 lights in S1 are. The city does not publish their timing, so the timing is my estimate.\nWebster’s method (Webster 1958) is the classic way to set a fixed light cycle from counted traffic. A cycle is one full round of greens. The method asks how full each approach is, and which cycle length keeps the delay smallest. I apply it to the busiest counted hour.\nAn approach’s load is the cars arriving per hour (a bus or truck counts as two) divided by what its lanes can pass while green. Each lane, counted from OpenStreetMap, passes about 1,800 cars an hour. Each phase (one turn of green) takes the load of its fullest approach, and the phases add up to a total load. Webster’s formula turns that load, and the time lost each time the green changes (4 s per phase here), into a cycle length. Each phase then gets green in proportion to its load. I add one check Webster does not make. A pedestrian crossing needs at least 7 s to start, plus the time to cross at 1.2 m/s. A shorter green is lengthened.\nThe two phases follow the street grid: north-south, then east-west. Grid north is at about 305° on the compass, as in the city’s counts. At J040 almost nothing arrives from the north, where Ottawa is the one street no car may arrive along. That confirms the orientation.\n\n\n\nThe estimated cycles, second by second. Grey is amber and all-red: the time lost when the green changes.\n\n\nAt J040, at 16h on 18 December 2024, the total load was 0.29 and Webster’s cycle came to 24 s. At J051 the load was 0.38 and the cycle 27 s. Traffic is far from filling these lights, and both cycles are much shorter than any city would use, so I apply my lower limit of 60 s. The green is then set by pedestrians and by the split of loads: 26 s each way at J040, and 38 s north-south against 14 s east-west at J051. That is a finding about Griffintown’s streets, and a warning. At these volumes traffic leaves the timing open, so it becomes a design choice.\nJ181, on Robert-Bourassa, is skipped. Three of its four approaches lie beyond the network, and Webster needs them all.",
+    "crumbs": [
+      "Explore",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#the-other-29-lights",
+    "href": "counts.html#the-other-29-lights",
+    "title": "Movement counts and light timing",
+    "section": "The other 29 lights",
+    "text": "The other 29 lights\nI weighed four options. A single plan would give a main street and a side street the same green. Borrowing the split of a counted light on the same streets would use real counts, but only two lights were counted. Timing the lights from space syntax was ruled out, because S9 would then measure its own input. I chose to share the green by road class, the city’s own street hierarchy, which S1 already holds.\nThe city’s 2007 review of its arterial network (PDF) gives each class a daily traffic range: main arteries carry over 30,000 vehicles, collectors 1,000 to 15,000. Managing the flow is “prépondérante” on main arteries and “peu” on collectors (Ville de Montréal 2007). The United States standard agrees: “In general, the higher the traffic volume is, the higher the functional classification will be” (FHWA 2023, p. 26, PDF). Webster (1958) shares the green by how full each approach is, so a busier street should get more of it.\nThe counts agree. At all five counted junctions where the two streets differ in class, the higher class carried more traffic over the day. At J040, William, a collector, carried 2.5 times as much as Guy. Wellington, a secondary arterial, carried 8.5 to 29 times as much as Ann, Murray, Young and Shannon. Four of the five are on Wellington, so the sample is small.\nAt the two counted lights, road class and Webster disagree. At J040 it would give 21 and 31 s where Webster gives 26 and 26, because at the busiest hour each lane is about as full on both streets. At J051 it would give 26 and 26 s where Webster gives 38 and 14: the classes are equal, but de la Montagne is busier. So class tells which street gets more green over a day, and says nothing of how much at a given hour. The counted lights therefore keep Webster, and the share by class stays a cautious 60 %.\nThe rule: each street arriving at a light belongs to one of the two axes. Each axis takes the highest class among its streets, from main arterial (with highway) down through secondary arterial and collector to local. If both axes have the same class, the two phases share the 52 s of usable green equally. If not, the higher class gets 60 % and the lower 40 %. No phase is shorter than its pedestrians need, and where they need more, the cycle grows. Where cars arrive on one axis only, the other phase is for pedestrians.\nOf the 31 lights, 2 follow Webster from counts, 17 have one street of higher class, 7 have equal classes, and 5 have cars on one axis only (mostly at the edge, where the cross street lies beyond the network). In S9 these become the light plans its imagined drivers stop at, with the 60 % share and the 60 s cycle written down as assumptions. The city’s pedestrian-signal file uses the same intersection numbers as its light file: 30 of the 31 lights have pedestrian signals, all but Seigneurs and William.",
+    "crumbs": [
+      "Explore",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "counts.html#assumptions",
+    "href": "counts.html#assumptions",
+    "title": "Movement counts and light timing",
+    "section": "Assumptions",
+    "text": "Assumptions\nTwo numbers are mine alone. The 60 s lower limit on the cycle (120 s is the upper) is my guess for a city centre, and it sets every cycle here. The 60 % share is my choice too: the counts show which street is busier and say nothing of the amount. The other values (lane capacity, time lost per phase, walking speed and walk interval) follow Webster or common practice. Montréal publishes neither its amber and all-red times nor its walking speed. The OpenStreetMap lane counts cover 866 of 870 car ways, and I checked them at three junctions only.\nThe counts themselves cover a few days each, in winter or spring. They show those days. A typical year is beyond them.",
+    "crumbs": [
+      "Explore",
+      "Data",
+      "Movement counts and light timing"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Situ",
+    "section": "",
+    "text": "Situ is the prototype for my PhD research-creation project. It asks whether a game-like 3D experience can pass on and archive the spatial culture and urban rhythm of Griffintown, Montréal. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from my own observation, and I read both through urban theory. Game design then carries the result to a player.\nNothing in Situ archives anything yet. What exists so far is a foundation: the street network with its rules and buildings, and the measures I will test it against.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#what-situ-is",
+    "href": "about.html#what-situ-is",
+    "title": "About Situ",
+    "section": "",
+    "text": "Situ is the prototype for my PhD research-creation project. It asks whether a game-like 3D experience can pass on and archive the spatial culture and urban rhythm of Griffintown, Montréal. I look at two eras: today, and the 1920s to 1940s. I work from the city’s open data and from my own observation, and I read both through urban theory. Game design then carries the result to a player.\nNothing in Situ archives anything yet. What exists so far is a foundation: the street network with its rules and buildings, and the measures I will test it against.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#the-idea",
+    "href": "about.html#the-idea",
+    "title": "About Situ",
+    "section": "The idea",
+    "text": "The idea\n\nSpatial culture\nHillier described a spatial culture as “a distinctive way of ordering space” (Hillier 1989, quoted in Griffiths & von Lünen 2016, p. xxiii). Griffiths and von Lünen see the field as the link between how a built place works and what it comes to mean to the people who live there (2016, p. xxi). Adams (2024, introduction) wants spatial culture to be “qualified and documented”. That is close to what an archive needs.\n\n\nRhythm\nA street layout holds no time. Space syntax is the method Hillier and Hanson started for measuring how a street network is arranged (What space syntax is). It tends to strip social practice of its time (Griffiths & von Lünen 2016, p. xxiii). In Rhythmanalysis, Lefebvre finds rhythm wherever energy is spent in a particular place and time (2004, p. 15). His own example is a Paris junction seen from his window: on red the pedestrians cross, on green the cars rush (p. 28). The light cycles in S3 model that beat. He also holds that where there is rhythm there is measure (p. 8), so counts and timings belong in Situ. I add time on purpose: when places are open and when streets are busy.\n\n\nArchiving\nAn archive keeps two things (Schellenberg 1956, pp. 139 to 140). One is the evidence records give of how their maker worked. The other is the information they hold about people and places. Situ keeps both. The city data says what Griffintown is. My decision files and tests record how I turned it into a model. The London Charter, a set of principles for visualising cultural heritage by computer, calls this layer paradata (2009, principle 4.6). The Seville principles ask that a reconstruction show what is real and what is not (López-Menchero & Grande, principle 4), and that others can test it (principle 7). So every decision in my files carries a status, such as confirmed or assumed, and every claim on these pages carries one of four words.\nRhythm is the hard part. Taylor separates the archive of lasting things from the repertoire of embodied practice, like walking to work or lingering at a corner (2003, pp. 19 to 20). The repertoire needs people to be present. Situ cannot store a rhythm the way it stores a street. It can keep traces, such as counts and timings. It can also offer a place where the rhythm is performed again: the game. The Seville principles warn against showing “lifeless cities” (principle 5.3).\n\n\nWhat Situ has and what it lacks\nLefebvre describes three moments of social space (1991, pp. 38 to 40). Each kind of source in Situ lines up with one of them, so I use them as a checklist. Every row is open to revision.\n\n\n\nLefebvre\nIn Situ\nStatus\n\n\n\n\nconceived space: plans and maps\nthe network, its rules, building types and street objects (S1 to S4, S6), from open data (the city’s and OpenStreetMap’s) and street photos\nverified\n\n\nperceived space: daily routines\nrhythm and movement (S5 to S9), from the city’s counts and the census, and later from computer vision\npartial: a weekday measured (S5), commuters from the census (S7), a morning on foot imagined (S9)\n\n\nlived space: space as its users live it\nthe game, and what people say about the place, through play and later interviews (From systems to play)\nplanned\n\n\n\n\n\n\n\n\n\nNoteFour readings I make, and how I defend them\n\n\n\n\n\nThese are my own interpretations of the sources. For each one I give the strongest objection I know, and what would show me wrong.\n\nLefebvre’s triad as a checklist\nLefebvre warns that his three moments lose their force once they become an abstract model (1991, p. 40). Laying them over software comes close to that. So I use the table only to see what is missing, and for now the lived row is empty. The rows also leak: the counts are observation, yet the city decided where to count. If the rows cannot be kept apart at all, the table should show where they cross.\n\n\nWhere layout and movement disagree\nA gap between space syntax and observed movement points to something besides the layout, such as a shop or a rule. Griffiths and von Lünen ask research to spell out that kind of gap (2016, p. xxi). The 1993 paper on natural movement (the share of walking the layout alone produces) itself shows shops multiplying the layout’s effect (Hillier et al. 1993, p. 31). A difference may also be plain error, from a wrong network or too few counts. So it counts only after each system’s tests. The reading is wrong if the differences vanish once errors are fixed, or if they follow no pattern.\n\n\nSchellenberg’s two values\nSchellenberg drew his line between evidence and information from government records (1956, pp. 139 to 140, 148). A research model is no government agency. I borrow only the distinction, which he says he defines “quite arbitrarily” (p. 139), and the London Charter already carries it into visualisation. The borrowing fails if the two layers cannot be kept apart. So my corrections live in their own file, and the city’s files stay untouched.\n\n\nThe game as a place to perform rhythm again\nTaylor’s repertoire and Lefebvre’s rhythm both need bodies present, and play is embodied action too. Against this, a player alone in a simulation receives no memory from Griffintown’s people. The game itself is code and data, an archive object. Lefebvre adds that the rhythmanalyst is closer to the poet than to “the statistician, who counts things” (2004, p. 23).\nI accept most of this. The game keeps traces and sets up a new performance. It does not hold the original repertoire, so interviews and focus groups are in the plan. If players’ movement bears no relation to the recorded rhythms, the game performs nothing of Griffintown.\n\n\n\n\n\n\nSpace syntax as one measuring stick\nSpace syntax describes the layout. I use it only to measure, and the simulated walkers never read it. At the end, S9 compares where they went with what space syntax predicts and with the city’s counts. Where they agree, the layout may explain the movement. Where they differ, something else is at work, and that difference is what the archive should keep.\n\n\n\n\n\nflowchart LR\n  D[City data, OpenStreetMap,&lt;br/&gt;street photos]:::data --&gt; S[Small systems&lt;br/&gt;S1 to S8]:::step\n  O[Counts&lt;br/&gt;measured on the street]:::data\n  S --&gt; M[Flows built from&lt;br/&gt;the systems]:::step\n  M --&gt; C{S9 Observer&lt;br/&gt;compare}:::test\n  SS[Space syntax]:::data --&gt; C\n  O --&gt; C\n  C --&gt; G[The game:&lt;br/&gt;a place to play&lt;br/&gt;and to keep]:::out\n  L[Lived accounts&lt;br/&gt;interviews, play]:::data --&gt; G\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nI build Situ as small systems, each with a single job. Each has a blueprint and its own tests. I try it in the Lab before the next one starts.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#status",
+    "href": "about.html#status",
+    "title": "About Situ",
+    "section": "How I mark what I know",
+    "text": "How I mark what I know\nEach claim on these pages, and each system, carries one of four words.\n\nverified: the data or a test shows it. A system is verified when it is built and its tests pass.\npartial: some evidence supports it, and a gap remains. A system is partial when only part of it is built.\nplanned: not built yet.\nassumption: a reading of mine, or a rule I chose because no source settles it. It may be wrong, and where I can, I say what would show it.\n\nThe decision files behind the systems keep their own words, such as confirmed and assumed, because the code reads them.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#the-systems",
+    "href": "about.html#the-systems",
+    "title": "About Situ",
+    "section": "The systems",
+    "text": "The systems\nThe nine systems, what each does and how far each stands, are on The systems.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "about.html#where-to-start",
+    "href": "about.html#where-to-start",
+    "title": "About Situ",
+    "section": "Where to start",
+    "text": "Where to start\n\nIf space syntax is new to you: What space syntax is\nFor the systems, one by one: The systems\nTo follow one number to its source: Tracing a result\nTo see every system on one map: the Lab\nFor every data source and reading: Resources",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "About Situ"
+    ]
+  },
+  {
+    "objectID": "glossary.html",
+    "href": "glossary.html",
+    "title": "Glossary",
+    "section": "",
+    "text": "Each definition repeats what a page already says. Follow the link for the full account.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#space-syntax",
+    "href": "glossary.html#space-syntax",
+    "title": "Glossary",
+    "section": "Space syntax",
+    "text": "Space syntax\n\n\n\nTerm\nWhat it means here\nMore\n\n\n\n\nspace syntax\nA way of measuring where each street sits in the whole street network, begun by Bill Hillier and Julienne Hanson.\nWhat space syntax is\n\n\nsegment\nA piece of street between two junctions.\nS1\n\n\ndepth\nThe distance between two segments, counted by how much you turn: a right angle costs 1, a 45° turn 0.5.\nSegments and depth\n\n\nangular segment analysis\nThe kind of space syntax analysis Situ runs, with depth counted in turns.\nThe walking network\n\n\nintegration\nHow close a segment is, on average, to every other segment: how easy a street is to reach.\nIntegration and choice\n\n\nchoice\nHow often a segment lies on the shortest routes between every pair of segments: how often a street is passed through.\nIntegration and choice\n\n\nNAIN, NACH\nNormalised integration and normalised choice, rescaled so that networks of different sizes can be compared.\nIntegration and choice\n\n\nradius\nHow far the analysis looks around each segment, measured along the streets. Radius n has no limit, which here means the whole island.\nRadius\n\n\nnatural movement\nThe share of walking the layout alone produces, as Hillier and colleagues argued in 1993.\nNatural movement\n\n\nPlanX\nThe QGIS tool that computes the values.\nThe walking network",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#network",
+    "href": "glossary.html#network",
+    "title": "Glossary",
+    "section": "The network",
+    "text": "The network\n\n\n\nTerm\nWhat it means here\nMore\n\n\n\n\njunction\nWhere segment ends meet.\nS1\n\n\nedge\nThe streets just outside the study area’s boundary that touch it.\nS1\n\n\ngate\nWhere the study area meets the edge.\nS1\n\n\nexit\nThe far end of an edge street, where the city carries on.\nS1\n\n\ndead end\nA junction with only one segment that is neither a gate nor an exit.\nS1\n\n\nconnector\nA short straight line I added where a path end and a street do not quite touch in the data. Every one is listed.\nThe walking network\n\n\ncheckpoint\nA place where I doubted the data. Each one has an id and is listed in the Lab, settled or still open.\nChecks and decisions",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#views-and-flows",
+    "href": "glossary.html#views-and-flows",
+    "title": "Glossary",
+    "section": "What S8 and S9 measure",
+    "text": "What S8 and S9 measure\n\n\n\nTerm\nWhat it means here\nMore\n\n\n\n\nisovist\nThe part of the city visible from one spot (Benedikt 1979).\nS8\n\n\ncompactness\n1 for a round view, smaller as the view stretches into a corridor.\nS8\n\n\nreading\nOne version of S9’s imagined morning, changing a single rule (the route), so a difference between readings points at that rule.\nS9\n\n\nledger\nThe list of every rule S9 adds, each with its source or marked as an assumption.\nS9 build\n\n\nrank correlation\nHow alike two orders are: 1 means the same order.\nS8\n\n\ncensus tract\nOne of the small areas the census reports on.\nS7",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#status",
+    "href": "glossary.html#status",
+    "title": "Glossary",
+    "section": "How sure, and from where",
+    "text": "How sure, and from where\n\n\n\nTerm\nWhat it means here\nMore\n\n\n\n\nverified\nThe data or a test shows it. A system is verified when it is built and its tests pass.\nAbout\n\n\npartial\nSome evidence supports it, and a gap remains.\nAbout\n\n\nplanned\nNot built yet.\nAbout\n\n\nassumption\nA reading of mine, or a rule I chose because no source settles it.\nAbout\n\n\nrun record\nThe file each system writes beside its results, with a fingerprint of every input and output.\nTracing a result\n\n\nMapillary\nA site where people and the city upload street photos; its software finds objects in them.\nS6\n\n\ntax roll\nThe city’s official list of every property and what it is.\nS4\n\n\nOpenStreetMap\nThe open map anyone can edit.\nS4",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html",
+    "href": "lab-notes.html",
+    "title": "Lab notes",
+    "section": "",
+    "text": "The Lab is one map with a tab for each system. There I try a system and see the places it still leaves open. Click anything to see what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and slider position shows something a system already wrote down: the reach slider, for instance, steps through how far S1 found you can get from a junction. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nRoutes are the one small exception. Storing every route between every pair of junctions would take many megabytes. So I store only the shortest distances and the last step of each shortest route. The browser follows each route back and tests each street against the detour allowed. Those two rules exist twice, beside the systems and in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "crumbs": [
+      "Explore",
+      "How the Lab works"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#what-the-lab-is",
+    "href": "lab-notes.html#what-the-lab-is",
+    "title": "Lab notes",
+    "section": "",
+    "text": "The Lab is one map with a tab for each system. There I try a system and see the places it still leaves open. Click anything to see what every system knows about it.\nThe Lab replays results. It never recomputes them. Every street colour and slider position shows something a system already wrote down: the reach slider, for instance, steps through how far S1 found you can get from a junction. So each rule lives in one place, and the Lab cannot quietly disagree with it.\nRoutes are the one small exception. Storing every route between every pair of junctions would take many megabytes. So I store only the shortest distances and the last step of each shortest route. The browser follows each route back and tests each street against the detour allowed. Those two rules exist twice, beside the systems and in the browser, and a test runs both on 45,600 cases to check they give the same streets.",
+    "crumbs": [
+      "Explore",
+      "How the Lab works"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#what-it-shows",
+    "href": "lab-notes.html#what-it-shows",
+    "title": "Lab notes",
+    "section": "What it shows",
+    "text": "What it shows\nOne system shows at a time, because two colourings on one street cannot be read. Each tab has few controls. It lists its checkpoints by kind, with why each kind matters and the result of its last tests.\n\n\n\n\n\n\n\n\nTab\nWhat the map shows\nWhat you can try\n\n\n\n\nS1 Streets\nwho may use each street, and where gates and dead ends are\nhow far you can get from a junction, how many minutes on foot it takes to reach each street, and every street a trip up to 50 % longer than the shortest could use\n\n\nS2 Scores\nchoice or integration, on foot or by car\na distance slider you can play\n\n\nS3 Rules\nstops and lights, or speed limits\nclick a junction, then a street arriving at it, to see its rules and signs\n\n\nS4 Buildings\nbuildings by use, or by where the use came from\nthe places people go to\n\n\nS5 Rhythm\nplaces open or closed, the counts at the counted junctions, and the bicycle detectors\na day, an hour and a mode (and a season for bicycles), and a day that plays\n\n\nS6 Streetscape\ntrees, hydrants, furniture, lights, cameras, crossings and road works, each with its own icon once you zoom in; sidewalks by material or age\none kind of object at a time\n\n\nS7 Commuters\nbuildings with homes, sized by their commuters, with metro entrances and bus stops\none way of travelling at a time\n\n\nS8 Views\nhow much each street lets you see\nwalk and look: pick two points, and a walker shows what it sees along the way\n\n\nS9 Observer\nthe morning’s imagined walkers, and the counts inside and around the area\na reading and an hour\n\n\n\nIntegration and choice are the space syntax measures S2 gives each street. Integration is how easy a street is to reach. Choice is how often it lies on the way between other places. The stress tests sit with each system’s tests, where their numbers can be read in full.",
+    "crumbs": [
+      "Explore",
+      "How the Lab works"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#how-it-is-built",
+    "href": "lab-notes.html#how-it-is-built",
+    "title": "Lab notes",
+    "section": "How it is built",
+    "text": "How it is built\n\n\n\n\n\nflowchart LR\n  S[\"each system, S1 to S9&lt;br/&gt;results and checks\"]:::step --&gt; W[\"copy for the Lab\"]:::step\n  C[\"shared way of copying\"]:::rule --&gt; W\n  W --&gt; D[/\"one data file&lt;br/&gt;per system\"/]:::out\n  S1[\"S1 streets\"]:::step --&gt; R[\"shortest routes\"]:::step\n  R --&gt; D\n  K[\"walk tools&lt;br/&gt;minutes and views\"]:::step --&gt; L\n  D --&gt; L[\"the Lab\"]:::test\n  D --&gt; T[\"the Lab checks&lt;br/&gt;L1 to L12\"]:::test\n  K --&gt; T\n  classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6\n  classDef out fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff\n  classDef test fill:none,stroke:#fe83cc,color:#fe83cc\n\n\n\n\n\n\nEach system copies its tables into one file for the Lab. A browser may refuse to read a data file from the disk, yet it always runs a script. So each file is written as a small script, and the Lab works even without a server.",
+    "crumbs": [
+      "Explore",
+      "How the Lab works"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#two-orders",
+    "href": "lab-notes.html#two-orders",
+    "title": "Lab notes",
+    "section": "Two orders on one map",
+    "text": "Two orders on one map\nTwo views put two measures on the same street. In S2, “local or whole” compares a street’s place within 200, 400 or 800 m with its place across the whole island. In S9, “against space syntax” compares a street’s place among the imagined walkers with its place in walking choice or integration. A street’s place runs from 0, the lowest, to 1, the highest; the view shows the first place minus the second. Yellow means higher in the first order, blue higher in the second, grey about the same, and the line widens with the gap. Python works out the gaps (common/ranks.py) and the Lab only draws them; check L13 counts them again a different way.\nThe gaps describe the data. Why a street is high in one order and low in the other is a question for the pages and for fieldwork (assumption).",
+    "crumbs": [
+      "Explore",
+      "How the Lab works"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#unresolved",
+    "href": "lab-notes.html#unresolved",
+    "title": "Lab notes",
+    "section": "Only what is unresolved",
+    "text": "Only what is unresolved\nUnder the map, a button dims everything except what is still open on that tab: checkpoints not yet settled, streets without a value, buildings of unknown use, photo detections not seen recently, streets with no viewpoint. Its label gives the count.",
+    "crumbs": [
+      "Explore",
+      "How the Lab works"
+    ]
+  },
+  {
+    "objectID": "lab-notes.html#tests",
+    "href": "lab-notes.html#tests",
+    "title": "Lab notes",
+    "section": "How the Lab is tested",
+    "text": "How the Lab is tested\nThe thirteen Lab checks ask one thing: does the Lab show exactly what the systems wrote?\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nL1\nDo the streets and junctions match S1, and does each junction reach the same streets? Every 15th junction’s reach is worked out again from scratch.\n\n\nL2\nDoes every S2 value equal the S2 table, with missing values still missing?\n\n\nL3\nDo the S3 rules, signs, speeds and checkpoints equal the S3 tables?\n\n\nL4\nThe Lab no longer shows the S3 stress results, but its data still holds them. Do they give the same counts as the S3 stress tests?\n\n\nL5\nIs every shortest route real and truly the shortest, and do the browser’s route rules give back the original routes?\n\n\nL6\nDoes every S4 building and place equal the S4 tables, down to each outline point, with empty cells still empty?\n\n\nL7\nDo the S5 weekday shape, junction counts, each place’s week, the open counts and the ring outside the area equal the S5 tables?\n\n\nL8\nDoes every S6 object and surface equal the S6 tables, down to each outline point, with empty cells still empty?\n\n\nL9\nDo the S7 buildings with homes, their commuters and nearest stops, the stops and the hour bands equal the S7 tables?\n\n\nL10\nDo the S8 view measures and kept views equal the S8 tables, and does each sight line the Lab draws land where S8 cast it?\n\n\nL11\nDo the S9 street flows, counted junctions, ring comparison, expectations and ledger equal the S9 tables?\n\n\nL12\nDo the walk tools measure what the systems measure? Sixty walks between random points equal S7’s shortest walks, and thirty views equal S8’s within 2 % (0.04 % on average).\n\n\nL13\nDo the gaps the two-order views show (S2 local or whole, S9 against space syntax) equal a fresh count from the S2 and S9 tables? A street missing a value gets no gap, never 0.\n\n\n\nAll thirteen pass, and the Lab shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught both. For L7, I changed one letter of a place’s week, and L7 caught it.\nThe shortest-route check does not trust the method that found the routes. It uses a simple test instead: if a route is real, and no single move anywhere could shorten any distance, then no shorter route exists. That condition is checked separately, for every start and every move.\n\nIn a browser\nThe checks above read the Lab’s data. Eleven more open the Lab itself in a browser, the way a visitor does, and click through it (last results).\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n\nU1\nDoes every tab open, draw its map, show a key and a text, and mark itself as the one selected?\n\n\nU2\nFor every one of the 264 segments, does its panel show exactly the values of S1, S2, S3, S8 and S9, with “none” where a value is missing?\n\n\nU3\nDoes every junction open, and do the counted ones show S9’s numbers exactly?\n\n\nU4\nDoes a building opened from a link show that building?\n\n\nU5\nDoes “Whole area” bring back the first view, and do close, Escape and a new tab empty the panel?\n\n\nU6\nDo the keys say how a missing value is drawn, and does the S2 key name its measure and radius?\n\n\nU7\nWhen a system’s data fails to load, does its tab say so? When the streets fail, does the Lab say which file?\n\n\nU8\nAt phone width, does any page scroll sideways?\n\n\nU9\nWith the keyboard alone, can a visitor reach the map, move it and open what lies under the centre cross?\n\n\nU10\nIn the two-order views, does each list start with the largest gap in the data, open that street when clicked, and does S9 quote its own correlation?\n\n\nU11\nDoes “only what is unresolved” count what is open and dim everything else?\n\n\n\nAll eleven pass. The first run of U8 failed: a table on Tracing a result was wider than a phone. Wide tables now scroll inside themselves.",
+    "crumbs": [
+      "Explore",
+      "How the Lab works"
+    ]
+  },
+  {
+    "objectID": "limits.html",
+    "href": "limits.html",
+    "title": "Limits of the desk",
+    "section": "",
+    "text": "So far I have built Situ from open data: files that public bodies or volunteers publish for anyone to use, such as the city’s tax roll or OpenStreetMap. I have seen Griffintown mostly through other people’s photos and videos. I have not yet checked this desk research by walking the area with a notebook, and that limits what every system can claim.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#working-from-a-screen",
+    "href": "limits.html#working-from-a-screen",
+    "title": "Limits of the desk",
+    "section": "",
+    "text": "So far I have built Situ from open data: files that public bodies or volunteers publish for anyone to use, such as the city’s tax roll or OpenStreetMap. I have seen Griffintown mostly through other people’s photos and videos. I have not yet checked this desk research by walking the area with a notebook, and that limits what every system can claim.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#where-the-files-fall-short",
+    "href": "limits.html#where-the-files-fall-short",
+    "title": "Limits of the desk",
+    "section": "Where the files fall short",
+    "text": "Where the files fall short\nThe first limit is purpose. Each file was made by an institution to do a job, and its categories serve that job. Scholars of data say the same: data are shaped for a purpose before anyone analyses them (Gitelman 2013; Kitchin 2014). When I borrow a file for a new question, its categories come with it.\nThe city’s street file is a road file. It left out the canal path and the new park paths, and 10 of the first 12 dead ends in S1 turned out to be places where walkers carry on. The tax roll is for taxing property. It counts a condo parking space as a property, just as it counts a home, and gives a tower’s storeys only for some kinds of property.\nThe second limit is time. Every file has its own date, and Griffintown changes faster than most of them. The city’s sign post at one corner under the Wellington viaduct dates from October 2025, while every photo of it is older (P03). The city’s 3D model of 2020 stops at the Ville-Marie borough line. Griffintown is in Le Sud-Ouest, so it only has the 2016 model, older than many of its towers. When two files disagree, the cause is often a gap in time.\nThe third limit is coverage. The speed file has no limits for Autoroute 10 and its ramps. The traffic light file says where the lights are and nothing about their timing. No open file says where building doors are. OpenStreetMap is drawn by volunteers, so a building appears only once someone draws it.\nThe fourth limit is position. A point in a file stands for a thing on the street, and the two are rarely in the same spot. An address point often sits at the curb, a shop’s point on its façade. At 1485 rue des Bassins, 290 dwellings share one address point, 130 m from the two towers on their lot (B01). Even my own arithmetic can move things: an early version of S4 put some building centres tens of metres off, because of how it handled large map coordinates.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#seeing-from-the-desk",
+    "href": "limits.html#seeing-from-the-desk",
+    "title": "Limits of the desk",
+    "section": "Seeing from the desk",
+    "text": "Seeing from the desk\nPhotos and videos let me look at the street without being there. They settled real questions, including most of the no-entry disagreements in S3. Mapillary photos from 2016 and 2024 showed that walkers cross Place des Aiguilleurs at the end of Rue Smith (C06). A walking video filmed on 11 July 2026 shows the signs at the entrance of Allée des Vraquiers: a pedestrian zone, closed to bicycles and to every vehicle except emergency ones.\nStill, a camera goes where its owner walks, and it records one moment. Neither of the two recent walking videos reaches the end of Rue Brennan, so the footway I assumed there (C04) is still unconfirmed. A sign seen edge-on hides which street it faces. A photo older than the sign it shows can mislead.\nSo every decision keeps its source and its date, and I grade the evidence. A link I assume is drawn in pink. A photo or video can make it likely. Only a visit makes it confirmed. Videos are cited by link and timestamp, and no frame appears here unless its owner agrees.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#system-by-system",
+    "href": "limits.html#system-by-system",
+    "title": "Limits of the desk",
+    "section": "System by system",
+    "text": "System by system\n\n\n\nSystem\nWhat open data gives\nWhat the desk cannot settle\n\n\n\n\nS1 Streets\nstreet lines with their class and direction, plus paths from OpenStreetMap\nwhether a path is open on the ground, and where a closure or building site cuts a route; three links at the end of Brennan and Ann are assumed\n\n\nS2 Scores\nspace syntax values, which measure how each street sits in the network I built\nwhere people actually walk; Brennan and Ann gained walking choice only because I assumed they lead somewhere\n\n\nS3 Rules\nwhere each sign and light stands, and the speed limits\nwhich way a sign faces, and how long each light stays green; 21 places to check\n\n\nS4 Buildings\nuses and dwellings from the tax roll with its lots, and outlines from OpenStreetMap\nhow tall many buildings are, and which of two towers holds which units; 61 cases to check\n\n\nS5 Rhythm\nmovement counts (7 junctions on 9 weekdays, plus three bicycle detectors), and opening hours for 83 of 558 places\nthe weekend on foot and by car, and whether an open place is busy; 17 of the 24 weekday hours rest on one junction\n\n\nS6 Streetscape\npublic trees, hydrants, sidewalks, road works, lights, cameras and crossings, the last three from photos and mappers\ntrees on private land, and which lights and cameras still stand; 40 places to check\n\n\nS7 Commuters\nhomes, work from home, ways to work and hours of leaving and arriving, from the census of May 2021, and the STM stops\nwhere each commuter goes and by which street, and how much the pandemic still bends the census; nothing open says how many people visit\n\n\nS8 Views\nwhat can be seen from each walkable street past the OpenStreetMap building outlines\ntrees, walls, viaducts and heights; buildings missing from the map open views that do not exist\n\n\nS9 Observer\na weekday morning of commuters on foot, imagined under three route rules, set against the counts and space syntax\neveryone who is not commuting, which is most of the pedestrians counted. Also where walkers really work, and which reading is closest with only seven junctions to compare",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#people-are-missing",
+    "href": "limits.html#people-are-missing",
+    "title": "Limits of the desk",
+    "section": "People are missing",
+    "text": "People are missing\nThe deepest limit is about people. Open data records a city’s infrastructure. Apart from the city’s movement counts at a few intersections (Movement counts) and its bicycle detectors, it says almost nothing about how people use the streets: where they linger, or when a corner fills. Situ aims to mediate and archive Griffintown’s urban rhythm and its spatial culture, which Hillier described as a distinctive way of ordering space (About). Both live in what people do. From the desk I can describe the stage. I cannot yet describe the play.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#carrying-the-gaps",
+    "href": "limits.html#carrying-the-gaps",
+    "title": "Limits of the desk",
+    "section": "Carrying the gaps",
+    "text": "Carrying the gaps\nA value no source gives stays empty, with the reason written beside it. It never becomes a zero or a guess. Every assumption is labelled as one on the page and in the Lab. Every place the desk could not settle becomes a checkpoint: a question to answer on site.\nSo Situ describes Griffintown as its files and other people’s cameras record it, at dates I can name. It shows how the layout and the rules shape the movement that is possible. How people actually live in the area is still beyond it. Each system says which of the two it is doing.\nMost remaining checkpoints can only be closed on site. The next step is a walk through Griffintown with these questions in hand, photographing and dating each answer. Later, watching people in place will add to S5 Rhythm, the first system about time, which so far knows only weekdays.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "limits.html#references",
+    "href": "limits.html#references",
+    "title": "Limits of the desk",
+    "section": "References",
+    "text": "References\n\nGitelman, L. (ed.) (2013). “Raw Data” Is an Oxymoron. MIT Press.\nKitchin, R. (2014). The Data Revolution: Big Data, Open Data, Data Infrastructures and Their Consequences. SAGE.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "Limits of the desk"
+    ]
+  },
+  {
+    "objectID": "play.html",
+    "href": "play.html",
+    "title": "From systems to play",
+    "section": "",
+    "text": "The systems describe Griffintown as its open files and street photos record it. The game is where that description would meet people: players, and the residents whose accounts the systems lack. Nothing on this page is built or found. Each row is a question I could put to play, and every one is planned.\nI treat the move from system to game as a translation. A system is a source. I read it, decide what can become a rule or a space, and build that into the game’s grammar. Then I read the play back, and the play becomes a source in turn. Part of a system is lost in the move, and play adds things no system held (assumption: this is how I choose to work, and the questions below test it).",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "From systems to play"
+    ]
+  },
+  {
+    "objectID": "play.html#kinds",
+    "href": "play.html#kinds",
+    "title": "From systems to play",
+    "section": "Four kinds of knowledge",
+    "text": "Four kinds of knowledge\n\n\n\nKind\nIn Situ now\nStatus\nWhat it needs\n\n\n\n\npresent-day data: city files, OpenStreetMap, street photos, the census\nS1 to S8\nverified or partial, system by system\nalready traced (Tracing a result)\n\n\nhistorical evidence: Griffintown in the 1920s to 1940s\nnot yet in any system\nplanned\nhistorical maps and records\n\n\nmodel inference: what S9 imagines\nS9’s morning on foot\nassumption\ncomparison with counts, then fieldwork\n\n\nwhat residents know: routines and memories\nnothing yet\nplanned\nfieldwork: interviews and focus groups, after research ethics approval\n\n\n\nNone of these stands in for another. A simulated walk is not a resident’s routine, and a space syntax value is not a feeling about a street.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "From systems to play"
+    ]
+  },
+  {
+    "objectID": "play.html#systems",
+    "href": "play.html#systems",
+    "title": "From systems to play",
+    "section": "System by system",
+    "text": "System by system\n\n\n\nSystem\nRepresents\nLeaves out\nA question for play\nWhat would answer it\n\n\n\n\nS1 Streets\nwhere one may walk or drive, as the city files it\nshortcuts nobody filed; streets closed for a while\nWhen the network becomes the game’s ground, do players find the paths the city file missed?\nplay logs of routes; my observation on site\n\n\nS2 Scores\nhow each street sits in the whole layout\nwhat people do there\nWithout being told, do players drift towards the streets with high choice, as the idea of natural movement proposes (space syntax)?\nplay routes compared with S2, the same test S9 runs\n\n\nS3 Rules\nstops, lights, turns and speeds\nwhether the rules are kept\nIf players must wait at lights and stop at signs, does a junction’s beat appear in play?\nplay timing at junctions, set against the city’s counts\n\n\nS4 Buildings\nwhat each building is used for, and how many live in it\nwhat a place means, and what happens upstairs\nWhich buildings become destinations in play, and are they the ones residents name?\nplay logs, and interviews\n\n\nS5 Rhythm\nbusy hours that were counted, open hours that were promised\nweekends on foot, and lingering\nCan a game day carry the counted shape of a weekday, and can players read the hour from the street?\ncounts on weekends; play sessions at different game hours\n\n\nS6 Streetscape\nthe objects on the street\nprivate trees; how the objects are used\nDo benches, lights and cameras work as landmarks or as reasons to stop, for players and for residents?\ninterviews, and play logs\n\n\nS7 Commuters\nwho commutes, how and when, from the 2021 census\nevery trip that is not a commute, and every route\nWhat changes when the player is given a census commuter’s trip, compared with free walking?\ntwo versions of one play session\n\n\nS8 Views\nwhat can be seen from each point of the streets\nattention, and everything that blocks a view besides buildings\nDo open and closed views change where players pause or turn?\nplay logs of pauses, and observation of where people linger\n\n\nS9 Observer\nan imagined morning, built on stated assumptions\nmost of the people in the street\nWhen S9’s walkers fill a game street, can players tell the model’s gaps from Griffintown’s, such as the empty Robert-Bourassa junction?\nplay sessions with the ledger at hand, and interviews",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "From systems to play"
+    ]
+  },
+  {
+    "objectID": "play.html#evidence",
+    "href": "play.html#evidence",
+    "title": "From systems to play",
+    "section": "Which claims need which evidence",
+    "text": "Which claims need which evidence\n\n\n\n\n\n\n\n\nA claim about\nNeeds\nIn Situ\n\n\n\n\nhow a street is laid out or regulated\nthe city’s files and photos\ndone, S1 to S3\n\n\nhow many people pass, and when\ncounts and observation\npartly: nine counted weekdays, three bicycle detectors\n\n\nwhat a place means to the people who use it\ninterviews and focus groups\nnot yet\n\n\nhow Griffintown was\nhistorical maps and records\nnot yet\n\n\nwhether play carries something of Griffintown\nplaytesting, read against all of the above\nnot yet",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "From systems to play"
+    ]
+  },
+  {
+    "objectID": "play.html#waits",
+    "href": "play.html#waits",
+    "title": "From systems to play",
+    "section": "What waits",
+    "text": "What waits\nNothing that involves residents or players gets built before the questions and the ethics approval are in place. Until then, the systems stay descriptions of the files, and the game stays planned.",
+    "crumbs": [
+      "Explore",
+      "Research",
+      "From systems to play"
     ]
   },
   {
@@ -1746,7 +1806,7 @@
     "href": "s1-streets.html",
     "title": "S1 Streets",
     "section": "",
-    "text": "Asks Which streets connect, and who may walk or drive each one.\nFound 232 segments inside the area and 32 on its edge. Checks on photos cut the dead ends from 12 to 2.\nStands verified: 6 tests pass. 19 doubtful places were looked at on photos, and 16 of them are settled.\nLeaves out Paths the city’s files miss, outside the places I checked. A road map is a poor walking map.\nTrace How it is built · checks on photos · run record · every other system builds on it",
+    "text": "Asks Which streets connect, and who may walk or drive each one.\nFound 232 segments inside the area and 32 on its edge. Checks on photos cut the dead ends from 12 to 2.\nStands verified: 6 tests pass. 19 doubtful places were looked at on photos, and 16 of them are settled.\nLeaves out Paths the city’s files miss, outside the places I checked. A road map is a poor walking map.\nOpens Do players find the paths the city file missed? (planned)\nTrace How it is built · checks on photos · run record · every other system builds on it",
     "crumbs": [
       "Explore",
       "Systems",
@@ -1949,7 +2009,7 @@
     "href": "s3-rules.html",
     "title": "S3 Rules",
     "section": "",
-    "text": "Asks Must a driver stop here, are there lights, where may they turn, and how fast may they go?\nFound Turn signs forbid 86 of the 578 possible moves. Most car streets are limited to 30 km/h, and some to 40.\nStands verified: 8 tests pass, and signs were checked on photos at chosen junctions.\nLeaves out How the lights are timed. Turn rules that hold only at some hours stay on all day.\nTrace How it is built · checks on photos · run record · uses S1",
+    "text": "Asks Must a driver stop here, are there lights, where may they turn, and how fast may they go?\nFound Turn signs forbid 86 of the 578 possible moves. Most car streets are limited to 30 km/h, and some to 40.\nStands verified: 8 tests pass, and signs were checked on photos at chosen junctions.\nLeaves out How the lights are timed. Turn rules that hold only at some hours stay on all day.\nOpens Does a junction’s beat appear when players must wait? (planned)\nTrace How it is built · checks on photos · run record · uses S1",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2045,7 +2105,7 @@
     "href": "s4-buildings.html",
     "title": "S4 Buildings",
     "section": "",
-    "text": "Asks What each building is used for, how tall it is, how many people live in it, and where a walker reaches it.\nFound 296 buildings. The tax roll or OpenStreetMap gives the use of 262, and 34 stay unknown. Together they hold 11,954 dwellings.\nStands verified: 9 tests pass. The dwellings come within about 1 % of a provincial land-use file, checked in aggregate.\nLeaves out 61 cases still to check by hand, most of them buildings no source describes.\nTrace How it is built · run record · uses S1 · feeds S5, S7 and S9",
+    "text": "Asks What each building is used for, how tall it is, how many people live in it, and where a walker reaches it.\nFound 296 buildings. The tax roll or OpenStreetMap gives the use of 262, and 34 stay unknown. Together they hold 11,954 dwellings.\nStands verified: 9 tests pass. The dwellings come within about 1 % of a provincial land-use file, checked in aggregate.\nLeaves out 61 cases still to check by hand, most of them buildings no source describes.\nOpens Do the buildings players seek match the ones residents name? (planned)\nTrace How it is built · run record · uses S1 · feeds S5, S7 and S9",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2105,7 +2165,7 @@
     "href": "s5-rhythm.html",
     "title": "S5 Rhythm",
     "section": "",
-    "text": "Asks What the open data says about each hour of the week, with counts and promised opening hours kept apart.\nFound Seven junctions counted on nine weekdays, and 376 full days from three bicycle detectors.\nStands verified: 12 tests pass. The counts’ bicycle shape follows the detectors’ (correlation 0.89).\nLeaves out Weekends and seasons on foot and by car. Lingering escapes every count.\nTrace How it is built · run record · uses S1 and S4 · feeds S9",
+    "text": "Asks What the open data says about each hour of the week, with counts and promised opening hours kept apart.\nFound Seven junctions counted on nine weekdays, and 376 full days from three bicycle detectors.\nStands verified: 12 tests pass. The counts’ bicycle shape follows the detectors’ (correlation 0.89).\nLeaves out Weekends and seasons on foot and by car. Lingering escapes every count.\nOpens Can players read the hour from the street? (planned)\nTrace How it is built · run record · uses S1 and S4 · feeds S9",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2201,7 +2261,7 @@
     "href": "s6-streetscape.html",
     "title": "S6 Streetscape",
     "section": "",
-    "text": "Asks What stands on the streets besides the buildings, each object with its source and its street.\nFound 971 trees, 104 hydrants, 806 street lights and 487 sidewalk pieces. Most trees with a date were planted in 2013 or later.\nStands verified: 7 tests pass. Photo detections found 68 of the city’s 104 hydrants.\nLeaves out Trees on private land, and what no photo shows.\nTrace How it is built · run record · uses S1",
+    "text": "Asks What stands on the streets besides the buildings, each object with its source and its street.\nFound 971 trees, 104 hydrants, 806 street lights and 487 sidewalk pieces. Most trees with a date were planted in 2013 or later.\nStands verified: 7 tests pass. Photo detections found 68 of the city’s 104 hydrants.\nLeaves out Trees on private land, and what no photo shows.\nOpens Do street objects become landmarks, or reasons to stop? (planned)\nTrace How it is built · run record · uses S1",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2285,7 +2345,7 @@
     "href": "s7-commuters.html",
     "title": "S7 Commuters",
     "section": "",
-    "text": "Asks Who commutes from and to Griffintown on a weekday, how, when, and how far each home is from transit.\nFound About 7,200 residents commute, a quarter on foot. 71 % of homes are more than 800 m from a metro entrance.\nStands verified: 6 tests pass. Not yet compared with commuting observed on the street.\nLeaves out Where anyone goes. The census week of May 2021 fell during the pandemic.\nTrace How it is built · run record · uses S1 and S4 · feeds S9",
+    "text": "Asks Who commutes from and to Griffintown on a weekday, how, when, and how far each home is from transit.\nFound About 7,200 residents commute, a quarter on foot. 71 % of homes are more than 800 m from a metro entrance.\nStands verified: 6 tests pass. Not yet compared with commuting observed on the street.\nLeaves out Where anyone goes. The census week of May 2021 fell during the pandemic.\nOpens What changes when a player is given a census commuter’s trip? (planned)\nTrace How it is built · run record · uses S1 and S4 · feeds S9",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2357,7 +2417,7 @@
     "href": "s8-views.html",
     "title": "S8 Views",
     "section": "",
-    "text": "Asks What a person on a walkable street can see, measured on the open map.\nFound The views split the area in two: 5,000 to 13,000 m² in the old grid, 90,000 to 115,000 m² along the canal. Almost every view is a corridor.\nStands verified: 6 tests pass. Not compared with what walkers notice.\nLeaves out Trees, fences, parked trucks and rail structures stop no sight line. A building missing from the map opens a view that is not there.\nTrace How it is built · run record · uses S1 · feeds S9",
+    "text": "Asks What a person on a walkable street can see, measured on the open map.\nFound The views split the area in two: 5,000 to 13,000 m² in the old grid, 90,000 to 115,000 m² along the canal. Almost every view is a corridor.\nStands verified: 6 tests pass. Not compared with what walkers notice.\nLeaves out Trees, fences, parked trucks and rail structures stop no sight line. A building missing from the map opens a view that is not there.\nOpens Do open and closed views change where players pause? (planned)\nTrace How it is built · run record · uses S1 · feeds S9",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2429,7 +2489,7 @@
     "href": "s9-observer.html",
     "title": "S9 Observer",
     "section": "",
-    "text": "Asks Where might people walk on a weekday morning, imagined from S1 to S8, and how does that compare with the counts and space syntax?\nFound The imagined commuters make up about a quarter of the pedestrians counted at 7 and 8 h. The busiest counted junction gets none of them.\nStands partial: a first slice only. 9 tests pass. Compared with the counts at seven junctions and at 23 sites around the area.\nLeaves out Errands, school runs, visitors and people from beyond the area. It rests on 13 assumptions.\nTrace How it is built · the ledger · run record · uses S1, S2, S4, S5, S7 and S8",
+    "text": "Asks Where might people walk on a weekday morning, imagined from S1 to S8, and how does that compare with the counts and space syntax?\nFound The imagined commuters make up about a quarter of the pedestrians counted at 7 and 8 h. The busiest counted junction gets none of them.\nStands partial: a first slice only. 9 tests pass. Compared with the counts at seven junctions and at 23 sites around the area.\nLeaves out Errands, school runs, visitors and people from beyond the area. It rests on 13 assumptions.\nOpens Can players tell the model’s gaps from Griffintown’s? (planned)\nTrace How it is built · the ledger · run record · uses S1, S2, S4, S5, S7 and S8",
     "crumbs": [
       "Explore",
       "Systems",

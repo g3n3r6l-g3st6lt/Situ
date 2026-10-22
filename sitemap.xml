@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://situ-project.com/systems.html</loc>
-    <lastmod>2026-10-22T01:08:32.825Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.945Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/sources-check.html</loc>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://situ-project.com/s2-scores.html</loc>
-    <lastmod>2026-10-22T02:46:08.346Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.885Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/s1-checks.html</loc>
@@ -46,43 +46,47 @@
   </url>
   <url>
     <loc>https://situ-project.com/resources.html</loc>
-    <lastmod>2026-10-21T21:00:07.825Z</lastmod>
+    <lastmod>2026-10-22T03:27:16.112Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/provenance.html</loc>
     <lastmod>2026-10-22T02:06:41.431Z</lastmod>
   </url>
   <url>
-    <loc>https://situ-project.com/limits.html</loc>
-    <lastmod>2026-10-21T20:24:16.706Z</lastmod>
-  </url>
-  <url>
-    <loc>https://situ-project.com/lab-notes.html</loc>
-    <lastmod>2026-10-22T02:34:44.280Z</lastmod>
-  </url>
-  <url>
-    <loc>https://situ-project.com/glossary.html</loc>
-    <lastmod>2026-10-22T02:46:58.275Z</lastmod>
-  </url>
-  <url>
-    <loc>https://situ-project.com/about.html</loc>
-    <lastmod>2026-10-22T02:46:58.282Z</lastmod>
-  </url>
-  <url>
-    <loc>https://situ-project.com/counts.html</loc>
-    <lastmod>2026-10-21T20:25:14.012Z</lastmod>
-  </url>
-  <url>
-    <loc>https://situ-project.com/index.html</loc>
-    <lastmod>2026-10-22T02:46:58.285Z</lastmod>
+    <loc>https://situ-project.com/network.html</loc>
+    <lastmod>2026-10-22T01:57:50.814Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/lab.html</loc>
     <lastmod>2026-10-21T21:00:55.731Z</lastmod>
   </url>
   <url>
-    <loc>https://situ-project.com/network.html</loc>
-    <lastmod>2026-10-22T01:57:50.814Z</lastmod>
+    <loc>https://situ-project.com/index.html</loc>
+    <lastmod>2026-10-22T03:08:44.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://situ-project.com/counts.html</loc>
+    <lastmod>2026-10-21T20:25:14.012Z</lastmod>
+  </url>
+  <url>
+    <loc>https://situ-project.com/about.html</loc>
+    <lastmod>2026-10-22T03:08:50.155Z</lastmod>
+  </url>
+  <url>
+    <loc>https://situ-project.com/glossary.html</loc>
+    <lastmod>2026-10-22T02:46:58.275Z</lastmod>
+  </url>
+  <url>
+    <loc>https://situ-project.com/lab-notes.html</loc>
+    <lastmod>2026-10-22T02:34:44.280Z</lastmod>
+  </url>
+  <url>
+    <loc>https://situ-project.com/limits.html</loc>
+    <lastmod>2026-10-21T20:24:16.706Z</lastmod>
+  </url>
+  <url>
+    <loc>https://situ-project.com/play.html</loc>
+    <lastmod>2026-10-22T03:11:16.431Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/readings-check.html</loc>
@@ -94,7 +98,7 @@
   </url>
   <url>
     <loc>https://situ-project.com/s1-streets.html</loc>
-    <lastmod>2026-10-22T02:46:18.123Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.885Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/s3-build.html</loc>
@@ -102,31 +106,31 @@
   </url>
   <url>
     <loc>https://situ-project.com/s3-rules.html</loc>
-    <lastmod>2026-10-22T02:46:08.358Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.895Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/s4-buildings.html</loc>
-    <lastmod>2026-10-22T02:46:08.358Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.899Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/s5-rhythm.html</loc>
-    <lastmod>2026-10-22T02:46:08.365Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.899Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/s6-streetscape.html</loc>
-    <lastmod>2026-10-22T02:46:08.373Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.904Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/s7-commuters.html</loc>
-    <lastmod>2026-10-22T02:46:08.375Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.904Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/s8-views.html</loc>
-    <lastmod>2026-10-22T02:46:08.375Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.904Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/s9-observer.html</loc>
-    <lastmod>2026-10-22T02:46:08.385Z</lastmod>
+    <lastmod>2026-10-22T03:08:44.915Z</lastmod>
   </url>
   <url>
     <loc>https://situ-project.com/space-syntax.html</loc>
