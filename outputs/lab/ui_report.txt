@@ -1,4 +1,4 @@
-test_lab_ui.js, run 2026-10-21 in headless Chromium against the rendered site
+test_lab_ui.js, run 2026-10-22 in headless Chromium against the rendered site
 
 U1  PASS  9 tabs open and draw
 U2  PASS  264 segments, 6090 values compared
@@ -11,5 +11,6 @@ U8  PASS  34 pages at 390 px: none scrolls sideways
 U9  PASS  map reached by Tab true; arrows move it true; Enter at the cross opens S101 true
 U10  PASS  S2 ped_NACH_800: lists lead with S116 and S062 (largest gaps S116, S062), 7 without a value, the first opens true; S9: leads with S088 (largest S088), quotes rho 0.238
 U11  PASS  S2 at 800 m: "only what is unresolved (7)", 7 streets without a value; with the filter, open 1 and the rest 0.1; off again 1
+U12  PASS  9 tabs with a panel open: no skipped level
 
 ALL PASS

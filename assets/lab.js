@@ -254,7 +254,7 @@
   function diffLists(d, upLabel, downLabel) {
     const e = Object.entries(d), li = ([id, v]) => `<li><button type="button" class="sx-link" data-seg="${id}">${esc(seg[id].street || "a path")} (${id})</button> <span class="sub">${sgn(v)}</span></li>`;
     const up = e.filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, 5), down = e.filter(x => x[1] < 0).sort((a, b) => a[1] - b[1]).slice(0, 5);
-    return `<h5>${upLabel}</h5><ul class="lab-clist lab-diff">${up.map(li).join("")}</ul><h5>${downLabel}</h5><ul class="lab-clist lab-diff">${down.map(li).join("")}</ul>`;
+    return `<h3 class="lab-s">${upLabel}</h3><ul class="lab-clist lab-diff">${up.map(li).join("")}</ul><h3 class="lab-s">${downLabel}</h3><ul class="lab-clist lab-diff">${down.map(li).join("")}</ul>`;
   }
   // what is still open on this tab, for "only what is unresolved"
   function openCount() {
@@ -622,13 +622,13 @@
     const p = S5 && S5.places[id];
     if (!p) return "";
     const rows = p.week.map((w, d) => `<tr><td>${DAY5[d]}</td>${w.split("").map(l => `<td class="w5 ${l === "o" ? "o" : l === "c" ? "c" : "u"}"></td>`).join("")}</tr>`).join("");
-    return `<h5><a href="s5-rhythm.html" title="the S5 page">S5</a> · its week</h5><table class="lab-week">${rows}</table><p class="sub">${p.status === "no hours" ? "No hours given, so every hour is unknown, never closed." : "Green: open at half past the hour. Dark: closed."}` +
+    return `<h3 class="lab-s"><a href="s5-rhythm.html" title="the S5 page">S5</a> · its week</h3><table class="lab-week">${rows}</table><p class="sub">${p.status === "no hours" ? "No hours given, so every hour is unknown, never closed." : "Green: open at half past the hour. Dark: closed."}` +
       `${p.season ? " Seasonal: " + esc(p.season) + "." : ""}${p.notes ? " " + esc(p.notes) + "." : ""}</p>`;
   }
   function count5HTML(id) {
     const by = S5.junctions[id], days = S5.meta.counted_days.filter(d => d.junction === id);
     const hrs = [...Array(24).keys()].filter(h => by.pedestrian[h] != null);
-    return `<h5><a href="s5-rhythm.html" title="the S5 page">S5</a> · counted here</h5><p class="sub">${days.map(d => esc(d.weekday + " " + d.date)).join(", ")}. Mean per full hour counted:</p>
+    return `<h3 class="lab-s"><a href="s5-rhythm.html" title="the S5 page">S5</a> · counted here</h3><p class="sub">${days.map(d => esc(d.weekday + " " + d.date)).join(", ")}. Mean per full hour counted:</p>
       <table class="lab-vals"><tr><th></th><th>on foot</th><th>bicycles</th><th>vehicles</th></tr>${hrs.map(h =>
         `<tr><td>${h}h</td><td>${Math.round(by.pedestrian[h])}</td><td>${Math.round(by.bicycle[h])}</td><td>${Math.round(by.vehicle[h])}</td></tr>`).join("")}</table>`;
   }
@@ -706,11 +706,11 @@
   function home7HTML(h) {
     if (!h) return "";
     const pct = m => h.commuters ? Math.round(100 * h[m] / h.commuters) + " %" : "";
-    return `<h4>Homes · ${h.id}</h4><p class="sub">census tract ${esc(h.tract)} · ${h.dwellings} homes in S4</p>
+    return `<h2 class="lab-pt">Homes · ${h.id}</h2><p class="sub">census tract ${esc(h.tract)} · ${h.dwellings} homes in S4</p>
       <p>About <b>${Math.round(h.commuters)}</b> residents commute on a weekday today.</p>
       <table class="lab-vals"><tr><th></th><th>people</th><th>share</th></tr>${[["walk", "on foot"], ["metro", "metro"], ["bus", "bus"], ["car", "car"], ["bicycle", "bicycle"], ["other", "other"]]
         .map(([m, w]) => `<tr><td>${w}</td><td>${h[m].toFixed(1)}</td><td>${pct(m)}</td></tr>`).join("")}</table>
-      <h5>Nearest stops, along the streets</h5><p>${esc(h.metro_name.replace("STATION ", "").toLowerCase().replace(/(^|[ -'])\w/g, c => c.toUpperCase()))} metro: <b>${Math.round(h.metro_m)} m</b>
+      <h3 class="lab-s">Nearest stops, along the streets</h3><p>${esc(h.metro_name.replace("STATION ", "").toLowerCase().replace(/(^|[ -'])\w/g, c => c.toUpperCase()))} metro: <b>${Math.round(h.metro_m)} m</b>
       ${h.metro_out ? `<span class="sub">(${Math.round(h.metro_out)} m of it beyond the area, as a straight line)</span>` : ""}</p>
       <p>${esc(h.bus_name)} bus stop: <b>${Math.round(h.bus_m)} m</b></p>
       <p class="sub">The tract's census rates, corrected once for working from home today. Where these people go is not known.</p>`;
@@ -724,7 +724,7 @@
   }
   function obj6HTML(o) {
     if (!o) return "";
-    let h = `<h4>${esc(o.kind)}${o.detail ? ": " + esc(o.detail) : ""}</h4><p class="sub">${o.id} · from ${esc(SRC6[o.source] || o.source)} (${esc(o.source_id)})</p>`;
+    let h = `<h2 class="lab-pt">${esc(o.kind)}${o.detail ? ": " + esc(o.detail) : ""}</h2><p class="sub">${o.id} · from ${esc(SRC6[o.source] || o.source)} (${esc(o.source_id)})</p>`;
     if (o.kind === "tree") h += `<p>${o.detail_latin ? `<i>${esc(o.detail_latin)}</i>, ` : ""}trunk <b>${o.size} cm</b> across at breast height.</p>
       <p>${o.date ? `Planted ${esc(o.date)}.` : `<span class="warn">Planting date unknown</span> <span class="sub">${esc(o.date_reason)}</span>`}</p><p class="sub">${esc(o.setting)}</p>`;
     else if (o.kind === "hydrant") h += `<p>Status: ${esc(o.status)}. ${o.date ? "Installed " + esc(o.date) + "." : `<span class="sub">${esc(o.date_reason)}</span>`}</p><p class="sub">${esc(o.setting)}</p>`;
@@ -735,13 +735,13 @@
     else if (SLUG6[o.kind]) h += `<p class="sub">${esc(o.setting || "no further tags")}</p>
       <p>${o.same_as ? `Mapillary's software found a ${esc(o.kind)} within ${S6.meta.vision.match_m} m: ${esc(o.same_as)}.` : `<span class="sub">No Mapillary detection within ${S6.meta.vision.match_m} m; the photos may not reach here.</span>`}</p>`;
     else h += `<p class="sub">${esc(o.setting || "no further tags")}</p>`;
-    h += `<h5>Street</h5>` + (o.segment ? `<p><button type="button" class="sx-link" data-seg="${o.segment}">${esc(o.street)} (${o.segment})</button>, ${o.segment_m} m away</p>`
+    h += `<h3 class="lab-s">Street</h3>` + (o.segment ? `<p><button type="button" class="sx-link" data-seg="${o.segment}">${esc(o.street)} (${o.segment})</button>, ${o.segment_m} m away</p>`
       : `<p class="sub">${esc(o.link_reason)} (${o.segment_m} m from the nearest S1 street)</p>`);
     return h;
   }
   function surf6HTML(s) {
     if (!s) return "";
-    return `<h4>${esc(s.kind)} ${s.id}</h4><p class="sub">city asset ${esc(s.source_id)} · ${esc(s.type)}</p>
+    return `<h2 class="lab-pt">${esc(s.kind)} ${s.id}</h2><p class="sub">city asset ${esc(s.source_id)} · ${esc(s.type)}</p>
       <p>${esc(s.material || "material not given")}${s.built ? `, built ${esc(s.built)} <span class="sub">(${esc(s.built_precision)})</span>` : ", <span class='sub'>no construction date</span>"}.</p>
       <p>${Math.round(s.area)} m²${s.width != null ? `, about <b>${s.width.toFixed(1)} m</b> wide on average <span class="sub">(estimated: twice the area over the perimeter)</span>` : ""}.</p>
       <p class="sub">curb extension: ${esc(s.curb_extension)} · cycling: ${esc(s.cycling)} · trees: ${esc(s.trees)}</p>` +
@@ -856,46 +856,46 @@
     const b = c.where && b4[c.where];
     const now = c.status === "confirmed" ? `<p class="ok-line"><b>Settled.</b> ${esc(c.decision)}</p>`
       : c.status === "assumed" ? `<p class="warn"><b>Assumed for now.</b> ${esc(c.decision.replace(/^Assumed:\s*/, ""))} It still needs a look on site.</p>` : "";
-    return `<h4>${c.id} · ${esc(c.kind)}</h4>${now}<p>${esc(WHY[c.kind] || "")}</p>` +
+    return `<h2 class="lab-pt">${c.id} · ${esc(c.kind)}</h2>${now}<p>${esc(WHY[c.kind] || "")}</p>` +
       (c.place ? `<p class="sub">${esc(c.place)}</p>` : "") +
-      `<h5>What I need to know</h5><p>${esc(c.question)}</p>` +
+      `<h3 class="lab-s">What I need to know</h3><p>${esc(c.question)}</p>` +
       (c.link ? `<p><a href="${esc(c.link)}" target="_blank" rel="noopener">Look at this place in Street View</a></p>` : "") +
       (b ? `<p><button type="button" class="sx-link" data-b="${b.id}">Open the building ${esc(b.name || b.id)}</button></p>` : "");
   }
 
   function segmentHTML(s) {
-    let h = `<h4>${esc(s.street)}</h4><p class="sub">${s.id} · ${s.length} m · ${esc(s.class)}</p>
-      <h5><a href="s1-streets.html" title="the S1 page">S1</a> · who may use it</h5><p>${s.walk ? "On foot" : "Not on foot"}; ${!car(s) ? "closed to cars" : s.car_ft && s.car_tf ? "cars both ways" : "cars one way"}.${s.source !== "geobase" ? " A path I added after the S1 checks." : ""}</p>`;
+    let h = `<h2 class="lab-pt">${esc(s.street)}</h2><p class="sub">${s.id} · ${s.length} m · ${esc(s.class)}</p>
+      <h3 class="lab-s"><a href="s1-streets.html" title="the S1 page">S1</a> · who may use it</h3><p>${s.walk ? "On foot" : "Not on foot"}; ${!car(s) ? "closed to cars" : s.car_ft && s.car_tf ? "cars both ways" : "cars one way"}.${s.source !== "geobase" ? " A path I added after the S1 checks." : ""}</p>`;
     const v = S2 && S2.scores[s.id];
     if (v) {
       const row = (net, m) => RADII[net].map(r => `<td>${fmt(v[`${net}_${m}_${r}`])}</td>`).join("");
-      h += `<h5><a href="s2-scores.html" title="the S2 page">S2</a> · space syntax</h5><p class="sub">walking: ${esc(v.ped_status)}${v.ped_reason ? " · " + esc(v.ped_reason) : ""} · driving: ${esc(v.veh_status)}${v.veh_note ? " · " + esc(v.veh_note) : ""}</p>
+      h += `<h3 class="lab-s"><a href="s2-scores.html" title="the S2 page">S2</a> · space syntax</h3><p class="sub">walking: ${esc(v.ped_status)}${v.ped_reason ? " · " + esc(v.ped_reason) : ""} · driving: ${esc(v.veh_status)}${v.veh_note ? " · " + esc(v.veh_note) : ""}</p>
         <p class="sub">Normalised values, with no unit. Each column is a radius in metres; n is the whole island. "none" means no value, never zero.</p>
         <table class="lab-vals"><tr><th></th>${RADII.ped.map(r => `<th>${r}</th>`).join("")}</tr>
         <tr><td>walk choice</td>${row("ped", "NACH")}</tr><tr><td>walk integr.</td>${row("ped", "NAIN")}</tr></table>
         <table class="lab-vals"><tr><th></th>${RADII.veh.map(r => `<th>${r}</th>`).join("")}</tr>
         <tr><td>car choice</td>${row("veh", "NACH")}</tr><tr><td>car integr.</td>${row("veh", "NAIN")}</tr></table>`;
-    } else if (S2) h += `<h5><a href="s2-scores.html" title="the S2 page">S2</a> · space syntax</h5><p class="sub">S2 holds no row for this segment.</p>`;
+    } else if (S2) h += `<h3 class="lab-s"><a href="s2-scores.html" title="the S2 page">S2</a> · space syntax</h3><p class="sub">S2 holds no row for this segment.</p>`;
     const r = S3 && r3.speed[s.id];
     if (r) {
       const how = { by_id: `from the speed file, street id ${esc(r.speed_id)}`, by_shape: `borrowed from line ${esc(r.speed_id)} of the same name`,
                     zero_in_file: "the file gives 0: no limit", missing: "not in the speed file", not_a_road: "a path: not in the speed file" }[r.speed_status] || "";
-      h += `<h5><a href="s3-rules.html" title="the S3 page">S3</a> · speed</h5><p><b>${r.speed ? r.speed + " km/h" : "no limit"}</b> · ${how}</p>${r.speed_note ? `<p class="sub">${esc(r.speed_note)}</p>` : ""}`;
+      h += `<h3 class="lab-s"><a href="s3-rules.html" title="the S3 page">S3</a> · speed</h3><p><b>${r.speed ? r.speed + " km/h" : "no limit"}</b> · ${how}</p>${r.speed_note ? `<p class="sub">${esc(r.speed_note)}</p>` : ""}`;
     }
     if (S9 && S9.flows[s.id]) {
       const f = S9.flows[s.id], hs = S9.meta.hours;
-      h += `<h5><a href="s9-observer.html" title="the S9 page">S9</a> · commuters walking here, imagined</h5><table class="lab-vals"><tr><th></th>${hs.map(x => `<th>${x}h</th>`).join("")}</tr>${S9.meta.readings.map(rd =>
+      h += `<h3 class="lab-s"><a href="s9-observer.html" title="the S9 page">S9</a> · commuters walking here, imagined</h3><table class="lab-vals"><tr><th></th>${hs.map(x => `<th>${x}h</th>`).join("")}</tr>${S9.meta.readings.map(rd =>
         `<tr><td>${rd}</td>${(f[rd] || hs.map(() => 0)).map(v => `<td>${Math.round(v)}</td>`).join("")}</tr>`).join("")}</table>
         <p class="sub">Imagined, from the rules in the <a href="s9-build.html#ledger">ledger</a> (assumption). 0: no imagined walker in that reading.</p>`;
-    } else if (S9) h += `<h5><a href="s9-observer.html" title="the S9 page">S9</a> · commuters walking here, imagined</h5><p class="sub">No imagined walker passes here in any reading.</p>`;
+    } else if (S9) h += `<h3 class="lab-s"><a href="s9-observer.html" title="the S9 page">S9</a> · commuters walking here, imagined</h3><p class="sub">No imagined walker passes here in any reading.</p>`;
     const w = S8 && S8.segments[s.id];
-    if (w) h += `<h5><a href="s8-views.html" title="the S8 page">S8</a> · views</h5><p class="sub">mean of its ${w.points} viewpoint${w.points > 1 ? "s" : ""}, about one every ${S8.meta.step_m} m${w.in_building ? ` · ${w.in_building} inside a building outline` : ""}</p>
+    if (w) h += `<h3 class="lab-s"><a href="s8-views.html" title="the S8 page">S8</a> · views</h3><p class="sub">mean of its ${w.points} viewpoint${w.points > 1 ? "s" : ""}, about one every ${S8.meta.step_m} m${w.in_building ? ` · ${w.in_building} inside a building outline` : ""}</p>
       <table class="lab-vals"><tr><td>area seen</td><td>${fmt8(w.area_m2)} m²</td></tr><tr><td>longest sight line</td><td>${fmt8(w.longest_m)} m</td></tr>
       <tr><td>mean sight line</td><td>${fmt8(w.mean_m)} m</td></tr><tr><td>compactness</td><td>${fmt8(w.compactness)}</td></tr>
       <tr><td>lines open to ${S8.meta.radius_m} m</td><td>${Math.round(100 * w.open_share)} %</td></tr>
       <tr><td>lines leaving the map</td><td>${Math.round(100 * w.beyond_share)} %</td></tr></table>` +
       (state.tab === "s8" ? `<p class="sub">The green shape is what can be seen from ${esc(w.view.point)}, the middle viewpoint, past no building outline.</p>` : "");
-    else if (S8) h += `<h5><a href="s8-views.html" title="the S8 page">S8</a> · views</h5><p class="sub">No viewpoint: not walkable, or outside the area.</p>`;
+    else if (S8) h += `<h3 class="lab-s"><a href="s8-views.html" title="the S8 page">S8</a> · views</h3><p class="sub">No viewpoint: not walkable, or outside the area.</p>`;
     return h;
   }
 
@@ -907,14 +907,14 @@
 
   function junctionHTML(id) {
     const j = jun[id];
-    let h = `<h4>${id}</h4><p class="sub">S1 · ${esc(j.kind.replace("_", " "))}${j.status ? " (" + esc(j.status) + ")" : ""}</p>`;
+    let h = `<h2 class="lab-pt">${id}</h2><p class="sub">S1 · ${esc(j.kind.replace("_", " "))}${j.status ? " (" + esc(j.status) + ")" : ""}</p>`;
     if (S5 && S5.junctions[id]) h += count5HTML(id);
     const c9 = S9 && S9.counted.find(c => c.id === id);
-    if (c9) h += `<h5><a href="s9-observer.html" title="the S9 page">S9</a> · commuters against the count</h5><table class="lab-vals"><tr><th></th><th>counted</th>${S9.meta.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${Object.entries(c9.hours).map(([hh, v]) =>
+    if (c9) h += `<h3 class="lab-s"><a href="s9-observer.html" title="the S9 page">S9</a> · commuters against the count</h3><table class="lab-vals"><tr><th></th><th>counted</th>${S9.meta.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${Object.entries(c9.hours).map(([hh, v]) =>
       `<tr><td>${hh}h</td><td>${Math.round(v.counted)}</td>${S9.meta.readings.map(rd => `<td>${Math.round(v[rd])}</td>`).join("")}</tr>`).join("")}</table>`;
     if (!S3 || !r3.jun[id]) return h;
     const J = r3.jun[id], list = r3.appsAt[id] || [];
-    h += `<p class="sub">${esc(J.streets.join(" × "))}</p><h5><a href="s3-rules.html" title="the S3 page">S3</a> · ${esc(CONTROL[J.control])}</h5>`;
+    h += `<p class="sub">${esc(J.streets.join(" × "))}</p><h3 class="lab-s"><a href="s3-rules.html" title="the S3 page">S3</a> · ${esc(CONTROL[J.control])}</h3>`;
     if (J.control === "lights") h += `<p>${(r3.lightsAt[id] || []).map(l => `Light ${esc(l.id)} (${esc(l.streets)}), ${l.distance} m away${l.kind === "temporary" ? ", temporary" : ""}.`).join(" ")}</p>`;
     if (J.note) h += `<p class="sub">${esc(J.note)}</p>`;
     h += `<p class="sub">Pick a street arriving here to see where a car may go.</p><ul class="sx-apps">` + list.map(a => {
@@ -924,7 +924,7 @@
     }).join("") + (list.length ? "" : `<li class="sub">No car may arrive here.</li>`) + `</ul>`;
     if (state.approach) {
       const a = r3.app[state.approach + "@" + id], moves = r3.movFrom[a.segment + "@" + id] || [];
-      h += `<h5>From ${esc(a.street)}</h5><p><b>Must stop?</b> ${a.stop ? "Yes." : "No stop sign found for this street."}</p>
+      h += `<h3 class="lab-s">From ${esc(a.street)}</h3><p><b>Must stop?</b> ${a.stop ? "Yes." : "No stop sign found for this street."}</p>
         <ul class="sx-moves">${moves.map(m => `<li class="${m.allowed ? "ok" : "no"}">${m.allowed ? "✓" : "✕"} ${esc(m.turn)} onto ${esc(short(m.to_street))} <span class="sub">${m.angle > 0 ? "+" : ""}${m.angle}°${m.reason ? " · " + esc(m.reason) : ""}</span></li>`).join("")}</ul>`;
       if (a.conflict) h += `<p class="warn">The turn signs found here would leave no turn at all, so S3 set them aside. A checkpoint.</p>`;
       const signs = a.signs.map(p => r3.panel[p]).filter(Boolean);
@@ -937,24 +937,24 @@
   const said = (v, src, why) => v != null && v !== "" ? `<b>${esc(v)}</b>${src ? ` <span class="sub">from ${esc(SRC4[src] || src)}</span>` : ""}` : `<span class="warn">unknown</span> <span class="sub">${esc(why)}</span>`;
   function buildingHTML(b) {
     const inside = (placesIn[b.id] || []).filter(p => !p.same_as);
-    let h = `<h4>${esc(b.name || "A building with no name")}</h4><p class="sub">${b.id} · building=${esc(b.tag)} · ${Math.round(b.area)} m² on the ground</p>
-      <h5>Used for</h5><p>${said(b.use, b.use_source, b.use_reason)}</p>`;
+    let h = `<h2 class="lab-pt">${esc(b.name || "A building with no name")}</h2><p class="sub">${b.id} · building=${esc(b.tag)} · ${Math.round(b.area)} m² on the ground</p>
+      <h3 class="lab-s">Used for</h3><p>${said(b.use, b.use_source, b.use_reason)}</p>`;
     if (b.use && b.use_reason) h += `<p class="sub">${esc(b.use_reason)}</p>`;
     if (b.use_mix) h += `<p class="sub">Tax-roll properties by class: ${esc(b.use_mix)}</p>`;
-    h += `<h5>Size</h5><p>Storeys: ${said(b.storeys, b.storeys_source, b.storeys_reason)}${b.height != null ? ` · height ${b.height} m` : ""}</p>` +
+    h += `<h3 class="lab-s">Size</h3><p>Storeys: ${said(b.storeys, b.storeys_source, b.storeys_reason)}${b.height != null ? ` · height ${b.height} m` : ""}</p>` +
       (b.storeys != null && b.storeys_reason ? `<p class="sub">${esc(b.storeys_reason)}. A building is as tall as its tallest known part.</p>` : "") +
       (b.parts ? `<p class="sub">${b.parts} part${b.parts > 1 ? "s" : ""} drawn in OpenStreetMap inside this outline.</p>` : "") + `
       <p>Dwellings: ${b.dwellings != null ? `<b>${b.dwellings}</b> <span class="sub">from the tax roll, ${b.properties} properties${b.condo_units ? `, ${b.condo_units} condo units` : ""}${b.year ? `, built ${esc(b.year)}` : ""}</span>` : `<span class="warn">unknown</span> <span class="sub">${esc(b.roll_reason)}</span>`}</p>`;
-    if (b.premises) h += `<h5>Ground floor</h5><p>${b.premises} commercial spaces in the 2025 survey, ${b.vacant} vacant.</p>${b.ground_floor ? `<p class="sub">${esc(b.ground_floor)}</p>` : ""}`;
-    if (inside.length) h += `<h5>Places inside (${inside.length})</h5><ul class="lab-places">${inside.map(p =>
+    if (b.premises) h += `<h3 class="lab-s">Ground floor</h3><p>${b.premises} commercial spaces in the 2025 survey, ${b.vacant} vacant.</p>${b.ground_floor ? `<p class="sub">${esc(b.ground_floor)}</p>` : ""}`;
+    if (inside.length) h += `<h3 class="lab-s">Places inside (${inside.length})</h3><ul class="lab-places">${inside.map(p =>
       `<li><button type="button" class="sx-link" data-place="${p.id}">${esc(p.name || "(no name)")}</button> <span class="sub">${esc(p.kind)}${p.hours ? " · has hours" : ""}</span></li>`).join("")}</ul>`;
-    h += `<h5>Reached from</h5>` + (b.access ? `<p><button type="button" class="sx-link" data-seg="${b.access}">${esc(b.access_street)} (${b.access})</button>, ${b.access_m} m away</p>
+    h += `<h3 class="lab-s">Reached from</h3>` + (b.access ? `<p><button type="button" class="sx-link" data-seg="${b.access}">${esc(b.access_street)} (${b.access})</button>, ${b.access_m} m away</p>
       <p class="sub">An assumption: the nearest street people may walk on. Where the doors are is not known yet.</p>` : `<p class="warn">No street people may walk on within ${S4.meta.access_max_m} m.</p>`);
     return h;
   }
   function placeHTML(p) {
     const b = p.building && b4[p.building];
-    return `<h4>${esc(p.name || "(no name)")}</h4><p class="sub">${p.id} · ${esc(p.kind)}</p>
+    return `<h2 class="lab-pt">${esc(p.name || "(no name)")}</h2><p class="sub">${p.id} · ${esc(p.kind)}</p>
       <p>From ${esc(SRC4[p.source] || p.source)}</p>
       <p>${p.hours ? `Opening hours: ${esc(p.hours)}` : `<span class="sub">No opening hours given.</span>`}</p>` +
       (p.same_as ? `<p class="sub">The same name in the same building as <button type="button" class="sx-link" data-place="${p.same_as}">${esc(place4[p.same_as].name)}</button>: probably one place, listed by two sources.</p>` : "") +
@@ -968,8 +968,8 @@
     const t = state.tab;
     let h = "";
     if (t === "s1") {
-      h += `<h3>S1 · Streets</h3><p>Which streets connect, and who may use them. White streets are for people and cars, green dashed ones for people only, grey ones for cars only. Click a street or a junction for its details, or try one of the tools.</p>
-        <h5>Try it</h5>${seg2("s1try", [["details", "details"], ["reach", "how far can I get?"], ["minutes", "minutes on foot"], ["route", "from here to there"]])}`;
+      h += `<h2 class="lab-t">S1 · Streets</h2><p>Which streets connect, and who may use them. White streets are for people and cars, green dashed ones for people only, grey ones for cars only. Click a street or a junction for its details, or try one of the tools.</p>
+        <h3 class="lab-s">Try it</h3>${seg2("s1try", [["details", "details"], ["reach", "how far can I get?"], ["minutes", "minutes on foot"], ["route", "from here to there"]])}`;
       if (state.s1try === "reach" || state.s1try === "route") h += seg2("s1mode", [["walk", "on foot"], ["drive", "by car"]]);
       if (state.s1try === "minutes") h += `<p class="lab-out lab-min-out">${minutesText()}</p>`;
       if (state.s1try === "reach") h += `<label class="lab-range">step <b class="lab-step-label">${state.reachStep}</b><input type="range" class="lab-step" min="0" max="${reachSteps() ? Math.max(...reachSteps()) : 1}" value="${state.reachStep}"></label>
@@ -978,7 +978,7 @@
     }
     if (t === "s2") {
       const what = state.s2measure === "NACH" ? "Choice: how often a street lies on the way between other places." : "Integration: how easy a street is to reach from everywhere else.";
-      h += `<h3>S2 · Scores</h3><p>Space syntax gives every street a number for how it sits in the whole street network. Here each street is coloured by its rank in Griffintown: blue lowest, yellow highest. ${what}</p>
+      h += `<h2 class="lab-t">S2 · Scores</h2><p>Space syntax gives every street a number for how it sits in the whole street network. Here each street is coloured by its rank in Griffintown: blue lowest, yellow highest. ${what}</p>
         ${seg2("s2net", [["ped", "walking"], ["veh", "driving"]])}${seg2("s2measure", [["NACH", "choice"], ["NAIN", "integration"]])}
         ${seg2("s2view", [["one", "one radius"], ["change", "local or whole"]])}` +
         (state.s2view === "change" && S2.change
@@ -992,16 +992,16 @@
         <p class="sub">Dashed streets have no value: the analysis did not cover them. They stay empty and are never set to zero.</p>`;
     }
     if (t === "s3") {
-      h += `<h3>S3 · Rules</h3><p>Where a driver must stop, where the lights are, where a car may turn and how fast it may go. Click a junction, then a street arriving at it, to see each rule with the sign behind it.</p>
+      h += `<h2 class="lab-t">S3 · Rules</h2><p>Where a driver must stop, where the lights are, where a car may turn and how fast it may go. Click a junction, then a street arriving at it, to see each rule with the sign behind it.</p>
         ${seg2("s3view", [["rules", "stops and lights"], ["speed", "speed limits"]])}`;
     }
     if (t === "s4") {
-      h += `<h3>S4 · Buildings</h3><p>What each building is used for, and where that answer comes from. Click a building to see everything S4 knows about it. When no source says, the use stays unknown.</p>
+      h += `<h2 class="lab-t">S4 · Buildings</h2><p>What each building is used for, and where that answer comes from. Click a building to see everything S4 knows about it. When no source says, the use stays unknown.</p>
         ${seg2("s4colour", [["use", "used for"], ["source", "where that came from"]])}
         <label class="lab-check"><input type="checkbox" class="lab-places-on"${state.s4places ? " checked" : ""}> show the places people go to</label>`;
     }
     if (t === "s5" && S5) {
-      h += `<h3>S5 · Rhythm</h3><p>When the streets are busy, and which places say they are open. How busy is measured: the city counted people at seven junctions inside the area, on weekdays, and at a ring of crossings around it. Opening hours are what places promise, and most places give none.</p>
+      h += `<h2 class="lab-t">S5 · Rhythm</h2><p>When the streets are busy, and which places say they are open. How busy is measured: the city counted people at seven junctions inside the area, on weekdays, and at a ring of crossings around it. Opening hours are what places promise, and most places give none.</p>
         ${seg2("s5day", DAY5.map((d, i) => [String(i), d]))}${seg2("s5mode", [["pedestrian", "on foot"], ["bicycle", "by bicycle"], ["vehicle", "by car"]])}
         ${state.s5mode === "bicycle" && S5.bikes ? seg2("s5season", [["winter", "winter"], ["spring", "spring"], ["summer", "summer"], ["autumn", "autumn"]]) +
           `<p class="sub">By bicycle, three city detectors on Peel and William measure every day since ${esc(S5.bikes.first)}, weekends and seasons included.</p>` : ""}
@@ -1010,42 +1010,42 @@
     }
     if (t === "s6" && S6) {
       const n = k => S6.objects.filter(o => o.kind === k).length;
-      h += `<h3>S6 · Streetscape</h3><p>What stands on the streets besides the buildings: ${n("tree")} public trees, ${n("hydrant")} fire hydrants,
+      h += `<h2 class="lab-t">S6 · Streetscape</h2><p>What stands on the streets besides the buildings: ${n("tree")} public trees, ${n("hydrant")} fire hydrants,
         ${S6.objects.filter(o => FURN6.includes(o.kind)).length} benches and other pieces of furniture, and the ${n("road work")} road works the city listed on ${esc(S6.meta.snapshot)}.
         Lights, cameras and crossings were found two ways: by software reading street photos (Mapillary), and by the people who map OpenStreetMap.
         That gives ${Object.entries(S6.meta.photo_kinds).map(([k, s]) => `${s.either} ${k === "street light" ? "street lights" : k === "surveillance camera" ? "cameras" : k + "s"} (${s.both} found both ways)`).join(", ")}.
         Sidewalks are drawn under the streets. Zoom in to see each object's icon, and click anything for its source.</p>
         ${seg2("s6show", [["all", "everything"], ["trees", "trees"], ["hydrants", "hydrants"], ["furniture", "furniture"], ["lights", "lights"], ["cameras", "cameras"], ["crossings", "crossings"], ["works", "road works"]])}
-        <h5>Sidewalks by</h5>${seg2("s6colour", [["material", "material"], ["built", "year built"]])}
+        <h3 class="lab-s">Sidewalks by</h3>${seg2("s6colour", [["material", "material"], ["built", "year built"]])}
         <p class="sub">S6 only records what each object is and where it stands. Whether it slows anyone down is left to later systems, as a written assumption.</p>`;
     }
     if (t === "s9" && S9) {
       const m = S9.meta, k = m.people_by_kind, e = m.explained_share, pc = v => (v < 0.1 ? (100 * v).toFixed(1) : Math.round(100 * v)) + " %";
       const rows = S9.counted.slice().sort((a, b) => (b.hours[hour9()] || {}).counted - (a.hours[hour9()] || {}).counted).map(c => {
         const v = c.hours[hour9()]; return v ? `<tr><td>${c.id}</td><td>${Math.round(v.counted)}</td>${m.readings.map(rd => `<td>${Math.round(v[rd])}</td>`).join("")}</tr>` : ""; }).join("");
-      h += `<h3>S9 · Observer</h3><p>S9 puts the other systems together and imagines a weekday morning on foot: about ${(Math.round(m.people / 100) * 100).toLocaleString("en")} walks between 6 and 10 h.
+      h += `<h2 class="lab-t">S9 · Observer</h2><p>S9 puts the other systems together and imagines a weekday morning on foot: about ${(Math.round(m.people / 100) * 100).toLocaleString("en")} walks between 6 and 10 h.
         Residents walk to the metro, the bus and work; workers walk in from the metro and the bus.
         You can switch the rule for the route. The walkers and where they go stay the same, so any difference comes from the route alone.</p>
-        <h5>Route</h5>${seg2("s9reading", [["shortest", "shortest"], ["open", "open views"], ["straight", "fewest turns"]])}
-        <h5>Show</h5>${seg2("s9view", [["walkers", "the walkers"], ["against", "against space syntax"]])}` +
+        <h3 class="lab-s">Route</h3>${seg2("s9reading", [["shortest", "shortest"], ["open", "open views"], ["straight", "fewest turns"]])}
+        <h3 class="lab-s">Show</h3>${seg2("s9view", [["walkers", "the walkers"], ["against", "against space syntax"]])}` +
         (state.s9view === "against" && S9.against
           ? `${seg2("s9against", Object.entries(AGAINST))}
              <p class="sub">Each street's place among the imagined walkers (6 to 10 h, route "${state.s9reading}") minus its place in ${AGAINST[state.s9against]},
              over the ${m.rho_s2[state.s9against].segments} walkable streets inside the area. Over all of them, the two orders agree weakly: rank correlation ${m.rho_s2[state.s9against][state.s9reading]}.
              Where they part, something besides the layout may be at work, or the imagined morning may be wrong (assumption).</p>
              ${diffLists(S9.against[state.s9against + "|" + state.s9reading], "Higher among the walkers", "Higher in " + AGAINST[state.s9against])}`
-          : `<h5>Hour</h5>${seg2("s9hour", [["all", "6 to 10"], ["6", "6h"], ["7", "7h"], ["8", "8h"], ["9", "9h"]])}`) + `
-        <h5>At the counted junctions, ${hour9()} h</h5><table class="lab-vals"><tr><th></th><th>counted</th>${m.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${rows}</table>
+          : `<h3 class="lab-s">Hour</h3>${seg2("s9hour", [["all", "6 to 10"], ["6", "6h"], ["7", "7h"], ["8", "8h"], ["9", "9h"]])}`) + `
+        <h3 class="lab-s">At the counted junctions, ${hour9()} h</h3><table class="lab-vals"><tr><th></th><th>counted</th>${m.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${rows}</table>
         <p class="sub">The imagined commuters make up ${m.readings.map(rd => pc(e[rd][hour9()]) + " (" + rd + ")").join(", ")} of the people the city counted. Seven junctions, most counted on one day,
         are enough to see where the imagined morning falls short, and too few to say which route rule is right. S9 never looked at the counts or space syntax while making its walks.</p>
-        <h5>The ring outside the area, ${hour9()} h</h5><p class="sub">Around the area, the imagined commuters make up only ${pc(m.ring.explained_share[hour9()])} of the people counted on weekdays at ${m.ring.sites} crossings,
+        <h3 class="lab-s">The ring outside the area, ${hour9()} h</h3><p class="sub">Around the area, the imagined commuters make up only ${pc(m.ring.explained_share[hour9()])} of the people counted on weekdays at ${m.ring.sites} crossings,
         and reach ${m.ring.sites_reached.length} of them. Before looking at those counts, I wrote down what I expected:</p><ul class="lab-clist">${S9.expected.map(x => `<li><b>${x.id}</b> ${esc(x.expected)}</li>`).join("")}</ul>
         <details class="lab-cgroup"><summary>What S9 assumes <span class="sub">${S9.ledger.filter(x => x.kind === "assumption").length}</span></summary><ul class="lab-clist">${S9.ledger.map(x =>
           `<li><b>${x.id}</b> ${esc(x.rule)}<br><span class="sub">${esc(x.source)}</span></li>`).join("")}</ul></details>`;
     }
     if (t === "s8" && S8) {
       const m = S8.meta;
-      h += `<h3>S8 · Views</h3><p>How much of the city a person can see from each street. Every ${m.step_m} m, ${m.rays} lines of sight go out until they hit a building or reach ${m.radius_m} m;
+      h += `<h2 class="lab-t">S8 · Views</h2><p>How much of the city a person can see from each street. Every ${m.step_m} m, ${m.rays} lines of sight go out until they hit a building or reach ${m.radius_m} m;
         the shape they draw is what can be seen from that spot. A typical spot sees about ${fmt8(m.area_median)} m², and most spots see between ${fmt8(m.area_p10)} and ${fmt8(m.area_p90)} m².
         Click a street to draw its view, or take a walk.</p>
         ${seg2("s8tool", [["colour", "colour the streets"], ["walk", "walk and look"]])}
@@ -1063,12 +1063,12 @@
       const table = (list, label) => `<table class="lab-vals"><tr><th>${label}</th><th>on foot</th><th>transit</th><th>car</th><th>all</th></tr>${list.map(b =>
         `<tr><td>${esc(b.band.replace("Between ", "").replace(/ and /, " to "))}</td><td>${Math.round(row(b, ["walk"]))}</td><td>${Math.round(row(b, ["metro", "bus", "train"]))}</td>
         <td>${Math.round(row(b, ["car"]))}</td><td>${Math.round(row(b, ["walk", "metro", "bus", "train", "car", "bicycle", "other"]))}</td></tr>`).join("")}</table>`;
-      h += `<h3>S7 · Commuters</h3><p>Who travels to work from Griffintown, and to it, on a weekday. The numbers come from the 2021 census, adjusted once because fewer people work from home today.
+      h += `<h2 class="lab-t">S7 · Commuters</h2><p>Who travels to work from Griffintown, and to it, on a weekday. The numbers come from the 2021 census, adjusted once because fewer people work from home today.
         About ${(Math.round(m.commuters / 100) * 100).toLocaleString("en")} residents of the ${m.homes} buildings with homes commute. ${pc("car")} % go by car; ${pc("walk")} % walk, and ${pc("metro") + pc("bus")} % take the bus or the metro.
         Click a building to see its commuters and how far it is from the metro and the bus.</p>
         ${seg2("s7show", [["all", "everyone"], ["walk", "on foot"], ["transit", "transit"], ["car", "car"]])}
-        <h5>Residents leaving for work</h5>${table(S7.bands.leaving, "hour")}
-        <h5>People arriving to work here</h5>${table(S7.bands.arriving, "hour")}
+        <h3 class="lab-s">Residents leaving for work</h3>${table(S7.bands.leaving, "hour")}
+        <h3 class="lab-s">People arriving to work here</h3>${table(S7.bands.arriving, "hour")}
         <p class="sub">The hours are the census's own groupings, for the three census areas that cover most of Griffintown. S7 draws no walks: where people go, and by which street, is left to S9.</p>`;
     }
     h += checksHTML(t) + testsHTML(t);
@@ -1077,7 +1077,7 @@
 
   function checksHTML(t) {
     const list = checksOf(t);
-    if (t === "s2") return `<h5>Checkpoints</h5><p class="sub">S2 has none of its own. Its open questions are the streets without a value, drawn dashed.</p>`;
+    if (t === "s2") return `<h3 class="lab-s">Checkpoints</h3><p class="sub">S2 has none of its own. Its open questions are the streets without a value, drawn dashed.</p>`;
     if (!list.length) return "";
     const open = list.filter(c => !settled(c)), done = list.filter(settled);
     const groups = {};
@@ -1085,7 +1085,7 @@
     const doneHTML = done.length ? `<details class="lab-cgroup done"><summary>settled <span class="sub">${done.length}</span></summary>
       <p class="why">Checked against photos or other sources; each one says what was decided.</p><ul class="lab-clist">${done.map(c =>
         `<li><button type="button" class="sx-link" data-check="${c.id}">${c.id}</button> <span class="sub">${esc(c.kind)} · ${esc(c.place)}</span></li>`).join("")}</ul></details>` : "";
-    return `<h5>Checkpoints still open (${open.length})</h5><p class="sub">Questions I cannot answer from my desk. Each one needs a look on site or in photos.</p>` +
+    return `<h3 class="lab-s">Checkpoints still open (${open.length})</h3><p class="sub">Questions I cannot answer from my desk. Each one needs a look on site or in photos.</p>` +
       Object.entries(groups).map(([k, cs]) => `<details class="lab-cgroup"><summary>${esc(k)} <span class="sub">${cs.length}</span></summary>
         <p class="why">${esc(WHY[k] || "")}</p><ul class="lab-clist">${cs.map(c =>
           `<li><button type="button" class="sx-link" data-check="${c.id}">${c.id}</button> <span class="sub">${esc(c.place || (b4[c.where] && b4[c.where].name) || c.where || "")}</span></li>`).join("")}</ul></details>`).join("") + doneHTML;
