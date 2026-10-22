@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-537bd33234699c33373e78b7388c56ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -173,6 +173,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Limits of the desk</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -214,8 +220,21 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">S2 Scores</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="./s2-scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-scores.html#how-s2-is-built" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How it is built</span></a>
+  </div>
+</li>
+      </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -459,6 +478,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="glance">
+<p><strong>Asks</strong> Which streets connect, and who may walk or drive each one.</p>
+<p><strong>Found</strong> 232 segments inside the area and 32 on its edge. Checks on photos cut the dead ends from 12 to 2.</p>
+<p><strong>Stands</strong> verified: 6 tests pass. 19 doubtful places were looked at on photos, and 16 of them are settled.</p>
+<p><strong>Leaves out</strong> Paths the city’s files miss, outside the places I checked. A road map is a poor walking map.</p>
+<p><strong>Trace</strong> <a href="./s1-build.html">How it is built</a> · <a href="./s1-checks.html">checks on photos</a> · <a href="outputs/s1/run.json">run record</a> · every other system builds on it</p>
+</div>
 <section id="what-s1-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s1-does">What S1 does</h2>
 <p>S1 turns the city’s street lines into a network of segments and junctions, and records who may use each segment. Every later system walks or drives on this network, so it has to be right first. The <a href="./s1-build.html">rules I assumed</a> decide who may walk or drive where. I check the result twice: against itself in the <a href="./s1-build.html#tests">tests</a>, and against the street, using photos, in <a href="./s1-checks.html">Checks and decisions</a>.</p>

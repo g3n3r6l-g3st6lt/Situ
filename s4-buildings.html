@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-537bd33234699c33373e78b7388c56ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -173,6 +173,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Limits of the desk</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -214,8 +220,21 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">S2 Scores</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="./s2-scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-scores.html#how-s2-is-built" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How it is built</span></a>
+  </div>
+</li>
+      </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -459,6 +478,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="glance">
+<p><strong>Asks</strong> What each building is used for, how tall it is, how many people live in it, and where a walker reaches it.</p>
+<p><strong>Found</strong> 296 buildings. The tax roll or OpenStreetMap gives the use of 262, and 34 stay unknown. Together they hold 11,954 dwellings.</p>
+<p><strong>Stands</strong> verified: 9 tests pass. The dwellings come within about 1 % of a provincial land-use file, checked in aggregate.</p>
+<p><strong>Leaves out</strong> 61 cases still to check by hand, most of them buildings no source describes.</p>
+<p><strong>Trace</strong> <a href="./s4-build.html">How it is built</a> · <a href="outputs/s4/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a> · feeds <a href="./s5-rhythm.html">S5</a>, <a href="./s7-commuters.html">S7</a> and <a href="./s9-observer.html">S9</a></p>
+</div>
 <section id="what-s4-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s4-does">What S4 does</h2>
 <p>S4 says what each building in the study area is: what it is used for, how tall it is, how many people live in it, and what is on its ground floor. S1 to S3 say where people can move. They say nothing about why anyone would go somewhere. A street is busy at noon because of what lines it: a bank, a café, a gym, five hundred condos. <a href="./s5-rhythm.html">S5 Rhythm</a> reads S4 to know which places open when. S7 will read it for where trips start and end.</p>

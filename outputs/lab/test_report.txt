@@ -46,4 +46,8 @@ L12 Walk tools: the Lab's walking distances equal S7's shortest walks, and its s
     60 walks between random points, 30 views from S8's viewpoints, 360 sight lines each; views within 0.75 % of S8's, 0.038 % on average
     PASS
 
+L13 Two orders: the gaps the Lab shows equal a fresh count from the S2 and S9 tables
+    8 S2 views and 9 S9 views, 4075 gaps; a missing value gives no gap, never 0
+    PASS
+
 ALL PASS

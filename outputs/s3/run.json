@@ -1,10 +1,10 @@
 {
  "system": "s3",
- "made": "2026-10-21T22:48:12Z",
+ "made": "2026-10-22T02:34:56Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "8c965e844c64cc31305cc132ec202773c2b3c5d6",
-  "differs_from_commit": false,
+  "git_commit": "af558bb03b241587bb7027f15463ea851c56712b",
+  "differs_from_commit": true,
   "files": [
    {
     "path": "Situ/s3_rules/__init__.py",
@@ -69,7 +69,7 @@
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "138cab4385292b18709f7832165b32fe97ffa0b6c90106780877f9488bc2c055"
+   "run_json_sha256": "4ba35c2c5e8b66507474a11a5817b5bae95dc0c14fcdbcd8431eb3e099ee7ac6"
   }
  ],
  "settings": {
@@ -513,14 +513,16 @@
   },
   {
    "path": "Situ/outputs/s3/web_data.js",
-   "bytes": 394655,
-   "sha256": "b0549372848f0ffcfb0b0fca7ea11215b538b2a6fa53fcd013ea2df2080ebbe5"
+   "bytes": 394681,
+   "sha256": "7bc6569bce1a4f1c156eea99b84d7102a681ee55c5eae98bbac6a0eac920a268"
   }
  ],
  "tests": {
   "report": "Situ/outputs/s3/test_report.txt",
   "made": "2026-10-10T16:41:09Z",
-  "pass": 9,
-  "fail": 0
+  "checks": 10,
+  "pass": 8,
+  "fail": 0,
+  "info": 2
  }
 }

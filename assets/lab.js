@@ -127,14 +127,15 @@
   const state = {
     tab: "s1",
     s1try: "details", s1mode: "walk", reachStart: null, reachStep: 0, routeA: null, routeB: null, routeSlack: 2,
-    s2net: "ped", s2measure: "NACH", s2radius: 2,
+    s2net: "ped", s2measure: "NACH", s2radius: 2, s2view: "one",
     s3view: "rules",
     s4colour: "use", s4places: false,
     s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
     s6show: "all", s6colour: "material",
     s7show: "all",
     s8measure: "area_m2",
-    s9reading: "shortest", s9hour: "all",
+    s9reading: "shortest", s9hour: "all", s9view: "walkers", s9against: "ped_NACH_n",
+    onlyOpen: false,
     s8tool: "colour", walkA: null, walkB: null, walkPos: 0, minA: null,
     pick: null,                      // {kind: "junction"|"segment"|"building"|"place"|"check", id}
     approach: null,
@@ -142,7 +143,7 @@
 
   host.innerHTML = `
   <div class="lab-tabs" role="tablist" aria-label="Systems">${TABS.map(t =>
-    `<button type="button" role="tab" data-tab="${t.id}"${t.ok ? "" : " disabled"}><span>${t.id.toUpperCase()}</span>${t.name}</button>`).join("")}</div>
+    `<button type="button" role="tab" data-tab="${t.id}"${t.ok ? "" : ` disabled title="This system's data did not load (outputs/${t.id}/web_data.js)"`}><span>${t.id.toUpperCase()}</span>${t.name}</button>`).join("")}</div>
   <div class="lab-main">
     <div class="lab-map"></div>
     <form class="lab-find" role="search" autocomplete="off">
@@ -235,7 +236,40 @@
     return `rgb(${c.join(",")})`;
   }
 
+  // Two orders on one map (added 2026-10-21). For each street: its place in one order minus its place in the other,
+  // from -1 to 1, worked out in Python (common/ranks.py) and only shown here. Yellow: higher in the first, blue: higher
+  // in the second, grey: about the same; the line also widens with the gap, so colour is not the only cue.
+  const AGAINST = { ped_NACH_n: "walking choice, whole island", ped_NACH_800: "walking choice, 800 m", ped_NAIN_n: "walking integration, whole island" };
+  function s2changeCol() { const R = RADII[state.s2net]; return `${state.s2net}_${state.s2measure}_${R[Math.min(state.s2radius, R.length - 2)]}`; }
+  function diffNow() {
+    if (state.tab === "s2" && state.s2view === "change" && S2.change) return S2.change[s2changeCol()] || null;
+    if (state.tab === "s9" && state.s9view === "against" && S9 && S9.against) return S9.against[state.s9against + "|" + state.s9reading] || null;
+    return null;
+  }
+  function divStyle(d) {
+    const t = Math.min(1, Math.abs(d) / 0.6), a = [105, 105, 105], b = d > 0 ? [255, 196, 61] : [61, 155, 255];
+    return `stroke:rgb(${a.map((x, i) => Math.round(x + (b[i] - x) * t)).join(",")});stroke-width:${(1 + 4.5 * t).toFixed(2)}px`;
+  }
+  const sgn = d => (d > 0 ? "+" : d < 0 ? "−" : "") + Math.abs(d).toFixed(2);
+  function diffLists(d, upLabel, downLabel) {
+    const e = Object.entries(d), li = ([id, v]) => `<li><button type="button" class="sx-link" data-seg="${id}">${esc(seg[id].street || "a path")} (${id})</button> <span class="sub">${sgn(v)}</span></li>`;
+    const up = e.filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, 5), down = e.filter(x => x[1] < 0).sort((a, b) => a[1] - b[1]).slice(0, 5);
+    return `<h5>${upLabel}</h5><ul class="lab-clist lab-diff">${up.map(li).join("")}</ul><h5>${downLabel}</h5><ul class="lab-clist lab-diff">${down.map(li).join("")}</ul>`;
+  }
+  // what is still open on this tab, for "only what is unresolved"
+  function openCount() {
+    const t = state.tab;
+    let n = checksOf(t).filter(c => !settled(c)).length;
+    if (t === "s2") { const d = diffNow(); n += S1.segments.filter(x => d ? d[x.id] == null : !(S2.scores[x.id] && S2.scores[x.id][s2col()] != null)).length; }
+    if (t === "s4" && S4) n += S4.buildings.filter(b => !b.use).length;
+    if (t === "s6" && S6) n += S6.objects.filter(o => SLUG6[o.kind] && o.source !== "osm" && o.surveyed < S6_SEEN).length;
+    if (t === "s8" && S8 && state.s8tool !== "walk") n += S1.segments.filter(x => !S8.segments[x.id]).length;
+    return n;
+  }
+
   function tipValue(s) {
+    const dd = diffNow();
+    if (dd) return `<br><span>${dd[s.id] == null ? "not compared" : (state.tab === "s2" ? "place within " + RADIUS_NAME(s2changeCol().split("_")[2]) + " minus place on the whole island: " : "place among walkers minus place in " + AGAINST[state.s9against] + ": ") + (dd[s.id] == null ? "" : sgn(dd[s.id]))}</span>`;
     if (state.tab === "s2" && S2) { const v = S2.scores[s.id] && S2.scores[s.id][s2col()]; return `<br><span>${esc(s2col())}: ${fmt(v)}</span>`; }
     if (state.tab === "s3" && state.s3view === "speed") { const r = r3.speed[s.id]; return `<br><span>${r && r.speed ? r.speed + " km/h" : "no limit"}</span>`; }
     if (state.tab === "s9" && S9) return `<br><span>${Math.round(flow9(s.id))} walkers${state.s9hour === "all" ? " between 6 and 10 h" : " at " + state.s9hour + " h"}, ${state.s9reading}</span>`;
@@ -245,6 +279,7 @@
 
   function paint() {
     const col = state.tab === "s2" ? s2col() : null, rk = col ? ranks(col) : state.tab === "s8" && S8 ? ranks8(state.s8measure) : null;
+    const dd = diffNow();
     const top9 = state.tab === "s9" && S9 ? Math.max(1, ...S1.segments.map(x => flow9(x.id))) : 1;
     const reach = reachSteps(), rt = routeNow();
     S1.segments.forEach((s, i) => {
@@ -257,7 +292,9 @@
         if (rt) cls += rt.path.has(i) ? " route" : rt.wide.has(i) ? " corridor" : " unreached";      // so does a route
         if (state.s1try === "minutes" && state.minA) cls += " unreached";                             // and the minutes on foot
       }
-      if (state.tab === "s2") {
+      if (state.tab === "s2" && dd) {
+        if (dd[s.id] == null) cls += " novalue"; else style = divStyle(dd[s.id]);
+      } else if (state.tab === "s2") {
         const v = S2.scores[s.id] && S2.scores[s.id][col];
         if (v == null) cls += " novalue";
         else { const t = rk.rank(v); style = `stroke:${ramp(t)};stroke-width:${(1.2 + 2.6 * t).toFixed(2)}px`; }
@@ -270,7 +307,9 @@
       }
       if (state.tab === "s4" || state.tab === "s5" || state.tab === "s6") cls += " plain faint";
       if (state.tab === "s7") cls += " plain faint";
-      if (state.tab === "s9") {
+      if (state.tab === "s9" && dd) {
+        if (dd[s.id] == null) cls += " plain faint"; else style = divStyle(dd[s.id]);
+      } else if (state.tab === "s9") {
         const v = flow9(s.id), top = top9;
         if (v < 0.5) cls += " plain faint";
         else { const t = Math.pow(v / top, 0.6); style = `stroke:${ramp(0.5 + t / 2)};stroke-width:${(1 + 6 * t).toFixed(2)}px`; }
@@ -278,7 +317,7 @@
       if (state.tab === "s8" && state.s8tool === "walk") cls += " plain faint";
       else if (state.tab === "s8") {
         const v = S8.segments[s.id];
-        if (!v) cls += " plain faint";
+        if (!v) cls += " novalue";
         else { const t = rk.rank(v[state.s8measure]); style = `stroke:${ramp(t)};stroke-width:${(1.2 + 2.6 * t).toFixed(2)}px`; }
       }
       if (state.pick && state.pick.kind === "segment" && state.pick.id === s.id) cls += " picked";
@@ -324,20 +363,27 @@
     if (state.tab === "s2" && rk) {
       const q = p => rk.vals[Math.min(rk.vals.length - 1, Math.round(p * (rk.vals.length - 1)))];
       html = `<span class="lab-ramp"><em>${fmt(q(0))}</em><i></i><em>${fmt(q(0.5))}</em><i></i><em>${fmt(q(1))}</em></span>
-        <span>lowest blue, highest yellow</span><span><i class="k novalue"></i>no value</span>`;
+        <span><b>${state.s2net === "ped" ? "walking" : "driving"} ${state.s2measure === "NACH" ? "choice" : "integration"}, ${RADIUS_NAME(RADII[state.s2net][state.s2radius])}</b>, by rank among ${rk.vals.length} segments: lowest blue, highest yellow</span><span><i class="k novalue"></i>no value (${S1.segments.length - rk.vals.length})</span>`;
     }
     if (state.tab === "s3") html = state.s3view === "speed"
-      ? `<span><i class="k v40"></i>40 km/h</span><span><i class="k v30"></i>30</span><span><i class="k v20"></i>20</span><span><i class="k gap"></i>cars allowed, no limit</span>`
+      ? `<span><i class="k v40"></i>40 km/h</span><span><i class="k v30"></i>30</span><span><i class="k v20"></i>20</span><span><i class="k gap"></i>cars allowed, no limit</span><span>the wider the line, the higher the limit</span>`
       : `<span><i class="kd lights"></i>traffic lights</span><span><i class="kd allway"></i>all-way stop</span><span><i class="kb2"></i>a street that must stop</span>`;
     if (state.tab === "s8" && state.s8tool === "walk") html = `<span><i class="kd walka"></i>start and end</span><span><i class="k walkpath"></i>the walk</span><span><i class="kv8"></i>what the walker sees now</span><span><i class="kb8"></i>building outline</span>`;
     else if (state.tab === "s8" && rk) {
       const q = p => rk.vals[Math.min(rk.vals.length - 1, Math.round(p * (rk.vals.length - 1)))];
       html = `<span class="lab-ramp"><em>${fmt8(q(0))}</em><i></i><em>${fmt8(q(0.5))}</em><i></i><em>${fmt8(q(1))}</em></span>
-        <span>${MEASURE8[state.s8measure][0]}: lowest blue, highest yellow</span><span><i class="k faint"></i>no viewpoint</span><span><i class="kb8"></i>building outline</span>` +
+        <span>${MEASURE8[state.s8measure][0]}: lowest blue, highest yellow</span><span><i class="k novalue"></i>no viewpoint</span><span><i class="kb8"></i>building outline</span>` +
         (state.pick && state.pick.kind === "segment" && S8.segments[state.pick.id] ? `<span><i class="kv8"></i>what the middle viewpoint sees</span>` : "");
     }
     if (state.tab === "s9" && S9) html = `<span><i class="k s9w"></i>commuters walking, wider for more</span><span><i class="k faint"></i>none</span>` +
       `<span><i class="kd count9"></i>junction the city counted, sized by pedestrians at ${hour9()} h</span><span><i class="kr9"></i>counted outside the area (weekdays)</span>`;
+    const dd = diffNow();
+    if (dd) {
+      const first = state.tab === "s2" ? "within " + RADIUS_NAME(s2changeCol().split("_")[2]) : "among the walkers";
+      const second = state.tab === "s2" ? (state.s2net === "ped" ? "on the whole island" : "within 2000 m") : "in " + AGAINST[state.s9against];
+      html = `<span><i class="k dpos"></i>higher ${first}</span><span><i class="k dneg"></i>higher ${second}</span><span><i class="k dmid"></i>about the same</span>` +
+        `<span>a wider line is a larger gap, over ${Object.keys(dd).length} streets</span>` + (state.tab === "s2" ? `<span><i class="k novalue"></i>no value</span>` : "");
+    }
     if (state.tab === "s7" && S7) html = `<span><i class="kd home7"></i>building with homes, sized by its commuters</span><span><i class="kd metro7"></i>metro entrance</span><span><i class="kd stop7"></i>bus stop</span>`;
     if (state.tab === "s4" && S4) {
       const n = f => S4.buildings.filter(f).length;
@@ -359,8 +405,11 @@
        ["bench", "bench", "bench and other furniture"], ["light", "light", "street light"], ["camera", "camera", "camera"],
        ["crossing", "crossing", "crossing"], ["work", "work", "road work"]].map(([c, i, w]) =>
         `<span><svg class="ki lab-i6 k-${c}" viewBox="-12 -12 24 24"><use href="#i-${i}"/></svg>${w}</span>`).join("") +
-      `<span class="sub">round: seen in street photos · square: mapped in OpenStreetMap · faint: not seen since ${esc(S6_SEEN)}</span>`;
-    key.innerHTML = html + `<span class="lab-check-key"><i class="kc"></i>checkpoint</span>`;
+      `<span class="sub">round: seen in street photos · square: mapped in OpenStreetMap · faint and smaller: not seen since ${esc(S6_SEEN)}</span>`;
+    const open = openCount();
+    key.innerHTML = html + `<span class="lab-check-key"><i class="kc"></i>checkpoint</span>` +
+      (open ? `<button type="button" class="lab-open-btn${state.onlyOpen ? " on" : ""}" data-open="1" aria-pressed="${state.onlyOpen}">only what is unresolved (${open})</button>` : "");
+    $(".lab-map").classList.toggle("only-open", state.onlyOpen && open > 0);
   }
 
   // ================================================================ 4 overlays
@@ -427,7 +476,7 @@
   }
 
   // S8: the view from the middle viewpoint of the picked street, drawn from its sight lines
-  const fmt8 = v => v == null ? "–" : v >= 100 ? Math.round(v).toLocaleString("en") : (+v).toFixed(v < 1 ? 2 : 1);
+  const fmt8 = v => v == null ? "none" : v >= 100 ? Math.round(v).toLocaleString("en") : (+v).toFixed(v < 1 ? 2 : 1);
   function viewPolygon(view) {
     const m = S8.meta, n = view.rays.length;
     return view.rays.map((r, k) => {
@@ -573,13 +622,13 @@
     const p = S5 && S5.places[id];
     if (!p) return "";
     const rows = p.week.map((w, d) => `<tr><td>${DAY5[d]}</td>${w.split("").map(l => `<td class="w5 ${l === "o" ? "o" : l === "c" ? "c" : "u"}"></td>`).join("")}</tr>`).join("");
-    return `<h5>S5 · its week</h5><table class="lab-week">${rows}</table><p class="sub">${p.status === "no hours" ? "No hours given, so every hour is unknown, never closed." : "Green: open at half past the hour. Dark: closed."}` +
+    return `<h5><a href="s5-rhythm.html" title="the S5 page">S5</a> · its week</h5><table class="lab-week">${rows}</table><p class="sub">${p.status === "no hours" ? "No hours given, so every hour is unknown, never closed." : "Green: open at half past the hour. Dark: closed."}` +
       `${p.season ? " Seasonal: " + esc(p.season) + "." : ""}${p.notes ? " " + esc(p.notes) + "." : ""}</p>`;
   }
   function count5HTML(id) {
     const by = S5.junctions[id], days = S5.meta.counted_days.filter(d => d.junction === id);
     const hrs = [...Array(24).keys()].filter(h => by.pedestrian[h] != null);
-    return `<h5>S5 · counted here</h5><p class="sub">${days.map(d => esc(d.weekday + " " + d.date)).join(", ")}. Mean per full hour counted:</p>
+    return `<h5><a href="s5-rhythm.html" title="the S5 page">S5</a> · counted here</h5><p class="sub">${days.map(d => esc(d.weekday + " " + d.date)).join(", ")}. Mean per full hour counted:</p>
       <table class="lab-vals"><tr><th></th><th>on foot</th><th>bicycles</th><th>vehicles</th></tr>${hrs.map(h =>
         `<tr><td>${h}h</td><td>${Math.round(by.pedestrian[h])}</td><td>${Math.round(by.bicycle[h])}</td><td>${Math.round(by.vehicle[h])}</td></tr>`).join("")}</table>`;
   }
@@ -609,7 +658,7 @@
       const SIZE = { "tree-s": 3, "tree-m": 5, "tree-l": 8, hydrant: 5, work: 9, light: 3, camera: 4.5, crossing: 3.5, furniture: 4 };
       Object.entries(groups).forEach(([key, pts]) => {
         const [base, ...flags] = key.split(" ");
-        map.dots(g, pts, SIZE[base] || 4, { class: ["lab-d6", "k-" + base.replace(/-[sml]$/, ""), ...flags].join(" "),
+        map.dots(g, pts, (SIZE[base] || 4) * (flags.includes("old") ? 0.7 : 1), { class: ["lab-d6", "k-" + base.replace(/-[sml]$/, ""), ...flags].join(" "),
           "stroke-linecap": flags.includes("osm") || base === "hydrant" || base === "work" ? "square" : "round" });
       });
     } else {
@@ -790,15 +839,16 @@
     if (!p) return "";
     const back = `<p class="sx-crumb"><button type="button" class="sx-link" data-close="1">close</button></p>`;
     if (p.kind === "check") return back + checkHTML(checksOf(state.tab).find(x => x.id === p.id) || allChecks().find(x => x.id === p.id));
-    if (p.kind === "building") return back + buildingHTML(b4[p.id]);
-    if (p.kind === "place") return back + placeHTML(place4[p.id]);
-    if (p.kind === "obj6") return back + obj6HTML(o6[p.id]);
-    if (p.kind === "surf6") return back + surf6HTML(s6[p.id]);
-    if (p.kind === "home7") return back + home7HTML(h7[p.id]);
-    if (p.kind === "segment") return back + segmentHTML(seg[p.id]);
-    if (p.kind === "junction") return back + junctionHTML(p.id);
+    if (p.kind === "building") return back + buildingHTML(b4[p.id]) + PROV;
+    if (p.kind === "place") return back + placeHTML(place4[p.id]) + PROV;
+    if (p.kind === "obj6") return back + obj6HTML(o6[p.id]) + PROV;
+    if (p.kind === "surf6") return back + surf6HTML(s6[p.id]) + PROV;
+    if (p.kind === "home7") return back + home7HTML(h7[p.id]) + PROV;
+    if (p.kind === "segment") return back + segmentHTML(seg[p.id]) + PROV;
+    if (p.kind === "junction") return back + junctionHTML(p.id) + PROV;
     return "";
   }
+  const PROV = `<p class="sx-prov">Each value here repeats a system's results exactly (the Lab's tests check it). To follow one to its source file: <a href="provenance.html#trace">Tracing a result</a>.</p>`;
   const allChecks = () => [...checksOf("s1"), ...checksOf("s3"), ...checksOf("s4"), ...checksOf("s5"), ...checksOf("s6"), ...checksOf("s7"), ...checksOf("s8"), ...checksOf("s9")];
 
   function checkHTML(c) {
@@ -815,34 +865,37 @@
 
   function segmentHTML(s) {
     let h = `<h4>${esc(s.street)}</h4><p class="sub">${s.id} · ${s.length} m · ${esc(s.class)}</p>
-      <h5>S1 · who may use it</h5><p>${s.walk ? "On foot" : "Not on foot"}; ${!car(s) ? "closed to cars" : s.car_ft && s.car_tf ? "cars both ways" : "cars one way"}.${s.source !== "geobase" ? " A path I added after the S1 checks." : ""}</p>`;
+      <h5><a href="s1-streets.html" title="the S1 page">S1</a> · who may use it</h5><p>${s.walk ? "On foot" : "Not on foot"}; ${!car(s) ? "closed to cars" : s.car_ft && s.car_tf ? "cars both ways" : "cars one way"}.${s.source !== "geobase" ? " A path I added after the S1 checks." : ""}</p>`;
     const v = S2 && S2.scores[s.id];
     if (v) {
       const row = (net, m) => RADII[net].map(r => `<td>${fmt(v[`${net}_${m}_${r}`])}</td>`).join("");
-      h += `<h5>S2 · space syntax</h5><p class="sub">walking: ${esc(v.ped_status)}${v.ped_reason ? " · " + esc(v.ped_reason) : ""} · driving: ${esc(v.veh_status)}${v.veh_note ? " · " + esc(v.veh_note) : ""}</p>
+      h += `<h5><a href="s2-scores.html" title="the S2 page">S2</a> · space syntax</h5><p class="sub">walking: ${esc(v.ped_status)}${v.ped_reason ? " · " + esc(v.ped_reason) : ""} · driving: ${esc(v.veh_status)}${v.veh_note ? " · " + esc(v.veh_note) : ""}</p>
+        <p class="sub">Normalised values, with no unit. Each column is a radius in metres; n is the whole island. "none" means no value, never zero.</p>
         <table class="lab-vals"><tr><th></th>${RADII.ped.map(r => `<th>${r}</th>`).join("")}</tr>
         <tr><td>walk choice</td>${row("ped", "NACH")}</tr><tr><td>walk integr.</td>${row("ped", "NAIN")}</tr></table>
         <table class="lab-vals"><tr><th></th>${RADII.veh.map(r => `<th>${r}</th>`).join("")}</tr>
         <tr><td>car choice</td>${row("veh", "NACH")}</tr><tr><td>car integr.</td>${row("veh", "NAIN")}</tr></table>`;
-    }
+    } else if (S2) h += `<h5><a href="s2-scores.html" title="the S2 page">S2</a> · space syntax</h5><p class="sub">S2 holds no row for this segment.</p>`;
     const r = S3 && r3.speed[s.id];
     if (r) {
       const how = { by_id: `from the speed file, street id ${esc(r.speed_id)}`, by_shape: `borrowed from line ${esc(r.speed_id)} of the same name`,
                     zero_in_file: "the file gives 0: no limit", missing: "not in the speed file", not_a_road: "a path: not in the speed file" }[r.speed_status] || "";
-      h += `<h5>S3 · speed</h5><p><b>${r.speed ? r.speed + " km/h" : "no limit"}</b> · ${how}</p>${r.speed_note ? `<p class="sub">${esc(r.speed_note)}</p>` : ""}`;
+      h += `<h5><a href="s3-rules.html" title="the S3 page">S3</a> · speed</h5><p><b>${r.speed ? r.speed + " km/h" : "no limit"}</b> · ${how}</p>${r.speed_note ? `<p class="sub">${esc(r.speed_note)}</p>` : ""}`;
     }
     if (S9 && S9.flows[s.id]) {
       const f = S9.flows[s.id], hs = S9.meta.hours;
-      h += `<h5>S9 · commuters walking here, imagined</h5><table class="lab-vals"><tr><th></th>${hs.map(x => `<th>${x}h</th>`).join("")}</tr>${S9.meta.readings.map(rd =>
-        `<tr><td>${rd}</td>${(f[rd] || hs.map(() => 0)).map(v => `<td>${Math.round(v)}</td>`).join("")}</tr>`).join("")}</table>`;
-    }
+      h += `<h5><a href="s9-observer.html" title="the S9 page">S9</a> · commuters walking here, imagined</h5><table class="lab-vals"><tr><th></th>${hs.map(x => `<th>${x}h</th>`).join("")}</tr>${S9.meta.readings.map(rd =>
+        `<tr><td>${rd}</td>${(f[rd] || hs.map(() => 0)).map(v => `<td>${Math.round(v)}</td>`).join("")}</tr>`).join("")}</table>
+        <p class="sub">Imagined, from the rules in the <a href="s9-build.html#ledger">ledger</a> (assumption). 0: no imagined walker in that reading.</p>`;
+    } else if (S9) h += `<h5><a href="s9-observer.html" title="the S9 page">S9</a> · commuters walking here, imagined</h5><p class="sub">No imagined walker passes here in any reading.</p>`;
     const w = S8 && S8.segments[s.id];
-    if (w) h += `<h5>S8 · views</h5><p class="sub">mean of its ${w.points} viewpoint${w.points > 1 ? "s" : ""}, about one every ${S8.meta.step_m} m${w.in_building ? ` · ${w.in_building} inside a building outline` : ""}</p>
+    if (w) h += `<h5><a href="s8-views.html" title="the S8 page">S8</a> · views</h5><p class="sub">mean of its ${w.points} viewpoint${w.points > 1 ? "s" : ""}, about one every ${S8.meta.step_m} m${w.in_building ? ` · ${w.in_building} inside a building outline` : ""}</p>
       <table class="lab-vals"><tr><td>area seen</td><td>${fmt8(w.area_m2)} m²</td></tr><tr><td>longest sight line</td><td>${fmt8(w.longest_m)} m</td></tr>
       <tr><td>mean sight line</td><td>${fmt8(w.mean_m)} m</td></tr><tr><td>compactness</td><td>${fmt8(w.compactness)}</td></tr>
       <tr><td>lines open to ${S8.meta.radius_m} m</td><td>${Math.round(100 * w.open_share)} %</td></tr>
       <tr><td>lines leaving the map</td><td>${Math.round(100 * w.beyond_share)} %</td></tr></table>` +
       (state.tab === "s8" ? `<p class="sub">The green shape is what can be seen from ${esc(w.view.point)}, the middle viewpoint, past no building outline.</p>` : "");
+    else if (S8) h += `<h5><a href="s8-views.html" title="the S8 page">S8</a> · views</h5><p class="sub">No viewpoint: not walkable, or outside the area.</p>`;
     return h;
   }
 
@@ -857,11 +910,11 @@
     let h = `<h4>${id}</h4><p class="sub">S1 · ${esc(j.kind.replace("_", " "))}${j.status ? " (" + esc(j.status) + ")" : ""}</p>`;
     if (S5 && S5.junctions[id]) h += count5HTML(id);
     const c9 = S9 && S9.counted.find(c => c.id === id);
-    if (c9) h += `<h5>S9 · commuters against the count</h5><table class="lab-vals"><tr><th></th><th>counted</th>${S9.meta.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${Object.entries(c9.hours).map(([hh, v]) =>
+    if (c9) h += `<h5><a href="s9-observer.html" title="the S9 page">S9</a> · commuters against the count</h5><table class="lab-vals"><tr><th></th><th>counted</th>${S9.meta.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${Object.entries(c9.hours).map(([hh, v]) =>
       `<tr><td>${hh}h</td><td>${Math.round(v.counted)}</td>${S9.meta.readings.map(rd => `<td>${Math.round(v[rd])}</td>`).join("")}</tr>`).join("")}</table>`;
     if (!S3 || !r3.jun[id]) return h;
     const J = r3.jun[id], list = r3.appsAt[id] || [];
-    h += `<p class="sub">${esc(J.streets.join(" × "))}</p><h5>S3 · ${esc(CONTROL[J.control])}</h5>`;
+    h += `<p class="sub">${esc(J.streets.join(" × "))}</p><h5><a href="s3-rules.html" title="the S3 page">S3</a> · ${esc(CONTROL[J.control])}</h5>`;
     if (J.control === "lights") h += `<p>${(r3.lightsAt[id] || []).map(l => `Light ${esc(l.id)} (${esc(l.streets)}), ${l.distance} m away${l.kind === "temporary" ? ", temporary" : ""}.`).join(" ")}</p>`;
     if (J.note) h += `<p class="sub">${esc(J.note)}</p>`;
     h += `<p class="sub">Pick a street arriving here to see where a car may go.</p><ul class="sx-apps">` + list.map(a => {
@@ -927,9 +980,15 @@
       const what = state.s2measure === "NACH" ? "Choice: how often a street lies on the way between other places." : "Integration: how easy a street is to reach from everywhere else.";
       h += `<h3>S2 · Scores</h3><p>Space syntax gives every street a number for how it sits in the whole street network. Here each street is coloured by its rank in Griffintown: blue lowest, yellow highest. ${what}</p>
         ${seg2("s2net", [["ped", "walking"], ["veh", "driving"]])}${seg2("s2measure", [["NACH", "choice"], ["NAIN", "integration"]])}
-        <label class="lab-range">within <b class="lab-radius-label">${RADIUS_NAME(RADII[state.s2net][state.s2radius])}</b>
+        ${seg2("s2view", [["one", "one radius"], ["change", "local or whole"]])}` +
+        (state.s2view === "change" && S2.change
+          ? `<label class="lab-range">within <b class="lab-radius-label">${RADIUS_NAME(s2changeCol().split("_")[2])}</b>, against ${state.s2net === "ped" ? "the whole island" : "2000 m"}
+             ${state.s2net === "ped" ? `<input type="range" class="lab-radius" min="0" max="${RADII.ped.length - 2}" value="${Math.min(state.s2radius, RADII.ped.length - 2)}">` : ""}</label>
+             <p class="sub">A street can be central within a short walk and remote across the island, or the reverse. Here each street shows the gap between its place in the two orders.</p>
+             ${diffLists(S2.change[s2changeCol()], "Higher within " + RADIUS_NAME(s2changeCol().split("_")[2]), "Higher " + (state.s2net === "ped" ? "on the whole island" : "within 2000 m"))}`
+          : `<label class="lab-range">within <b class="lab-radius-label">${RADIUS_NAME(RADII[state.s2net][state.s2radius])}</b>
         <input type="range" class="lab-radius" min="0" max="${RADII[state.s2net].length - 1}" value="${state.s2radius}"></label>
-        <button type="button" class="lab-play" data-play="radius">▶ play the distances</button>
+        <button type="button" class="lab-play" data-play="radius">▶ play the distances</button>`) + `
         <p class="sub">Dashed streets have no value: the analysis did not cover them. They stay empty and are never set to zero.</p>`;
     }
     if (t === "s3") {
@@ -968,7 +1027,14 @@
         Residents walk to the metro, the bus and work; workers walk in from the metro and the bus.
         You can switch the rule for the route. The walkers and where they go stay the same, so any difference comes from the route alone.</p>
         <h5>Route</h5>${seg2("s9reading", [["shortest", "shortest"], ["open", "open views"], ["straight", "fewest turns"]])}
-        <h5>Hour</h5>${seg2("s9hour", [["all", "6 to 10"], ["6", "6h"], ["7", "7h"], ["8", "8h"], ["9", "9h"]])}
+        <h5>Show</h5>${seg2("s9view", [["walkers", "the walkers"], ["against", "against space syntax"]])}` +
+        (state.s9view === "against" && S9.against
+          ? `${seg2("s9against", Object.entries(AGAINST))}
+             <p class="sub">Each street's place among the imagined walkers (6 to 10 h, route "${state.s9reading}") minus its place in ${AGAINST[state.s9against]},
+             over the ${m.rho_s2[state.s9against].segments} walkable streets inside the area. Over all of them, the two orders agree weakly: rank correlation ${m.rho_s2[state.s9against][state.s9reading]}.
+             Where they part, something besides the layout may be at work, or the imagined morning may be wrong (assumption).</p>
+             ${diffLists(S9.against[state.s9against + "|" + state.s9reading], "Higher among the walkers", "Higher in " + AGAINST[state.s9against])}`
+          : `<h5>Hour</h5>${seg2("s9hour", [["all", "6 to 10"], ["6", "6h"], ["7", "7h"], ["8", "8h"], ["9", "9h"]])}`) + `
         <h5>At the counted junctions, ${hour9()} h</h5><table class="lab-vals"><tr><th></th><th>counted</th>${m.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${rows}</table>
         <p class="sub">The imagined commuters make up ${m.readings.map(rd => pc(e[rd][hour9()]) + " (" + rd + ")").join(", ")} of the people the city counted. Seven junctions, most counted on one day,
         are enough to see where the imagined morning falls short, and too few to say which route rule is right. S9 never looked at the counts or space syntax while making its walks.</p>
@@ -1029,7 +1095,7 @@
     const D = { s1: S1, s2: S2, s3: S3, s4: S4, s5: S5, s6: S6, s7: S7, s8: S8, s9: S9 }[t];
     if (!D) return "";
     const ts = D.tests || [], f = ts.filter(x => x.status === "fail").length, p = ts.filter(x => x.status === "pass").length;
-    return `<details class="lab-tests"><summary>Tests <span class="st ${f ? "fail" : "pass"}">${f ? f + " FAIL" : p + " PASS"}</span> <span class="sub">last run ${esc(D.meta.made)}</span></summary>
+    return `<details class="lab-tests"><summary>Tests <span class="st ${f ? "fail" : "pass"}">${f ? f + " FAIL" : p + " PASS"}</span> <span class="sub">last run ${esc(D.meta.tests_made || D.meta.made)}</span></summary>
       <ul class="lab-testlist">${ts.map(x => `<li><span class="st ${x.status}">${x.status === "pass" ? "PASS" : x.status === "fail" ? "FAIL" : "info"}</span> ${esc(x.title)}</li>`).join("")}</ul></details>`;
   }
 
@@ -1267,6 +1333,8 @@
   const findForm = $(".lab-find"), findIn = $("#lab-find-in"), findOut = $(".lab-find-out");
   findForm.addEventListener("submit", e => { e.preventDefault(); findOut.textContent = find(findIn.value); });
   findIn.addEventListener("change", () => { findOut.textContent = find(findIn.value); });
+  // Escape closes the detail panel, wherever the focus is in the Lab (added 2026-10-21)
+  host.addEventListener("keydown", e => { if (e.key === "Escape" && state.pick) { select(null); e.preventDefault(); } });
 
   function setTab(t) {
     if (!TABS.find(x => x.id === t && x.ok)) return;
@@ -1311,6 +1379,7 @@
       if (group.dataset.key === "s1mode" && state.s1try === "reach") playReach();
       return;
     }
+    if (b.dataset.open) { state.onlyOpen = !state.onlyOpen; render(true); return; }
     if (b.dataset.close) select(null);
     if (b.dataset.check) select({ kind: "check", id: b.dataset.check });
     if (b.dataset.app) select(state.pick, b.dataset.app === state.approach ? null : b.dataset.app);

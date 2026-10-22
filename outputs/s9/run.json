@@ -1,10 +1,10 @@
 {
  "system": "s9",
- "made": "2026-10-21T22:48:17Z",
+ "made": "2026-10-22T02:34:58Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "8c965e844c64cc31305cc132ec202773c2b3c5d6",
-  "differs_from_commit": false,
+  "git_commit": "af558bb03b241587bb7027f15463ea851c56712b",
+  "differs_from_commit": true,
   "files": [
    {
     "path": "Situ/s9_observer/__init__.py",
@@ -28,7 +28,7 @@
    },
    {
     "path": "Situ/s9_observer/web.py",
-    "sha256": "e9eb6c40e7b0e96c0a6572da020d38d7f9b619ed0219bc042cad18bb8602362d"
+    "sha256": "e7547e5ab307d99f9831abf3e7ce11c92bbf34655b8135dbda858929a6cd0cdb"
    },
    {
     "path": "Situ/config.py",
@@ -40,27 +40,27 @@
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "138cab4385292b18709f7832165b32fe97ffa0b6c90106780877f9488bc2c055"
+   "run_json_sha256": "4ba35c2c5e8b66507474a11a5817b5bae95dc0c14fcdbcd8431eb3e099ee7ac6"
   },
   {
    "system": "s2",
-   "run_json_sha256": "0108e1a5db2fb97760ee165cb104e642e7c79404c9912626ab9318cddf7fcb94"
+   "run_json_sha256": "4235557b6c0d676442b833d7bd7cf4fd37fb26bf31177b926d2896a1fdac537f"
   },
   {
    "system": "s4",
-   "run_json_sha256": "da7fcd716097cec6935439db365341dcf19cfb3c4b8b430b1be026e0a403b176"
+   "run_json_sha256": "fd20d5b1c04fe541247e71957d1474d28205b65e7b8ae980f1756ad57c4b2089"
   },
   {
    "system": "s5",
-   "run_json_sha256": "f0a8400fb3590942b3c2dc933e311b5c13b23d62c26ea703d4ba0ef9ef0d1960"
+   "run_json_sha256": "bd49d486589e40ee57033f6c3a0145201d48290aa8a889f0d2f8f0ce84b6791d"
   },
   {
    "system": "s7",
-   "run_json_sha256": "e39a7d341a9f715e8da43a50a61ba8f529b4a46ae4ff04591520ffe1a60e9635"
+   "run_json_sha256": "4d9016498e19db0ec4a9fcfd3977bef146aa8a066878394880d9f7675821762d"
   },
   {
    "system": "s8",
-   "run_json_sha256": "023f24070536dd26711ea9c5be048539cd813ce4e8073fd39d4d199a98957014"
+   "run_json_sha256": "d60b4d23c0e1b2e34c8826d1e91fba9036aaaeb9defd96b28d1edf9b0eb181b7"
   }
  ],
  "settings": {
@@ -175,14 +175,16 @@
   },
   {
    "path": "Situ/outputs/s9/web_data.js",
-   "bytes": 41262,
-   "sha256": "c89abbad11d797a786a8945f0465d7464d51314bc2ac0e87ffa1c6b77d4cbc88"
+   "bytes": 69156,
+   "sha256": "006437f71617115ffa076629a2bab503560011ebbd9130c078d84b4e55af0449"
   }
  ],
  "tests": {
   "report": "Situ/outputs/s9/test_report.txt",
   "made": "2026-10-21T20:33:33Z",
-  "pass": 10,
-  "fail": 0
+  "checks": 10,
+  "pass": 9,
+  "fail": 0,
+  "info": 1
  }
 }

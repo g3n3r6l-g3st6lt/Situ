@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./s3-rules.html" rel="next">
+<link href="./s2-scores.qmd#how-s2-is-built" rel="next">
 <link href="./s1-checks.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-537bd33234699c33373e78b7388c56ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -176,6 +176,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Limits of the desk</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -217,8 +223,21 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">S2 Scores</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="./s2-scores.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-scores.html#how-s2-is-built" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How it is built</span></a>
+  </div>
+</li>
+      </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -465,6 +484,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="glance">
+<p><strong>Asks</strong> Where each street sits in the whole network, by space syntax, with each value traced to the analysed line it came from.</p>
+<p><strong>Found</strong> 257 of 264 segments carry walking values and 227 carry vehicle values. No value is invented.</p>
+<p><strong>Stands</strong> verified: 6 tests pass. Compared with walking only through S9, where the agreement is weak.</p>
+<p><strong>Leaves out</strong> The version of PlanX that computed the values was not recorded. Values far from Griffintown rest on paths I did not check on photos.</p>
+<p><strong>Trace</strong> <a href="#how-s2-is-built">How it is built</a> · <a href="outputs/s2/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a> · <a href="./s9-observer.html">S9</a> compares with it</p>
+</div>
 <section id="what-s2-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s2-does">What S2 does</h2>
 <p>S2 attaches space syntax values to every S1 segment, and records the analysed line behind each value. Space syntax, begun by Bill Hillier and Julienne Hanson at University College London, measures where each street sits in the whole street network (<a href="./space-syntax.html">what space syntax is</a>). Integration is roughly how easy a street is to reach. Choice is roughly how often it lies on the way between other places. Both are measured within a radius, from 200 m up to the whole island.</p>
@@ -534,7 +560,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>The S2 tab of the <a href="./lab.html#radius">Lab</a> has the rest. A slider grows the radius: from 200 m to the whole island for walking, and from 1200 to 2000 m for driving. Each street is coloured by its rank in Griffintown, from blue for the lowest to yellow for the highest.</p>
+<p>The S2 tab of the <a href="./lab.html#radius">Lab</a> has the rest. A slider grows the radius: from 200 m to the whole island for walking, and from 1200 to 2000 m for driving. Each street is coloured by its rank in Griffintown, from blue for the lowest to yellow for the highest. A second view, “local or whole”, shows the gap between a street’s place within 200, 400 or 800 m and its place across the whole island, with the five largest gaps each way listed by name.</p>
 </section>
 <section id="what-the-values-say" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-values-say">What the values say</h2>
@@ -1128,8 +1154,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./s3-rules.html" class="pagination-link" aria-label="S3 Rules">
-        <span class="nav-page-text">S3 Rules</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./s2-scores.html#how-s2-is-built" class="pagination-link" aria-label="How it is built">
+        <span class="nav-page-text">How it is built</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

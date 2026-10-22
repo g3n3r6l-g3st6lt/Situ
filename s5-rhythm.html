@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-537bd33234699c33373e78b7388c56ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -173,6 +173,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Limits of the desk</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -214,8 +220,21 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">S2 Scores</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="./s2-scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-scores.html#how-s2-is-built" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How it is built</span></a>
+  </div>
+</li>
+      </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -462,6 +481,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="glance">
+<p><strong>Asks</strong> What the open data says about each hour of the week, with counts and promised opening hours kept apart.</p>
+<p><strong>Found</strong> Seven junctions counted on nine weekdays, and 376 full days from three bicycle detectors.</p>
+<p><strong>Stands</strong> verified: 12 tests pass. The counts’ bicycle shape follows the detectors’ (correlation 0.89).</p>
+<p><strong>Leaves out</strong> Weekends and seasons on foot and by car. Lingering escapes every count.</p>
+<p><strong>Trace</strong> <a href="./s5-build.html">How it is built</a> · <a href="outputs/s5/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a> and <a href="./s4-buildings.html">S4</a> · feeds <a href="./s9-observer.html">S9</a></p>
+</div>
 <section id="what-s5-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s5-does">What S5 does</h2>
 <p>S5 gives each hour of the week what the open data says about it. Henri Lefebvre proposed reading a city through its rhythms, the repetitions of days and seasons (Lefebvre 2004). S5 is the first Situ system that holds time, and it keeps two kinds of evidence apart.</p>

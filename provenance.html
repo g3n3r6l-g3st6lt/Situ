@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-335e8a466be813438e2654eee77dd870.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-537bd33234699c33373e78b7388c56ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -167,6 +167,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Limits of the desk</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -208,8 +214,21 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">S2 Scores</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="./s2-scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S2 Scores</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./s2-scores.html#how-s2-is-built" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How it is built</span></a>
+  </div>
+</li>
+      </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -524,7 +543,7 @@ ul.task-list li input[type="checkbox"] {
 <td>T4</td>
 <td>computed result</td>
 <td>S2 lays line 9140 under S101 (76.41 m shared) and copies its values</td>
-<td>S2’s seven tests and the Lab’s check L2</td>
+<td>S2’s six passing tests and the Lab’s check L2</td>
 <td>verified</td>
 </tr>
 <tr class="odd">
@@ -546,7 +565,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="validation">Three kinds of checking</h2>
 <p>A passing test says the code does what I meant. It says nothing about whether Griffintown works that way. So I keep three kinds of checking apart.</p>
 <ul>
-<li><strong>Implementation</strong>: does the code do what I meant? Each system’s tests and stress runs, checked again by the Lab.</li>
+<li><strong>Implementation</strong>: does the code do what I meant? Each system’s tests and stress runs, checked again by the Lab. A test either passes or fails; a few only report a number, and the counts below leave those out.</li>
 <li><strong>Correspondence</strong>: do the results match something observed independently? Photos, or a second source such as the city’s counts.</li>
 <li><strong>Interpretation</strong>: does the result mean, to the people who live and move here, what I take it to mean? Only time with people, on site and in play, can answer this.</li>
 </ul>
@@ -574,55 +593,55 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>S1 Streets</td>
-<td>6 tests, Lab L1 and L5</td>
+<td>6 tests passing, Lab L1 and L5</td>
 <td>19 places checked on photos</td>
 <td>planned</td>
 </tr>
 <tr class="odd">
 <td>S2 Scores</td>
-<td>7 tests, stress run, Lab L2</td>
+<td>6 tests passing, stress run, Lab L2</td>
 <td>none yet beyond S9’s comparison</td>
 <td>planned</td>
 </tr>
 <tr class="even">
 <td>S3 Rules</td>
-<td>9 tests, stress runs, Lab L3 and L4</td>
+<td>8 tests passing, stress runs, Lab L3 and L4</td>
 <td>signs checked on photos at chosen junctions</td>
 <td>planned</td>
 </tr>
 <tr class="odd">
 <td>S4 Buildings</td>
-<td>10 tests, stress run, Lab L6</td>
+<td>9 tests passing, stress run, Lab L6</td>
 <td>homes within about 1 % of a provincial land-use file (2026 roll), checked in aggregate</td>
 <td>planned</td>
 </tr>
 <tr class="even">
 <td>S5 Rhythm</td>
-<td>13 tests, stress run, Lab L7</td>
+<td>12 tests passing, stress run, Lab L7</td>
 <td>the counts’ bicycle shape against the bicycle detectors (correlation 0.89)</td>
 <td>planned</td>
 </tr>
 <tr class="odd">
 <td>S6 Streetscape</td>
-<td>8 tests, stress run, Lab L8</td>
+<td>7 tests passing, stress run, Lab L8</td>
 <td>photo detections against the city’s hydrants: 68 of 104 found</td>
 <td>planned</td>
 </tr>
 <tr class="even">
 <td>S7 Commuters</td>
-<td>7 tests, stress run, Lab L9</td>
+<td>6 tests passing, stress run, Lab L9</td>
 <td>none yet</td>
 <td>planned</td>
 </tr>
 <tr class="odd">
 <td>S8 Views</td>
-<td>7 tests, stress runs, Lab L10 and L12</td>
+<td>6 tests passing, stress runs, Lab L10 and L12</td>
 <td>none yet</td>
 <td>planned</td>
 </tr>
 <tr class="even">
 <td>S9 Observer</td>
-<td>10 tests, stress runs, Lab L11</td>
+<td>9 tests passing, stress runs, Lab L11</td>
 <td>the city’s counts at seven junctions and at 23 sites around the area</td>
 <td>planned</td>
 </tr>
