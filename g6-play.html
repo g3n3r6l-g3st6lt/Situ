@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8177368fb46b1cb19df0adafcabee1b8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -511,7 +511,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#missions-as-translations" id="toc-missions-as-translations" class="nav-link active" data-scroll-target="#missions-as-translations">Missions as translations</a></li>
-  <li><a href="#order-of-work" id="toc-order-of-work" class="nav-link" data-scroll-target="#order-of-work">Order of work</a></li>
+  <li><a href="#a-closer-look-the-rhythm-reader" id="toc-a-closer-look-the-rhythm-reader" class="nav-link" data-scroll-target="#a-closer-look-the-rhythm-reader">A closer look: the rhythm-reader</a></li>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
   </ul>
 </nav>
     </div>
@@ -624,9 +625,83 @@ flowchart LR
 </div>
 </div>
 </section>
-<section id="order-of-work" class="level2">
-<h2 class="anchored" data-anchor-id="order-of-work">Order of work</h2>
-<p>The rhythm-reader and the day of errands can be tried first in the Lab, on the web, with the data already published. The courier needs G3’s driving, so it waits for the engine. Any mission where real people’s play feeds the research waits for ethics approval.</p>
+<section id="a-closer-look-the-rhythm-reader" class="level2">
+<h2 class="anchored" data-anchor-id="a-closer-look-the-rhythm-reader">A closer look: the rhythm-reader</h2>
+<p>The first mission to prototype, because it needs only data already published in the Lab.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart TB
+  J[pick a counted junction&lt;br/&gt;and an hour]:::data --&gt; E[the player estimates&lt;br/&gt;how many pass]:::step
+  E --&gt; R[reveal: the city's count&lt;br/&gt;S5]:::data
+  E --&gt; M[reveal: the model's flow&lt;br/&gt;S9, later G3]:::data
+  R --&gt; C{how far apart?}:::rule
+  M --&gt; C
+  C --&gt; N[the player reads the gap&lt;br/&gt;and tries another hour]:::out
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Does</th>
+<th>Needs</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>the rhythm-reader as a Lab prototype</td>
+<td>S5, S9 in the Lab</td>
+<td>it runs on the web with the published data</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>a day of errands as a Lab prototype</td>
+<td>S5, S7</td>
+<td>a day can be planned against real hours and departures</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>the courier and the census commute in the engine</td>
+<td>G3</td>
+<td>each runs on G3’s driving and walking</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>co-archivist and predict-then-reveal</td>
+<td>G1 checkpoints, G4, G5</td>
+<td>each mission names the system it translates</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>playtests</td>
+<td>ethics approval</td>
+<td>play logs are read back as a new source</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

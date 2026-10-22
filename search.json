@@ -1305,7 +1305,7 @@
     "href": "game.html",
     "title": "The game, part by part",
     "section": "",
-    "text": "I build the game the way I built the systems. Each part has one job, reads the parts before it, writes files any engine can read, and keeps a ledger of its decisions and its own tests. A part that is too large to test as one piece is split into subsystems. One part is built: G1 World (verified). Every other part on this page is planned.\nFrom systems to a game says which job each system does in a game. This page says how those jobs become parts, and in what order.",
+    "text": "I build the game the way I built the systems. Each part has one job, reads the parts before it, writes files any engine can read, and keeps a ledger of its decisions and its own tests. A part that is too large to test as one piece is split into subsystems. One part is built: G1 World (verified). Every other part is planned. Each part has its own page, with its subsystems, diagrams, a plan of work with the condition that marks each step done, and the data it needs.\nFrom systems to a game says which job each system does in a game. This page says how those jobs become parts, and in what order.",
     "crumbs": [
       "Explore",
       "Game",
@@ -1385,11 +1385,23 @@
     ]
   },
   {
-    "objectID": "g6-play.html#order-of-work",
-    "href": "g6-play.html#order-of-work",
+    "objectID": "g6-play.html#a-closer-look-the-rhythm-reader",
+    "href": "g6-play.html#a-closer-look-the-rhythm-reader",
     "title": "G6 Play",
-    "section": "Order of work",
-    "text": "Order of work\nThe rhythm-reader and the day of errands can be tried first in the Lab, on the web, with the data already published. The courier needs G3’s driving, so it waits for the engine. Any mission where real people’s play feeds the research waits for ethics approval.",
+    "section": "A closer look: the rhythm-reader",
+    "text": "A closer look: the rhythm-reader\nThe first mission to prototype, because it needs only data already published in the Lab.\n\n\n\n\n\n%%{init: {\"themeVariables\": {\"edgeLabelBackground\": \"#000000\", \"clusterBkg\": \"transparent\", \"clusterBorder\": \"#3a3a3a\"}, \"flowchart\": {\"subGraphTitleMargin\": {\"top\": 8, \"bottom\": 12}}}}%%\nflowchart TB\n  J[pick a counted junction&lt;br/&gt;and an hour]:::data --&gt; E[the player estimates&lt;br/&gt;how many pass]:::step\n  E --&gt; R[reveal: the city's count&lt;br/&gt;S5]:::data\n  E --&gt; M[reveal: the model's flow&lt;br/&gt;S9, later G3]:::data\n  R --&gt; C{how far apart?}:::rule\n  M --&gt; C\n  C --&gt; N[the player reads the gap&lt;br/&gt;and tries another hour]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G6 Play"
+    ]
+  },
+  {
+    "objectID": "g6-play.html#plan",
+    "href": "g6-play.html#plan",
+    "title": "G6 Play",
+    "section": "Plan",
+    "text": "Plan\n\n\n\n\n\n\n\n\n\nStep\nDoes\nNeeds\nDone when\n\n\n\n\n1\nthe rhythm-reader as a Lab prototype\nS5, S9 in the Lab\nit runs on the web with the published data\n\n\n2\na day of errands as a Lab prototype\nS5, S7\na day can be planned against real hours and departures\n\n\n3\nthe courier and the census commute in the engine\nG3\neach runs on G3’s driving and walking\n\n\n4\nco-archivist and predict-then-reveal\nG1 checkpoints, G4, G5\neach mission names the system it translates\n\n\n5\nplaytests\nethics approval\nplay logs are read back as a new source",
     "crumbs": [
       "Explore",
       "Game",
@@ -1457,6 +1469,42 @@
     ]
   },
   {
+    "objectID": "g4-points.html#a-closer-look-g4.3-sun-and-shade",
+    "href": "g4-points.html#a-closer-look-g4.3-sun-and-shade",
+    "title": "G4 Points",
+    "section": "A closer look: G4.3 sun and shade",
+    "text": "A closer look: G4.3 sun and shade\n\n\n\n\n\n%%{init: {\"themeVariables\": {\"edgeLabelBackground\": \"#000000\", \"clusterBkg\": \"transparent\", \"clusterBorder\": \"#3a3a3a\"}, \"flowchart\": {\"subGraphTitleMargin\": {\"top\": 8, \"bottom\": 12}}}}%%\nflowchart TB\n  D[date and hour]:::data --&gt; S[sun position&lt;br/&gt;computed]:::step\n  H[G1 heights&lt;br/&gt;measured or assumed]:::data --&gt; SH[shadow of each building]:::step\n  S --&gt; SH\n  C[canopy layer&lt;br/&gt;to download]:::data --&gt; SH\n  SH --&gt; P{is the point in sun?}:::rule\n  U[a height unknown nearby]:::data --&gt; X[answer: unknown]:::out\n  P --&gt; Y[answer: sun or shade]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G4 Points"
+    ]
+  },
+  {
+    "objectID": "g4-points.html#plan",
+    "href": "g4-points.html#plan",
+    "title": "G4 Points",
+    "section": "Plan",
+    "text": "Plan\n\n\n\n\n\n\n\n\n\nStep\nDoes\nNeeds\nDone when\n\n\n\n\n1\nG4.1: list the candidate points\nS4, S5, S6, S7, S8 outputs\nevery point names its source row; the counts by kind match the systems\n\n\n2\nG4.3: sun and shade per point and hour\nG1 heights; canopy (to download)\na point near an unknown height says unknown\n\n\n3\nG4.2: the staying rule in the engine, with every weight in the ledger\nG2, G3, steps 1 and 2\nevery stay in a run is logged with its inputs\n\n\n4\ntest the rule against observation\nfieldwork, after ethics approval\nthe model’s busiest points are compared with where people were seen",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G4 Points"
+    ]
+  },
+  {
+    "objectID": "g4-points.html#data-for-this-part",
+    "href": "g4-points.html#data-for-this-part",
+    "title": "G4 Points",
+    "section": "Data for this part",
+    "text": "Data for this part\n\n\n\n\n\n\n\nData\nStatus\n\n\n\n\nS4 places, S6 seats and tables, S7 stops, S5 counted junctions, S8 views\nin Situ, verified\n\n\ncanopy 2019 (Ville de Montréal)\nfound, not downloaded\n\n\nwhere people stay and gather\nfieldwork, after ethics approval",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G4 Points"
+    ]
+  },
+  {
     "objectID": "g4-points.html#tests-planned",
     "href": "g4-points.html#tests-planned",
     "title": "G4 Points",
@@ -1505,11 +1553,35 @@
     ]
   },
   {
-    "objectID": "g2-people.html#order-of-work",
-    "href": "g2-people.html#order-of-work",
+    "objectID": "g2-people.html#a-closer-look-one-commuters-day",
+    "href": "g2-people.html#a-closer-look-one-commuters-day",
     "title": "G2 People",
-    "section": "Order of work",
-    "text": "Order of work\nCommuters first, the one group the census covers: about 7,200 residents who commute, by mode and by hour of leaving. Errands come second, inside S5’s opening hours, and marked as an assumption until residents describe their days.",
+    "section": "A closer look: one commuter’s day",
+    "text": "A closer look: one commuter’s day\nG2.2 builds each plan from the census and the timetable. A resident who takes the metro gets a day like this one, and every box names its source.\n\n\n\n\n\n%%{init: {\"themeVariables\": {\"edgeLabelBackground\": \"#000000\", \"clusterBkg\": \"transparent\", \"clusterBorder\": \"#3a3a3a\"}, \"flowchart\": {\"subGraphTitleMargin\": {\"top\": 8, \"bottom\": 12}}}}%%\nflowchart TB\n  H[home: an S4 building&lt;br/&gt;with S7's commuters]:::data --&gt; L[leaves in S7's hour band&lt;br/&gt;minute inside the band: assumption]:::step\n  L --&gt; W[walks to the nearest metro entrance&lt;br/&gt;S7 distance, G3.1 route]:::step\n  W --&gt; T[boards a departure&lt;br/&gt;from the STM timetable]:::data\n  T --&gt; O[leaves the study area&lt;br/&gt;out of the game]:::out\n  O --&gt; R[comes back in the evening&lt;br/&gt;return hour: assumption until a source exists]:::rule\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G2 People"
+    ]
+  },
+  {
+    "objectID": "g2-people.html#plan",
+    "href": "g2-people.html#plan",
+    "title": "G2 People",
+    "section": "Plan",
+    "text": "Plan\n\n\n\n\n\n\n\n\n\nStep\nDoes\nNeeds\nDone when\n\n\n\n\n1\nG2.1: residents who commute, per building and mode, from S7’s homes; workers arriving from S7’s arrival hours\nS4, S7 outputs\ntotals match S7: about 7,200 commuters from 132 residential buildings\n\n\n2\nG2.2: a plan for each commuter, as in the diagram\nS7, the STM timetable\nevery plan prints with the source of each part\n\n\n3\nG2.3: a checker that refuses a plan breaking an opening hour, a timetable or a traffic rule\nS3, S5, S7\na set of broken plans made on purpose is refused, each with its reason\n\n\n4\nG2.4: seeds\nnone\ntwo runs with the same seed give the same plans\n\n\n5\nerrands, inside S5’s opening hours, marked as an assumption\nS5\nerrands appear in their own rows of the ledger\n\n\n\nCommuters come first because the census covers them. Everything else waits for a source or stays a marked assumption.",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G2 People"
+    ]
+  },
+  {
+    "objectID": "g2-people.html#data-for-this-part",
+    "href": "g2-people.html#data-for-this-part",
+    "title": "G2 People",
+    "section": "Data for this part",
+    "text": "Data for this part\n\n\n\n\n\n\n\nData\nStatus\n\n\n\n\nS4 dwellings; S7 commuters, leaving and arriving hours, stops\nin Situ, verified\n\n\nSTM timetable\nin Situ (through S7)\n\n\nresidents’ routines\nfieldwork, after ethics approval",
     "crumbs": [
       "Explore",
       "Game",
@@ -1781,11 +1853,23 @@
     ]
   },
   {
+    "objectID": "g1-world.html#plan",
+    "href": "g1-world.html#plan",
+    "title": "G1 World",
+    "section": "Plan: G1b, the world completed",
+    "text": "Plan: G1b, the world completed\nG1b fills empty fields from measurements, and replaces the storey rule wherever a measured height exists.\n\n\n\n\n\n%%{init: {\"themeVariables\": {\"edgeLabelBackground\": \"#000000\", \"clusterBkg\": \"transparent\", \"clusterBorder\": \"#3a3a3a\"}, \"flowchart\": {\"subGraphTitleMargin\": {\"top\": 8, \"bottom\": 12}}}}%%\nflowchart TB\n  S[surface model 2015&lt;br/&gt;tops of roofs and trees]:::data --&gt; N[surface minus terrain&lt;br/&gt;height above the ground]:::step\n  T[terrain model 2015&lt;br/&gt;the bare ground]:::data --&gt; N\n  F[G1 footprint]:::data --&gt; M[height inside the footprint&lt;br/&gt;the rule: a ledger row]:::step\n  N --&gt; M\n  M --&gt; C{built after 2015?&lt;br/&gt;roll year, OSM}:::rule\n  C --&gt;|no| H[measured height&lt;br/&gt;replaces the storey rule]:::out\n  C --&gt;|yes or unknown| K[keeps its current height rule&lt;br/&gt;and says why]:::out\n  T --&gt; G[ground slopes&lt;br/&gt;canal edge, rail viaduct]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStep\nDoes\nNeeds\nDone when\n\n\n\n\n1\ndownload and record the terrain and surface models for the area\npermission, licence check\nboth are in the sources list with date, licence and fingerprint\n\n\n2\nheights as in the diagram\nstep 1\nevery block says measured, from the surface model, from storeys, or unknown\n\n\n3\ntest the 3.33 m storey rule against the surface model\nstep 2\nits error is reported by use and by age of building\n\n\n4\nterrain under the ground and the blocks\nstep 1\nW13 (flat ground) is replaced, and the change is in the ledger\n\n\n5\ntree crowns from the 2019 canopy layer\ncanopy (to download)\neach tree prop has a crown, or says it has none\n\n\n6\nentrances from street photos, for buildings with a public use\nMapillary photos\neach entrance found replaces an assumed door, building by building\n\n\n\n\n\n\n\n\n\n\nData\nStatus\n\n\n\n\nterrain and surface models 2015 (Ville de Montréal)\nfound, not downloaded; licence to check\n\n\ncanopy 2019 (Ville de Montréal)\nfound, not downloaded\n\n\nstreet photos (Mapillary)\nin use in S1, S3 and S6",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G1 World"
+    ]
+  },
+  {
     "objectID": "g1-world.html#what-comes-next",
     "href": "g1-world.html#what-comes-next",
     "title": "G1 World",
     "section": "What comes next",
-    "text": "What comes next\nG1b will fill empty fields from measurements: heights from the city’s surface and terrain models, and tree crowns from its canopy layer. The terrain model also gives the ground its slopes (planned). The parts after G1 give the world its people, starting with R Rhythm and G2 People (planned; every part: The game, part by part).",
+    "text": "What comes next\nAfter G1b, the next parts give the world its people, starting with R Rhythm and G2 People (planned; every part: The game, part by part).",
     "crumbs": [
       "Explore",
       "Game",
@@ -1845,7 +1929,55 @@
     "href": "g3-movement.html#without-city-sample",
     "title": "G3 Movement",
     "section": "Without City Sample",
-    "text": "Without City Sample\nEpic’s City Sample has tuned traffic, but its cars and drivers depend on the sample’s own code. An earlier prototype of mine tried to move them into another project, and the transfer failed. Its junction logic also made both streets take turns at the 42 junctions where only the side street has a stop sign. G3.4 therefore builds its own driving on the engine’s general tools, and follows S3 as the city files it. See G7 Engine.",
+    "text": "Without City Sample\nG3.4 builds its own driving on the engine’s general tools, and follows S3 as the city files it. Why City Sample’s traffic is not used: G7 Engine.",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G3 Movement"
+    ]
+  },
+  {
+    "objectID": "g3-movement.html#a-closer-look-g3.1-route-choice",
+    "href": "g3-movement.html#a-closer-look-g3.1-route-choice",
+    "title": "G3 Movement",
+    "section": "A closer look: G3.1 route choice",
+    "text": "A closer look: G3.1 route choice\nEach NPC carries its own weights over S9’s three readings. The weights change the cost of each street for that NPC, and the route is the cheapest path under its costs. The spread of weights across NPCs is an assumption; the readings themselves are S9’s.\n\n\n\n\n\n%%{init: {\"themeVariables\": {\"edgeLabelBackground\": \"#000000\", \"clusterBkg\": \"transparent\", \"clusterBorder\": \"#3a3a3a\"}, \"flowchart\": {\"subGraphTitleMargin\": {\"top\": 8, \"bottom\": 12}}}}%%\nflowchart TB\n  P[a trip from G2&lt;br/&gt;from, to, mode]:::data --&gt; W[this NPC's weights&lt;br/&gt;shortest, open, straight]:::rule\n  S9[S9's three readings&lt;br/&gt;street costs]:::data --&gt; C[cost of each street&lt;br/&gt;for this NPC]:::step\n  W --&gt; C\n  C --&gt; R[cheapest route&lt;br/&gt;on S1 by mode]:::step\n  R --&gt; F[route file&lt;br/&gt;with weights and costs]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G3 Movement"
+    ]
+  },
+  {
+    "objectID": "g3-movement.html#a-closer-look-g3.4-driving",
+    "href": "g3-movement.html#a-closer-look-g3.4-driving",
+    "title": "G3 Movement",
+    "section": "A closer look: G3.4 driving",
+    "text": "A closer look: G3.4 driving\nEach frame, a car looks at the gap to the car ahead and at the rules of the street, and the Intelligent Driver Model gives its acceleration. Every forced stop is logged with what caused it.\n\n\n\n\n\n%%{init: {\"themeVariables\": {\"edgeLabelBackground\": \"#000000\", \"clusterBkg\": \"transparent\", \"clusterBorder\": \"#3a3a3a\"}, \"flowchart\": {\"subGraphTitleMargin\": {\"top\": 8, \"bottom\": 12}}}}%%\nflowchart TB\n  G[gap and speed of the car ahead]:::data --&gt; M[Intelligent Driver Model&lt;br/&gt;settings: assumptions]:::rule\n  L[S3 speed limit of the street]:::data --&gt; M\n  M --&gt; A[acceleration this frame]:::step\n  J[next junction: S3 control&lt;br/&gt;light phase or stop sign]:::data --&gt; D{may it enter?}:::rule\n  A --&gt; D\n  D --&gt;|yes| N[moves on]:::out\n  D --&gt;|no| S[stops; the log says why]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G3 Movement"
+    ]
+  },
+  {
+    "objectID": "g3-movement.html#plan",
+    "href": "g3-movement.html#plan",
+    "title": "G3 Movement",
+    "section": "Plan",
+    "text": "Plan\n\n\n\nStep\nDoes\nNeeds\nDone when\n\n\n\n\n1\nG3.1 in Python, on G2’s commuter trips\nG2, S9\neach route prints with its weights; the same seed gives the same routes\n\n\n2\nthe engine test in G7\nG1, step 1\nit passes, or the engine choice is reopened\n\n\n3\nG3.2 walking lanes from G1’s sidewalks and crossing marks\nG1\nevery sidewalk piece is reachable; crossings join both sides\n\n\n4\nG3.3 junction control from S3, with light timing from Movement counts and light timing\nS3, the timing estimates\nno NPC enters against a red; each wait is logged\n\n\n5\nG3.4 driving, as in the diagram\nS3, step 4\nno banned move, no car above the limit, every stop explained\n\n\n6\nG3.5 parking\nparking signage (to download)\na car parks only where the signs allow, at that hour",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G3 Movement"
+    ]
+  },
+  {
+    "objectID": "g3-movement.html#data-for-this-part",
+    "href": "g3-movement.html#data-for-this-part",
+    "title": "G3 Movement",
+    "section": "Data for this part",
+    "text": "Data for this part\n\n\n\n\n\n\n\nData\nStatus\n\n\n\n\nS1 network, S3 rules, S9 readings, G1 sidewalks and crossings\nin Situ\n\n\nlight timing estimates\nin Situ, partial (estimated where the city counted)\n\n\nwalking-speed distributions\nto choose from published studies\n\n\non-street parking signage (Ville de Montréal)\nfound, not downloaded\n\n\nroad collisions (Ville de Montréal)\nfound, not downloaded",
     "crumbs": [
       "Explore",
       "Game",
@@ -1906,6 +2038,30 @@
     "title": "G5 Check",
     "section": "What the inspector answers",
     "text": "What the inspector answers\n\n\n\nQuestion\nFrom\n\n\n\n\nWhat is this NPC doing?\nits state in the engine\n\n\nWhy?\nits G2 plan\n\n\nWhich route, and why that one?\nits G3.1 weights over S9’s readings\n\n\nWhy did it stop?\nthe G3 or G4 log entry\n\n\nWhich data shaped it?\nthe source rows named in its plan",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G5 Check"
+    ]
+  },
+  {
+    "objectID": "g5-check.html#a-closer-look-g5.3-the-inspector",
+    "href": "g5-check.html#a-closer-look-g5.3-the-inspector",
+    "title": "G5 Check",
+    "section": "A closer look: G5.3 the inspector",
+    "text": "A closer look: G5.3 the inspector\n\n\n\n\n\n%%{init: {\"themeVariables\": {\"edgeLabelBackground\": \"#000000\", \"clusterBkg\": \"transparent\", \"clusterBorder\": \"#3a3a3a\"}, \"flowchart\": {\"subGraphTitleMargin\": {\"top\": 8, \"bottom\": 12}}}}%%\nflowchart TB\n  Q[pick one NPC]:::data --&gt; ST[its state now&lt;br/&gt;from the engine]:::step\n  Q --&gt; PL[its plan and the source of each part&lt;br/&gt;G2]:::step\n  Q --&gt; RW[its route weights&lt;br/&gt;G3.1]:::step\n  Q --&gt; LG[its last stop and the reason&lt;br/&gt;G3, G4 log]:::step\n  ST --&gt; A[one printed answer&lt;br/&gt;what, why, from which data]:::out\n  PL --&gt; A\n  RW --&gt; A\n  LG --&gt; A\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G5 Check"
+    ]
+  },
+  {
+    "objectID": "g5-check.html#plan",
+    "href": "g5-check.html#plan",
+    "title": "G5 Check",
+    "section": "Plan",
+    "text": "Plan\n\n\n\n\n\n\n\n\n\nStep\nDoes\nNeeds\nDone when\n\n\n\n\n1\nG5.1: the run ledger, in the same form as S9’s\nG2, G3\nany run can be rebuilt from its ledger and seed\n\n\n2\nG5.2: comparisons with S5’s counts and S2, reusing S9’s comparison code\na run log\nthe same numbers come out as from S9 when given S9’s flows\n\n\n3\nG5.3: the inspector, first as a printout, then in the engine\nsteps 1 and 2\nthe five questions are answered for any NPC\n\n\n4\nkeep the check honest\nnone\nany setting fitted to counts names its days, and those days are left out of the check",
     "crumbs": [
       "Explore",
       "Game",
@@ -1985,11 +2141,23 @@
     ]
   },
   {
-    "objectID": "g7-engine.html#the-test-before-committing-planned",
-    "href": "g7-engine.html#the-test-before-committing-planned",
+    "objectID": "g7-engine.html#a-closer-look-the-test-before-committing",
+    "href": "g7-engine.html#a-closer-look-the-test-before-committing",
     "title": "G7 Engine",
-    "section": "The test before committing (planned)",
-    "text": "The test before committing (planned)\nA clean Unreal project, with only the engine’s own plugins and the earlier lane builder:\n\nload G1’s ground and blocks;\nrun 500 pedestrians from a seeded plan file, and one signalled junction with cars;\ncheck that the same seed gives the same counts, that every stop reads back with its reason, and that nothing from City Sample is needed.\n\nIf the test fails, the decision is reopened, with Godot as the first alternative.",
+    "section": "A closer look: the test before committing",
+    "text": "A closer look: the test before committing\n\n\n\n\n\n%%{init: {\"themeVariables\": {\"edgeLabelBackground\": \"#000000\", \"clusterBkg\": \"transparent\", \"clusterBorder\": \"#3a3a3a\"}, \"flowchart\": {\"subGraphTitleMargin\": {\"top\": 8, \"bottom\": 12}}}}%%\nflowchart TB\n  N[a clean Unreal project&lt;br/&gt;engine plugins only]:::step --&gt; G[load G1 ground and blocks&lt;br/&gt;lane builder, PCG]:::step\n  G --&gt; P[500 pedestrians&lt;br/&gt;from a seeded plan file]:::step\n  G --&gt; C[one signalled junction&lt;br/&gt;with cars]:::step\n  P --&gt; T{same seed, same counts?&lt;br/&gt;every stop explained?&lt;br/&gt;nothing from City Sample?}:::rule\n  C --&gt; T\n  T --&gt;|yes| GO[commit to Unreal]:::out\n  T --&gt;|no| RE[reopen the choice&lt;br/&gt;Godot first]:::out\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "G7 Engine"
+    ]
+  },
+  {
+    "objectID": "g7-engine.html#plan",
+    "href": "g7-engine.html#plan",
+    "title": "G7 Engine",
+    "section": "Plan",
+    "text": "Plan\n\n\n\n\n\n\n\n\n\nStep\nDoes\nNeeds\nDone when\n\n\n\n\n1\npin the Unreal version; record it in every run record\nnone\nthe version is in the ledger\n\n\n2\nthe test above\nG1 files; a seeded plan file from G2\nthe three checks pass\n\n\n3\nread G1 into the engine through the files only\nG1\nnothing in the level that a G file does not hold\n\n\n4\nbring in G3 and G4 subsystem by subsystem, each with its tests\nG3, G4\neach subsystem passes in the engine as in Python\n\n\n\nIf the test fails, the decision is reopened, with Godot as the first alternative.",
     "crumbs": [
       "Explore",
       "Game",
@@ -2379,6 +2547,42 @@
     "title": "R Rhythm",
     "section": "What R can and cannot say",
     "text": "What R can and cannot say\nR describes 9 weekdays at 7 junctions in detail. It cannot describe a Saturday on foot or a street with no counter, and it marks both as missing. The bicycle detectors cover a full year, so R2 is the one part that can speak of seasons.\nR does not feed the NPCs any numbers it later checks them against. The counts used to describe the rhythm in R are the same counts G5 compares runs with, so G2 and G3 take their timing from S7 and S5’s opening hours, and never from the counts.",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "R Rhythm"
+    ]
+  },
+  {
+    "objectID": "r-rhythm.html#a-closer-look-r4-populations",
+    "href": "r-rhythm.html#a-closer-look-r4-populations",
+    "title": "R Rhythm",
+    "section": "A closer look: R4 populations",
+    "text": "A closer look: R4 populations\nR4 is the subsystem that says how much of the rhythm the data can explain. Each counted curve is split into the groups a source can name, in a fixed order. What is left is reported, never spread over the groups.\n\n\n\n\n\n%%{init: {\"themeVariables\": {\"edgeLabelBackground\": \"#000000\", \"clusterBkg\": \"transparent\", \"clusterBorder\": \"#3a3a3a\"}, \"flowchart\": {\"subGraphTitleMargin\": {\"top\": 8, \"bottom\": 12}}}}%%\nflowchart TB\n  C[a counted curve&lt;br/&gt;one junction, one mode, by hour]:::data --&gt; A[minus S9's commuters&lt;br/&gt;at that junction and hour]:::step\n  A --&gt; B[minus errands timed by S5 hours&lt;br/&gt;an assumption, shown apart]:::step\n  B --&gt; D[minus traffic passing through&lt;br/&gt;from the counts around the area]:::step\n  D --&gt; U{what is left&lt;br/&gt;the share no group explains}:::rule\n  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6\n  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6\n  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc\n  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "R Rhythm"
+    ]
+  },
+  {
+    "objectID": "r-rhythm.html#plan",
+    "href": "r-rhythm.html#plan",
+    "title": "R Rhythm",
+    "section": "Plan",
+    "text": "Plan\nR starts with the data already in Situ. Steps that need a new file wait for that file to be checked and recorded.\n\n\n\n\n\n\n\n\n\nStep\nDoes\nNeeds\nDone when\n\n\n\n\n1\nR3: set S5’s open places by hour against S5’s counts by hour\nS5 outputs only\nthe hours where promise and presence part are listed, with their days\n\n\n2\nR1: scale each junction’s hourly curve to the same total and group the curves by shape\nS5 counts\neach group lists its junctions and days; the grouping method is in the ledger\n\n\n3\nR4: split each curve as in the diagram above\nS5, S9\nthe unexplained share is reported for every junction and hour\n\n\n4\nR2: join the 376 bicycle days to hourly weather\nweather file (to download)\nthe change in riders with rain and cold is reported, weekdays and weekends apart\n\n\n5\nR5: mark event days and compare them with ordinary days\nevents file and BIXI trips (to download)\nevent days that break the usual shape are listed",
+    "crumbs": [
+      "Explore",
+      "Game",
+      "R Rhythm"
+    ]
+  },
+  {
+    "objectID": "r-rhythm.html#data-for-this-part",
+    "href": "r-rhythm.html#data-for-this-part",
+    "title": "R Rhythm",
+    "section": "Data for this part",
+    "text": "Data for this part\n\n\n\n\n\n\n\nData\nStatus\n\n\n\n\nS5 counts, opening hours and bicycle days\nin Situ, verified\n\n\nS7 commuters; S9’s imagined morning\nin Situ\n\n\nhourly weather (Environment and Climate Change Canada)\nfound, not downloaded\n\n\npublic events (Ville de Montréal)\nfound, not downloaded\n\n\nBIXI trips\nfound; licence to confirm\n\n\narena event dates\nto check",
     "crumbs": [
       "Explore",
       "Game",

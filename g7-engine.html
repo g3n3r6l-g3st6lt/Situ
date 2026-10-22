@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8177368fb46b1cb19df0adafcabee1b8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -515,7 +515,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-not-city-sample" id="toc-why-not-city-sample" class="nav-link" data-scroll-target="#why-not-city-sample">Why not City Sample</a></li>
   <li><a href="#what-unreal-costs" id="toc-what-unreal-costs" class="nav-link" data-scroll-target="#what-unreal-costs">What Unreal costs</a></li>
   <li><a href="#alternatives-considered" id="toc-alternatives-considered" class="nav-link" data-scroll-target="#alternatives-considered">Alternatives considered</a></li>
-  <li><a href="#the-test-before-committing-planned" id="toc-the-test-before-committing-planned" class="nav-link" data-scroll-target="#the-test-before-committing-planned">The test before committing (planned)</a></li>
+  <li><a href="#a-closer-look-the-test-before-committing" id="toc-a-closer-look-the-test-before-committing" class="nav-link" data-scroll-target="#a-closer-look-the-test-before-committing">A closer look: the test before committing</a></li>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
   </ul>
 </nav>
     </div>
@@ -721,14 +722,77 @@ flowchart LR
 </tbody>
 </table>
 </section>
-<section id="the-test-before-committing-planned" class="level2">
-<h2 class="anchored" data-anchor-id="the-test-before-committing-planned">The test before committing (planned)</h2>
-<p>A clean Unreal project, with only the engine’s own plugins and the earlier lane builder:</p>
-<ol type="1">
-<li>load G1’s ground and blocks;</li>
-<li>run 500 pedestrians from a seeded plan file, and one signalled junction with cars;</li>
-<li>check that the same seed gives the same counts, that every stop reads back with its reason, and that nothing from City Sample is needed.</li>
-</ol>
+<section id="a-closer-look-the-test-before-committing" class="level2">
+<h2 class="anchored" data-anchor-id="a-closer-look-the-test-before-committing">A closer look: the test before committing</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart TB
+  N[a clean Unreal project&lt;br/&gt;engine plugins only]:::step --&gt; G[load G1 ground and blocks&lt;br/&gt;lane builder, PCG]:::step
+  G --&gt; P[500 pedestrians&lt;br/&gt;from a seeded plan file]:::step
+  G --&gt; C[one signalled junction&lt;br/&gt;with cars]:::step
+  P --&gt; T{same seed, same counts?&lt;br/&gt;every stop explained?&lt;br/&gt;nothing from City Sample?}:::rule
+  C --&gt; T
+  T --&gt;|yes| GO[commit to Unreal]:::out
+  T --&gt;|no| RE[reopen the choice&lt;br/&gt;Godot first]:::out
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Does</th>
+<th>Needs</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>pin the Unreal version; record it in every run record</td>
+<td>none</td>
+<td>the version is in the ledger</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>the test above</td>
+<td>G1 files; a seeded plan file from G2</td>
+<td>the three checks pass</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>read G1 into the engine through the files only</td>
+<td>G1</td>
+<td>nothing in the level that a G file does not hold</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>bring in G3 and G4 subsystem by subsystem, each with its tests</td>
+<td>G3, G4</td>
+<td>each subsystem passes in the engine as in Python</td>
+</tr>
+</tbody>
+</table>
 <p>If the test fails, the decision is reopened, with Godot as the first alternative.</p>
 
 

@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8177368fb46b1cb19df0adafcabee1b8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -514,6 +514,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#subsystems" id="toc-subsystems" class="nav-link" data-scroll-target="#subsystems">Subsystems</a></li>
   <li><a href="#the-staying-rule" id="toc-the-staying-rule" class="nav-link" data-scroll-target="#the-staying-rule">The staying rule</a></li>
   <li><a href="#why-shade-needs-true-north" id="toc-why-shade-needs-true-north" class="nav-link" data-scroll-target="#why-shade-needs-true-north">Why shade needs true north</a></li>
+  <li><a href="#a-closer-look-g4.3-sun-and-shade" id="toc-a-closer-look-g4.3-sun-and-shade" class="nav-link" data-scroll-target="#a-closer-look-g4.3-sun-and-shade">A closer look: G4.3 sun and shade</a></li>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
+  <li><a href="#data-for-this-part" id="toc-data-for-this-part" class="nav-link" data-scroll-target="#data-for-this-part">Data for this part</a></li>
   <li><a href="#tests-planned" id="toc-tests-planned" class="nav-link" data-scroll-target="#tests-planned">Tests (planned)</a></li>
   </ul>
 </nav>
@@ -623,6 +626,107 @@ flowchart LR
 <section id="why-shade-needs-true-north" class="level2">
 <h2 class="anchored" data-anchor-id="why-shade-needs-true-north">Why shade needs true north</h2>
 <p><a href="./g1-world.html">G1</a> keeps true north, so the sun can be placed at its real position for any hour and day. With G1’s heights, each candidate point can be found in sun or shade. Where a height is unknown, the shade it would cast is unknown too, and G4.3 says so.</p>
+</section>
+<section id="a-closer-look-g4.3-sun-and-shade" class="level2">
+<h2 class="anchored" data-anchor-id="a-closer-look-g4.3-sun-and-shade">A closer look: G4.3 sun and shade</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart TB
+  D[date and hour]:::data --&gt; S[sun position&lt;br/&gt;computed]:::step
+  H[G1 heights&lt;br/&gt;measured or assumed]:::data --&gt; SH[shadow of each building]:::step
+  S --&gt; SH
+  C[canopy layer&lt;br/&gt;to download]:::data --&gt; SH
+  SH --&gt; P{is the point in sun?}:::rule
+  U[a height unknown nearby]:::data --&gt; X[answer: unknown]:::out
+  P --&gt; Y[answer: sun or shade]:::out
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Does</th>
+<th>Needs</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>G4.1: list the candidate points</td>
+<td>S4, S5, S6, S7, S8 outputs</td>
+<td>every point names its source row; the counts by kind match the systems</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>G4.3: sun and shade per point and hour</td>
+<td>G1 heights; canopy (to download)</td>
+<td>a point near an unknown height says unknown</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>G4.2: the staying rule in the engine, with every weight in the ledger</td>
+<td>G2, G3, steps 1 and 2</td>
+<td>every stay in a run is logged with its inputs</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>test the rule against observation</td>
+<td>fieldwork, after ethics approval</td>
+<td>the model’s busiest points are compared with where people were seen</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-for-this-part" class="level2">
+<h2 class="anchored" data-anchor-id="data-for-this-part">Data for this part</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S4 places, S6 seats and tables, S7 stops, S5 counted junctions, S8 views</td>
+<td>in Situ, verified</td>
+</tr>
+<tr class="even">
+<td>canopy 2019 (Ville de Montréal)</td>
+<td>found, not downloaded</td>
+</tr>
+<tr class="odd">
+<td>where people stay and gather</td>
+<td>fieldwork, after ethics approval</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="tests-planned" class="level2">
 <h2 class="anchored" data-anchor-id="tests-planned">Tests (planned)</h2>

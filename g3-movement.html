@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8177368fb46b1cb19df0adafcabee1b8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -514,6 +514,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#movement-that-varies-for-a-reason" id="toc-movement-that-varies-for-a-reason" class="nav-link" data-scroll-target="#movement-that-varies-for-a-reason">Movement that varies for a reason</a></li>
   <li><a href="#why-space-syntax-stays-out" id="toc-why-space-syntax-stays-out" class="nav-link" data-scroll-target="#why-space-syntax-stays-out">Why space syntax stays out</a></li>
   <li><a href="#without-city-sample" id="toc-without-city-sample" class="nav-link" data-scroll-target="#without-city-sample">Without City Sample</a></li>
+  <li><a href="#a-closer-look-g3.1-route-choice" id="toc-a-closer-look-g3.1-route-choice" class="nav-link" data-scroll-target="#a-closer-look-g3.1-route-choice">A closer look: G3.1 route choice</a></li>
+  <li><a href="#a-closer-look-g3.4-driving" id="toc-a-closer-look-g3.4-driving" class="nav-link" data-scroll-target="#a-closer-look-g3.4-driving">A closer look: G3.4 driving</a></li>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
+  <li><a href="#data-for-this-part" id="toc-data-for-this-part" class="nav-link" data-scroll-target="#data-for-this-part">Data for this part</a></li>
   <li><a href="#tests-planned" id="toc-tests-planned" class="nav-link" data-scroll-target="#tests-planned">Tests (planned)</a></li>
   </ul>
 </nav>
@@ -679,7 +683,149 @@ flowchart TB
 </section>
 <section id="without-city-sample" class="level2">
 <h2 class="anchored" data-anchor-id="without-city-sample">Without City Sample</h2>
-<p>Epic’s City Sample has tuned traffic, but its cars and drivers depend on the sample’s own code. An earlier prototype of mine tried to move them into another project, and the transfer failed. Its junction logic also made both streets take turns at the 42 junctions where only the side street has a stop sign. G3.4 therefore builds its own driving on the engine’s general tools, and follows S3 as the city files it. See <a href="./g7-engine.html">G7 Engine</a>.</p>
+<p>G3.4 builds its own driving on the engine’s general tools, and follows S3 as the city files it. Why City Sample’s traffic is not used: <a href="./g7-engine.html#why-not-city-sample">G7 Engine</a>.</p>
+</section>
+<section id="a-closer-look-g3.1-route-choice" class="level2">
+<h2 class="anchored" data-anchor-id="a-closer-look-g3.1-route-choice">A closer look: G3.1 route choice</h2>
+<p>Each NPC carries its own weights over S9’s three readings. The weights change the cost of each street for that NPC, and the route is the cheapest path under its costs. The spread of weights across NPCs is an assumption; the readings themselves are S9’s.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart TB
+  P[a trip from G2&lt;br/&gt;from, to, mode]:::data --&gt; W[this NPC's weights&lt;br/&gt;shortest, open, straight]:::rule
+  S9[S9's three readings&lt;br/&gt;street costs]:::data --&gt; C[cost of each street&lt;br/&gt;for this NPC]:::step
+  W --&gt; C
+  C --&gt; R[cheapest route&lt;br/&gt;on S1 by mode]:::step
+  R --&gt; F[route file&lt;br/&gt;with weights and costs]:::out
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="a-closer-look-g3.4-driving" class="level2">
+<h2 class="anchored" data-anchor-id="a-closer-look-g3.4-driving">A closer look: G3.4 driving</h2>
+<p>Each frame, a car looks at the gap to the car ahead and at the rules of the street, and the Intelligent Driver Model gives its acceleration. Every forced stop is logged with what caused it.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart TB
+  G[gap and speed of the car ahead]:::data --&gt; M[Intelligent Driver Model&lt;br/&gt;settings: assumptions]:::rule
+  L[S3 speed limit of the street]:::data --&gt; M
+  M --&gt; A[acceleration this frame]:::step
+  J[next junction: S3 control&lt;br/&gt;light phase or stop sign]:::data --&gt; D{may it enter?}:::rule
+  A --&gt; D
+  D --&gt;|yes| N[moves on]:::out
+  D --&gt;|no| S[stops; the log says why]:::out
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Does</th>
+<th>Needs</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>G3.1 in Python, on G2’s commuter trips</td>
+<td>G2, S9</td>
+<td>each route prints with its weights; the same seed gives the same routes</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>the engine test in <a href="./g7-engine.html">G7</a></td>
+<td>G1, step 1</td>
+<td>it passes, or the engine choice is reopened</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>G3.2 walking lanes from G1’s sidewalks and crossing marks</td>
+<td>G1</td>
+<td>every sidewalk piece is reachable; crossings join both sides</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>G3.3 junction control from S3, with light timing from <a href="./counts.html">Movement counts and light timing</a></td>
+<td>S3, the timing estimates</td>
+<td>no NPC enters against a red; each wait is logged</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>G3.4 driving, as in the diagram</td>
+<td>S3, step 4</td>
+<td>no banned move, no car above the limit, every stop explained</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>G3.5 parking</td>
+<td>parking signage (to download)</td>
+<td>a car parks only where the signs allow, at that hour</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-for-this-part" class="level2">
+<h2 class="anchored" data-anchor-id="data-for-this-part">Data for this part</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S1 network, S3 rules, S9 readings, G1 sidewalks and crossings</td>
+<td>in Situ</td>
+</tr>
+<tr class="even">
+<td>light timing estimates</td>
+<td>in Situ, partial (estimated where the city counted)</td>
+</tr>
+<tr class="odd">
+<td>walking-speed distributions</td>
+<td>to choose from published studies</td>
+</tr>
+<tr class="even">
+<td>on-street parking signage (Ville de Montréal)</td>
+<td>found, not downloaded</td>
+</tr>
+<tr class="odd">
+<td>road collisions (Ville de Montréal)</td>
+<td>found, not downloaded</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="tests-planned" class="level2">
 <h2 class="anchored" data-anchor-id="tests-planned">Tests (planned)</h2>

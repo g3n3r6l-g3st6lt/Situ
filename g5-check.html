@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8177368fb46b1cb19df0adafcabee1b8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -513,6 +513,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#subsystems" id="toc-subsystems" class="nav-link active" data-scroll-target="#subsystems">Subsystems</a></li>
   <li><a href="#the-rule-that-keeps-the-check-honest" id="toc-the-rule-that-keeps-the-check-honest" class="nav-link" data-scroll-target="#the-rule-that-keeps-the-check-honest">The rule that keeps the check honest</a></li>
   <li><a href="#what-the-inspector-answers" id="toc-what-the-inspector-answers" class="nav-link" data-scroll-target="#what-the-inspector-answers">What the inspector answers</a></li>
+  <li><a href="#a-closer-look-g5.3-the-inspector" id="toc-a-closer-look-g5.3-the-inspector" class="nav-link" data-scroll-target="#a-closer-look-g5.3-the-inspector">A closer look: G5.3 the inspector</a></li>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
   </ul>
 </nav>
     </div>
@@ -636,6 +638,79 @@ flowchart LR
 <tr class="odd">
 <td>Which data shaped it?</td>
 <td>the source rows named in its plan</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="a-closer-look-g5.3-the-inspector" class="level2">
+<h2 class="anchored" data-anchor-id="a-closer-look-g5.3-the-inspector">A closer look: G5.3 the inspector</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart TB
+  Q[pick one NPC]:::data --&gt; ST[its state now&lt;br/&gt;from the engine]:::step
+  Q --&gt; PL[its plan and the source of each part&lt;br/&gt;G2]:::step
+  Q --&gt; RW[its route weights&lt;br/&gt;G3.1]:::step
+  Q --&gt; LG[its last stop and the reason&lt;br/&gt;G3, G4 log]:::step
+  ST --&gt; A[one printed answer&lt;br/&gt;what, why, from which data]:::out
+  PL --&gt; A
+  RW --&gt; A
+  LG --&gt; A
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Does</th>
+<th>Needs</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>G5.1: the run ledger, in the same form as S9’s</td>
+<td>G2, G3</td>
+<td>any run can be rebuilt from its ledger and seed</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>G5.2: comparisons with S5’s counts and S2, reusing S9’s comparison code</td>
+<td>a run log</td>
+<td>the same numbers come out as from S9 when given S9’s flows</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>G5.3: the inspector, first as a printout, then in the engine</td>
+<td>steps 1 and 2</td>
+<td>the five questions are answered for any NPC</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>keep the check honest</td>
+<td>none</td>
+<td>any setting fitted to counts names its days, and those days are left out of the check</td>
 </tr>
 </tbody>
 </table>

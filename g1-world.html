@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8177368fb46b1cb19df0adafcabee1b8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -80,6 +80,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -520,6 +523,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#props" id="toc-props" class="nav-link" data-scroll-target="#props">Props</a></li>
   <li><a href="#ledger" id="toc-ledger" class="nav-link" data-scroll-target="#ledger">The ledger</a></li>
   <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan: G1b, the world completed</a></li>
   <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next</a></li>
   </ul>
 </nav>
@@ -855,9 +859,118 @@ ul.task-list li input[type="checkbox"] {
 <p>Eight checks, all PASS (<a href="outputs/g1/test_report.txt">report</a>). The ground is exactly S1’s segments and junctions, once each, and moving it back by the origin gives S1’s coordinates to the centimetre. Every height is recomputed from S4 and matches, and the 73 without a source stay empty. Every door sits on its outline, no further from its street than S4 measured. Every S6 row is accounted for, either as a prop or as a detection matched to one. The ledger covers every layer.</p>
 <p>The door check failed at first. One building’s door came out 4.9 m from the street, where S4 had 1.1 m. Rue Barré runs through that outline, and the first door rule only looked at corners. The rule now places the door where the street enters the outline, and the building is a checkpoint.</p>
 </section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan: G1b, the world completed</h2>
+<p>G1b fills empty fields from measurements, and replaces the storey rule wherever a measured height exists.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart TB
+  S[surface model 2015&lt;br/&gt;tops of roofs and trees]:::data --&gt; N[surface minus terrain&lt;br/&gt;height above the ground]:::step
+  T[terrain model 2015&lt;br/&gt;the bare ground]:::data --&gt; N
+  F[G1 footprint]:::data --&gt; M[height inside the footprint&lt;br/&gt;the rule: a ledger row]:::step
+  N --&gt; M
+  M --&gt; C{built after 2015?&lt;br/&gt;roll year, OSM}:::rule
+  C --&gt;|no| H[measured height&lt;br/&gt;replaces the storey rule]:::out
+  C --&gt;|yes or unknown| K[keeps its current height rule&lt;br/&gt;and says why]:::out
+  T --&gt; G[ground slopes&lt;br/&gt;canal edge, rail viaduct]:::out
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Does</th>
+<th>Needs</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>download and record the terrain and surface models for the area</td>
+<td>permission, licence check</td>
+<td>both are in the sources list with date, licence and fingerprint</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>heights as in the diagram</td>
+<td>step 1</td>
+<td>every block says measured, from the surface model, from storeys, or unknown</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>test the 3.33 m storey rule against the surface model</td>
+<td>step 2</td>
+<td>its error is reported by use and by age of building</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>terrain under the ground and the blocks</td>
+<td>step 1</td>
+<td>W13 (flat ground) is replaced, and the change is in the ledger</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>tree crowns from the 2019 canopy layer</td>
+<td>canopy (to download)</td>
+<td>each tree prop has a crown, or says it has none</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>entrances from street photos, for buildings with a public use</td>
+<td>Mapillary photos</td>
+<td>each entrance found replaces an assumed door, building by building</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>terrain and surface models 2015 (Ville de Montréal)</td>
+<td>found, not downloaded; licence to check</td>
+</tr>
+<tr class="even">
+<td>canopy 2019 (Ville de Montréal)</td>
+<td>found, not downloaded</td>
+</tr>
+<tr class="odd">
+<td>street photos (Mapillary)</td>
+<td>in use in S1, S3 and S6</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="what-comes-next" class="level2">
 <h2 class="anchored" data-anchor-id="what-comes-next">What comes next</h2>
-<p>G1b will fill empty fields from measurements: heights from the city’s surface and terrain models, and tree crowns from its canopy layer. The terrain model also gives the ground its slopes (planned). The parts after G1 give the world its people, starting with <a href="./r-rhythm.html">R Rhythm</a> and <a href="./g2-people.html">G2 People</a> (planned; every part: <a href="./game.html">The game, part by part</a>).</p>
+<p>After G1b, the next parts give the world its people, starting with <a href="./r-rhythm.html">R Rhythm</a> and <a href="./g2-people.html">G2 People</a> (planned; every part: <a href="./game.html">The game, part by part</a>).</p>
 
 
 </section>

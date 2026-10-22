@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8177368fb46b1cb19df0adafcabee1b8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -512,7 +512,9 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#the-idea-a-day-as-a-path-in-space-and-time" id="toc-the-idea-a-day-as-a-path-in-space-and-time" class="nav-link active" data-scroll-target="#the-idea-a-day-as-a-path-in-space-and-time">The idea: a day as a path in space and time</a></li>
   <li><a href="#subsystems" id="toc-subsystems" class="nav-link" data-scroll-target="#subsystems">Subsystems</a></li>
-  <li><a href="#order-of-work" id="toc-order-of-work" class="nav-link" data-scroll-target="#order-of-work">Order of work</a></li>
+  <li><a href="#a-closer-look-one-commuters-day" id="toc-a-closer-look-one-commuters-day" class="nav-link" data-scroll-target="#a-closer-look-one-commuters-day">A closer look: one commuter’s day</a></li>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
+  <li><a href="#data-for-this-part" id="toc-data-for-this-part" class="nav-link" data-scroll-target="#data-for-this-part">Data for this part</a></li>
   <li><a href="#tests-planned" id="toc-tests-planned" class="nav-link" data-scroll-target="#tests-planned">Tests (planned)</a></li>
   </ul>
 </nav>
@@ -657,9 +659,112 @@ flowchart LR
 </div>
 </div>
 </section>
-<section id="order-of-work" class="level2">
-<h2 class="anchored" data-anchor-id="order-of-work">Order of work</h2>
-<p>Commuters first, the one group the census covers: about 7,200 residents who commute, by mode and by hour of leaving. Errands come second, inside S5’s opening hours, and marked as an assumption until residents describe their days.</p>
+<section id="a-closer-look-one-commuters-day" class="level2">
+<h2 class="anchored" data-anchor-id="a-closer-look-one-commuters-day">A closer look: one commuter’s day</h2>
+<p>G2.2 builds each plan from the census and the timetable. A resident who takes the metro gets a day like this one, and every box names its source.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart TB
+  H[home: an S4 building&lt;br/&gt;with S7's commuters]:::data --&gt; L[leaves in S7's hour band&lt;br/&gt;minute inside the band: assumption]:::step
+  L --&gt; W[walks to the nearest metro entrance&lt;br/&gt;S7 distance, G3.1 route]:::step
+  W --&gt; T[boards a departure&lt;br/&gt;from the STM timetable]:::data
+  T --&gt; O[leaves the study area&lt;br/&gt;out of the game]:::out
+  O --&gt; R[comes back in the evening&lt;br/&gt;return hour: assumption until a source exists]:::rule
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Does</th>
+<th>Needs</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>G2.1: residents who commute, per building and mode, from S7’s homes; workers arriving from S7’s arrival hours</td>
+<td>S4, S7 outputs</td>
+<td>totals match S7: about 7,200 commuters from 132 residential buildings</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>G2.2: a plan for each commuter, as in the diagram</td>
+<td>S7, the STM timetable</td>
+<td>every plan prints with the source of each part</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>G2.3: a checker that refuses a plan breaking an opening hour, a timetable or a traffic rule</td>
+<td>S3, S5, S7</td>
+<td>a set of broken plans made on purpose is refused, each with its reason</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>G2.4: seeds</td>
+<td>none</td>
+<td>two runs with the same seed give the same plans</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>errands, inside S5’s opening hours, marked as an assumption</td>
+<td>S5</td>
+<td>errands appear in their own rows of the ledger</td>
+</tr>
+</tbody>
+</table>
+<p>Commuters come first because the census covers them. Everything else waits for a source or stays a marked assumption.</p>
+</section>
+<section id="data-for-this-part" class="level2">
+<h2 class="anchored" data-anchor-id="data-for-this-part">Data for this part</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S4 dwellings; S7 commuters, leaving and arriving hours, stops</td>
+<td>in Situ, verified</td>
+</tr>
+<tr class="even">
+<td>STM timetable</td>
+<td>in Situ (through S7)</td>
+</tr>
+<tr class="odd">
+<td>residents’ routines</td>
+<td>fieldwork, after ethics approval</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="tests-planned" class="level2">
 <h2 class="anchored" data-anchor-id="tests-planned">Tests (planned)</h2>

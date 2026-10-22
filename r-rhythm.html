@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8177368fb46b1cb19df0adafcabee1b8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -513,6 +513,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-rhythm-comes-first" id="toc-why-rhythm-comes-first" class="nav-link active" data-scroll-target="#why-rhythm-comes-first">Why rhythm comes first</a></li>
   <li><a href="#subsystems" id="toc-subsystems" class="nav-link" data-scroll-target="#subsystems">Subsystems</a></li>
   <li><a href="#what-r-can-and-cannot-say" id="toc-what-r-can-and-cannot-say" class="nav-link" data-scroll-target="#what-r-can-and-cannot-say">What R can and cannot say</a></li>
+  <li><a href="#a-closer-look-r4-populations" id="toc-a-closer-look-r4-populations" class="nav-link" data-scroll-target="#a-closer-look-r4-populations">A closer look: R4 populations</a></li>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
+  <li><a href="#data-for-this-part" id="toc-data-for-this-part" class="nav-link" data-scroll-target="#data-for-this-part">Data for this part</a></li>
   <li><a href="#tests-planned" id="toc-tests-planned" class="nav-link" data-scroll-target="#tests-planned">Tests (planned)</a></li>
   </ul>
 </nav>
@@ -633,6 +636,124 @@ flowchart TB
 <h2 class="anchored" data-anchor-id="what-r-can-and-cannot-say">What R can and cannot say</h2>
 <p>R describes 9 weekdays at 7 junctions in detail. It cannot describe a Saturday on foot or a street with no counter, and it marks both as missing. The bicycle detectors cover a full year, so R2 is the one part that can speak of seasons.</p>
 <p>R does not feed the NPCs any numbers it later checks them against. The counts used to describe the rhythm in R are the same counts G5 compares runs with, so G2 and G3 take their timing from S7 and S5’s opening hours, and never from the counts.</p>
+</section>
+<section id="a-closer-look-r4-populations" class="level2">
+<h2 class="anchored" data-anchor-id="a-closer-look-r4-populations">A closer look: R4 populations</h2>
+<p>R4 is the subsystem that says how much of the rhythm the data can explain. Each counted curve is split into the groups a source can name, in a fixed order. What is left is reported, never spread over the groups.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart TB
+  C[a counted curve&lt;br/&gt;one junction, one mode, by hour]:::data --&gt; A[minus S9's commuters&lt;br/&gt;at that junction and hour]:::step
+  A --&gt; B[minus errands timed by S5 hours&lt;br/&gt;an assumption, shown apart]:::step
+  B --&gt; D[minus traffic passing through&lt;br/&gt;from the counts around the area]:::step
+  D --&gt; U{what is left&lt;br/&gt;the share no group explains}:::rule
+  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan</h2>
+<p>R starts with the data already in Situ. Steps that need a new file wait for that file to be checked and recorded.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Does</th>
+<th>Needs</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>R3: set S5’s open places by hour against S5’s counts by hour</td>
+<td>S5 outputs only</td>
+<td>the hours where promise and presence part are listed, with their days</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>R1: scale each junction’s hourly curve to the same total and group the curves by shape</td>
+<td>S5 counts</td>
+<td>each group lists its junctions and days; the grouping method is in the ledger</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>R4: split each curve as in the diagram above</td>
+<td>S5, S9</td>
+<td>the unexplained share is reported for every junction and hour</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>R2: join the 376 bicycle days to hourly weather</td>
+<td>weather file (to download)</td>
+<td>the change in riders with rain and cold is reported, weekdays and weekends apart</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>R5: mark event days and compare them with ordinary days</td>
+<td>events file and BIXI trips (to download)</td>
+<td>event days that break the usual shape are listed</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-for-this-part" class="level2">
+<h2 class="anchored" data-anchor-id="data-for-this-part">Data for this part</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S5 counts, opening hours and bicycle days</td>
+<td>in Situ, verified</td>
+</tr>
+<tr class="even">
+<td>S7 commuters; S9’s imagined morning</td>
+<td>in Situ</td>
+</tr>
+<tr class="odd">
+<td>hourly weather (Environment and Climate Change Canada)</td>
+<td>found, not downloaded</td>
+</tr>
+<tr class="even">
+<td>public events (Ville de Montréal)</td>
+<td>found, not downloaded</td>
+</tr>
+<tr class="odd">
+<td>BIXI trips</td>
+<td>found; licence to confirm</td>
+</tr>
+<tr class="even">
+<td>arena event dates</td>
+<td>to check</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="tests-planned" class="level2">
 <h2 class="anchored" data-anchor-id="tests-planned">Tests (planned)</h2>
