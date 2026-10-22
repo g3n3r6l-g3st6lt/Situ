@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1c5820b0ade10df1e2bf25f7b3ad7141.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-4d0ec2974cf77448add2297161da6f87.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -147,12 +147,6 @@ ul.task-list li input[type="checkbox"] {
         <p class="intro-q">Situ is the prototype of my PhD research-creation project. It asks whether a game-like 3D experience can pass on and archive the spatial culture and urban rhythm of Griffintown, Montréal.</p>
         <p class="intro-now">I build small systems from the city's open data, each tested before the next one uses it, to inform the design of a game. Eight systems are <a href="about.html#status">verified</a>: streets, space syntax scores, traffic rules, buildings, hours of the week, street objects, commuters and views. The ninth is partial: it imagines a weekday morning on foot and compares it with the city's counts.</p>
         <p class="intro-limits">Nothing is archived yet, and the game itself is planned. Everything so far comes from open files and street images, read at my desk. The counts cover nine weekdays at seven junctions, and the people who live here have not yet been asked. <a href="limits.html">Limits</a></p>
-        <ul class="situ-entries">
-          <li><a href="lab.html"><b>Explore the city</b><span>every system on one map</span></a></li>
-          <li><a href="space-syntax.html"><b>Follow the method</b><span>how I measure the street network, and why</span></a></li>
-          <li><a href="systems.html"><b>Inspect the systems</b><span>all nine, with what each does and its status</span></a></li>
-          <li><a href="play.html"><b>From systems to a game</b><span>the job each system does in a game</span></a></li>
-        </ul>
       </div>
       <p class="credit">Griffintown, Montréal<br>Mohamed Gharbia<br>Concordia University, 2026</p>
     </div>
@@ -194,8 +188,21 @@ ul.task-list li input[type="checkbox"] {
       </div>
     </section>
 
+    <section class="situ-strip" id="game">
+      <button aria-expanded="false" aria-controls="game-panel"><span class="num">03</span><span class="label">Game</span></button>
+      <div class="panel" id="game-panel" role="region">
+        <h2>Game</h2>
+        <p class="lead">The systems describe Griffintown. A game needs them for four jobs: a world to stand in, people moving at the right hours, places where something can happen, and a check on the result.</p>
+        <p>The first step is built and tested. G1 World puts the streets, 296 building masses and 2,783 props in one frame, and leaves empty what no source knows. The rest is planned.</p>
+        <ul class="links">
+          <li><a href="play.html">From systems to a game</a></li>
+          <li><a href="g1-world.html">G1 World</a></li>
+        </ul>
+      </div>
+    </section>
+
     <section class="situ-strip" id="research">
-      <button aria-expanded="false" aria-controls="research-panel"><span class="num">03</span><span class="label">Research</span></button>
+      <button aria-expanded="false" aria-controls="research-panel"><span class="num">04</span><span class="label">Research</span></button>
       <div class="panel" id="research-panel" role="region">
         <h2>Research</h2>
         <p class="lead">Space syntax measures how a street network is laid out. It is one of my measuring sticks, next to the city's own counts. The simulated people never read it. I compare where they go with what it predicts, street by street.</p>
@@ -205,14 +212,13 @@ ul.task-list li input[type="checkbox"] {
           <li><a href="about.html">About Situ</a></li>
           <li><a href="space-syntax.html">What space syntax is</a></li>
           <li><a href="limits.html">Limits of the desk</a></li>
-          <li><a href="play.html">From systems to a game</a></li>
           <li><a href="glossary.html">Glossary</a></li>
         </ul>
       </div>
     </section>
 
     <section class="situ-strip" id="data">
-      <button aria-expanded="false" aria-controls="data-panel"><span class="num">04</span><span class="label">Data</span></button>
+      <button aria-expanded="false" aria-controls="data-panel"><span class="num">05</span><span class="label">Data</span></button>
       <div class="panel" id="data-panel" role="region">
         <h2>Data</h2>
         <p class="lead">One walking network for the whole island: the city's streets joined with the off-street paths people use. Every source has its date and licence.</p>
@@ -238,6 +244,7 @@ ul.task-list li input[type="checkbox"] {
     explore: ["home_lab_2d.svg", "2D", "One walk from J016 to J152: the shortest route in white, every street a trip 10 % longer could take in pink", "home_resources_3d.svg", "3D", "Every place people go to, as pins above their buildings"],
     systems: ["home_systems_2d.svg", "2D", "Speed limits. White: 40 km/h. Pink: 20 km/h. Grey: the rest", "home_systems_3d.svg", "3D", "Buildings raised and coloured by use. Pink: commerce"],
     research: ["home_method_2d.svg", "2D", "Walking choice within 800 m: grey low, pink high", "home_situ_3d.svg", "3D", "Every building raised by its storeys. Pink dashed: height unknown"],
+    game: ["home_game_2d.svg", "2D", "G1 World: building masses, every prop, and doors in pink where a public use is recorded", "home_game_3d.svg", "3D", "G1's blocks at G1's heights. Pink dashed: no height in any source"],
     data: ["home_data_2d.svg", "2D", "Who may use each street. Dashed: on foot only. Pink dots: paths I added", "home_data_3d.svg", "3D", "The data in layers: streets, junctions, signs and lights, buildings"],
   };
   const OLD = { situ: "research", method: "research", lab: "explore", resources: "data" };   // links made before the four sections
