@@ -1,0 +1,216 @@
+{
+ "system": "s5",
+ "made": "2026-10-21T22:48:15Z",
+ "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
+ "code": {
+  "git_commit": "8c965e844c64cc31305cc132ec202773c2b3c5d6",
+  "differs_from_commit": false,
+  "files": [
+   {
+    "path": "Situ/s5_rhythm/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/s5_rhythm/bikes.py",
+    "sha256": "5dcc5a9a4e970e428be46cfb9e87f53f2cb6bc82fcc631861604d26366957179"
+   },
+   {
+    "path": "Situ/s5_rhythm/build.py",
+    "sha256": "b26b9ecd15d1ca13fe47864e72d5b11fd1967d25d3fcd3d384449eb63f9337b6"
+   },
+   {
+    "path": "Situ/s5_rhythm/hours.py",
+    "sha256": "128d82e226284e58cf555e313e0ad9b4c405de00d8c8f962b01b2a90fb8acc62"
+   },
+   {
+    "path": "Situ/s5_rhythm/ring.py",
+    "sha256": "a8b152025a2c8488a380c984a8b90d35a653358a7ed074b828e4ac7054760cda"
+   },
+   {
+    "path": "Situ/s5_rhythm/stress.py",
+    "sha256": "4e12856596a67b012cc10a79ee94b52234e83b0f460b859b73b0a3aad32747c6"
+   },
+   {
+    "path": "Situ/s5_rhythm/test.py",
+    "sha256": "58017927bcb302ca44dbad54a9fccf069bddcd1b132195b7c2c946419557e6ba"
+   },
+   {
+    "path": "Situ/s5_rhythm/visualize.py",
+    "sha256": "44802a9b134572e82df0c885053ab9a91389db6bb1e7e13bae3bd75ff08bbf9a"
+   },
+   {
+    "path": "Situ/s5_rhythm/web.py",
+    "sha256": "7a1c708336d9353ba5c797d38e05ec1ea5760d78e17bffbb1313812c6f2c137d"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "d7370da44505e8cc72c14d5c05f38b179821e389ae89265b9e75a1b3756086a4"
+   }
+  ]
+ },
+ "inputs": [
+  {
+   "name": "BIKE_COUNT_FILES",
+   "path": "Situ/data/external/cyclistes_2025.csv",
+   "bytes": 127127287,
+   "modified": "2026-10-15T22:50:40Z",
+   "sha256": "cc470b8185e8a2ba4bda00b0dee7404a17ed573d4a933a3ec7796127b1cc5cd4"
+  },
+  {
+   "name": "BIKE_COUNT_FILES",
+   "path": "Situ/data/external/cyclistes_2026.csv",
+   "bytes": 214164671,
+   "modified": "2026-10-15T22:50:58Z",
+   "sha256": "de5f6ec08ca964e811ff543c1ec2135a40c0e504717eea2a238990ddb3f139d4"
+  },
+  {
+   "name": "BIKE_SITES_FILE",
+   "path": "Situ/data/external/localisations_globale.csv",
+   "bytes": 8404,
+   "modified": "2026-10-15T22:45:23Z",
+   "sha256": "5bd44ac4d605fdd5b34001a8f5932308781269f14b534e2555a22f64d5dc59a3"
+  },
+  {
+   "name": "COUNTS_FILE",
+   "path": "Situ/data/external/comptages_vehicules_cyclistes_pietons.csv",
+   "bytes": 55869515,
+   "modified": "2026-10-10T12:18:58Z",
+   "sha256": "f61fe4c34ca5c2176213d34a09316acf50e34535a1de88d6fc68b2b7a37361e2"
+  }
+ ],
+ "upstream": [
+  {
+   "system": "s1",
+   "run_json_sha256": "138cab4385292b18709f7832165b32fe97ffa0b6c90106780877f9488bc2c055"
+  },
+  {
+   "system": "s4",
+   "run_json_sha256": "da7fcd716097cec6935439db365341dcf19cfb3c4b8b430b1be026e0a403b176"
+  }
+ ],
+ "settings": {
+  "BIKE_NEAR_REPORT_M": 60,
+  "COUNT_NEAR_M": 15,
+  "CRS": "EPSG:32188",
+  "OPEN_AT_MINUTE": 30,
+  "RING_M": 600
+ },
+ "outputs": [
+  {
+   "path": "Situ/outputs/s5/bike_days.csv",
+   "bytes": 89143,
+   "sha256": "0102cf4fa738883f39e6231a15e01d6baf34d26634180d371363af9b3f4c0cfc"
+  },
+  {
+   "path": "Situ/outputs/s5/bike_months.csv",
+   "bytes": 338,
+   "sha256": "42fac54d45ba59fd9d637c27ebcec8c9cb3f3c461e01867e8afe0e2e19407dd7"
+  },
+  {
+   "path": "Situ/outputs/s5/bike_shape.csv",
+   "bytes": 17906,
+   "sha256": "07a320647051c9c64e0ae6173ce2a268d09dc1397d63e7a618fd8f660dd0e333"
+  },
+  {
+   "path": "Situ/outputs/s5/bike_sites.csv",
+   "bytes": 300,
+   "sha256": "426fc855ec5e5d71d1cabdf9785e878848459ab941a19465efe38da7caedc8d7"
+  },
+  {
+   "path": "Situ/outputs/s5/bike_week.csv",
+   "bytes": 918,
+   "sha256": "5decd9aaba66381b65f79cdd83a393153f09d52decdd7e22db4c73a86fab48d1"
+  },
+  {
+   "path": "Situ/outputs/s5/checkpoints.csv",
+   "bytes": 428,
+   "sha256": "e99806d212b69fd647d04566c99d06cdec1ecd7f5084f8ba3d800d6114500477"
+  },
+  {
+   "path": "Situ/outputs/s5/counts_by_hour.csv",
+   "bytes": 19801,
+   "sha256": "b8a217d7858a094eba1529e34d7b7dae3ba03567ae145027360754bd4c963b7e"
+  },
+  {
+   "path": "Situ/outputs/s5/junction_hours.csv",
+   "bytes": 4832,
+   "sha256": "cd2b6cb23939966c00a0d76d9c262aadefa03848d53c41a66b6ff9cd6c28cfb4"
+  },
+  {
+   "path": "Situ/outputs/s5/meta.json",
+   "bytes": 4421,
+   "sha256": "a5212dce63c2e1e85fa3f1d60a26ff4e2f23805d1c0c873d32dba9d6c6e07024"
+  },
+  {
+   "path": "Situ/outputs/s5/open_by_hour.csv",
+   "bytes": 4821,
+   "sha256": "d89e5d4e3994c712ea007127091e7152eb5a5a440be3db431da72823f786ed7b"
+  },
+  {
+   "path": "Situ/outputs/s5/place_hours.csv",
+   "bytes": 154345,
+   "sha256": "b84ed049578546d2213f5594055692d231138ce396d0faca4208fbc9aa015275"
+  },
+  {
+   "path": "Situ/outputs/s5/ring_by_hour.csv",
+   "bytes": 124822,
+   "sha256": "60799da78da41190926bcec0769d4d16bde345dd56395b1d48b9ab1404210b5d"
+  },
+  {
+   "path": "Situ/outputs/s5/ring_hours.csv",
+   "bytes": 70568,
+   "sha256": "71b9554aa49fe85d05a38d2bf995a4f3ebed028766273d46fae5d99810ff201e"
+  },
+  {
+   "path": "Situ/outputs/s5/ring_sites.csv",
+   "bytes": 1821,
+   "sha256": "19884579725eb5662265c0b1c630b542cc343f80083f0c8f769b7f37db05c64e"
+  },
+  {
+   "path": "Situ/outputs/s5/s5_sheet_bikes.png",
+   "bytes": 74119,
+   "sha256": "b94793f746dbce859fd150facbbea309b7be30e77a2919c7e2bf1d27bc2518b0"
+  },
+  {
+   "path": "Situ/outputs/s5/s5_sheet_day.png",
+   "bytes": 69591,
+   "sha256": "9cd3a6b1abb5be4ea21139d7f502f219832bf12579cfe8b1b920a1ffce6788bd"
+  },
+  {
+   "path": "Situ/outputs/s5/s5_sheet_ring.png",
+   "bytes": 88577,
+   "sha256": "8a63c85edce2f932e2c454cbec5297ff15fef01958c93d0039a506e8b2200095"
+  },
+  {
+   "path": "Situ/outputs/s5/s5_sheet_week.png",
+   "bytes": 30338,
+   "sha256": "6c54fb29141d142207fa22ed6ce30a30929f0d41d3f561c7f82ec0318a63596c"
+  },
+  {
+   "path": "Situ/outputs/s5/stress_report.txt",
+   "bytes": 2413,
+   "sha256": "600058d1331b4c21ade4a36ef72cc9cd784480df2aee6839b3c316d60f6e1b7f"
+  },
+  {
+   "path": "Situ/outputs/s5/test_report.txt",
+   "bytes": 3034,
+   "sha256": "1a413c8526322918df59c201724dc73d205e74d0be2d4881ec2fb9a60e3efe29"
+  },
+  {
+   "path": "Situ/outputs/s5/web_data.js",
+   "bytes": 200722,
+   "sha256": "de29793ffa463f68ee0444203e1705d87ac9b651a43bc1f0b907d2d86b8fe03a"
+  },
+  {
+   "path": "Situ/outputs/s5/weekday.csv",
+   "bytes": 69810,
+   "sha256": "386f222f9b9f737ac5e1440663e148806c49e6546ffd9eee8f685ffacf49b0ac"
+  }
+ ],
+ "tests": {
+  "report": "Situ/outputs/s5/test_report.txt",
+  "made": "2026-10-17T13:06:06Z",
+  "pass": 13,
+  "fail": 0
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "system": "s1",
+ "made": "2026-10-21T22:48:11Z",
+ "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
+ "code": {
+  "git_commit": "8c965e844c64cc31305cc132ec202773c2b3c5d6",
+  "differs_from_commit": false,
+  "files": [
+   {
+    "path": "Situ/s1_streets/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/s1_streets/build.py",
+    "sha256": "a6333b9fc0fdb7db1e989f01c85a3da1144e8de9e53a4638cb4fe31d9e56417c"
+   },
+   {
+    "path": "Situ/s1_streets/corrections.py",
+    "sha256": "941dafd11081e2f4bf2e32b32f7c56658717b964a74acdf54df7b8ec8910bb18"
+   },
+   {
+    "path": "Situ/s1_streets/desk_check.py",
+    "sha256": "a0be51edc5cd59f712ff306af4b66876be4142b1243263e59dd27037ec125bf1"
+   },
+   {
+    "path": "Situ/s1_streets/network.py",
+    "sha256": "08f9e1dcff1686929101eecb36375ecb923b36047c9f1085943b9a0fd9f0cb21"
+   },
+   {
+    "path": "Situ/s1_streets/routes.py",
+    "sha256": "1cd5021a072d817aaed3bd256c7e5e64095d29f7d81f2b1ff2d7d07da8aa8a10"
+   },
+   {
+    "path": "Situ/s1_streets/test.py",
+    "sha256": "6062b34873e748e5a06b89c53acda9427a42cb63ec17f8ed9b87ac8dd75f73ce"
+   },
+   {
+    "path": "Situ/s1_streets/visualize.py",
+    "sha256": "0da42db9e77f9a6d1acf2f8b97d65b0e0bdc7d6c185027c80306a4a5fec075bb"
+   },
+   {
+    "path": "Situ/s1_streets/web.py",
+    "sha256": "7e145c1d7841c8cb5753e649aa62401d51df864aa17b947c55d238eca7c99055"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "d7370da44505e8cc72c14d5c05f38b179821e389ae89265b9e75a1b3756086a4"
+   }
+  ]
+ },
+ "inputs": [
+  {
+   "name": "BOUNDARY_FILE",
+   "path": "QGIS/Sample4-200926/Layers/griffintown_boundary.gpkg",
+   "bytes": 106496,
+   "modified": "2026-09-21T21:59:46Z",
+   "sha256": "27072d38e13201cca9c6a40a9399c7d58207307d126deb19d914dfbc4239ef72"
+  },
+  {
+   "name": "CORRECTIONS_FILE",
+   "path": "Situ/data/s1_corrections.csv",
+   "bytes": 5143,
+   "modified": "2026-10-10T22:04:58Z",
+   "sha256": "e0d05eb1a0e175224023215f41634d80de56cc042385eaa73d381661d5c4a0c4"
+  },
+  {
+   "name": "CYCLE_CACHE",
+   "path": "Situ/data/external/reseau_cyclable_2026-10-07.geojson",
+   "bytes": 11601831,
+   "modified": "2026-10-07T23:05:34Z",
+   "sha256": "60682f36dcb4eb9ceea627292123f21d56c2283100a6a501206d31a587858082"
+  },
+  {
+   "name": "OSM_CACHE",
+   "path": "Situ/data/external/osm_highways_2026-10-07.json",
+   "bytes": 5326624,
+   "modified": "2026-10-07T23:05:24Z",
+   "sha256": "c285cafe78118d81df4279ac5f8ef21fa13a4efb76f88475ec7b3dc78d0afcb4"
+  },
+  {
+   "name": "STREETS_FILE",
+   "path": "QGIS/Sample4-200926/Layers/ped_seg.gpkg",
+   "bytes": 24977408,
+   "modified": "2026-09-21T01:58:03Z",
+   "sha256": "aa20b2c69b43b5471699b3ec9d014a82e05fa0f2d6bcaab9e3800a8448197cdd"
+  }
+ ],
+ "upstream": [],
+ "settings": {
+  "BOUNDARY_LAYER": "griffintown_boundary",
+  "CHECK_GROUP_M": 80,
+  "CHECK_NEAR_M": 10,
+  "CONNECT_M": 25,
+  "CONNECT_TO_M": 60,
+  "CRS": "EPSG:32188",
+  "CYCLE_URL": "https://donnees.montreal.ca/dataset/5ea29f40-1b5b-4f34-85b3-7c67088ff536/resource/0dc6612a-be66-406b-b2d9-59c9e1c65ebf/download/reseau_cyclable.geojson",
+  "FIELD_CLASS": "CLASSE",
+  "FIELD_ID": "ID_TRC",
+  "FIELD_NAME": "ODONYME",
+  "FIELD_ONEWAY": "SENS_CIR",
+  "OSM_OVERPASS_URL": "https://overpass-api.de/api/interpreter",
+  "ROAD_CLASSES": {
+   "0": [
+    "Local street",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "1": [
+    "Some pedestrian ways",
+    true,
+    false,
+    "assumption, safe"
+   ],
+   "2": [
+    "Business places",
+    true,
+    false,
+    "assumption, UNSURE"
+   ],
+   "3": [
+    "Quay",
+    true,
+    true,
+    "assumption, UNSURE"
+   ],
+   "4": [
+    "Private",
+    true,
+    true,
+    "assumption, UNSURE"
+   ],
+   "5": [
+    "Collector",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "6": [
+    "Secondary arterial",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "7": [
+    "Main arterial",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "8": [
+    "Highway",
+    false,
+    true,
+    "assumption, safe"
+   ],
+   "9": [
+    "Projected street (not built)",
+    false,
+    false,
+    "excluded: does not exist yet"
+   ]
+  },
+  "SNAP_TOLERANCE_M": 0.5,
+  "STREETS_LAYER": "ped_seg"
+ },
+ "outputs": [
+  {
+   "path": "Situ/outputs/s1/checks/checkpoints.csv",
+   "bytes": 7670,
+   "sha256": "b0aeb8a085865c5b578eecdf570b8c853bc91c280e885e9a5a016063ddb26b8d"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C01.jpg",
+   "bytes": 470754,
+   "sha256": "9afabb9956325b1dd0dba3798eea83e2aa5a25c74617e03d87b3e2e9010de0cf"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C02.jpg",
+   "bytes": 506771,
+   "sha256": "f1501b16d3aa5b4c74411fdd974ec3283a5e126213b8b41c2d52ce83215a0e22"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C03.jpg",
+   "bytes": 201102,
+   "sha256": "d4c7f3bdefbd4976ccf69c6f2379a9c3f04a4f03d5af20d3fd3f72e307e0de5f"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C04.jpg",
+   "bytes": 597478,
+   "sha256": "fe34f3f51322748996c9bc6e9155ed72e5c57bdf09fb39352ed876644b91aefe"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C05.jpg",
+   "bytes": 331886,
+   "sha256": "f12dc9a81010a0f3f725b4c25e112f87ce1e323f419e519581a8a2042576f444"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C06/2016-08-06_278786740586758.jpg",
+   "bytes": 499653,
+   "sha256": "5ae66cb0ea998a4cdfd736f2e86d2c5d199cad14eb1584941c11b4543983aae6"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C06/2024-03-13_1189133725510561.jpg",
+   "bytes": 249961,
+   "sha256": "e1075f59a1bee68502e5907cb507d3731f8a3c003acae6c613c9769913b9c19d"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C06/2024-05-31_1967342223749261.jpg",
+   "bytes": 322574,
+   "sha256": "ede8f411cfd0234a87a7a470a3930a0efda8bc994e25a5ee31e316b61aedfe89"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C06_mapillary_2016.jpg",
+   "bytes": 237749,
+   "sha256": "114ccda6c27c743ce4678ae8af8e573984cc1973a86dbd5fcb1a812b7dfba3d4"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C07.jpg",
+   "bytes": 425042,
+   "sha256": "c759a6792eb564e919b9509c6a9b7ef9832e6f65aada36b4aa44b5a9077e5c92"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C08.jpg",
+   "bytes": 583212,
+   "sha256": "f1b421c18d26626e66f2321c0b461208a358e40df524337f3bb49b67829a3b73"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C09.jpg",
+   "bytes": 430118,
+   "sha256": "f8f57b67b9503a2d2023c3ba57531b333fd3298c39edff2a4214dd09d1c40b28"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C10.jpg",
+   "bytes": 411600,
+   "sha256": "89bcb96b1a21e17e756b676d42113af312fdcd36d2f1e0d04f9bf1cfa661baf6"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C11.jpg",
+   "bytes": 121417,
+   "sha256": "50ba248e286de54a01e4a4e0473eaccd43765aa0c63db2d81c2919b35544718e"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C12.jpg",
+   "bytes": 228971,
+   "sha256": "dd326c208a74d9edf4402d3792509bc5393f2463a2cb32d2d87c4e846447a3b0"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C13.jpg",
+   "bytes": 219567,
+   "sha256": "c93ab15e6b22f023a3bebfec2d6fd31a5bbaa21116440d3b8e2ab8981ef36f2a"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C14.jpg",
+   "bytes": 118701,
+   "sha256": "fe8a4e1357cbf696a5a44a261320b8c00e6ed5b282992b2891c3ecce21c3d6b9"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C15.jpg",
+   "bytes": 73840,
+   "sha256": "067a7ea675b327fb83fab372eddb4b4aeb5953af9c2cd65932f38c019ebc9ca9"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C16.jpg",
+   "bytes": 222182,
+   "sha256": "8f0ceccd29803e02f22aa31950b0d4dd78183eec70a5bb4d3a8672e26b4f3b43"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C17.jpg",
+   "bytes": 231662,
+   "sha256": "4a76a88e99ed9fe8556e3761e4f68b052d2b5750bdc6f1316480922fe3eebc5b"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/C18.jpg",
+   "bytes": 469460,
+   "sha256": "1040115ff6efeaf3d45a713ef2cea36e75ecd57c01a3c0f009387c8d81cb6d2c"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_mapillary_sheet.jpg",
+   "bytes": 957076,
+   "sha256": "090f74577bf5a37c9ebfca3f5e90ddc814eed49aae17480019a97541358d4578"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_north_2024-05-30_910227404502620.jpg",
+   "bytes": 88570,
+   "sha256": "5e07aeb9e9fedf4ca4ca9746566dc02cdb912e90d212d9a0ff705412bacd815f"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_photos.csv",
+   "bytes": 33666,
+   "sha256": "bb923b1a73c3a1072d8cc0988a0bfc039806a60a4564166e24ce17e75cc94815"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_report.txt",
+   "bytes": 1845,
+   "sha256": "34c73eb04bb031a7696c931bc7db26ad2c30e029ebfdf382f2d7b2664a637326"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_south_2023-10-24_654506096765052.jpg",
+   "bytes": 814505,
+   "sha256": "6694893bfbc3ca712747ae1bffdca89a6efa80be7bd71657fcb8baace43b9389"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_south_2023-12-15_2610851172431801.jpg",
+   "bytes": 67932,
+   "sha256": "dbc4e6c381f98a135eb635cf8372e92609c602310177eb1d2c31021074f403c4"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_south_2024-05-30_1743970226143656.jpg",
+   "bytes": 51983,
+   "sha256": "cfcaa0e127207300505c3a46881f5464acea55f377f562f884d0f78fdf6aa892"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_south_2024-05-31_866952125625658.jpg",
+   "bytes": 56756,
+   "sha256": "bca5c7378ed6f45c9161da41c62c2cd14e0f42ff853556dca4f7a45abe407d62"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_south_2025-06-16_1496922574810837.jpg",
+   "bytes": 69302,
+   "sha256": "05cafb5225a9b41c35b42a15261fcbb11540f3542588bf85327baf6df999c360"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_south_2025-06-17_4445897145694697.jpg",
+   "bytes": 60369,
+   "sha256": "c429867b4072e0d843e9fd2f9823f3ad74dd480f1e6e52e91f6103a8616267d1"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/evidence/mapillary/C04_south_2025-06-18_1054383972888961.jpg",
+   "bytes": 49326,
+   "sha256": "b32ee2d010051dd509829b46e37a9520c038199efe5830152cf1c0f2b9a4bf41"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/s1_checkpoints.png",
+   "bytes": 115951,
+   "sha256": "b55686efdc122d020f55ac3892e77f7c2c550ef2d6d27f54f3d4db956765d5fb"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/s1_decisions.csv",
+   "bytes": 11755,
+   "sha256": "7e69e95d9817cfb85f7044b94de88082084cd09d04831863b135b7dafcab93bc"
+  },
+  {
+   "path": "Situ/outputs/s1/checks/s1_test_all_bike_paths.png",
+   "bytes": 93816,
+   "sha256": "4e81c26a18a203da301ce864480366b0b3b158f07c8ddd03fc9ab3a20100da60"
+  },
+  {
+   "path": "Situ/outputs/s1/junctions.csv",
+   "bytes": 9863,
+   "sha256": "50ac3d49fbe553a2696433d92252164f6efba5362430a47b5e7ff39f4160aa3a"
+  },
+  {
+   "path": "Situ/outputs/s1/junctions.geojson",
+   "bytes": 55486,
+   "sha256": "33422431d95ff6bbe08c21b1e446077a2b219a787265d0903fa9b406f7801618"
+  },
+  {
+   "path": "Situ/outputs/s1/routes_data.js",
+   "bytes": 681432,
+   "sha256": "2b8295176bf6b73cc23d79e54e5a73acebf09615a2adf0b01efdc62235d2ba4f"
+  },
+  {
+   "path": "Situ/outputs/s1/s1_concepts.png",
+   "bytes": 31856,
+   "sha256": "eeaea8e0f7ddcfeb35ad91085184ad3c7e5914dd58b8a506d4426a94229882f3"
+  },
+  {
+   "path": "Situ/outputs/s1/s1_sheet_A_streets.png",
+   "bytes": 129448,
+   "sha256": "cc271f5d01f3eda5a8551bad16ed48f87e2877d76c59d723d78ed1a4b13a641e"
+  },
+  {
+   "path": "Situ/outputs/s1/s1_sheet_B_ids.png",
+   "bytes": 204376,
+   "sha256": "6d7ffe009b5cb0479653a23c8760fd34ab79cf9174a199d49a349c930f6884d5"
+  },
+  {
+   "path": "Situ/outputs/s1/segments.csv",
+   "bytes": 35247,
+   "sha256": "8e5ec55e8701e1793eae38042fa36875b93f7018b9aa3c872f63b76737b0ff0b"
+  },
+  {
+   "path": "Situ/outputs/s1/segments.geojson",
+   "bytes": 180870,
+   "sha256": "d616d4625cf4ae37185de01804093852f05eda779d669da4b97101e447c56a9d"
+  },
+  {
+   "path": "Situ/outputs/s1/test_report.txt",
+   "bytes": 845,
+   "sha256": "99b036f309178614f7ede7a5aee7ececab71caa4568e7bee89550f83737fd88b"
+  },
+  {
+   "path": "Situ/outputs/s1/web_data.js",
+   "bytes": 573474,
+   "sha256": "4db51be61778586bb91cf82216491c6bbd97319c524435379a7c40a64ad0329c"
+  }
+ ],
+ "tests": {
+  "report": "Situ/outputs/s1/test_report.txt",
+  "made": "2026-10-16T20:19:19Z",
+  "pass": 6,
+  "fail": 0
+ }
+}

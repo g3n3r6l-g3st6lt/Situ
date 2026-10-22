@@ -1,0 +1,166 @@
+{
+ "system": "s7",
+ "made": "2026-10-21T22:48:16Z",
+ "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
+ "code": {
+  "git_commit": "8c965e844c64cc31305cc132ec202773c2b3c5d6",
+  "differs_from_commit": false,
+  "files": [
+   {
+    "path": "Situ/s7_commuters/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/s7_commuters/build.py",
+    "sha256": "63d2cd55baf55d5ad03267ed75b4f3fec9bf7f8198b8e2473d34a9b4d926e305"
+   },
+   {
+    "path": "Situ/s7_commuters/stress.py",
+    "sha256": "cce7f6d0fae7393a9b4a0a1c2ba62517c4d4f7115d41dcda583fd26fc37c64f5"
+   },
+   {
+    "path": "Situ/s7_commuters/test.py",
+    "sha256": "6382035c435b9b47409378eeebf20d4993bbbf79a2797c2b688f271c63e3de85"
+   },
+   {
+    "path": "Situ/s7_commuters/visualize.py",
+    "sha256": "883d0df0f3317fe07bc65a451c5c2dffb96aa43e497526314534f45ef18b84a2"
+   },
+   {
+    "path": "Situ/s7_commuters/web.py",
+    "sha256": "b18adf903c18acbd19d79d38b4223c579090f03326f36a88ad56177e89b88531"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "d7370da44505e8cc72c14d5c05f38b179821e389ae89265b9e75a1b3756086a4"
+   }
+  ]
+ },
+ "inputs": [
+  {
+   "name": "CENSUS_ARRIVING_FILE",
+   "path": "Situ/data/external/statcan_98100504_griffintown_cts.csv",
+   "bytes": 183527,
+   "modified": "2026-10-16T21:21:49Z",
+   "sha256": "8320f746d047a07090bfca2128848110d56d4c621693d235f84ad12252667b07"
+  },
+  {
+   "name": "CENSUS_DWELLINGS_FILE",
+   "path": "Situ/data/external/statcan_98100014_griffintown_cts.csv",
+   "bytes": 961,
+   "modified": "2026-10-16T21:21:49Z",
+   "sha256": "8751ca3e2b5f0beeffa0b881fa7c2deda8614a1f9daf9cf9d4c101d96a6c690f"
+  },
+  {
+   "name": "CENSUS_LEAVING_FILE",
+   "path": "Situ/data/external/statcan_98100480_griffintown_cts.csv",
+   "bytes": 597012,
+   "modified": "2026-10-16T21:21:49Z",
+   "sha256": "bdc9a7a8b37f6a4ea99aa0ddc7761c00cb37abcecd3dba5daac0137b8ac1c8c7"
+  },
+  {
+   "name": "CENSUS_TRACTS_FILE",
+   "path": "Situ/data/external/statcan_census_tracts_2021_griffintown.geojson",
+   "bytes": 19734,
+   "modified": "2026-10-16T21:21:58Z",
+   "sha256": "222c92d77278271cb77101fc322dde6fb9d2b45a12068b92b020865ab8c57223"
+  },
+  {
+   "name": "CENSUS_WORK_STATUS_FILE",
+   "path": "Situ/data/external/statcan_98100478_griffintown_cts.csv",
+   "bytes": 5126,
+   "modified": "2026-10-16T21:21:49Z",
+   "sha256": "ceaea0dfb0803de5b68522e8657101a4a599040864dd47f8b53b68c756ba0b0b"
+  },
+  {
+   "name": "STM_STOPS_FILE",
+   "path": "Situ/data/external/stm_stops_study_2026-10-16.json",
+   "bytes": 44383,
+   "modified": "2026-10-16T21:36:38Z",
+   "sha256": "1c422bbf736ae19c21c987110c5765fb9f2751af539f647fc505350ed12f2c36"
+  }
+ ],
+ "upstream": [
+  {
+   "system": "s1",
+   "run_json_sha256": "138cab4385292b18709f7832165b32fe97ffa0b6c90106780877f9488bc2c055"
+  },
+  {
+   "system": "s4",
+   "run_json_sha256": "da7fcd716097cec6935439db365341dcf19cfb3c4b8b430b1be026e0a403b176"
+  }
+ ],
+ "settings": {
+  "CRS": "EPSG:32188",
+  "WFH_CANADA_2021": 0.243,
+  "WFH_CANADA_NOW": 0.174
+ },
+ "outputs": [
+  {
+   "path": "Situ/outputs/s7/arriving.csv",
+   "bytes": 43745,
+   "sha256": "f13168428e2d56289bf644d86ae66d848241b66b3147b72202b6546a2084b807"
+  },
+  {
+   "path": "Situ/outputs/s7/checkpoints.csv",
+   "bytes": 36,
+   "sha256": "56b9448c4475413c46317b0118c832c4ebbe0aa178817ee44d7fc7d4e8f6e848"
+  },
+  {
+   "path": "Situ/outputs/s7/homes.csv",
+   "bytes": 20936,
+   "sha256": "61012ced429adff8de1e4ec39287446c6525935e7c1182f379c2b453ca485537"
+  },
+  {
+   "path": "Situ/outputs/s7/leaving.csv",
+   "bytes": 16949,
+   "sha256": "49fc8a38071222ccfd7bf2d6bd3ba321d4c8eb449f4f42b4a80f3767e85ef9c9"
+  },
+  {
+   "path": "Situ/outputs/s7/meta.json",
+   "bytes": 526,
+   "sha256": "94de00cacfb71d8f18af21bcf8cad4b86658c194f3b21575df1bebfcd6ebe8e9"
+  },
+  {
+   "path": "Situ/outputs/s7/s7_sheet_homes.png",
+   "bytes": 135871,
+   "sha256": "cbce4aedfc0a687ea7bd54033381a395ac9cc58371174902809261ea49473900"
+  },
+  {
+   "path": "Situ/outputs/s7/s7_sheet_hours.png",
+   "bytes": 27875,
+   "sha256": "f972e755794bac3b19f3c400335453a1dfaa9393aec18fb948a5cc3f6fc59678"
+  },
+  {
+   "path": "Situ/outputs/s7/stops.csv",
+   "bytes": 21850,
+   "sha256": "4e9ccdd9e2ea7f23d0ecb324784b2426d075d581d76aa6b9160c2e365ba41850"
+  },
+  {
+   "path": "Situ/outputs/s7/stress_report.txt",
+   "bytes": 611,
+   "sha256": "93a8ea7fb143c5ab010584567b73262f8d3955578f536d6ca84d28ff729e0e69"
+  },
+  {
+   "path": "Situ/outputs/s7/test_report.txt",
+   "bytes": 1404,
+   "sha256": "536769e14e2a06f8097002a1dc9799f5454b66cc789c742fb0223c673a116cf4"
+  },
+  {
+   "path": "Situ/outputs/s7/tracts.csv",
+   "bytes": 1589,
+   "sha256": "689af41dddc973789d02a43fa27307d718267942a039c3573d3d3c193bfd3eba"
+  },
+  {
+   "path": "Situ/outputs/s7/web_data.js",
+   "bytes": 86391,
+   "sha256": "47b6648a3a2109a75f4b25e733fe75dfb173fdedd23e4a371309cd6e59ca64eb"
+  }
+ ],
+ "tests": {
+  "report": "Situ/outputs/s7/test_report.txt",
+  "made": "2026-10-16T23:46:42Z",
+  "pass": 7,
+  "fail": 0
+ }
+}

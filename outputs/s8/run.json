@@ -1,0 +1,123 @@
+{
+ "system": "s8",
+ "made": "2026-10-21T22:48:16Z",
+ "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
+ "code": {
+  "git_commit": "8c965e844c64cc31305cc132ec202773c2b3c5d6",
+  "differs_from_commit": false,
+  "files": [
+   {
+    "path": "Situ/s8_views/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/s8_views/build.py",
+    "sha256": "e585f505d83d188dbbe119f5f309f5228c85b79b04bdc679c61d99fb76329c0e"
+   },
+   {
+    "path": "Situ/s8_views/stress.py",
+    "sha256": "d47d23ab2001e181be17fc6f95234af531a196d080a4d450ecfc1e1d579b2ccb"
+   },
+   {
+    "path": "Situ/s8_views/test.py",
+    "sha256": "0483be3f3f146a88002e0fe78c9748d8cb229a8ccdcda8da966af9f02a8947a3"
+   },
+   {
+    "path": "Situ/s8_views/visualize.py",
+    "sha256": "d4a1a68b8a2bab7bf4482386eb979c9cbcb4349ab5e7a6fe66053a9e76f1ecec"
+   },
+   {
+    "path": "Situ/s8_views/web.py",
+    "sha256": "a8f4e4aede2fee447ab554d05cbdeaa10135d3bd7b57a74d54976bec63e93085"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "d7370da44505e8cc72c14d5c05f38b179821e389ae89265b9e75a1b3756086a4"
+   }
+  ]
+ },
+ "inputs": [
+  {
+   "name": "OSM_PLACES_FILE",
+   "path": "Situ/data/external/osm_places_2026-10-14.json",
+   "bytes": 1700971,
+   "modified": "2026-10-14T22:51:49Z",
+   "sha256": "97ccac5be65282d439cb80877e4fb218b0342306c5e64b9a99555d69babf634c"
+  }
+ ],
+ "upstream": [
+  {
+   "system": "s1",
+   "run_json_sha256": "138cab4385292b18709f7832165b32fe97ffa0b6c90106780877f9488bc2c055"
+  }
+ ],
+ "settings": {
+  "CRS": "EPSG:32188",
+  "VIEW_RADIUS_M": 300,
+  "VIEW_RAYS": 360,
+  "VIEW_STEP_M": 10
+ },
+ "outputs": [
+  {
+   "path": "Situ/outputs/s8/checkpoints.csv",
+   "bytes": 238,
+   "sha256": "39adb006213edb42c7b2bae52990be348f5040af319a38a07c1364740bd0651a"
+  },
+  {
+   "path": "Situ/outputs/s8/meta.json",
+   "bytes": 379,
+   "sha256": "823773b359902f337226d4c30e709bc1eaacd917934e7b7edc978372a7e47895"
+  },
+  {
+   "path": "Situ/outputs/s8/outlines_data.js",
+   "bytes": 150348,
+   "sha256": "706530e7ec38d6b974b3a9de6ec339de72cae76d150ba1c8489a7fbaffdd436c"
+  },
+  {
+   "path": "Situ/outputs/s8/points.csv",
+   "bytes": 167903,
+   "sha256": "a4c7a08d4758ee02a332cfcc9373a6d3e5a3ee6b0723158a88b3f581962bacd5"
+  },
+  {
+   "path": "Situ/outputs/s8/s8_sheet_area.png",
+   "bytes": 213379,
+   "sha256": "e8330beb3aec6cbb5c03b6923abc3b719e683450e8c327b771388e829880da9f"
+  },
+  {
+   "path": "Situ/outputs/s8/s8_sheet_isovists.png",
+   "bytes": 187671,
+   "sha256": "03b4dd78481eb5f2122d4b248548bb12770256c591cf2d6887a5956d05dce03c"
+  },
+  {
+   "path": "Situ/outputs/s8/segments.csv",
+   "bytes": 14654,
+   "sha256": "d0a84ea2baeac3201f0b952dcbdb909a6aff9671c1ac1e02111d3995b8e92afe"
+  },
+  {
+   "path": "Situ/outputs/s8/stress_report.txt",
+   "bytes": 1953,
+   "sha256": "7af608aeaccc83a9e1ce88af49105153f59d3237512030fe0c29fdffbc914e6f"
+  },
+  {
+   "path": "Situ/outputs/s8/test_report.txt",
+   "bytes": 1068,
+   "sha256": "a56e892f7c1bc2220dec786f7c0681b0eb7c1b6c67cebba831ab12e6c4ccef54"
+  },
+  {
+   "path": "Situ/outputs/s8/views.json",
+   "bytes": 119580,
+   "sha256": "cea4b1b8bd6fde1e2dcb41f6a168e477cf94a21db9069af71dbb64ee76c7d6d1"
+  },
+  {
+   "path": "Situ/outputs/s8/web_data.js",
+   "bytes": 111453,
+   "sha256": "0f71f15967532278dd84596c2b621bfacebe353dee90217947b57bf2b504f786"
+  }
+ ],
+ "tests": {
+  "report": "Situ/outputs/s8/test_report.txt",
+  "made": "2026-10-17T00:04:39Z",
+  "pass": 7,
+  "fail": 0
+ }
+}

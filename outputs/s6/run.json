@@ -1,0 +1,177 @@
+{
+ "system": "s6",
+ "made": "2026-10-21T22:48:16Z",
+ "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
+ "code": {
+  "git_commit": "8c965e844c64cc31305cc132ec202773c2b3c5d6",
+  "differs_from_commit": false,
+  "files": [
+   {
+    "path": "Situ/s6_streetscape/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/s6_streetscape/build.py",
+    "sha256": "953443643d417648f1e693c0622540962c26d06d925e9bdd4faa205de1d9e5b0"
+   },
+   {
+    "path": "Situ/s6_streetscape/stress.py",
+    "sha256": "37a92de2e5b68a166d8bc13b4fe78d2e3de36f4785adeccb93808747b838ad94"
+   },
+   {
+    "path": "Situ/s6_streetscape/test.py",
+    "sha256": "7471830c8e60db216b1ad8bd2545081d11d480d645f83b58a2e210a067b8160b"
+   },
+   {
+    "path": "Situ/s6_streetscape/visualize.py",
+    "sha256": "0f974d40f3c09541a624bba9d382fdd125743193c84fbc8eec82cb93d02afe34"
+   },
+   {
+    "path": "Situ/s6_streetscape/web.py",
+    "sha256": "fbbad07d9fc1b676664f2e758d9fb19f87b34a6d41ae2121db2925f9d98d9a8e"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "d7370da44505e8cc72c14d5c05f38b179821e389ae89265b9e75a1b3756086a4"
+   }
+  ]
+ },
+ "inputs": [
+  {
+   "name": "MAPILLARY_POINTS_FILE",
+   "path": "Situ/data/external/mapillary_points_2026-10-16.json",
+   "bytes": 9039684,
+   "modified": "2026-10-16T19:18:38Z",
+   "sha256": "a692e0b9aa868a2f65f1032edff5ef82fb51f379324b53247340d1dbc478543d"
+  },
+  {
+   "name": "OSM_LAMPS_FILE",
+   "path": "Situ/data/external/osm_lamps_2026-10-16.json",
+   "bytes": 23104,
+   "modified": "2026-10-16T19:22:45Z",
+   "sha256": "e0ca0b39c3eb8e23a72049fc1382af39f0a6651ff8419adff698e6f8e0ab0e19"
+  },
+  {
+   "name": "OSM_PLACES_FILE",
+   "path": "Situ/data/external/osm_places_2026-10-14.json",
+   "bytes": 1700971,
+   "modified": "2026-10-14T22:51:49Z",
+   "sha256": "97ccac5be65282d439cb80877e4fb218b0342306c5e64b9a99555d69babf634c"
+  },
+  {
+   "name": "OSM_STREET_POINTS_FILE",
+   "path": "Situ/data/external/osm_street_points_2026-10-16.json",
+   "bytes": 344039,
+   "modified": "2026-10-16T19:42:31Z",
+   "sha256": "d5234bdaf7c3febe4609e036889ce5ac34c0b66a353974bb6c1e8139513d95b5"
+  },
+  {
+   "name": "STREETSCAPE_FILE",
+   "path": "Situ/data/external/streetscape_study_2026-10-16.json",
+   "bytes": 1820178,
+   "modified": "2026-10-16T18:47:47Z",
+   "sha256": "400b10943bb5c1dfbfbf091713cb989ac19504e284e83ddccc2c3c18a72442f3"
+  }
+ ],
+ "upstream": [
+  {
+   "system": "s1",
+   "run_json_sha256": "138cab4385292b18709f7832165b32fe97ffa0b6c90106780877f9488bc2c055"
+  }
+ ],
+ "settings": {
+  "CRS": "EPSG:32188",
+  "PHOTO_KINDS": [
+   [
+    "street light",
+    [
+     "object--street-light"
+    ],
+    "L"
+   ],
+   [
+    "surveillance camera",
+    [
+     "object--cctv-camera"
+    ],
+    "C"
+   ],
+   [
+    "crossing",
+    [
+     "marking--discrete--crosswalk-zebra",
+     "construction--flat--crosswalk-plain"
+    ],
+    "X"
+   ]
+  ],
+  "PHOTO_MATCH_M": 5,
+  "PHOTO_MERGE_M": 3,
+  "PHOTO_SEEN_SINCE": "2023",
+  "STREET_LINK_M": 30,
+  "WIDE_SIDEWALK_M": 10
+ },
+ "outputs": [
+  {
+   "path": "Situ/outputs/s6/checkpoints.csv",
+   "bytes": 8730,
+   "sha256": "3a12af59cfc1da3b0b53f23fc9b00095c619cf13b82e8070a2262b6048010295"
+  },
+  {
+   "path": "Situ/outputs/s6/meta.json",
+   "bytes": 2394,
+   "sha256": "28268df9db051c47fb21efefa88e8f09facba9912bd134f61ba4e503cac89973"
+  },
+  {
+   "path": "Situ/outputs/s6/objects.csv",
+   "bytes": 592623,
+   "sha256": "a1de05b818af595163ccb5c9c739eed0c2fef5af9559c5e4b19579eddec3951c"
+  },
+  {
+   "path": "Situ/outputs/s6/s6_sheet_light.png",
+   "bytes": 131920,
+   "sha256": "6a3d940b64c7ef7c8981fd4555f06db00c55f976e421912ac6170f6cc2970b6d"
+  },
+  {
+   "path": "Situ/outputs/s6/s6_sheet_photos.png",
+   "bytes": 147847,
+   "sha256": "088de1f4d76ab25002cc228df3110925073b39d1853cbaac68d96de126c86877"
+  },
+  {
+   "path": "Situ/outputs/s6/s6_sheet_street.png",
+   "bytes": 178385,
+   "sha256": "a66843ebf76e6f14cc4b939cee5bda2112df45e8fdb6dbcc9471a8c167eec52c"
+  },
+  {
+   "path": "Situ/outputs/s6/stress_report.txt",
+   "bytes": 1283,
+   "sha256": "33d1e57cffd99a17b8a2ec38565ffcafe43a4ca578e641d9000b90ed5f2f21d5"
+  },
+  {
+   "path": "Situ/outputs/s6/surfaces.csv",
+   "bytes": 91477,
+   "sha256": "8b981d57d081649391ba27b58f30b336eb63b79c6aef7dc89b646197da202898"
+  },
+  {
+   "path": "Situ/outputs/s6/surfaces.geojson",
+   "bytes": 322364,
+   "sha256": "82457eaca73dcbfd344219023670ddadb1b60a390cdc884c1d32a1dbe78bbdf1"
+  },
+  {
+   "path": "Situ/outputs/s6/test_report.txt",
+   "bytes": 3193,
+   "sha256": "98ed9dd0cc55a53ea0a877eac76e39d0e527451eee7c1631b1d98819a5945cc9"
+  },
+  {
+   "path": "Situ/outputs/s6/web_data.js",
+   "bytes": 1333700,
+   "sha256": "753751086987169982345531508a35cfa0e27ff4e2d4b6773a6fa6d2dbd424ff"
+  }
+ ],
+ "tests": {
+  "report": "Situ/outputs/s6/test_report.txt",
+  "made": "2026-10-16T23:57:41Z",
+  "pass": 8,
+  "fail": 0
+ }
+}

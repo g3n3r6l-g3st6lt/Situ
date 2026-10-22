@@ -1,0 +1,222 @@
+{
+ "system": "s2",
+ "made": "2026-10-21T22:48:11Z",
+ "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
+ "code": {
+  "git_commit": "8c965e844c64cc31305cc132ec202773c2b3c5d6",
+  "differs_from_commit": false,
+  "files": [
+   {
+    "path": "Situ/s2_scores/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/s2_scores/build.py",
+    "sha256": "baea78363d49846ec77cd4d5d54b7eb2ccb4c8198ca7e93e67f365498e811123"
+   },
+   {
+    "path": "Situ/s2_scores/stress.py",
+    "sha256": "de9efad2f46726f97142a7205df23fa9ee619a9555e78a0186faf16daa1fa49e"
+   },
+   {
+    "path": "Situ/s2_scores/test.py",
+    "sha256": "9d092315cfaf1205a7609599bc311a565976d1f900bffc21b0ebf5b9d910de2a"
+   },
+   {
+    "path": "Situ/s2_scores/visualize.py",
+    "sha256": "e7f440d34d9b76174453e6bef81fb4b49f4da8f010cbeb4c95b94b7f74a76809"
+   },
+   {
+    "path": "Situ/s2_scores/web.py",
+    "sha256": "1ce6de1fc305a3ffb7e854f676fc0d087760406d702e08d4805592ad35929967"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "d7370da44505e8cc72c14d5c05f38b179821e389ae89265b9e75a1b3756086a4"
+   }
+  ]
+ },
+ "inputs": [
+  {
+   "name": "PED_SCORES_FILE",
+   "path": "QGIS/Sample4-200926/Layers/ped_network_seg_an.gpkg",
+   "bytes": 22335488,
+   "modified": "2026-10-10T21:20:35Z",
+   "sha256": "cd09717faecc0cb75723904fb9acec61271f88f8d0d4762fd93049168d6c54db"
+  },
+  {
+   "name": "VEH_SCORES_FILE",
+   "path": "QGIS/Sample4-200926/Layers/veh_network_seg_an.gpkg",
+   "bytes": 16957440,
+   "modified": "2026-10-10T00:59:44Z",
+   "sha256": "5429b731f742315d3fec6da97a074dcb0a448c1df648d665b08749de7ae8bacd"
+  }
+ ],
+ "upstream": [
+  {
+   "system": "s1",
+   "run_json_sha256": "138cab4385292b18709f7832165b32fe97ffa0b6c90106780877f9488bc2c055"
+  }
+ ],
+ "settings": {
+  "CRS": "EPSG:32188",
+  "FULL_COVER": 0.95,
+  "MATCH_STEP_M": 1.0,
+  "MATCH_TOL_M": 1.0,
+  "MIN_COVER": 0.5,
+  "PED_MEASURES": [
+   "connectivity",
+   "NAIN_200",
+   "NACH_200",
+   "NAIN_400",
+   "NACH_400",
+   "NAIN_800",
+   "NACH_800",
+   "NAIN_n",
+   "NACH_n"
+  ],
+  "PED_SCORES_LAYER": "ped_network_seg_an",
+  "ROAD_CLASSES": {
+   "0": [
+    "Local street",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "1": [
+    "Some pedestrian ways",
+    true,
+    false,
+    "assumption, safe"
+   ],
+   "2": [
+    "Business places",
+    true,
+    false,
+    "assumption, UNSURE"
+   ],
+   "3": [
+    "Quay",
+    true,
+    true,
+    "assumption, UNSURE"
+   ],
+   "4": [
+    "Private",
+    true,
+    true,
+    "assumption, UNSURE"
+   ],
+   "5": [
+    "Collector",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "6": [
+    "Secondary arterial",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "7": [
+    "Main arterial",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "8": [
+    "Highway",
+    false,
+    true,
+    "assumption, safe"
+   ],
+   "9": [
+    "Projected street (not built)",
+    false,
+    false,
+    "excluded: does not exist yet"
+   ]
+  },
+  "VEH_MEASURES": [
+   "NAIN_1200",
+   "NACH_1200",
+   "NAIN_2000",
+   "NACH_2000"
+  ],
+  "VEH_SCORES_LAYER": "veh_network_seg_an"
+ },
+ "outputs": [
+  {
+   "path": "Situ/outputs/s2/s2_concepts.png",
+   "bytes": 29433,
+   "sha256": "eb0bdd914af646d333b0aaa17a9335d2f205ec7e8c53d7acd260e7341483542e"
+  },
+  {
+   "path": "Situ/outputs/s2/s2_sheet_car_choice.png",
+   "bytes": 124933,
+   "sha256": "d595c54e989a601fff7a5dd80f822f0d409677a999c2d5c17dd50521fdfb872e"
+  },
+  {
+   "path": "Situ/outputs/s2/s2_sheet_car_integration.png",
+   "bytes": 125064,
+   "sha256": "a48970c354bf32fdbd1affeed3aa281fe742ade1f967b197fca09dbb136ef124"
+  },
+  {
+   "path": "Situ/outputs/s2/s2_sheet_status.png",
+   "bytes": 186883,
+   "sha256": "4fdac013b6e8241ee2eabf6a57a7925b4b31bdc95a0ca6dfa1c6061ec2896b39"
+  },
+  {
+   "path": "Situ/outputs/s2/s2_sheet_walk_choice.png",
+   "bytes": 124796,
+   "sha256": "9653a08a46666d11a20597925cc7e284a6fe2042d5ecbf559e1192ccb325c9b1"
+  },
+  {
+   "path": "Situ/outputs/s2/s2_sheet_walk_integration.png",
+   "bytes": 124113,
+   "sha256": "af77245ec4a1bd5ce88ffe5ac02ab3c6d07be3bb0747060cf9f998565b1e59fb"
+  },
+  {
+   "path": "Situ/outputs/s2/scores.csv",
+   "bytes": 80064,
+   "sha256": "d5cfe049da5e8a01b1c7ffef4b996d9bc131b25e33607fadfd65299ffeec5188"
+  },
+  {
+   "path": "Situ/outputs/s2/scores.geojson",
+   "bytes": 271044,
+   "sha256": "1e1c901eca0c783ab23d1630a712e6c2b4672f6a561aa1065f3db2fb7c46e9bd"
+  },
+  {
+   "path": "Situ/outputs/s2/stress_report.txt",
+   "bytes": 2784,
+   "sha256": "1b1dad45bbb3b1865b2fbd8dcdb3294645c55bb7eb6aae287b80bea87b8152c9"
+  },
+  {
+   "path": "Situ/outputs/s2/stress_shake.png",
+   "bytes": 14980,
+   "sha256": "334c3a6e38078558cab21ed827969383fd69b69999229000d6c8cb5f2293804e"
+  },
+  {
+   "path": "Situ/outputs/s2/test_report.txt",
+   "bytes": 2105,
+   "sha256": "80c5e33b782d5cef80675c975b47c00439de89697cc6be0eeff4f9d5236fae92"
+  },
+  {
+   "path": "Situ/outputs/s2/trace.csv",
+   "bytes": 80931,
+   "sha256": "ff9126668310165b0990fc659c089386a2c57f569434d63bb5634bf149787eaa"
+  },
+  {
+   "path": "Situ/outputs/s2/web_data.js",
+   "bytes": 145065,
+   "sha256": "445f181db430ad4f477bf38234700f17f23b8a6de285be2adf5db29e46f909b2"
+  }
+ ],
+ "tests": {
+  "report": "Situ/outputs/s2/test_report.txt",
+  "made": "2026-10-21T20:56:01Z",
+  "pass": 7,
+  "fail": 0
+ }
+}

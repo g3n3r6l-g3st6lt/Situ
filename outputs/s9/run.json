@@ -1,0 +1,188 @@
+{
+ "system": "s9",
+ "made": "2026-10-21T22:48:17Z",
+ "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
+ "code": {
+  "git_commit": "8c965e844c64cc31305cc132ec202773c2b3c5d6",
+  "differs_from_commit": false,
+  "files": [
+   {
+    "path": "Situ/s9_observer/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/s9_observer/build.py",
+    "sha256": "72e4e5ffa085af7888e3049d77c5b68b98e4904d07f65d1d5dbfb19e1637ca86"
+   },
+   {
+    "path": "Situ/s9_observer/stress.py",
+    "sha256": "2d6fe28091818946db31105cb2e07fd6365cb995826475d8d0a049a2fe01eb78"
+   },
+   {
+    "path": "Situ/s9_observer/test.py",
+    "sha256": "07cc3cd6342b95baf415380832161079fbd78e2d7c5f86e61c46127d5a666d8d"
+   },
+   {
+    "path": "Situ/s9_observer/visualize.py",
+    "sha256": "497ee05f0209df6955ff3e767745a35ffe05d46a66aa9ecb241e76bef99c7dab"
+   },
+   {
+    "path": "Situ/s9_observer/web.py",
+    "sha256": "e9eb6c40e7b0e96c0a6572da020d38d7f9b619ed0219bc042cad18bb8602362d"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "d7370da44505e8cc72c14d5c05f38b179821e389ae89265b9e75a1b3756086a4"
+   }
+  ]
+ },
+ "inputs": [],
+ "upstream": [
+  {
+   "system": "s1",
+   "run_json_sha256": "138cab4385292b18709f7832165b32fe97ffa0b6c90106780877f9488bc2c055"
+  },
+  {
+   "system": "s2",
+   "run_json_sha256": "0108e1a5db2fb97760ee165cb104e642e7c79404c9912626ab9318cddf7fcb94"
+  },
+  {
+   "system": "s4",
+   "run_json_sha256": "da7fcd716097cec6935439db365341dcf19cfb3c4b8b430b1be026e0a403b176"
+  },
+  {
+   "system": "s5",
+   "run_json_sha256": "f0a8400fb3590942b3c2dc933e311b5c13b23d62c26ea703d4ba0ef9ef0d1960"
+  },
+  {
+   "system": "s7",
+   "run_json_sha256": "e39a7d341a9f715e8da43a50a61ba8f529b4a46ae4ff04591520ffe1a60e9635"
+  },
+  {
+   "system": "s8",
+   "run_json_sha256": "023f24070536dd26711ea9c5be048539cd813ce4e8073fd39d4d199a98957014"
+  }
+ ],
+ "settings": {
+  "CRS": "EPSG:32188",
+  "DOWNTOWN_LONLAT": [
+   -73.569,
+   45.5017
+  ],
+  "S9_COMPARE_HOURS": [
+   7,
+   8
+  ],
+  "S9_HOURS": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "S9_OPEN_WEIGHT": 0.5,
+  "S9_READINGS": [
+   "shortest",
+   "open",
+   "straight"
+  ],
+  "S9_RING_PASS_M": 40
+ },
+ "outputs": [
+  {
+   "path": "Situ/outputs/s9/checkpoints.csv",
+   "bytes": 593,
+   "sha256": "fdea7a9cd45244662444cdb57debbf20a2c03cbb9ef090274fa5d4d1648b8719"
+  },
+  {
+   "path": "Situ/outputs/s9/compare_counts.csv",
+   "bytes": 1149,
+   "sha256": "5d5eaeffefd40535d05285fa3e0bd3ba9b798dce0d26535ee214b708da85114f"
+  },
+  {
+   "path": "Situ/outputs/s9/compare_ring.csv",
+   "bytes": 2756,
+   "sha256": "3f82b709f12147259e9d81dd2a3487e92fc7e7258791eb8f8e24e07b90c34ede"
+  },
+  {
+   "path": "Situ/outputs/s9/compare_s2.csv",
+   "bytes": 21403,
+   "sha256": "cdd0c102d9d3262327c714759df1562197ea81988ee638e157e083723e622b29"
+  },
+  {
+   "path": "Situ/outputs/s9/expected.csv",
+   "bytes": 657,
+   "sha256": "a353aadb4a41152770f700e9eb644030d4e11c993bea60c2d9b7fa49f47ffdf2"
+  },
+  {
+   "path": "Situ/outputs/s9/flows.csv",
+   "bytes": 35496,
+   "sha256": "f24b16ad575e110f9d0204a855929f26ff2ad3c5f613e084175780297909dd61"
+  },
+  {
+   "path": "Situ/outputs/s9/junctions.csv",
+   "bytes": 19025,
+   "sha256": "dcef9117eb2beb431ca037cb12448f01d37c13b5867b904f9ec9f9bcd70e7719"
+  },
+  {
+   "path": "Situ/outputs/s9/ledger.csv",
+   "bytes": 3706,
+   "sha256": "215bd99263b6bf10a96dcffd5fe76a580871b910ca2cf42c0d026990a30e82e9"
+  },
+  {
+   "path": "Situ/outputs/s9/meta.json",
+   "bytes": 1767,
+   "sha256": "e1af9fa4d1872dbe10f66479a3bcb8979e8aa212722d2d2b51eb4f2d61f2fcc5"
+  },
+  {
+   "path": "Situ/outputs/s9/routes.csv",
+   "bytes": 5760814,
+   "sha256": "93e8ea9425533faa402a5bba23d2280d8c4f8386e156d30ebd5be667bb675895"
+  },
+  {
+   "path": "Situ/outputs/s9/s9_sheet_counts.png",
+   "bytes": 22591,
+   "sha256": "df62f3958e9ebf0b973d1225f29cdf0100647f7e3344c7b369157b9574078ce2"
+  },
+  {
+   "path": "Situ/outputs/s9/s9_sheet_morning.png",
+   "bytes": 126174,
+   "sha256": "ddaadef6ead6284ddabc8506e3cc339f8e26db7a7cc581a9893f608a50e89e47"
+  },
+  {
+   "path": "Situ/outputs/s9/s9_sheet_readings.png",
+   "bytes": 111928,
+   "sha256": "588a3998a55a1de484fe5e93a525554e35a5081350a0aaf843f6f2cf870385e6"
+  },
+  {
+   "path": "Situ/outputs/s9/s9_sheet_ring.png",
+   "bytes": 111750,
+   "sha256": "7acffc47da8d44d9d23e6dac82646b1f55cd08658181dcf2a0b7fbbb526f65c5"
+  },
+  {
+   "path": "Situ/outputs/s9/stress_report.txt",
+   "bytes": 3543,
+   "sha256": "de3a66cb133b33cb4bdd21c6f22c63db23a63c7677efe0ddbb6c6f2f16e9d765"
+  },
+  {
+   "path": "Situ/outputs/s9/test_report.txt",
+   "bytes": 2259,
+   "sha256": "6ce9ec8b9d60daa0eeeaf6e0a465566c4298d894de69cba7b679813f59a5c089"
+  },
+  {
+   "path": "Situ/outputs/s9/trips.csv",
+   "bytes": 1708011,
+   "sha256": "da936c25f147e3543d1bd91cfe683c32b53e6b02475550303344e9c980f5a0ac"
+  },
+  {
+   "path": "Situ/outputs/s9/web_data.js",
+   "bytes": 41262,
+   "sha256": "c89abbad11d797a786a8945f0465d7464d51314bc2ac0e87ffa1c6b77d4cbc88"
+  }
+ ],
+ "tests": {
+  "report": "Situ/outputs/s9/test_report.txt",
+  "made": "2026-10-21T20:33:33Z",
+  "pass": 10,
+  "fail": 0
+ }
+}
