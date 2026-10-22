@@ -503,6 +503,18 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Tracing a result</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recreate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Make it for another city</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./formats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formats</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -566,7 +578,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="glance">
 <p><strong>Asks</strong> What can a game stand on and move among, taken from the systems with nothing made up?</p>
 <p><strong>Found</strong> The streets and 296 building masses in one frame, with 2,783 props. 73 buildings have no height in any source, and stay without one.</p>
-<p><strong>Stands</strong> verified: 8 tests pass. 14 decisions in the ledger, 4 of them assumptions.</p>
+<p><strong>Stands</strong> verified: 9 tests pass. 14 decisions in the ledger, 4 of them assumptions.</p>
 <p><strong>Leaves out</strong> Roofs, facades, interiors, entrances, terrain. A game that shows them invents them.</p>
 <p><strong>In the game</strong> World: the ground and the masses (<a href="./play.html#world">From systems to a game</a>).</p>
 <p><strong>Trace</strong> <a href="outputs/g1/ledger.csv">ledger</a> · <a href="outputs/g1/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a>, <a href="./s4-buildings.html">S4</a> and <a href="./s6-streetscape.html">S6</a></p>
@@ -856,7 +868,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="tests" class="level2">
 <h2 class="anchored" data-anchor-id="tests">Tests</h2>
-<p>Eight checks, all PASS (<a href="outputs/g1/test_report.txt">report</a>). The ground is exactly S1’s segments and junctions, once each, and moving it back by the origin gives S1’s coordinates to the centimetre. Every height is recomputed from S4 and matches, and the 73 without a source stay empty. Every door sits on its outline, no further from its street than S4 measured. Every S6 row is accounted for, either as a prop or as a detection matched to one. The ledger covers every layer.</p>
+<p>Nine checks, all PASS (<a href="outputs/g1/test_report.txt">report</a>). The ground is exactly S1’s segments and junctions, once each, and moving it back by the origin gives S1’s coordinates to the centimetre. Every height is recomputed from S4 and matches, and the 73 without a source stay empty. Every door sits on its outline, no further from its street than S4 measured. Every S6 row is accounted for, either as a prop or as a detection matched to one. The ledger covers every layer, and the files keep the <a href="./formats.html">published format</a>: a version number, numbers stored as numbers, and missing values stored as empty (null), never as zero.</p>
 <p>The door check failed at first. One building’s door came out 4.9 m from the street, where S4 had 1.1 m. Rue Barré runs through that outline, and the first door rule only looked at corners. The rule now places the door where the street enters the outline, and the building is a checkpoint.</p>
 </section>
 <section id="plan" class="level2">

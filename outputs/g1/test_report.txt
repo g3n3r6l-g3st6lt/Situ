@@ -29,7 +29,11 @@ T8  Does the ledger cover every layer, with every row of a known kind?
     14 rows
     PASS
 
-T9  What the world leaves to be checked (report only)
+T9  Do the files keep the published format: a version, numbers as numbers, missing as null?
+    situ-g1 0.1
+    PASS
+
+T10 What the world leaves to be checked (report only)
     height unknown: 73
     not seen lately: 34
     count unsure: 26

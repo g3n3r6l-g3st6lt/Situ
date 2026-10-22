@@ -498,6 +498,18 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Tracing a result</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recreate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Make it for another city</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./formats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formats</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -511,6 +523,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#what-the-engine-is-allowed-to-hold" id="toc-what-the-engine-is-allowed-to-hold" class="nav-link active" data-scroll-target="#what-the-engine-is-allowed-to-hold">What the engine is allowed to hold</a></li>
+  <li><a href="#plugins" id="toc-plugins" class="nav-link" data-scroll-target="#plugins">Small plugins that stack</a></li>
   <li><a href="#why-unreal" id="toc-why-unreal" class="nav-link" data-scroll-target="#why-unreal">Why Unreal</a></li>
   <li><a href="#why-not-city-sample" id="toc-why-not-city-sample" class="nav-link" data-scroll-target="#why-not-city-sample">Why not City Sample</a></li>
   <li><a href="#what-unreal-costs" id="toc-what-unreal-costs" class="nav-link" data-scroll-target="#what-unreal-costs">What Unreal costs</a></li>
@@ -544,7 +557,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="glance">
-<p><strong>Asks</strong> Which engine should show the G files in 3D and let a player act in them?</p>
+<p><strong>Asks</strong> Which engine should show the G files in 3D and let a player act in them, and how should its parts be built?</p>
 <p><strong>Decision</strong> Unreal Engine 5, without City Sample (researcher decision). Earlier prototypes used version 5.8.</p>
 <p><strong>Stands</strong> A decision with a test planned before anything moves into the engine.</p>
 <p><strong>Leaves out</strong> Play in a web browser: Unreal has not exported to the browser since version 4.24.</p>
@@ -590,6 +603,208 @@ flowchart LR
 </div>
 </div>
 </div>
+</section>
+<section id="plugins" class="level2">
+<h2 class="anchored" data-anchor-id="plugins">Small plugins that stack</h2>
+<p>Each task in the engine is its own plugin. A plugin reads one kind of G file, does one job, and runs alone on a small test file. Plugins never call each other. They share a small core, and they stack because they read files written in the same frame, with the same ids.</p>
+<p>The building plugin shows the idea. Given any blocks file in the <a href="./formats.html#blocks">published format</a>, it places each footprint at its position and raises it to its height, for Griffintown or any other city. It does not work out a height: <a href="./g1-world.html">G1</a> does that in Python, and the file says how. The plugin stays simple, and each rule lives in one place. A building with no known height is drawn as unknown, and a flat top means only that no roof data exists.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
+flowchart BT
+  CORE[Situ Core: frame, ids, file reading, log]:::data
+  subgraph W [World: each runs alone]
+    direction LR
+    B[Buildings]:::step ~~~ GR[Ground]:::step ~~~ SU[Surfaces]:::step ~~~ PR[Props]:::step
+  end
+  subgraph M [Movement: needs lanes, and someone to move]
+    direction LR
+    PE[People]:::step ~~~ WA[Walk]:::step ~~~ JU[Junctions]:::step ~~~ DR[Drive]:::step
+  end
+  subgraph T [Points and check]
+    direction LR
+    PO[Points]:::step ~~~ CH[Check]:::rule
+  end
+  CORE --&gt; W
+  W --&gt; M
+  M --&gt; T
+  classDef data fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff
+  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
+  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
+  style W fill:#000000,stroke:#3a3a3a,color:#a6a6a6
+  style M fill:#000000,stroke:#3a3a3a,color:#a6a6a6
+  style T fill:#000000,stroke:#3a3a3a,color:#a6a6a6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Read the stack from the bottom. Every plugin needs only the core to start. The world plugins each run alone. Some movement tasks need something below them by nature: walking needs someone to walk and somewhere to walk on. Those needs are declared in the table, and a plugin says plainly which one is missing. Any plugin that provides lanes can serve Walk and Drive, so Situ Ground can be swapped for another lane source.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Plugin</th>
+<th>One task</th>
+<th>Reads</th>
+<th>Needs besides the core</th>
+<th>Part</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Situ Core</td>
+<td>the frame (metres to centimetres, the engine’s axes); the source id on every element; reading files with a version check; the log every plugin writes to</td>
+<td>frame.json</td>
+<td>none</td>
+<td>all</td>
+</tr>
+<tr class="even">
+<td>Situ Buildings</td>
+<td>place each footprint and raise it to its height; unknown heights shown as unknown; doors as markers</td>
+<td>blocks.geojson</td>
+<td>none</td>
+<td>G1</td>
+</tr>
+<tr class="odd">
+<td>Situ Ground</td>
+<td>lanes for walking and driving from the street segments</td>
+<td>ground.geojson</td>
+<td>the engine’s ZoneGraph</td>
+<td>G1</td>
+</tr>
+<tr class="even">
+<td>Situ Surfaces</td>
+<td>sidewalks and islands as walkable surfaces</td>
+<td>surfaces.geojson</td>
+<td>none</td>
+<td>G1</td>
+</tr>
+<tr class="odd">
+<td>Situ Props</td>
+<td>each prop by class, from a table of meshes</td>
+<td>props.csv</td>
+<td>the engine’s PCG</td>
+<td>G1</td>
+</tr>
+<tr class="even">
+<td>Situ Terrain</td>
+<td>the ground’s height</td>
+<td>the terrain file</td>
+<td>none</td>
+<td>G1b</td>
+</tr>
+<tr class="odd">
+<td>Situ People</td>
+<td>create NPCs and run their plans on the clock</td>
+<td>plan files</td>
+<td>a lane source</td>
+<td>G2</td>
+</tr>
+<tr class="even">
+<td>Situ Walk</td>
+<td>walking, avoiding others, crossing</td>
+<td>route files</td>
+<td>People; a lane source</td>
+<td>G3</td>
+</tr>
+<tr class="odd">
+<td>Situ Junctions</td>
+<td>lights and stop signs</td>
+<td>the junction control file</td>
+<td>a lane source</td>
+<td>G3</td>
+</tr>
+<tr class="even">
+<td>Situ Drive</td>
+<td>car following, turns and limits</td>
+<td>route files; rules</td>
+<td>a lane source; Junctions</td>
+<td>G3</td>
+</tr>
+<tr class="odd">
+<td>Situ Parking</td>
+<td>legal places by hour</td>
+<td>the parking file</td>
+<td>Drive</td>
+<td>G3</td>
+</tr>
+<tr class="even">
+<td>Situ Points</td>
+<td>places to stop, with the staying rule</td>
+<td>the points file</td>
+<td>People</td>
+<td>G4</td>
+</tr>
+<tr class="odd">
+<td>Situ Check</td>
+<td>counters at junctions, the run log, the inspector</td>
+<td>the run log</td>
+<td>any of the above</td>
+<td>G5</td>
+</tr>
+<tr class="even">
+<td>Situ Missions</td>
+<td>the missions</td>
+<td>mission files</td>
+<td>what each mission uses</td>
+<td>G6</td>
+</tr>
+</tbody>
+</table>
+<p>Every plugin keeps the same rules:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rule</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>one task, and one kind of input file with a version number</td>
+<td>it can be used alone, and a changed file cannot be read by mistake</td>
+</tr>
+<tr class="even">
+<td>settings in a data asset, none typed into the code</td>
+<td>every number can be found, changed and logged</td>
+</tr>
+<tr class="odd">
+<td>every element it makes carries its source id</td>
+<td>the inspector can follow anything on screen back to its source row</td>
+</tr>
+<tr class="even">
+<td>it writes to the shared log, never into another plugin</td>
+<td>plugins stay independent</td>
+</tr>
+<tr class="odd">
+<td>its own test map, test file and automated tests</td>
+<td>it is shown to work alone before it is stacked</td>
+</tr>
+<tr class="even">
+<td>it reads decisions and never makes them</td>
+<td>heights, plans and routes are decided once, in Python, with the ledger</td>
+</tr>
+<tr class="odd">
+<td>missing data is shown as missing</td>
+<td>the same rule as every system</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="why-unreal" class="level2">
 <h2 class="anchored" data-anchor-id="why-unreal">Why Unreal</h2>
@@ -781,15 +996,21 @@ flowchart TB
 </tr>
 <tr class="odd">
 <td>3</td>
-<td>read G1 into the engine through the files only</td>
+<td>Situ Core, then Situ Buildings, each with its test map</td>
 <td>G1</td>
-<td>nothing in the level that a G file does not hold</td>
+<td>Buildings runs alone on a test file and on Griffintown; nothing in the level that a G file does not hold</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td>bring in G3 and G4 subsystem by subsystem, each with its tests</td>
-<td>G3, G4</td>
-<td>each subsystem passes in the engine as in Python</td>
+<td>Situ Ground, Surfaces and Props, one at a time</td>
+<td>G1</td>
+<td>each runs alone, then all four stack in one level</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>the movement plugins, then Points and Check, one at a time</td>
+<td>G2, G3, G4</td>
+<td>each passes alone, then stacked, with the same results as in Python</td>
 </tr>
 </tbody>
 </table>

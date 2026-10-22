@@ -1,9 +1,9 @@
 {
  "system": "g1",
- "made": "2026-10-22T12:38:32Z",
+ "made": "2026-10-22T20:30:11Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "775ddac02805d10851bc05556fc095e8bdaafee4",
+  "git_commit": "cec0419c66921b3827c72cca5c97434f7f607c86",
   "differs_from_commit": true,
   "files": [
    {
@@ -12,15 +12,15 @@
    },
    {
     "path": "Situ/g1_world/build.py",
-    "sha256": "d83339ed5f7af2a1b2b7cbc26477dd8f448ad5bfff7400d376d4e5708ba48fa2"
+    "sha256": "0e6f35f6233d631753ae9247aacdd1be1047dd091b239d2f91297e242c06b4cb"
    },
    {
     "path": "Situ/g1_world/test.py",
-    "sha256": "44be72e2871ff914f9555e112bc0d1f7e1a8e55670f7049ce27a4f6050ee3d68"
+    "sha256": "601277ddd4f0ae4b0f79d86abab73acdaf1e64a3ea79049a08ced04c68eb60a3"
    },
    {
     "path": "Situ/g1_world/visualize.py",
-    "sha256": "40f6ad04a76a95c203e5357b23932864a37d27a1c3cc756cd23bb946852fd34a"
+    "sha256": "5b0a30c4dd7e66aa516d6ea09378aa5b1a0b03f52db1ef56ee79602ec583375c"
    },
    {
     "path": "Situ/config.py",
@@ -75,8 +75,8 @@
  "outputs": [
   {
    "path": "Situ/outputs/g1/blocks.geojson",
-   "bytes": 233741,
-   "sha256": "ea128452b3cd3e1d6c344e6cfc12e5c107319e1150823ca8cb57329042e220bb"
+   "bytes": 241572,
+   "sha256": "f84e685f4e2d4e9627440e362959c5eec672aec9f48f526a1f342fdeb7578461"
   },
   {
    "path": "Situ/outputs/g1/checkpoints.csv",
@@ -85,8 +85,8 @@
   },
   {
    "path": "Situ/outputs/g1/frame.json",
-   "bytes": 991,
-   "sha256": "e1e5b86f524dde1bb2f0e17718a199869d62015d4adc2001b970cebec08f0d17"
+   "bytes": 1018,
+   "sha256": "d2e263ea418abddbc8fbaea58c9cfd9e69ed610a60b59291e3b34e7b0055ea15"
   },
   {
    "path": "Situ/outputs/g1/g1_sheet_world.png",
@@ -95,8 +95,8 @@
   },
   {
    "path": "Situ/outputs/g1/ground.geojson",
-   "bytes": 157395,
-   "sha256": "5e99e2dcbc8b660e753bde3b3db815ef1a37b3fa46d02ca035ab23818d50ab8e"
+   "bytes": 156961,
+   "sha256": "5f3a05be6789cae8ce9b50760beaf12fe3ae40855da20abf513003ed5599383d"
   },
   {
    "path": "Situ/outputs/g1/ledger.csv",
@@ -110,20 +110,20 @@
   },
   {
    "path": "Situ/outputs/g1/surfaces.geojson",
-   "bytes": 344072,
-   "sha256": "10e7bd02b0c57c530cab0329d31d9e9d521c2baf2e034d529938670a13c64514"
+   "bytes": 343494,
+   "sha256": "6c6cd9500cb290117226c67bbde27bc09b2c276a29ca0b255451aebb7a6016b9"
   },
   {
    "path": "Situ/outputs/g1/test_report.txt",
-   "bytes": 1541,
-   "sha256": "f0da361604dd5c199d350caf94bde0e7d9d0ac45f0b683a752f3d6e8aacf7ec5"
+   "bytes": 1659,
+   "sha256": "1b9f35eac0f1cd86f894192d73872e4d762df6983dc19749128233101a76e9e6"
   }
  ],
  "tests": {
   "report": "Situ/outputs/g1/test_report.txt",
-  "made": "2026-10-22T12:38:29Z",
-  "checks": 9,
-  "pass": 8,
+  "made": "2026-10-22T20:30:02Z",
+  "checks": 10,
+  "pass": 9,
   "fail": 0,
   "info": 1
  }

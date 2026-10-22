@@ -1,7 +1,9 @@
 {
+ "format": "situ-g1",
+ "format_version": "0.1",
  "made": "2026-10-22",
- "crs_of_sources": "EPSG:32188",
- "origin_epsg32188": [
+ "crs": "EPSG:32188",
+ "origin": [
   299180,
   5038120
  ],
