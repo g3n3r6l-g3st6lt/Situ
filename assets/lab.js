@@ -648,7 +648,16 @@
     const hrs = [...Array(24).keys()].filter(h => by.pedestrian[h] != null);
     return `<h3 class="lab-s"><a href="s5-rhythm.html" title="the S5 page">S5</a> · counted here</h3><p class="sub">${days.map(d => esc(d.weekday + " " + d.date)).join(", ")}. Mean per full hour counted:</p>
       <table class="lab-vals"><tr><th></th><th>on foot</th><th>bicycles</th><th>vehicles</th></tr>${hrs.map(h =>
-        `<tr><td>${h}h</td><td>${Math.round(by.pedestrian[h])}</td><td>${Math.round(by.bicycle[h])}</td><td>${Math.round(by.vehicle[h])}</td></tr>`).join("")}</table>`;
+        `<tr><td>${h}h</td><td>${Math.round(by.pedestrian[h])}</td><td>${Math.round(by.bicycle[h])}</td><td>${Math.round(by.vehicle[h])}</td></tr>`).join("")}</table>` + years5HTML(id);
+  }
+  // the same junction counted in other years, and the weather of each counted day (years.py)
+  function years5HTML(id) {
+    const ys = (S5.years || []).filter(y => y.junction === id);
+    if (!ys.length) return "";
+    return `<p class="sub">Every day counted here, today's and earlier: people on foot per hour over the reference hours, how closely the day's shape follows S5's weekday (r), and the weather from 7 to 18 h at McTavish.</p>
+      <table class="lab-vals"><tr><th>day</th><th>on foot</th><th>r</th><th>°C</th><th>mm</th></tr>${ys.map(y =>
+        `<tr><td>${esc(y.date)}${y.period === "today (S5)" ? "" : " *"}</td><td>${y.pedestrians_per_ref_hour || "none"}</td><td>${y.shape_r_with_s5 || "none"}</td><td>${y.temp_7_18_c}</td><td>${y.precip_7_18_mm}</td></tr>`).join("")}</table>
+      <p class="sub">* an earlier year: compared, never used in S5's shape.</p>`;
   }
 
   // S6: what stands on the streets

@@ -1,0 +1,54 @@
+{
+ "reference_hours": [
+  7,
+  8,
+  11,
+  12,
+  16,
+  17
+ ],
+ "station": "ECCC MCTAVISH 7024745",
+ "periods": {
+  "2008-2010": {
+   "days": 3,
+   "junctions": [
+    "J040",
+    "J051",
+    "J181"
+   ],
+   "weekend_days": 0,
+   "median_shape_r": 0.823
+  },
+  "2011-2013": {
+   "days": 1,
+   "junctions": [
+    "J051"
+   ],
+   "weekend_days": 0,
+   "median_shape_r": 0.814
+  },
+  "2017-2019": {
+   "days": 5,
+   "junctions": [
+    "J051",
+    "J181"
+   ],
+   "weekend_days": 0,
+   "median_shape_r": 0.813
+  },
+  "today (S5)": {
+   "days": 9,
+   "junctions": [
+    "J006",
+    "J040",
+    "J051",
+    "J056",
+    "J086",
+    "J092",
+    "J181"
+   ],
+   "weekend_days": 0,
+   "median_shape_r": 0.969
+  }
+ }
+}

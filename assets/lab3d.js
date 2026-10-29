@@ -7,7 +7,10 @@
     - each building stands at the height G1 World chose for it (window.SITU_G1), on S4's outline; where G1 splits an outline
       into its measured parts (W36), the outline stands at its base height and each part at its own. A building with no
       height in any source stays a thin dashed-looking plate: unknown, never a guessed mass.
-  Clicking a building or a street in 3D opens the same panel as in 2D.
+  Pointing and clicking work as in 2D, because they ARE the 2D map's: a 3D pointer is turned into the point on the ground
+  it falls on, and the event is handed to the 2D element drawn there (its own handler runs) or to the 2D map at that point
+  (the walk and minutes tools, and the objects found by nearness). Moving the 3D camera moves the hidden 2D view with it,
+  so the marks drawn only when zoomed in (S6's icons, labels) appear in 3D too.
 
   Needs: three.js r160 (assets/vendor/three, MIT), lab.js (window.SituLab), outputs/s4 and outputs/g1 web data.
 */
@@ -35,7 +38,7 @@ ready(L => {
   let view = null;
   btn.addEventListener("click", () => {
     if (!view) {
-      try { view = new View3D(L); } catch (err) { btn.disabled = true; btn.title = "3D needs WebGL, which this browser does not offer"; return; }
+      try { view = new View3D(L); L.view3d = view; } catch (err) { btn.disabled = true; btn.title = "3D needs WebGL, which this browser does not offer"; return; }
     }
     const on = !host.classList.contains("is-3d");
     host.classList.toggle("is-3d", on);
@@ -121,6 +124,7 @@ class View3D {
       o.traverse(x => { if (x.geometry) x.geometry.dispose(); });
     }
     this.picks = [];
+    this.targets = [];
   }
 
   // ---------------------------------------------------------------- the scene, read from the 2D map
@@ -143,8 +147,14 @@ class View3D {
         const cs = getComputedStyle(el);
         if (cs.display === "none") continue;          // (visibility is hidden on purpose: the 2D map hides under the 3D one)
         const op = +cs.opacity || 0;
-        if (op < 0.05 || el.classList.contains("sx-hit") || el.classList.contains("sx-jhit")) continue;
         const tag = el.tagName;
+        if (el.classList.contains("sx-hit") || el.classList.contains("sx-jhit")) {        // the 2D map's own click targets
+          if (cs.pointerEvents === "none") continue;                                        // switched off here, as in 2D
+          if (tag === "circle") { const [x, z, r] = this.centre(el); this.targets.push(this.hitDisc(x, y, z, Math.max(r, 2), el)); }
+          else { const pts = this.points(el); if (pts.length > 1) this.targets.push(this.hitBand(pts, y, Math.max(7, (parseFloat(cs.strokeWidth) || 14) * M_PER_PX * 0.5), el)); }
+          continue;
+        }
+        if (op < 0.05) continue;
         if (tag === "circle" || tag === "rect" || tag === "use") {
           const fill = cs.fill !== "none" ? cs.fill : cs.stroke !== "none" ? cs.stroke : cs.color;
           if (!fill || fill === "none") continue;
@@ -164,6 +174,7 @@ class View3D {
         const closed = tag === "path" && /z\s*$/i.test(d.trim());
         if (closed && cs.fill !== "none" && (+cs.fillOpacity || 0) > 0.02) {
           this.add(plates, cs.fill, op * (+cs.fillOpacity || 1), { pts, y });
+          if (el.classList.contains("lab-surf6")) this.targets.push(this.hitPlate(pts, y, el));
         }
         if (cs.stroke !== "none" && (+cs.strokeOpacity || 1) > 0.02) {
           const w = Math.max((parseFloat(cs.strokeWidth) || 1) * M_PER_PX, MIN_BAND_M);
@@ -176,6 +187,8 @@ class View3D {
     for (const [key, list] of plates) this.world.add(this.plateMesh(key, list));
     for (const [key, list] of bands) this.world.add(this.bandMesh(key, list));
     for (const [key, list] of discs) this.world.add(this.discMesh(key, list));
+    this.labels();
+    for (const t of this.targets) this.world.add(t);
     this.draw();
   }
 
@@ -206,7 +219,7 @@ class View3D {
   }
 
   bandMesh(key, list) {
-    const [css, op] = this.split(key), pos = [], idx = [], segOf = [];
+    const [css, op] = this.split(key), pos = [], idx = [];
     for (const it of list) {
       for (let i = 0; i < it.pts.length - 1; i++) {
         const [x1, z1] = it.pts[i], [x2, z2] = it.pts[i + 1], len = Math.hypot(x2 - x1, z2 - z1);
@@ -214,16 +227,63 @@ class View3D {
         const nx = -(z2 - z1) / len * it.w / 2, nz = (x2 - x1) / len * it.w / 2, b = pos.length / 3;
         pos.push(x1 + nx, it.y, z1 + nz, x1 - nx, it.y, z1 - nz, x2 + nx, it.y, z2 + nz, x2 - nx, it.y, z2 - nz);
         idx.push(b, b + 1, b + 2, b + 1, b + 3, b + 2);
-        segOf.push(it.seg, it.seg);
       }
     }
     const g = new THREE.BufferGeometry();
     g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3)); g.setIndex(idx);
-    const m = new THREE.Mesh(g, this.mat("flat", css, op));
-    m.userData.segOf = segOf;
-    if (segOf.some(Boolean)) this.picks.push(m);
+    return new THREE.Mesh(g, this.mat("flat", css, op));
+  }
+  // invisible copies of the 2D map's click targets, each naming its 2D element
+  hitBand(pts, y, w, el) {
+    const pos = [], idx = [];
+    for (let i = 0; i < pts.length - 1; i++) {
+      const [x1, z1] = pts[i], [x2, z2] = pts[i + 1], len = Math.hypot(x2 - x1, z2 - z1);
+      if (!len) continue;
+      const nx = -(z2 - z1) / len * w / 2, nz = (x2 - x1) / len * w / 2, b = pos.length / 3;
+      pos.push(x1 + nx, y, z1 + nz, x1 - nx, y, z1 - nz, x2 + nx, y, z2 + nz, x2 - nx, y, z2 - nz);
+      idx.push(b, b + 1, b + 2, b + 1, b + 3, b + 2);
+    }
+    const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3)); g.setIndex(idx);
+    return this.target(g, el);
+  }
+  hitDisc(x, y, z, r, el) {
+    const g = new THREE.CircleGeometry(r, 12); g.rotateX(-Math.PI / 2); g.translate(x, y + 0.03, z);
+    const m = this.target(g, el); m.userData.centre = [x, z]; return m;
+  }
+  hitPlate(pts, y, el) {
+    const g = new THREE.ShapeGeometry(new THREE.Shape(pts.map(([x, z]) => new THREE.Vector2(x, -z)))); g.rotateX(-Math.PI / 2); g.translate(0, y, 0);
+    return this.target(g, el);
+  }
+  target(g, el) {
+    const m = new THREE.Mesh(g, this.hidden || (this.hidden = new THREE.MeshBasicMaterial({ visible: false, side: THREE.DoubleSide })));
+    m.userData.el = el;
     return m;
   }
+
+  // the 2D map's labels, as flat cards that always face the camera
+  labels() {
+    const g = this.svg.querySelector(".layer-labels");
+    if (!g || g.style.display === "none") return;
+    for (const t of g.querySelectorAll("text")) {
+      const cs = getComputedStyle(t), str = t.textContent;
+      if (!str || cs.display === "none") continue;
+      const px = 22, c = document.createElement("canvas"), k = c.getContext("2d");
+      k.font = `${px}px ${cs.fontFamily || "sans-serif"}`;
+      c.width = Math.ceil(k.measureText(str).width) + 12; c.height = px + 12;
+      k.font = `${px}px ${cs.fontFamily || "sans-serif"}`; k.textBaseline = "middle";
+      k.lineWidth = 5; k.strokeStyle = "#000"; k.strokeText(str, 6, c.height / 2);
+      k.fillStyle = cs.fill && cs.fill !== "none" ? cs.fill : "#ffffff"; k.fillText(str, 6, c.height / 2);
+      const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
+      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, sizeAttenuation: false, depthTest: false, transparent: true }));
+      const h = 0.032;                                         // a share of the view's height, the same size at any distance
+      sp.scale.set(h * c.width / c.height, h, 1);
+      sp.center.set(t.getAttribute("text-anchor") === "middle" ? 0.5 : t.getAttribute("text-anchor") === "end" ? 1 : 0, 0.5);
+      sp.position.set(+t.getAttribute("x"), 2, +t.getAttribute("y"));
+      sp.renderOrder = 10;
+      this.world.add(sp);
+    }
+  }
+
   plateMesh(key, list) {
     const [css, op] = this.split(key), geos = [];
     for (const it of list) {
@@ -251,6 +311,7 @@ class View3D {
       const g1 = G1 && G1.blocks[b.id], h = g1 && g1.h != null ? g1.h : null;
       let css = "#4a4a4a", op = 1;
       const el = layer && layer.querySelector(`[data-b="${b.id}"]`);
+      const pick = shown && el && getComputedStyle(el).pointerEvents !== "none";   // only where 2D lets it be pointed at
       if (shown && el) {
         const cs = getComputedStyle(el);
         if (cs.fill && cs.fill !== "none") { css = cs.fill; op = Math.max(0.35, (+cs.fillOpacity || 1) * (+cs.opacity || 1)); }
@@ -266,45 +327,75 @@ class View3D {
         mesh.userData.b = b.id;
         group.add(mesh);
         group.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo, 20), this.mat("line", "#000000", 0.55)));
-        this.picks.push(mesh);
+        if (pick) { mesh.userData.el = el; this.picks.push(mesh); }    // else the pointer passes through, as it does in 2D
       }
     }
     this.world.add(group);
   }
 
-  // ---------------------------------------------------------------- pointing and clicking
+  // ---------------------------------------------------------------- pointing and clicking, handed to the 2D map
+  // the first thing under the pointer: a building (it hides what lies behind it), else a 2D click target, else the ground
   hit(e) {
     const r = this.canvas.getBoundingClientRect();
     const v = new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
     this.ray.setFromCamera(v, this.camera);
-    const h = this.ray.intersectObjects(this.picks, false)[0];
-    if (!h) return null;
-    if (h.object.userData.b) return { b: h.object.userData.b };
-    const s = h.object.userData.segOf && h.object.userData.segOf[Math.floor(h.faceIndex / 2)];
-    return s ? { seg: s } : null;
+    const all = this.ray.intersectObjects(this.picks.concat(this.targets), false);
+    // targets lying on the same layer tie: as in 2D, the point nearest the pointer wins (the centre of a mark)
+    const near = all.filter(x => x.distance <= (all[0] ? all[0].distance : 0) + 0.5);
+    const h = near.find(x => x.object.userData.b) ||
+      near.slice().sort((a, c) => this.off(a) - this.off(c))[0];
+    let p = h ? h.point : null;
+    if (!p) { const q = new THREE.Vector3(); p = this.ray.ray.intersectPlane(new THREE.Plane(new THREE.Vector3(0, 1, 0), 0), q); }
+    return { el: h && h.object.userData.el || null, b: h && h.object.userData.b, p };
+  }
+  off(x) { const c = x.object.userData.centre; return c ? Math.hypot(x.point.x - c[0], x.point.z - c[1]) : 1e6; }
+  // where a world point (the map's metres) stands on the 3D screen: for the browser tests
+  screenOf(w, y = 0) {
+    const v = new THREE.Vector3(w[0] - this.map.o[0], y, this.map.o[1] - w[1]).project(this.camera), r = this.canvas.getBoundingClientRect();
+    return [r.left + (v.x + 1) / 2 * r.width, r.top + (1 - v.y) / 2 * r.height];
+  }
+  // where a ground point (3D) would be on screen in the hidden 2D map
+  screen2d(p) {
+    const w = [p.x + this.map.o[0], this.map.o[1] - p.z], [sx, sy] = this.map.toScreen(w), r = this.svg.getBoundingClientRect();
+    return { clientX: r.left + sx, clientY: r.top + sy };
+  }
+  send(type, h, e) {
+    if (h.el && !h.el.isConnected) { clearTimeout(this.t); this.build(); h = this.hit(e); }   // the 2D map was redrawn: catch up first
+    if (!h.p) return false;
+    const at = this.screen2d(h.p);
+    const ev = new MouseEvent(type, Object.assign({ bubbles: true, cancelable: true, buttons: 0 }, at));
+    (h.el || this.svg).dispatchEvent(ev);
+    if (type === "pointermove" && this.map.tipEl.classList.contains("on")) {     // the tip goes where the 3D pointer is
+      const r = this.host.getBoundingClientRect();
+      this.map.tipEl.style.left = (e.clientX - r.left + 14) + "px"; this.map.tipEl.style.top = (e.clientY - r.top + 14) + "px";
+    }
+    return true;
   }
   events() {
-    let down = null;
+    let down = null, last = null;
     this.canvas.addEventListener("pointerdown", e => { down = [e.clientX, e.clientY]; });
     this.canvas.addEventListener("pointermove", e => {
       if (e.buttons) { this.map.untip(); return; }
       const h = this.hit(e);
-      if (h && h.b) {
-        const S4 = window.SITU_S4, G1 = window.SITU_G1, b = S4.buildings.find(x => x.id === h.b), g = G1 && G1.blocks[h.b];
-        this.map.tip(e, `${esc(b.name || b.id)}<br><span>${g && g.h != null ? g.h + " m, " + esc(g.source) : "height unknown"}</span>`);
-        this.canvas.style.cursor = "pointer";
-      } else if (h && h.seg) {
-        const s = (window.SITU_S1.segments || []).find(x => x.id === h.seg);
-        this.map.tip(e, `${esc((s && s.street) || "a path")} <span>${h.seg}</span>`);
-        this.canvas.style.cursor = "pointer";
-      } else { this.map.untip(); this.canvas.style.cursor = ""; }
+      if (last && last !== h.el) last.dispatchEvent(new MouseEvent("pointerleave"));
+      last = h.el;
+      if (!h.el) this.map.untip();
+      this.send("pointermove", h, e);
+      this.canvas.style.cursor = h.el || this.map.svg.style.cursor === "pointer" ? "pointer" : "";
     });
-    this.canvas.addEventListener("pointerleave", () => this.map.untip());
+    this.canvas.addEventListener("pointerleave", () => { if (last) last.dispatchEvent(new MouseEvent("pointerleave")); last = null; this.map.untip(); });
     this.canvas.addEventListener("click", e => {
       if (down && Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 4) return;      // a drag is never a click
-      const h = this.hit(e);
-      if (h && h.b) this.L.openBuilding(h.b);
-      else if (h && h.seg) this.L.select({ kind: "segment", id: h.seg });
+      this.map.moved = false;
+      this.send("click", this.hit(e), e);
+    });
+    // the hidden 2D view follows the 3D camera, so what the 2D map draws only when zoomed in is drawn here too
+    this.controls.addEventListener("end", () => {
+      const t = this.controls.target, d = this.camera.position.distanceTo(t);
+      const w = 2 * d * Math.tan(THREE.MathUtils.degToRad(this.camera.fov / 2)) * this.camera.aspect;
+      this.map.autoFit = false;
+      this.map.view = { x: t.x + this.map.o[0], y: this.map.o[1] - t.z, w: Math.max(150, w) };
+      this.map.apply(true);
     });
   }
 }

@@ -493,6 +493,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#bicycles-every-day-of-the-year" id="toc-bicycles-every-day-of-the-year" class="nav-link" data-scroll-target="#bicycles-every-day-of-the-year">Bicycles, every day of the year</a></li>
   <li><a href="#what-the-places-promise" id="toc-what-the-places-promise" class="nav-link" data-scroll-target="#what-the-places-promise">What the places promise</a></li>
   <li><a href="#the-ring-around-the-area" id="toc-the-ring-around-the-area" class="nav-link" data-scroll-target="#the-ring-around-the-area">The ring around the area</a></li>
+  <li><a href="#the-same-junctions-in-other-years" id="toc-the-same-junctions-in-other-years" class="nav-link" data-scroll-target="#the-same-junctions-in-other-years">The same junctions in other years</a></li>
   <li><a href="#what-s5-cannot-say-yet" id="toc-what-s5-cannot-say-yet" class="nav-link" data-scroll-target="#what-s5-cannot-say-yet">What S5 cannot say yet</a></li>
   <li><a href="#in-the-lab" id="toc-in-the-lab" class="nav-link" data-scroll-target="#in-the-lab">In the Lab</a></li>
   </ul>
@@ -535,7 +536,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="glance">
 <p><strong>Asks</strong> What the open data says about each hour of the week, with counts and promised opening hours kept apart.</p>
 <p><strong>Found</strong> Seven junctions counted on nine weekdays, and 376 full days from three bicycle detectors.</p>
-<p><strong>Stands</strong> verified: 12 tests pass. The counts’ bicycle shape follows the detectors’ (correlation 0.89).</p>
+<p><strong>Stands</strong> verified: 13 tests pass. The counts’ bicycle shape follows the detectors’ (correlation 0.89).</p>
 <p><strong>Leaves out</strong> Weekends and seasons on foot and by car. Lingering escapes every count.</p>
 <p><strong>In the game</strong> Rhythm: opening hours time the NPCs. Check: the counts stay out of the game and test it (<a href="./play.html#check">planned</a>).</p>
 <p><strong>Trace</strong> <a href="./s5-build.html">How it is built</a> · <a href="outputs/s5/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a> and <a href="./s4-buildings.html">S4</a> · feeds <a href="./s9-observer.html">S9</a></p>
@@ -615,6 +616,53 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The ring is lopsided. Towards Old Montréal, along McGill and at Square-Victoria, the counts reach 1,000 to 2,355 pedestrians at 8 h, more than at any junction inside the area. Across the canal, on Saint-Patrick and in Pointe-Saint-Charles, they stay under 110. Most ring sites were counted on one or two weekdays in September, November, December or May, and the junctions inside mostly in February and December. So the two sides of the edge also differ by season.</p>
 <p>Fifteen of the ring’s counted days are Saturdays. S5 keeps them apart from the weekdays: they are the only Saturday counts of people on foot near the area.</p>
+</section>
+<section id="the-same-junctions-in-other-years" class="level2">
+<h2 class="anchored" data-anchor-id="the-same-junctions-in-other-years">The same junctions in other years</h2>
+<p>The city counted three of S5’s seven junctions in earlier years too: nine weekdays between 2008 and 2018, and no weekend. S5’s shape stays built from the counts of 2023 on, the present Situ records; the earlier days are only set beside it (<a href="outputs/s5/years.csv">years.csv</a>).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Junction</th>
+<th>Earlier days</th>
+<th>People on foot per hour, then</th>
+<th>Today</th>
+<th>How closely each earlier day follows S5’s weekday (r)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>J051</td>
+<td>2010, 2011, 2017, 2018</td>
+<td>271 (2010), 273 (2011), 490 (2017), 635 (2018)</td>
+<td>731 (2026)</td>
+<td>0.78 to 0.87</td>
+</tr>
+<tr class="even">
+<td>J181</td>
+<td>2008, three days of 2018</td>
+<td>306 (2008), 540 to 630 (2018)</td>
+<td>657 (2024)</td>
+<td>0.81 to 0.91</td>
+</tr>
+<tr class="odd">
+<td>J040</td>
+<td>2009</td>
+<td>85</td>
+<td>248 to 263 (2024)</td>
+<td>0.69</td>
+</tr>
+</tbody>
+</table>
+<p>People on foot are counted over the reference hours (7, 8, 11, 12, 16 and 17 h). The earlier days keep S5’s shape (r of 0.69 to 0.91, against 0.92 to 0.99 for the days S5 is built from), while the number of people on foot grew two to three times.</p>
+<p>The weather of each counted day comes from Environment and Climate Change Canada’s McTavish station, about 2 km north (Open Government Licence). Of the nine days S5 is built from, six fall between November and February, between -3.4 and 6.9 °C on average from 7 to 18 h; one had rain (3.7 mm on 18 December 2024). The Lab shows every counted day under its junction.</p>
 </section>
 <section id="what-s5-cannot-say-yet" class="level2">
 <h2 class="anchored" data-anchor-id="what-s5-cannot-say-yet">What S5 cannot say yet</h2>

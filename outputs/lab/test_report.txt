@@ -22,7 +22,7 @@ L6  S4: buildings, places, checkpoints, the height evidence and the ODB-only foo
     296 buildings x 11 fields and every outline point, x 17 evidence fields; 1492 empty cells stayed empty; 610 places, 61 checkpoints, 31 ODB-only footprints
     PASS
 
-L7  S5: the weekday shape, the junction counts, every place's week, the open counts and the ring match the S5 tables
+L7  S5: the weekday shape, the junction counts, every place's week, the open counts, the ring and the earlier years match the S5 tables
     72 weekday hours x 3 values (0 empty stayed empty), 192 junction-hours, 610 places x 168 hours, 168 open counts, 288 bicycle hours, the bicycle months
     PASS
 

@@ -12,6 +12,6 @@ U9  PASS  map reached by Tab true; arrows move it true; Enter at the cross opens
 U10  PASS  S2 ped_NACH_800: lists lead with S116 and S062 (largest gaps S116, S062), 7 without a value, the first opens true; S9: leads with S088 (largest S088), quotes rho 0.238
 U11  PASS  S2 at 800 m: "only what is unresolved (7)", 7 streets without a value; with the filter, open 1 and the rest 0.1; off again 1
 U12  PASS  9 tabs with a panel open: no skipped level
-U13  PASS  3D on: canvas block, 2D map hidden; a click in 3D opened w201017547; back in 2D: map visible
+U13  PASS  3D on: canvas block, 2D map hidden; same panel from 2D and 3D: building ok (H3C); street ok (J011); junction ok (J010); object ok (tree:); back in 2D: map visible
 
 ALL PASS

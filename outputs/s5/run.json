@@ -1,9 +1,9 @@
 {
  "system": "s5",
- "made": "2026-10-29T19:54:18Z",
+ "made": "2026-10-29T23:15:07Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "dc9095f34dce9b409dbf54a48cf82a5a47c654f8",
+  "git_commit": "2adc405e4a21530a2546a011a3861c14f611be90",
   "differs_from_commit": true,
   "files": [
    {
@@ -32,7 +32,7 @@
    },
    {
     "path": "Situ/s5_rhythm/test.py",
-    "sha256": "58017927bcb302ca44dbad54a9fccf069bddcd1b132195b7c2c946419557e6ba"
+    "sha256": "c7e009fc6f54eac0d30efcf9208c83e2b9b9ba6721371df01962563825919784"
    },
    {
     "path": "Situ/s5_rhythm/visualize.py",
@@ -40,7 +40,11 @@
    },
    {
     "path": "Situ/s5_rhythm/web.py",
-    "sha256": "7a1c708336d9353ba5c797d38e05ec1ea5760d78e17bffbb1313812c6f2c137d"
+    "sha256": "e277d79eabb539ccd8850513fbb58979843bdbef15fe9fb6224a89548b4d7e21"
+   },
+   {
+    "path": "Situ/s5_rhythm/years.py",
+    "sha256": "588576381a72daf0eb37a99de0ff8e58d527d5286cd991fec8ab49005e0bd760"
    },
    {
     "path": "Situ/config.py",
@@ -81,11 +85,11 @@
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "a6ab889b6607d026d9f1e026570bcb5e31d4d152cb7f80f62aa322f75eba3d56"
+   "run_json_sha256": "e91ac3f60024ac06645efa1323a82dccaff994707e0bc1424e28c73c84f7ab69"
   },
   {
    "system": "s4",
-   "run_json_sha256": "6c3fd0b466ab7f1ee084893da701f119f60f578c6c51daa2ab31bd69d8bca910"
+   "run_json_sha256": "ce7c7272da3967822c934e87a428025f4322351d399a91fb3aca4b254c342899"
   }
  ],
  "settings": {
@@ -193,25 +197,35 @@
   },
   {
    "path": "Situ/outputs/s5/test_report.txt",
-   "bytes": 3034,
-   "sha256": "1a413c8526322918df59c201724dc73d205e74d0be2d4881ec2fb9a60e3efe29"
+   "bytes": 3167,
+   "sha256": "7895db77789da24e09b59deab4191b58a2f0e0effab3d4a0a62b2528ac6c0a8b"
   },
   {
    "path": "Situ/outputs/s5/web_data.js",
-   "bytes": 200748,
-   "sha256": "9c11f2f9d82ce983fe0d4a808af0c1666acb0b241f2f3b485f370f4871af4282"
+   "bytes": 204281,
+   "sha256": "1d531a1df3fd306934e81f8725f271d7872492137640c9c5a25e3e5af59c6c3f"
   },
   {
    "path": "Situ/outputs/s5/weekday.csv",
    "bytes": 69810,
    "sha256": "386f222f9b9f737ac5e1440663e148806c49e6546ffd9eee8f685ffacf49b0ac"
+  },
+  {
+   "path": "Situ/outputs/s5/years.csv",
+   "bytes": 1261,
+   "sha256": "2aa6702c65db5a080765f8c2d21103283458cf0f10a872d1bb735289022a4184"
+  },
+  {
+   "path": "Situ/outputs/s5/years.json",
+   "bytes": 704,
+   "sha256": "4a7f7f5c1dc6816600a985e278dc9f3f61ff715a82c0cb7782ee299f47b23dac"
   }
  ],
  "tests": {
   "report": "Situ/outputs/s5/test_report.txt",
-  "made": "2026-10-17T13:06:06Z",
-  "checks": 14,
-  "pass": 12,
+  "made": "2026-10-29T23:13:28Z",
+  "checks": 15,
+  "pass": 13,
   "fail": 0,
   "info": 2
  }

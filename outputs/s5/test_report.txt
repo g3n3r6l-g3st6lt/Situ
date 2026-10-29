@@ -59,4 +59,8 @@ T14  Can every hour of the ring be rebuilt from the city's file, weekdays and we
     2460 site-hours; 960 site-hours counted on a weekend, kept apart
     PASS
 
+T15  Can every earlier day at S5's junctions be recounted from the city's saved answers?
+    9 earlier days at 3 junctions
+    PASS
+
 ALL PASS
