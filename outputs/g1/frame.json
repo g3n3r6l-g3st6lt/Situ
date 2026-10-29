@@ -1,12 +1,14 @@
 {
  "format": "situ-g1",
- "format_version": "0.2",
- "made": "2026-10-22",
+ "format_version": "0.7",
+ "made": "2026-10-23",
  "crs": "EPSG:32188",
  "origin": [
   299180,
   5038120
  ],
+ "z_origin_m_above_sea": 3,
+ "terrain": "terrain_2015.png",
  "axes": "x east, y north, z up",
  "units": "metres",
  "storey_height_m": 3.745,
@@ -18,19 +20,26 @@
   "services": 4.11
  },
  "height_source": {
-  "none": 15,
-  "storeys": 53,
+  "none": 14,
+  "storeys": 48,
   "surface model 2015": 215,
-  "OpenStreetMap": 13
+  "OpenStreetMap": 13,
+  "3D buildings 2016": 6
+ },
+ "greybox": {
+  "ground": "flat",
+  "curb_height_m": 0.15,
+  "ground_grid_deg": 61.5,
+  "ground_pieces": "flat_ground.geojson"
  },
  "counts": {
   "segments": 264,
   "junctions": 191,
   "blocks": 296,
   "height_rule": {
-   "unknown": 15,
-   "assumption": 53,
-   "measured": 228
+   "unknown": 14,
+   "assumption": 48,
+   "measured": 234
   },
   "public_use": {
    "public use, hours unknown": 123,
@@ -57,8 +66,18 @@
   },
   "possibly_gone": 34,
   "surfaces": 519,
+  "areas": {
+   "water": 9,
+   "bike": 40,
+   "parking": 94,
+   "plaza": 56,
+   "play": 36,
+   "green": 231
+  },
   "checkpoints": {
-   "height unknown": 15,
+   "height unknown": 14,
+   "2015 and 2016 disagree": 4,
+   "ground drops under outline": 10,
    "street through building": 1,
    "empty in 2015": 3,
    "no door": 1,

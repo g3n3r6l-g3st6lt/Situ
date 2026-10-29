@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./lab.html" rel="next">
-<link href="./g6-play.html" rel="prev">
+<link href="./g1-world.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,9 +75,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -377,7 +374,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./game.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The game, part by part</span></a>
+ <span class="menu-text">The game, stage by stage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -390,42 +387,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./g1-world.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">G1 World</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-rhythm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Rhythm</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g2-people.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G2 People</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g3-movement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G3 Movement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g4-points.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G4 Points</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g5-check.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G5 Check</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g6-play.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G6 Play</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -522,15 +483,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#what-the-engine-is-allowed-to-hold" id="toc-what-the-engine-is-allowed-to-hold" class="nav-link active" data-scroll-target="#what-the-engine-is-allowed-to-hold">What the engine is allowed to hold</a></li>
-  <li><a href="#plugins" id="toc-plugins" class="nav-link" data-scroll-target="#plugins">Small plugins that stack</a></li>
-  <li><a href="#look" id="toc-look" class="nav-link" data-scroll-target="#look">The greybox look</a></li>
-  <li><a href="#why-unreal" id="toc-why-unreal" class="nav-link" data-scroll-target="#why-unreal">Why Unreal</a></li>
-  <li><a href="#why-not-city-sample" id="toc-why-not-city-sample" class="nav-link" data-scroll-target="#why-not-city-sample">Why not City Sample</a></li>
-  <li><a href="#what-unreal-costs" id="toc-what-unreal-costs" class="nav-link" data-scroll-target="#what-unreal-costs">What Unreal costs</a></li>
-  <li><a href="#alternatives-considered" id="toc-alternatives-considered" class="nav-link" data-scroll-target="#alternatives-considered">Alternatives considered</a></li>
-  <li><a href="#a-closer-look-the-test-before-committing" id="toc-a-closer-look-the-test-before-committing" class="nav-link" data-scroll-target="#a-closer-look-the-test-before-committing">A closer look: the test before committing</a></li>
-  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
+  <li><a href="#unreal" id="toc-unreal" class="nav-link active" data-scroll-target="#unreal">Unreal in Situ</a></li>
+  <li><a href="#why-not-city-sample-for-now" id="toc-why-not-city-sample-for-now" class="nav-link" data-scroll-target="#why-not-city-sample-for-now">Why not City Sample, for now</a></li>
+  <li><a href="#first-attempt" id="toc-first-attempt" class="nav-link" data-scroll-target="#first-attempt">A first attempt, withdrawn</a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">What happens next</a></li>
   </ul>
 </nav>
     </div>
@@ -540,7 +496,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./game.html">Game</a></li><li class="breadcrumb-item"><a href="./g7-engine.html">G7 Engine</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">G7 Engine</h1>
-<p class="subtitle lead">Why Unreal, what it costs, and what the engine is allowed to hold</p>
+<p class="subtitle lead">The engine, and what happened to the first attempt</p>
 </div>
 
 
@@ -558,521 +514,62 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="glance">
-<p><strong>Asks</strong> Which engine should show the G files in 3D and let a player act in them, and how should its parts be built?</p>
-<p><strong>Decision</strong> Unreal Engine 5, without City Sample (researcher decision). Earlier prototypes used version 5.8.</p>
-<p><strong>Stands</strong> A decision with a test planned before anything moves into the engine.</p>
+<p><strong>Asks</strong> Which engine should show Situ’s data in 3D and let a player act in it?</p>
+<p><strong>Decision</strong> Unreal Engine 5 (researcher decision), version 5.8. City Sample is not built on for now.</p>
+<p><strong>Stands</strong> A decision. A first set of engine plugins was built and then withdrawn (2026-10-28); the engine work starts again at <a href="./game.html#stages">stage 2</a>.</p>
 <p><strong>Leaves out</strong> Play in a web browser: Unreal has not exported to the browser since version 4.24.</p>
-<p><strong>Trace</strong> <a href="./game.html">The game, part by part</a></p>
+<p><strong>Trace</strong> <a href="./game.html">The game, stage by stage</a></p>
 </div>
-<section id="what-the-engine-is-allowed-to-hold" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-engine-is-allowed-to-hold">What the engine is allowed to hold</h2>
-<p>The engine shows the files and runs bodies frame by frame. It holds no rule of its own that the ledger lacks. Plans and routes come from Python as files (<a href="./g2-people.html">G2</a>, <a href="./g3-movement.html">G3.1</a>); every rule the engine applies, such as a speed or a staying weight, is read from a file with its ledger row. So the archive is the files and their ledgers, and the engine is one way to play them.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
-flowchart LR
-  subgraph FILES [G files and ledgers]
-    W[G1 ground, blocks,&lt;br/&gt;props, surfaces]:::data
-    PL[G2 plans&lt;br/&gt;G3.1 routes]:::data
-    PT[G4 candidate points]:::data
-  end
-  subgraph UE [Unreal]
-    ZG[ZoneGraph&lt;br/&gt;lanes]:::step
-    PCG[PCG&lt;br/&gt;placement]:::step
-    MS[Mass&lt;br/&gt;crowds and cars]:::step
-    ST[StateTree&lt;br/&gt;activity states]:::step
-    SO[Smart Objects&lt;br/&gt;places to stop]:::step
-  end
-  W --&gt; ZG
-  W --&gt; PCG
-  PL --&gt; MS
-  PL --&gt; ST
-  PT --&gt; SO
-  MS --&gt; LG[run log]:::data
-  LG --&gt; C{G5 Check}:::test
-  style FILES fill:#000000,stroke:#3a3a3a,color:#a6a6a6
-  style UE fill:#000000,stroke:#3a3a3a,color:#a6a6a6
-  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
-  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
-  classDef test fill:none,stroke:#fe83cc,color:#fe83cc
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="plugins" class="level2">
-<h2 class="anchored" data-anchor-id="plugins">Small plugins that stack</h2>
-<p>Each task in the engine is its own plugin. A plugin reads one kind of G file, does one job, and runs alone on a small test file. Plugins never call each other. They share a small core, and they stack because they read files written in the same frame, with the same ids.</p>
-<p>The building plugin shows the idea. Given any blocks file in the <a href="./formats.html#blocks">published format</a>, it places each footprint at its position and raises it to its height, for Griffintown or any other city. It does not work out a height: <a href="./g1-world.html">G1</a> does that in Python, and the file says how. The plugin stays simple, and each rule lives in one place. A building with no known height is drawn as unknown, and a flat top means only that no roof data exists.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
-flowchart BT
-  CORE[Situ Core: frame, ids, file reading, log]:::data
-  subgraph W [World: each runs alone]
-    direction LR
-    B[Buildings]:::step ~~~ GR[Ground]:::step ~~~ SU[Surfaces]:::step ~~~ PR[Props]:::step
-  end
-  subgraph M [Movement: needs lanes, and someone to move]
-    direction LR
-    PE[People]:::step ~~~ WA[Walk]:::step ~~~ JU[Junctions]:::step ~~~ DR[Drive]:::step
-  end
-  subgraph T [Points and check]
-    direction LR
-    PO[Points]:::step ~~~ CH[Check]:::rule
-  end
-  CORE --&gt; W
-  W --&gt; M
-  M --&gt; T
-  classDef data fill:none,stroke:#e6e6e6,stroke-width:2px,color:#ffffff
-  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
-  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
-  style W fill:#000000,stroke:#3a3a3a,color:#a6a6a6
-  style M fill:#000000,stroke:#3a3a3a,color:#a6a6a6
-  style T fill:#000000,stroke:#3a3a3a,color:#a6a6a6
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p>Read the stack from the bottom. Every plugin needs only the core to start. The world plugins each run alone. Some movement tasks need something below them by nature: walking needs someone to walk and somewhere to walk on. Those needs are declared in the table, and a plugin says plainly which one is missing. Any plugin that provides lanes can serve Walk and Drive, so Situ Ground can be swapped for another lane source.</p>
+<section id="unreal" class="level2">
+<h2 class="anchored" data-anchor-id="unreal">Unreal in Situ</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Plugin</th>
-<th>One task</th>
-<th>Reads</th>
-<th>Needs besides the core</th>
-<th>Part</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td>Situ Core</td>
-<td>the frame (metres to centimetres, the engine’s axes); the source id on every element; reading files with a version check; the log every plugin writes to</td>
-<td>frame.json</td>
-<td>none</td>
-<td>all</td>
+<td>version</td>
+<td>5.8</td>
 </tr>
 <tr class="even">
-<td>Situ Buildings</td>
-<td>place each footprint and raise it to its height; unknown heights shown as unknown; doors as markers</td>
-<td>blocks.geojson</td>
-<td>none</td>
-<td>G1</td>
+<td>earlier versions of Griffintown built in it</td>
+<td>four (V1 to V4)</td>
 </tr>
 <tr class="odd">
-<td>Situ Ground</td>
-<td>lanes for walking and driving from the street segments</td>
-<td>ground.geojson</td>
-<td>the engine’s ZoneGraph</td>
-<td>G1</td>
-</tr>
-<tr class="even">
-<td>Situ Surfaces</td>
-<td>sidewalks and islands as walkable surfaces</td>
-<td>surfaces.geojson</td>
-<td>none</td>
-<td>G1</td>
-</tr>
-<tr class="odd">
-<td>Situ Props</td>
-<td>each prop by class, from a table of meshes</td>
-<td>props.csv</td>
-<td>the engine’s PCG</td>
-<td>G1</td>
-</tr>
-<tr class="even">
-<td>Situ Terrain</td>
-<td>the ground’s height</td>
-<td>the terrain file</td>
-<td>none</td>
-<td>G1b</td>
-</tr>
-<tr class="odd">
-<td>Situ People</td>
-<td>create NPCs and run their plans on the clock</td>
-<td>plan files</td>
-<td>a lane source</td>
-<td>G2</td>
-</tr>
-<tr class="even">
-<td>Situ Walk</td>
-<td>walking, avoiding others, crossing</td>
-<td>route files</td>
-<td>People; a lane source</td>
-<td>G3</td>
-</tr>
-<tr class="odd">
-<td>Situ Junctions</td>
-<td>lights and stop signs</td>
-<td>the junction control file</td>
-<td>a lane source</td>
-<td>G3</td>
-</tr>
-<tr class="even">
-<td>Situ Drive</td>
-<td>car following, turns and limits</td>
-<td>route files; rules</td>
-<td>a lane source; Junctions</td>
-<td>G3</td>
-</tr>
-<tr class="odd">
-<td>Situ Parking</td>
-<td>legal places by hour</td>
-<td>the parking file</td>
-<td>Drive</td>
-<td>G3</td>
-</tr>
-<tr class="even">
-<td>Situ Points</td>
-<td>places to stop, with the staying rule</td>
-<td>the points file</td>
-<td>People</td>
-<td>G4</td>
-</tr>
-<tr class="odd">
-<td>Situ Check</td>
-<td>counters at junctions, the run log, the inspector</td>
-<td>the run log</td>
-<td>any of the above</td>
-<td>G5</td>
-</tr>
-<tr class="even">
-<td>Situ Missions</td>
-<td>the missions</td>
-<td>mission files</td>
-<td>what each mission uses</td>
-<td>G6</td>
-</tr>
-</tbody>
-</table>
-<p>Every plugin keeps the same rules:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Rule</th>
-<th>Why</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>one task, and one kind of input file with a version number</td>
-<td>it can be used alone, and a changed file cannot be read by mistake</td>
-</tr>
-<tr class="even">
-<td>settings in a data asset, none typed into the code</td>
-<td>every number can be found, changed and logged</td>
-</tr>
-<tr class="odd">
-<td>every element it makes carries its source id</td>
-<td>the inspector can follow anything on screen back to its source row</td>
-</tr>
-<tr class="even">
-<td>it writes to the shared log, never into another plugin</td>
-<td>plugins stay independent</td>
-</tr>
-<tr class="odd">
-<td>its own test map, test file and automated tests</td>
-<td>it is shown to work alone before it is stacked</td>
-</tr>
-<tr class="even">
-<td>it reads decisions and never makes them</td>
-<td>heights, plans and routes are decided once, in Python, with the ledger</td>
-</tr>
-<tr class="odd">
-<td>missing data is shown as missing</td>
-<td>the same rule as every system</td>
+<td>current project</td>
+<td>a new, empty project, started 2026-10-28</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="look" class="level2">
-<h2 class="anchored" data-anchor-id="look">The greybox look</h2>
-<p>The engine shows the world as a greybox: plain masses with a measuring grid, lit by a physical sun. Nothing is textured to look finished, because almost nothing about the facades is known. The materials come from the FancyDev grid set in the Unreal project. Their grid is laid in world space, so it never stretches on a raised footprint, and at its default scale one square is one metre. A reader can count storeys and metres off any wall.</p>
-<p>Colour carries meaning, and the meaning comes from the files. Each plugin reads which material to use from its settings, so another project can swap the set without touching the code.</p>
+<section id="why-not-city-sample-for-now" class="level2">
+<h2 class="anchored" data-anchor-id="why-not-city-sample-for-now">Why not City Sample, for now</h2>
+<p>City Sample is Epic’s demonstration city, with traffic and crowds. In earlier prototypes I could not control its plugins well enough to use them for Situ. That may change with closer study of how they work, so I keep it as something to study, and do not build on it for now.</p>
+</section>
+<section id="first-attempt" class="level2">
+<h2 class="anchored" data-anchor-id="first-attempt">A first attempt, withdrawn</h2>
+<p>From 2026-10-22 to 2026-10-28 a first set of small engine plugins was built. They read the <a href="./g1-world.html">G1 World</a> files: one drew the buildings from their footprints and heights, one the ground, one the raised sidewalks, and a core plugin read the files and converted the frame. Seventeen automated tests passed, and the buildings stood where the files put them.</p>
+<p>Two ways of colouring parks, plazas and water on the ground were tried, and neither worked. Laid on the ground as separate sheets, overlapping pieces flickered. Painted into the 1 m terrain grid, every edge turned into steps, because the grid runs east and north while the streets run at about 62 degrees.</p>
+<p>The work was withdrawn on 2026-10-28, and a new, empty project was started.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Element</th>
-<th>What the colour says</th>
-<th>Material</th>
+<th>What stays</th>
+<th>Where</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>building, height measured</td>
-<td>the 2015 surface or OpenStreetMap measured it</td>
-<td>light grid</td>
+<td>the G1 files and their ledger</td>
+<td><a href="./g1-world.html">G1 World</a></td>
 </tr>
 <tr class="even">
-<td>building, height from storeys</td>
-<td>an assumption (W05)</td>
-<td>azure grid</td>
-</tr>
-<tr class="odd">
-<td>building, height unknown</td>
-<td>no source gives a height; drawn flat on its outline</td>
-<td>pink grid, the colour the site uses for gaps</td>
-</tr>
-<tr class="even">
-<td>a checkpoint on screen</td>
-<td>a conflict to look at, such as a street through a building</td>
-<td>red grid</td>
-</tr>
-<tr class="odd">
-<td>street open to cars</td>
-<td>from G1’s ground</td>
-<td>dark grid</td>
-</tr>
-<tr class="even">
-<td>sidewalk and walk-only ground</td>
-<td>from G1’s surfaces and ground</td>
-<td>default grid</td>
-</tr>
-<tr class="odd">
-<td>work zone</td>
-<td>a road work with its permit dates</td>
-<td>orange grid</td>
-</tr>
-</tbody>
-</table>
-<p>The building colours also differ in lightness, so they stay apart for readers who do not see colour well. The FancyDev files stay in the private Unreal project: the shop’s licence most likely allows their use in a project and forbids passing the files on (to confirm on the listing). A public plugin ships with plain materials and the same settings.</p>
-</section>
-<section id="why-unreal" class="level2">
-<h2 class="anchored" data-anchor-id="why-unreal">Why Unreal</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Reason</th>
-<th>What it gives Situ</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Its built-in systems match the game’s parts (some are still marked experimental; to confirm in the test)</td>
-<td>ZoneGraph for lanes built from G1’s ground; Mass for crowds of simple agents (G2, G3); StateTree for activity states; Smart Objects for G4’s points; PCG for placing G1’s props from the files</td>
-</tr>
-<tr class="even">
-<td>A game-like 3D experience is the research question</td>
-<td>the question asks whether such an experience can pass on a place; real-time 3D at city scale is what Unreal is made for</td>
-</tr>
-<tr class="odd">
-<td>Earlier prototypes were built in it</td>
-<td>earlier Unreal versions of Griffintown (V1 to V5), including a lane builder that turns the city’s street file into lanes; that work carries over</td>
-</tr>
-<tr class="even">
-<td>The crowd should fit</td>
-<td>about 7,200 commuters and their cars over a morning, a scale I expect its crowd tools to handle (to confirm in the test)</td>
+<td>the file formats, as a draft</td>
+<td><a href="./formats.html">Formats</a></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="why-not-city-sample" class="level2">
-<h2 class="anchored" data-anchor-id="why-not-city-sample">Why not City Sample</h2>
-<p>City Sample is Epic’s demonstration city, with tuned traffic and crowds. I keep it as code to read, and do not build on it.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Problem</th>
-<th>What happened in earlier prototypes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>its traffic only works inside its own project</td>
-<td>moving its cars and drivers into another project failed; the copy of the whole sample was over 100 GB</td>
-</tr>
-<tr class="even">
-<td>its junction logic changes the rules</td>
-<td>at the 42 junctions where only the side street has a stop sign, both streets took turns</td>
-</tr>
-<tr class="odd">
-<td>its look is another city</td>
-<td>its cars, people and facades are made for a New York-like city</td>
-</tr>
-<tr class="even">
-<td>its lighting crashed</td>
-<td>a crash in its ray-traced lighting stopped work until it was switched off</td>
-</tr>
-</tbody>
-</table>
-<p>So G3 builds its own driving on the engine’s general tools, and follows <a href="./s3-rules.html">S3</a> as the city files it. That is the largest cost of this choice.</p>
-</section>
-<section id="what-unreal-costs" class="level2">
-<h2 class="anchored" data-anchor-id="what-unreal-costs">What Unreal costs</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Cost</th>
-<th>How Situ handles it</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>no browser play</td>
-<td>the <a href="./lab.html">Lab</a> stays the place to inspect everything on the web; the game is a download or a screening</td>
-</tr>
-<tr class="even">
-<td>crashes in earlier prototypes</td>
-<td>pin one version, keep logs of each failure, and keep the files outside the engine</td>
-</tr>
-<tr class="odd">
-<td>Mass and ZoneGraph change between versions</td>
-<td>record the version in every run record; test after each upgrade</td>
-</tr>
-<tr class="even">
-<td>own driving to build</td>
-<td>G3.4 and G3.5 are planned as subsystems with their own tests</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="alternatives-considered" class="level2">
-<h2 class="anchored" data-anchor-id="alternatives-considered">Alternatives considered</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Engine</th>
-<th>For Situ</th>
-<th>Against</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Godot 4</td>
-<td>open licence (MIT) and scene files written as text, which suits an archive; exports to the web</td>
-<td>no crowd or traffic system to start from; a new engine to learn</td>
-</tr>
-<tr class="even">
-<td>Unity 6</td>
-<td>exports to the web; a large community</td>
-<td>no part of Situ is built in it; its licensing has changed more than once</td>
-</tr>
-<tr class="odd">
-<td>a web engine (three.js or similar)</td>
-<td>the game would live on this site, next to the Lab</td>
-<td>crowds and driving in 3D would be built from scratch</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a-closer-look-the-test-before-committing" class="level2">
-<h2 class="anchored" data-anchor-id="a-closer-look-the-test-before-committing">A closer look: the test before committing</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"edgeLabelBackground": "#000000", "clusterBkg": "transparent", "clusterBorder": "#3a3a3a"}, "flowchart": {"subGraphTitleMargin": {"top": 8, "bottom": 12}}}}%%
-flowchart TB
-  N[a clean Unreal project&lt;br/&gt;engine plugins only]:::step --&gt; G[load G1 ground and blocks&lt;br/&gt;lane builder, PCG]:::step
-  G --&gt; P[500 pedestrians&lt;br/&gt;from a seeded plan file]:::step
-  G --&gt; C[one signalled junction&lt;br/&gt;with cars]:::step
-  P --&gt; T{same seed, same counts?&lt;br/&gt;every stop explained?&lt;br/&gt;nothing from City Sample?}:::rule
-  C --&gt; T
-  T --&gt;|yes| GO[commit to Unreal]:::out
-  T --&gt;|no| RE[reopen the choice&lt;br/&gt;Godot first]:::out
-  classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
-  classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
-  classDef rule fill:none,stroke:#fe83cc,color:#fe83cc
-  classDef out fill:none,stroke:#e6e6e6,color:#e6e6e6
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="plan" class="level2">
-<h2 class="anchored" data-anchor-id="plan">Plan</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Step</th>
-<th>Does</th>
-<th>Needs</th>
-<th>Done when</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>pin the Unreal version; record it in every run record</td>
-<td>none</td>
-<td>the version is in the ledger</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>the test above</td>
-<td>G1 files; a seeded plan file from G2</td>
-<td>the three checks pass</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Situ Core, then Situ Buildings, each with its test map</td>
-<td>G1</td>
-<td>Buildings runs alone on a test file and on Griffintown; nothing in the level that a G file does not hold</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Situ Ground, Surfaces and Props, one at a time</td>
-<td>G1</td>
-<td>each runs alone, then all four stack in one level</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>the movement plugins, then Points and Check, one at a time</td>
-<td>G2, G3, G4</td>
-<td>each passes alone, then stacked, with the same results as in Python</td>
-</tr>
-</tbody>
-</table>
-<p>If the test fails, the decision is reopened, with Godot as the first alternative.</p>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">What happens next</h2>
+<p>The engine work starts again at <a href="./game.html#stages">stage 2</a>: one building, followed from QGIS into Unreal and checked against its source.</p>
 
 
 </section>
@@ -1480,8 +977,8 @@ flowchart TB
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./g6-play.html" class="pagination-link" aria-label="G6 Play">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">G6 Play</span>
+      <a href="./g1-world.html" class="pagination-link" aria-label="G1 World">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">G1 World</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

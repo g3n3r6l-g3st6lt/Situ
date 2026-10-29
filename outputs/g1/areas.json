@@ -1,0 +1,86 @@
+{
+ "made_from": [
+  "osm_open_areas_2026-10-23.json",
+  "osm_places_2026-10-14.json",
+  "osm_highways_2026-10-07.json"
+ ],
+ "licence": "ODbL 1.0, (c) OpenStreetMap contributors",
+ "pieces": {
+  "water": 9,
+  "bike": 40,
+  "parking": 94,
+  "plaza": 56,
+  "play": 36,
+  "green": 231
+ },
+ "area_m2": {
+  "green": 392387,
+  "play": 9248,
+  "plaza": 29146,
+  "parking": 144997,
+  "bike": 37543,
+  "water": 178464
+ },
+ "bike_width_from": {
+  "Montreal 2011, two-way path": 108,
+  "OpenStreetMap width": 86,
+  "median of mapped one-way widths": 109
+ },
+ "bike_one_way_median_m": 2.1,
+ "bike_one_way_mapped": 59,
+ "left_out": {
+  "no rule": 149,
+  "green: outside the flat ground": 6,
+  "plaza: open way (a line, no area)": 11,
+  "water: relation with no closed outer ring": 2,
+  "parking not on open ground (multi-storey)": 2,
+  "parking: outside the flat ground": 4
+ },
+ "shaping": {
+  "water: overlap removed by merging, m2": 76620,
+  "holes opened": 87,
+  "extra pieces from opening holes": 101,
+  "corners removed (repeats, spikes)": 0,
+  "bike: overlap removed by merging, m2": 260,
+  "dropped: invalid or under the minimum after cleaning": 2,
+  "parking: overlap removed by merging, m2": 0,
+  "plaza: overlap removed by merging, m2": 5319,
+  "play: overlap removed by merging, m2": 2,
+  "green: overlap removed by merging, m2": 73606
+ },
+ "flat_ground": {
+  "extent": "study area + 50 m",
+  "extent_m2": 1177670,
+  "buildings_and_raised_m2": 374528,
+  "pieces": {
+   "not classified": 412,
+   "green": 108,
+   "play": 18,
+   "plaza": 25,
+   "parking": 30,
+   "bike": 57,
+   "water": 9
+  },
+  "area_m2": {
+   "not classified": 430207,
+   "green": 189015,
+   "play": 2749,
+   "plaza": 8512,
+   "parking": 30802,
+   "bike": 17020,
+   "water": 124837
+  },
+  "region_m2": {
+   "water": 124837,
+   "bike": 17020,
+   "parking": 30802,
+   "plaza": 8512,
+   "play": 2749,
+   "green": 189015,
+   "not classified": 430207
+  },
+  "corners_added_to_neighbour_edges": 324,
+  "pinched_split": 6,
+  "slivers_dropped": 45
+ }
+}

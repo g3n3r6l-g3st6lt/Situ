@@ -373,7 +373,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./game.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The game, part by part</span></a>
+ <span class="menu-text">The game, stage by stage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -386,42 +386,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./g1-world.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">G1 World</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-rhythm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Rhythm</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g2-people.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G2 People</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g3-movement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G3 Movement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g4-points.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G4 Points</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g5-check.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G5 Check</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g6-play.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G6 Play</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -524,6 +488,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ground" id="toc-ground" class="nav-link" data-scroll-target="#ground">ground.geojson: streets and junctions</a></li>
   <li><a href="#props" id="toc-props" class="nav-link" data-scroll-target="#props">props.csv: objects in the street</a></li>
   <li><a href="#surfaces" id="toc-surfaces" class="nav-link" data-scroll-target="#surfaces">surfaces.geojson: sidewalks and islands</a></li>
+  <li><a href="#areas" id="toc-areas" class="nav-link" data-scroll-target="#areas">areas.geojson: what the flat ground is</a></li>
+  <li><a href="#flat-ground" id="toc-flat-ground" class="nav-link" data-scroll-target="#flat-ground">flat_ground.geojson: the flat ground by kind</a></li>
+  <li><a href="#terrain" id="toc-terrain" class="nav-link" data-scroll-target="#terrain">terrain_2015.png and terrain_2015.json</a></li>
+  <li><a href="#roofs" id="toc-roofs" class="nav-link" data-scroll-target="#roofs">roofs_2016.geojson</a></li>
   <li><a href="#ledger" id="toc-ledger" class="nav-link" data-scroll-target="#ledger">ledger.csv and checkpoints.csv</a></li>
   <li><a href="#planned-files" id="toc-planned-files" class="nav-link" data-scroll-target="#planned-files">Planned files</a></li>
   </ul>
@@ -535,7 +503,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./resources.html">Data</a></li><li class="breadcrumb-item"><a href="./formats.html">Formats</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Formats</h1>
-<p class="subtitle lead">The files the game’s parts write and the engine plugins read, field by field</p>
+<p class="subtitle lead">The files G1 World writes for a game engine to read, field by field</p>
 </div>
 
 
@@ -552,7 +520,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page is the agreement between the parts. A file that keeps it can be read by any <a href="./g7-engine.html#plugins">engine plugin</a>, for Griffintown or any other city. It is a draft: version <strong>0.2</strong> (0.2 added the measured-height fields of G1b). Each file states its version, and the version changes whenever a field is added, renamed or changes meaning.</p>
+<p>This page is the agreement between G1 World and an engine. A file that keeps it can be read by any engine, for Griffintown or any other city. It is a draft: version <strong>0.7</strong> (0.2 added the measured heights of G1b; 0.3 heights in the frame and the terrain grid; 0.4 roofs from the 2016 3D buildings; 0.5 the greybox block in the frame and areas.geojson; 0.6 areas painted into the ground, ground_kinds.png, and no top_m; 0.7 flat_ground.geojson in place of ground_kinds.png). Each file states its version, and the version changes whenever a field is added, renamed or changes meaning.</p>
 <section id="rules" class="level2">
 <h2 class="anchored" data-anchor-id="rules">Rules for every file</h2>
 <table class="caption-top table">
@@ -589,7 +557,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>core fields and local fields</td>
-<td>a plugin needs only the core fields. Local fields carry what one city’s sources give, and another city may leave them out</td>
+<td>an engine needs only the core fields. Local fields carry what one city’s sources give, and another city may leave them out</td>
 </tr>
 </tbody>
 </table>
@@ -598,11 +566,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="frame" class="level2">
 <h2 class="anchored" data-anchor-id="frame">frame.json</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -619,32 +582,42 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td><code>format_version</code></td>
 <td>text</td>
-<td><code>0.2</code></td>
+<td><code>0.7</code></td>
 </tr>
 <tr class="odd">
+<td><code>z_origin_m_above_sea</code>, <code>terrain</code></td>
+<td>number, text</td>
+<td>z in every file is metres above this height; the name of the terrain grid</td>
+</tr>
+<tr class="even">
 <td><code>made</code></td>
 <td>date</td>
 <td>when the files were written</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>crs</code></td>
 <td>text</td>
 <td>the map projection of the sources; Griffintown: EPSG:32188</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>origin</code></td>
 <td>two numbers</td>
 <td>the frame’s origin in that projection, in metres</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>axes</code>, <code>units</code></td>
 <td>text</td>
 <td><code>x east, y north, z up</code>; <code>metres</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>storey_height_m</code>, <code>storey_height_from</code>, <code>storey_height_by_use</code></td>
 <td>number, object</td>
 <td>the height per storey used where only storeys are known: for all uses, how many buildings it came from, and by use</td>
+</tr>
+<tr class="odd">
+<td><code>greybox</code></td>
+<td>object</td>
+<td>drawing choices made for the first engine plugins, withdrawn on 2026-10-28 (<a href="./g7-engine.html#first-attempt">G7</a>): <code>ground</code> (<code>flat</code> or <code>terrain</code>, ledger W26) <code>curb_height_m</code>, the height of sidewalks and islands above flat ground (W27, an assumption), <code>ground_grid_deg</code>, the direction of the flat ground’s grid in degrees counter-clockwise from east (W28, the main street direction; a look only), and <code>ground_pieces</code>, the file of flat ground pieces by kind (W30)</td>
 </tr>
 <tr class="even">
 <td><code>height_source</code></td>
@@ -715,6 +688,18 @@ ul.task-list li input[type="checkbox"] {
 <td>what the 2015 surface measured on the outline, and whether a building stood there</td>
 </tr>
 <tr class="odd">
+<td><code>roof_form</code>, <code>roof_faces</code>, <code>roof_source</code></td>
+<td>no</td>
+<td>text or null; number or null</td>
+<td><code>flat</code>, <code>mixed</code> or <code>pitched</code>, how many roof faces, and their source; null where no roof is known</td>
+</tr>
+<tr class="even">
+<td><code>height_2016_m</code>, <code>cover_2016</code></td>
+<td>no</td>
+<td>number or null</td>
+<td>the 2016 model’s roof top above the 2015 terrain, and the share of the outline its parts cover</td>
+</tr>
+<tr class="odd">
 <td><code>ground_m</code></td>
 <td>no</td>
 <td>number or null</td>
@@ -727,36 +712,42 @@ ul.task-list li input[type="checkbox"] {
 <td>the tax roll’s year built, as given (a range when the roll gives several)</td>
 </tr>
 <tr class="odd">
+<td><code>base_z</code>, <code>top_z</code></td>
+<td>yes</td>
+<td>number or null</td>
+<td>each building is a separate structure: its base (the lowest ground along its outline) and its top, in metres above the z origin</td>
+</tr>
+<tr class="even">
 <td><code>door_x</code>, <code>door_y</code></td>
 <td>yes</td>
 <td>number or null</td>
 <td>the door, in the frame</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>door_rule</code></td>
 <td>yes</td>
 <td>text</td>
 <td>how the door was placed (in Griffintown, an assumption)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>footprint_m2</code>, <code>storeys</code></td>
 <td>no</td>
 <td>number or null</td>
 <td>from the sources</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>use</code>, <code>public_use</code>, <code>public_use_reason</code></td>
 <td>no</td>
 <td>text</td>
 <td>what the sources record of the building’s use</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>door_street</code>, <code>door_segment</code>, <code>door_m</code></td>
 <td>no</td>
 <td>text, number</td>
 <td>the street the door faces and its distance</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>dwellings</code></td>
 <td>no</td>
 <td>number or null</td>
@@ -815,12 +806,18 @@ ul.task-list li input[type="checkbox"] {
 <td>length in metres</td>
 </tr>
 <tr class="even">
+<td><code>vertex_z</code>, <code>z</code></td>
+<td>yes</td>
+<td>list of numbers or nulls; number or null</td>
+<td>ground height at each vertex of a segment, or at a junction</td>
+</tr>
+<tr class="odd">
 <td><code>street</code>, <code>class_name</code>, <code>zone</code></td>
 <td>no</td>
 <td>text</td>
 <td>name, the city’s road class, inside the area or on its edge</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>kind</code>, <code>segments_meeting</code></td>
 <td>no (junctions)</td>
 <td>text, number</td>
@@ -856,9 +853,9 @@ ul.task-list li input[type="checkbox"] {
 <td>the game class: tree, lamp, seat, table, bike rack, hydrant, bin, camera, water, shelter, crossing mark, work zone</td>
 </tr>
 <tr class="odd">
-<td><code>x</code>, <code>y</code></td>
+<td><code>x</code>, <code>y</code>, <code>z</code></td>
 <td>yes</td>
-<td>position in the frame</td>
+<td>position in the frame; z empty where the terrain is unknown</td>
 </tr>
 <tr class="even">
 <td><code>kind</code>, <code>segment</code>, <code>street</code></td>
@@ -922,6 +919,145 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
+<section id="areas" class="level2">
+<h2 class="anchored" data-anchor-id="areas">areas.geojson: what the flat ground is</h2>
+<p>Polygons where the ground is neither street, sidewalk nor building, from OpenStreetMap (ODbL). Ledger W29 to W31.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Core</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>id</code>, <code>source</code>, <code>kind</code></td>
+<td>yes</td>
+<td>text</td>
+<td><code>green</code>, <code>play</code>, <code>plaza</code>, <code>parking</code>, <code>bike</code> or <code>water</code></td>
+</tr>
+<tr class="even">
+<td><code>walkable</code></td>
+<td>yes</td>
+<td>true or false</td>
+<td>false for water</td>
+</tr>
+<tr class="odd">
+<td><code>area_m2</code>, <code>osm</code></td>
+<td>no</td>
+<td>number, text</td>
+<td>the piece’s area; the OpenStreetMap element it comes from</td>
+</tr>
+<tr class="even">
+<td><code>width_m</code>, <code>width_from</code></td>
+<td>no</td>
+<td>number or null, text</td>
+<td>bicycle bands: the width and where it comes from (W31); null where bands of different widths merge</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="flat-ground" class="level2">
+<h2 class="anchored" data-anchor-id="flat-ground">flat_ground.geojson: the flat ground by kind</h2>
+<p>The flat ground of the study area plus a margin, cut into pieces (W30). Each piece is one kind, <code>not classified</code> or an area kind; no two pieces overlap; each is one outer ring, exact to the millimetre; neighbouring pieces share their corners (no corner lies inside another piece’s edge). With building outlines and raised surfaces the pieces cover the extent. An engine draws every piece at z 0 with one shared grid.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Core</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>id</code>, <code>kind</code></td>
+<td>yes</td>
+<td>text</td>
+<td><code>G00001</code>…; <code>not classified</code>, <code>green</code>, <code>play</code>, <code>plaza</code>, <code>parking</code>, <code>bike</code> or <code>water</code></td>
+</tr>
+<tr class="even">
+<td><code>area_m2</code></td>
+<td>no</td>
+<td>number</td>
+<td>the piece’s area</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="terrain" class="level2">
+<h2 class="anchored" data-anchor-id="terrain">terrain_2015.png and terrain_2015.json</h2>
+<p>A 16-bit greyscale picture: one pixel per metre, rows running south. Each value is centimetres above the z origin; 65535 means no terrain is known there.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field in the json</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>first_pixel_centre_frame</code></td>
+<td>the frame position of the centre of the top-left pixel</td>
+</tr>
+<tr class="even">
+<td><code>cell_m</code></td>
+<td>the pixel size in metres</td>
+</tr>
+<tr class="odd">
+<td><code>z_origin_m_above_sea</code>, <code>units</code>, <code>nodata</code></td>
+<td>how to turn a value into a height</td>
+</tr>
+<tr class="even">
+<td><code>known_share</code></td>
+<td>the share of pixels with a known height</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="roofs" class="level2">
+<h2 class="anchored" data-anchor-id="roofs">roofs_2016.geojson</h2>
+<p>One 3D Polygon per roof face, <code>[x, y, z]</code> in the frame (z above the z origin).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Core</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>building</code></td>
+<td>yes</td>
+<td>the G1 outline the face belongs to</td>
+</tr>
+<tr class="even">
+<td><code>part</code></td>
+<td>yes</td>
+<td>the 2016 building part, as tile and id</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="ledger" class="level2">
 <h2 class="anchored" data-anchor-id="ledger">ledger.csv and checkpoints.csv</h2>
 <table class="caption-top table">
@@ -953,7 +1089,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="planned-files" class="level2">
 <h2 class="anchored" data-anchor-id="planned-files">Planned files</h2>
-<p>The plan files (G2), route files (G3.1), points file (G4) and run log (G5) will be added here, each with its version, once the part that writes it is built.</p>
+<p>Files for routes and recorded journeys will be added here, each with its version, once the stage that writes them is built (<a href="./game.html">The game, stage by stage</a>).</p>
 
 
 </section>

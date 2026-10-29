@@ -1,9 +1,9 @@
 {
  "system": "s9",
- "made": "2026-10-22T02:34:58Z",
+ "made": "2026-10-28T20:31:55Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "af558bb03b241587bb7027f15463ea851c56712b",
+  "git_commit": "5e9de680574bca2845511c0b42c00d9e7732349f",
   "differs_from_commit": true,
   "files": [
    {
@@ -32,7 +32,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "d7370da44505e8cc72c14d5c05f38b179821e389ae89265b9e75a1b3756086a4"
+    "sha256": "22fbd967662f35e0a81639002d6564ef53e2959d49aaebb7b4b5f4470e4b9f4c"
    }
   ]
  },
@@ -40,27 +40,27 @@
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "4ba35c2c5e8b66507474a11a5817b5bae95dc0c14fcdbcd8431eb3e099ee7ac6"
+   "run_json_sha256": "e41bc65e97920462007b503bcbb4089109f620cbd4544ad2ea3f2c9caff71a96"
   },
   {
    "system": "s2",
-   "run_json_sha256": "4235557b6c0d676442b833d7bd7cf4fd37fb26bf31177b926d2896a1fdac537f"
+   "run_json_sha256": "899c8d8a5f4ffb44c1d79d1799d91aac8cf2df0dd36fcf3fd0f48da165069541"
   },
   {
    "system": "s4",
-   "run_json_sha256": "fd20d5b1c04fe541247e71957d1474d28205b65e7b8ae980f1756ad57c4b2089"
+   "run_json_sha256": "9b9e861b6f8c7c134eafc6bb92eee323d52041ce47a0021bef87e80b348f5e07"
   },
   {
    "system": "s5",
-   "run_json_sha256": "bd49d486589e40ee57033f6c3a0145201d48290aa8a889f0d2f8f0ce84b6791d"
+   "run_json_sha256": "d3aec520c1b492b78595cf8e158f4574bf1874b565ad22e32d5139feaf2fb6a4"
   },
   {
    "system": "s7",
-   "run_json_sha256": "4d9016498e19db0ec4a9fcfd3977bef146aa8a066878394880d9f7675821762d"
+   "run_json_sha256": "b7538984329cb1a4f4a6f429946b6c8b4c242f28e7c67211fd1d7918bbe596b5"
   },
   {
    "system": "s8",
-   "run_json_sha256": "d60b4d23c0e1b2e34c8826d1e91fba9036aaaeb9defd96b28d1edf9b0eb181b7"
+   "run_json_sha256": "af92ec70d215348257be369909676e6666272a026160078b5cef7a19dfcfe6b2"
   }
  ],
  "settings": {

@@ -6,7 +6,7 @@ T2  Does the local frame give S1's coordinates and lengths back, to the centimet
     origin (299180, 5038120), rounded to 10 m
     PASS
 
-T3  Does every height follow the order: 2015 surface, OpenStreetMap, storeys x the height per storey of its use, unknown?
+T3  Does every height follow the order: 2015 surface, 2016 model, OpenStreetMap, storeys x the height per storey of its use, unknown?
     height per storey, all uses: 3.7450 m from 157 buildings; frame says 3.745
     PASS
 
@@ -26,17 +26,23 @@ T7  Does every prop take its class from the table, and every element name its so
     PASS
 
 T8  Does the ledger cover every layer, with every row of a known kind?
-    18 rows
+    31 rows
     PASS
 
 T9  Do the files keep the published format: a version, numbers as numbers, missing as null?
-    situ-g1 0.2
+    situ-g1 0.7
     PASS
 
-T10 What the world leaves to be checked (report only)
+T10 Does every height in the frame match the terrain, with no outline corner below its building's base?
+    z origin 3 m above sea
+    PASS
+
+T11 What the world leaves to be checked (report only)
     not seen lately: 34
     count unsure: 26
-    height unknown: 15
+    height unknown: 14
+    ground drops under outline: 10
+    2015 and 2016 disagree: 4
     empty in 2015: 3
     street through building: 1
     no door: 1
@@ -44,7 +50,8 @@ T10 What the world leaves to be checked (report only)
     public use: {'public use, hours unknown': 123, 'vacant premises only': 9, 'none recorded': 115, 'public use, hours known': 49}
     2015 surface against OpenStreetMap heights, 14 buildings: median difference +0.37 m, median absolute 0.89 m
     G1's first storey rule (x 3.33 m) against the 2015 surface, 143 buildings: median -1.16 m, median absolute 1.99 m
-    heights by source: {None: 15, 'storeys': 53, 'surface model 2015': 215, 'OpenStreetMap': 13}
+    2016 model against the 2015 surface, 131 buildings: median -0.03 m, median absolute 0.23 m
+    heights by source: {None: 14, 'storeys': 48, 'surface model 2015': 215, 'OpenStreetMap': 13, '3D buildings 2016': 6}
     props: {'tree': 971, 'hydrant': 104, 'seat': 101, 'bike rack': 110, 'water': 4, 'table': 31, 'shelter': 2, 'bin': 38, 'lamp': 803, 'camera': 87, 'crossing mark': 503, 'work zone': 29}
 
 ALL PASS

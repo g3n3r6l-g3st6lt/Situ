@@ -1,0 +1,17 @@
+{
+ "what": "bare ground, Ville de Montreal terrain model 2015 (CC BY 4.0), rasterised at pixel centres",
+ "first_pixel_centre_frame": [
+  -158.717,
+  1952.46
+ ],
+ "cell_m": 1.0,
+ "rows_go": "south (y decreases)",
+ "z_origin_m_above_sea": 3,
+ "units": "centimetres above the z origin",
+ "nodata": 65535,
+ "shape": [
+  2015,
+  1926
+ ],
+ "known_share": 0.6878
+}

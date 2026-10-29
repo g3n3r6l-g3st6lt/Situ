@@ -374,7 +374,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./game.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The game, part by part</span></a>
+ <span class="menu-text">The game, stage by stage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -387,42 +387,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./g1-world.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">G1 World</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-rhythm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Rhythm</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g2-people.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G2 People</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g3-movement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G3 Movement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g4-points.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G4 Points</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g5-check.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G5 Check</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g6-play.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G6 Play</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -553,7 +517,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>The systems describe Griffintown. A game needs them for four jobs: a world to stand in, people moving through it on time, places where something can happen, and a way to check the result. Each system does one of these jobs first. This page says which, with the counts each system holds today.</p>
-<p>I treat the move from a system to the game as a translation. A system is the source. Each decision that turns part of it into a game element is written down, with its kind (source observation, researcher decision, assumption or gap) and an alternative. The first part of that translation is built: <a href="./g1-world.html">G1 World</a> (verified). The rest is planned.</p>
+<p>I treat the move from a system to the game as a translation. A system is the source. Each decision that turns part of it into a game element is written down, with its kind (source observation, researcher decision, assumption or gap) and an alternative. The first part of that translation is built: <a href="./g1-world.html">G1 World</a> (verified). The game is built from it in stages (<a href="./game.html">The game, stage by stage</a>).</p>
 <section id="roles" class="level2">
 <h2 class="anchored" data-anchor-id="roles">Four jobs</h2>
 <table class="caption-top table">
@@ -619,7 +583,7 @@ ul.task-list li input[type="checkbox"] {
 <td><span id="q-s4"></span><a href="./s4-buildings.html">S4 Buildings</a></td>
 <td>296 outlines; storeys for 223; a measured height for 27; uses</td>
 <td>building masses with a height and a door</td>
-<td>228 heights measured, most from the city’s 2015 surface model; 53 from storeys (<a href="./g1-world.html#ledger">W05</a>, assumption); 15 left empty (<a href="./g1-world.html#ledger">W06</a>)</td>
+<td>234 heights measured, most from the city’s 2015 surface model; 48 from storeys (<a href="./g1-world.html#ledger">W05</a>, assumption); 14 left empty (<a href="./g1-world.html#ledger">W06</a>)</td>
 <td>entrances, roofs, facades, interiors</td>
 </tr>
 <tr class="odd">
@@ -769,39 +733,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="prototype" class="level2">
 <h2 class="anchored" data-anchor-id="prototype">The prototype</h2>
-<p>The translation is built as code next to the systems, in the same way: each part reads the systems’ outputs, writes files any engine can read, and keeps a ledger and tests. The engine only reads those files.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Job</th>
-<th>Parts</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>World</td>
-<td><a href="./g1-world.html">G1 World</a></td>
-<td>verified: 9 tests pass</td>
-</tr>
-<tr class="even">
-<td>Rhythm</td>
-<td><a href="./r-rhythm.html">R Rhythm</a>, <a href="./g2-people.html">G2 People</a>, <a href="./g3-movement.html">G3 Movement</a></td>
-<td>planned</td>
-</tr>
-<tr class="odd">
-<td>Points</td>
-<td><a href="./g4-points.html">G4 Points</a></td>
-<td>planned</td>
-</tr>
-<tr class="even">
-<td>Check</td>
-<td><a href="./g5-check.html">G5 Check</a></td>
-<td>planned</td>
-</tr>
-</tbody>
-</table>
-<p>What the player does is <a href="./g6-play.html">G6 Play</a>; the engine and why it is Unreal is <a href="./g7-engine.html">G7 Engine</a>. All parts, with their subsystems and diagrams: <a href="./game.html">The game, part by part</a>.</p>
+<p>The data side of the translation is built as code next to the systems: <a href="./g1-world.html">G1 World</a> reads the systems’ outputs, writes files any engine can read, and keeps a ledger and tests (verified: 10 tests pass). The game is built from those files in stages, starting with one building and one route (<a href="./game.html">The game, stage by stage</a>). The engine: <a href="./g7-engine.html">G7 Engine</a>.</p>
 </section>
 <section id="waits" class="level2">
 <h2 class="anchored" data-anchor-id="waits">What no system gives the game</h2>
@@ -1213,8 +1145,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./game.html" class="pagination-link" aria-label="The game, part by part">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The game, part by part</span>
+      <a href="./game.html" class="pagination-link" aria-label="The game, stage by stage">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The game, stage by stage</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

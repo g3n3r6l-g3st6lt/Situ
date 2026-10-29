@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./r-rhythm.html" rel="next">
+<link href="./g7-engine.html" rel="next">
 <link href="./play.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -382,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./game.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The game, part by part</span></a>
+ <span class="menu-text">The game, stage by stage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -395,42 +395,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./g1-world.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">G1 World</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-rhythm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Rhythm</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g2-people.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G2 People</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g3-movement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G3 Movement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g4-points.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G4 Points</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g5-check.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G5 Check</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g6-play.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G6 Play</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -531,6 +495,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-frame" id="toc-the-frame" class="nav-link" data-scroll-target="#the-frame">The frame</a></li>
   <li><a href="#the-files" id="toc-the-files" class="nav-link" data-scroll-target="#the-files">The files</a></li>
   <li><a href="#heights" id="toc-heights" class="nav-link" data-scroll-target="#heights">Heights</a></li>
+  <li><a href="#roofs" id="toc-roofs" class="nav-link" data-scroll-target="#roofs">Roofs</a></li>
+  <li><a href="#ground" id="toc-ground" class="nav-link" data-scroll-target="#ground">Ground</a></li>
   <li><a href="#doors-and-public-use" id="toc-doors-and-public-use" class="nav-link" data-scroll-target="#doors-and-public-use">Doors and public use</a></li>
   <li><a href="#props" id="toc-props" class="nav-link" data-scroll-target="#props">Props</a></li>
   <li><a href="#ledger" id="toc-ledger" class="nav-link" data-scroll-target="#ledger">The ledger</a></li>
@@ -577,9 +543,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="glance">
 <p><strong>Asks</strong> What can a game stand on and move among, taken from the systems with nothing made up?</p>
-<p><strong>Found</strong> The streets and 296 building masses in one frame, with 2,783 props. 228 heights are measured, most from the city’s 2015 surface model. 15 buildings have no height in any source, and stay without one.</p>
-<p><strong>Stands</strong> verified: 9 tests pass. 18 decisions in the ledger, 4 of them assumptions.</p>
-<p><strong>Leaves out</strong> Roofs, facades, interiors, entrances. The ground is still flat in the files. A game that shows them invents them.</p>
+<p><strong>Found</strong> The streets and 296 building masses in one frame, with 2,783 props. 234 heights are measured, most from the city’s 2015 surface model, and 158 roofs come from its 2016 3D buildings. 14 buildings have no height in any source, and stay without one.</p>
+<p><strong>Stands</strong> verified: 10 tests pass. 31 decisions in the ledger, 5 of them assumptions.</p>
+<p><strong>Leaves out</strong> Facades, interiors and most entrances, and the roofs of the 138 buildings the 2016 model does not include. A game that shows them invents them.</p>
 <p><strong>In the game</strong> World: the ground and the masses (<a href="./play.html#world">From systems to a game</a>).</p>
 <p><strong>Trace</strong> <a href="outputs/g1/ledger.csv">ledger</a> · <a href="outputs/g1/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a>, <a href="./s4-buildings.html">S4</a> and <a href="./s6-streetscape.html">S6</a></p>
 </div>
@@ -615,8 +581,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><a href="outputs/g1/blocks.geojson">blocks.geojson</a></td>
-<td>296 footprints, each with a height and the rule behind it, a door, and a public-use class</td>
-<td>S4</td>
+<td>296 buildings, each a separate structure: its outline, the height of its base and top, the rule behind its height, a door, and a public-use class</td>
+<td>S4, 2015 models</td>
 </tr>
 <tr class="odd">
 <td><a href="outputs/g1/props.csv">props.csv</a></td>
@@ -629,11 +595,36 @@ ul.task-list li input[type="checkbox"] {
 <td>S6</td>
 </tr>
 <tr class="odd">
-<td><a href="outputs/g1/ledger.csv">ledger.csv</a></td>
-<td>the 14 decisions below</td>
-<td>G1</td>
+<td><a href="outputs/g1/areas.geojson">areas.geojson</a></td>
+<td>879 pieces of ground by kind: green, play, plaza, parking, bike, water</td>
+<td>OpenStreetMap (ODbL), W29 to W31</td>
 </tr>
 <tr class="even">
+<td><a href="outputs/g1/flat_ground.geojson">flat_ground.geojson</a></td>
+<td>the flat ground in 659 pieces by kind, none overlapping</td>
+<td>W30</td>
+</tr>
+<tr class="odd">
+<td><a href="outputs/g1/terrain_2015.png">terrain_2015.png</a></td>
+<td>the ground as a 1 m grid, in centimetres above the frame’s z origin; read with <a href="outputs/g1/terrain_2015.json">terrain_2015.json</a></td>
+<td>2015 terrain model</td>
+</tr>
+<tr class="even">
+<td><a href="outputs/g1/heights_2015.csv">heights_2015.csv</a></td>
+<td>what the 2015 surface measured on each outline</td>
+<td>2015 models</td>
+</tr>
+<tr class="odd">
+<td><a href="outputs/g1/roofs_2016.geojson">roofs_2016.geojson</a>, <a href="outputs/g1/roofs_2016.csv">roofs_2016.csv</a></td>
+<td>the roof faces of the 2016 parts, and per outline its parts, cover, roof form and 2016 height</td>
+<td>2016 3D buildings</td>
+</tr>
+<tr class="even">
+<td><a href="outputs/g1/ledger.csv">ledger.csv</a></td>
+<td>the 31 decisions below</td>
+<td>G1</td>
+</tr>
+<tr class="odd">
 <td><a href="outputs/g1/checkpoints.csv">checkpoints.csv</a></td>
 <td>what a person should look at</td>
 <td>G1</td>
@@ -664,23 +655,28 @@ ul.task-list li input[type="checkbox"] {
 <td>source observation</td>
 </tr>
 <tr class="even">
-<td>measured: OpenStreetMap height, where the 2015 surface cannot measure</td>
-<td>13</td>
+<td>measured: roof top of the 2016 3D buildings minus the 2015 terrain, where the 2015 surface cannot measure</td>
+<td>6</td>
 <td>source observation</td>
 </tr>
 <tr class="odd">
-<td>storeys x a measured height per storey of the same use</td>
-<td>53</td>
-<td>assumption</td>
+<td>measured: OpenStreetMap height, where neither city model can measure</td>
+<td>13</td>
+<td>source observation</td>
 </tr>
 <tr class="even">
+<td>storeys x a measured height per storey of the same use</td>
+<td>48</td>
+<td>assumption</td>
+</tr>
+<tr class="odd">
 <td>nothing measures it and S4 has no storeys</td>
-<td>15</td>
+<td>14</td>
 <td>left empty</td>
 </tr>
 </tbody>
 </table>
-<p>The 2015 surface cannot measure a building that went up later. On 61 outlines it shows no building at all, and for 17 more the tax roll dates the building 2015 or later, so what the surface shows there is the building before (W15, W17). Those buildings take an OpenStreetMap height or the storey rule.</p>
+<p>The 2015 surface cannot measure a building that went up later. On 61 outlines it shows no building at all, and for 17 more the tax roll dates the building 2015 or later, so what the surface shows there is the building before (W15, W17). Those buildings take, in this order, a height from the 2016 3D buildings (<a href="#roofs">Roofs</a>), an OpenStreetMap height, or the storey rule.</p>
 <p><strong>The two measurements agree.</strong> Where a building has both a 2015 surface height and an OpenStreetMap height, the median difference is 0.37 m and the median absolute difference 0.89 m, over 14 buildings (<a href="outputs/g1/test_report.txt">test report</a>).</p>
 <p><strong>The first storey rule was too low.</strong> G1 first used 3.33 m per storey, the median of 27 mostly tall buildings. Measured against the 2015 surface, that rule came out 1.16 m too low on the median building, and 1.99 m off in absolute terms (143 buildings). The rule now uses a height per storey measured on 157 buildings, by use (W05):</p>
 <table class="caption-top table">
@@ -720,6 +716,28 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>The sources are in two slightly different datums (W18). A search for the best shift between them, within 2 m, found none: the outlines and the surface agree as they are.</p>
+</section>
+<section id="roofs" class="level2">
+<h2 class="anchored" data-anchor-id="roofs">Roofs</h2>
+<p>The city’s 2016 3D buildings model each building part with its roof faces. Each part goes to the G1 outline that holds the centre of its ground (W23). 202 parts fall on 158 outlines, with 13,833 roof faces between them, kept in <a href="outputs/g1/roofs_2016.geojson">roofs_2016.geojson</a> as 3D faces in the frame. A face sloping less than 5 degrees is flat (W22): 122 roofs are flat, 30 mixed and 6 pitched. The other 138 outlines have no part in the 2016 model, most of them buildings finished after 2016, and their roofs stay unknown (W14).</p>
+<p><strong>A finding about the 2016 model.</strong> Its own height field, measuredHeight, is 4.4 m more than its roof tops stand above the 2015 terrain. Its roof tops, though, sit exactly where the 2015 surface puts them. So measuredHeight counts from a ground set lower than the street. Situ takes the 2016 roof top and subtracts the 2015 terrain (W25). Measured that way, the 2016 model agrees with the 2015 surface to a median of 0.23 m on 131 buildings, and it gives a height to 6 buildings the 2015 surface could not measure. No shift between the model and the outlines was found within 1 m (W24).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/g1/g1_sheet_roofs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Each outline by its roof form in the 2016 model. Dashed outlines have no part in the model, most of them built later."><img src="outputs/g1/g1_sheet_roofs.png" class="img-fluid figure-img" alt="Map of Griffintown outlines filled grey for flat roofs, mauve for mixed and pink for pitched, with dashed outlines where no roof is known."></a></p>
+<figcaption>Each outline by its roof form in the 2016 model. Dashed outlines have no part in the model, most of them built later.</figcaption>
+</figure>
+</div>
+</section>
+<section id="ground" class="level2">
+<h2 class="anchored" data-anchor-id="ground">Ground</h2>
+<p>The ground is the city’s 2015 terrain model, written as a 1 m grid over everything G1 places (W13). Every street vertex, junction and prop takes its height from it, in metres above the frame’s z origin, the lowest ground in the grid (3 m above sea, W19). The terrain model stops at the edge of the Sud-Ouest borough, so 16 street elements north of it have no height, and say so.</p>
+<p>Each building is a separate structure set on that ground (W20). Its base is the lowest ground along its outline, so no wall floats; its top is the median ground along the outline plus its height. On 10 outlines the ground drops more than 3 m below its median, at a ramp, the canal edge or an outline that is off; each is a checkpoint.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/g1/g1_sheet_terrain.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The ground under the world in 2015: darker is lower. The canal and the river bank lie lowest; the light strips are raised ramps and embankments. Blank areas have no terrain triangle."><img src="outputs/g1/g1_sheet_terrain.png" class="img-fluid figure-img" alt="Grey shaded map of Griffintown's ground heights with streets in pink and a scale of metres."></a></p>
+<figcaption>The ground under the world in 2015: darker is lower. The canal and the river bank lie lowest; the light strips are raised ramps and embankments. Blank areas have no terrain triangle.</figcaption>
+</figure>
+</div>
 </section>
 <section id="doors-and-public-use" class="level2">
 <h2 class="anchored" data-anchor-id="doors-and-public-use">Doors and public use</h2>
@@ -856,14 +874,14 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>W05</td>
 <td>assumption</td>
-<td>height = storeys x the measured height per storey of the same use (53)</td>
+<td>height = storeys x the measured height per storey of the same use (48)</td>
 <td>a height per storey by type and age</td>
 </tr>
 <tr class="even">
 <td>W06</td>
 <td>researcher decision</td>
-<td>nothing measures it, no storeys: height left empty (15)</td>
-<td>measure on site; the 2016 3D buildings</td>
+<td>nothing measures it, no storeys: height left empty (14)</td>
+<td>measure on site</td>
 </tr>
 <tr class="odd">
 <td>W07</td>
@@ -903,15 +921,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>W13</td>
-<td>assumption</td>
-<td>the ground is flat</td>
-<td>the city’s elevation model, near the canal and the rail viaduct</td>
+<td>source observation</td>
+<td>the ground follows the city’s 2015 terrain model, as a 1 m grid</td>
+<td>a newer terrain model</td>
 </tr>
 <tr class="even">
 <td>W14</td>
 <td>gap</td>
-<td>roofs, facades, materials, interiors, canopies and what is upstairs are not in G1</td>
-<td>photo surveys</td>
+<td>facades, materials, interiors, canopies, what is upstairs, and the roofs of 138 outlines are not in G1</td>
+<td>photo surveys; a newer 3D model</td>
 </tr>
 <tr class="odd">
 <td>W15</td>
@@ -937,12 +955,90 @@ ul.task-list li input[type="checkbox"] {
 <td>the 2015 models and the systems are in two datums; no shift between them was found within 2 m</td>
 <td>a published transformation grid</td>
 </tr>
+<tr class="odd">
+<td>W19</td>
+<td>researcher decision</td>
+<td>z in metres above the lowest ground, 3 m above sea; empty where the terrain model has no triangle (16 street elements)</td>
+<td>terrain for the neighbouring boroughs</td>
+</tr>
+<tr class="even">
+<td>W20</td>
+<td>researcher decision</td>
+<td>each building is a separate structure: base at the lowest ground along its outline, top at the median ground plus its height</td>
+<td>a base per wall</td>
+</tr>
+<tr class="odd">
+<td>W21</td>
+<td>gap</td>
+<td>the terrain is from 2015; later earthworks are not in it</td>
+<td>a newer terrain model</td>
+</tr>
+<tr class="even">
+<td>W22</td>
+<td>researcher decision</td>
+<td>a roof face under 5 degrees is flat; a roof is flat at 90 % flat area, pitched at 10 % or less, mixed between</td>
+<td>a finer roof typology</td>
+</tr>
+<tr class="odd">
+<td>W23</td>
+<td>researcher decision</td>
+<td>the 2016 model gives a height where the 2015 surface cannot, if its parts cover half the outline and the roll gives no year after 2016 (6)</td>
+<td>matching by overlap</td>
+</tr>
+<tr class="even">
+<td>W24</td>
+<td>source observation</td>
+<td>no shift between the 2016 model and the outlines within 1 m</td>
+<td>none needed</td>
+</tr>
+<tr class="odd">
+<td>W25</td>
+<td>source observation</td>
+<td>the 2016 measuredHeight counts from a lower ground; Situ uses its roof top minus the 2015 terrain</td>
+<td>measuredHeight as given</td>
+</tr>
+<tr class="even">
+<td>W26</td>
+<td>researcher decision</td>
+<td>for the greybox the engine draws the ground flat, each building standing on it at its height; the measured base, top and terrain stay in the files</td>
+<td>the 2015 terrain</td>
+</tr>
+<tr class="odd">
+<td>W27</td>
+<td>assumption</td>
+<td>sidewalks and islands stand 0.15 m above the flat ground: the top of the 125 to 150 mm standard range; the 2015 models show them raised but cannot measure a curb</td>
+<td>Montreal’s own standard, or a visit</td>
+</tr>
+<tr class="even">
+<td>W28</td>
+<td>researcher decision</td>
+<td>the flat ground’s grid is turned 61.5 degrees from east, the main street direction (31 % of street centrelines within 3 degrees); streets near 40 and 56 degrees keep an angled grid; a look only</td>
+<td>one direction per street, once road surfaces exist</td>
+</tr>
+<tr class="odd">
+<td>W29</td>
+<td>researcher decision</td>
+<td>where the flat ground is not street, sidewalk or building, it takes the OpenStreetMap kind: green 352, play 40, plaza 59, parking 100, bike 311, water 17 pieces; later kinds cover earlier ones, buildings cut them; each is one outer ring (holes opened by cuts, spikes removed); lines with no area are left out</td>
+<td>the city’s park and land-use layers; a visit</td>
+</tr>
+<tr class="even">
+<td>W30</td>
+<td>researcher decision</td>
+<td>the flat ground (study area + 50 m) is cut into 659 pieces, each one kind, none overlapping, exact outlines, meeting corner to corner; engines draw them at z 0 with one shared grid (two earlier ways failed: sheets overlapped, the 1 m grid stepped)</td>
+<td>the 2015 terrain with areas draped on it, once heights return</td>
+</tr>
+<tr class="odd">
+<td>W31</td>
+<td>assumption</td>
+<td>bicycle paths lie at street level as bands: OSM width where mapped, else the median mapped one-way width (2.1 m), else 3.0 m for two-way paths (Ville de Montréal 2011); four city paths typed at sidewalk level stay at street level</td>
+<td>a visit or street photos per path</td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="tests" class="level2">
 <h2 class="anchored" data-anchor-id="tests">Tests</h2>
-<p>Nine checks, all PASS (<a href="outputs/g1/test_report.txt">report</a>). The ground is exactly S1’s segments and junctions, once each, and moving it back by the origin gives S1’s coordinates to the centimetre. Every height is recomputed from S4 and the 2015 measurements in the order the ledger gives, and the 15 without a source stay empty. Every door sits on its outline, no further from its street than S4 measured. Every S6 row is accounted for, either as a prop or as a detection matched to one. The ledger covers every layer, and the files keep the <a href="./formats.html">published format</a>: a version number, numbers stored as numbers, and missing values stored as empty (null), never as zero.</p>
+<p>Ten checks, all PASS (<a href="outputs/g1/test_report.txt">report</a>). The ground is exactly S1’s segments and junctions, once each, and moving it back by the origin gives S1’s coordinates to the centimetre. Every height is recomputed from S4 and the 2015 measurements in the order the ledger gives, and the 15 without a source stay empty. Every door sits on its outline, no further from its street than S4 measured. Every S6 row is accounted for, either as a prop or as a detection matched to one. Every height in the frame is read again from the terrain picture by a separate sampler, and no outline corner lies below its building’s base. The ledger covers every layer, and the files keep the <a href="./formats.html">published format</a>: a version number, numbers stored as numbers, and missing values stored as empty (null), never as zero.</p>
 <p>The door check failed at first. One building’s door came out 4.9 m from the street, where S4 had 1.1 m. Rue Barré runs through that outline, and the first door rule only looked at corners. The rule now places the door where the street enters the outline, and the building is a checkpoint.</p>
 </section>
 <section id="plan" class="level2">
@@ -1011,11 +1107,11 @@ flowchart TB
 <td>4</td>
 <td>terrain under the ground and the blocks</td>
 <td>step 1</td>
-<td>W13 (flat ground) is replaced, and the change is in the ledger</td>
+<td>done 2026-10-22: W13 now follows the 2015 terrain; every street vertex, junction, prop and building base has a height (W19 to W21)</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>roof shapes and a second height from the 2016 3D buildings, for the buildings they include</td>
+<td>roof shapes and a second height from the 2016 3D buildings, for the buildings they include (done 2026-10-23: 158 roofs, 6 heights)</td>
 <td>3D buildings 2016, Sud-Ouest tiles covering the area (downloaded)</td>
 <td>each block has a roof shape or says none is known; where the 2015 and 2016 heights differ, both are kept and the difference reported</td>
 </tr>
@@ -1066,7 +1162,7 @@ flowchart TB
 </section>
 <section id="what-comes-next" class="level2">
 <h2 class="anchored" data-anchor-id="what-comes-next">What comes next</h2>
-<p>After G1b, the next parts give the world its people, starting with <a href="./r-rhythm.html">R Rhythm</a> and <a href="./g2-people.html">G2 People</a> (planned; every part: <a href="./game.html">The game, part by part</a>).</p>
+<p>The game is now built in stages, starting in QGIS with one building (<a href="./game.html">The game, stage by stage</a>). Decisions W26 to W31 were made for the first engine plugins, withdrawn on 2026-10-28 (<a href="./g7-engine.html#first-attempt">G7</a>).</p>
 
 
 </section>
@@ -1479,8 +1575,8 @@ flowchart TB
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./r-rhythm.html" class="pagination-link" aria-label="R Rhythm">
-        <span class="nav-page-text">R Rhythm</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./g7-engine.html" class="pagination-link" aria-label="G7 Engine">
+        <span class="nav-page-text">G7 Engine</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

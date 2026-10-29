@@ -377,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./game.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The game, part by part</span></a>
+ <span class="menu-text">The game, stage by stage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -390,42 +390,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./g1-world.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">G1 World</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-rhythm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Rhythm</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g2-people.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G2 People</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g3-movement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G3 Movement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g4-points.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G4 Points</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g5-check.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G5 Check</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./g6-play.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">G6 Play</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -551,7 +515,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Situ is meant to be rebuilt elsewhere. The method is the same for any city; the sources are not. So the work is split in two: systems that read one city’s sources, and files and plugins that do not care which city they hold.</p>
+<p>Situ is meant to be rebuilt elsewhere. The method is the same for any city; the sources are not. So the work is split in two: systems that read one city’s sources, and files that do not care which city they hold.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
@@ -563,9 +527,9 @@ flowchart TB
     D[the city's own sources&lt;br/&gt;streets, buildings, counts, census]:::data --&gt; S[systems S1 to S9&lt;br/&gt;read and test them]:::step
   end
   subgraph ANY [The same for any city]
-    F[files in the published formats]:::out --&gt; P[engine plugins]:::step
+    F[files in the published formats]:::out --&gt; P[a game engine]:::step
   end
-  S --&gt; G[game parts G1 to G6&lt;br/&gt;with their ledgers]:::step
+  S --&gt; G[G1 World&lt;br/&gt;with its ledger]:::step
   G --&gt; F
   classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
   classDef step fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
@@ -602,7 +566,7 @@ flowchart TB
 <tr class="odd">
 <td>rebuild</td>
 <td>make the same for another place</td>
-<td>this page, the <a href="./formats.html">formats</a>, and the <a href="./g7-engine.html#plugins">engine plugins</a></td>
+<td>this page and the <a href="./formats.html">formats</a></td>
 </tr>
 </tbody>
 </table>

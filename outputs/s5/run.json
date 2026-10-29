@@ -1,9 +1,9 @@
 {
  "system": "s5",
- "made": "2026-10-22T02:34:58Z",
+ "made": "2026-10-28T20:31:54Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "af558bb03b241587bb7027f15463ea851c56712b",
+  "git_commit": "5e9de680574bca2845511c0b42c00d9e7732349f",
   "differs_from_commit": true,
   "files": [
    {
@@ -44,7 +44,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "d7370da44505e8cc72c14d5c05f38b179821e389ae89265b9e75a1b3756086a4"
+    "sha256": "22fbd967662f35e0a81639002d6564ef53e2959d49aaebb7b4b5f4470e4b9f4c"
    }
   ]
  },
@@ -81,11 +81,11 @@
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "4ba35c2c5e8b66507474a11a5817b5bae95dc0c14fcdbcd8431eb3e099ee7ac6"
+   "run_json_sha256": "e41bc65e97920462007b503bcbb4089109f620cbd4544ad2ea3f2c9caff71a96"
   },
   {
    "system": "s4",
-   "run_json_sha256": "fd20d5b1c04fe541247e71957d1474d28205b65e7b8ae980f1756ad57c4b2089"
+   "run_json_sha256": "9b9e861b6f8c7c134eafc6bb92eee323d52041ce47a0021bef87e80b348f5e07"
   }
  ],
  "settings": {

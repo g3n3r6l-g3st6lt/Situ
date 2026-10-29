@@ -1,5 +1,9 @@
 kind,id,x,y,question
 height unknown,w1080275376,480.13,942.32,"minor structure, 103.2 m2: how tall is it?"
+2015 and 2016 disagree,w1081874551,765.43,1394.52,"2015 surface 28.45 m, 2016 model 32.41 m: changed in a year, or a mismatch?"
+2015 and 2016 disagree,w1093571770,442.15,637.3,"2015 surface 10.31 m, 2016 model 16.14 m: changed in a year, or a mismatch?"
+ground drops under outline,w1093571770,442.15,637.3,"the ground along the outline drops 5.1 m below its median: a ramp, the canal edge, or an outline off?"
+ground drops under outline,w1093571771,426.35,643.71,"the ground along the outline drops 5.2 m below its median: a ramp, the canal edge, or an outline off?"
 height unknown,w1093571777,361.59,567.49,"residential, 1902.2 m2: how tall is it?"
 street through building,w1100913875,660.5,1138.95,S1's Rue Barré (S006) runs through this outline: which is out of date?
 height unknown,w1163554942,484.54,312.35,"minor structure, 18.2 m2: how tall is it?"
@@ -13,11 +17,20 @@ height unknown,w1314138313,882.37,1584.3,"minor structure, 40.0 m2: how tall is 
 height unknown,w1314138314,890.81,1578.63,"minor structure, 27.6 m2: how tall is it?"
 height unknown,w1321450945,1057.89,1406.41,"transport and parking, 68.6 m2: how tall is it?"
 height unknown,w1354184758,1183.04,1328.6,"industry, 231.9 m2: how tall is it?"
+ground drops under outline,w1354184758,1183.04,1328.6,"the ground along the outline drops 3.6 m below its median: a ramp, the canal edge, or an outline off?"
 empty in 2015,w1393630742,842.87,1557.61,"built 1923, yet nothing stands on the outline in the 2015 surface: outline off, or demolished?"
-height unknown,w1451065379,842.67,1205.45,"vacant land, 433.5 m2: how tall is it?"
+ground drops under outline,w199238749,839.73,723.02,"the ground along the outline drops 8.0 m below its median: a ramp, the canal edge, or an outline off?"
 empty in 2015,w201017213,1211.09,919.99,"built 1940, yet nothing stands on the outline in the 2015 surface: outline off, or demolished?"
+ground drops under outline,w227612466,418.01,634.61,"the ground along the outline drops 3.1 m below its median: a ramp, the canal edge, or an outline off?"
+ground drops under outline,w272436796,901.45,726.12,"the ground along the outline drops 6.9 m below its median: a ramp, the canal edge, or an outline off?"
+ground drops under outline,w340228269,988.16,1125.87,"the ground along the outline drops 3.7 m below its median: a ramp, the canal edge, or an outline off?"
 height unknown,w347394699,267.15,474.16,"residential, 478.6 m2: how tall is it?"
 height unknown,w347458840,65.22,217.31,"industry, 152.0 m2: how tall is it?"
+ground drops under outline,w422426894,833.33,1032.21,"the ground along the outline drops 4.5 m below its median: a ramp, the canal edge, or an outline off?"
+ground drops under outline,w422426895,371.54,332.1,"the ground along the outline drops 6.2 m below its median: a ramp, the canal edge, or an outline off?"
+2015 and 2016 disagree,w616028662,1014.0,793.05,"2015 surface 28.74 m, 2016 model 42.86 m: changed in a year, or a mismatch?"
+ground drops under outline,w616028662,1014.0,793.05,"the ground along the outline drops 3.5 m below its median: a ramp, the canal edge, or an outline off?"
+2015 and 2016 disagree,w696912354,1024.34,1151.34,"2015 surface 7.56 m, 2016 model 10.9 m: changed in a year, or a mismatch?"
 no door,w700571090,272.62,155.71,no walkable street near: how is it reached?
 heights disagree,w965233758,655.8,1198.93,"2015 surface 29.25 m, OpenStreetMap 24.0 m: which is right today?"
 not seen lately,GLM108,494.6,559.41,street light last seen in a photo in 2020: still there?
