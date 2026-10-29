@@ -1,0 +1,32 @@
+odb_id,source,dataset,area_m2,x,y,s4_cover,median_above_ground_2015_m,standing_2015,median_above_ground_2023_m,standing_2023
+f7764c13f81d9f4196deba7e732d6d79,Government of Canada,Automatically Extracted Buildings,16.4,300350.1,5039033.2,0.0,,unclear,,unclear
+1973b39abdb607c9e02fff8d60df0e65,Government of Québec,Référentiel québécois sur les bâtiments,268.7,299875.3,5038794.8,0.0,0.04,no,0.04,no
+c93fe24d689dc08cc43aa0409c277fac,Government of Québec,Référentiel québécois sur les bâtiments,193.6,299634.5,5038546.6,0.0,3.86,yes,3.69,yes
+17b1bc84b86a38c0165e87a46e08db86,Government of Québec,Référentiel québécois sur les bâtiments,39.7,300086.2,5039160.0,0.0,5.29,yes,5.34,yes
+b4bab2d38ec348c9de19df27a2975ec9,Government of Québec,Référentiel québécois sur les bâtiments,35.0,300350.2,5039017.2,0.0,0.08,no,0.07,no
+b832d9f8685df88769baba34e13d06d7,Government of Québec,Référentiel québécois sur les bâtiments,350.2,299750.5,5038624.9,0.0,5.98,yes,6.04,yes
+7919697d33b3a38fbcf2bf1e84793f46,Government of Québec,Référentiel québécois sur les bâtiments,68.7,300169.9,5038885.6,0.0,0.01,no,0.03,no
+42d46c6a42da1e3c17cfcdbdc00deafc,Government of Québec,Référentiel québécois sur les bâtiments,44.4,300108.3,5039645.4,0.0,0.3,no,0.04,no
+e50313e6a656f6b94d13aa87cfec943f,Government of Québec,Référentiel québécois sur les bâtiments,43.8,300297.5,5039091.2,0.091,0.01,no,0.03,no
+5bf6e3c22ee729bedc0a642613fad736,Government of Québec,Référentiel québécois sur les bâtiments,61.1,299686.4,5038593.1,0.0,7.0,yes,6.98,yes
+dc444f905b79140e663039b11f7cc3c2,Government of Québec,Référentiel québécois sur les bâtiments,54.1,300319.2,5039043.0,0.0,0.11,no,0.05,no
+27cf5949d6f5537ab42055c88dfb059a,Government of Canada,Automatically Extracted Buildings,17.3,300140.1,5038914.1,0.0,-0.01,no,0.16,no
+501d11ce231966adaca9ba9db1a43dae,Government of Canada,Automatically Extracted Buildings,22.0,300298.5,5039072.8,0.0,0.05,no,0.09,no
+b50f24e4e3eab3ceff484429ada6edfc,Government of Canada,Automatically Extracted Buildings,17.5,300327.9,5039022.7,0.0,0.06,no,0.03,no
+4a4bc3c4257231dc2c1b3bff0a287a77,Government of Canada,Automatically Extracted Buildings,12.3,300084.6,5039007.5,0.0,0.17,no,3.03,yes
+0f991e25c8aa644d1161765a96e780e3,Ville de Montréal,Bâtiments; Adresse ponctuelle,1212.9,299471.9,5038401.2,0.0,4.98,yes,4.98,yes
+36beaecc4cf66fc4f0f54c89e42cdd13,Ville de Montréal,Bâtiments; Adresse ponctuelle,1003.4,299666.6,5038566.0,0.0,6.03,yes,5.97,yes
+cc19f8421992dc90e1d8476778ae45b7,Ville de Montréal,Bâtiments,116.4,300127.8,5039314.8,0.0,7.09,yes,0.04,no
+1456da6579b226d1ceb6c780a4454dc5,Ville de Montréal,Bâtiments; Adresse ponctuelle,136.6,299884.1,5039126.1,0.0,0.1,no,0.04,no
+7011180f3ec0f70ed518ed7e4339daaf,Ville de Montréal,Bâtiments; Adresse ponctuelle,7616.0,299921.7,5039072.0,0.0,7.16,yes,0.04,no
+b99311f5ae069de35909404ce2b05c0f,Ville de Montréal,Bâtiments; Adresse ponctuelle,3163.6,299684.2,5038868.9,0.0,5.15,yes,0.03,no
+74752145e5cea6ae49e8e5718930275b,Ville de Montréal,Bâtiments,13.0,299258.2,5038388.6,0.0,0.45,no,0.04,no
+60572670e320c3966ad1177b19b4a555,Ville de Montréal,Bâtiments,15.4,300403.4,5039049.0,0.0,3.18,yes,,unclear
+2e4efb2f5fa3b6c182519332fed222cf,Ville de Montréal,Bâtiments,10.2,300041.3,5039326.4,0.0,0.85,no,0.05,no
+1617c7b05958ba474b07c79d0bb265f4,Ville de Montréal,Bâtiments,67.6,300111.5,5039176.7,0.0,5.71,yes,0.08,no
+a135bdbe79bfc4297112693745d3f7d9,Ville de Montréal,Bâtiments,97.2,300043.0,5039044.7,0.0,0.03,no,0.07,no
+c2c76291d5e002bcf331b97b76cb0bfe,Ville de Montréal,Bâtiments,18.9,299849.5,5038846.3,0.0,0.01,no,4.48,yes
+ee7c853f806100b06b57c09ff9a1c8d2,Ville de Montréal,Bâtiments,5.7,299251.8,5038384.1,0.0,,unclear,,unclear
+b20ce4fd09cf92b32709df1c7ec711dc,Ville de Montréal,Bâtiments,7.0,300019.3,5039312.0,0.0,,unclear,,unclear
+29efb5b11a6bbaa0f4f5bec554c17a05,Government of Québec,Référentiel québécois sur les bâtiments,44.4,300197.8,5038994.1,0.0,-0.0,no,0.02,no
+42a7560cc0d1981a3c7826d2bbc307ea,Government of Québec,Référentiel québécois sur les bâtiments,58.9,300185.9,5039009.7,0.0,0.13,no,0.03,no

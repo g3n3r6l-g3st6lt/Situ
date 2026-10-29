@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-732e4e15f095b381d8e57b6141c91f9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -543,9 +543,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="glance">
 <p><strong>Asks</strong> What can a game stand on and move among, taken from the systems with nothing made up?</p>
-<p><strong>Found</strong> The streets and 296 building masses in one frame, with 2,783 props. 234 heights are measured, most from the city’s 2015 surface model, and 158 roofs come from its 2016 3D buildings. 14 buildings have no height in any source, and stay without one.</p>
-<p><strong>Stands</strong> verified: 10 tests pass. 31 decisions in the ledger, 5 of them assumptions.</p>
-<p><strong>Leaves out</strong> Facades, interiors and most entrances, and the roofs of the 138 buildings the 2016 model does not include. A game that shows them invents them.</p>
+<p><strong>Found</strong> The streets and 296 building masses in one frame, with 2,783 props. 284 heights are measured, most from Québec’s 2023 lidar, and 131 roofs come from the city’s 2016 3D buildings. 6 buildings have no height in any source, and stay without one.</p>
+<p><strong>Stands</strong> verified: 11 tests pass. 38 decisions in the ledger, 5 of them assumptions.</p>
+<p><strong>Leaves out</strong> Facades, interiors and most entrances, and the roofs of 165 buildings: 145 the 2016 model does not include, and 20 whose 2016 roof no longer fits their height. A game that shows them invents them.</p>
 <p><strong>In the game</strong> World: the ground and the masses (<a href="./play.html#world">From systems to a game</a>).</p>
 <p><strong>Trace</strong> <a href="outputs/g1/ledger.csv">ledger</a> · <a href="outputs/g1/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a>, <a href="./s4-buildings.html">S4</a> and <a href="./s6-streetscape.html">S6</a></p>
 </div>
@@ -610,18 +610,18 @@ ul.task-list li input[type="checkbox"] {
 <td>2015 terrain model</td>
 </tr>
 <tr class="even">
-<td><a href="outputs/g1/heights_2015.csv">heights_2015.csv</a></td>
-<td>what the 2015 surface measured on each outline</td>
+<td><a href="outputs/s4/heights_2015.csv">heights_2015.csv</a></td>
+<td>what the 2015 surface measured on each outline (made by S4)</td>
 <td>2015 models</td>
 </tr>
 <tr class="odd">
-<td><a href="outputs/g1/roofs_2016.geojson">roofs_2016.geojson</a>, <a href="outputs/g1/roofs_2016.csv">roofs_2016.csv</a></td>
-<td>the roof faces of the 2016 parts, and per outline its parts, cover, roof form and 2016 height</td>
+<td><a href="outputs/g1/roofs_2016.geojson">roofs_2016.geojson</a>, <a href="outputs/s4/roofs_2016.csv">roofs_2016.csv</a></td>
+<td>the roof faces of the 2016 parts in the frame, and per outline its parts, cover, roof form and 2016 height (made by S4)</td>
 <td>2016 3D buildings</td>
 </tr>
 <tr class="even">
 <td><a href="outputs/g1/ledger.csv">ledger.csv</a></td>
-<td>the 31 decisions below</td>
+<td>the 38 decisions below</td>
 <td>G1</td>
 </tr>
 <tr class="odd">
@@ -634,7 +634,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="heights" class="level2">
 <h2 class="anchored" data-anchor-id="heights">Heights</h2>
-<p>Since G1b, most heights are measured. The city’s 2015 surface model (ground and buildings, 1 m) minus its 2015 terrain model (bare ground) gives each pixel’s height above ground. A building’s height is the 90th percentile of those heights inside its outline, leaving out a 1 m band along the edge (W16).</p>
+<p>Since G1b, most heights are measured. Since 2026-10-29 the first source is Québec’s 2023 lidar (W32): its ground and building points, minus its 2023 bare-ground model, give each 1 m cell’s height above ground. The city’s 2015 surface model minus its 2015 terrain does the same for 2015. A building’s height is the 90th percentile of those heights inside its outline, leaving out a 1 m band along the edge (W16). S4 measures both and sets them beside the other sources (<a href="./s4-build.html#heights-by-source">S4: heights, by source</a>).</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -650,35 +650,40 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>measured: 2015 surface minus terrain</td>
-<td>215</td>
+<td>measured: 2023 lidar minus 2023 ground</td>
+<td>277</td>
 <td>source observation</td>
 </tr>
 <tr class="even">
-<td>measured: roof top of the 2016 3D buildings minus the 2015 terrain, where the 2015 surface cannot measure</td>
-<td>6</td>
+<td>measured: 2015 surface minus terrain, where the lidar cannot measure</td>
+<td>4</td>
 <td>source observation</td>
 </tr>
 <tr class="odd">
-<td>measured: OpenStreetMap height, where neither city model can measure</td>
-<td>13</td>
+<td>measured: roof top of the 2016 3D buildings minus the 2015 terrain, where neither can measure</td>
+<td>1</td>
 <td>source observation</td>
 </tr>
 <tr class="even">
+<td>measured: OpenStreetMap height, where no model can measure</td>
+<td>2</td>
+<td>source observation</td>
+</tr>
+<tr class="odd">
 <td>storeys x a measured height per storey of the same use</td>
-<td>48</td>
+<td>6</td>
 <td>assumption</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>nothing measures it and S4 has no storeys</td>
-<td>14</td>
+<td>6</td>
 <td>left empty</td>
 </tr>
 </tbody>
 </table>
-<p>The 2015 surface cannot measure a building that went up later. On 61 outlines it shows no building at all, and for 17 more the tax roll dates the building 2015 or later, so what the surface shows there is the building before (W15, W17). Those buildings take, in this order, a height from the 2016 3D buildings (<a href="#roofs">Roofs</a>), an OpenStreetMap height, or the storey rule.</p>
+<p>The lidar flew on 2023-11-21. For the 5 buildings the tax roll dates 2023 or later, it is used when their newest other height (OpenStreetMap, else storeys) lies within one storey of it: 3 buildings. For the other 2 it is discarded, since it likely shows the building before or one half built (W33). Every other source more than one storey from the height chosen is discarded from the building too, with how far and why (W35): 43 heights on 31 buildings. One outline can hold a podium and a tower. Where the 2023 lidar measures the outline’s parts and their heights differ by more than one storey, the building is drawn as its outline at a base height with each part standing on it at its own height (W36): 15 buildings from parts mapped in OpenStreetMap, 3 from the 2016 model’s parts. District Griffin sur Peel, for instance, was one 59 m mass; it is now a 20.3 m base with towers of 60.1 and 59.5 m. Where no parts are mapped, the 2023 lidar’s own height zones split the outline (W38): its cells are sorted into levels more than one storey apart, and each level above the lowest becomes zones outlined by their 1 m cells, smoothed by 1 m: 40 buildings, 44 zones. Their edges come from the lidar’s cells, not from a survey of the walls. Where neither parts nor zones split an outline and a quarter of it stands more than one storey below the height drawn, it stays one mass and a checkpoint asks what it holds (W37): 12 buildings. S4 keeps them all (<a href="./s4-build.html#heights-by-source">evidence</a>). Before 2026-10-29, the 2015 surface came first. It cannot measure a building that went up later. On 61 outlines it shows no building at all, and for 17 more the tax roll dates the building 2015 or later, so what the surface shows there is the building before (W15, W17). Those buildings take, in this order, a height from the 2016 3D buildings (<a href="#roofs">Roofs</a>), an OpenStreetMap height, or the storey rule.</p>
 <p><strong>The two measurements agree.</strong> Where a building has both a 2015 surface height and an OpenStreetMap height, the median difference is 0.37 m and the median absolute difference 0.89 m, over 14 buildings (<a href="outputs/g1/test_report.txt">test report</a>).</p>
-<p><strong>The first storey rule was too low.</strong> G1 first used 3.33 m per storey, the median of 27 mostly tall buildings. Measured against the 2015 surface, that rule came out 1.16 m too low on the median building, and 1.99 m off in absolute terms (143 buildings). The rule now uses a height per storey measured on 157 buildings, by use (W05):</p>
+<p><strong>The first storey rule was too low.</strong> G1 first used 3.33 m per storey, the median of 27 mostly tall buildings. Measured against the 2015 surface, that rule came out 1.16 m too low on the median building, and 1.99 m off in absolute terms (143 buildings). The rule then used a height per storey measured on 157 buildings by the 2015 surface (all uses 3.75 m). Since 2026-10-29 it reads the storey S4 measures with the 2023 lidar, the same storey S4 uses to say whether two heights agree (W05):</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -690,41 +695,42 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>residential</td>
-<td>3.45 m</td>
-<td>90</td>
+<td>3.39 m</td>
+<td>135</td>
 </tr>
 <tr class="even">
 <td>commerce</td>
-<td>4.32 m</td>
-<td>27</td>
+<td>4.27 m</td>
+<td>28</td>
 </tr>
 <tr class="odd">
 <td>services</td>
-<td>4.11 m</td>
-<td>21</td>
+<td>3.90 m</td>
+<td>25</td>
 </tr>
 <tr class="even">
 <td>industry</td>
-<td>4.20 m</td>
+<td>4.23 m</td>
 <td>8</td>
 </tr>
 <tr class="odd">
 <td>any other use</td>
-<td>3.75 m (all uses)</td>
-<td>157</td>
+<td>3.55 m (all uses)</td>
+<td>210</td>
 </tr>
 </tbody>
 </table>
+<p>The 48 buildings whose height comes from storeys came out 0.2 to 1.9 m lower than with the 2015 storey.</p>
 <p>The sources are in two slightly different datums (W18). A search for the best shift between them, within 2 m, found none: the outlines and the surface agree as they are.</p>
 </section>
 <section id="roofs" class="level2">
 <h2 class="anchored" data-anchor-id="roofs">Roofs</h2>
-<p>The city’s 2016 3D buildings model each building part with its roof faces. Each part goes to the G1 outline that holds the centre of its ground (W23). 202 parts fall on 158 outlines, with 13,833 roof faces between them, kept in <a href="outputs/g1/roofs_2016.geojson">roofs_2016.geojson</a> as 3D faces in the frame. A face sloping less than 5 degrees is flat (W22): 122 roofs are flat, 30 mixed and 6 pitched. The other 138 outlines have no part in the 2016 model, most of them buildings finished after 2016, and their roofs stay unknown (W14).</p>
+<p>The city’s 2016 3D buildings model each building part with its roof faces. Each part goes to the outline its ground overlaps most, when at least half of its ground lies there (W23); until 2026-10-29 a part went to the outline holding the centre of its ground, and 11 parts reached mostly past their outline. 197 parts fall on 151 outlines. A 2016 roof stays on a building only when its roof top lies within one storey (3.5 m) of the building’s height (W34): 131 roofs stay, with 11,500 faces kept in <a href="outputs/g1/roofs_2016.geojson">roofs_2016.geojson</a> as 3D faces in the frame, and 20 are set aside, each with its reason in the block (W35). A face sloping less than 5 degrees is flat (W22): 99 kept roofs are flat, 28 mixed and 4 pitched. The other 145 outlines have no part in the 2016 model, most of them buildings finished after 2016. Their roofs, and the 20 set aside, stay unknown (W14).</p>
 <p><strong>A finding about the 2016 model.</strong> Its own height field, measuredHeight, is 4.4 m more than its roof tops stand above the 2015 terrain. Its roof tops, though, sit exactly where the 2015 surface puts them. So measuredHeight counts from a ground set lower than the street. Situ takes the 2016 roof top and subtracts the 2015 terrain (W25). Measured that way, the 2016 model agrees with the 2015 surface to a median of 0.23 m on 131 buildings, and it gives a height to 6 buildings the 2015 surface could not measure. No shift between the model and the outlines was found within 1 m (W24).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/g1/g1_sheet_roofs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Each outline by its roof form in the 2016 model. Dashed outlines have no part in the model, most of them built later."><img src="outputs/g1/g1_sheet_roofs.png" class="img-fluid figure-img" alt="Map of Griffintown outlines filled grey for flat roofs, mauve for mixed and pink for pitched, with dashed outlines where no roof is known."></a></p>
-<figcaption>Each outline by its roof form in the 2016 model. Dashed outlines have no part in the model, most of them built later.</figcaption>
+<p><a href="outputs/g1/g1_sheet_roofs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Each outline by its roof form in the 2016 model. Dashed outlines have no part in the model, most of them built later. Dotted pink outlines are in the model, but their 2016 roof lies more than one storey from the building’s height (W34)."><img src="outputs/g1/g1_sheet_roofs.png" class="img-fluid figure-img" alt="Map of Griffintown outlines filled grey for flat roofs, mauve for mixed and pink for pitched, with dashed outlines where no roof is known."></a></p>
+<figcaption>Each outline by its roof form in the 2016 model. Dashed outlines have no part in the model, most of them built later. Dotted pink outlines are in the model, but their 2016 roof lies more than one storey from the building’s height (W34).</figcaption>
 </figure>
 </div>
 </section>
@@ -868,19 +874,19 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>W04</td>
 <td>source observation</td>
-<td>OpenStreetMap heights used where the 2015 surface cannot measure (13)</td>
+<td>OpenStreetMap heights used where no model can measure (2)</td>
 <td>none needed</td>
 </tr>
 <tr class="odd">
 <td>W05</td>
 <td>assumption</td>
-<td>height = storeys x the measured height per storey of the same use (48)</td>
+<td>height = storeys x the height per storey of the same use, measured by S4 from the 2023 lidar (6)</td>
 <td>a height per storey by type and age</td>
 </tr>
 <tr class="even">
 <td>W06</td>
 <td>researcher decision</td>
-<td>nothing measures it, no storeys: height left empty (14)</td>
+<td>nothing measures it, no storeys: height left empty (6)</td>
 <td>measure on site</td>
 </tr>
 <tr class="odd">
@@ -928,7 +934,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>W14</td>
 <td>gap</td>
-<td>facades, materials, interiors, canopies, what is upstairs, and the roofs of 138 outlines are not in G1</td>
+<td>facades, materials, interiors, canopies, what is upstairs, and the roofs of 165 outlines are not in G1</td>
 <td>photo surveys; a newer 3D model</td>
 </tr>
 <tr class="odd">
@@ -946,7 +952,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>W17</td>
 <td>researcher decision</td>
-<td>the 2015 surface is not used where the roll dates the building 2015 or later (17)</td>
+<td>the 2015 surface is not used where the roll dates the building 2015 or later</td>
 <td>aerial photos of each site</td>
 </tr>
 <tr class="even">
@@ -982,13 +988,13 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>W23</td>
 <td>researcher decision</td>
-<td>the 2016 model gives a height where the 2015 surface cannot, if its parts cover half the outline and the roll gives no year after 2016 (6)</td>
-<td>matching by overlap</td>
+<td>the 2016 model gives a height where the 2023 lidar and the 2015 surface cannot, if its parts cover half the outline and the roll gives no year after 2016 (1); each part goes to the outline its ground overlaps most, when at least half of it lies there (until 2026-10-29: the outline holding the centre of its ground)</td>
+<td>the centre of the ground</td>
 </tr>
 <tr class="even">
 <td>W24</td>
 <td>source observation</td>
-<td>no shift between the 2016 model and the outlines within 1 m</td>
+<td>the shift between the 2016 model and the outlines, searched within 1 m: 0.5 m south</td>
 <td>none needed</td>
 </tr>
 <tr class="odd">
@@ -1033,12 +1039,54 @@ ul.task-list li input[type="checkbox"] {
 <td>bicycle paths lie at street level as bands: OSM width where mapped, else the median mapped one-way width (2.1 m), else 3.0 m for two-way paths (Ville de Montréal 2011); four city paths typed at sidewalk level stay at street level</td>
 <td>a visit or street photos per path</td>
 </tr>
+<tr class="even">
+<td>W32</td>
+<td>researcher decision</td>
+<td>heights come first from the 2023 lidar (Mo, 2026-10-29), then the 2015 surface, the 2016 model, OpenStreetMap and storeys (277)</td>
+<td>the 2015 surface first</td>
+</tr>
+<tr class="odd">
+<td>W33</td>
+<td>researcher decision</td>
+<td>where the roll dates the building 2023 or later, the 2023 lidar is used only when the newest other indication (OpenStreetMap height, else storeys) lies within one storey of it, or there is none; otherwise it is discarded with why (3 used, 2 discarded)</td>
+<td>the month of each survey and completion</td>
+</tr>
+<tr class="even">
+<td>W34</td>
+<td>researcher decision</td>
+<td>a 2016 roof stays only within one storey (3.5 m) of the building’s height: 131 kept, 20 set aside</td>
+<td>roofs read from the 2023 lidar</td>
+</tr>
+<tr class="odd">
+<td>W35</td>
+<td>researcher decision</td>
+<td>the height chosen is the newest the W32 order allows; any other height more than one storey from it is discarded from the block, with how far and why; nothing is asked again (Mo, 2026-10-29). S4 keeps every value (43 heights on 31 blocks)</td>
+<td>ask a person about each disagreement</td>
+</tr>
+<tr class="even">
+<td>W36</td>
+<td>researcher decision</td>
+<td>where the 2023 lidar measures an outline’s parts more than one storey apart, the outline stands at a base height and each part on it at its own: OpenStreetMap parts first, then the 2016 model’s parts where its roof still fits and each part lies mostly within the outline (Mo, 2026-10-29) (15 from OpenStreetMap parts, 3 from 2016 parts)</td>
+<td>height zones cut from the lidar itself</td>
+</tr>
+<tr class="odd">
+<td>W37</td>
+<td>researcher decision</td>
+<td>where no parts or zones split an outline and a quarter of it stands more than one storey below the height drawn, it stays one mass and a checkpoint asks what it holds (12)</td>
+<td>a survey of the walls</td>
+</tr>
+<tr class="even">
+<td>W38</td>
+<td>researcher decision</td>
+<td>where no mapped part splits an outline, the 2023 lidar’s own height zones do: levels more than one storey apart, each holding at least 10 % of the outline, cut into connected areas outlined by their 1 m cells and smoothed by 1 m (Mo, 2026-10-29) (40 buildings, 44 zones)</td>
+<td>a survey of the walls, or parts mapped in OpenStreetMap</td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="tests" class="level2">
 <h2 class="anchored" data-anchor-id="tests">Tests</h2>
-<p>Ten checks, all PASS (<a href="outputs/g1/test_report.txt">report</a>). The ground is exactly S1’s segments and junctions, once each, and moving it back by the origin gives S1’s coordinates to the centimetre. Every height is recomputed from S4 and the 2015 measurements in the order the ledger gives, and the 15 without a source stay empty. Every door sits on its outline, no further from its street than S4 measured. Every S6 row is accounted for, either as a prop or as a detection matched to one. Every height in the frame is read again from the terrain picture by a separate sampler, and no outline corner lies below its building’s base. The ledger covers every layer, and the files keep the <a href="./formats.html">published format</a>: a version number, numbers stored as numbers, and missing values stored as empty (null), never as zero.</p>
+<p>Eleven checks, all PASS (<a href="outputs/g1/test_report.txt">report</a>). The ground is exactly S1’s segments and junctions, once each, and moving it back by the origin gives S1’s coordinates to the centimetre. Every height is recomputed from S4 and the 2015 measurements in the order the ledger gives, and the 15 without a source stay empty. Every door sits on its outline, no further from its street than S4 measured. Every S6 row is accounted for, either as a prop or as a detection matched to one. Every height in the frame is read again from the terrain picture by a separate sampler, and no outline corner lies below its building’s base. The ledger covers every layer, and the files keep the <a href="./formats.html">published format</a>: a version number, numbers stored as numbers, and missing values stored as empty (null), never as zero.</p>
 <p>The door check failed at first. One building’s door came out 4.9 m from the street, where S4 had 1.1 m. Rue Barré runs through that outline, and the first door rule only looked at corners. The rule now places the door where the street enters the outline, and the building is a checkpoint.</p>
 </section>
 <section id="plan" class="level2">

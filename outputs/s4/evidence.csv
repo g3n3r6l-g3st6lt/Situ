@@ -1,0 +1,297 @@
+building,osm,year_built,storeys,storeys_source,height_osm_m,height_osm_source,present_2015,height_2015_m,cover_2016,height_2016_m,roof_form_2016,present_2023,height_2023_m,m_per_storey_2015,osm_vs_2015,2016_vs_2015,osm_vs_2016,2023_vs_2015,2023_vs_2016,osm_vs_2023,odb_cover,outline_in_odb
+w1080275376,way/1080275376,,,,,,no,,0,,,yes,6.21,,none,none,none,only 2023,only 2023,only 2023,0.993,yes
+w1080276132,way/1080276132,,4,osm,,,no,,0,,,yes,13.43,,none,none,none,only 2023,only 2023,only 2023,0.037,no
+w1081860869,way/1081860869,,3,osm,21.0,osm,yes,21.28,0.983,21.62,flat,yes,21.25,7.09,agree,agree,agree,agree,agree,agree,0.968,yes
+w1081874551,way/1081874551,1942,9,roll,28.0,osm,yes,28.45,0.984,32.41,flat,yes,28.47,3.16,agree,disagree,disagree,agree,disagree,agree,0.98,yes
+w1081882036,way/1081882036,,2,osm,14.0,osm,yes,15.25,0,,,yes,14.82,7.62,agree,only 2015,only OSM,agree,only 2023,agree,0.989,yes
+w1081882041,way/1081882041,,3,osm,19.0,osm,yes,18.46,0,,,yes,18.61,6.15,agree,only 2015,only OSM,agree,only 2023,agree,0.988,yes
+w1093179046,way/1093179046,,,,,,yes,6.98,0,,,yes,7.47,,only 2015,only 2015,none,agree,only 2023,only 2023,0.911,yes
+w1093416727,way/1093416727,,7,osm,,,no,,0,,,yes,20.48,,none,none,none,only 2023,only 2023,only 2023,0.99,yes
+w1093571770,way/1093571770,1910,1,roll,,,yes,10.31,0,,,yes,6.86,10.31,only 2015,only 2015,none,agree,only 2023,only 2023,1.0,yes
+w1093571771,way/1093571771,,,,,,yes,4.85,0,,,no,,,only 2015,only 2015,none,only 2015,none,none,0.459,no
+w1093571772,way/1093571772,,,,,,yes,5.41,0.991,7.02,flat,yes,5.42,,only 2015,agree,only 2016,agree,agree,only 2023,0.985,yes
+w1093571773,way/1093571773,,,,,,yes,12.46,0,,,yes,12.4,,only 2015,only 2015,none,agree,only 2023,only 2023,0.973,yes
+w1093571774,way/1093571774,,,,,,yes,6.58,0,,,yes,6.65,,only 2015,only 2015,none,agree,only 2023,only 2023,0.98,yes
+w1093571777,way/1093571777,2017 to 2021,,,,,no,,0,,,yes,22.36,,none,none,none,only 2023,only 2023,only 2023,0.025,no
+w1100913875,way/1100913875,,,,,,yes,11.58,0,,,yes,11.94,,only 2015,only 2015,none,agree,only 2023,only 2023,0.763,yes
+w1163554942,way/1163554942,,,,,,no,,0,,,yes,3.03,,none,none,none,only 2023,only 2023,only 2023,0.421,no
+w1164076977,way/1164076977,,,,,,no,,0,,,no,,,none,none,none,none,none,none,0.0,no
+w1175945703,way/1175945703,,,,,,no,,0,,,yes,5.27,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w1175945704,way/1175945704,,,,,,yes,10.79,0,,,yes,10.85,,only 2015,only 2015,none,agree,only 2023,only 2023,0.521,yes
+w1190882733,way/1190882733,,,,,,yes,14.92,0.973,14.99,flat,yes,14.95,,only 2015,agree,only 2016,agree,agree,only 2023,0.949,yes
+w1225946672,way/1225946672,,,,,,no,,0,,,yes,3.67,,none,none,none,only 2023,only 2023,only 2023,0.545,yes
+w1297381699,way/1297381699,,,,,,unclear,,0,,,no,,,none,none,none,none,none,none,0.0,no
+w1309501032,way/1309501032,,7,osm,25.0,osm,no,,0.029,,pitched,no,,,only OSM,none,only OSM,none,none,only OSM,0.027,no
+w1309501052,way/1309501052,,,,,,unclear,,0,,,unclear,,,none,none,none,none,none,none,0.0,no
+w1314138312,way/1314138312,1931,2,roll,,,no,,0,,,yes,3.52,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w1314138313,way/1314138313,,,,,,no,,0,,,no,,,none,none,none,none,none,none,0.0,no
+w1314138314,way/1314138314,,,,,,no,,0,,,yes,3.86,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w1321450945,way/1321450945,,,,,,no,,0,,,no,,,none,none,none,none,none,none,0.0,no
+w1338495164,way/1338495164,1947 to 2025,4,roll,13.7,osm,no,,0,,,no,,,only OSM,none,only OSM,none,none,only OSM,0.0,no
+w134140650,way/134140650,,,,,,yes,11.42,0,,,yes,11.63,,only 2015,only 2015,none,agree,only 2023,only 2023,0.697,yes
+w1344783765,way/1344783765,,,,,,yes,7.2,0,,,yes,7.39,,only 2015,only 2015,none,agree,only 2023,only 2023,0.912,yes
+w1354184758,way/1354184758,,,,,,no,,0,,,yes,5.84,,none,none,none,only 2023,only 2023,only 2023,0.95,yes
+w1381560040,way/1381560040,2022,9,osm,,,no,,0,,,yes,27.43,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w1393630742,way/1393630742,1923,3,roll,,,no,,0.187,,mixed,no,,,none,none,none,none,none,none,0.193,no
+w1451065379,way/1451065379,,,,,,no,,0.326,,pitched,no,,,none,none,none,none,none,none,0.364,no
+w1534123738,way/1534123738,,1,osm,,,no,,0,,,no,,,none,none,none,none,none,none,0.0,no
+w157556076,way/157556076,1870 to 1930,3,roll,10.0,osm,yes,10.54,0.933,10.99,flat,yes,10.59,3.51,agree,agree,agree,agree,agree,agree,0.914,yes
+w157556077,way/157556077,2012,9,roll,25.0,osm,yes,26.32,0.969,26.03,flat,yes,27.35,2.92,agree,agree,agree,agree,agree,agree,0.958,yes
+w157556078,way/157556078,1870 to 2022,3,roll,10.0,osm,yes,10.97,0.384,,flat,yes,10.91,3.66,agree,only 2015,only OSM,agree,only 2023,agree,0.933,yes
+w157557382,way/157557382,,8,osm,40.0,osm,yes,39.58,0,,,yes,42.1,4.95,agree,only 2015,only OSM,agree,only 2023,agree,0.96,yes
+w199234636,way/199234636,2013,14,osm,,,yes,43.4,0,,,yes,43.49,3.1,only 2015,only 2015,none,agree,only 2023,only 2023,0.972,yes
+w199235094,way/199235094,2012 to 2014,21,osm_part,,,yes,64.81,0.947,65.33,flat,yes,65.02,3.09,only 2015,agree,only 2016,agree,agree,only 2023,0.936,yes
+w199238058,way/199238058,2012,8,osm,,,yes,26.36,0.904,26.11,flat,yes,26.42,3.29,only 2015,agree,only 2016,agree,agree,only 2023,0.903,yes
+w199238749,way/199238749,2013,10,osm_part,29.41,osm_part,yes,27.16,0.722,27.19,flat,yes,27.52,2.72,agree,agree,agree,agree,agree,agree,0.717,yes
+w201007244,way/201007244,,10,osm,,,yes,27.29,0,,,yes,27.4,2.73,only 2015,only 2015,none,agree,only 2023,only 2023,0.957,yes
+w201007399,way/201007399,,10,osm,,,yes,27.4,0,,,yes,27.4,2.74,only 2015,only 2015,none,agree,only 2023,only 2023,0.951,yes
+w201007820,way/201007820,2012,10,osm,,,yes,25.65,0,,,yes,26.58,2.56,only 2015,only 2015,none,agree,only 2023,only 2023,0.94,yes
+w201008023,way/201008023,2012,10,osm,,,yes,27.03,0,,,yes,27.7,2.7,only 2015,only 2015,none,agree,only 2023,only 2023,0.95,yes
+w201008914,way/201008914,2013 to 2018,17,osm_part,,,yes,57.39,0.978,57.3,flat,yes,59.21,3.38,only 2015,agree,only 2016,agree,agree,only 2023,0.979,yes
+w201010047,way/201010047,2013,21,osm_part,,,yes,60.19,0.907,60.15,flat,yes,60.77,2.87,only 2015,agree,only 2016,agree,agree,only 2023,0.902,yes
+w201011175,way/201011175,2011,10,osm,,,yes,29.6,0,,,yes,31.21,2.96,only 2015,only 2015,none,agree,only 2023,only 2023,0.983,yes
+w201011933,way/201011933,2008,10,osm,,,yes,30.43,0,,,yes,31.41,3.04,only 2015,only 2015,none,agree,only 2023,only 2023,0.968,yes
+w201012386,way/201012386,2011,10,osm,,,yes,29.92,0,,,yes,29.7,2.99,only 2015,only 2015,none,agree,only 2023,only 2023,0.978,yes
+w201013721,way/201013721,2015,15,osm_part,,,yes,46.47,0.996,44.04,flat,yes,46.6,3.1,only 2015,agree,only 2016,agree,agree,only 2023,0.988,yes
+w201017213,way/201017213,1940,3,roll,,,no,,0.948,11.41,flat,no,,,none,only 2016,only 2016,none,only 2016,none,0.903,yes
+w201017547,way/201017547,2013 to 2020,10,osm_part,29.66,osm_part,yes,27.38,0,,,yes,27.81,2.74,agree,only 2015,only OSM,agree,only 2023,agree,0.954,yes
+w225600469,way/225600469,2014,9,osm,,,yes,27.63,0.978,27.81,flat,yes,27.79,3.07,only 2015,agree,only 2016,agree,agree,only 2023,0.953,yes
+w225600470,way/225600470,,13,osm,,,yes,44.4,0,,,yes,44.77,3.42,only 2015,only 2015,none,agree,only 2023,only 2023,0.97,yes
+w225600471,way/225600471,,15,osm,,,yes,43.77,0,,,yes,43.55,2.92,only 2015,only 2015,none,agree,only 2023,only 2023,0.937,yes
+w225600473,way/225600473,1900,1,osm,,,yes,7.16,0.991,7.04,flat,yes,8.53,7.16,only 2015,agree,only 2016,agree,agree,only 2023,0.988,yes
+w225610882,way/225610882,1880,5,osm,,,yes,18.69,0,,,yes,18.77,3.74,only 2015,only 2015,none,agree,only 2023,only 2023,0.949,yes
+w225610883,way/225610883,1880 to 2013,8,osm,,,yes,25.02,0,,,yes,25.44,3.13,only 2015,only 2015,none,agree,only 2023,only 2023,0.85,yes
+w225610884,way/225610884,2013,8,osm,,,yes,25.25,0,,,yes,25.56,3.16,only 2015,only 2015,none,agree,only 2023,only 2023,0.928,yes
+w225637514,way/225637514,1894,3,osm,,,yes,16.83,0.939,16.6,mixed,yes,17.04,5.61,only 2015,agree,only 2016,agree,agree,only 2023,0.887,yes
+w225637515,way/225637515,,3,roll,,,yes,12.7,0.959,13.02,flat,yes,13.0,4.23,only 2015,agree,only 2016,agree,agree,only 2023,0.973,yes
+w225637516,way/225637516,1989,,,,,yes,10.3,0.965,10.69,flat,yes,10.32,,only 2015,agree,only 2016,agree,agree,only 2023,0.961,yes
+w225637517,way/225637517,1881,3,roll,,,yes,12.69,0.935,12.9,flat,yes,12.81,4.23,only 2015,agree,only 2016,agree,agree,only 2023,0.939,yes
+w225637518,way/225637518,,3,osm,,,yes,12.61,0.86,12.93,flat,yes,12.72,4.2,only 2015,agree,only 2016,agree,agree,only 2023,0.86,yes
+w225637519,way/225637519,,2,osm,,,yes,8.71,0.948,8.48,flat,yes,8.52,4.36,only 2015,agree,only 2016,agree,agree,only 2023,0.95,yes
+w225637520,way/225637520,1946,1,roll,,,yes,4.87,0.967,4.83,flat,yes,5.45,4.87,only 2015,agree,only 2016,agree,agree,only 2023,0.926,yes
+w225637522,way/225637522,,,,,,yes,3.83,0.955,4.05,flat,yes,3.83,,only 2015,agree,only 2016,agree,agree,only 2023,0.916,yes
+w225637526,way/225637526,1938,3,osm,,,yes,9.24,0,,,yes,9.33,3.08,only 2015,only 2015,none,agree,only 2023,only 2023,0.981,yes
+w225637527,way/225637527,,,,,,yes,8.48,0,,,yes,8.38,,only 2015,only 2015,none,agree,only 2023,only 2023,0.933,yes
+w225637528,way/225637528,1880,4,roll,,,yes,15.14,0.988,15.05,flat,yes,15.6,3.79,only 2015,agree,only 2016,agree,agree,only 2023,0.971,yes
+w225637529,way/225637529,2022,8,osm,,,yes,11.68,0.508,12.24,flat,yes,26.79,1.46,only 2015,agree,only 2016,disagree,disagree,only 2023,0.512,yes
+w225637533,way/225637533,2019,7,roll,,,no,,0,,,yes,25.29,,none,none,none,only 2023,only 2023,only 2023,0.965,yes
+w225637534,way/225637534,1900,3,roll,,,yes,11.49,0.92,11.21,flat,yes,11.89,3.83,only 2015,agree,only 2016,agree,agree,only 2023,0.861,yes
+w225637535,way/225637535,,,,,,yes,11.31,0.899,10.96,flat,yes,11.5,,only 2015,agree,only 2016,agree,agree,only 2023,1.0,yes
+w225637536,way/225637536,1900,3,roll,,,yes,11.33,0,,,yes,11.43,3.78,only 2015,only 2015,none,agree,only 2023,only 2023,1.0,yes
+w225637537,way/225637537,,,,,,yes,11.41,0,,,yes,11.54,,only 2015,only 2015,none,agree,only 2023,only 2023,1.0,yes
+w225637538,way/225637538,,,,,,yes,11.3,0.934,10.89,flat,yes,11.46,,only 2015,agree,only 2016,agree,agree,only 2023,1.0,yes
+w225637539,way/225637539,1909,3,roll,,,yes,11.6,0.952,11.76,flat,yes,15.56,3.87,only 2015,agree,only 2016,disagree,disagree,only 2023,0.984,yes
+w225637540,way/225637540,1910,1,roll,,,yes,4.25,0,,,yes,5.15,4.25,only 2015,only 2015,none,agree,only 2023,only 2023,1.0,yes
+w225637541,way/225637541,,1,osm,,,yes,4.98,0,,,yes,4.89,4.98,only 2015,only 2015,none,agree,only 2023,only 2023,0.635,yes
+w225637542,way/225637542,1923,,,,,yes,10.52,0,,,yes,10.45,,only 2015,only 2015,none,agree,only 2023,only 2023,1.0,yes
+w225637543,way/225637543,,,,,,yes,10.99,0,,,yes,10.98,,only 2015,only 2015,none,agree,only 2023,only 2023,0.951,yes
+w225637544,way/225637544,,,,,,yes,8.06,0,,,yes,7.53,,only 2015,only 2015,none,agree,only 2023,only 2023,0.991,yes
+w225637545,way/225637545,,,,,,yes,8.83,0,,,yes,7.32,,only 2015,only 2015,none,agree,only 2023,only 2023,1.0,yes
+w225640563,way/225640563,,4,osm,,,yes,13.26,0,,,yes,13.59,3.31,only 2015,only 2015,none,agree,only 2023,only 2023,0.955,yes
+w225640564,way/225640564,2011,4,osm,,,yes,14.7,0.811,15.05,flat,yes,14.88,3.67,only 2015,agree,only 2016,agree,agree,only 2023,0.821,yes
+w225640565,way/225640565,1875,2,roll,,,yes,9.3,0.798,9.07,pitched,yes,9.42,4.65,only 2015,agree,only 2016,agree,agree,only 2023,0.744,yes
+w225640566,way/225640566,,,,,,yes,9.71,0.565,9.66,mixed,yes,9.92,,only 2015,agree,only 2016,agree,agree,only 2023,0.787,yes
+w225640567,way/225640567,1880,3,roll,,,yes,9.97,0.915,9.68,mixed,yes,10.15,3.32,only 2015,agree,only 2016,agree,agree,only 2023,0.947,yes
+w225640568,way/225640568,1880,3,roll,,,yes,10.02,0.976,9.82,mixed,yes,10.11,3.34,only 2015,agree,only 2016,agree,agree,only 2023,0.995,yes
+w225640569,way/225640569,1880,3,roll,,,yes,10.17,0.998,9.75,mixed,yes,10.05,3.39,only 2015,agree,only 2016,agree,agree,only 2023,0.989,yes
+w225640570,way/225640570,1880,3,roll,,,yes,9.98,0.894,9.69,mixed,yes,10.01,3.33,only 2015,agree,only 2016,agree,agree,only 2023,0.927,yes
+w225640571,way/225640571,1880,3,roll,,,yes,10.06,0.972,9.74,mixed,yes,10.18,3.35,only 2015,agree,only 2016,agree,agree,only 2023,0.972,yes
+w225640572,way/225640572,1875,2,roll,,,yes,7.08,0.942,6.92,mixed,yes,7.04,3.54,only 2015,agree,only 2016,agree,agree,only 2023,0.937,yes
+w227611749,way/227611749,,,,,,yes,5.53,0,,,yes,5.55,,only 2015,only 2015,none,agree,only 2023,only 2023,0.819,yes
+w227611750,way/227611750,1951,2,roll,,,yes,7.7,0,,,yes,7.71,3.85,only 2015,only 2015,none,agree,only 2023,only 2023,0.946,yes
+w227611751,way/227611751,,2,osm,,,yes,7.49,0,,,yes,7.53,3.75,only 2015,only 2015,none,agree,only 2023,only 2023,0.973,yes
+w227611752,way/227611752,,,,,,yes,5.67,0,,,yes,5.94,,only 2015,only 2015,none,agree,only 2023,only 2023,0.956,yes
+w227611753,way/227611753,1980,2,roll,,,yes,8.25,0.917,8.15,flat,yes,8.27,4.12,only 2015,agree,only 2016,agree,agree,only 2023,0.871,yes
+w227611754,way/227611754,1925,3,osm,,,yes,11.02,0.953,11.06,flat,yes,11.63,3.67,only 2015,agree,only 2016,agree,agree,only 2023,0.948,yes
+w227611755,way/227611755,1949,3,roll,,,yes,12.46,0,,,yes,12.43,4.15,only 2015,only 2015,none,agree,only 2023,only 2023,0.999,yes
+w227611756,way/227611756,,3,osm,,,yes,13.98,0,,,yes,13.99,4.66,only 2015,only 2015,none,agree,only 2023,only 2023,1.0,yes
+w227611757,way/227611757,,3,osm,,,yes,11.58,0,,,yes,11.91,3.86,only 2015,only 2015,none,agree,only 2023,only 2023,0.987,yes
+w227611758,way/227611758,,3,osm,,,yes,9.28,0,,,yes,9.2,3.09,only 2015,only 2015,none,agree,only 2023,only 2023,0.984,yes
+w227611759,way/227611759,,3,osm,,,yes,9.35,0,,,yes,9.28,3.12,only 2015,only 2015,none,agree,only 2023,only 2023,0.991,yes
+w227611760,way/227611760,1949 to 1963,3,osm,,,yes,14.16,0,,,yes,14.8,4.72,only 2015,only 2015,none,agree,only 2023,only 2023,1.0,yes
+w227611761,way/227611761,,3,osm,,,yes,14.56,0,,,yes,14.55,4.85,only 2015,only 2015,none,agree,only 2023,only 2023,0.988,yes
+w227611762,way/227611762,,3,osm,,,yes,14.57,0,,,yes,14.95,4.86,only 2015,only 2015,none,agree,only 2023,only 2023,0.974,yes
+w227612459,way/227612459,1906,3,roll,,,yes,14.21,0.994,14.73,flat,yes,14.18,4.74,only 2015,agree,only 2016,agree,agree,only 2023,0.971,yes
+w227612460,way/227612460,1902,3,osm,,,yes,11.17,0.98,9.32,flat,yes,11.41,3.72,only 2015,agree,only 2016,agree,agree,only 2023,0.966,yes
+w227612461,way/227612461,1900,3,roll,,,yes,15.56,0.977,15.4,flat,yes,18.36,5.19,only 2015,agree,only 2016,agree,agree,only 2023,0.977,yes
+w227612462,way/227612462,,,,,,yes,25.5,0,,,yes,26.83,,only 2015,only 2015,none,agree,only 2023,only 2023,0.924,yes
+w227612464,way/227612464,1890,4,roll,,,yes,16.03,0.94,16.0,flat,yes,16.17,4.01,only 2015,agree,only 2016,agree,agree,only 2023,0.915,yes
+w227612465,way/227612465,,,,,,yes,8.12,0,,,yes,8.19,,only 2015,only 2015,none,agree,only 2023,only 2023,0.971,yes
+w227612466,way/227612466,,,,,,yes,5.86,0,,,yes,5.93,,only 2015,only 2015,none,agree,only 2023,only 2023,0.979,yes
+w227612467,way/227612467,,,,,,yes,13.66,0,,,yes,13.68,,only 2015,only 2015,none,agree,only 2023,only 2023,0.958,yes
+w229736562,way/229736562,,8,osm,,,yes,19.92,0.931,19.95,flat,yes,19.67,2.49,only 2015,agree,only 2016,agree,agree,only 2023,0.946,yes
+w26500307,way/26500307,1975,5,roll,31.5,osm,yes,27.72,0.988,27.58,flat,yes,28.01,5.54,disagree,agree,disagree,agree,agree,agree,0.985,yes
+w272436794,way/272436794,2014 to 2015,9,roll,,,yes,25.79,0,,,yes,25.86,2.87,only 2015,only 2015,none,agree,only 2023,only 2023,0.953,yes
+w272436796,way/272436796,,9,osm_part,27.36,osm_part,no,,0,,,yes,29.4,,only OSM,none,only OSM,only 2023,only 2023,agree,0.938,yes
+w272436799,way/272436799,,21,osm,57.9,osm,no,,0,,,yes,64.88,,only OSM,none,only OSM,only 2023,only 2023,disagree,0.976,yes
+w304987885,way/304987885,2015 to 2019,15,osm,,,yes,44.45,0,,,yes,44.57,2.96,only 2015,only 2015,none,agree,only 2023,only 2023,0.805,yes
+w305021902,way/305021902,,21,osm,,,yes,60.42,0,,,yes,60.07,2.88,only 2015,only 2015,none,agree,only 2023,only 2023,0.958,yes
+w305021906,way/305021906,1926,3,roll,,,yes,10.12,0.92,10.28,flat,yes,10.3,3.37,only 2015,agree,only 2016,agree,agree,only 2023,0.956,yes
+w331868173,way/331868173,2015,15,osm,,,yes,43.99,0.913,44.66,flat,yes,44.46,2.93,only 2015,agree,only 2016,agree,agree,only 2023,0.904,yes
+w331868174,way/331868174,2017,14,osm,,,no,,0.926,0.4,flat,yes,49.5,,none,only 2016,only 2016,only 2023,disagree,only 2023,0.94,yes
+w331868175,way/331868175,,8,osm,,,yes,20.66,0.92,20.97,flat,yes,20.62,2.58,only 2015,agree,only 2016,agree,agree,only 2023,0.904,yes
+w331868177,way/331868177,2014,6,osm,,,yes,27.14,0,,,yes,27.01,4.52,only 2015,only 2015,none,agree,only 2023,only 2023,1.0,yes
+w331868180,way/331868180,2017,20,osm,65.0,osm,no,,0.782,37.91,flat,yes,64.66,,only OSM,only 2016,disagree,only 2023,disagree,agree,0.792,yes
+w340223814,way/340223814,1859,4,roll,,,yes,17.48,0.91,17.34,mixed,yes,17.84,4.37,only 2015,agree,only 2016,agree,agree,only 2023,0.9,yes
+w340225313,way/340225313,1933,2,osm,,,yes,12.31,0.982,12.2,mixed,yes,12.17,6.16,only 2015,agree,only 2016,agree,agree,only 2023,0.97,yes
+w340226280,way/340226280,,,,,,yes,9.06,0.982,9.44,flat,yes,9.12,,only 2015,agree,only 2016,agree,agree,only 2023,0.962,yes
+w340227472,way/340227472,1970,2,osm,,,yes,5.74,0.967,5.57,flat,yes,5.62,2.87,only 2015,agree,only 2016,agree,agree,only 2023,0.942,yes
+w340228173,way/340228173,1870,1,roll,,,yes,9.21,0,,,yes,8.21,9.21,only 2015,only 2015,none,agree,only 2023,only 2023,0.976,yes
+w340228269,way/340228269,,,,,,yes,9.62,0,,,yes,24.22,,only 2015,only 2015,none,disagree,only 2023,only 2023,1.0,yes
+w340228785,way/340228785,,,,,,yes,10.74,0,,,yes,10.66,,only 2015,only 2015,none,agree,only 2023,only 2023,0.897,yes
+w340228792,way/340228792,1900,3,roll,,,yes,10.78,0,,,yes,10.77,3.59,only 2015,only 2015,none,agree,only 2023,only 2023,0.873,yes
+w340228823,way/340228823,1928,3,roll,,,yes,10.78,0.993,10.97,flat,yes,11.1,3.59,only 2015,agree,only 2016,agree,agree,only 2023,0.98,yes
+w340229118,way/340229118,1912,2,roll,,,yes,7.53,0.957,7.5,flat,yes,7.53,3.77,only 2015,agree,only 2016,agree,agree,only 2023,0.961,yes
+w340229158,way/340229158,1900,2,roll,,,yes,7.3,0.722,7.15,flat,yes,7.46,3.65,only 2015,agree,only 2016,agree,agree,only 2023,0.794,yes
+w340229534,way/340229534,1951,2,roll,,,yes,7.12,0.857,7.09,flat,yes,7.24,3.56,only 2015,agree,only 2016,agree,agree,only 2023,0.929,yes
+w340229787,way/340229787,1961,1,roll,,,yes,11.45,0.957,11.44,flat,yes,11.42,11.45,only 2015,agree,only 2016,agree,agree,only 2023,0.928,yes
+w340229788,way/340229788,1919,3,roll,,,yes,13.23,0.914,13.39,flat,yes,13.75,4.41,only 2015,agree,only 2016,agree,agree,only 2023,0.934,yes
+w340235536,way/340235536,1915,,,,,yes,10.27,0.978,10.86,flat,yes,10.31,,only 2015,agree,only 2016,agree,agree,only 2023,0.974,yes
+w340235636,way/340235636,,,,,,yes,10.25,0,,,yes,10.4,,only 2015,only 2015,none,agree,only 2023,only 2023,0.98,yes
+w340235663,way/340235663,,,,,,yes,10.32,0,,,yes,10.69,,only 2015,only 2015,none,agree,only 2023,only 2023,0.951,yes
+w340235699,way/340235699,,2,osm,,,yes,8.2,0,,,yes,8.32,4.1,only 2015,only 2015,none,agree,only 2023,only 2023,0.913,yes
+w340235717,way/340235717,,,,,,yes,5.2,0,,,yes,4.88,,only 2015,only 2015,none,agree,only 2023,only 2023,0.82,yes
+w340235780,way/340235780,1910 to 2013,,,,,yes,10.23,0,,,yes,11.14,,only 2015,only 2015,none,agree,only 2023,only 2023,0.98,yes
+w340235860,way/340235860,,,,,,yes,10.33,0,,,yes,10.34,,only 2015,only 2015,none,agree,only 2023,only 2023,0.991,yes
+w340235898,way/340235898,1963,1,roll,,,yes,5.82,0.975,5.42,flat,yes,5.78,5.82,only 2015,agree,only 2016,agree,agree,only 2023,0.998,yes
+w340236006,way/340236006,,,,,,yes,6.09,0.945,6.55,flat,yes,6.13,,only 2015,agree,only 2016,agree,agree,only 2023,0.982,yes
+w340236261,way/340236261,1916,2,roll,,,yes,6.67,0.954,6.52,flat,yes,6.89,3.33,only 2015,agree,only 2016,agree,agree,only 2023,0.973,yes
+w340237120,way/340237120,2025,6,roll,,,yes,4.74,0.476,,flat,yes,27.73,0.79,only 2015,only 2015,none,disagree,only 2023,only 2023,0.464,no
+w340237151,way/340237151,1963,2,roll,,,yes,7.86,0.978,7.83,flat,yes,7.8,3.93,only 2015,agree,only 2016,agree,agree,only 2023,0.96,yes
+w340237197,way/340237197,1910,1,osm,,,yes,9.74,0.984,8.62,flat,yes,9.73,9.74,only 2015,agree,only 2016,agree,agree,only 2023,0.971,yes
+w340237249,way/340237249,,2,osm,,,yes,7.85,0,,,yes,7.94,3.92,only 2015,only 2015,none,agree,only 2023,only 2023,0.95,yes
+w340237304,way/340237304,,,,,,yes,10.29,0.96,10.03,pitched,no,,,only 2015,agree,only 2016,only 2015,only 2016,none,0.952,yes
+w340237459,way/340237459,1953,2,roll,,,yes,6.96,0.894,7.0,flat,yes,7.02,3.48,only 2015,agree,only 2016,agree,agree,only 2023,0.833,yes
+w340237527,way/340237527,1885,3,roll,,,yes,10.24,0.961,10.34,flat,yes,10.28,3.41,only 2015,agree,only 2016,agree,agree,only 2023,0.921,yes
+w345055603,way/345055603,2018,12,osm,,,no,,0.727,4.6,flat,yes,39.06,,none,only 2016,only 2016,only 2023,disagree,only 2023,0.969,yes
+w347382284,way/347382284,1947,2,osm,,,yes,7.49,0.936,7.86,flat,yes,7.66,3.75,only 2015,agree,only 2016,agree,agree,only 2023,0.929,yes
+w347382287,way/347382287,1870,2,roll,,,yes,9.17,0.947,8.88,pitched,yes,9.36,4.58,only 2015,agree,only 2016,agree,agree,only 2023,1.0,yes
+w347382316,way/347382316,1904,2,roll,,,yes,6.55,0,,,yes,6.62,3.27,only 2015,only 2015,none,agree,only 2023,only 2023,0.983,yes
+w347382427,way/347382427,,4,roll,,,yes,12.13,0.456,,flat,yes,13.16,3.03,only 2015,only 2015,none,agree,only 2023,only 2023,0.873,yes
+w347382465,way/347382465,1875,3,roll,,,yes,13.47,0.928,12.89,flat,yes,13.79,4.49,only 2015,agree,only 2016,agree,agree,only 2023,0.931,yes
+w347382472,way/347382472,1875,3,roll,,,yes,12.18,0.988,12.35,mixed,yes,12.14,4.06,only 2015,agree,only 2016,agree,agree,only 2023,0.971,yes
+w347382572,way/347382572,1961,2,roll,,,yes,7.21,0.941,7.38,flat,yes,7.6,3.6,only 2015,agree,only 2016,agree,agree,only 2023,0.96,yes
+w347383034,way/347383034,1947 to 1958,2,roll,,,yes,12.47,0.956,13.41,mixed,yes,13.22,6.24,only 2015,agree,only 2016,agree,agree,only 2023,0.987,yes
+w347383036,way/347383036,1947,2,roll,,,yes,9.18,0.978,9.48,flat,yes,8.93,4.59,only 2015,agree,only 2016,agree,agree,only 2023,0.984,yes
+w347383665,way/347383665,1900,,,,,yes,13.69,0.994,13.61,mixed,yes,13.61,,only 2015,agree,only 2016,agree,agree,only 2023,0.995,yes
+w347383948,way/347383948,1880,3,roll,,,yes,14.12,0.988,14.06,mixed,yes,16.39,4.71,only 2015,agree,only 2016,agree,agree,only 2023,1.0,yes
+w347384187,way/347384187,1885,3,roll,,,yes,12.95,0.864,12.88,mixed,yes,12.79,4.32,only 2015,agree,only 2016,agree,agree,only 2023,0.888,yes
+w347385193,way/347385193,2000 to 2002,3,roll,,,yes,13.44,0.811,13.26,mixed,yes,14.37,4.48,only 2015,agree,only 2016,agree,agree,only 2023,0.802,yes
+w347385982,way/347385982,1948,1,roll,,,yes,4.11,0.949,5.69,flat,yes,5.0,4.11,only 2015,agree,only 2016,agree,agree,only 2023,0.969,yes
+w347386507,way/347386507,1870,2,roll,,,yes,6.57,0.941,6.57,flat,yes,6.64,3.29,only 2015,agree,only 2016,agree,agree,only 2023,0.928,yes
+w347390461,way/347390461,1949,1,roll,,,yes,6.08,0.992,6.07,flat,yes,6.14,6.08,only 2015,agree,only 2016,agree,agree,only 2023,0.982,yes
+w347390794,way/347390794,2004,,,,,yes,10.41,0.947,10.8,flat,yes,10.54,,only 2015,agree,only 2016,agree,agree,only 2023,0.98,yes
+w347391772,way/347391772,1880,3,roll,,,yes,10.03,0.965,10.31,flat,yes,11.28,3.34,only 2015,agree,only 2016,agree,agree,only 2023,0.987,yes
+w347392454,way/347392454,2002,,,,,yes,9.66,0.88,10.07,flat,yes,10.1,,only 2015,agree,only 2016,agree,agree,only 2023,0.915,yes
+w347393375,way/347393375,2002,,,,,yes,9.68,0.882,10.1,flat,yes,10.1,,only 2015,agree,only 2016,agree,agree,only 2023,0.925,yes
+w347393446,way/347393446,2002,,,,,yes,9.87,0.878,10.06,flat,yes,10.08,,only 2015,agree,only 2016,agree,agree,only 2023,0.94,yes
+w347393449,way/347393449,2002,,,,,yes,9.65,0.878,10.07,flat,yes,10.03,,only 2015,agree,only 2016,agree,agree,only 2023,0.925,yes
+w347393479,way/347393479,2002,,,,,yes,9.66,0.9,10.05,flat,yes,9.99,,only 2015,agree,only 2016,agree,agree,only 2023,0.937,yes
+w347393484,way/347393484,1875,3,roll,,,yes,11.6,0.91,11.52,mixed,yes,11.55,3.87,only 2015,agree,only 2016,agree,agree,only 2023,0.829,yes
+w347393493,way/347393493,1910,3,roll,,,yes,10.01,0.922,10.27,mixed,yes,10.31,3.34,only 2015,agree,only 2016,agree,agree,only 2023,0.923,yes
+w347393515,way/347393515,1875 to 1957,3,roll,,,yes,10.13,0.95,10.38,flat,yes,10.16,3.38,only 2015,agree,only 2016,agree,agree,only 2023,0.902,yes
+w347393528,way/347393528,1870,3,roll,,,yes,13.45,0.874,13.69,mixed,yes,13.17,4.48,only 2015,agree,only 2016,agree,agree,only 2023,0.963,yes
+w347393760,way/347393760,2003,1,roll,,,yes,4.32,0,,,yes,5.43,4.32,only 2015,only 2015,none,agree,only 2023,only 2023,0.924,yes
+w347393784,way/347393784,1936,,,,,yes,10.2,0.876,10.39,mixed,no,,,only 2015,agree,only 2016,only 2015,only 2016,none,0.882,yes
+w347393798,way/347393798,1890,,,,,yes,15.75,0.873,16.11,flat,yes,12.89,,only 2015,agree,only 2016,agree,agree,only 2023,0.923,yes
+w347393968,way/347393968,1870,3,roll,,,yes,10.5,0.925,11.01,mixed,yes,9.75,3.5,only 2015,agree,only 2016,agree,agree,only 2023,0.979,yes
+w347394020,way/347394020,1875,2,roll,,,yes,11.9,0.671,12.01,flat,yes,12.05,5.95,only 2015,agree,only 2016,agree,agree,only 2023,0.962,yes
+w347394086,way/347394086,1875 to 1945,3,roll,,,yes,12.04,0.952,12.1,flat,yes,12.19,4.01,only 2015,agree,only 2016,agree,agree,only 2023,0.925,yes
+w347394312,way/347394312,,2,osm,,,yes,6.8,0.928,7.03,flat,no,,3.4,only 2015,agree,only 2016,only 2015,only 2016,none,0.919,yes
+w347394418,way/347394418,1960,3,roll,,,yes,9.14,0.94,9.12,flat,yes,9.08,3.05,only 2015,agree,only 2016,agree,agree,only 2023,0.936,yes
+w347394420,way/347394420,1960,3,roll,,,yes,8.93,0.946,8.76,flat,yes,8.9,2.98,only 2015,agree,only 2016,agree,agree,only 2023,0.934,yes
+w347394483,way/347394483,1960,3,roll,,,yes,8.95,0.927,8.9,flat,yes,8.87,2.98,only 2015,agree,only 2016,agree,agree,only 2023,0.929,yes
+w347394485,way/347394485,1961,3,roll,,,yes,8.96,0.955,8.91,flat,yes,8.92,2.99,only 2015,agree,only 2016,agree,agree,only 2023,0.956,yes
+w347394507,way/347394507,1961,3,roll,,,yes,9.02,0.931,8.99,flat,yes,8.88,3.01,only 2015,agree,only 2016,agree,agree,only 2023,0.869,yes
+w347394545,way/347394545,2004,4,roll,,,yes,13.04,0.959,13.04,flat,yes,13.36,3.26,only 2015,agree,only 2016,agree,agree,only 2023,0.97,yes
+w347394572,way/347394572,1870 to 1937,3,roll,,,yes,11.16,1.0,10.84,mixed,yes,10.94,3.72,only 2015,agree,only 2016,agree,agree,only 2023,1.0,yes
+w347394622,way/347394622,1988,,,,,yes,10.02,0.981,10.1,flat,yes,10.03,,only 2015,agree,only 2016,agree,agree,only 2023,0.997,yes
+w347394627,way/347394627,1870,3,roll,,,yes,11.85,0.938,11.13,mixed,yes,11.4,3.95,only 2015,agree,only 2016,agree,agree,only 2023,0.996,yes
+w347394685,way/347394685,1958,3,roll,,,yes,11.72,0.939,11.18,flat,yes,10.82,3.91,only 2015,agree,only 2016,agree,agree,only 2023,0.999,yes
+w347394699,way/347394699,2022,,,,,no,,0.167,,mixed,yes,17.01,,none,none,none,only 2023,only 2023,only 2023,0.151,no
+w347394807,way/347394807,1895 to 1928,8,roll,,,yes,26.14,0.972,26.04,flat,yes,26.1,3.27,only 2015,agree,only 2016,agree,agree,only 2023,0.982,yes
+w347395104,way/347395104,,2,osm,,,yes,10.62,0.966,10.26,mixed,yes,11.37,5.31,only 2015,agree,only 2016,agree,agree,only 2023,0.937,yes
+w347395483,way/347395483,1948 to 1951,2,roll,,,yes,9.37,0.963,9.68,flat,yes,9.46,4.68,only 2015,agree,only 2016,agree,agree,only 2023,0.943,yes
+w347395611,way/347395611,,3,osm,,,yes,11.99,0,,,yes,12.05,4.0,only 2015,only 2015,none,agree,only 2023,only 2023,0.887,yes
+w347395784,way/347395784,1890,3,roll,,,yes,12.02,0,,,yes,12.09,4.01,only 2015,only 2015,none,agree,only 2023,only 2023,0.812,yes
+w347396342,way/347396342,,,,,,yes,12.0,0,,,yes,12.04,,only 2015,only 2015,none,agree,only 2023,only 2023,0.916,yes
+w347396506,way/347396506,,,,,,yes,10.96,0,,,yes,10.97,,only 2015,only 2015,none,agree,only 2023,only 2023,0.977,yes
+w347396555,way/347396555,1915,3,roll,,,yes,10.81,0,,,yes,10.96,3.6,only 2015,only 2015,none,agree,only 2023,only 2023,0.973,yes
+w347396574,way/347396574,1900,,,,,yes,11.17,0.941,11.17,flat,yes,11.31,,only 2015,agree,only 2016,agree,agree,only 2023,0.934,yes
+w347396576,way/347396576,1926,,,,,yes,11.28,0.976,11.55,flat,yes,11.5,,only 2015,agree,only 2016,agree,agree,only 2023,0.989,yes
+w347458840,way/347458840,,,,,,no,,0,,,yes,10.94,,none,none,none,only 2023,only 2023,only 2023,0.891,yes
+w347489369,way/347489369,,,,,,yes,6.37,0,,,yes,6.46,,only 2015,only 2015,none,agree,only 2023,only 2023,0.0,no
+w35927752,way/35927752,,6,osm,21.0,osm,yes,20.8,0,,,yes,21.86,3.47,agree,only 2015,only OSM,agree,only 2023,agree,0.937,yes
+w35927753,way/35927753,,6,osm,21.0,osm,yes,20.59,0,,,yes,21.48,3.43,agree,only 2015,only OSM,agree,only 2023,agree,0.935,yes
+w35927788,way/35927788,1961 to 2008,10,roll,25.0,osm,yes,27.24,0.985,26.28,flat,yes,27.82,2.72,agree,agree,agree,agree,agree,agree,0.974,yes
+w360807178,way/360807178,2018,13,osm,,,no,,0,,,yes,39.81,,none,none,none,only 2023,only 2023,only 2023,0.943,yes
+w360807179,way/360807179,2019,8,osm,,,no,,0,,,yes,23.25,,none,none,none,only 2023,only 2023,only 2023,0.986,yes
+w360807180,way/360807180,,6,osm,,,no,,0,,,yes,18.02,,none,none,none,only 2023,only 2023,only 2023,0.932,yes
+w362106076,way/362106076,,1,osm,,,yes,4.85,0,,,yes,4.75,4.85,only 2015,only 2015,none,agree,only 2023,only 2023,0.929,yes
+w362626435,way/362626435,2016,6,roll,,,yes,20.05,0.942,18.21,flat,yes,21.26,3.34,only 2015,agree,only 2016,agree,agree,only 2023,0.906,yes
+w372127834,way/372127834,2017,19,osm,,,yes,7.33,0,,,yes,55.95,0.39,only 2015,only 2015,none,disagree,only 2023,only 2023,0.0,no
+w372127835,way/372127835,2017,14,osm,,,no,,0,,,yes,43.63,,none,none,none,only 2023,only 2023,only 2023,0.909,yes
+w386406659,way/386406659,2019,8,osm,,,no,,0,,,yes,27.8,,none,none,none,only 2023,only 2023,only 2023,0.929,yes
+w41651775,way/41651775,1875,5,roll,,,yes,18.43,0.998,18.51,mixed,yes,18.64,3.69,only 2015,agree,only 2016,agree,agree,only 2023,0.988,yes
+w41651776,way/41651776,1960,,,,,yes,9.95,0.975,10.3,flat,yes,10.0,,only 2015,agree,only 2016,agree,agree,only 2023,0.953,yes
+w422426892,way/422426892,,8,osm,,,no,,0,,,yes,25.21,,none,none,none,only 2023,only 2023,only 2023,0.935,yes
+w422426893,way/422426893,2017 to 2020,8,osm,,,no,,0,,,yes,26.87,,none,none,none,only 2023,only 2023,only 2023,0.978,yes
+w422426894,way/422426894,,8,osm,,,no,,0,,,yes,25.62,,none,none,none,only 2023,only 2023,only 2023,0.977,yes
+w422426895,way/422426895,2015 to 2017,9,osm,,,no,,0,,,yes,30.74,,none,none,none,only 2023,only 2023,only 2023,0.728,yes
+w422426896,way/422426896,,9,osm,,,no,,0,,,yes,31.51,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w429914299,way/429914299,2019,22,roll,70.0,osm,no,,0,,,yes,69.81,,only OSM,none,only OSM,only 2023,only 2023,agree,0.0,no
+w432033288,way/432033288,,1,osm,,,yes,5.15,0,,,yes,5.18,5.15,only 2015,only 2015,none,agree,only 2023,only 2023,0.956,yes
+w432033289,way/432033289,1963,2,osm,,,yes,6.17,0.937,6.12,flat,yes,6.29,3.08,only 2015,agree,only 2016,agree,agree,only 2023,0.922,yes
+w442597210,way/442597210,,7,osm,,,yes,3.66,0,,,yes,24.94,0.52,only 2015,only 2015,none,disagree,only 2023,only 2023,0.952,yes
+w442597527,way/442597527,2018,21,osm,,,no,,0,,,yes,60.38,,none,none,none,only 2023,only 2023,only 2023,0.972,yes
+w47175201,way/47175201,1945 to 1950,5,osm,,,yes,11.08,0.989,11.42,flat,yes,11.21,2.22,only 2015,agree,only 2016,agree,agree,only 2023,0.978,yes
+w47175223,way/47175223,,,,,,yes,9.86,0.985,10.14,flat,yes,9.91,,only 2015,agree,only 2016,agree,agree,only 2023,0.983,yes
+w47175243,way/47175243,1931,,,,,yes,19.13,0.974,18.65,flat,yes,20.8,,only 2015,agree,only 2016,agree,agree,only 2023,0.954,yes
+w47175646,way/47175646,1927,1,roll,,,yes,12.46,0.974,12.59,mixed,yes,12.77,12.46,only 2015,agree,only 2016,agree,agree,only 2023,0.965,yes
+w47175647,way/47175647,1971,10,osm,,,yes,32.38,0.959,30.48,flat,yes,34.13,3.24,only 2015,agree,only 2016,agree,disagree,only 2023,0.933,yes
+w47175688,way/47175688,1990,5,roll,,,yes,13.37,0.975,13.3,flat,yes,13.41,2.67,only 2015,agree,only 2016,agree,agree,only 2023,0.958,yes
+w501448937,way/501448937,,14,osm,,,no,,0,,,yes,43.36,,none,none,none,only 2023,only 2023,only 2023,0.948,yes
+w54854259,way/54854259,,2,osm,9.5,osm,yes,12.76,0,,,yes,13.14,6.38,agree,only 2015,only OSM,agree,only 2023,disagree,0.968,yes
+w54895064,way/54895064,1929 to 2005,5,osm,,,yes,21.08,0.991,20.76,flat,yes,20.64,4.22,only 2015,agree,only 2016,agree,agree,only 2023,0.972,yes
+w54895065,way/54895065,1895,5,osm,,,yes,21.07,0.965,20.72,flat,yes,22.25,4.21,only 2015,agree,only 2016,agree,agree,only 2023,0.954,yes
+w54895066,way/54895066,,8,osm,,,yes,30.71,0,,,yes,30.83,3.84,only 2015,only 2015,none,agree,only 2023,only 2023,0.938,yes
+w54896274,way/54896274,,8,osm,,,yes,30.89,0,,,yes,31.13,3.86,only 2015,only 2015,none,agree,only 2023,only 2023,0.999,yes
+w582431318,way/582431318,2020,14,osm,,,no,,0,,,yes,45.42,,none,none,none,only 2023,only 2023,only 2023,0.341,no
+w583403068,way/583403068,2018,9,roll,,,no,,0,,,yes,27.65,,none,none,none,only 2023,only 2023,only 2023,0.952,yes
+w583403069,way/583403069,2020,5,roll,24.0,osm,no,,0,,,yes,29.83,,only OSM,none,only OSM,only 2023,only 2023,disagree,0.98,yes
+w592159754,way/592159754,2022,8,osm,,,no,,0,,,yes,28.02,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w592159755,way/592159755,,8,osm,,,no,,0,,,yes,28.1,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w592159756,way/592159756,,7,osm,,,no,,0,,,yes,24.85,,none,none,none,only 2023,only 2023,only 2023,0.998,yes
+w592172258,way/592172258,2020,15,osm,,,yes,7.06,0,,,yes,46.5,0.47,only 2015,only 2015,none,disagree,only 2023,only 2023,1.0,yes
+w592172260,way/592172260,,15,osm,,,yes,8.45,0.171,,flat,yes,46.6,0.56,only 2015,only 2015,none,disagree,only 2023,only 2023,0.829,yes
+w592172261,way/592172261,2021,14,osm_part,,,no,,0,,,yes,44.45,,none,none,none,only 2023,only 2023,only 2023,0.39,no
+w592747149,way/592747149,,15,osm,,,no,,0,,,yes,44.61,,none,none,none,only 2023,only 2023,only 2023,0.058,no
+w599388844,way/599388844,2021,8,osm,,,no,,0,,,yes,27.52,,none,none,none,only 2023,only 2023,only 2023,0.106,no
+w606863913,way/606863913,,1,osm,,,unclear,,0,,,unclear,,,none,none,none,none,none,none,0.0,no
+w606876714,way/606876714,,,,,,yes,8.08,0.924,8.29,mixed,yes,8.19,,only 2015,agree,only 2016,agree,agree,only 2023,0.877,yes
+w607076683,way/607076683,,8,osm,,,no,,0,,,yes,29.23,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w607959790,way/607959790,,,,,,yes,3.81,0,,,yes,3.78,,only 2015,only 2015,none,agree,only 2023,only 2023,0.087,no
+w607959791,way/607959791,1890,1,roll,,,yes,6.68,0.974,6.57,flat,yes,6.72,6.68,only 2015,agree,only 2016,agree,agree,only 2023,0.963,yes
+w609773933,way/609773933,,2,osm,,,yes,8.8,0,,,yes,8.55,4.4,only 2015,only 2015,none,agree,only 2023,only 2023,0.944,yes
+w614137698,way/614137698,,1,osm,,,no,,0,,,yes,3.76,,none,none,none,only 2023,only 2023,only 2023,0.514,yes
+w616028662,way/616028662,,8,osm,,,yes,28.74,0,,,yes,29.63,3.59,only 2015,only 2015,none,agree,only 2023,only 2023,0.951,yes
+w620759658,way/620759658,,1,osm,,,no,,0,,,unclear,,,none,none,none,none,none,none,0.849,yes
+w642915689,way/642915689,,1,osm,,,no,,0,,,yes,3.45,,none,none,none,only 2023,only 2023,only 2023,0.672,yes
+w651611802,way/651611802,,8,osm,25.0,osm,no,,0,,,yes,28.39,,only OSM,none,only OSM,only 2023,only 2023,agree,0.0,no
+w651611804,way/651611804,,20,osm,68.0,osm,no,,0.122,,flat,yes,45.52,,only OSM,none,only OSM,only 2023,only 2023,disagree,0.121,no
+w696912352,way/696912352,2023,19,roll,,,no,,0.139,,flat,yes,54.57,,none,none,none,only 2023,only 2023,only 2023,0.487,no
+w696912353,way/696912353,1934,3,roll,,,yes,11.33,1.0,10.73,flat,yes,12.46,3.78,only 2015,agree,only 2016,agree,agree,only 2023,0.993,yes
+w696912354,way/696912354,,1,osm,,,yes,7.56,0,,,yes,7.89,7.56,only 2015,only 2015,none,agree,only 2023,only 2023,0.958,yes
+w699964836,way/699964836,2021,8,roll,,,yes,11.76,0.794,11.88,flat,yes,27.0,1.47,only 2015,agree,only 2016,disagree,disagree,only 2023,0.803,yes
+w699964837,way/699964837,2021,8,roll,,,yes,12.8,0.8,13.11,flat,yes,27.22,1.6,only 2015,agree,only 2016,disagree,disagree,only 2023,0.799,yes
+w699964838,way/699964838,2021,22,osm_part,,,no,,0.157,,mixed,yes,70.4,,none,none,none,only 2023,only 2023,only 2023,0.155,no
+w700437945,way/700437945,2021,15,osm,,,yes,8.85,0,,,yes,45.57,0.59,only 2015,only 2015,none,disagree,only 2023,only 2023,0.797,yes
+w700437946,way/700437946,,8,osm,,,yes,8.32,0,,,yes,29.55,1.04,only 2015,only 2015,none,disagree,only 2023,only 2023,1.0,yes
+w700571090,way/700571090,,1,osm,,,yes,5.86,0.95,5.61,pitched,yes,5.79,5.86,only 2015,agree,only 2016,agree,agree,only 2023,0.919,yes
+w806954151,way/806954151,2024,25,osm,74.0,osm,no,,0,,,yes,72.4,,only OSM,none,only OSM,only 2023,only 2023,agree,0.101,no
+w825931426,way/825931426,,8,osm,,,no,,0,,,yes,28.2,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w825931427,way/825931427,,8,osm,,,no,,0,,,yes,30.17,,none,none,none,only 2023,only 2023,only 2023,0.0,no
+w826567448,way/826567448,2024,22,roll,66.0,osm,yes,9.77,0.236,,flat,yes,64.84,0.44,disagree,only 2015,only OSM,disagree,only 2023,agree,0.688,yes
+w837636795,way/837636795,2023,8,roll,,,yes,8.83,0.775,8.8,flat,yes,27.36,1.1,only 2015,agree,only 2016,disagree,disagree,only 2023,0.776,yes
+w906939746,way/906939746,,20,osm,,,yes,6.26,0.766,7.92,flat,yes,64.02,0.31,only 2015,agree,only 2016,disagree,disagree,only 2023,0.768,yes
+w965233758,way/965233758,,6,roll,24.0,osm_part,yes,29.25,0.987,29.92,flat,yes,29.28,4.88,disagree,agree,disagree,agree,agree,disagree,0.975,yes

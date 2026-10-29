@@ -33,6 +33,26 @@ T10 Each roll row sits on its lot: in the building its lot holds, or the address
     lot file lots_study_2026-10-15.json; placed by lot+address 7450, lot 987, address 468, inside 43, near 4, lot overlap 3
     PASS
 
+T11 Each source's height is the one its file gives, and each verdict follows from them (within one storey, 3.5 m)
+    296 buildings, 6 comparisons each
+    PASS
+
+T12 Every ODB footprint listed as alone has no S4 building on it, and its 2015 and 2023 readings follow the threshold
+    31 footprints
+    PASS
+
+T13 The 2023 lidar meets its ground model and reads unchanged buildings as 2015 does
+    open ground 0.044 m; 2023 minus 2015 on 129 unchanged buildings: median 0.12 m; outline shift [0.0, -0.5] m
+    PASS
+
+T14 Every OSM part and 2016 part has its 2023 reading, every outline with OSM parts its rest, and each OSM part lies in its building
+    95 OSM parts, 23 rests, 197 2016 parts (0 of them mostly outside their outline, which W36 does not use)
+    PASS
+
+T15 Every outline with lidar zones has one base and its zones lie within it
+    63 outlines, 80 zones above their base
+    PASS
+
 T8  Coverage (information, never a failure)
     buildings 296: use from the roll 188, from the OSM tag 74, unknown 34
     storeys from the roll 101, from the OSM outline 113, from an OSM part 9, unknown 73
@@ -44,5 +64,7 @@ T8  Coverage (information, never a failure)
      - unplaced: 7 x its lot holds 2 buildings and it has no address point to say which
      - unplaced: 2 x no building outline within 15 m
      - unplaced: 1 x its lot holds 5 buildings and it has no address point to say which
+    heights: from OpenStreetMap 27, measured in 2015 232, in 2016 139, in 2023 279; OSM and 2015 agree 14, disagree 3; 2016 and 2015 agree 134, disagree 1; 2023 and 2015 agree 213, disagree 15
+    outlines in the Open Database of Buildings 256, not 40; ODB footprints with no S4 building 31 (standing in 2015: 11)
 
 ALL PASS

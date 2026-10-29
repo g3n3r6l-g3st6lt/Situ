@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-732e4e15f095b381d8e57b6141c91f9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -520,7 +520,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page is the agreement between G1 World and an engine. A file that keeps it can be read by any engine, for Griffintown or any other city. It is a draft: version <strong>0.7</strong> (0.2 added the measured heights of G1b; 0.3 heights in the frame and the terrain grid; 0.4 roofs from the 2016 3D buildings; 0.5 the greybox block in the frame and areas.geojson; 0.6 areas painted into the ground, ground_kinds.png, and no top_m; 0.7 flat_ground.geojson in place of ground_kinds.png). Each file states its version, and the version changes whenever a field is added, renamed or changes meaning.</p>
+<p>This page is the agreement between G1 World and an engine. A file that keeps it can be read by any engine, for Griffintown or any other city. It is a draft: version <strong>0.9</strong> (0.2 added the measured heights of G1b; 0.3 heights in the frame and the terrain grid; 0.4 roofs from the 2016 3D buildings; 0.5 the greybox block in the frame and areas.geojson; 0.6 areas painted into the ground, ground_kinds.png, and no top_m; 0.7 flat_ground.geojson in place of ground_kinds.png; 0.8 heights first from the 2023 lidar, height_2023_m, present_2023 and height_discarded, and a 2016 roof only where it fits the height; 0.9 massing: an outline split into its measured parts). Each file states its version, and the version changes whenever a field is added, renamed or changes meaning.</p>
 <section id="rules" class="level2">
 <h2 class="anchored" data-anchor-id="rules">Rules for every file</h2>
 <table class="caption-top table">
@@ -582,7 +582,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td><code>format_version</code></td>
 <td>text</td>
-<td><code>0.7</code></td>
+<td><code>0.9</code></td>
 </tr>
 <tr class="odd">
 <td><code>z_origin_m_above_sea</code>, <code>terrain</code></td>
@@ -679,7 +679,7 @@ ul.task-list li input[type="checkbox"] {
 <td><code>height_source</code></td>
 <td>no</td>
 <td>text or null</td>
-<td><code>surface model 2015</code>, <code>OpenStreetMap</code> or <code>storeys</code>; null when unknown</td>
+<td><code>lidar 2023</code>, <code>surface model 2015</code>, <code>3D buildings 2016</code>, <code>OpenStreetMap</code> or <code>storeys</code>; null when unknown</td>
 </tr>
 <tr class="even">
 <td><code>height_2015_m</code>, <code>present_2015</code></td>
@@ -688,10 +688,34 @@ ul.task-list li input[type="checkbox"] {
 <td>what the 2015 surface measured on the outline, and whether a building stood there</td>
 </tr>
 <tr class="odd">
+<td><code>height_2023_m</code>, <code>present_2023</code></td>
+<td>no</td>
+<td>number or null; <code>yes</code>, <code>no</code> or <code>unclear</code></td>
+<td>what the 2023 lidar measured on the outline, and whether a building stood there</td>
+</tr>
+<tr class="even">
+<td><code>massing</code>, <code>massing_source</code>, <code>base_height_m</code></td>
+<td>yes</td>
+<td>text; text or null; number or null</td>
+<td><code>one</code>: the outline stands as one mass at <code>height_m</code>. <code>parts</code>: the outline stands at <code>base_height_m</code> and each of its <code>parts</code> stands on the ground at its own height; <code>massing_source</code> says whose parts (<code>OpenStreetMap parts</code>, <code>3D buildings 2016 parts</code>, or <code>lidar 2023 zones</code> cut from the lidar where no part is mapped)</td>
+</tr>
+<tr class="odd">
+<td><code>parts</code></td>
+<td>yes</td>
+<td>list of {<code>id</code>, <code>source</code>, <code>height_m</code>, <code>outline</code>}</td>
+<td>the measured parts of a split outline, each with its own outline in the frame; empty for one mass</td>
+</tr>
+<tr class="even">
+<td><code>height_discarded</code></td>
+<td>no</td>
+<td>list of {<code>source</code>, <code>height_m</code>, <code>reason</code>}</td>
+<td>each height another source gives that the block does not keep, and why: more than one storey from the chosen height, or set aside by a year or cover rule. <code>height_2015_m</code>, <code>height_2016_m</code> and <code>height_2023_m</code> are null when discarded; S4’s evidence keeps them</td>
+</tr>
+<tr class="odd">
 <td><code>roof_form</code>, <code>roof_faces</code>, <code>roof_source</code></td>
 <td>no</td>
 <td>text or null; number or null</td>
-<td><code>flat</code>, <code>mixed</code> or <code>pitched</code>, how many roof faces, and their source; null where no roof is known</td>
+<td><code>flat</code>, <code>mixed</code> or <code>pitched</code>, how many roof faces, and their source; null where no roof is known, or where the 2016 roof lies more than one storey from <code>height_m</code></td>
 </tr>
 <tr class="even">
 <td><code>height_2016_m</code>, <code>cover_2016</code></td>
@@ -1035,7 +1059,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="roofs" class="level2">
 <h2 class="anchored" data-anchor-id="roofs">roofs_2016.geojson</h2>
-<p>One 3D Polygon per roof face, <code>[x, y, z]</code> in the frame (z above the z origin).</p>
+<p>One 3D Polygon per roof face, <code>[x, y, z]</code> in the frame (z above the z origin), only for the blocks whose <code>roof_source</code> is set.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">

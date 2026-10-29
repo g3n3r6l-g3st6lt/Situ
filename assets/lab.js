@@ -12,6 +12,7 @@
     window.SITU_S8   outputs/s8/web_data.js   what can be seen from each walkable street: isovist measures, one view per segment
     window.SITU_S9   outputs/s9/web_data.js   the morning on foot, imagined under three readings, and the counted junctions
     window.SITU_S1_ROUTES  outputs/s1/routes_data.js  shortest distances and routes between every pair of junctions
+    window.SITU_G1   outputs/g1/web_data.js   each building's height as G1 World chose it, and the heights it discarded, with why
 
   It computes nothing about the city. Every colour and every value shows what the Python code already
   produced, and tools/test_lab.py checks that these files match the tables. One exception, kept small:
@@ -27,7 +28,7 @@
     3 painting              6 the detail panel
 */
 (function () {
-  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes;
+  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes, G1 = window.SITU_G1;
   const host = document.getElementById("situ-lab");
   if (!host) return;
   if (!S1 || !window.SituMap) {                 // the streets or the map code did not load: say so, never a blank page
@@ -129,7 +130,7 @@
     s1try: "details", s1mode: "walk", reachStart: null, reachStep: 0, routeA: null, routeB: null, routeSlack: 2,
     s2net: "ped", s2measure: "NACH", s2radius: 2, s2view: "one",
     s3view: "rules",
-    s4colour: "use", s4places: false,
+    s4colour: "use", s4places: false, s4odb: false,
     s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
     s6show: "all", s6colour: "material",
     s7show: "all",
@@ -185,7 +186,7 @@
   const bLayer = map.layer("buildings");             // made first, so the streets lie on top
   const bEl = {};
   if (S4) S4.buildings.forEach(b => {
-    const e = map.path(bLayer, "M" + b.ring.map(p => map.P(p).join(",")).join("L") + "Z", { class: "lab-bld" });
+    const e = map.path(bLayer, "M" + b.ring.map(p => map.P(p).join(",")).join("L") + "Z", { class: "lab-bld", "data-b": b.id });
     e.addEventListener("pointermove", ev => map.tip(ev, `${esc(b.name || b.id)}<br><span>${esc(b.use || "use unknown")}${b.dwellings ? " · " + b.dwellings + " dwellings" : ""}</span>`));
     e.addEventListener("pointerleave", () => map.untip());
     e.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "building", id: b.id }); });
@@ -205,7 +206,7 @@
   const streets = map.layer("streets");
   const segEl = {};
   S1.segments.forEach(s => {
-    segEl[s.id] = map.line(streets, s.pts, { class: "lab-street" });
+    segEl[s.id] = map.line(streets, s.pts, { class: "lab-street", "data-seg": s.id });
     const hit = map.line(streets, s.pts, { class: "sx-hit" });
     hit.addEventListener("pointermove", ev => map.tip(ev, esc(s.street) + ` <span>${s.id}</span>` + tipValue(s)));
     hit.addEventListener("pointerleave", () => map.untip());
@@ -336,7 +337,7 @@
     if (!on) return;
     if (state.tab === "s8") { S4.buildings.forEach(b => bEl[b.id].setAttribute("class", "lab-bld view8")); return; }   // what stops a sight line
     S4.buildings.forEach(b => {
-      let cls = "lab-bld " + (state.s4colour === "use" ? USE_CLASS(b.use) : "src-" + (b.use_source || "none"));
+      let cls = "lab-bld " + (state.s4colour === "use" ? USE_CLASS(b.use) : state.s4colour === "height" ? "h-" + HEIGHT4(b) : "src-" + (b.use_source || "none"));
       if (state.pick && state.pick.kind === "building" && state.pick.id === b.id) cls += " picked";
       bEl[b.id].setAttribute("class", cls);
     });
@@ -387,12 +388,16 @@
     if (state.tab === "s7" && S7) html = `<span><i class="kd home7"></i>building with homes, sized by its commuters</span><span><i class="kd metro7"></i>metro entrance</span><span><i class="kd stop7"></i>bus stop</span>`;
     if (state.tab === "s4" && S4) {
       const n = f => S4.buildings.filter(f).length;
-      html = state.s4colour === "use"
+      html = state.s4colour === "height"
+        ? `<span><i class="kb h-agree"></i>two sources agree within one storey (${S4.evidence.tolerance_m} m) ${n(b => HEIGHT4(b) === "agree")}</span><span><i class="kb h-disagree"></i>two sources disagree ${n(b => HEIGHT4(b) === "disagree")}</span>` +
+          `<span><i class="kb h-one"></i>one source only ${n(b => HEIGHT4(b) === "one")}</span><span><i class="kb h-none"></i>no height ${n(b => HEIGHT4(b) === "none")}</span>`
+        : state.s4colour === "use"
         ? ["residential", "commerce", "services", "industry"].map(u => `<span><i class="kb ${USE_CLASS(u)}"></i>${u} ${n(b => b.use === u)}</span>`).join("") +
           `<span><i class="kb u-minor-structure"></i>other ${n(b => b.use && !["residential", "commerce", "services", "industry"].includes(b.use))}</span>` +
           `<span><i class="kb u-unknown"></i>unknown ${n(b => !b.use)}</span>`
         : `<span><i class="kb src-roll"></i>from the tax roll ${n(b => b.use_source === "roll")}</span><span><i class="kb src-osm_tag"></i>from OpenStreetMap ${n(b => b.use_source === "osm_tag")}</span><span><i class="kb src-none"></i>no source ${n(b => !b.use_source)}</span>`;
       if (state.s4places) html += `<span><i class="kp"></i>place</span><span><i class="kp hours"></i>with opening hours</span>`;
+      if (state.s4odb && S4.odb_alone) html += `<span><i class="ko yes"></i>only in the Open Database of Buildings, standing in 2023</span><span><i class="ko"></i>only in it, not standing in 2023 or unclear</span>`;
     }
     if (state.tab === "s5" && S5) html = `<span><i class="kp5 o"></i>open</span><span><i class="kp5 c"></i>closed</span><span><i class="kp5 u"></i>no hours given</span>` +
       (state.s5mode === "bicycle" && S5.bikes ? `<span><i class="kb5"></i>bicycle detector, sized by this hour</span>` : "") +
@@ -430,6 +435,7 @@
     }
     if (state.tab === "s3" && S3 && state.s3view === "rules") s3Control(marks);
     if (state.tab === "s4" && S4 && state.s4places) placeMarks(marks);
+    if (state.tab === "s4" && S4 && state.s4odb && S4.odb_alone) odbMarks(marks);
     if (state.tab === "s5" && S5) s5Marks(marks, labels);
     if (state.tab === "s6" && S6) s6Marks(marks);
     if (state.tab === "s7" && S7) s7Marks(marks);
@@ -537,6 +543,18 @@
       hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(p.name || "(no name)")}<br><span>${esc(p.kind)}</span>`));
       hit.addEventListener("pointerleave", () => map.untip());
       hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "place", id: p.id }); });
+    });
+  }
+
+  // S4: footprints the Open Database of Buildings has where S4 has no building
+  function odbMarks(g) {
+    S4.odb_alone.forEach(o => {
+      const picked = state.pick && state.pick.kind === "odb" && state.pick.id === o.id;
+      map.square(g, o.xy, picked ? 9 : 6, { class: "lab-odb" + (o.standing_2023 === "yes" ? " yes" : "") + (picked ? " picked" : "") });
+      const hit = map.dot(g, o.xy, 7, { class: "sx-jhit" });
+      hit.addEventListener("pointermove", ev => map.tip(ev, `Only in the Open Database of Buildings<br><span>${Math.round(o.area)} m² · standing in 2015: ${esc(o.standing_2015)}, in 2023: ${esc(o.standing_2023)}</span>`));
+      hit.addEventListener("pointerleave", () => map.untip());
+      hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "odb", id: o.id }); });
     });
   }
 
@@ -840,6 +858,7 @@
     const back = `<p class="sx-crumb"><button type="button" class="sx-link" data-close="1">close</button></p>`;
     if (p.kind === "check") return back + checkHTML(checksOf(state.tab).find(x => x.id === p.id) || allChecks().find(x => x.id === p.id));
     if (p.kind === "building") return back + buildingHTML(b4[p.id]) + PROV;
+    if (p.kind === "odb") return back + odbHTML(S4.odb_alone.find(o => o.id === p.id)) + PROV;
     if (p.kind === "place") return back + placeHTML(place4[p.id]) + PROV;
     if (p.kind === "obj6") return back + obj6HTML(o6[p.id]) + PROV;
     if (p.kind === "surf6") return back + surf6HTML(s6[p.id]) + PROV;
@@ -945,12 +964,67 @@
       (b.storeys != null && b.storeys_reason ? `<p class="sub">${esc(b.storeys_reason)}. A building is as tall as its tallest known part.</p>` : "") +
       (b.parts ? `<p class="sub">${b.parts} part${b.parts > 1 ? "s" : ""} drawn in OpenStreetMap inside this outline.</p>` : "") + `
       <p>Dwellings: ${b.dwellings != null ? `<b>${b.dwellings}</b> <span class="sub">from the tax roll, ${b.properties} properties${b.condo_units ? `, ${b.condo_units} condo units` : ""}${b.year ? `, built ${esc(b.year)}` : ""}</span>` : `<span class="warn">unknown</span> <span class="sub">${esc(b.roll_reason)}</span>`}</p>`;
+    h += heightHTML(b) + g1HTML(b);
     if (b.premises) h += `<h3 class="lab-s">Ground floor</h3><p>${b.premises} commercial spaces in the 2025 survey, ${b.vacant} vacant.</p>${b.ground_floor ? `<p class="sub">${esc(b.ground_floor)}</p>` : ""}`;
     if (inside.length) h += `<h3 class="lab-s">Places inside (${inside.length})</h3><ul class="lab-places">${inside.map(p =>
       `<li><button type="button" class="sx-link" data-place="${p.id}">${esc(p.name || "(no name)")}</button> <span class="sub">${esc(p.kind)}${p.hours ? " · has hours" : ""}</span></li>`).join("")}</ul>`;
     h += `<h3 class="lab-s">Reached from</h3>` + (b.access ? `<p><button type="button" class="sx-link" data-seg="${b.access}">${esc(b.access_street)} (${b.access})</button>, ${b.access_m} m away</p>
       <p class="sub">An assumption: the nearest street people may walk on. Where the doors are is not known yet.</p>` : `<p class="warn">No street people may walk on within ${S4.meta.access_max_m} m.</p>`);
     return h;
+  }
+  // the height each source gives, set side by side (evidence.py); nothing here chooses one
+  const VERDICT4 = { agree: "agree", disagree: "disagree" };
+  function HEIGHT4(b) {
+    const e = b.ev || {}, v = [e.osm_vs_2015, e.y2016_vs_2015, e.osm_vs_2016, e.y2023_vs_2015, e.y2023_vs_2016, e.osm_vs_2023];
+    if (v.includes("disagree")) return "disagree";
+    if (v.includes("agree")) return "agree";
+    return [e.h_osm, e.h_2015, e.h_2016, e.h_2023].some(x => x != null) ? "one" : "none";   // evidence.py leaves a height empty where its source does not count
+  }
+  function heightHTML(b) {
+    const e = b.ev;
+    if (!e) return "";
+    const m = x => x != null ? `<b>${x} m</b>` : `<span class="sub">none</span>`;
+    const pct = x => `${Math.round(x * 100)} %`;
+    const rows = [
+      ["OpenStreetMap", m(e.h_osm), e.h_osm != null ? `from ${esc(SRC4[e.h_osm_source] || e.h_osm_source)}` : "no height tag"],
+      ["Surface model, 2015", m(e.h_2015), `standing in 2015: ${esc(e.present_2015)}`],
+      ["3D buildings, 2016", m(e.h_2016),
+        e.cover_2016 ? `parts' ground area ${pct(e.cover_2016)} of the outline's${e.roof_2016 ? ", roof " + esc(e.roof_2016) : ""}` : "nothing on this outline"],
+      ["Lidar, 2023", m(e.h_2023), `standing in 2023: ${esc(e.present_2023)}`],
+    ];
+    const pairs = [["OpenStreetMap and 2015", e.osm_vs_2015], ["2016 and 2015", e.y2016_vs_2015], ["OpenStreetMap and 2016", e.osm_vs_2016],
+      ["2023 and 2015", e.y2023_vs_2015], ["2023 and 2016", e.y2023_vs_2016], ["OpenStreetMap and 2023", e.osm_vs_2023]]
+      .filter(([, v]) => VERDICT4[v]);
+    return `<h3 class="lab-s">Height, by source</h3><table class="lab-vals">${rows.map(([s, h, n]) => `<tr><td>${s}</td><td>${h}</td><td class="sub">${n}</td></tr>`).join("")}</table>` +
+      (pairs.length ? `<p class="sub">Within one storey (${S4.evidence.tolerance_m} m): ${pairs.map(([w, v]) => `${w} <b class="${v === "disagree" ? "warn" : ""}">${v}</b>`).join(" · ")}</p>` : "") +
+      `<p class="sub">Outline in the Open Database of Buildings: <b>${esc(e.in_odb)}</b> (${pct(e.odb_cover)} covered)</p>`;
+  }
+  // how far two measurements of one building lie apart, on buildings the roll dates before a year: what a tolerance is chosen from
+  function spreadHTML(ev) {
+    const sp = ev.spread_unchanged, tol = Object.keys(sp["2023_vs_2015"].disagree_at || {});
+    const rows = [["2023 and 2015", "2023_vs_2015"], ["2016 and 2015", "2016_vs_2015"], ["2023 and 2016", "2023_vs_2016"]].filter(([, k]) => sp[k] && sp[k].buildings);
+    return `<p class="sub">Agree means within one storey: ${ev.tolerance_m} m, the median height per storey the ${ev.storey.year} survey measures on ${ev.storey.buildings} buildings. On the ${sp.buildings} buildings the tax roll dates before ${sp.built_before}, two measurements differ by:</p>
+      <table class="lab-vals"><tr><th></th><th>n</th><th>half within</th><th>95 % within</th></tr>${rows.map(([w, k]) =>
+        `<tr><td>${w}</td><td>${sp[k].buildings}</td><td>${sp[k].abs_p50_m} m</td><td>${sp[k].abs_p95_m} m</td></tr>`).join("")}</table>
+      <p class="sub">Pairs that disagree at each tolerance:</p>
+      <table class="lab-vals"><tr><th></th>${tol.map(t => `<th>${t} m</th>`).join("")}</tr>${rows.map(([w, k]) =>
+        `<tr><td>${w}</td>${tol.map(t => `<td>${sp[k].disagree_at[t]}</td>`).join("")}</tr>`).join("")}</table>`;
+  }
+  // what G1 World keeps for the game: the newest measurement, and every other height it discarded, with why (W32 to W35)
+  function g1HTML(b) {
+    const g = G1 && G1.blocks[b.id];
+    if (!g) return "";
+    const what = g.h != null ? `<b>${g.h} m</b> <span class="sub">from ${esc(g.source)} (${esc(g.status)})</span>` : `<span class="warn">unknown</span>`;
+    return `<p>In the game world (<a href="g1-world.html#heights">G1</a>): ${what}</p>` +
+      (g.massing === "parts" ? `<p class="sub">Drawn as its outline at ${g.base} m with ${g.parts.length} part${g.parts.length > 1 ? "s" : ""} standing on it, from ${esc(g.massing_source)}: ${g.parts.map(q => q[1] + " m").join(", ")} (W36).</p>` : "") +
+      (g.discarded.length ? `<p class="sub">Discarded:</p><ul class="lab-places">${g.discarded.map(([s, h, why]) =>
+        `<li>${esc(s)} ${h} m <span class="sub">${esc(why)}</span></li>`).join("")}</ul>` : "");
+  }
+  function odbHTML(o) {
+    return `<h2 class="lab-pt">A footprint with no S4 building</h2><p class="sub">Open Database of Buildings · ${esc(o.id)}</p>
+      <p>From ${esc(o.source)}, ${esc(o.dataset)}. ${Math.round(o.area)} m² on the ground; S4 outlines cover ${Math.round(o.s4_cover * 100)} % of it.</p>
+      <p>Standing in 2015: <b>${esc(o.standing_2015)}</b>${o.h_2015 != null ? ` <span class="sub">median height above the ground inside it, ${o.h_2015} m</span>` : ""}</p>
+      <p>Standing in 2023: <b>${esc(o.standing_2023)}</b>${o.h_2023 != null ? ` <span class="sub">median height above the ground inside it, ${o.h_2023} m</span>` : ""}</p>`;
   }
   function placeHTML(p) {
     const b = p.building && b4[p.building];
@@ -997,8 +1071,10 @@
     }
     if (t === "s4") {
       h += `<h2 class="lab-t">S4 · Buildings</h2><p>What each building is used for, and where that answer comes from. Click a building to see everything S4 knows about it. When no source says, the use stays unknown.</p>
-        ${seg2("s4colour", [["use", "used for"], ["source", "where that came from"]])}
-        <label class="lab-check"><input type="checkbox" class="lab-places-on"${state.s4places ? " checked" : ""}> show the places people go to</label>`;
+        ${seg2("s4colour", [["use", "used for"], ["source", "where that came from"], ["height", "height, by source"]])}
+        <label class="lab-check"><input type="checkbox" class="lab-places-on"${state.s4places ? " checked" : ""}> show the places people go to</label>` +
+        (state.s4colour === "height" && S4.evidence && S4.evidence.spread_unchanged ? spreadHTML(S4.evidence) : "") +
+        (S4.odb_alone ? `<label class="lab-check"><input type="checkbox" class="lab-odb-on"${state.s4odb ? " checked" : ""}> show footprints only the Open Database of Buildings has (${S4.odb_alone.length})</label>` : "");
     }
     if (t === "s5" && S5) {
       h += `<h2 class="lab-t">S5 · Rhythm</h2><p>When the streets are busy, and which places say they are open. How busy is measured: the city counted people at seven junctions inside the area, on weekdays, and at a ring of crossings around it. Opening hours are what places promise, and most places give none.</p>
@@ -1289,6 +1365,7 @@
     if (pick.kind === "obj6") return o6[pick.id].xy;
     if (pick.kind === "surf6") return mid(s6[pick.id].ring);
     if (pick.kind === "home7") return h7[pick.id].xy;
+    if (pick.kind === "odb") return S4.odb_alone.find(o => o.id === pick.id).xy;
     const c = checksOf(state.tab).find(x => x.id === pick.id) || allChecks().find(x => x.id === pick.id);   // ids repeat across systems
     return c ? c.xy : null;
   }
@@ -1356,6 +1433,7 @@
   // controls
   host.addEventListener("change", e => {
     if (e.target.classList.contains("lab-places-on")) { state.s4places = e.target.checked; render(true); }
+    if (e.target.classList.contains("lab-odb-on")) { state.s4odb = e.target.checked; render(true); }
   });
   host.addEventListener("input", e => {
     const t = e.target;
@@ -1445,6 +1523,14 @@
     }
   }
   window.addEventListener("hashchange", fromHash);
+
+  // for the 3D view (lab3d.js): it reads the map as drawn, and picks through the same select()
+  window.SituLab = {
+    map, host, select: p => select(p),
+    openBuilding: id => { if (state.tab !== "s4" && state.tab !== "s8") { state.tab = "s4"; render(); } select({ kind: "building", id }); },
+    tab: () => state.tab,
+  };
+  window.dispatchEvent(new Event("situ-lab-ready"));
 
   render();
   map.fit(false);

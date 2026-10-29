@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-732e4e15f095b381d8e57b6141c91f9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -571,8 +571,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>S4 Buildings</td>
-<td>buildings by use, or by where the use came from</td>
-<td>the places people go to</td>
+<td>buildings by use, by where the use came from, or by whether the sources of their height agree</td>
+<td>the places people go to; the footprints only the Open Database of Buildings has</td>
 </tr>
 <tr class="odd">
 <td>S5 Rhythm</td>
@@ -601,6 +601,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+<p>Every tab can also be seen in 3D: the 3D button under the zoom buttons turns the map into a model. The streets, surfaces and marks are the 2D map’s own, with its colours, so the 3D view always shows the same tab and the same choices. Each building stands at the height <a href="./g1-world.html#heights">G1 World</a> gives it, with its towers on their podium where G1 splits it into measured parts; a building no source measures stays a thin plate, never a guessed mass. Drag to turn, scroll to zoom, and click a building or a street for the same panel as in 2D. The 3D view uses three.js (MIT licence).</p>
 <p>Integration and choice are the <a href="./space-syntax.html">space syntax</a> measures S2 gives each street. Integration is how easy a street is to reach. Choice is how often it lies on the way between other places. The stress tests sit with each system’s tests, where their numbers can be read in full.</p>
 </section>
 <section id="how-it-is-built" class="level2">
@@ -618,7 +619,8 @@ ul.task-list li input[type="checkbox"] {
   R --&gt; D
   K["walk tools&lt;br/&gt;minutes and views"]:::step --&gt; L
   D --&gt; L["the Lab"]:::test
-  D --&gt; T["the Lab checks&lt;br/&gt;L1 to L12"]:::test
+  G["G1 heights"]:::step --&gt; D
+  D --&gt; T["the Lab checks&lt;br/&gt;L1 to L14"]:::test
   K --&gt; T
   classDef rule fill:none,stroke:#8a8a8a,stroke-dasharray:4 3,color:#a6a6a6
   classDef step fill:none,stroke:#e6e6e6,color:#e6e6e6
@@ -643,7 +645,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="tests" class="level2">
 <h2 class="anchored" data-anchor-id="tests">How the Lab is tested</h2>
-<p>The thirteen Lab checks ask one thing: does the Lab show exactly what the systems wrote?</p>
+<p>The fourteen Lab checks ask one thing: does the Lab show exactly what the systems wrote?</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -708,13 +710,17 @@ ul.task-list li input[type="checkbox"] {
 <td>L13</td>
 <td>Do the gaps the two-order views show (S2 local or whole, S9 against space syntax) equal a fresh count from the S2 and S9 tables? A street missing a value gets no gap, never 0.</td>
 </tr>
+<tr class="even">
+<td>L14</td>
+<td>Does every building’s height, source, status, roof and discarded heights in the Lab, and so in its 3D view, equal G1’s blocks?</td>
+</tr>
 </tbody>
 </table>
-<p>All thirteen pass, and the <a href="./lab.html">Lab</a> shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught both. For L7, I changed one letter of a place’s week, and L7 caught it.</p>
+<p>All fourteen pass, and the <a href="./lab.html">Lab</a> shows the latest results. Before trusting the checks, I broke the files on purpose. I changed one S2 value in the Lab’s copy, and L2 caught it. Earlier, L3 caught a stop switched off on Rue Chatham. I added 3 m to one walking distance, and L5 found the route no longer added up. When I made the browser’s detour rule one decimetre stricter, L5 found 6,116 cases that differed. For L6, I turned one unknown dwelling count into 0 and moved one outline point by 1 m, and L6 caught both. For L7, I changed one letter of a place’s week, and L7 caught it.</p>
 <p>The shortest-route check does not trust the method that found the routes. It uses a simple test instead: if a route is real, and no single move anywhere could shorten any distance, then no shorter route exists. That condition is checked separately, for every start and every move.</p>
 <section id="ui-tests" class="level3">
 <h3 class="anchored" data-anchor-id="ui-tests">In a browser</h3>
-<p>The checks above read the Lab’s data. Twelve more open the Lab itself in a browser, the way a visitor does, and click through it (<a href="outputs/lab/ui_report.txt">last results</a>).</p>
+<p>The checks above read the Lab’s data. Thirteen more open the Lab itself in a browser, the way a visitor does, and click through it (<a href="outputs/lab/ui_report.txt">last results</a>).</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -775,9 +781,13 @@ ul.task-list li input[type="checkbox"] {
 <td>U12</td>
 <td>Do the Lab’s headings follow the page outline on every tab, with no level skipped?</td>
 </tr>
+<tr class="odd">
+<td>U13</td>
+<td>Does the 3D view open, follow a change of tab, open a building’s panel on a click, and give the 2D map back?</td>
+</tr>
 </tbody>
 </table>
-<p>All twelve pass. The first run of U8 failed: a table on <a href="./provenance.html">Tracing a result</a> was wider than a phone. Wide tables now scroll inside themselves.</p>
+<p>All thirteen pass. The first run of U8 failed: a table on <a href="./provenance.html">Tracing a result</a> was wider than a phone. Wide tables now scroll inside themselves.</p>
 
 
 </section>

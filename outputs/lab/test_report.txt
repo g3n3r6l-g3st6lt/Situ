@@ -18,8 +18,8 @@ L5  S1 routes: every shortest route is real and shortest, and the Lab's rules gi
     every pair, on foot and by car; twin check: 45600 routes and corridors compared, from every 10th junction to every other
     PASS
 
-L6  S4: buildings, places and checkpoints match the S4 tables, and a missing value stays missing
-    296 buildings x 11 fields and every outline point; 571 empty cells stayed empty; 610 places, 61 checkpoints
+L6  S4: buildings, places, checkpoints, the height evidence and the ODB-only footprints match the S4 tables, and a missing value stays missing
+    296 buildings x 11 fields and every outline point, x 17 evidence fields; 1492 empty cells stayed empty; 610 places, 61 checkpoints, 31 ODB-only footprints
     PASS
 
 L7  S5: the weekday shape, the junction counts, every place's week, the open counts and the ring match the S5 tables
@@ -48,6 +48,10 @@ L12 Walk tools: the Lab's walking distances equal S7's shortest walks, and its s
 
 L13 Two orders: the gaps the Lab shows equal a fresh count from the S2 and S9 tables
     8 S2 views and 9 S9 views, 4075 gaps; a missing value gives no gap, never 0
+    PASS
+
+L14 G1 heights: every building's height, source, status, roof and discarded heights match blocks.geojson
+    296 buildings x 9 fields and every part outline point; 6 unknown heights stayed null; 43 discarded heights with their reasons
     PASS
 
 ALL PASS

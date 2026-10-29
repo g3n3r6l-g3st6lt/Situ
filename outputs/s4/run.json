@@ -1,9 +1,9 @@
 {
  "system": "s4",
- "made": "2026-10-28T20:31:52Z",
+ "made": "2026-10-29T19:54:17Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "5e9de680574bca2845511c0b42c00d9e7732349f",
+  "git_commit": "dc9095f34dce9b409dbf54a48cf82a5a47c654f8",
   "differs_from_commit": true,
   "files": [
    {
@@ -12,7 +12,23 @@
    },
    {
     "path": "Situ/s4_buildings/build.py",
-    "sha256": "c83b0a8473dfd277e452feeda33311c1d44689486ed12f89267c5ba6b33e1df9"
+    "sha256": "e6de8e6914dc24dda35d33916658607f41ebdd4a481f6cea7b407878561d25fb"
+   },
+   {
+    "path": "Situ/s4_buildings/evidence.py",
+    "sha256": "176a719eeb7c8bf79a25a3c52a81ca8e955a1dbadbd76876b91df5185e415d22"
+   },
+   {
+    "path": "Situ/s4_buildings/heights.py",
+    "sha256": "fd958d0ec11e3e76963706a59ee34761eec4838f6fb1524ac02b0052fb86f1a9"
+   },
+   {
+    "path": "Situ/s4_buildings/lidar.py",
+    "sha256": "9328fe28395b326e1f70967937834fb30a4aacf249274614bc876a52f4410e08"
+   },
+   {
+    "path": "Situ/s4_buildings/roofs.py",
+    "sha256": "e0c89fc50014480b678e4177c131b45e37cb1a42f47690c34a35890c7913f7ce"
    },
    {
     "path": "Situ/s4_buildings/stress.py",
@@ -20,7 +36,7 @@
    },
    {
     "path": "Situ/s4_buildings/test.py",
-    "sha256": "136474a22c0d8ff6553fe9863d1f3eb41ba0225e8fc19563c1838c0062e95431"
+    "sha256": "8fddb3d33da8565d2fe616b4f8db0d7f32eff38bcd3cdfec516909c6e21dd44e"
    },
    {
     "path": "Situ/s4_buildings/visualize.py",
@@ -28,11 +44,15 @@
    },
    {
     "path": "Situ/s4_buildings/web.py",
-    "sha256": "448a5099df28c87e8a45a1c93bcea3e43a38b0ff18ab0ccd2e9651b3898b8c0c"
+    "sha256": "3f17fb900ae6cbc7ef2ad2ac9599cfc0c776c276a73c3eaaf71d5543a8645435"
+   },
+   {
+    "path": "Situ/s4_buildings/zones.py",
+    "sha256": "cf3e1d14ed549a562a97a8d5f6e17ec03114bcf7997fc601f0b3d0d108afe820"
    },
    {
     "path": "Situ/config.py",
-    "sha256": "22fbd967662f35e0a81639002d6564ef53e2959d49aaebb7b4b5f4470e4b9f4c"
+    "sha256": "244eb65891771491350803bd212efba5353ecf040f581dd5b924acd83ddbb658"
    }
   ]
  },
@@ -66,6 +86,20 @@
    "sha256": "5813ee17781dae8ab36eab81b75ac6e8761a7c755edd28594e89c55ed9b5a31e"
   },
   {
+   "name": "ODB_FILES",
+   "path": "Situ/data/external/ODB_v3_QC_1/ODB_v3_QC_1.gpkg",
+   "bytes": 903811072,
+   "modified": "2026-10-28T22:54:40Z",
+   "sha256": "5dca93e20f4f829df8debff8ac2a93c5b7b8ff2c2b101bf2f5d4d5ee7c047d57"
+  },
+  {
+   "name": "ODB_FILES",
+   "path": "Situ/data/external/ODB_v3_QC_2/ODB_v3_QC_2.gpkg",
+   "bytes": 783028224,
+   "modified": "2026-10-28T22:54:32Z",
+   "sha256": "d13fa871283f4580f1e4dee3af406cd417bbc284dfb29b2789f3e8bcfa06b918"
+  },
+  {
    "name": "OSM_PARTS_FILE",
    "path": "Situ/data/external/osm_parts_2026-10-15.json",
    "bytes": 241939,
@@ -92,18 +126,103 @@
    "bytes": 28462416,
    "modified": "2026-10-14T22:52:07Z",
    "sha256": "b19e2e11840a3823b45b37c9cebabce3306e25386685a103e3e0ac92ea195ad7"
+  },
+  {
+   "name": "S4H_B3D_FILES",
+   "path": "Situ/data/external/batiments_3d_2016_sud-ouest/SO05_2016_GML.zip",
+   "bytes": 544471257,
+   "modified": "2026-10-22T22:12:04Z",
+   "sha256": "bc33b93db0b2a0964a0f1ced4ab7b4985f0b0b242f9ca2d104064532975099fe"
+  },
+  {
+   "name": "S4H_B3D_FILES",
+   "path": "Situ/data/external/batiments_3d_2016_sud-ouest/SO06_2016_GML.zip",
+   "bytes": 334777919,
+   "modified": "2026-10-22T22:12:29Z",
+   "sha256": "770d135d44a92fbb188fb27f639fc74a66481b0e945125846d8a783e59150cf1"
+  },
+  {
+   "name": "S4H_B3D_FILES",
+   "path": "Situ/data/external/batiments_3d_2016_sud-ouest/SO09_2016_GML.zip",
+   "bytes": 395582173,
+   "modified": "2026-10-22T22:12:59Z",
+   "sha256": "fe3152d2a6d3e8c2ff6b271959de39341761aac34dd559f0d4e820497356e1f6"
+  },
+  {
+   "name": "S4H_B3D_FILES",
+   "path": "Situ/data/external/batiments_3d_2016_sud-ouest/SO11_2016_GML.zip",
+   "bytes": 244126268,
+   "modified": "2026-10-22T22:13:18Z",
+   "sha256": "1e8b42ce327fa2599d90d2b54c187530ca73374737ea89867eb33192db4dfa74"
+  },
+  {
+   "name": "S4H_MNS_ZIP",
+   "path": "Situ/data/external/mns2015_1m_sud-ouest.zip",
+   "bytes": 60495383,
+   "modified": "2026-10-22T21:52:51Z",
+   "sha256": "86bb10bf43f694aa2987e66f7c87f31916067a3fb7ff4093c8432f0de94731e0"
+  },
+  {
+   "name": "S4H_MNT_ZIP",
+   "path": "Situ/data/external/mnt2015_sud-ouest_landxml.zip",
+   "bytes": 28544170,
+   "modified": "2026-10-22T21:52:53Z",
+   "sha256": "de21557fe0b2386949c835b08052b99febfca5b7587d3931ef2139f2c4a4608d"
+  },
+  {
+   "name": "S4L_FILES",
+   "path": "Situ/data/external/lidar_2023_cmm/23_2995038F08_DC.laz",
+   "bytes": 237070222,
+   "modified": "2026-10-29T03:19:10Z",
+   "sha256": "f22d99e8821b570daaf4137f0306a13e1d293c453d741a60df1de4eb64a3522f"
+  },
+  {
+   "name": "S4L_FILES",
+   "path": "Situ/data/external/lidar_2023_cmm/23_2995039F08_DC.laz",
+   "bytes": 230267979,
+   "modified": "2026-10-29T03:21:00Z",
+   "sha256": "b6f088d64a240eeedff6efd00015deb2807eaef5612e3fef5670af426db8ba15"
+  },
+  {
+   "name": "S4L_FILES",
+   "path": "Situ/data/external/lidar_2023_cmm/23_3005038F08_DC.laz",
+   "bytes": 212163039,
+   "modified": "2026-10-29T03:21:51Z",
+   "sha256": "145954c50e342cf30073113fa718e31d14e7eacebccc07a6a6030d637519fcec"
+  },
+  {
+   "name": "S4L_FILES",
+   "path": "Situ/data/external/lidar_2023_cmm/23_3005039F08_DC.laz",
+   "bytes": 202651938,
+   "modified": "2026-10-29T03:19:45Z",
+   "sha256": "5763dc923de67aaa0dcdb93ed82808662e6d6fdd6801a2fd7d915ccdad4bcdd0"
+  },
+  {
+   "name": "S4L_MNT_FILES",
+   "path": "Situ/data/external/mnt_2023_cmm/MNT2023-2024_7367_4535_CCL_1M.tif",
+   "bytes": 470380658,
+   "modified": "2026-10-29T03:23:21Z",
+   "sha256": "425079a41f565486b21cdbf6ccf39637a3f195f9fd7ec21bdad0e877d5f77309"
+  },
+  {
+   "name": "S4L_MNT_FILES",
+   "path": "Situ/data/external/mnt_2023_cmm/MNT2023-2024_7368_4548_CCL_1M.tif",
+   "bytes": 542218492,
+   "modified": "2026-10-29T03:24:55Z",
+   "sha256": "096a2702646a242d1d8532e97a0ddff5226420ae7592737bb4988496088c560d"
   }
  ],
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "e41bc65e97920462007b503bcbb4089109f620cbd4544ad2ea3f2c9caff71a96"
+   "run_json_sha256": "a6ab889b6607d026d9f1e026570bcb5e31d4d152cb7f80f62aa322f75eba3d56"
   }
  ],
  "settings": {
   "ACCESS_MAX_M": 80,
   "BOUNDARY_LAYER": "griffintown_boundary",
   "CRS": "EPSG:32188",
+  "G1B_COVER_MIN": 0.5,
   "NEAR_BUILDING_M": 15,
   "NOT_A_PLACE": [
    "bbq",
@@ -133,7 +252,38 @@
    "waste_disposal",
    "water_point"
   ],
-  "PREMISES_LAYER": "occupation_commerciale_2025"
+  "PREMISES_LAYER": "occupation_commerciale_2025",
+  "S4E_AGREE": "one storey",
+  "S4E_ALONE_MAX": 0.1,
+  "S4E_COVER_MIN": 0.5,
+  "S4E_STOREY_USE_MIN": 5,
+  "S4E_STOREY_YEAR": "2023",
+  "S4E_TOLERANCES_SHOWN": [
+   0.5,
+   1.0,
+   1.5,
+   2.0,
+   3.0,
+   5.0
+  ],
+  "S4E_UNCHANGED_BEFORE": 2015,
+  "S4H_B3D_TILES": [
+   "SO05",
+   "SO06",
+   "SO09",
+   "SO11"
+  ],
+  "S4H_EDGE_M": 1.0,
+  "S4H_FLAT_DEG": 5,
+  "S4H_PRESENT_M": 2.5,
+  "S4H_ROOF_PERCENTILE": 90,
+  "S4H_SHIFT_SEARCH_M": 2.0,
+  "S4L_LAZ_EPSG": 2950,
+  "S4L_MNT_EPSG": 6622,
+  "S4L_SURFACE_CLASSES": [
+   2,
+   6
+  ]
  },
  "outputs": [
   {
@@ -152,14 +302,79 @@
    "sha256": "ca80b3a8629c633bdec971b62b2ed0382dfed09bcfddbbb8ba901ab441138449"
   },
   {
+   "path": "Situ/outputs/s4/evidence.csv",
+   "bytes": 37949,
+   "sha256": "289575fc109f2c7e5c83e51673c1094100f42d90d39fd87048d9c9e266edd086"
+  },
+  {
+   "path": "Situ/outputs/s4/evidence.json",
+   "bytes": 5614,
+   "sha256": "8cbf45800b1ee6f85c5b71ffaf0d822ace4dee99f981ac702870697bee676c34"
+  },
+  {
+   "path": "Situ/outputs/s4/heights_2015.csv",
+   "bytes": 17864,
+   "sha256": "787c5ac22baae92ba9521272a6b1b6ffdc5fe684520609c1abe8e13ccc6052a4"
+  },
+  {
+   "path": "Situ/outputs/s4/heights_2015.json",
+   "bytes": 231,
+   "sha256": "64ea713230f275fa1d2f51fed26596e006d5596430c745d9f755e40f65e7c73e"
+  },
+  {
+   "path": "Situ/outputs/s4/heights_2023.csv",
+   "bytes": 17015,
+   "sha256": "8dda363c37f7d1b86151bb0bb853f2320e51dd0118ff1af2ea07bd1296f79ff3"
+  },
+  {
+   "path": "Situ/outputs/s4/heights_2023.json",
+   "bytes": 1206,
+   "sha256": "a3cb1c481fef529910dc4c24ac5888c92da57fa5a7ff49d0a2ce2ae5e3f01c65"
+  },
+  {
    "path": "Situ/outputs/s4/meta.json",
    "bytes": 122,
    "sha256": "35cf61dd0d4cca21868318d2c92c421102099557a4e98a0cadbb4148b1a6b019"
   },
   {
+   "path": "Situ/outputs/s4/odb_alone.csv",
+   "bytes": 4180,
+   "sha256": "b507673d67256248327cbfb45ba498305c83697c096d8bda005cdc6c7b82986b"
+  },
+  {
+   "path": "Situ/outputs/s4/parts.geojson",
+   "bytes": 41645,
+   "sha256": "3be861fd99539fcf343e272b54d20eea097d7350f718d96e374e6cfa1b87c56e"
+  },
+  {
+   "path": "Situ/outputs/s4/parts_2016.geojson",
+   "bytes": 272100,
+   "sha256": "9ca2b072d99f272c1872c24b7345a0004d391792860993f27628dafd94ddc17a"
+  },
+  {
+   "path": "Situ/outputs/s4/parts_2023.csv",
+   "bytes": 19920,
+   "sha256": "9769c5486289b19a1849a1a2c9e308522d1d6f9ccb4be27ca4a8661d0c3a6910"
+  },
+  {
    "path": "Situ/outputs/s4/places.csv",
    "bytes": 75858,
    "sha256": "94f998a646aaed405d39fb5dd5ec6dfc89515e03aa2e52ba66db3d5fa0b39fcd"
+  },
+  {
+   "path": "Situ/outputs/s4/roofs_2016.csv",
+   "bytes": 12128,
+   "sha256": "16d3463cb654c7ca0d0ea070221d773d5635149413a73b8d0af4bdb39bb91345"
+  },
+  {
+   "path": "Situ/outputs/s4/roofs_2016.geojson",
+   "bytes": 3951402,
+   "sha256": "af5d032878a774cb489f6fa55d6c5730b7ae4725a4d271e6ff3f3557082ab3c6"
+  },
+  {
+   "path": "Situ/outputs/s4/roofs_2016.json",
+   "bytes": 302,
+   "sha256": "e917ecf2e5f74c8c2dbf7831d813b3d23e75ec72356ae05ba0646d6a2817dac5"
   },
   {
    "path": "Situ/outputs/s4/s4_sheet_source.png",
@@ -178,8 +393,8 @@
   },
   {
    "path": "Situ/outputs/s4/test_report.txt",
-   "bytes": 2716,
-   "sha256": "142200e410cd0ad8d42a5caf677a8270c8ddbb18e94221b9fff156e7bb5a6920"
+   "bytes": 3925,
+   "sha256": "d96c283bb87ec3ff434eec416893f8d135975b23d687baee212a28cadda1d7a8"
   },
   {
    "path": "Situ/outputs/s4/trace.csv",
@@ -193,15 +408,20 @@
   },
   {
    "path": "Situ/outputs/s4/web_data.js",
-   "bytes": 384953,
-   "sha256": "cee29c5e43c6fe7d3fba2a491f074b03779973210246501031c8fe2d59a28752"
+   "bytes": 498413,
+   "sha256": "f6f33a0a314e8ba3ffda41d526e0b430a44f89169e502819782eda83a83181e0"
+  },
+  {
+   "path": "Situ/outputs/s4/zones_2023.geojson",
+   "bytes": 79751,
+   "sha256": "4693dc9bbd0319ff8d944d8da3a18b47d9adf2d741464f364add2bdad0a1a297"
   }
  ],
  "tests": {
   "report": "Situ/outputs/s4/test_report.txt",
-  "made": "2026-10-16T20:19:15Z",
-  "checks": 10,
-  "pass": 9,
+  "made": "2026-10-29T19:51:46Z",
+  "checks": 15,
+  "pass": 14,
   "fail": 0,
   "info": 1
  }

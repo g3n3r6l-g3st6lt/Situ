@@ -1,0 +1,19 @@
+{
+ "offset_m": [
+  0.0,
+  -0.5
+ ],
+ "median_edge_distance_m": 0.824,
+ "median_edge_distance_at_zero_m": 0.853,
+ "parts_matched": 197,
+ "parts_near": 286,
+ "parts_read": 3336,
+ "outlines_with_parts": 151,
+ "roof_faces": 13092,
+ "roof_form": {
+  "flat": 115,
+  "pitched": 6,
+  "mixed": 30,
+  "": 145
+ }
+}

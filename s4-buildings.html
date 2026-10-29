@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-732e4e15f095b381d8e57b6141c91f9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -531,8 +531,8 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="glance">
 <p><strong>Asks</strong> What each building is used for, how tall it is, how many people live in it, and where a walker reaches it.</p>
-<p><strong>Found</strong> 296 buildings. The tax roll or OpenStreetMap gives the use of 262, and 34 stay unknown. Together they hold 11,954 dwellings.</p>
-<p><strong>Stands</strong> verified: 9 tests pass. The dwellings come within about 1 % of a provincial land-use file, checked in aggregate.</p>
+<p><strong>Found</strong> 296 buildings. The tax roll or OpenStreetMap gives the use of 262, and 34 stay unknown. Together they hold 11,954 dwellings. 284 have a measured height, from the 2015, 2016 or 2023 models.</p>
+<p><strong>Stands</strong> verified: 14 tests pass. The dwellings come within about 1 % of a provincial land-use file, checked in aggregate.</p>
 <p><strong>Leaves out</strong> 61 cases still to check by hand, most of them buildings no source describes.</p>
 <p><strong>In the game</strong> World: building masses with a height and a door (<a href="./g1-world.html">G1 World</a>, verified). Points: places to go (<a href="./play.html#points">planned</a>).</p>
 <p><strong>Trace</strong> <a href="./s4-build.html">How it is built</a> · <a href="outputs/s4/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a> · feeds <a href="./s5-rhythm.html">S5</a>, <a href="./s7-commuters.html">S7</a> and <a href="./s9-observer.html">S9</a></p>
@@ -551,7 +551,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-it-found" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-found">What it found</h2>
 <p>There are 296 buildings in the study area. The tax roll gave the use of 188, and OpenStreetMap of 74. The other 34 stay unknown, mostly small sheds and annexes. Most buildings with a known use are residential. Together they hold 11,954 dwellings. The <a href="./s4-build.html#stress-tests">stress tests</a> show this total is steadier than any single tower’s count.</p>
-<p>In the <a href="./lab.html#w201008914">Lab</a>, the S4 tab colours the buildings by use or by source. Click one to see each value with its source. You also see the places inside it and its street.</p>
+<p>Four sources give a height: OpenStreetMap for 27 buildings, the city’s 2015 surface model for 232, its 2016 3D buildings for 139 and Québec’s 2023 lidar for 279. Two heights agree when they lie within one storey. Where two sources give a height, 510 pairs agree and 39 do not, on 26 buildings. 51 buildings have a 2023 height and no 2015 one. <a href="./s4-build.html#heights-by-source">Heights, by source</a> gives the counts, and the Open Database of Buildings check.</p>
+<p>In the <a href="./lab.html#w201008914">Lab</a>, the S4 tab colours the buildings by use, by source or by height source. Click one to see each value with its source. You also see the places inside it and its street.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Use</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Source</a></li></ul>
 <div class="tab-content">

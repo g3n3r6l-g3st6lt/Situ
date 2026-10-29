@@ -1,0 +1,19 @@
+{
+ "offset_m": [
+  0.0,
+  0.0
+ ],
+ "offset_score": 0.9527,
+ "score_at_zero": 0.9527,
+ "buildings_for_offset": 121,
+ "triangles": 309733,
+ "grid": [
+  1602,
+  1382
+ ],
+ "present_2015": {
+  "yes": 232,
+  "no": 61,
+  "unclear": 3
+ }
+}

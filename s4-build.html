@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-732e4e15f095b381d8e57b6141c91f9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -498,6 +498,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ground-floor-and-places" id="toc-ground-floor-and-places" class="nav-link" data-scroll-target="#ground-floor-and-places">Ground floor and places</a></li>
   <li><a href="#the-access-link" id="toc-the-access-link" class="nav-link" data-scroll-target="#the-access-link">The access link</a></li>
   <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
+  <li><a href="#heights-by-source" id="toc-heights-by-source" class="nav-link" data-scroll-target="#heights-by-source">Heights, by source</a></li>
   <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
   </ul>
 </nav>
@@ -551,9 +552,11 @@ ul.task-list li input[type="checkbox"] {
   L --&gt; U["USE&lt;br/&gt;roll, then tag"]:::step
   L --&gt; H["SIZE&lt;br/&gt;storeys, dwellings"]:::step
   L --&gt; G["GROUND FLOOR&lt;br/&gt;premises, places"]:::step
+  M[/"2015 surface and terrain · 2016 3D buildings&lt;br/&gt;2023 lidar and terrain · Open Database of Buildings"/]:::data --&gt; E["HEIGHTS, BY SOURCE&lt;br/&gt;set side by side, none chosen"]:::step
+  O --&gt; E
   S1[/"S1 walkable streets"/]:::data --&gt; X["ACCESS&lt;br/&gt;an assumption"]:::step
   O --&gt; X
-  U &amp; H &amp; G &amp; X --&gt; OUT[/"buildings, places,&lt;br/&gt;unplaced rows, checkpoints"/]:::out
+  U &amp; H &amp; G &amp; X &amp; E --&gt; OUT[/"buildings, places, unplaced rows,&lt;br/&gt;checkpoints, evidence"/]:::out
   OUT --&gt; T["tests and maps"]:::test
 
   classDef data fill:none,stroke:#8a8a8a,color:#e6e6e6
@@ -603,13 +606,29 @@ ul.task-list li input[type="checkbox"] {
 <td>public places and their opening hours</td>
 </tr>
 <tr class="even">
+<td>Ville de Montréal, 2015 surface model (<em>MNS</em>, 1 m) and terrain model (<em>MNT</em>) of Le Sud-Ouest</td>
+<td>a height measured inside each outline, and whether a building stood there in 2015</td>
+</tr>
+<tr class="odd">
+<td>Ville de Montréal, 3D buildings 2016 (<em>Bâtiments 3D</em>, LOD2) of Le Sud-Ouest</td>
+<td>a second measured height, and the roof faces and roof form</td>
+</tr>
+<tr class="even">
+<td>Gouvernement du Québec, <em>Données lidar du Québec</em>: 2023 classified points (2023_CMM_LiDAR, 15 points/m², 2023-11-21) and 1 m bare ground (2023_CMM_MNT)</td>
+<td>a third measured height, and whether a building stood there in 2023</td>
+</tr>
+<tr class="odd">
+<td>Statistics Canada, Open Database of Buildings v3 (Québec)</td>
+<td>building footprints, set against the outlines</td>
+</tr>
+<tr class="even">
 <td>Situ S1</td>
 <td>the streets people can walk on</td>
 </tr>
 </tbody>
 </table>
-<p>The city’s files are open under CC BY 4.0, and OpenStreetMap under ODbL.</p>
-<p>The Concordia NGCI building file gives a height and a use for every building in Montréal. It carries no licence, though, so S4 does not use it. I publish nothing made from it until a licence is granted. It also records a condo tower such as 2199 rue Ann, 76 m tall, as one dwelling. Québec City’s building file does not cover Montréal. The city’s 3D model of 2020 (<em>Bâtiments 3D 2020</em>) measures roofs. It leaves out Le Sud-Ouest, Griffintown’s borough, and holds only three small structures by Rue Notre-Dame, at the edge of the study area (verified). The city’s 2016 model of Le Sud-Ouest predates most towers here, and I have not used it yet.</p>
+<p>The city’s and Québec’s files are open under CC BY 4.0, OpenStreetMap under ODbL, and the Open Database of Buildings under the Open Government Licence (Canada).</p>
+<p>The Concordia NGCI building file gives a height and a use for every building in Montréal. It carries no licence, though, so S4 does not use it. I publish nothing made from it until a licence is granted. It also records a condo tower such as 2199 rue Ann, 76 m tall, as one dwelling. Québec City’s building file does not cover Montréal. The city’s 3D model of 2020 (<em>Bâtiments 3D 2020</em>) measures roofs. It leaves out Le Sud-Ouest, Griffintown’s borough, and holds only three small structures by Rue Notre-Dame, at the edge of the study area (verified). The city’s 2016 model of Le Sud-Ouest predates most towers here. S4 now measures heights from it and from the 2015 surface model (<a href="#heights-by-source">heights, by source</a>).</p>
 </section>
 <section id="the-outlines" class="level2">
 <h2 class="anchored" data-anchor-id="the-outlines">The outlines</h2>
@@ -686,6 +705,185 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
+<section id="heights-by-source" class="level2">
+<h2 class="anchored" data-anchor-id="heights-by-source">Heights, by source</h2>
+<p>Four sources give a height. S4 sets them side by side in <code>evidence.csv</code> and chooses none of them. <a href="./g1-world.html#ledger">G1 World</a> decides which height a game uses.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>How the height is read</th>
+<th>Buildings with a height</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OpenStreetMap</td>
+<td>the height tag of the outline, or of its tallest part</td>
+<td>27</td>
+</tr>
+<tr class="even">
+<td>2015 surface and terrain models</td>
+<td>the 90th percentile of the surface above the ground inside the outline, 1 m in from its edge (<a href="./g1-world.html#ledger">W16</a>), where the median stands at least 2.5 m (<a href="./g1-world.html#ledger">W15</a>)</td>
+<td>232</td>
+</tr>
+<tr class="odd">
+<td>2016 3D buildings</td>
+<td>the roof top of the parts whose ground lies at least half in the outline, minus the 2015 ground, where the parts’ ground area is at least half the outline’s</td>
+<td>139</td>
+</tr>
+<tr class="even">
+<td>2023 lidar and bare ground</td>
+<td>the same rule as 2015: on a 1 m grid, the highest ground or building point in each cell, minus the 2023 bare ground</td>
+<td>279</td>
+</tr>
+</tbody>
+</table>
+<p>284 buildings have at least one measured height, and 10 have no height from any source. 51 buildings have a 2023 height and no 2015 one. Two heights agree when they lie within one storey (my choice, 2026-10-29). One storey is measured: the median of the 2023 height divided by the storeys is 3.55 m, over the 210 buildings that have both, stood in 2023 and have no roll year from 2023 on (half of them between 3.15 and 4.27 m). Rounded, 3.5 m. <a href="./g1-world.html#ledger">G1 World</a> uses the same storey, by use, where only storeys are known (W05).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pair</th>
+<th>Agree</th>
+<th>Disagree</th>
+<th>Only one gives a height</th>
+<th>Neither</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OpenStreetMap and 2015</td>
+<td>14</td>
+<td>3</td>
+<td>225</td>
+<td>54</td>
+</tr>
+<tr class="even">
+<td>2016 and 2015</td>
+<td>134</td>
+<td>1</td>
+<td>101</td>
+<td>60</td>
+</tr>
+<tr class="odd">
+<td>OpenStreetMap and 2016</td>
+<td>5</td>
+<td>4</td>
+<td>148</td>
+<td>139</td>
+</tr>
+<tr class="even">
+<td>2023 and 2015</td>
+<td>213</td>
+<td>15</td>
+<td>55</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>2023 and 2016</td>
+<td>124</td>
+<td>11</td>
+<td>148</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>OpenStreetMap and 2023</td>
+<td>20</td>
+<td>5</td>
+<td>256</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>26 buildings have at least one pair that disagrees. In the <a href="./lab.html">Lab</a>, the S4 tab colours buildings by “height, by source”, and each building lists its three heights.</p>
+<p>The Open Database of Buildings gives footprints here and no heights. 156 of its footprints lie in the study area. Its footprints cover at least half of 256 of the 296 outlines; 40 outlines are covered less. 31 of its footprints have almost no outline on them (under 10 % covered). On 11 of these the 2015 surface shows a building standing, on 17 none, and 3 are unclear. In 2023 the lidar shows a building on 8, none on 19, and 4 are unclear.</p>
+<section id="parts" class="level3">
+<h3 class="anchored" data-anchor-id="parts">Parts</h3>
+<p>One outline can hold a podium and a tower. S4 keeps the outline of each part it joins to a building: 95 parts mapped in OpenStreetMap (on 23 buildings) and the ground of 197 parts in the 2016 model (on 151). A 2016 part joins the outline its ground overlaps most, when at least half of it lies there; until 2026-10-29 it joined the outline holding the centre of its ground, and 11 parts reached mostly past their outline. Matched by overlap, the 2016 and 2015 heights of buildings built before 2015 agree more closely (95 % within 0.96 m, against 1.58 m). Where an outline holds levels more than one storey apart and no part is mapped, S4 also cuts height zones from the lidar (<code>zones_2023.geojson</code>): 63 outlines, 80 zones above their base. The 2023 lidar reads each part by the same rule as a whole outline, and for each outline with OpenStreetMap parts it also reads the rest, the outline minus its parts (<code>parts_2023.csv</code>). <a href="./g1-world.html#heights">G1 World</a> uses these readings to stand towers on their podiums.</p>
+</section>
+<section id="two-measurements-of-one-building" class="level3">
+<h3 class="anchored" data-anchor-id="two-measurements-of-one-building">Two measurements of one building</h3>
+<p>133 buildings have a year built before 2015 in the tax roll. On these, two measurements differ by:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pair</th>
+<th>Buildings</th>
+<th>Half within</th>
+<th>95 % within</th>
+<th>Largest</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023 and 2015</td>
+<td>129</td>
+<td>0.18 m</td>
+<td>1.65 m</td>
+<td>3.96 m</td>
+</tr>
+<tr class="even">
+<td>2016 and 2015</td>
+<td>105</td>
+<td>0.19 m</td>
+<td>0.96 m</td>
+<td>3.96 m</td>
+</tr>
+<tr class="odd">
+<td>2023 and 2016</td>
+<td>104</td>
+<td>0.24 m</td>
+<td>2.30 m</td>
+<td>3.94 m</td>
+</tr>
+</tbody>
+</table>
+<p>Pairs that disagree, at each tolerance, on the same buildings:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pair</th>
+<th>0.5 m</th>
+<th>1 m</th>
+<th>1.5 m</th>
+<th>2 m</th>
+<th>3 m</th>
+<th>5 m</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023 and 2015</td>
+<td>31</td>
+<td>14</td>
+<td>8</td>
+<td>5</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>2016 and 2015</td>
+<td>15</td>
+<td>5</td>
+<td>4</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>2023 and 2016</td>
+<td>28</td>
+<td>16</td>
+<td>11</td>
+<td>8</td>
+<td>4</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The 2016 roofs are given as accurate to ±30 to 40 cm (<a href="https://www.donneesquebec.ca/recherche/dataset/vmtl-batiment-3d-2016-maquette-citygml-lod2-avec-textures2">Données Québec</a>). The pages for the 2015 surface model and the 2023 lidar give no accuracy figure. They are listed in <code>odb_alone.csv</code> and shown in the Lab.</p>
+</section>
+</section>
 <section id="tests" class="level2">
 <h2 class="anchored" data-anchor-id="tests">Tests</h2>
 <section id="the-checks" class="level3">
@@ -738,6 +936,26 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>Does every property sit where its lot or address point puts it, with a checkpoint when the two disagree?</td>
 <td>Yes</td>
+</tr>
+<tr class="even">
+<td>Is each source’s height the one its file gives, and does each verdict follow from them within one storey (3.5 m)?</td>
+<td>Yes, six pairs per building</td>
+</tr>
+<tr class="odd">
+<td>Does every footprint listed as only in the Open Database of Buildings have no outline on it, and do its 2015 and 2023 readings follow the 2.5 m threshold?</td>
+<td>Yes: 31 footprints</td>
+</tr>
+<tr class="even">
+<td>Do the 2023 points meet their ground model, and do they read buildings built before 2015 as 2015 does?</td>
+<td>Yes: 0.04 m on open ground; 0.12 m median difference on 129 buildings</td>
+</tr>
+<tr class="odd">
+<td>Does every OpenStreetMap part and every 2016 part have its 2023 reading, and does each OpenStreetMap part lie in its building?</td>
+<td>Yes: 95 OpenStreetMap parts, 197 2016 parts, none of them mostly outside its outline</td>
+</tr>
+<tr class="even">
+<td>Does every outline with lidar zones have one base, with its zones inside it?</td>
+<td>Yes: 63 outlines, 80 zones</td>
 </tr>
 </tbody>
 </table>

@@ -1,7 +1,7 @@
 {
  "format": "situ-g1",
- "format_version": "0.7",
- "made": "2026-10-23",
+ "format_version": "0.9",
+ "made": "2026-10-29",
  "crs": "EPSG:32188",
  "origin": [
   299180,
@@ -11,20 +11,21 @@
  "terrain": "terrain_2015.png",
  "axes": "x east, y north, z up",
  "units": "metres",
- "storey_height_m": 3.745,
- "storey_height_from": 157,
+ "storey_height_m": 3.5494,
+ "storey_height_from": 210,
  "storey_height_by_use": {
-  "commerce": 4.32,
-  "industry": 4.2025,
-  "residential": 3.4492,
-  "services": 4.11
+  "commerce": 4.2717,
+  "industry": 4.2317,
+  "residential": 3.3933,
+  "services": 3.9
  },
  "height_source": {
-  "none": 14,
-  "storeys": 48,
-  "surface model 2015": 215,
-  "OpenStreetMap": 13,
-  "3D buildings 2016": 6
+  "lidar 2023": 277,
+  "surface model 2015": 4,
+  "none": 6,
+  "OpenStreetMap": 2,
+  "storeys": 6,
+  "3D buildings 2016": 1
  },
  "greybox": {
   "ground": "flat",
@@ -37,9 +38,9 @@
   "junctions": 191,
   "blocks": 296,
   "height_rule": {
-   "unknown": 14,
-   "assumption": 48,
-   "measured": 234
+   "measured": 284,
+   "unknown": 6,
+   "assumption": 6
   },
   "public_use": {
    "public use, hours unknown": 123,
@@ -75,13 +76,12 @@
    "green": 231
   },
   "checkpoints": {
-   "height unknown": 14,
-   "2015 and 2016 disagree": 4,
+   "several heights in one outline": 12,
    "ground drops under outline": 10,
    "street through building": 1,
-   "empty in 2015": 3,
+   "height unknown": 6,
+   "empty in 2023": 3,
    "no door": 1,
-   "heights disagree": 1,
    "not seen lately": 34,
    "count unsure": 26
   }

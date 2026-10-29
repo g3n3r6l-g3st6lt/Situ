@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92e9ca085e84bd47ee4bc30051ad328c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-732e4e15f095b381d8e57b6141c91f9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -657,6 +657,21 @@ ul.task-list li input[type="checkbox"] {
 <td>One of the small areas the census reports on.</td>
 <td><a href="./s7-commuters.html">S7</a></td>
 </tr>
+<tr class="odd">
+<td>lidar</td>
+<td>A survey by laser from an aircraft: each return is a point with its height. Québec’s survey of 2023-11-21 gives most of Situ’s building heights.</td>
+<td><a href="./s4-build.html#heights-by-source">S4: heights, by source</a></td>
+</tr>
+<tr class="even">
+<td>surface model, terrain model</td>
+<td>A grid of heights: the surface model includes buildings, the terrain model is the bare ground. A building’s height is the one minus the other inside its outline.</td>
+<td><a href="./s4-build.html#heights-by-source">S4: heights, by source</a></td>
+</tr>
+<tr class="odd">
+<td>one storey</td>
+<td>The tolerance within which two heights of one building agree: 3.5 m, the median height per storey the 2023 lidar measures.</td>
+<td><a href="./s4-build.html#heights-by-source">S4: heights, by source</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -685,6 +700,16 @@ ul.task-list li input[type="checkbox"] {
 <td>local frame</td>
 <td>The coordinates G1 hands to a game: metres from one origin at the study area’s south-west corner.</td>
 <td><a href="./g1-world.html#the-frame">G1 World</a></td>
+</tr>
+<tr class="even">
+<td>base and parts</td>
+<td>How G1 draws an outline that holds a podium and a tower: the outline at a base height, and each measured part standing on it at its own height. The parts are mapped in OpenStreetMap, modelled in 2016, or, where neither exists, height zones cut from the 2023 lidar.</td>
+<td><a href="./g1-world.html#heights">G1 World</a></td>
+</tr>
+<tr class="odd">
+<td>discarded height</td>
+<td>A height another source gives a building that lies more than one storey from the newest measurement. G1 keeps the newest and says why it set the other aside; S4 keeps every value.</td>
+<td><a href="./g1-world.html#heights">G1 World</a></td>
 </tr>
 <tr class="even">
 <td>feature record</td>

@@ -1,0 +1,78 @@
+{
+ "offset_m": [
+  0.0,
+  -0.5
+ ],
+ "offset_score": 0.96,
+ "score_at_zero": 0.9585,
+ "buildings_for_offset": 121,
+ "grid": [
+  1601,
+  1380
+ ],
+ "first_cell_centre": [
+  299176.5,
+  5039792.5
+ ],
+ "cells_with_surface_points": 2120019,
+ "ground_check": {
+  "open_cells_within_1m": 1410184,
+  "median_surface_minus_ground_m": 0.044,
+  "p05_m": 0.012,
+  "p95_m": 0.157
+ },
+ "tiles": [
+  {
+   "tile": "23_2995038F08_DC.laz",
+   "points_by_class": {
+    "1": 5702977,
+    "2": 11559063,
+    "6": 6158835,
+    "17": 16795,
+    "7": 31450
+   }
+  },
+  {
+   "tile": "23_2995039F08_DC.laz",
+   "points_by_class": {
+    "1": 5855325,
+    "2": 10067780,
+    "6": 7568913,
+    "17": 90677,
+    "7": 132406
+   }
+  },
+  {
+   "tile": "23_3005038F08_DC.laz",
+   "points_by_class": {
+    "1": 4155236,
+    "2": 13232831,
+    "6": 4061745,
+    "17": 582492,
+    "7": 30122
+   }
+  },
+  {
+   "tile": "23_3005039F08_DC.laz",
+   "points_by_class": {
+    "1": 4468029,
+    "2": 10601063,
+    "6": 4847122,
+    "9": 355465,
+    "17": 619036,
+    "7": 74095
+   }
+  }
+ ],
+ "present_2023": {
+  "yes": 279,
+  "no": 14,
+  "unclear": 3
+ },
+ "parts_measured": {
+  "osm_part": 83,
+  "osm_outline": 1,
+  "rest": 10,
+  "model_2016": 189
+ }
+}
