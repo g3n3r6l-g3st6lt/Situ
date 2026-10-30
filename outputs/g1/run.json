@@ -1,10 +1,10 @@
 {
  "system": "g1",
- "made": "2026-10-29T23:14:44Z",
+ "made": "2026-10-29T23:45:08Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "2adc405e4a21530a2546a011a3861c14f611be90",
-  "differs_from_commit": false,
+  "git_commit": "29bd36bbf8ca174ed1c9af1df888757c2adce659",
+  "differs_from_commit": true,
   "files": [
    {
     "path": "Situ/g1_world/__init__.py",
@@ -12,11 +12,11 @@
    },
    {
     "path": "Situ/g1_world/areas.py",
-    "sha256": "14022fad4f231ec92d4de61c7fe44a69f4b714d49aad1a9e3832a56c8899a7ee"
+    "sha256": "d527a053703d1767a060078ff528571ffcfd3c167d15bb94c5c56a9b597e5c5d"
    },
    {
     "path": "Situ/g1_world/build.py",
-    "sha256": "2c3e74b01daf58870b0a0c5bc1eb5e45401c1e48f2c194853017db36bff2b856"
+    "sha256": "8878c44535f48be46a09ee84cf4f8b2d6d752fca3e2d0bbcaff29b17ccb049ce"
    },
    {
     "path": "Situ/g1_world/terrain.py",
@@ -36,7 +36,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "244eb65891771491350803bd212efba5353ecf040f581dd5b924acd83ddbb658"
+    "sha256": "4bf34e6ebb0ce197b620f584dbc2840933f6d835b917b216a6c9eacd99b91a6b"
    }
   ]
  },
@@ -73,15 +73,15 @@
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "a6ab889b6607d026d9f1e026570bcb5e31d4d152cb7f80f62aa322f75eba3d56"
+   "run_json_sha256": "e91ac3f60024ac06645efa1323a82dccaff994707e0bc1424e28c73c84f7ab69"
   },
   {
    "system": "s4",
-   "run_json_sha256": "6c3fd0b466ab7f1ee084893da701f119f60f578c6c51daa2ab31bd69d8bca910"
+   "run_json_sha256": "ce7c7272da3967822c934e87a428025f4322351d399a91fb3aca4b254c342899"
   },
   {
    "system": "s6",
-   "run_json_sha256": "eb559db1a7bc65c720428482310f84b72f5d75150645b2050c406a1757638597"
+   "run_json_sha256": "c8063b6384d1fd6fd5baeef7a5af3ddb6169429527ee61e4b4d11b1c0e6fb73f"
   }
  ],
  "settings": {
@@ -90,6 +90,7 @@
   "G1A_BIKE_TWO_WAY_M": 3.0,
   "G1A_MIN_M2": 1.0,
   "G1A_ORDER": [
+   "roadway",
    "green",
    "play",
    "plaza",
@@ -102,26 +103,29 @@
    "rooftop",
    "underground"
   ],
+  "G1A_ROAD_USE_BIKE": [
+   "Voie cyclable"
+  ],
   "G1A_RULES": [
    [
     "green",
     "leisure",
-    "{'dog_park', 'garden', 'park'}"
+    "{'park', 'garden', 'dog_park'}"
    ],
    [
     "green",
     "landuse",
-    "{'flowerbed', 'village_green', 'meadow', 'grass', 'recreation_ground', 'allotments'}"
+    "{'allotments', 'meadow', 'village_green', 'flowerbed', 'recreation_ground', 'grass'}"
    ],
    [
     "green",
     "natural",
-    "{'scrub', 'wood', 'grass'}"
+    "{'scrub', 'grass', 'wood'}"
    ],
    [
     "play",
     "leisure",
-    "{'pitch', 'fitness_station', 'playground', 'track'}"
+    "{'playground', 'pitch', 'track', 'fitness_station'}"
    ],
    [
     "plaza",
@@ -194,13 +198,13 @@
  "outputs": [
   {
    "path": "Situ/outputs/g1/areas.geojson",
-   "bytes": 336190,
-   "sha256": "88791fdd95afce2889a7c3d7f6e5e8003be07c11212a02c31570fbb220bd51a4"
+   "bytes": 441884,
+   "sha256": "9aeb6dc2c45e34ab570f9ce15cada5cda8a849a45b0ea83fe3d7861e8890b1b8"
   },
   {
    "path": "Situ/outputs/g1/areas.json",
-   "bytes": 2008,
-   "sha256": "0e93be5f1b340b3ac9422a626b69e498491dd26180faed47b7cbbd811946ca44"
+   "bytes": 2230,
+   "sha256": "fb0d3f3150553c79ed87d27e823a9ec3cf227b57e565ab25a11500da2a1235d3"
   },
   {
    "path": "Situ/outputs/g1/blocks.geojson",
@@ -329,13 +333,13 @@
   },
   {
    "path": "Situ/outputs/g1/flat_ground.geojson",
-   "bytes": 475368,
-   "sha256": "d82ebff6c4596e59526c3463f9ef764475584d3fe56c20e9ff7a406bd8675ee3"
+   "bytes": 587907,
+   "sha256": "154fda20eadaf5af3095eefa8bf6a785d737870813016b9fbcec4e7c2a6ea1e5"
   },
   {
    "path": "Situ/outputs/g1/frame.json",
-   "bytes": 1687,
-   "sha256": "e64cc9aef45658193a74d7e4856895076493a8bd501a7624f2984999d069bce1"
+   "bytes": 1707,
+   "sha256": "890e48fae35ef7d0483d8a94d4871d7d8d0f7afd70be1dd8d9495bd00d53cf8f"
   },
   {
    "path": "Situ/outputs/g1/g1_sheet_roofs.png",
@@ -359,8 +363,8 @@
   },
   {
    "path": "Situ/outputs/g1/ledger.csv",
-   "bytes": 13981,
-   "sha256": "cc91b7b59cd1e055e40b47b16aacb1c8e86f095cf1f8ac2dfb5b9169b90d8238"
+   "bytes": 14569,
+   "sha256": "f9837b0866b8051c7d23514944ac2e260f8c196664eba692c433e7626470ecdf"
   },
   {
    "path": "Situ/outputs/g1/props.csv",
@@ -389,18 +393,18 @@
   },
   {
    "path": "Situ/outputs/g1/test_report.txt",
-   "bytes": 2766,
-   "sha256": "dea210de9f661645547db9400bfe5b7e67fd31424c30a8adff1e7c5b805a18d4"
+   "bytes": 2767,
+   "sha256": "33994ed8014979a5b8a836d3fb855fa764cfa040e93039ee5d40f520ddd203c4"
   },
   {
    "path": "Situ/outputs/g1/web_data.js",
-   "bytes": 125246,
-   "sha256": "e6af7482cb9a74d32a781fabf1e7cea5e239ce23bf3df7d9f92f829a62abadca"
+   "bytes": 125247,
+   "sha256": "2780ab2962181e64aeadb7aa29193c3848bacc1b18b7b15a941d9a89aeee4d41"
   }
  ],
  "tests": {
   "report": "Situ/outputs/g1/test_report.txt",
-  "made": "2026-10-29T19:54:22Z",
+  "made": "2026-10-29T23:43:23Z",
   "checks": 12,
   "pass": 11,
   "fail": 0,

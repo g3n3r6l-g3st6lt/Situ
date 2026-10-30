@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-732e4e15f095b381d8e57b6141c91f9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2844da13b68a69455614ea0c9376337e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -520,7 +520,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page is the agreement between G1 World and an engine. A file that keeps it can be read by any engine, for Griffintown or any other city. It is a draft: version <strong>0.9</strong> (0.2 added the measured heights of G1b; 0.3 heights in the frame and the terrain grid; 0.4 roofs from the 2016 3D buildings; 0.5 the greybox block in the frame and areas.geojson; 0.6 areas painted into the ground, ground_kinds.png, and no top_m; 0.7 flat_ground.geojson in place of ground_kinds.png; 0.8 heights first from the 2023 lidar, height_2023_m, present_2023 and height_discarded, and a 2016 roof only where it fits the height; 0.9 massing: an outline split into its measured parts). Each file states its version, and the version changes whenever a field is added, renamed or changes meaning.</p>
+<p>This page is the agreement between G1 World and an engine. A file that keeps it can be read by any engine, for Griffintown or any other city. It is a draft: version <strong>0.10</strong> (0.2 added the measured heights of G1b; 0.3 heights in the frame and the terrain grid; 0.4 roofs from the 2016 3D buildings; 0.5 the greybox block in the frame and areas.geojson; 0.6 areas painted into the ground, ground_kinds.png, and no top_m; 0.7 flat_ground.geojson in place of ground_kinds.png; 0.8 heights first from the 2023 lidar, height_2023_m, present_2023 and height_discarded, and a 2016 roof only where it fits the height; 0.9 massing: an outline split into its measured parts; 0.10 the city’s road surfaces as the area kind <code>roadway</code>, and its cycle lanes as <code>bike</code>). Each file states its version, and the version changes whenever a field is added, renamed or changes meaning.</p>
 <section id="rules" class="level2">
 <h2 class="anchored" data-anchor-id="rules">Rules for every file</h2>
 <table class="caption-top table">
@@ -582,7 +582,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td><code>format_version</code></td>
 <td>text</td>
-<td><code>0.9</code></td>
+<td><code>0.10</code></td>
 </tr>
 <tr class="odd">
 <td><code>z_origin_m_above_sea</code>, <code>terrain</code></td>
@@ -945,7 +945,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="areas" class="level2">
 <h2 class="anchored" data-anchor-id="areas">areas.geojson: what the flat ground is</h2>
-<p>Polygons where the ground is neither street, sidewalk nor building, from OpenStreetMap (ODbL). Ledger W29 to W31.</p>
+<p>Polygons of the flat ground by kind: the city’s road surfaces (CC BY 4.0, W39), and from OpenStreetMap (ODbL) what is neither street, sidewalk nor building. Ledger W29 to W31 and W39.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -966,19 +966,19 @@ ul.task-list li input[type="checkbox"] {
 <td><code>id</code>, <code>source</code>, <code>kind</code></td>
 <td>yes</td>
 <td>text</td>
-<td><code>green</code>, <code>play</code>, <code>plaza</code>, <code>parking</code>, <code>bike</code> or <code>water</code></td>
+<td><code>roadway</code>, <code>green</code>, <code>play</code>, <code>plaza</code>, <code>parking</code>, <code>bike</code> or <code>water</code>; <code>source</code> names OpenStreetMap, the city’s road assets, or both</td>
 </tr>
 <tr class="even">
 <td><code>walkable</code></td>
 <td>yes</td>
-<td>true or false</td>
-<td>false for water</td>
+<td>true, false or null</td>
+<td>false for water; null for a roadway, where S1’s rules say who may use it</td>
 </tr>
 <tr class="odd">
 <td><code>area_m2</code>, <code>osm</code></td>
 <td>no</td>
 <td>number, text</td>
-<td>the piece’s area; the OpenStreetMap element it comes from</td>
+<td>the piece’s area; the OpenStreetMap elements or city surfaces (<code>city RW…</code>) it comes from</td>
 </tr>
 <tr class="even">
 <td><code>width_m</code>, <code>width_from</code></td>
@@ -1012,7 +1012,7 @@ ul.task-list li input[type="checkbox"] {
 <td><code>id</code>, <code>kind</code></td>
 <td>yes</td>
 <td>text</td>
-<td><code>G00001</code>…; <code>not classified</code>, <code>green</code>, <code>play</code>, <code>plaza</code>, <code>parking</code>, <code>bike</code> or <code>water</code></td>
+<td><code>G00001</code>…; <code>not classified</code>, <code>roadway</code>, <code>green</code>, <code>play</code>, <code>plaza</code>, <code>parking</code>, <code>bike</code> or <code>water</code></td>
 </tr>
 <tr class="even">
 <td><code>area_m2</code></td>

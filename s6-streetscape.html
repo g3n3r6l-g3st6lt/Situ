@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-732e4e15f095b381d8e57b6141c91f9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2844da13b68a69455614ea0c9376337e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -491,6 +491,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-s6-does" id="toc-what-s6-does" class="nav-link active" data-scroll-target="#what-s6-does">What S6 does</a></li>
   <li><a href="#what-it-found" id="toc-what-it-found" class="nav-link" data-scroll-target="#what-it-found">What it found</a></li>
   <li><a href="#read-by-a-machine" id="toc-read-by-a-machine" class="nav-link" data-scroll-target="#read-by-a-machine">Read by a machine</a></li>
+  <li><a href="#canopy-and-road-surfaces" id="toc-canopy-and-road-surfaces" class="nav-link" data-scroll-target="#canopy-and-road-surfaces">Canopy and road surfaces</a></li>
   <li><a href="#what-s6-leaves-out" id="toc-what-s6-leaves-out" class="nav-link" data-scroll-target="#what-s6-leaves-out">What S6 leaves out</a></li>
   <li><a href="#checkpoints" id="toc-checkpoints" class="nav-link" data-scroll-target="#checkpoints">Checkpoints</a></li>
   <li><a href="#in-the-lab" id="toc-in-the-lab" class="nav-link" data-scroll-target="#in-the-lab">In the Lab</a></li>
@@ -533,9 +534,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="glance">
 <p><strong>Asks</strong> What stands on the streets besides the buildings, each object with its source and its street.</p>
-<p><strong>Found</strong> 971 trees, 104 hydrants, 806 street lights and 487 sidewalk pieces. Most trees with a date were planted in 2013 or later.</p>
-<p><strong>Stands</strong> verified: 7 tests pass. Photo detections found 68 of the city’s 104 hydrants.</p>
-<p><strong>Leaves out</strong> Trees on private land, and what no photo shows.</p>
+<p><strong>Found</strong> 971 trees, 104 hydrants, 806 street lights, 487 sidewalk pieces and 276 road surfaces. Most trees with a date were planted in 2013 or later. The 2019 canopy covers 7.4 % of the area.</p>
+<p><strong>Stands</strong> verified: 8 tests pass. Photo detections found 68 of the city’s 104 hydrants.</p>
+<p><strong>Leaves out</strong> Trees on private land one by one (the canopy shows where crowns stand, not which trees), and what no photo shows.</p>
 <p><strong>In the game</strong> World: 2,783 props and the sidewalks (<a href="./g1-world.html">G1 World</a>, verified). Points: seats and tables (<a href="./play.html#points">planned</a>).</p>
 <p><strong>Trace</strong> <a href="./s6-build.html">How it is built</a> · <a href="outputs/s6/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a></p>
 </div>
@@ -595,9 +596,14 @@ ul.task-list li input[type="checkbox"] {
 <p>For benches and bicycle racks, the machine and the mappers agree too little for either to fill the other’s gaps. Bins are the same: Mapillary’s software finds 320 where OpenStreetMap has 38, and many are probably household bins set out on collection day (assumption). S6 keeps those detections out of its objects and reports the comparison in <a href="./s6-build.html#tests">its tests</a>.</p>
 </section>
 </section>
+<section id="canopy-and-road-surfaces" class="level2">
+<h2 class="anchored" data-anchor-id="canopy-and-road-surfaces">Canopy and road surfaces</h2>
+<p>The city’s canopy model of August 2019 (from aerial photos and lidar) covers 69,369 m² of the study area, 7.4 %. 616 of the 971 public trees stand under it. Of the 355 that do not, 235 were planted after 2019, later than the model. 467 of the canopy’s 804 pieces, 32,329 m² or 47 % of it, hold no public tree: crowns of trees the city’s inventory does not list, on private land or elsewhere.</p>
+<p>The city’s road assets (<em>Chaussée agrégée</em>, version of October 2026) give 276 road surfaces whose centre lies in the area: 191 for vehicles, 66 cycle lanes, 10 for parking, 7 pedestrian crossings and 2 others; 247 of asphalt; 4 viaducts, 1 bridge and 20 that pass under another structure. 85 % of the length of the streets inside the area that cars may use (S1) lies on one of them; the first streets with none run along the area’s north and east edges, where a surface whose centre lies outside the area is not kept. <a href="./g1-world.html#ledger">G1 World</a> draws them as the ground’s roadways and the city’s cycle lanes (W39). The Lab shows both in the S6 tab.</p>
+</section>
 <section id="what-s6-leaves-out" class="level2">
 <h2 class="anchored" data-anchor-id="what-s6-leaves-out">What S6 leaves out</h2>
-<p>The city’s tree inventory covers public trees only, so trees in courtyards and on private land are missing. The city’s canopy model and its aerial LiDAR, a laser scan from the air, date from 2015, before most of today’s towers and trees, so S6 does not use them. The city’s art data holds a single subsidized mural in the area and none of its own public art collection. The artworks OpenStreetMap records are already among the <a href="./s4-buildings.html">S4</a> places. The city publishes no file of its street lights, so S6 takes them from OpenStreetMap and from photos.</p>
+<p>The city’s tree inventory covers public trees only, so trees in courtyards and on private land are missing. The city’s canopy model of 2019 is used (below); it predates the trees planted since. The city’s art data holds a single subsidized mural in the area and none of its own public art collection. The artworks OpenStreetMap records are already among the <a href="./s4-buildings.html">S4</a> places. The city publishes no file of its street lights, so S6 takes them from OpenStreetMap and from photos.</p>
 </section>
 <section id="checkpoints" class="level2">
 <h2 class="anchored" data-anchor-id="checkpoints">Checkpoints</h2>

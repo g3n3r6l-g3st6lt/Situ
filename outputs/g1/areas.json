@@ -7,24 +7,27 @@
  "licence": "ODbL 1.0, (c) OpenStreetMap contributors",
  "pieces": {
   "water": 9,
-  "bike": 40,
+  "bike": 52,
   "parking": 94,
   "plaza": 56,
   "play": 36,
-  "green": 231
+  "green": 231,
+  "roadway": 166
  },
  "area_m2": {
-  "green": 392387,
+  "roadway": 111859,
+  "green": 392389,
   "play": 9248,
   "plaza": 29146,
   "parking": 144997,
-  "bike": 37543,
+  "bike": 39725,
   "water": 178464
  },
  "bike_width_from": {
   "Montreal 2011, two-way path": 108,
   "OpenStreetMap width": 86,
-  "median of mapped one-way widths": 109
+  "median of mapped one-way widths": 109,
+  "OpenStreetMap bands dropped: the city's cycle lane covers them": 30
  },
  "bike_one_way_median_m": 2.1,
  "bike_one_way_mapped": 59,
@@ -38,49 +41,53 @@
  },
  "shaping": {
   "water: overlap removed by merging, m2": 76620,
-  "holes opened": 87,
-  "extra pieces from opening holes": 101,
+  "holes opened": 88,
+  "extra pieces from opening holes": 99,
   "corners removed (repeats, spikes)": 0,
-  "bike: overlap removed by merging, m2": 260,
-  "dropped: invalid or under the minimum after cleaning": 2,
+  "bike: overlap removed by merging, m2": 925,
   "parking: overlap removed by merging, m2": 0,
   "plaza: overlap removed by merging, m2": 5319,
   "play: overlap removed by merging, m2": 2,
-  "green: overlap removed by merging, m2": 73606
+  "green: overlap removed by merging, m2": 73606,
+  "dropped: invalid or under the minimum after cleaning": 2,
+  "roadway: overlap removed by merging, m2": 0
  },
  "flat_ground": {
   "extent": "study area + 50 m",
   "extent_m2": 1177670,
   "buildings_and_raised_m2": 374528,
   "pieces": {
-   "not classified": 412,
+   "not classified": 775,
+   "roadway": 170,
    "green": 108,
    "play": 18,
    "plaza": 25,
    "parking": 30,
-   "bike": 57,
+   "bike": 72,
    "water": 9
   },
   "area_m2": {
-   "not classified": 430207,
-   "green": 189015,
+   "not classified": 315995,
+   "roadway": 111749,
+   "green": 189016,
    "play": 2749,
    "plaza": 8512,
    "parking": 30802,
-   "bike": 17020,
+   "bike": 19480,
    "water": 124837
   },
   "region_m2": {
    "water": 124837,
-   "bike": 17020,
+   "bike": 19480,
    "parking": 30802,
    "plaza": 8512,
    "play": 2749,
-   "green": 189015,
-   "not classified": 430207
+   "green": 189016,
+   "roadway": 111749,
+   "not classified": 315996
   },
-  "corners_added_to_neighbour_edges": 324,
-  "pinched_split": 6,
-  "slivers_dropped": 45
+  "corners_added_to_neighbour_edges": 383,
+  "pinched_split": 7,
+  "slivers_dropped": 166
  }
 }

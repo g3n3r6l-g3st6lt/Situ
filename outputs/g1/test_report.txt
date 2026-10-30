@@ -26,11 +26,11 @@ T7  Does every prop take its class from the table, and every element name its so
     PASS
 
 T8  Does the ledger cover every layer, with every row of a known kind?
-    38 rows
+    39 rows
     PASS
 
 T9  Do the files keep the published format: a version, numbers as numbers, missing as null?
-    situ-g1 0.9
+    situ-g1 0.10
     PASS
 
 T10 Does every height in the frame match the terrain, with no outline corner below its building's base?

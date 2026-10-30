@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-732e4e15f095b381d8e57b6141c91f9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2844da13b68a69455614ea0c9376337e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -544,7 +544,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="glance">
 <p><strong>Asks</strong> What can a game stand on and move among, taken from the systems with nothing made up?</p>
 <p><strong>Found</strong> The streets and 296 building masses in one frame, with 2,783 props. 284 heights are measured, most from Québec’s 2023 lidar, and 131 roofs come from the city’s 2016 3D buildings. 6 buildings have no height in any source, and stay without one.</p>
-<p><strong>Stands</strong> verified: 11 tests pass. 38 decisions in the ledger, 5 of them assumptions.</p>
+<p><strong>Stands</strong> verified: 11 tests pass. 39 decisions in the ledger, 5 of them assumptions.</p>
 <p><strong>Leaves out</strong> Facades, interiors and most entrances, and the roofs of 165 buildings: 145 the 2016 model does not include, and 20 whose 2016 roof no longer fits their height. A game that shows them invents them.</p>
 <p><strong>In the game</strong> World: the ground and the masses (<a href="./play.html#world">From systems to a game</a>).</p>
 <p><strong>Trace</strong> <a href="outputs/g1/ledger.csv">ledger</a> · <a href="outputs/g1/run.json">run record</a> · uses <a href="./s1-streets.html">S1</a>, <a href="./s4-buildings.html">S4</a> and <a href="./s6-streetscape.html">S6</a></p>
@@ -601,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><a href="outputs/g1/flat_ground.geojson">flat_ground.geojson</a></td>
-<td>the flat ground in 659 pieces by kind, none overlapping</td>
+<td>the flat ground in 1,207 pieces by kind, none overlapping</td>
 <td>W30</td>
 </tr>
 <tr class="odd">
@@ -621,7 +621,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><a href="outputs/g1/ledger.csv">ledger.csv</a></td>
-<td>the 38 decisions below</td>
+<td>the 39 decisions below</td>
 <td>G1</td>
 </tr>
 <tr class="odd">
@@ -1024,19 +1024,19 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>W29</td>
 <td>researcher decision</td>
-<td>where the flat ground is not street, sidewalk or building, it takes the OpenStreetMap kind: green 352, play 40, plaza 59, parking 100, bike 311, water 17 pieces; later kinds cover earlier ones, buildings cut them; each is one outer ring (holes opened by cuts, spikes removed); lines with no area are left out</td>
+<td>where the flat ground is not street, sidewalk or building, it takes the OpenStreetMap kind, or the city’s road assets for roadways (W39): roadway 166, green 231, play 36, plaza 56, parking 94, bike 52, water 9 pieces; later kinds cover earlier ones, buildings cut them; each is one outer ring (holes opened by cuts, spikes removed); lines with no area are left out</td>
 <td>the city’s park and land-use layers; a visit</td>
 </tr>
 <tr class="even">
 <td>W30</td>
 <td>researcher decision</td>
-<td>the flat ground (study area + 50 m) is cut into 659 pieces, each one kind, none overlapping, exact outlines, meeting corner to corner; engines draw them at z 0 with one shared grid (two earlier ways failed: sheets overlapped, the 1 m grid stepped)</td>
+<td>the flat ground (study area + 50 m) is cut into 1,207 pieces, each one kind, none overlapping, exact outlines, meeting corner to corner; engines draw them at z 0 with one shared grid (two earlier ways failed: sheets overlapped, the 1 m grid stepped)</td>
 <td>the 2015 terrain with areas draped on it, once heights return</td>
 </tr>
 <tr class="odd">
 <td>W31</td>
 <td>assumption</td>
-<td>bicycle paths lie at street level as bands: OSM width where mapped, else the median mapped one-way width (2.1 m), else 3.0 m for two-way paths (Ville de Montréal 2011); four city paths typed at sidewalk level stay at street level</td>
+<td>bicycle paths lie at street level as bands where the city’s road surfaces have no cycle lane (W39): OSM width where mapped, else the median mapped one-way width (2.1 m), else 3.0 m for two-way paths (Ville de Montréal 2011); four city paths typed at sidewalk level stay at street level</td>
 <td>a visit or street photos per path</td>
 </tr>
 <tr class="even">
@@ -1070,12 +1070,18 @@ ul.task-list li input[type="checkbox"] {
 <td>height zones cut from the lidar itself</td>
 </tr>
 <tr class="odd">
+<td>W39</td>
+<td>source observation</td>
+<td>the city’s road surfaces (S6) lie at street level: each becomes the flat-ground kind roadway, or bike where the city marks a cycle lane; viaducts and bridges are left out; an OpenStreetMap cycle band is dropped where a city cycle lane covers half of it (30 bands); on a roadway, S1’s rules say who may walk (166 areas)</td>
+<td>OpenStreetMap’s road areas</td>
+</tr>
+<tr class="even">
 <td>W37</td>
 <td>researcher decision</td>
 <td>where no parts or zones split an outline and a quarter of it stands more than one storey below the height drawn, it stays one mass and a checkpoint asks what it holds (12)</td>
 <td>a survey of the walls</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>W38</td>
 <td>researcher decision</td>
 <td>where no mapped part splits an outline, the 2023 lidar’s own height zones do: levels more than one storey apart, each holding at least 10 % of the outline, cut into connected areas outlined by their 1 m cells and smoothed by 1 m (Mo, 2026-10-29) (40 buildings, 44 zones)</td>
@@ -1166,7 +1172,7 @@ flowchart TB
 <tr class="even">
 <td>6</td>
 <td>tree crowns from the 2019 canopy layer</td>
-<td>canopy (to download)</td>
+<td>canopy (downloaded 2026-10-29, in S6; the canopy does not say which tree a crown belongs to, so no crown is drawn yet)</td>
 <td>each tree prop has a crown, or says it has none</td>
 </tr>
 <tr class="odd">
@@ -1199,7 +1205,7 @@ flowchart TB
 </tr>
 <tr class="odd">
 <td>canopy 2019 (Ville de Montréal)</td>
-<td>found, not downloaded</td>
+<td>downloaded 2026-10-29; CC BY 4.0; in S6</td>
 </tr>
 <tr class="even">
 <td>street photos (Mapillary)</td>

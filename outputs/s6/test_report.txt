@@ -1,5 +1,5 @@
-T1  Is every tree, hydrant, piece of furniture, OpenStreetMap point, road work, sidewalk and island here exactly once?
-    2898 objects and 519 surfaces
+T1  Is every tree, hydrant, piece of furniture, OpenStreetMap point, road work, sidewalk, island and road surface here exactly once?
+    2898 objects and 795 surfaces
     PASS
 
 T2  Does every object, and the centre of every surface, lie inside the study area?
@@ -43,5 +43,9 @@ T9  How often do Mapillary's detections stand within 5 m of an object a person r
     waste basket (OpenStreetMap): 18 of 320 detections stand near one; 20 of 38 recorded are detected; median gap 1.9 m
     bicycle parking (OpenStreetMap): 6 of 21 detections stand near one; 5 of 110 recorded are detected; median gap 1.5 m
     the city's hydrants are the only complete record here; photos cover some streets better than others
+
+T10 Do the canopy's area, its pieces and the trees under it rebuild from the canopy file?
+    69369 m2 in 804 pieces; 616 of 971 public trees under it
+    PASS
 
 ALL PASS

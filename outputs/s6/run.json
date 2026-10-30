@@ -1,10 +1,10 @@
 {
  "system": "s6",
- "made": "2026-10-29T23:15:07Z",
+ "made": "2026-10-29T23:45:29Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "2adc405e4a21530a2546a011a3861c14f611be90",
-  "differs_from_commit": false,
+  "git_commit": "29bd36bbf8ca174ed1c9af1df888757c2adce659",
+  "differs_from_commit": true,
   "files": [
    {
     "path": "Situ/s6_streetscape/__init__.py",
@@ -12,7 +12,7 @@
    },
    {
     "path": "Situ/s6_streetscape/build.py",
-    "sha256": "953443643d417648f1e693c0622540962c26d06d925e9bdd4faa205de1d9e5b0"
+    "sha256": "4efbcfa2ca089254155bb87b4b4a9707901a16bd06b196368ac3172a44bca734"
    },
    {
     "path": "Situ/s6_streetscape/stress.py",
@@ -20,7 +20,7 @@
    },
    {
     "path": "Situ/s6_streetscape/test.py",
-    "sha256": "7471830c8e60db216b1ad8bd2545081d11d480d645f83b58a2e210a067b8160b"
+    "sha256": "edfe73b7ea20f238d96e93a9cf43905a17cdef01f8b0ad3c0ca13d2ac7cc118a"
    },
    {
     "path": "Situ/s6_streetscape/visualize.py",
@@ -28,11 +28,11 @@
    },
    {
     "path": "Situ/s6_streetscape/web.py",
-    "sha256": "fbbad07d9fc1b676664f2e758d9fb19f87b34a6d41ae2121db2925f9d98d9a8e"
+    "sha256": "b11e085ce75e6946e8d510f59d0835e4a17962e6289fe0525c0f63e01d2bde58"
    },
    {
     "path": "Situ/config.py",
-    "sha256": "244eb65891771491350803bd212efba5353ecf040f581dd5b924acd83ddbb658"
+    "sha256": "4bf34e6ebb0ce197b620f584dbc2840933f6d835b917b216a6c9eacd99b91a6b"
    }
   ]
  },
@@ -66,6 +66,13 @@
    "sha256": "d5234bdaf7c3febe4609e036889ce5ac34c0b66a353974bb6c1e8139513d95b5"
   },
   {
+   "name": "ROADWAYS_CANOPY_FILE",
+   "path": "Situ/data/external/roadways_canopy_study_2026-10-29.json",
+   "bytes": 1203693,
+   "modified": "2026-10-29T23:37:03Z",
+   "sha256": "cde09758eb57761f12b5319672b210b022d7bdb0f94ba0b5bfd3d4a38dd5c5b0"
+  },
+  {
    "name": "STREETSCAPE_FILE",
    "path": "Situ/data/external/streetscape_study_2026-10-16.json",
    "bytes": 1820178,
@@ -76,7 +83,7 @@
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "e91ac3f60024ac06645efa1323a82dccaff994707e0bc1424e28c73c84f7ab69"
+   "run_json_sha256": "550b91a886739496e81f0beb0b1ec073566ac113229346124f547e4c6b7e300f"
   }
  ],
  "settings": {
@@ -113,14 +120,19 @@
  },
  "outputs": [
   {
+   "path": "Situ/outputs/s6/canopy_2019.geojson",
+   "bytes": 364560,
+   "sha256": "f0c21703e6238b23c858a981a05dfd8983dc5a84cc295d23387e17dc273d4950"
+  },
+  {
    "path": "Situ/outputs/s6/checkpoints.csv",
    "bytes": 8730,
    "sha256": "3a12af59cfc1da3b0b53f23fc9b00095c619cf13b82e8070a2262b6048010295"
   },
   {
    "path": "Situ/outputs/s6/meta.json",
-   "bytes": 2394,
-   "sha256": "28268df9db051c47fb21efefa88e8f09facba9912bd134f61ba4e503cac89973"
+   "bytes": 2764,
+   "sha256": "bbf5f2a5a2b7e96cd80625ebf16d63e6b660f92a962e1bfef1688cae72344891"
   },
   {
    "path": "Situ/outputs/s6/objects.csv",
@@ -149,30 +161,30 @@
   },
   {
    "path": "Situ/outputs/s6/surfaces.csv",
-   "bytes": 91477,
-   "sha256": "8b981d57d081649391ba27b58f30b336eb63b79c6aef7dc89b646197da202898"
+   "bytes": 136544,
+   "sha256": "8bfcace965ae2c3d9e642b7e8a3179ae8adb8c29270e5b22a6852a36fe0956ca"
   },
   {
    "path": "Situ/outputs/s6/surfaces.geojson",
-   "bytes": 322364,
-   "sha256": "82457eaca73dcbfd344219023670ddadb1b60a390cdc884c1d32a1dbe78bbdf1"
+   "bytes": 541098,
+   "sha256": "85bf5cf3c931850eaa61b73a24fdac4633072802edb4dfba4805e4d90dce57ca"
   },
   {
    "path": "Situ/outputs/s6/test_report.txt",
-   "bytes": 3193,
-   "sha256": "98ed9dd0cc55a53ea0a877eac76e39d0e527451eee7c1631b1d98819a5945cc9"
+   "bytes": 3368,
+   "sha256": "e1255c8f5d9a50242907a22d836e8686f4facd590baa5755b318b8410d4f2d12"
   },
   {
    "path": "Situ/outputs/s6/web_data.js",
-   "bytes": 1333726,
-   "sha256": "cb1360f5cc0f79e8f1d5583bb4bb74bc697c04e53257ae10b9a1ffb93e7d6315"
+   "bytes": 1828822,
+   "sha256": "5ae7660251e2b4cbcbbed5b4dc71658b7656eb008b32b50f51f40bdac8ec6983"
   }
  ],
  "tests": {
   "report": "Situ/outputs/s6/test_report.txt",
-  "made": "2026-10-16T23:57:41Z",
-  "checks": 9,
-  "pass": 7,
+  "made": "2026-10-29T23:41:59Z",
+  "checks": 10,
+  "pass": 8,
   "fail": 0,
   "info": 2
  }

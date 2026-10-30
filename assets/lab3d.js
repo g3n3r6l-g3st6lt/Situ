@@ -19,8 +19,9 @@ import { OrbitControls } from "./vendor/three/OrbitControls.js";
 
 const UNKNOWN_H = 0.6;          // metres: the plate that marks a building whose height no source gives
 const M_PER_PX = 2.2;           // a 2D stroke of 1 px becomes a band this many metres wide on the 3D ground
-const MIN_BAND_M = 3;           // and no band is narrower than this, so a coloured street stays readable from above
-const LIFT = 0.04;              // metres between one 2D layer and the next, so they never flicker
+const MIN_BAND_M = 3;
+const MARK_M_PER_PX = 0.6;      // a dot or ring of 1 px radius in 2D becomes 0.6 m in 3D: big enough to see, small beside a street           // and no band is narrower than this, so a coloured street stays readable from above
+const LIFT = 0.12;              // metres between one 2D layer and the next (with a logarithmic depth buffer, so they never flicker)
 
 function ready(fn) {
   if (window.SituLab) fn(window.SituLab);
@@ -59,7 +60,7 @@ class View3D {
     this.canvas.setAttribute("aria-label", "The map in 3D: drag to turn, right-drag or two fingers to move, scroll or pinch to zoom. "
       + "Click a building or a street for its details, as in 2D.");
     this.host.insertBefore(this.canvas, this.host.querySelector(".situ-map-controls"));
-    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true });
+    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, logarithmicDepthBuffer: true });
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(getComputedStyle(this.host).backgroundColor || "#050505");
@@ -68,6 +69,7 @@ class View3D {
     this.controls.maxPolarAngle = Math.PI * 0.47;
     this.controls.screenSpacePanning = false;
     this.controls.addEventListener("change", () => this.draw());
+    this.controls.addEventListener("start", () => this.map.untip());          // a moving view drops its tooltip
     this.scene.add(new THREE.HemisphereLight(0xffffff, 0x202020, 1.6));
     const sun = new THREE.DirectionalLight(0xffffff, 1.4);
     sun.position.set(-0.5, 1, 0.35);
@@ -134,8 +136,9 @@ class View3D {
     ground.rotation.x = -Math.PI / 2; ground.position.y = -0.05;
     this.world.add(ground);
     this.buildings();
-    const bands = new Map(), discs = new Map(), plates = new Map();
+    const bands = new Map(), discs = new Map(), plates = new Map(), rings = new Map();
     let level = 0;
+    const s6 = this.L.tab && this.L.tab() === "s6" && this.L.s6 ? this.L.s6() : null;
     for (const g of this.svg.children) {
       if (g.tagName !== "g") continue;
       level++;
@@ -155,11 +158,18 @@ class View3D {
           continue;
         }
         if (op < 0.05) continue;
+        if (s6 && (el.classList.contains("lab-d6") || el.classList.contains("lab-i6"))) continue;   // drawn as 3D models below
         if (tag === "circle" || tag === "rect" || tag === "use") {
+          const [x, z, r] = this.centre(el);
+          const rm = Math.max(r * this.map.k() * MARK_M_PER_PX, 0.8);   // screen pixels (whatever the 2D zoom) to metres
+          const fo = cs.fill === "none" ? 0 : (+cs.fillOpacity || 0) * (/rgba?\(0, 0, 0/.test(cs.fill) ? 0 : 1);
+          if (cs.stroke !== "none" && fo < 0.2) {          // a ring in 2D (a checkpoint, a pick): a ring in 3D
+            this.add(rings, cs.stroke, op * (+cs.strokeOpacity || 1), { x, y, z, r: rm });
+            continue;
+          }
           const fill = cs.fill !== "none" ? cs.fill : cs.stroke !== "none" ? cs.stroke : cs.color;
           if (!fill || fill === "none") continue;
-          const [x, z, r] = this.centre(el);
-          this.add(discs, fill, op * (+cs.fillOpacity || 1), { x, y, z, r: Math.max(r, 1.6) });
+          this.add(discs, fill, op * (+cs.fillOpacity || 1), { x, y, z, r: rm });
           continue;
         }
         const d = el.getAttribute("d") || "";
@@ -173,8 +183,8 @@ class View3D {
         if (pts.length < 2) continue;
         const closed = tag === "path" && /z\s*$/i.test(d.trim());
         if (closed && cs.fill !== "none" && (+cs.fillOpacity || 0) > 0.02) {
-          this.add(plates, cs.fill, op * (+cs.fillOpacity || 1), { pts, y });
-          if (el.classList.contains("lab-surf6")) this.targets.push(this.hitPlate(pts, y, el));
+          this.add(plates, cs.fill, op * (+cs.fillOpacity || 1), { rings: this.rings(el), y });
+          if (el.classList.contains("lab-surf6")) this.targets.push(this.hitPlate(this.rings(el)[0] || pts, y, el));
         }
         if (cs.stroke !== "none" && (+cs.strokeOpacity || 1) > 0.02) {
           const w = Math.max((parseFloat(cs.strokeWidth) || 1) * M_PER_PX, MIN_BAND_M);
@@ -187,6 +197,8 @@ class View3D {
     for (const [key, list] of plates) this.world.add(this.plateMesh(key, list));
     for (const [key, list] of bands) this.world.add(this.bandMesh(key, list));
     for (const [key, list] of discs) this.world.add(this.discMesh(key, list));
+    for (const [key, list] of rings) this.world.add(this.discMesh(key, list, true));
+    if (s6) this.streetscape(s6);
     this.labels();
     for (const t of this.targets) this.world.add(t);
     this.draw();
@@ -275,7 +287,7 @@ class View3D {
       k.fillStyle = cs.fill && cs.fill !== "none" ? cs.fill : "#ffffff"; k.fillText(str, 6, c.height / 2);
       const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
       const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, sizeAttenuation: false, depthTest: false, transparent: true }));
-      const h = 0.032;                                         // a share of the view's height, the same size at any distance
+      const h = 0.024;                                         // a share of the view's height, the same size at any distance
       sp.scale.set(h * c.width / c.height, h, 1);
       sp.center.set(t.getAttribute("text-anchor") === "middle" ? 0.5 : t.getAttribute("text-anchor") === "end" ? 1 : 0, 0.5);
       sp.position.set(+t.getAttribute("x"), 2, +t.getAttribute("y"));
@@ -284,18 +296,108 @@ class View3D {
     }
   }
 
-  plateMesh(key, list) {
-    const [css, op] = this.split(key), geos = [];
-    for (const it of list) {
-      const shape = new THREE.Shape(it.pts.map(([x, z]) => new THREE.Vector2(x, -z)));
-      const g = new THREE.ShapeGeometry(shape); g.rotateX(-Math.PI / 2); g.translate(0, it.y, 0);
-      geos.push(g);
-    }
-    return new THREE.Group().add(...geos.map(g => new THREE.Mesh(g, this.mat("flat", css, op))));
+  // ---------------------------------------------------------------- S6 in 3D: each object a small model of its icon
+  // The models are icons at a common size, standing where S6 puts each object. Their shapes and sizes are not measured:
+  // a tree's crown does not come from the canopy, a bench's direction follows its street. Trees keep their trunk class.
+  models() {
+    if (this._models) return this._models;
+    const css = n => (getComputedStyle(this.host).getPropertyValue(n) || "").trim() || "#cccccc";
+    const C = { tree: css("--c-tree"), young: css("--c-tree-young"), hydrant: css("--c-hydrant"), work: css("--c-work"),
+                light: css("--c-light"), camera: css("--c-camera"), crossing: css("--c-crossing"), furniture: css("--c-furniture"),
+                water: "#6ec6ff", pole: "#8a8a8a", trunk: "#6b4f3a" };
+    const at = (g, x, y, z, ry = 0) => { if (ry) g.rotateY(ry); g.translate(x, y, z); return g; };
+    const box = (w, h, d, x, y, z) => at(new THREE.BoxGeometry(w, h, d), x, y, z);
+    const cyl = (r1, r2, h, y, x = 0, z = 0) => at(new THREE.CylinderGeometry(r1, r2, h, 10), x, y, z);
+    const M = {
+      tree: [[cyl(0.12, 0.18, 2.6, 1.3), "trunk"], [at(new THREE.IcosahedronGeometry(2.2, 1), 0, 3.9, 0), "crown"]],
+      hydrant: [[cyl(0.14, 0.17, 0.7, 0.35), "hydrant"], [at(new THREE.SphereGeometry(0.15, 10, 6), 0, 0.75, 0), "hydrant"], [box(0.5, 0.1, 0.1, 0, 0.45, 0), "hydrant"]],
+      bench: [[box(1.8, 0.07, 0.45, 0, 0.45, 0), "furniture"], [box(1.8, 0.4, 0.06, 0, 0.72, -0.2), "furniture"],
+              [box(0.06, 0.45, 0.4, -0.8, 0.22, 0), "furniture"], [box(0.06, 0.45, 0.4, 0.8, 0.22, 0), "furniture"]],
+      "picnic table": [[box(1.8, 0.06, 0.8, 0, 0.75, 0), "furniture"], [box(1.8, 0.05, 0.3, 0, 0.45, 0.6), "furniture"],
+                       [box(1.8, 0.05, 0.3, 0, 0.45, -0.6), "furniture"], [box(0.08, 0.75, 0.08, 0, 0.37, 0), "furniture"]],
+      "waste basket": [[cyl(0.25, 0.22, 0.9, 0.45), "furniture"]],
+      "bicycle parking": [[at(new THREE.TorusGeometry(0.4, 0.03, 6, 14, Math.PI), 0, 0, 0.25), "furniture"],
+                          [at(new THREE.TorusGeometry(0.4, 0.03, 6, 14, Math.PI), 0, 0, -0.25), "furniture"]],
+      "drinking water": [[cyl(0.2, 0.25, 1.0, 0.5), "water"]],
+      fountain: [[cyl(1.2, 1.3, 0.5, 0.25), "water"], [cyl(0.15, 0.2, 1.4, 0.7), "water"]],
+      shelter: [[box(3, 0.08, 1.6, 0, 2.5, 0), "furniture"], [box(3, 2.4, 0.05, 0, 1.2, -0.78), "furniture"]],
+      "street light": [[cyl(0.07, 0.1, 8, 4), "pole"], [box(1.2, 0.06, 0.06, 0.6, 7.9, 0), "pole"], [box(0.5, 0.12, 0.25, 1.2, 7.84, 0), "light"]],
+      "surveillance camera": [[cyl(0.05, 0.06, 4, 2), "pole"], [box(0.35, 0.18, 0.18, 0.12, 4, 0), "camera"]],
+      crossing: [...Array(5).keys()].map(i => [box(0.5, 0.03, 3.0, (i - 2) * 1.0, 0.05, 0), "crossing"]),
+      "road work": [[at(new THREE.ConeGeometry(0.3, 0.9, 12), 0, 0.45, 0), "work"], [box(0.6, 0.04, 0.6, 0, 0.02, 0), "work"]],
+      other: [[box(0.5, 0.5, 0.5, 0, 0.25, 0), "furniture"]],
+    };
+    this._models = { M, C };
+    return this._models;
   }
-  discMesh(key, list) {
+  // the street's direction at an object, so a bench or a crossing lines up with it (an icon's choice, not a survey)
+  heading(o) {
+    const sg = o.segment && this.L.segment(o.segment);
+    if (!sg || sg.pts.length < 2) return 0;
+    let best = Infinity, ang = 0;
+    for (let i = 1; i < sg.pts.length; i++) {
+      const [ax, ay] = sg.pts[i - 1], [bx, by] = sg.pts[i];
+      const t = Math.max(0, Math.min(1, ((o.xy[0] - ax) * (bx - ax) + (o.xy[1] - ay) * (by - ay)) / ((bx - ax) ** 2 + (by - ay) ** 2 || 1)));
+      const d = Math.hypot(o.xy[0] - ax - t * (bx - ax), o.xy[1] - ay - t * (by - ay));
+      if (d < best) { best = d; ang = Math.atan2(by - ay, bx - ax); }
+    }
+    return ang;                                         // world angle; in the scene, z runs south, so the turn is +ang about y
+  }
+  streetscape(s6) {
+    const { M, C } = this.models();
+    const groups = new Map();
+    for (const o of s6.shown) {
+      const kind = M[o.kind] ? o.kind : "other";
+      const young = o.kind === "tree" && o.date >= "2013";
+      const old = s6.light[o.kind] && o.source !== "osm" && o.surveyed < s6.seen;
+      const key = kind + "|" + (young ? "young" : "") + "|" + (old ? "old" : "");
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(o);
+    }
+    const y0 = 0.15, o3 = new THREE.Object3D();
+    for (const [key, list] of groups) {
+      const [kind, young, old] = key.split("|");
+      for (const [geo, role] of M[kind]) {
+        const col = role === "crown" ? (young ? C.young : C.tree) : C[role] || C.furniture;
+        const m = new THREE.InstancedMesh(geo, this.mat("lit", col, old ? 0.35 : 1), list.length);
+        list.forEach((o, i) => {
+          const [x, z] = this.map.P(o.xy);
+          const sc = kind === "tree" ? { s: 0.75, m: 1, l: 1.35 }[s6.trunk(o)] : old ? 0.8 : 1;
+          o3.position.set(x, y0, z); o3.rotation.set(0, ["bench", "crossing", "bicycle parking", "picnic table", "shelter", "street light"].includes(kind) ? this.heading(o) : 0, 0);
+          o3.scale.set(sc, sc, sc); o3.updateMatrix(); m.setMatrixAt(i, o3.matrix);
+        });
+        m.userData.objXY = list.map(o => this.map.P(o.xy));
+        this.world.add(m); this.picks.push(m);
+      }
+    }
+  }
+
+  // a closed path's rings: the first is the outline, the others its holes (a canopy piece with clearings)
+  rings(el) {
+    const d = el.getAttribute("d") || "";
+    if (!/^[MLZ\d\s,.\-]+$/i.test(d)) return [this.points(el)];
+    return d.split(/M/i).filter(t => t.trim()).map(t => [...t.matchAll(/(-?[\d.]+)[ ,](-?[\d.]+)/g)].map(m => [+m[1], +m[2]])).filter(r => r.length > 2);
+  }
+  // all plates of one colour as one mesh: hundreds of sidewalks or canopy pieces draw, and rebuild, at once
+  plateMesh(key, list) {
+    const [css, op] = this.split(key), pos = [], idx = [];
+    for (const it of list) {
+      const [outer, ...holes] = it.rings;
+      if (!outer) continue;
+      const shape = new THREE.Shape(outer.map(([x, z]) => new THREE.Vector2(x, -z)));
+      holes.forEach(h => shape.holes.push(new THREE.Path(h.map(([x, z]) => new THREE.Vector2(x, -z)))));
+      const g = new THREE.ShapeGeometry(shape); g.rotateX(-Math.PI / 2); g.translate(0, it.y, 0);
+      const b = pos.length / 3, p = g.attributes.position.array, ix = g.index ? g.index.array : [...Array(p.length / 3).keys()];
+      for (let i = 0; i < p.length; i++) pos.push(p[i]);
+      for (const i of ix) idx.push(b + i);
+      g.dispose();
+    }
+    const geo = new THREE.BufferGeometry(); geo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3)); geo.setIndex(idx);
+    return new THREE.Mesh(geo, this.mat("flat", css, op));
+  }
+  discMesh(key, list, ring = false) {
     const [css, op] = this.split(key);
-    const g = new THREE.CircleGeometry(1, 12); g.rotateX(-Math.PI / 2);
+    const g = ring ? new THREE.RingGeometry(0.78, 1, 20) : new THREE.CircleGeometry(1, 12); g.rotateX(-Math.PI / 2);
     const m = new THREE.InstancedMesh(g, this.mat("flat", css, op), list.length), o = new THREE.Object3D();
     list.forEach((it, i) => { o.position.set(it.x, it.y + 0.02, it.z); o.scale.set(it.r, 1, it.r); o.updateMatrix(); m.setMatrixAt(i, o.matrix); });
     return m;
@@ -345,6 +447,9 @@ class View3D {
     const h = near.find(x => x.object.userData.b) ||
       near.slice().sort((a, c) => this.off(a) - this.off(c))[0];
     let p = h ? h.point : null;
+    if (h && h.object.userData.objXY && h.instanceId != null) {          // an S6 model: the object stands at its base
+      const [x, z] = h.object.userData.objXY[h.instanceId]; p = new THREE.Vector3(x, 0, z);
+    }
     if (!p) { const q = new THREE.Vector3(); p = this.ray.ray.intersectPlane(new THREE.Plane(new THREE.Vector3(0, 1, 0), 0), q); }
     return { el: h && h.object.userData.el || null, b: h && h.object.userData.b, p };
   }

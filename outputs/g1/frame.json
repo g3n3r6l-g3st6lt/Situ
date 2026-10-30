@@ -1,6 +1,6 @@
 {
  "format": "situ-g1",
- "format_version": "0.9",
+ "format_version": "0.10",
  "made": "2026-10-29",
  "crs": "EPSG:32188",
  "origin": [
@@ -69,11 +69,12 @@
   "surfaces": 519,
   "areas": {
    "water": 9,
-   "bike": 40,
+   "bike": 52,
    "parking": 94,
    "plaza": 56,
    "play": 36,
-   "green": 231
+   "green": 231,
+   "roadway": 166
   },
   "checkpoints": {
    "several heights in one outline": 12,

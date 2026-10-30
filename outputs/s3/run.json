@@ -1,10 +1,10 @@
 {
  "system": "s3",
- "made": "2026-10-29T23:14:46Z",
+ "made": "2026-10-29T23:45:10Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "2adc405e4a21530a2546a011a3861c14f611be90",
-  "differs_from_commit": false,
+  "git_commit": "29bd36bbf8ca174ed1c9af1df888757c2adce659",
+  "differs_from_commit": true,
   "files": [
    {
     "path": "Situ/s3_rules/__init__.py",
@@ -32,7 +32,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "244eb65891771491350803bd212efba5353ecf040f581dd5b924acd83ddbb658"
+    "sha256": "4bf34e6ebb0ce197b620f584dbc2840933f6d835b917b216a6c9eacd99b91a6b"
    }
   ]
  },
@@ -69,7 +69,7 @@
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "e91ac3f60024ac06645efa1323a82dccaff994707e0bc1424e28c73c84f7ab69"
+   "run_json_sha256": "550b91a886739496e81f0beb0b1ec073566ac113229346124f547e4c6b7e300f"
   }
  ],
  "settings": {

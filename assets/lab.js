@@ -132,7 +132,7 @@
     s3view: "rules",
     s4colour: "use", s4places: false, s4odb: false,
     s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
-    s6show: "all", s6colour: "material",
+    s6show: "all", s6colour: "material", s6canopy: false,
     s7show: "all",
     s8measure: "area_m2",
     s9reading: "shortest", s9hour: "all", s9view: "walkers", s9against: "ped_NACH_n",
@@ -193,7 +193,10 @@
     bEl[b.id] = e;
   });
 
-  const sLayer = map.layer("surfaces");            // sidewalks and islands, under the streets
+  const sLayer = map.layer("surfaces");            // sidewalks, islands and road surfaces, under the streets
+  const cLayer = map.layer("canopy");              // the 2019 canopy (S6), over the surfaces, under the streets
+  if (S6 && S6.canopy) S6.canopy.forEach(c => map.path(cLayer, c.rings.map(r => "M" + r.map(p => map.P(p).join(",")).join("L") + "Z").join(""),
+    { class: "lab-canopy", "fill-rule": "evenodd" }));
   const sfEl = {};
   if (S6) S6.surfaces.forEach(s => {
     const e = map.path(sLayer, "M" + s.ring.map(p => map.P(p).join(",")).join("L") + "Z", { class: "lab-surf6" });
@@ -346,6 +349,7 @@
   function paintSurfaces() {
     const on = state.tab === "s6" && S6;
     sLayer.style.display = on ? "" : "none";
+    cLayer.style.display = on && state.s6canopy ? "" : "none";
     if (!on) return;
     const band = s => state.s6colour === "material" ? "m-" + (s.material || "none").toLowerCase().replace(/[^a-z]+/g, "-")
       : !s.built ? "b-none" : s.built >= "2020" ? "b-new" : s.built >= "2010" ? "b-mid" : "b-old";
@@ -410,6 +414,7 @@
        ["bench", "bench", "bench and other furniture"], ["light", "light", "street light"], ["camera", "camera", "camera"],
        ["crossing", "crossing", "crossing"], ["work", "work", "road work"]].map(([c, i, w]) =>
         `<span><svg class="ki lab-i6 k-${c}" viewBox="-12 -12 24 24"><use href="#i-${i}"/></svg>${w}</span>`).join("") +
+      (state.s6canopy ? `<span><i class="kcan"></i>canopy 2019</span>` : "") +
       `<span class="sub">round: seen in street photos · square: mapped in OpenStreetMap · faint and smaller: not seen since ${esc(S6_SEEN)}</span>`;
     const open = openCount();
     key.innerHTML = html + `<span class="lab-check-key"><i class="kc"></i>checkpoint</span>` +
@@ -1099,9 +1104,11 @@
         ${S6.objects.filter(o => FURN6.includes(o.kind)).length} benches and other pieces of furniture, and the ${n("road work")} road works the city listed on ${esc(S6.meta.snapshot)}.
         Lights, cameras and crossings were found two ways: by software reading street photos (Mapillary), and by the people who map OpenStreetMap.
         That gives ${Object.entries(S6.meta.photo_kinds).map(([k, s]) => `${s.either} ${k === "street light" ? "street lights" : k === "surveillance camera" ? "cameras" : k + "s"} (${s.both} found both ways)`).join(", ")}.
-        Sidewalks are drawn under the streets. Zoom in to see each object's icon, and click anything for its source.</p>
+        Sidewalks, islands and the city's road surfaces are drawn under the streets. Zoom in to see each object's icon, and click anything for its source.</p>
         ${seg2("s6show", [["all", "everything"], ["trees", "trees"], ["hydrants", "hydrants"], ["furniture", "furniture"], ["lights", "lights"], ["cameras", "cameras"], ["crossings", "crossings"], ["works", "road works"]])}
-        <h3 class="lab-s">Sidewalks by</h3>${seg2("s6colour", [["material", "material"], ["built", "year built"]])}
+        <h3 class="lab-s">Sidewalks and roadways by</h3>${seg2("s6colour", [["material", "material"], ["built", "year built"]])}
+        ${S6.canopy && S6.canopy.length ? `<label class="lab-check"><input type="checkbox" class="lab-canopy-on"${state.s6canopy ? " checked" : ""}> show the 2019 canopy</label>
+        <p class="sub">The canopy covers ${Math.round(100 * S6.canopy_summary.share * 10) / 10} % of the study area. ${S6.canopy_summary.public_trees_under_canopy} of the ${S6.canopy_summary.public_trees} public trees stand under it; ${S6.canopy_summary.pieces_with_no_public_tree} of its ${S6.canopy_summary.canopy_pieces} pieces (${Math.round(S6.canopy_summary.canopy_m2_with_no_public_tree).toLocaleString("en")} m²) hold no public tree.</p>` : ""}
         <p class="sub">S6 only records what each object is and where it stands. Whether it slows anyone down is left to later systems, as a written assumption.</p>`;
     }
     if (t === "s9" && S9) {
@@ -1443,6 +1450,7 @@
   host.addEventListener("change", e => {
     if (e.target.classList.contains("lab-places-on")) { state.s4places = e.target.checked; render(true); }
     if (e.target.classList.contains("lab-odb-on")) { state.s4odb = e.target.checked; render(true); }
+    if (e.target.classList.contains("lab-canopy-on")) { state.s6canopy = e.target.checked; render(true); }
   });
   host.addEventListener("input", e => {
     const t = e.target;
@@ -1538,6 +1546,9 @@
     map, host, select: p => select(p),
     openBuilding: id => { if (state.tab !== "s4" && state.tab !== "s8") { state.tab = "s4"; render(); } select({ kind: "building", id }); },
     tab: () => state.tab,
+    // S6 for the 3D view: the objects the 2D map shows now (same filter), and how it sizes and flags them
+    s6: () => S6 ? { shown: S6.objects.filter(show6), trunk: trunk6, seen: S6_SEEN, light: SLUG6, pick: state.pick } : null,
+    segment: id => seg[id],
   };
   window.dispatchEvent(new Event("situ-lab-ready"));
 

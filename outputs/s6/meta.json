@@ -1,5 +1,5 @@
 {
- "made": "2026-10-16",
+ "made": "2026-10-29",
  "snapshot": "2026-10-16",
  "sources": {
   "arbres-publics.csv": "2026-10-16",
@@ -101,6 +101,18 @@
   "crossing": 583,
   "road work": 29,
   "sidewalk": 487,
-  "island": 32
+  "island": 32,
+  "roadway": 276
+ },
+ "canopy": {
+  "source": "canopee-2019 (Ville de Montréal, CMM photo and lidar, August 2019), cut to the study area",
+  "canopy_m2": 69369,
+  "study_area_m2": 939950,
+  "share": 0.0738,
+  "public_trees": 971,
+  "public_trees_under_canopy": 616,
+  "canopy_pieces": 804,
+  "pieces_with_no_public_tree": 467,
+  "canopy_m2_with_no_public_tree": 32329
  }
 }
