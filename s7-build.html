@@ -606,15 +606,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="commuters-per-home" class="level2">
 <h2 class="anchored" data-anchor-id="commuters-per-home">Commuters per home</h2>
-<p>A building with homes takes its tract’s commuters per home and its tract’s mix of ways to work. A building in a tract where nobody lived at the 2021 census would take the combined rates of the lived-in tracts and become a checkpoint, a case set aside for a closer look. None does.</p>
+<p>A building with homes takes its tract’s commuters per dwelling and its tract’s mix of ways to work. A blank or suppressed census value stays unknown, with its status; a recorded zero stays zero. A building whose tract lacks a usable commuting rate or complete mode mix takes pooled rates from the tracts with complete evidence, explicitly as an assumption, and becomes a checkpoint. No current building needs that fallback.</p>
 </section>
 <section id="the-one-correction" class="level2">
 <h2 class="anchored" data-anchor-id="the-one-correction">The one correction</h2>
-<p>The census week fell during the pandemic. S7 reduces each tract’s share working from home by the fall measured across Canada, from 24.3 % in May 2021 to 17.4 % in May 2025. For the people who come here to work, the census does not say how many worked from home. So S7 raises their number by the national change alone, about 9 %. The hour bands keep the census’s own widths: S7 does not spread them into single hours.</p>
+<p>The census week fell during the pandemic. As a scenario assumption, S7 reduces each tract’s share working from home by the national change from 24.3 % in May 2021 to 17.4 % in May 2025. For people who come here to work, S7 raises the census number by the national change alone, about 9 %. This adjustment is not a new observation of Griffintown. The hour bands keep the census’s own widths: S7 does not spread them into single hours. The leaving and arriving files retain count_status alongside the 2021 count; suppressed or unavailable counts have no adjusted value.</p>
 </section>
 <section id="the-nearest-stops" class="level2">
 <h2 class="anchored" data-anchor-id="the-nearest-stops">The nearest stops</h2>
-<p>For every building with homes, S7 measures the walk to the nearest metro entrance and to the nearest bus stop with a weekday departure. The walk follows the walkable S1 streets, from the point where the building meets its street. A stop outside the area is reached through the S1 door (a point where a street leaves the area) that makes the walk shortest. The part beyond the door is measured as a straight line, so a distance to a stop outside is a little short.</p>
+<p>For every building with homes, S7 finds the nearest metro entrance and bus stop with a weekday departure under its distance rule. Inside the area, distance follows the walkable S1 streets from the building’s access point. Outside, it uses a straight line from the S1 door (where a street leaves the area) that minimizes the combined distance. This can underestimate the actual walk and change which stop is nearest. These are modelled distances, not complete walking routes or evidence that a stop offers a useful service at a particular hour.</p>
 </section>
 <section id="assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
@@ -634,8 +634,8 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>working from home fell in each tract as it did across Canada</td>
-<td>the only measure since 2021 is national</td>
-<td>the 2026 census</td>
+<td>a national comparison is the scenario input currently used; local change remains unverified</td>
+<td>comparable local commuting evidence</td>
 </tr>
 <tr class="even">
 <td>a building’s residents commute like the rest of its tract</td>

@@ -531,7 +531,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="glance">
-<p><strong>Asks</strong> What a person on a walkable street can see, measured on the open map.</p>
+<p><strong>Asks</strong> What the open map predicts is visible from the centreline of a walkable street.</p>
 <p><strong>Found</strong> The views split the area in two: 5,000 to 13,000 m² in the old grid, 90,000 to 115,000 m² along the canal. Almost every view is a corridor.</p>
 <p><strong>Stands</strong> verified: 6 tests pass. Not compared with what walkers notice.</p>
 <p><strong>Leaves out</strong> Trees, fences, parked trucks and rail structures stop no sight line. A building missing from the map opens a view that is not there.</p>
@@ -540,7 +540,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="what-s8-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-s8-does">What S8 does</h2>
-<p>S8 asks what a person on a walkable street can see, using the open map. Every 10 m along each walkable <a href="./s1-streets.html">S1</a> street in the area, it casts 360 sight lines. Each runs until it meets a building outline or reaches 300 m. The shape they enclose is an isovist: the part of the city visible from one spot (Benedikt 1979). S8 gives each viewpoint its area, its longest and mean sight line, and how compact the shape is. Each street gets the mean of its viewpoints.</p>
+<p>S8 measures two-dimensional visibility in the open map. Every 10 m along the centreline of each walkable <a href="./s1-streets.html">S1</a> street in the area, it casts 360 sight lines. Each runs until it meets a building outline or reaches 300 m. The shape they enclose is an isovist: the part of the mapped plane visible from one spot (Benedikt 1979). These are centreline viewpoints, not observed sidewalk positions or eye-level views. Fourteen OpenStreetMap relation buildings lack usable outlines in this input and block nothing. S8 gives each viewpoint its area, its longest and mean sight line, and how compact the shape is. Each street gets the mean of its viewpoints.</p>
 <p>S8 only measures. Who looks, and what an open or closed view does to a walk, belong to S9. Like S7, S8 reads neither the city’s <a href="./counts.html">counts</a> nor <a href="./space-syntax.html">space syntax</a>, so S9 can compare it with both.</p>
 </section>
 <section id="what-it-found" class="level2">

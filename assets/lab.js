@@ -403,7 +403,7 @@
       if (state.s4places) html += `<span><i class="kp"></i>place</span><span><i class="kp hours"></i>with opening hours</span>`;
       if (state.s4odb && S4.odb_alone) html += `<span><i class="ko yes"></i>only in the Open Database of Buildings, standing in 2023</span><span><i class="ko"></i>only in it, not standing in 2023 or unclear</span>`;
     }
-    if (state.tab === "s5" && S5) html = `<span><i class="kp5 o"></i>open</span><span><i class="kp5 c"></i>closed</span><span><i class="kp5 u"></i>no hours given</span>` +
+    if (state.tab === "s5" && S5) html = `<span><i class="kp5 o"></i>open</span><span><i class="kp5 c"></i>closed</span><span><i class="kp5 u"></i>unknown at this time</span>` +
       (state.s5mode === "bicycle" && S5.bikes ? `<span><i class="kb5"></i>bicycle detector, sized by this hour</span>` : "") +
       `<span><i class="kj5"></i>counted junction, sized by this hour's count</span><span><i class="kj5 none"></i>not counted at this hour</span>` +
       (S5.ring ? `<span><i class="kr5"></i>counted outside the area, for comparison</span>` : "");
@@ -565,7 +565,7 @@
 
   // S5: places open or closed at the chosen hour, and what was counted at the junctions
   const letter5 = (id, d, h) => { const p = S5.places[id]; return p ? p.week[d][h] : "?"; };
-  const word5 = l => l === "o" ? "open" : l === "c" ? "closed" : "no hours given";
+  const word5 = l => l === "o" ? "open" : l === "c" ? "closed" : "unknown at this time";
   function s5Marks(g, labels) {
     const d = +state.s5day, h = state.s5hour;
     S4.places.forEach(p => {
@@ -1155,9 +1155,9 @@
       const table = (list, label) => `<table class="lab-vals"><tr><th>${label}</th><th>on foot</th><th>transit</th><th>car</th><th>all</th></tr>${list.map(b =>
         `<tr><td>${esc(b.band.replace("Between ", "").replace(/ and /, " to "))}</td><td>${Math.round(row(b, ["walk"]))}</td><td>${Math.round(row(b, ["metro", "bus", "train"]))}</td>
         <td>${Math.round(row(b, ["car"]))}</td><td>${Math.round(row(b, ["walk", "metro", "bus", "train", "car", "bicycle", "other"]))}</td></tr>`).join("")}</table>`;
-      h += `<h2 class="lab-t">S7 · Commuters</h2><p>Who travels to work from Griffintown, and to it, on a weekday. The numbers come from the 2021 census, adjusted once because fewer people work from home today.
-        About ${(Math.round(m.commuters / 100) * 100).toLocaleString("en")} residents of the ${m.homes} buildings with homes commute. ${pc("car")} % go by car; ${pc("walk")} % walk, and ${pc("metro") + pc("bus")} % take the bus or the metro.
-        Click a building to see its commuters and how far it is from the metro and the bus.</p>
+      h += `<h2 class="lab-t">S7 · Commuters</h2><p>A weekday commuting scenario for Griffintown, using the 2021 census and a national working-from-home adjustment from May 2025.
+        The scenario estimates about ${(Math.round(m.commuters / 100) * 100).toLocaleString("en")} commuters in ${m.homes} residential buildings. ${pc("car")} % go by car; ${pc("walk")} % walk, and ${pc("metro") + pc("bus")} % take the bus or the metro.
+        Click a building for its modelled commuters and transit distances. Outside the study area, those distances use straight lines and can underestimate a walk.</p>
         ${seg2("s7show", [["all", "everyone"], ["walk", "on foot"], ["transit", "transit"], ["car", "car"]])}
         <h3 class="lab-s">Residents leaving for work</h3>${table(S7.bands.leaving, "hour")}
         <h3 class="lab-s">People arriving to work here</h3>${table(S7.bands.arriving, "hour")}

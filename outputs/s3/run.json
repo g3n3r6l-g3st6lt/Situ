@@ -1,11 +1,51 @@
 {
  "system": "s3",
- "made": "2026-10-29T23:45:10Z",
+ "made": "2026-11-03T22:03:25Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "29bd36bbf8ca174ed1c9af1df888757c2adce659",
+  "git_commit": "796009540bf5d239ba60aa66375402979cb571f2",
   "differs_from_commit": true,
   "files": [
+   {
+    "path": "Situ/common/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/common/blueprint.py",
+    "sha256": "0578846076d1528f7d787356ffa4f1577d2b49589f93b73777abfe85ec349336"
+   },
+   {
+    "path": "Situ/common/geopackage.py",
+    "sha256": "a1c59f34b382f8b7605b4f41eccccb70fa9283e6a1a98e2d043a1c9de32955c7"
+   },
+   {
+    "path": "Situ/common/web.py",
+    "sha256": "4201340dc12133ae8852764f77af90ff4ba8dd4a785263f9c0eb22fd3235065e"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "773a83a48f5c64bf7736d63430266a7418d52fc02f19001aa72aa3b71e70479d"
+   },
+   {
+    "path": "Situ/s1_streets/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/s1_streets/corrections.py",
+    "sha256": "941dafd11081e2f4bf2e32b32f7c56658717b964a74acdf54df7b8ec8910bb18"
+   },
+   {
+    "path": "Situ/s1_streets/network.py",
+    "sha256": "08f9e1dcff1686929101eecb36375ecb923b36047c9f1085943b9a0fd9f0cb21"
+   },
+   {
+    "path": "Situ/s1_streets/visualize.py",
+    "sha256": "0da42db9e77f9a6d1acf2f8b97d65b0e0bdc7d6c185027c80306a4a5fec075bb"
+   },
+   {
+    "path": "Situ/s2_scores/build.py",
+    "sha256": "baea78363d49846ec77cd4d5d54b7eb2ccb4c8198ca7e93e67f365498e811123"
+   },
    {
     "path": "Situ/s3_rules/__init__.py",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -31,18 +71,46 @@
     "sha256": "1f46b7d479b399a1bb06ee5e8811d0e744b77db42f1c0b07873dcda32f8db2f9"
    },
    {
-    "path": "Situ/config.py",
-    "sha256": "4bf34e6ebb0ce197b620f584dbc2840933f6d835b917b216a6c9eacd99b91a6b"
+    "path": "Situ/tools/make_manifest.py",
+    "sha256": "a2a5c72b50f9b375ece6d0f18b4f2fc68aa6570aecdfc811f92fbd3572589bc4"
    }
   ]
  },
  "inputs": [
+  {
+   "name": "CORRECTIONS_FILE",
+   "path": "Situ/data/s1_corrections.csv",
+   "bytes": 5143,
+   "modified": "2026-10-10T22:04:58Z",
+   "sha256": "e0d05eb1a0e175224023215f41634d80de56cc042385eaa73d381661d5c4a0c4"
+  },
+  {
+   "name": "CYCLE_CACHE",
+   "path": "Situ/data/external/reseau_cyclable_2026-10-07.geojson",
+   "bytes": 11601831,
+   "modified": "2026-10-07T23:05:34Z",
+   "sha256": "60682f36dcb4eb9ceea627292123f21d56c2283100a6a501206d31a587858082"
+  },
   {
    "name": "LIGHTS_FILE",
    "path": "QGIS/Sample4-200926/Layers/traffic_lights.gpkg",
    "bytes": 552960,
    "modified": "2026-10-09T20:12:49Z",
    "sha256": "c0d9a0439ffc3cc96ec1cabbea212f5e4e4c82f53c99675aa997b78b2059bf55"
+  },
+  {
+   "name": "OSM_CACHE",
+   "path": "Situ/data/external/osm_highways_2026-10-07.json",
+   "bytes": 5326624,
+   "modified": "2026-10-07T23:05:24Z",
+   "sha256": "c285cafe78118d81df4279ac5f8ef21fa13a4efb76f88475ec7b3dc78d0afcb4"
+  },
+  {
+   "name": "PED_SCORES_FILE",
+   "path": "QGIS/Sample4-200926/Layers/ped_network_seg_an.gpkg",
+   "bytes": 22335488,
+   "modified": "2026-10-10T21:20:35Z",
+   "sha256": "cd09717faecc0cb75723904fb9acec61271f88f8d0d4762fd93049168d6c54db"
   },
   {
    "name": "SIGNS_FILE",
@@ -64,12 +132,23 @@
    "bytes": 13996032,
    "modified": "2026-10-09T20:13:26Z",
    "sha256": "4cc7b3adc670b653426f54918990be3fc3edfb9779bcba3cfe8c10ce160ee631"
+  },
+  {
+   "name": "VEH_SCORES_FILE",
+   "path": "QGIS/Sample4-200926/Layers/veh_network_seg_an.gpkg",
+   "bytes": 16957440,
+   "modified": "2026-10-10T00:59:44Z",
+   "sha256": "5429b731f742315d3fec6da97a074dcb0a448c1df648d665b08749de7ae8bacd"
   }
  ],
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "550b91a886739496e81f0beb0b1ec073566ac113229346124f547e4c6b7e300f"
+   "run_json_sha256": "039b70c5cf548dbd147cf1747b24acdf52da2607aae43cde893c2ab42b38dae0"
+  },
+  {
+   "system": "s2",
+   "run_json_sha256": "9151347704800c08bc481409eabbe58d204457da7e51b91d4eef69cc6af4e90b"
   }
  ],
  "settings": {
@@ -79,14 +158,94 @@
   ],
   "ALONG_MAX_M": 35,
   "ALONG_SLACK_M": 2,
+  "CONNECT_M": 25,
+  "CONNECT_TO_M": 60,
   "CRS": "EPSG:32188",
+  "FULL_COVER": 0.95,
   "FULL_COVER_SPEED": 0.95,
   "LIGHTS_LAYER": "traffic_lights",
   "LIGHT_LOOK_M": 100,
   "LIGHT_NEAR_M": 25,
+  "MATCH_STEP_M": 1.0,
+  "MATCH_TOL_M": 1.0,
+  "MIN_COVER": 0.5,
   "NO_ENTRY_SIGNS": [
    "ACCES INTERDIT"
   ],
+  "PED_MEASURES": [
+   "connectivity",
+   "NAIN_200",
+   "NACH_200",
+   "NAIN_400",
+   "NACH_400",
+   "NAIN_800",
+   "NACH_800",
+   "NAIN_n",
+   "NACH_n"
+  ],
+  "PED_SCORES_LAYER": "ped_network_seg_an",
+  "ROAD_CLASSES": {
+   "0": [
+    "Local street",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "1": [
+    "Some pedestrian ways",
+    true,
+    false,
+    "assumption, safe"
+   ],
+   "2": [
+    "Business places",
+    true,
+    false,
+    "assumption, UNSURE"
+   ],
+   "3": [
+    "Quay",
+    true,
+    true,
+    "assumption, UNSURE"
+   ],
+   "4": [
+    "Private",
+    true,
+    true,
+    "assumption, UNSURE"
+   ],
+   "5": [
+    "Collector",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "6": [
+    "Secondary arterial",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "7": [
+    "Main arterial",
+    true,
+    true,
+    "assumption, safe"
+   ],
+   "8": [
+    "Highway",
+    false,
+    true,
+    "assumption, safe"
+   ],
+   "9": [
+    "Projected street (not built)",
+    false,
+    false,
+    "excluded: does not exist yet"
+   ]
+  },
   "SIDE_BAND_M": [
    1,
    20
@@ -94,6 +253,7 @@
   "SIDE_TYPICAL_M": 7,
   "SIGN_NEAR_M": 40,
   "SIGN_STATUS": "Réel",
+  "SNAP_TOLERANCE_M": 0.5,
   "SPEED_LAYER": "limites_de_vitesses_20260226limites_vitesseshp",
   "SPEED_SHAPE_TOL_M": 5,
   "STOP_SIGNS": [
@@ -113,7 +273,14 @@
    "INTERDICTION  VIRAGE A GAUCHE": "SR",
    "INTERDICTION VIRAGE A DROITE": "SL"
   },
-  "TURN_STRAIGHT_DEG": 30
+  "TURN_STRAIGHT_DEG": 30,
+  "VEH_MEASURES": [
+   "NAIN_1200",
+   "NACH_1200",
+   "NAIN_2000",
+   "NACH_2000"
+  ],
+  "VEH_SCORES_LAYER": "veh_network_seg_an"
  },
  "outputs": [
   {

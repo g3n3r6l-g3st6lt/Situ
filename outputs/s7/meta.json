@@ -1,5 +1,5 @@
 {
- "made": "2026-10-16",
+ "made": "2026-11-03",
  "wfh_canada_2021": 0.243,
  "wfh_now": 0.174,
  "wfh_ratio": 0.716,
@@ -7,7 +7,7 @@
  "pooled_rate": 0.6047,
  "homes": 132,
  "dwellings": 11954,
- "commuters": 7196.0,
+ "commuters": 7196.1,
  "commuters_by_mode": {
   "walk": 1856.2,
   "bus": 508.5,

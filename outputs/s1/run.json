@@ -1,11 +1,35 @@
 {
  "system": "s1",
- "made": "2026-10-29T23:45:09Z",
+ "made": "2026-11-03T22:03:23Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "29bd36bbf8ca174ed1c9af1df888757c2adce659",
+  "git_commit": "796009540bf5d239ba60aa66375402979cb571f2",
   "differs_from_commit": true,
   "files": [
+   {
+    "path": "Situ/common/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/common/blueprint.py",
+    "sha256": "0578846076d1528f7d787356ffa4f1577d2b49589f93b73777abfe85ec349336"
+   },
+   {
+    "path": "Situ/common/geopackage.py",
+    "sha256": "a1c59f34b382f8b7605b4f41eccccb70fa9283e6a1a98e2d043a1c9de32955c7"
+   },
+   {
+    "path": "Situ/common/report.py",
+    "sha256": "b8ba23028a452315e995da31d6437e6bf8ee57052cadc72499fcd6e4c460fc46"
+   },
+   {
+    "path": "Situ/common/web.py",
+    "sha256": "4201340dc12133ae8852764f77af90ff4ba8dd4a785263f9c0eb22fd3235065e"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "773a83a48f5c64bf7736d63430266a7418d52fc02f19001aa72aa3b71e70479d"
+   },
    {
     "path": "Situ/s1_streets/__init__.py",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -43,8 +67,8 @@
     "sha256": "7e145c1d7841c8cb5753e649aa62401d51df864aa17b947c55d238eca7c99055"
    },
    {
-    "path": "Situ/config.py",
-    "sha256": "4bf34e6ebb0ce197b620f584dbc2840933f6d835b917b216a6c9eacd99b91a6b"
+    "path": "Situ/tools/make_manifest.py",
+    "sha256": "a2a5c72b50f9b375ece6d0f18b4f2fc68aa6570aecdfc811f92fbd3572589bc4"
    }
   ]
  },

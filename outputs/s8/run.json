@@ -1,11 +1,47 @@
 {
  "system": "s8",
- "made": "2026-10-29T23:45:30Z",
+ "made": "2026-11-03T22:03:38Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "29bd36bbf8ca174ed1c9af1df888757c2adce659",
+  "git_commit": "796009540bf5d239ba60aa66375402979cb571f2",
   "differs_from_commit": true,
   "files": [
+   {
+    "path": "Situ/common/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/common/blueprint.py",
+    "sha256": "0578846076d1528f7d787356ffa4f1577d2b49589f93b73777abfe85ec349336"
+   },
+   {
+    "path": "Situ/common/report.py",
+    "sha256": "b8ba23028a452315e995da31d6437e6bf8ee57052cadc72499fcd6e4c460fc46"
+   },
+   {
+    "path": "Situ/common/web.py",
+    "sha256": "4201340dc12133ae8852764f77af90ff4ba8dd4a785263f9c0eb22fd3235065e"
+   },
+   {
+    "path": "Situ/config.py",
+    "sha256": "773a83a48f5c64bf7736d63430266a7418d52fc02f19001aa72aa3b71e70479d"
+   },
+   {
+    "path": "Situ/s1_streets/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "path": "Situ/s1_streets/corrections.py",
+    "sha256": "941dafd11081e2f4bf2e32b32f7c56658717b964a74acdf54df7b8ec8910bb18"
+   },
+   {
+    "path": "Situ/s1_streets/network.py",
+    "sha256": "08f9e1dcff1686929101eecb36375ecb923b36047c9f1085943b9a0fd9f0cb21"
+   },
+   {
+    "path": "Situ/s1_streets/visualize.py",
+    "sha256": "0da42db9e77f9a6d1acf2f8b97d65b0e0bdc7d6c185027c80306a4a5fec075bb"
+   },
    {
     "path": "Situ/s8_views/__init__.py",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -31,12 +67,33 @@
     "sha256": "a8f4e4aede2fee447ab554d05cbdeaa10135d3bd7b57a74d54976bec63e93085"
    },
    {
-    "path": "Situ/config.py",
-    "sha256": "4bf34e6ebb0ce197b620f584dbc2840933f6d835b917b216a6c9eacd99b91a6b"
+    "path": "Situ/tools/make_manifest.py",
+    "sha256": "a2a5c72b50f9b375ece6d0f18b4f2fc68aa6570aecdfc811f92fbd3572589bc4"
    }
   ]
  },
  "inputs": [
+  {
+   "name": "CORRECTIONS_FILE",
+   "path": "Situ/data/s1_corrections.csv",
+   "bytes": 5143,
+   "modified": "2026-10-10T22:04:58Z",
+   "sha256": "e0d05eb1a0e175224023215f41634d80de56cc042385eaa73d381661d5c4a0c4"
+  },
+  {
+   "name": "CYCLE_CACHE",
+   "path": "Situ/data/external/reseau_cyclable_2026-10-07.geojson",
+   "bytes": 11601831,
+   "modified": "2026-10-07T23:05:34Z",
+   "sha256": "60682f36dcb4eb9ceea627292123f21d56c2283100a6a501206d31a587858082"
+  },
+  {
+   "name": "OSM_CACHE",
+   "path": "Situ/data/external/osm_highways_2026-10-07.json",
+   "bytes": 5326624,
+   "modified": "2026-10-07T23:05:24Z",
+   "sha256": "c285cafe78118d81df4279ac5f8ef21fa13a4efb76f88475ec7b3dc78d0afcb4"
+  },
   {
    "name": "OSM_PLACES_FILE",
    "path": "Situ/data/external/osm_places_2026-10-14.json",
@@ -48,11 +105,14 @@
  "upstream": [
   {
    "system": "s1",
-   "run_json_sha256": "550b91a886739496e81f0beb0b1ec073566ac113229346124f547e4c6b7e300f"
+   "run_json_sha256": "039b70c5cf548dbd147cf1747b24acdf52da2607aae43cde893c2ab42b38dae0"
   }
  ],
  "settings": {
+  "CONNECT_M": 25,
+  "CONNECT_TO_M": 60,
   "CRS": "EPSG:32188",
+  "SNAP_TOLERANCE_M": 0.5,
   "VIEW_RADIUS_M": 300,
   "VIEW_RAYS": 360,
   "VIEW_STEP_M": 10
