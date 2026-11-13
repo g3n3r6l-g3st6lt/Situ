@@ -618,7 +618,7 @@
       if (d < 5 && w.index[h] != null) t += ` <span class="sub">The intersection counts, on weekdays, give ${w.index[h].toFixed(2)}.</span>`;
       return t;
     }
-    if (d >= 5) return t + `<span class="warn">${esc(S5.meta.weekend.charAt(0).toUpperCase() + S5.meta.weekend.slice(1))}. The streets have no measured rhythm on this day.</span>`;
+    if (d >= 5) return t + `<span class="warn">No weekend intersection counts inside the study area support this profile. ${d === 5 ? "The squares show available Saturday counts outside the boundary." : "The recent comparison ring also lacks Sunday counts."}</span>`;
     if (w.index[h] == null) return t + `<span class="warn">No counted weekday covers this hour.</span>`;
     return t + `On a weekday, ${MODE5[state.s5mode]} at this hour run at <b>${w.index[h].toFixed(2)}</b> of an ordinary daytime hour ` +
       `(${w.low[h].toFixed(2)} to ${w.high[h].toFixed(2)} over ${w.days[h]} counted day${w.days[h] > 1 ? "s" : ""})` +
