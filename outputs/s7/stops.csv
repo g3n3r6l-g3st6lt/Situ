@@ -3,7 +3,7 @@ stop,kind,name,departures,x,y,inside,homes_nearest
 14-02,metro entrance,STATION SQUARE VICTORIA-OACI,478,299947.96,5040201.68,False,0
 14-03,metro entrance,STATION SQUARE VICTORIA-OACI,478,300052.08,5040143.14,False,1
 15-01,metro entrance,STATION BONAVENTURE,478,299406.6,5039712.59,False,0
-15-02,metro entrance,STATION BONAVENTURE,478,299567.9,5039796.25,False,30
+15-02,metro entrance,STATION BONAVENTURE,478,299567.9,5039796.25,False,31
 15-03,metro entrance,STATION BONAVENTURE,478,299583.56,5039840.68,False,8
 16-01,metro entrance,STATION LUCIEN-L'ALLIER,478,299243.8,5039445.69,False,54
 17-01,metro entrance,STATION GEORGES-VANIER,478,298824.56,5038783.84,False,39
@@ -262,7 +262,7 @@ stop,kind,name,departures,x,y,inside,homes_nearest
 61809,bus stop,de la Cathédrale / René-Lévesque,23,299433.93,5039869.82,False,0
 61832,bus stop,Guy / Lincoln,73,298545.91,5039576.59,False,0
 61923,bus stop,Torrance / de la Montagne,29,299437.91,5039414.18,False,0
-62053,bus stop,Peel / Ottawa,63,300170.13,5039348.47,True,6
+62053,bus stop,Peel / Ottawa,63,300170.13,5039348.47,True,7
 62063,bus stop,Notre-Dame / Bérard,91,298567.13,5037810.37,False,0
 62076,bus stop,Robert-Bourassa / Ottawa,42,300338.08,5039661.74,False,0
 62077,bus stop,René-Lévesque / Monseigneur-Charbonneau,42,299456.74,5040135.4,False,0

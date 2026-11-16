@@ -46,7 +46,7 @@ T11 What the world leaves to be checked (report only)
     count unsure: 26
     several heights in one outline: 12
     ground drops under outline: 10
-    height unknown: 6
+    height unknown: 5
     empty in 2023: 3
     street through building: 1
     no door: 1
@@ -54,7 +54,7 @@ T11 What the world leaves to be checked (report only)
     2015 surface against OpenStreetMap heights, 14 buildings: median difference +0.37 m, median absolute 0.89 m
     G1's first storey rule (x 3.33 m) against the 2015 surface, 143 buildings: median -1.16 m, median absolute 1.99 m
     2016 model against the 2015 surface, 127 buildings: median -0.01 m, median absolute 0.23 m
-    heights by source: {'lidar 2023': 277, 'surface model 2015': 4, None: 6, 'OpenStreetMap': 2, 'storeys': 6, '3D buildings 2016': 1}
+    heights by source: {'lidar 2023': 277, 'surface model 2015': 4, None: 5, 'OpenStreetMap': 2, 'storeys': 7, '3D buildings 2016': 1}
     props: {'tree': 971, 'hydrant': 104, 'seat': 101, 'bike rack': 110, 'water': 4, 'table': 31, 'shelter': 2, 'bin': 38, 'lamp': 803, 'camera': 87, 'crossing mark': 503, 'work zone': 29}
 
 ALL PASS

@@ -10,7 +10,7 @@ T3  Every count can be rebuilt from trace.csv and the source files
     PASS
 
 T4  Nothing is lost: every property and premises in the area is either in a building or unplaced, once
-    9421 properties, 247 premises
+    9425 properties, 247 premises
     PASS
 
 T5  Each use follows its stated source
@@ -30,7 +30,7 @@ T9  No building is lower than its tallest known part
     PASS
 
 T10 Each roll row sits on its lot: in the building its lot holds, or the address point decides and says so
-    lot file lots_study_2026-10-15.json; placed by lot+address 7450, lot 987, address 468, inside 43, near 4, lot overlap 3
+    lot file lots_study_2026-11-13.json; placed by lot+address 7451, lot 988, address 468, inside 43, near 4, lot overlap 3
     PASS
 
 T11 Each source's height is the one its file gives, and each verdict follows from them (within one storey, 3.5 m)
@@ -55,12 +55,12 @@ T15 Every outline with lidar zones has one base and its zones lie within it
 
 T8  Coverage (information, never a failure)
     buildings 296: use from the roll 188, from the OSM tag 74, unknown 34
-    storeys from the roll 101, from the OSM outline 113, from an OSM part 9, unknown 73
-    dwellings 11954 in 132 buildings
-    tax-roll properties: 8955 placed, 466 unplaced; 15013 rows on the study streets found no address point; 167 duplicate rows dropped
+    storeys from the roll 102, from the OSM outline 113, from an OSM part 9, unknown 72
+    dwellings 12021 in 133 buildings
+    tax-roll properties: 8957 placed, 468 unplaced; 15008 rows on the study streets found no address point; 0 duplicate rows dropped
     places 610 rows, 558 once each: in a building 543, outside 67; with opening hours 83
      - unplaced: 415 x its lot holds 2 buildings and its address point stands in none of them
-     - unplaced: 43 x no address point, and its lot holds no building outline
+     - unplaced: 45 x no address point, and its lot holds no building outline
      - unplaced: 7 x its lot holds 2 buildings and it has no address point to say which
      - unplaced: 2 x no building outline within 15 m
      - unplaced: 1 x its lot holds 5 buildings and it has no address point to say which

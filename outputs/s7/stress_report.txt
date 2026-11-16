@@ -2,8 +2,8 @@ X1  Same input twice
     identical: True   PASS
 
 X2  Share of Canadian workers working mostly from home now (S7 uses 0.174)
-    0.243:   5439 residents commute,  1397 of them on foot; people who come here to work x 1.000
-    0.174:   7196 residents commute,  1856 of them on foot; people who come here to work x 1.091
-    0.100:   9081 residents commute,  2349 of them on foot; people who come here to work x 1.189
-    0.074:   9743 residents commute,  2522 of them on foot; people who come here to work x 1.223
+    0.243:   5467 residents commute,  1404 of them on foot; people who come here to work x 1.000
+    0.174:   7234 residents commute,  1867 of them on foot; people who come here to work x 1.091
+    0.100:   9130 residents commute,  2363 of them on foot; people who come here to work x 1.189
+    0.074:   9796 residents commute,  2537 of them on foot; people who come here to work x 1.223
     (every number of commuters moves with this one correction; the shares by mode and hour do not)

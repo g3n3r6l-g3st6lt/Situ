@@ -19,7 +19,7 @@ L5  S1 routes: every shortest route is real and shortest, and the Lab's rules gi
     PASS
 
 L6  S4: buildings, places, checkpoints, the height evidence and the ODB-only footprints match the S4 tables, and a missing value stays missing
-    296 buildings x 11 fields and every outline point, x 17 evidence fields; 1492 empty cells stayed empty; 610 places, 61 checkpoints, 31 ODB-only footprints
+    296 buildings x 11 fields and every outline point, x 17 evidence fields; 1490 empty cells stayed empty; 610 places, 61 checkpoints, 31 ODB-only footprints
     PASS
 
 L7  S5: the weekday shape, the junction counts, every place's week, the open counts, the ring and the earlier years match the S5 tables
@@ -31,7 +31,7 @@ L8  S6: every object, surface and canopy piece matches the S6 files, down to eac
     PASS
 
 L9  S7: every building with homes, its commuters and nearest stops, the stops and the hour bands match the S7 tables
-    132 buildings with homes x 10 values and positions, 295 stops, the hour bands of both tables
+    133 buildings with homes x 10 values and positions, 295 stops, the hour bands of both tables
     PASS
 
 L10 S8: every street's view measures and its kept view match the S8 tables, and the view drawn in the Lab lands where S8 cast it
@@ -42,16 +42,3 @@ L11 S9: every street's imagined walkers, the counted junctions, the ring and the
     579 street flows x 4 hours, 14 junction-hours compared, 18 ledger rules
     PASS
 
-L12 Walk tools: the Lab's walking distances equal S7's shortest walks, and its sight lines give S8's areas
-    60 walks between random points, 30 views from S8's viewpoints, 360 sight lines each; views within 0.75 % of S8's, 0.038 % on average
-    PASS
-
-L13 Two orders: the gaps the Lab shows equal a fresh count from the S2 and S9 tables
-    8 S2 views and 9 S9 views, 4075 gaps; a missing value gives no gap, never 0
-    PASS
-
-L14 G1 heights: every building's height, source, status, roof and discarded heights match blocks.geojson
-    296 buildings x 9 fields and every part outline point; 6 unknown heights stayed null; 43 discarded heights with their reasons
-    PASS
-
-ALL PASS

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Situ">
+<title>Situ: Rue Peel at Rue William today (white) and Colborne Street there in 1912 (pink)</title>
+<defs><clipPath id="sheet"><rect width="32" height="32"/></clipPath></defs>
+<rect width="32" height="32" fill="#000000"/>
+<g clip-path="url(#sheet)">
+<line x1="-39.13" y1="-21.77" x2="73.05" y2="39.88" stroke="#fe83cc" stroke-width="2.0"/>
+<line x1="16.0" y1="16.0" x2="44.21" y2="31.10" stroke="#ffffff" stroke-width="3.0"/>
+<line x1="16.0" y1="16.0" x2="-11.81" y2="0.17" stroke="#ffffff" stroke-width="3.0"/>
+<line x1="16.0" y1="16.0" x2="29.48" y2="-13.02" stroke="#ffffff" stroke-width="3.0"/>
+<line x1="16.0" y1="16.0" x2="1.72" y2="44.63" stroke="#ffffff" stroke-width="3.0"/>
+</g>
+<rect x="1.0" y="1.0" width="30.0" height="30.0" fill="none" stroke="#ffffff" stroke-width="2.0"/>
+</svg>

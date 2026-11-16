@@ -1,0 +1,9 @@
+Situ mark, drawn 2026-11-13 by tools/draw_logo.py
+junction J081 at 300005.89, 5039429.25 (EPSG:32188)
+  S078 Rue Peel: heading -28.2 deg from east
+  S079 Rue Peel: heading 150.4 deg from east
+  S106 Rue William: heading 65.1 deg from east
+  S107 Rue William: heading -116.5 deg from east
+1912 Colborne Street from P12-W-COLB, P12-O-COLB (values recorded in draw_logo.py)
+  J081 lies 6.1 m from the 1912 line, measured at right angles
+files: assets/situ-mark.svg, assets/situ-mark-32.svg, assets/situ-mark-16.svg

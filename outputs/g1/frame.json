@@ -1,7 +1,7 @@
 {
  "format": "situ-g1",
  "format_version": "0.10",
- "made": "2026-10-29",
+ "made": "2026-11-13",
  "crs": "EPSG:32188",
  "origin": [
   299180,
@@ -22,9 +22,9 @@
  "height_source": {
   "lidar 2023": 277,
   "surface model 2015": 4,
-  "none": 6,
+  "none": 5,
   "OpenStreetMap": 2,
-  "storeys": 6,
+  "storeys": 7,
   "3D buildings 2016": 1
  },
  "greybox": {
@@ -39,8 +39,8 @@
   "blocks": 296,
   "height_rule": {
    "measured": 284,
-   "unknown": 6,
-   "assumption": 6
+   "unknown": 5,
+   "assumption": 7
   },
   "public_use": {
    "public use, hours unknown": 123,
@@ -80,7 +80,7 @@
    "several heights in one outline": 12,
    "ground drops under outline": 10,
    "street through building": 1,
-   "height unknown": 6,
+   "height unknown": 5,
    "empty in 2023": 3,
    "no door": 1,
    "not seen lately": 34,

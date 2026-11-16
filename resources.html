@@ -40,6 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./network.html" rel="next">
 <link href="./lab-notes.html" rel="prev">
+<link href="./assets/situ-mark-16.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -49,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2844da13b68a69455614ea0c9376337e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-938775381108af5c889063106392c1c6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -88,6 +89,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./assets/situ-mark-32.svg" alt="Situ mark: Rue Peel at Rue William, with Colborne Street of 1912" class="navbar-logo light-content">
+    <img src="./assets/situ-mark-32.svg" alt="Situ mark: Rue Peel at Rue William, with Colborne Street of 1912" class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Situ</span>
     </a>
@@ -665,61 +670,66 @@ ul.task-list li input[type="checkbox"] {
 <td>S1 checks</td>
 </tr>
 <tr class="even">
-<td>Ville de Montréal, <em>Unités d’évaluation foncière</em> (tax roll) (<a href="https://donnees.montreal.ca">donnees.montreal.ca</a>, resource 2b9dfc3d-91d3-48de-b32c-a2a6d9417079), fetched 2026-09-25</td>
+<td>Ville de Montréal, <em>Unités d’évaluation foncière</em> (tax roll) (<a href="https://donnees.montreal.ca">donnees.montreal.ca</a>, resource 2b9dfc3d-91d3-48de-b32c-a2a6d9417079), CSV saved 2026-11-12 (first fetched 2026-09-25)</td>
 <td>use, storeys, dwellings, year built and floor area of each property</td>
 <td>S4</td>
 </tr>
 <tr class="odd">
-<td>Ville de Montréal, <em>Unités d’évaluation foncière</em>, the GeoJSON file with lot outlines (<a href="https://donnees.montreal.ca">donnees.montreal.ca</a>), saved 2026-10-15</td>
-<td>the outline of the lot each property sits on: 255 distinct lots for 9,379 properties in the study area</td>
+<td>Ville de Montréal, <em>Unités d’évaluation foncière</em>, the GeoJSON file with lot outlines (<a href="https://donnees.montreal.ca">donnees.montreal.ca</a>), saved 2026-11-13 (first saved 2026-10-15)</td>
+<td>the outline of the lot each property sits on: 261 distinct lots for 9,382 properties in the study area</td>
 <td>S4, to place each property</td>
 </tr>
 <tr class="even">
+<td>Ville de Montréal, <em>DTNI-3A : Travaux de trottoir, bordure, terre-plein central, îlot et muret de soutènement</em>, 2026 edition with MODI-3A-1 (<a href="https://ville.montreal.qc.ca/executiontravaux/document/dtni-3a-travaux-de-trottoir-bordure-terre-plein-central-ilot-et-muret-de-soutenement">ville.montreal.qc.ca/executiontravaux</a>), saved 2026-11-13</td>
+<td>sidewalks, curbs, medians and islands 150 ± 40 mm above the roadway (section 5.10)</td>
+<td>G1, W27</td>
+</tr>
+<tr class="odd">
 <td>Ville de Montréal, <em>Adresse ponctuelle</em> (address points) (<a href="https://donnees.montreal.ca">donnees.montreal.ca</a>, resource fed5fd02-5535-458e-b13f-66e7a31a6d78), fetched 2026-09-25</td>
 <td>where each civic number stands, to place the tax roll</td>
 <td>S4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Ville de Montréal, <em>Locaux commerciaux et statuts d’occupation</em>, 2025 survey (<a href="https://donneesquebec.ca/recherche/dataset/vmtl-locaux-commerciaux">Données Québec</a>), from Sample 4</td>
 <td>every ground-floor commercial space, occupied or vacant, with its use: 247 in the study area</td>
 <td>S4</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Ville de Montréal, <em>Lieux et bâtiments à vocation publique</em> (<a href="https://donneesquebec.ca/recherche/dataset/vmtl-lieux-batiments-vocation-publique">Données Québec</a>)</td>
 <td>public places with opening hours</td>
 <td>S4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://www.openstreetmap.org">OpenStreetMap</a> buildings and places, through the Overpass API, fetched 2026-10-14, ODbL</td>
 <td>building outlines, and shops, cafés, offices and parks, 83 of them with opening hours</td>
 <td>S4; the outlines also stop the sight lines of <a href="./s8-views.html">S8</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>OpenStreetMap building parts, through an Overpass mirror, fetched 2026-10-15, ODbL</td>
 <td>the storeys of towers drawn as parts on their podiums</td>
 <td>S4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Ville de Montréal, surface model (<em>MNS</em>, 1 m) and terrain model (<em>MNT</em>) of Le Sud-Ouest, 2015 (<a href="https://donneesquebec.ca/recherche/dataset/vmtl-modele-numerique-de-surface-mns">Données Québec</a>), CC BY 4.0, downloaded 2026-10-22</td>
 <td>a height measured inside each outline, whether a building stood there in 2015, and the ground under the game world</td>
 <td><a href="./s4-build.html#heights-by-source">S4</a>, <a href="./g1-world.html#heights">G1</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Ville de Montréal, <em>Bâtiments 3D 2016</em> (CityGML LOD2), the 4 Sud-Ouest tiles over the area (<a href="https://www.donneesquebec.ca/recherche/dataset/vmtl-batiment-3d-2016-maquette-citygml-lod2-avec-textures2">Données Québec</a>), CC BY 4.0, downloaded 2026-10-22</td>
 <td>roof faces and roof forms, and a second measured height</td>
 <td><a href="./s4-build.html#heights-by-source">S4</a>, <a href="./g1-world.html#roofs">G1</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Gouvernement du Québec, <em>Données lidar du Québec</em> (<a href="https://www.donneesquebec.ca/recherche/fr/dataset/757bb61a-a5c5-4f38-947b-0130355a7917">Données Québec</a>), CC BY 4.0: project 2023_CMM_LiDAR (4 tiles of classified points, 15 per m², flown 2023-11-21) and 2023_CMM_MNT (2 tiles of 1 m ground), downloaded 2026-10-28</td>
 <td>the newest measured height of each building, and whether it stood in 2023</td>
 <td><a href="./s4-build.html#heights-by-source">S4</a>, <a href="./g1-world.html#heights">G1</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Statistics Canada, Open Database of Buildings v3, Québec parts 1 and 2 (<a href="https://www150.statcan.gc.ca/n1/pub/34-26-0001/342600012018001-eng.htm">34-26-0001</a>), Open Government Licence (Canada), downloaded by me 2026-10-28</td>
 <td>building footprints, set against the outlines; no heights in the area</td>
 <td><a href="./s4-build.html#heights-by-source">S4</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://www.openstreetmap.org">OpenStreetMap</a> open areas and highways, through the Overpass API, fetched 2026-10-23 and 2026-10-07, ODbL</td>
 <td>parks, plazas, parking, water and bicycle paths on the flat ground</td>
 <td><a href="./g1-world.html">G1</a></td>

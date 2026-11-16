@@ -7,11 +7,11 @@ T2  Is the one correction for working from home applied as stated, to every trac
     PASS
 
 T3  Does every home's number of commuters, by mode, rebuild from its homes and its tract's rates?
-    132 buildings with homes; 0 use the pooled rates (each a checkpoint)
+    133 buildings with homes; 0 use the pooled rates (each a checkpoint)
     PASS
 
 T4  Is each home's nearest metro entrance and bus stop the nearest along S1, worked out again from scratch?
-    every 4th building (33), both kinds of stop
+    every 4th building (34), both kinds of stop
     PASS
 
 T5  Are the stops the STM's own, with their departures on the day, and is every home counted at its two nearest stops?
@@ -22,10 +22,10 @@ T6  Does S7 leave out the counts and space syntax, and draw no imagined walk?
     PASS
 
 T7  What does S7 give? (report)
-    132 buildings with 11954 homes: about 7196 residents commute on a weekday today
+    133 buildings with 12021 homes: about 7234 residents commute on a weekday today
     by mode: car 47%, walk 26%, metro 14%, bus 7%, bicycle 3%, other 3%, train 0%
     people who work in the three main tracts, today: about 4997 (whole tracts)
-    walk to the nearest metro entrance: median 724 m over the buildings with homes; longest 1188 m
+    walk to the nearest metro entrance: median 723 m over the buildings with homes; longest 1188 m
     the census week was May 2021; S7 corrects with one number for Canada
 
 ALL PASS
