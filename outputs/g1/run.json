@@ -1,9 +1,9 @@
 {
  "system": "g1",
- "made": "2026-11-18T19:52:33Z",
+ "made": "2026-11-18T22:48:20Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "b81ee3c4be55592b820abb68f0a2b6c6364e979b",
+  "git_commit": "a8d26cef7884742daf5f7561c060e94779943d44",
   "differs_from_commit": false,
   "files": [
    {
@@ -156,11 +156,11 @@
   },
   {
    "system": "s4",
-   "run_json_sha256": "379f09f10b380bdd3dd42200f093f6d9c99551040e0cd7e40decabae050dce7a"
+   "run_json_sha256": "ab3daf09fd2e97762c96b0de4b1d0deae1d37dc09ca67c50686174cf7d017f5c"
   },
   {
    "system": "s6",
-   "run_json_sha256": "682b74f6b69e9c89d4e23d9ee763c7fb8f3d72f03f1655bcefe9410dfce6aec8"
+   "run_json_sha256": "7fc1ccefe14a34bb75bd68eb19d15454aa1d94a4385f18f767b7ea5684e92b12"
   }
  ],
  "settings": {
@@ -191,22 +191,22 @@
    [
     "green",
     "leisure",
-    "{'park', 'garden', 'dog_park'}"
+    "{'dog_park', 'garden', 'park'}"
    ],
    [
     "green",
     "landuse",
-    "{'flowerbed', 'grass', 'meadow', 'village_green', 'allotments', 'recreation_ground'}"
+    "{'village_green', 'flowerbed', 'grass', 'meadow', 'allotments', 'recreation_ground'}"
    ],
    [
     "green",
     "natural",
-    "{'grass', 'wood', 'scrub'}"
+    "{'scrub', 'grass', 'wood'}"
    ],
    [
     "play",
     "leisure",
-    "{'track', 'pitch', 'fitness_station', 'playground'}"
+    "{'fitness_station', 'track', 'pitch', 'playground'}"
    ],
    [
     "plaza",
@@ -241,7 +241,7 @@
    [
     "water",
     "waterway",
-    "{'riverbank', 'dock'}"
+    "{'dock', 'riverbank'}"
    ]
   ],
   "G1B_COVER_MIN": 0.5,
@@ -281,13 +281,13 @@
  "outputs": [
   {
    "path": "Situ/outputs/g1/areas.geojson",
-   "bytes": 441884,
-   "sha256": "9aeb6dc2c45e34ab570f9ce15cada5cda8a849a45b0ea83fe3d7861e8890b1b8"
+   "bytes": 441866,
+   "sha256": "1134bbaae67e179aa38bb8323939ba9eb70cf281cb62b533516c6e5dbc288c17"
   },
   {
    "path": "Situ/outputs/g1/areas.json",
-   "bytes": 2230,
-   "sha256": "fb0d3f3150553c79ed87d27e823a9ec3cf227b57e565ab25a11500da2a1235d3"
+   "bytes": 2322,
+   "sha256": "d9b348bf820913012e2b8cdbf245bb5494b57c107f037a66c0876a0ce0e6df65"
   },
   {
    "path": "Situ/outputs/g1/blocks.geojson",
@@ -416,13 +416,13 @@
   },
   {
    "path": "Situ/outputs/g1/flat_ground.geojson",
-   "bytes": 587907,
-   "sha256": "154fda20eadaf5af3095eefa8bf6a785d737870813016b9fbcec4e7c2a6ea1e5"
+   "bytes": 587608,
+   "sha256": "d69cf318d1ada35448d2ab9a9664a31d4d43c9e98fe747afa2fb572017d4882f"
   },
   {
    "path": "Situ/outputs/g1/frame.json",
-   "bytes": 1707,
-   "sha256": "4abf29c3596abcd25b7016f9ed90db9e76f27cf5593f234fa8eb5b3d54e936f1"
+   "bytes": 1796,
+   "sha256": "fa7642f276446f1ebc9efafacba6db926cad7ebe4d04d71483e0fcf2d66e911b"
   },
   {
    "path": "Situ/outputs/g1/g1_sheet_roofs.png",
@@ -447,7 +447,7 @@
   {
    "path": "Situ/outputs/g1/ledger.csv",
    "bytes": 14729,
-   "sha256": "7e15899906a332cf99d24ea81dc315c79e460f2af0edf16e9fa74aab58a12153"
+   "sha256": "3f6de688b650e6bceb3c3ac76b5e80f4799b4a95259d53517241251ea030cddc"
   },
   {
    "path": "Situ/outputs/g1/props.csv",
@@ -462,7 +462,7 @@
   {
    "path": "Situ/outputs/g1/surfaces.geojson",
    "bytes": 343494,
-   "sha256": "6c6cd9500cb290117226c67bbde27bc09b2c276a29ca0b255451aebb7a6016b9"
+   "sha256": "3856a079a2fca4d11b344abd98444ccd56c1aa19f560b3809e62260eb089378d"
   },
   {
    "path": "Situ/outputs/g1/terrain_2015.json",
@@ -476,8 +476,8 @@
   },
   {
    "path": "Situ/outputs/g1/test_report.txt",
-   "bytes": 2767,
-   "sha256": "61c46dc87dd9e2b5cb5deace8386f984c3fb7735122fd0364adde40211ebb9f5"
+   "bytes": 2827,
+   "sha256": "e115b94519fc15a68fde1a53a817a4b7621218f6fd9da52c6e8265df4eac5b5c"
   },
   {
    "path": "Situ/outputs/g1/web_data.js",
@@ -487,7 +487,7 @@
  ],
  "tests": {
   "report": "Situ/outputs/g1/test_report.txt",
-  "made": "2026-11-13T02:42:10Z",
+  "made": "2026-11-18T22:48:19Z",
   "checks": 12,
   "pass": 11,
   "fail": 0,

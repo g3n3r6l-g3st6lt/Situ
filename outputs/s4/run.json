@@ -1,9 +1,9 @@
 {
  "system": "s4",
- "made": "2026-11-18T19:52:38Z",
+ "made": "2026-11-18T22:47:53Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "b81ee3c4be55592b820abb68f0a2b6c6364e979b",
+  "git_commit": "a8d26cef7884742daf5f7561c060e94779943d44",
   "differs_from_commit": false,
   "files": [
    {
@@ -453,8 +453,8 @@
   },
   {
    "path": "Situ/outputs/s4/test_report.txt",
-   "bytes": 3923,
-   "sha256": "0f4195ea25b6a934354aea105e09f3523b39193fa2c13c1f408bde77fd2e578f"
+   "bytes": 3993,
+   "sha256": "a31cda86e7d820ba8fedfac2c46525670bbc60b51649b0f2f0b61d5409c15f51"
   },
   {
    "path": "Situ/outputs/s4/trace.csv",
@@ -479,7 +479,7 @@
  ],
  "tests": {
   "report": "Situ/outputs/s4/test_report.txt",
-  "made": "2026-11-13T02:42:07Z",
+  "made": "2026-11-18T22:47:49Z",
   "checks": 15,
   "pass": 14,
   "fail": 0,

@@ -1,9 +1,9 @@
 {
  "system": "s9",
- "made": "2026-11-18T19:10:34Z",
+ "made": "2026-11-18T22:48:32Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "54d48e67beff394a35f3eb062ce282d6795bd16b",
+  "git_commit": "a8d26cef7884742daf5f7561c060e94779943d44",
   "differs_from_commit": false,
   "files": [
    {
@@ -272,15 +272,15 @@
   },
   {
    "system": "s4",
-   "run_json_sha256": "379f09f10b380bdd3dd42200f093f6d9c99551040e0cd7e40decabae050dce7a"
+   "run_json_sha256": "ab3daf09fd2e97762c96b0de4b1d0deae1d37dc09ca67c50686174cf7d017f5c"
   },
   {
    "system": "s5",
-   "run_json_sha256": "e2f7bf6c49d44ee2b2d53deb160239af4bff0891248c8fef4b33fb4acca3e3eb"
+   "run_json_sha256": "e6e7beace33b7f58a48bcd1a1a07d8abd49474e3b513bd708589fac437d5ac0f"
   },
   {
    "system": "s7",
-   "run_json_sha256": "f124f46b0264b1d07c07a553b10ea77da281a506c48a00680e3b26e015d73ae1"
+   "run_json_sha256": "7bc4edf992f02c62b13aac244f77cb63dc2030c96c6c213818bf6bceb51a8a59"
   },
   {
    "system": "s8",
@@ -446,7 +446,7 @@
  ],
  "tests": {
   "report": "Situ/outputs/s9/test_report.txt",
-  "made": "2026-11-18T19:10:34Z",
+  "made": "2026-11-18T22:48:31Z",
   "checks": 10,
   "pass": 9,
   "fail": 0,

@@ -1,10 +1,10 @@
 {
  "system": "s6",
- "made": "2026-11-03T22:03:37Z",
+ "made": "2026-11-18T22:48:10Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "796009540bf5d239ba60aa66375402979cb571f2",
-  "differs_from_commit": true,
+  "git_commit": "a8d26cef7884742daf5f7561c060e94779943d44",
+  "differs_from_commit": false,
   "files": [
    {
     "path": "Situ/common/__init__.py",
@@ -28,7 +28,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "773a83a48f5c64bf7736d63430266a7418d52fc02f19001aa72aa3b71e70479d"
+    "sha256": "f36a8f2dc0ecb095848f4aef14d49313f2acabd69c0fe2e10bc1aa3f8143248e"
    },
    {
     "path": "Situ/s1_streets/__init__.py",
@@ -48,7 +48,7 @@
    },
    {
     "path": "Situ/s4_buildings/build.py",
-    "sha256": "e6de8e6914dc24dda35d33916658607f41ebdd4a481f6cea7b407878561d25fb"
+    "sha256": "ac5ffe38ee62058ea9ce3e666fdeb83b1bd9645dba67967b4ac403dadd2b7cd2"
    },
    {
     "path": "Situ/s6_streetscape/__init__.py",
@@ -118,10 +118,10 @@
   },
   {
    "name": "LOTS_FILE",
-   "path": "Situ/data/external/lots_study_2026-10-15.json",
-   "bytes": 6578048,
-   "modified": "2026-10-15T14:10:53Z",
-   "sha256": "5813ee17781dae8ab36eab81b75ac6e8761a7c755edd28594e89c55ed9b5a31e"
+   "path": "Situ/data/external/lots_study_2026-11-13.json",
+   "bytes": 6580168,
+   "modified": "2026-11-13T02:34:52Z",
+   "sha256": "ca2a38cf215f4a51d060cf5f298322f7787f1d3695588126218125e4138fe3c8"
   },
   {
    "name": "MAPILLARY_POINTS_FILE",
@@ -181,10 +181,10 @@
   },
   {
    "name": "ROLL_FILE",
-   "path": "Situ/data/external/roll_study_streets_2026-09-25.json",
-   "bytes": 28462416,
-   "modified": "2026-10-14T22:52:07Z",
-   "sha256": "b19e2e11840a3823b45b37c9cebabce3306e25386685a103e3e0ac92ea195ad7"
+   "path": "Situ/data/external/roll_study_streets_2026-11-12.json",
+   "bytes": 18537843,
+   "modified": "2026-11-13T02:35:15Z",
+   "sha256": "d4b38b6d31090bce7277c8854e71c0b074e9ff903de236b471024da1181d8c50"
   },
   {
    "name": "STREETSCAPE_FILE",
@@ -201,7 +201,7 @@
   },
   {
    "system": "s4",
-   "run_json_sha256": "379f09f10b380bdd3dd42200f093f6d9c99551040e0cd7e40decabae050dce7a"
+   "run_json_sha256": "ab3daf09fd2e97762c96b0de4b1d0deae1d37dc09ca67c50686174cf7d017f5c"
   }
  ],
  "settings": {
@@ -275,7 +275,7 @@
   {
    "path": "Situ/outputs/s6/canopy_2019.geojson",
    "bytes": 364560,
-   "sha256": "f0c21703e6238b23c858a981a05dfd8983dc5a84cc295d23387e17dc273d4950"
+   "sha256": "c0354048cdf04d216290c10e99f9ac8097ebe0318e4a42ff568a05b53783b7c5"
   },
   {
    "path": "Situ/outputs/s6/checkpoints.csv",
@@ -284,8 +284,8 @@
   },
   {
    "path": "Situ/outputs/s6/meta.json",
-   "bytes": 2764,
-   "sha256": "bbf5f2a5a2b7e96cd80625ebf16d63e6b660f92a962e1bfef1688cae72344891"
+   "bytes": 2881,
+   "sha256": "cc757725a6e3ff7ef913773f85185d9fea6296b0c505243c0ac3609e99d82495"
   },
   {
    "path": "Situ/outputs/s6/objects.csv",
@@ -315,17 +315,17 @@
   {
    "path": "Situ/outputs/s6/surfaces.csv",
    "bytes": 136544,
-   "sha256": "8bfcace965ae2c3d9e642b7e8a3179ae8adb8c29270e5b22a6852a36fe0956ca"
+   "sha256": "edd9d77425d1e5437305be53ca5960dbcbbcca96363f50580c7d47c85c422a2f"
   },
   {
    "path": "Situ/outputs/s6/surfaces.geojson",
    "bytes": 541098,
-   "sha256": "85bf5cf3c931850eaa61b73a24fdac4633072802edb4dfba4805e4d90dce57ca"
+   "sha256": "ef86f88312de412ba6ec364a7fb8f80c56043b627d5264111a47972afa52da0f"
   },
   {
    "path": "Situ/outputs/s6/test_report.txt",
-   "bytes": 3368,
-   "sha256": "e1255c8f5d9a50242907a22d836e8686f4facd590baa5755b318b8410d4f2d12"
+   "bytes": 3419,
+   "sha256": "a365e66fa21bcbd940b92b4b39237f0d7ab34533ecf49f984233d4c470f470d2"
   },
   {
    "path": "Situ/outputs/s6/web_data.js",
@@ -335,7 +335,7 @@
  ],
  "tests": {
   "report": "Situ/outputs/s6/test_report.txt",
-  "made": "2026-10-29T23:45:33Z",
+  "made": "2026-11-18T22:48:10Z",
   "checks": 10,
   "pass": 8,
   "fail": 0,

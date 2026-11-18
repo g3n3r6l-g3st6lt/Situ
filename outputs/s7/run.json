@@ -1,9 +1,9 @@
 {
  "system": "s7",
- "made": "2026-11-18T01:12:32Z",
+ "made": "2026-11-18T22:48:15Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "54d48e67beff394a35f3eb062ce282d6795bd16b",
+  "git_commit": "a8d26cef7884742daf5f7561c060e94779943d44",
   "differs_from_commit": false,
   "files": [
    {
@@ -208,7 +208,7 @@
   },
   {
    "system": "s4",
-   "run_json_sha256": "379f09f10b380bdd3dd42200f093f6d9c99551040e0cd7e40decabae050dce7a"
+   "run_json_sha256": "ab3daf09fd2e97762c96b0de4b1d0deae1d37dc09ca67c50686174cf7d017f5c"
   }
  ],
  "settings": {
@@ -275,7 +275,7 @@
   {
    "path": "Situ/outputs/s7/meta.json",
    "bytes": 553,
-   "sha256": "1dbc958682a4f73c15dff48658025fde1a011b576d43a6f35b13c31d2ae35f4e"
+   "sha256": "e85c19a753ebdb82720db02aefe6451ea84073b593bea0cf6decbee813d9f483"
   },
   {
    "path": "Situ/outputs/s7/s7_sheet_homes.png",
@@ -315,7 +315,7 @@
  ],
  "tests": {
   "report": "Situ/outputs/s7/test_report.txt",
-  "made": "2026-11-18T01:12:32Z",
+  "made": "2026-11-18T22:48:14Z",
   "checks": 7,
   "pass": 6,
   "fail": 0,
