@@ -1,10 +1,10 @@
 {
  "system": "g1",
- "made": "2026-11-03T22:03:41Z",
+ "made": "2026-11-18T19:52:33Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "796009540bf5d239ba60aa66375402979cb571f2",
-  "differs_from_commit": true,
+  "git_commit": "b81ee3c4be55592b820abb68f0a2b6c6364e979b",
+  "differs_from_commit": false,
   "files": [
    {
     "path": "Situ/common/__init__.py",
@@ -28,7 +28,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "773a83a48f5c64bf7736d63430266a7418d52fc02f19001aa72aa3b71e70479d"
+    "sha256": "f36a8f2dc0ecb095848f4aef14d49313f2acabd69c0fe2e10bc1aa3f8143248e"
    },
    {
     "path": "Situ/g1_world/__init__.py",
@@ -40,7 +40,7 @@
    },
    {
     "path": "Situ/g1_world/build.py",
-    "sha256": "8878c44535f48be46a09ee84cf4f8b2d6d752fca3e2d0bbcaff29b17ccb049ce"
+    "sha256": "abc6657c0ffc2d8d2caf2bdeea38c94e38198ed3d541d1eb91fb648e2a66f25a"
    },
    {
     "path": "Situ/g1_world/terrain.py",
@@ -191,22 +191,22 @@
    [
     "green",
     "leisure",
-    "{'garden', 'dog_park', 'park'}"
+    "{'park', 'garden', 'dog_park'}"
    ],
    [
     "green",
     "landuse",
-    "{'meadow', 'grass', 'flowerbed', 'recreation_ground', 'allotments', 'village_green'}"
+    "{'flowerbed', 'grass', 'meadow', 'village_green', 'allotments', 'recreation_ground'}"
    ],
    [
     "green",
     "natural",
-    "{'scrub', 'grass', 'wood'}"
+    "{'grass', 'wood', 'scrub'}"
    ],
    [
     "play",
     "leisure",
-    "{'track', 'pitch', 'playground', 'fitness_station'}"
+    "{'track', 'pitch', 'fitness_station', 'playground'}"
    ],
    [
     "plaza",
@@ -291,13 +291,13 @@
   },
   {
    "path": "Situ/outputs/g1/blocks.geojson",
-   "bytes": 429987,
-   "sha256": "c29e48070c81673e989e7f3b71d7061bb911c00911d8182c8a5ed1a5a7f4167b"
+   "bytes": 429989,
+   "sha256": "797a9321a771b3c341462e020981d4b37c14e66d24857fa6d4b82755cc8384f1"
   },
   {
    "path": "Situ/outputs/g1/checkpoints.csv",
-   "bytes": 12247,
-   "sha256": "f4e515754618beafacaa3ca8afacca5b8031e93bb511679af018eaa7c41c1c09"
+   "bytes": 12163,
+   "sha256": "7348540a12973b35cf9946e5fe20fa45cf6329b26aaf210f4b0595cd4218a57d"
   },
   {
    "path": "Situ/outputs/g1/checks/areas/areas_map.png",
@@ -422,22 +422,22 @@
   {
    "path": "Situ/outputs/g1/frame.json",
    "bytes": 1707,
-   "sha256": "890e48fae35ef7d0483d8a94d4871d7d8d0f7afd70be1dd8d9495bd00d53cf8f"
+   "sha256": "4abf29c3596abcd25b7016f9ed90db9e76f27cf5593f234fa8eb5b3d54e936f1"
   },
   {
    "path": "Situ/outputs/g1/g1_sheet_roofs.png",
-   "bytes": 170032,
-   "sha256": "867636e434fbd7d52e62525320e92cfae136eaab22526b81f9321f3e072a4fce"
+   "bytes": 169992,
+   "sha256": "998384bdb9ef2adaeee6fb9159cf45e4d8559bf7203142efa2fe765bd605b8c4"
   },
   {
    "path": "Situ/outputs/g1/g1_sheet_terrain.png",
-   "bytes": 161585,
-   "sha256": "dca041e814d3b82b9a4fa95410a55712bfbcb4e7a07f96e6305780255f15dfef"
+   "bytes": 161546,
+   "sha256": "1e6895a40efbf715f150528a928aa1929ed75ab3d40af143ae60b15b3bb2d585"
   },
   {
    "path": "Situ/outputs/g1/g1_sheet_world.png",
-   "bytes": 204167,
-   "sha256": "4165bce46c612284c91cce789907226e9596de297406845382a87ddca1d24bc2"
+   "bytes": 204052,
+   "sha256": "4eb19d4ec9e65b94fb3f05baef93130906dc9fb0f5941f8c055bb75aab45293e"
   },
   {
    "path": "Situ/outputs/g1/ground.geojson",
@@ -446,8 +446,8 @@
   },
   {
    "path": "Situ/outputs/g1/ledger.csv",
-   "bytes": 14569,
-   "sha256": "f9837b0866b8051c7d23514944ac2e260f8c196664eba692c433e7626470ecdf"
+   "bytes": 14729,
+   "sha256": "7e15899906a332cf99d24ea81dc315c79e460f2af0edf16e9fa74aab58a12153"
   },
   {
    "path": "Situ/outputs/g1/props.csv",
@@ -477,17 +477,17 @@
   {
    "path": "Situ/outputs/g1/test_report.txt",
    "bytes": 2767,
-   "sha256": "33994ed8014979a5b8a836d3fb855fa764cfa040e93039ee5d40f520ddd203c4"
+   "sha256": "61c46dc87dd9e2b5cb5deace8386f984c3fb7735122fd0364adde40211ebb9f5"
   },
   {
    "path": "Situ/outputs/g1/web_data.js",
-   "bytes": 125247,
-   "sha256": "2780ab2962181e64aeadb7aa29193c3848bacc1b18b7b15a941d9a89aeee4d41"
+   "bytes": 125249,
+   "sha256": "da3cd1d326d0b1f206f98c7c1201643d515627a547eeaf633b0e133d30465cf2"
   }
  ],
  "tests": {
   "report": "Situ/outputs/g1/test_report.txt",
-  "made": "2026-10-29T23:45:36Z",
+  "made": "2026-11-13T02:42:10Z",
   "checks": 12,
   "pass": 11,
   "fail": 0,

@@ -1,10 +1,10 @@
 {
  "system": "s4",
- "made": "2026-11-03T22:03:34Z",
+ "made": "2026-11-18T19:52:38Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "796009540bf5d239ba60aa66375402979cb571f2",
-  "differs_from_commit": true,
+  "git_commit": "b81ee3c4be55592b820abb68f0a2b6c6364e979b",
+  "differs_from_commit": false,
   "files": [
    {
     "path": "Situ/common/__init__.py",
@@ -24,7 +24,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "773a83a48f5c64bf7736d63430266a7418d52fc02f19001aa72aa3b71e70479d"
+    "sha256": "f36a8f2dc0ecb095848f4aef14d49313f2acabd69c0fe2e10bc1aa3f8143248e"
    },
    {
     "path": "Situ/s1_streets/__init__.py",
@@ -48,7 +48,7 @@
    },
    {
     "path": "Situ/s4_buildings/build.py",
-    "sha256": "e6de8e6914dc24dda35d33916658607f41ebdd4a481f6cea7b407878561d25fb"
+    "sha256": "ac5ffe38ee62058ea9ce3e666fdeb83b1bd9645dba67967b4ac403dadd2b7cd2"
    },
    {
     "path": "Situ/s4_buildings/evidence.py",
@@ -130,10 +130,10 @@
   },
   {
    "name": "LOTS_FILE",
-   "path": "Situ/data/external/lots_study_2026-10-15.json",
-   "bytes": 6578048,
-   "modified": "2026-10-15T14:10:53Z",
-   "sha256": "5813ee17781dae8ab36eab81b75ac6e8761a7c755edd28594e89c55ed9b5a31e"
+   "path": "Situ/data/external/lots_study_2026-11-13.json",
+   "bytes": 6580168,
+   "modified": "2026-11-13T02:34:52Z",
+   "sha256": "ca2a38cf215f4a51d060cf5f298322f7787f1d3695588126218125e4138fe3c8"
   },
   {
    "name": "ODB_FILES",
@@ -179,10 +179,10 @@
   },
   {
    "name": "ROLL_FILE",
-   "path": "Situ/data/external/roll_study_streets_2026-09-25.json",
-   "bytes": 28462416,
-   "modified": "2026-10-14T22:52:07Z",
-   "sha256": "b19e2e11840a3823b45b37c9cebabce3306e25386685a103e3e0ac92ea195ad7"
+   "path": "Situ/data/external/roll_study_streets_2026-11-12.json",
+   "bytes": 18537843,
+   "modified": "2026-11-13T02:35:15Z",
+   "sha256": "d4b38b6d31090bce7277c8854e71c0b074e9ff903de236b471024da1181d8c50"
   },
   {
    "name": "S4H_B3D_FILES",
@@ -348,23 +348,23 @@
  "outputs": [
   {
    "path": "Situ/outputs/s4/buildings.csv",
-   "bytes": 89971,
-   "sha256": "4cd1d93a4a5bd404c07c3838964a221530b0db837cbc64eda7bbdec0958df4ef"
+   "bytes": 89912,
+   "sha256": "a6eae85a9139c5fba553104113ce0b5d2bfe34a5e03a0cb4873a3177cfef2e5c"
   },
   {
    "path": "Situ/outputs/s4/buildings.geojson",
-   "bytes": 329373,
-   "sha256": "071cd3d8331949c9d1a4c3cdbe2a242b586dd3c9838ac3aa941b50007cd1bba6"
+   "bytes": 329314,
+   "sha256": "2cc119eac9107deffbf09af34eeba919328412aeede731156f691f68fa1ee464"
   },
   {
    "path": "Situ/outputs/s4/checkpoints.csv",
    "bytes": 11494,
-   "sha256": "ca80b3a8629c633bdec971b62b2ed0382dfed09bcfddbbb8ba901ab441138449"
+   "sha256": "8ebfbe66afca3a9e06062a80b0c100fccf8f665814a791341e82c2f5a5d70094"
   },
   {
    "path": "Situ/outputs/s4/evidence.csv",
-   "bytes": 37949,
-   "sha256": "289575fc109f2c7e5c83e51673c1094100f42d90d39fd87048d9c9e266edd086"
+   "bytes": 37958,
+   "sha256": "7a2259502d57edfaf74c1f34b66de850d0f88d0809d428e4c9bd385423bb6a9f"
   },
   {
    "path": "Situ/outputs/s4/evidence.json",
@@ -393,8 +393,8 @@
   },
   {
    "path": "Situ/outputs/s4/meta.json",
-   "bytes": 122,
-   "sha256": "35cf61dd0d4cca21868318d2c92c421102099557a4e98a0cadbb4148b1a6b019"
+   "bytes": 120,
+   "sha256": "5c3f2016ae4ade6e5f769756406b3bf8633b4270562a128a66d43a694adaa5b7"
   },
   {
    "path": "Situ/outputs/s4/odb_alone.csv",
@@ -438,38 +438,38 @@
   },
   {
    "path": "Situ/outputs/s4/s4_sheet_source.png",
-   "bytes": 159609,
-   "sha256": "e044a1645ac0ce9be59d551c3adce6f222cdd5270a8a50c38cd59af4e38f014d"
+   "bytes": 159566,
+   "sha256": "42b91f54afa98ba16ebbeb5716f5c15609a7d4f99ed3dd654aa627dce8a5dbbd"
   },
   {
    "path": "Situ/outputs/s4/s4_sheet_use.png",
-   "bytes": 165595,
-   "sha256": "577a303d8a4b303f3c859fc1c6cec438b8869582c0a1d94c938c5d231b090d35"
+   "bytes": 170616,
+   "sha256": "9b535f3b02deace09c1c0a841905a5d604f3b5c2d53c46b42dcefaa8588aaf35"
   },
   {
    "path": "Situ/outputs/s4/stress_report.txt",
    "bytes": 934,
-   "sha256": "e7072a668b81d4da3dd528576f832cc46dc8a1e63172e2b55b64e359b37d69db"
+   "sha256": "681fa82e71c603ea72905b289aa98f2613ca26de7e1efb27a73dc98db24fb563"
   },
   {
    "path": "Situ/outputs/s4/test_report.txt",
-   "bytes": 3925,
-   "sha256": "d96c283bb87ec3ff434eec416893f8d135975b23d687baee212a28cadda1d7a8"
+   "bytes": 3923,
+   "sha256": "0f4195ea25b6a934354aea105e09f3523b39193fa2c13c1f408bde77fd2e578f"
   },
   {
    "path": "Situ/outputs/s4/trace.csv",
-   "bytes": 860685,
-   "sha256": "56a9490ea8852a6caaea05c3f6ee4108a1be434527c8c9659e21ec86e32c9a30"
+   "bytes": 860883,
+   "sha256": "1bca1a69709c217ea427801ca4a9f74f24bce9ef64866989aac7ef42741f3ce2"
   },
   {
    "path": "Situ/outputs/s4/unplaced.csv",
-   "bytes": 82873,
-   "sha256": "47e88b7ab7aafbc9711b7b532b48398a16c86c0b1fe8c95ac675576113377725"
+   "bytes": 83261,
+   "sha256": "f902a3cc3e42fc5e856bed5e7a0bf3c03b0224f60d62680f5a4184ce6ff890e8"
   },
   {
    "path": "Situ/outputs/s4/web_data.js",
-   "bytes": 498413,
-   "sha256": "f6f33a0a314e8ba3ffda41d526e0b430a44f89169e502819782eda83a83181e0"
+   "bytes": 498350,
+   "sha256": "b229ba6d6466e48e22bcbfba6e516af7c1e66a030863a5b171c4365c115acb5f"
   },
   {
    "path": "Situ/outputs/s4/zones_2023.geojson",
@@ -479,7 +479,7 @@
  ],
  "tests": {
   "report": "Situ/outputs/s4/test_report.txt",
-  "made": "2026-10-29T19:54:20Z",
+  "made": "2026-11-13T02:42:07Z",
   "checks": 15,
   "pass": 14,
   "fail": 0,
