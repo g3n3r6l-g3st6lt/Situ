@@ -1,0 +1,141 @@
+{
+ "id": "M001",
+ "name": "red brick, 1895 factory wall",
+ "family": "brick",
+ "building": "w54895065",
+ "building_name": "Lowney (Phase 1), 350 rue de l'Inspecteur",
+ "facade": "north-east face on rue de l'Inspecteur, the short side of the S4 outline",
+ "photo": {
+  "file": "data/external/commons_images/Le_Lowney_-_005.jpg",
+  "title": "File:Le Lowney - 005.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Le_Lowney_-_005.jpg",
+  "author": "Jeangagnon",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "taken": "2016-05-23",
+  "saved_as": "3840 px wide copy from Wikimedia Commons, saved 2026-11-20"
+ },
+ "corners_px": {
+  "top_left": [
+   830,
+   158
+  ],
+  "top_right": [
+   3089,
+   79
+  ],
+  "bottom_right": [
+   3289,
+   2508
+  ],
+  "bottom_left": [
+   435,
+   2384
+  ]
+ },
+ "corners_note": "top: the outer corners of the cornice; bottom: where the stone base meets the brick at each end of the face. Read by eye at full size; about 10 px either way.",
+ "width_m": 18.0,
+ "width_source": "S4 outline (OpenStreetMap way 54895065): the two short sides measure 17.89 m and 18.11 m",
+ "height_m": 20.35,
+ "height_source": "G1 height 22.25 m (2023 lidar, 90th percentile of the roof) minus about 1.9 m of stone base below the brick, read from the photo at the base's own scale",
+ "height_uncertainty_m": 0.8,
+ "px_per_m": 125,
+ "patches_m": {
+  "left edge, floors 2 to 4": [
+   0.45,
+   6.2,
+   1.95,
+   10.9
+  ],
+  "pier between bays 1 and 2": [
+   5.95,
+   6.2,
+   7.05,
+   10.9
+  ],
+  "pier between bays 2 and 3": [
+   11.1,
+   6.2,
+   12.2,
+   10.9
+  ],
+  "spandrel, bay 1": [
+   2.8,
+   8.25,
+   5.3,
+   9.2
+  ]
+ },
+ "tile_patch": "left edge, floors 2 to 4",
+ "tile_m": 1.2,
+ "checks": [
+  "Storey in the straightened face: the left bay's window sills lie 3.50, 3.52 and 3.65 m apart (read by eye on face.jpg), against S4's measured storey of 3.55 m (all uses). Width came from the outline and height from the lidar, so the two scales agree.",
+  "Course height agrees across four separate patches of the face: 8.10 to 8.25 cm."
+ ],
+ "limits": [
+  "At 1.25 pixels per cm a mortar joint (about 1 cm) is one pixel wide: the bond pattern and the brick length cannot be read from this photo.",
+  "The light lines are repointed joints, a later repair; most joints read darker than the brick.",
+  "Colour: one sunny afternoon in May 2016, camera white balance unknown."
+ ],
+ "made_by": "tools/materials.py",
+ "measured": {
+  "course_cm": 8.1,
+  "course_cm_range": [
+   7.8,
+   8.4
+  ],
+  "courses_per_m": 12.3,
+  "per_patch": {
+   "left edge, floors 2 to 4": {
+    "course_cm": 8.12,
+    "repeat_strength": 0.83
+   },
+   "pier between bays 1 and 2": {
+    "course_cm": 8.1,
+    "repeat_strength": 0.73
+   },
+   "pier between bays 2 and 3": {
+    "course_cm": 8.14,
+    "repeat_strength": 0.37
+   },
+   "spandrel, bay 1": {
+    "course_cm": 8.25,
+    "repeat_strength": 0.74
+   }
+  },
+  "mean_colour_srgb": "#99655b",
+  "resolution_px_per_cm": 1.25
+ },
+ "maps": {
+  "base_color": {
+   "file": "base_color.png",
+   "status": "observed",
+   "how": "the photo's colour; light changing over more than about 0.4 m divided out; the calmest 1.2 m window kept; tiled by a half-shift blend"
+  },
+  "height": {
+   "file": "height_estimated.png",
+   "status": "assumption",
+   "how": "estimated: brighter read as higher. Repointed light mortar reads as raised, the opposite of a recessed joint"
+  },
+  "normal": {
+   "file": "normal_estimated.png",
+   "status": "assumption",
+   "how": "worked out from the estimated height with an assumed relief of 1 cm; OpenGL convention (green up)"
+  },
+  "roughness": {
+   "file": "",
+   "status": "not made",
+   "how": "one daylight photo shows no reflection to measure it"
+  }
+ },
+ "tile": {
+  "size_m": 1.2,
+  "size_px": 150,
+  "from_patch": "left edge, floors 2 to 4",
+  "offset_in_patch_m": [
+   0.29,
+   0.29
+  ],
+  "chosen_by": "fewest odd spots (repairs, stains) in a 10 cm search"
+ }
+}
