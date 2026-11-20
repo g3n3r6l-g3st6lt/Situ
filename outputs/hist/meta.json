@@ -1,0 +1,133 @@
+{
+ "made": "2026-11-20",
+ "segmap": {
+  "segments": 269,
+  "km": 22.2,
+  "zone": {
+   "core": 183,
+   "halo": 40,
+   "ring": 46
+  },
+  "class": {
+   "street": 244,
+   "lane": 23,
+   "open_area": 2
+  },
+  "name_status": {
+   "documented": 136,
+   "inferred": 112,
+   "unknown": 21
+  }
+ },
+ "analysis_net": {
+  "segments": 801,
+  "zone": {
+   "core": 190,
+   "halo": 43,
+   "ring": 568
+  }
+ },
+ "reported": {
+  "segments": 233,
+  "km": 18.78,
+  "edge_shift_800_over_0_2": 35
+ },
+ "top_nach_800": [
+  [
+   "Wellington St",
+   1.22,
+   1.6,
+   812
+  ],
+  [
+   "Seigneurs St",
+   1.22,
+   1.27,
+   320
+  ],
+  [
+   "Notre Dame St West",
+   1.16,
+   1.46,
+   2004
+  ],
+  [
+   "McCord St",
+   1.13,
+   1.37,
+   642
+  ],
+  [
+   "Chatham St",
+   1.06,
+   1.2,
+   133
+  ],
+  [
+   "Ottawa St",
+   1.05,
+   1.35,
+   1213
+  ]
+ ],
+ "top_nain_800": [
+  [
+   "Wellington St",
+   1.22,
+   1.6,
+   812
+  ],
+  [
+   "Notre Dame St West",
+   1.16,
+   1.46,
+   2004
+  ],
+  [
+   "Dalhousie St",
+   1.02,
+   1.44,
+   583
+  ],
+  [
+   "Colborne St",
+   0.98,
+   1.44,
+   816
+  ],
+  [
+   "Nazareth St",
+   1.0,
+   1.4,
+   552
+  ],
+  [
+   "McCord St",
+   1.13,
+   1.37,
+   642
+  ]
+ ],
+ "d036": {
+  "segments": 194,
+  "establishments": 190,
+  "nach_800": {
+   "rho": 0.41,
+   "ci": [
+    0.22,
+    0.59
+   ]
+  },
+  "nain_800": {
+   "rho": 0.29,
+   "ci": [
+    0.07,
+    0.49
+   ]
+  },
+  "placed": 67,
+  "interpolated": 123,
+  "unassigned": 10
+ },
+ "sources": 19
+}

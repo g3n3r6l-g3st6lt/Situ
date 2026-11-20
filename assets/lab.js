@@ -127,6 +127,7 @@
     { id: "s7", name: "Commuters", ok: !!S7 },
     { id: "s8", name: "Views", ok: !!S8 },
     { id: "s9", name: "Observer", ok: !!S9 },
+    { id: "mat", tag: "M", name: "Materials", ok: !!MAT && !!S4 },   // the materials library: not a system, a record of the walls
   ];
   const state = {
     tab: "s1",
@@ -134,6 +135,7 @@
     s2net: "ped", s2measure: "NACH", s2radius: 2, s2view: "one",
     s3view: "rules",
     s4colour: "use", s4places: false, s4odb: false,
+    matPanels: true,                                  // show a building's recorded materials in its panel on every tab
     s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
     s6show: "all", s6colour: "material", s6canopy: false,
     s7show: "all",
@@ -147,7 +149,7 @@
 
   host.innerHTML = `
   <div class="lab-tabs" role="tablist" aria-label="Systems">${TABS.map(t =>
-    `<button type="button" role="tab" data-tab="${t.id}"${t.ok ? "" : ` disabled title="This system's data did not load (outputs/${t.id}/web_data.js)"`}><span>${t.id.toUpperCase()}</span>${t.name}</button>`).join("")}</div>
+    `<button type="button" role="tab" data-tab="${t.id}"${t.ok ? "" : ` disabled title="This system's data did not load (outputs/${t.id}/web_data.js)"`}><span>${t.tag || t.id.toUpperCase()}</span>${t.name}</button>`).join("")}</div>
   <div class="lab-main">
     <div class="lab-map"></div>
     <form class="lab-find" role="search" autocomplete="off">
@@ -338,14 +340,14 @@
   }
 
   function paintBuildings() {
-    const on = (state.tab === "s4" || state.tab === "s8") && S4;
+    const on = (state.tab === "s4" || state.tab === "s8" || state.tab === "mat") && S4;
     bLayer.style.display = on ? "" : "none";
     if (!on) return;
     if (state.tab === "s8") { S4.buildings.forEach(b => bEl[b.id].setAttribute("class", "lab-bld view8")); return; }   // what stops a sight line
     S4.buildings.forEach(b => {
-      const m = state.s4colour === "material" && mat4[b.id];
-      let cls = "lab-bld " + (state.s4colour === "use" ? USE_CLASS(b.use) : state.s4colour === "height" ? "h-" + HEIGHT4(b)
-        : state.s4colour === "material" ? (m ? "mat-yes" : "mat-none") : "src-" + (b.use_source || "none"));
+      const m = state.tab === "mat" && mat4[b.id];
+      let cls = "lab-bld " + (state.tab === "mat" ? (m ? "mat-yes" : "mat-none")
+        : state.s4colour === "use" ? USE_CLASS(b.use) : state.s4colour === "height" ? "h-" + HEIGHT4(b) : "src-" + (b.use_source || "none"));
       bEl[b.id].style.fill = m ? m[0].colour : "";          // a recorded wall shows its measured mean colour
       if (state.pick && state.pick.kind === "building" && state.pick.id === b.id) cls += " picked";
       bEl[b.id].setAttribute("class", cls);
@@ -376,6 +378,8 @@
       html = `<span class="lab-ramp"><em>${fmt(q(0))}</em><i></i><em>${fmt(q(0.5))}</em><i></i><em>${fmt(q(1))}</em></span>
         <span><b>${state.s2net === "ped" ? "walking" : "driving"} ${state.s2measure === "NACH" ? "choice" : "integration"}, ${RADIUS_NAME(RADII[state.s2net][state.s2radius])}</b>, by rank among ${rk.vals.length} segments: lowest blue, highest yellow</span><span><i class="k novalue"></i>no value (${S1.segments.length - rk.vals.length})</span>`;
     }
+    if (state.tab === "mat" && MAT && S4) html = MAT.entries.map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") +
+      `<span><i class="kb mat-none"></i>no material recorded yet ${S4.buildings.filter(b => !mat4[b.id]).length}</span>`;
     if (state.tab === "s3") html = state.s3view === "speed"
       ? `<span><i class="k v40"></i>40 km/h</span><span><i class="k v30"></i>30</span><span><i class="k v20"></i>20</span><span><i class="k gap"></i>cars allowed, no limit</span><span>the wider the line, the higher the limit</span>`
       : `<span><i class="kd lights"></i>traffic lights</span><span><i class="kd allway"></i>all-way stop</span><span><i class="kb2"></i>a street that must stop</span>`;
@@ -398,10 +402,7 @@
     if (state.tab === "s7" && S7) html = `<span><i class="kd home7"></i>building with homes, sized by its commuters</span><span><i class="kd metro7"></i>metro entrance</span><span><i class="kd stop7"></i>bus stop</span>`;
     if (state.tab === "s4" && S4) {
       const n = f => S4.buildings.filter(f).length;
-      html = state.s4colour === "material"
-        ? (MAT ? MAT.entries.map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") : "") +
-          `<span><i class="kb mat-none"></i>no material recorded yet ${n(b => !mat4[b.id])}</span>`
-        : state.s4colour === "height"
+      html = state.s4colour === "height"
         ? `<span><i class="kb h-agree"></i>two sources agree within one storey (${S4.evidence.tolerance_m} m) ${n(b => HEIGHT4(b) === "agree")}</span><span><i class="kb h-disagree"></i>two sources disagree ${n(b => HEIGHT4(b) === "disagree")}</span>` +
           `<span><i class="kb h-one"></i>one source only ${n(b => HEIGHT4(b) === "one")}</span><span><i class="kb h-none"></i>no height ${n(b => HEIGHT4(b) === "none")}</span>`
         : state.s4colour === "use"
@@ -987,7 +988,7 @@
       (b.storeys != null && b.storeys_reason ? `<p class="sub">${esc(b.storeys_reason)}. A building is as tall as its tallest known part.</p>` : "") +
       (b.parts ? `<p class="sub">${b.parts} part${b.parts > 1 ? "s" : ""} drawn in OpenStreetMap inside this outline.</p>` : "") + `
       <p>Dwellings: ${b.dwellings != null ? `<b>${b.dwellings}</b> <span class="sub">from the tax roll, ${b.properties} properties${b.condo_units ? `, ${b.condo_units} condo units` : ""}${b.year ? `, built ${esc(b.year)}` : ""}</span>` : `<span class="warn">unknown</span> <span class="sub">${esc(b.roll_reason)}</span>`}</p>`;
-    h += heightHTML(b) + g1HTML(b) + matHTML(b);
+    h += heightHTML(b) + g1HTML(b) + (state.tab === "mat" || state.matPanels ? matHTML(b) : "");
     if (b.premises) h += `<h3 class="lab-s">Ground floor</h3><p>${b.premises} commercial spaces in the 2025 survey, ${b.vacant} vacant.</p>${b.ground_floor ? `<p class="sub">${esc(b.ground_floor)}</p>` : ""}`;
     if (inside.length) h += `<h3 class="lab-s">Places inside (${inside.length})</h3><ul class="lab-places">${inside.map(p =>
       `<li><button type="button" class="sx-link" data-place="${p.id}">${esc(p.name || "(no name)")}</button> <span class="sub">${esc(p.kind)}${p.hours ? " · has hours" : ""}</span></li>`).join("")}</ul>`;
@@ -1106,7 +1107,7 @@
     }
     if (t === "s4") {
       h += `<h2 class="lab-t">S4 · Buildings</h2><p>What each building is used for, and where that answer comes from. Click a building to see everything S4 knows about it. When no source says, the use stays unknown.</p>
-        ${seg2("s4colour", [["use", "used for"], ["source", "where that came from"], ["height", "height, by source"]].concat(MAT ? [["material", "materials recorded"]] : []))}` + (state.s4colour === "material" && MAT ? `<p class="sub">Walls recorded in the <a href="materials.html">materials library</a>, coloured by their measured mean colour. Click one for its entry. ${MAT.set_aside.length} attempt${MAT.set_aside.length === 1 ? " was" : "s were"} set aside.</p>` : "") + `
+        ${seg2("s4colour", [["use", "used for"], ["source", "where that came from"], ["height", "height, by source"]])}
         <label class="lab-check"><input type="checkbox" class="lab-places-on"${state.s4places ? " checked" : ""}> show the places people go to</label>` +
         (state.s4colour === "height" && S4.evidence && S4.evidence.spread_unchanged ? spreadHTML(S4.evidence) : "") +
         (S4.odb_alone ? `<label class="lab-check"><input type="checkbox" class="lab-odb-on"${state.s4odb ? " checked" : ""}> show footprints only the Open Database of Buildings has (${S4.odb_alone.length})</label>` : "");
@@ -1131,6 +1132,16 @@
         ${S6.canopy && S6.canopy.length ? `<label class="lab-check"><input type="checkbox" class="lab-canopy-on"${state.s6canopy ? " checked" : ""}> show the 2019 canopy</label>
         <p class="sub">The canopy covers ${Math.round(100 * S6.canopy_summary.share * 10) / 10} % of the study area. ${S6.canopy_summary.public_trees_under_canopy} of the ${S6.canopy_summary.public_trees} public trees stand under it; ${S6.canopy_summary.pieces_with_no_public_tree} of its ${S6.canopy_summary.canopy_pieces} pieces (${Math.round(S6.canopy_summary.canopy_m2_with_no_public_tree).toLocaleString("en")} m²) hold no public tree.</p>` : ""}
         <p class="sub">S6 only records what each object is and where it stands. Whether it slows anyone down is left to later systems, as a written assumption.</p>`;
+    }
+    if (t === "mat" && MAT) {
+      h += `<h2 class="lab-t">Materials</h2><p>The walls recorded in the <a href="materials.html">materials library</a>, each in its measured mean colour. Every entry starts from a published photo of one building, straightened to a known scale. Click a building for everything the systems know about it, its materials included.</p>
+        <label class="lab-check"><input type="checkbox" class="lab-matpanels-on"${state.matPanels ? " checked" : ""}> also show materials in building panels on the other tabs</label>
+        <h3 class="lab-s">Entries (${MAT.entries.length})</h3>` + MAT.entries.map(m => `<div class="lab-mat">
+          <img src="${esc(m.preview)}" alt="${esc(m.name)}: colour map, tiled 3 by 3" loading="lazy">
+          <p><b>${esc(m.id)}</b> ${esc(m.name)} · <button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button></p>
+          <p class="sub">course ${m.course_cm} cm (${m.course_range[0]} to ${m.course_range[1]}) · mean colour ${esc(m.colour)} · <a href="${esc(m.anchor)}">entry</a></p></div>`).join("") +
+        (MAT.set_aside.length ? `<h3 class="lab-s">Set aside (${MAT.set_aside.length})</h3>` + MAT.set_aside.map(a => `<p class="sub"><b>${esc(a.id)}</b> ${esc(a.name)}: ${esc(a.why)}</p>`).join("") : "") +
+        `<p class="sub">${S4.buildings.length - Object.keys(mat4).length} of ${S4.buildings.length} buildings have no material recorded yet.</p>`;
     }
     if (t === "s9" && S9) {
       const m = S9.meta, k = m.people_by_kind, e = m.explained_share, pc = v => (v < 0.1 ? (100 * v).toFixed(1) : Math.round(100 * v)) + " %";
@@ -1470,6 +1481,7 @@
   // controls
   host.addEventListener("change", e => {
     if (e.target.classList.contains("lab-places-on")) { state.s4places = e.target.checked; render(true); }
+    if (e.target.classList.contains("lab-matpanels-on")) { state.matPanels = e.target.checked; render(true); }
     if (e.target.classList.contains("lab-odb-on")) { state.s4odb = e.target.checked; render(true); }
     if (e.target.classList.contains("lab-canopy-on")) { state.s6canopy = e.target.checked; render(true); }
   });
@@ -1499,7 +1511,7 @@
     if (b.dataset.close) select(null);
     if (b.dataset.check) select({ kind: "check", id: b.dataset.check });
     if (b.dataset.app) select(state.pick, b.dataset.app === state.approach ? null : b.dataset.app);
-    if (b.dataset.b) { if (state.tab !== "s4") { state.tab = "s4"; render(); } select({ kind: "building", id: b.dataset.b }); }
+    if (b.dataset.b) { if (state.tab !== "s4" && state.tab !== "mat") { state.tab = "s4"; render(); } select({ kind: "building", id: b.dataset.b }); }
     if (b.dataset.place) { if (state.tab !== "s4") state.tab = "s4"; state.s4places = true; render(); select({ kind: "place", id: b.dataset.place }); }
     if (b.dataset.seg) select({ kind: "segment", id: b.dataset.seg });
     if (b.dataset.play === "radius") playRadius();
@@ -1565,7 +1577,7 @@
   // for the 3D view (lab3d.js): it reads the map as drawn, and picks through the same select()
   window.SituLab = {
     map, host, select: p => select(p),
-    openBuilding: id => { if (state.tab !== "s4" && state.tab !== "s8") { state.tab = "s4"; render(); } select({ kind: "building", id }); },
+    openBuilding: id => { if (state.tab !== "s4" && state.tab !== "s8" && state.tab !== "mat") { state.tab = "s4"; render(); } select({ kind: "building", id }); },
     tab: () => state.tab,
     // S6 for the 3D view: the objects the 2D map shows now (same filter), and how it sizes and flags them
     s6: () => S6 ? { shown: S6.objects.filter(show6), trunk: trunk6, seen: S6_SEEN, light: SLUG6, pick: state.pick } : null,

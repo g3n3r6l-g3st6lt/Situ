@@ -1,0 +1,9230 @@
+{
+ "type": "FeatureCollection",
+ "name": "h12_segmap",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "EPSG:32188"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0001",
+    "from_node": "SN12-0001",
+    "to_node": "SN12-0002",
+    "length_m": 148.3,
+    "turn_deg": 94.8,
+    "width_m": 31.9,
+    "seg_class": "open_area",
+    "zone": "ring",
+    "source_edges": "E12-0002 E12-0003",
+    "name_1912": "McGill St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N34: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300122.11,
+      5040083.81
+     ],
+     [
+      300135.25,
+      5040115.25
+     ],
+     [
+      300146.75,
+      5040122.88
+     ],
+     [
+      300165.25,
+      5040119.25
+     ],
+     [
+      300237.57,
+      5040081.59
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0002",
+    "from_node": "SN12-0001",
+    "to_node": "SN12-0003",
+    "length_m": 33.2,
+    "turn_deg": 0.0,
+    "width_m": 25.6,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0004",
+    "name_1912": "McGill St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300122.11,
+      5040083.81
+     ],
+     [
+      300107.7,
+      5040053.94
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0003",
+    "from_node": "SN12-0001",
+    "to_node": "SN12-0005",
+    "length_m": 100.2,
+    "turn_deg": 0.0,
+    "width_m": 5.8,
+    "seg_class": "lane",
+    "zone": "ring",
+    "source_edges": "E12-0005",
+    "name_1912": "Longueuil St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300122.11,
+      5040083.81
+     ],
+     [
+      300208.71,
+      5040033.36
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0004",
+    "from_node": "SN12-0002",
+    "to_node": "SN12-0005",
+    "length_m": 56.2,
+    "turn_deg": 0.0,
+    "width_m": 8.6,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0006",
+    "name_1912": "St Maurice St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300237.57,
+      5040081.59
+     ],
+     [
+      300208.71,
+      5040033.36
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0005",
+    "from_node": "SN12-0002",
+    "to_node": "SN12-0006",
+    "length_m": 110.5,
+    "turn_deg": 0.0,
+    "width_m": 30.6,
+    "seg_class": "open_area",
+    "zone": "ring",
+    "source_edges": "E12-0007",
+    "name_1912": "McGill St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300237.57,
+      5040081.59
+     ],
+     [
+      300335.42,
+      5040030.23
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0006",
+    "from_node": "SN12-0003",
+    "to_node": "SN12-0007",
+    "length_m": 96.1,
+    "turn_deg": 0.0,
+    "width_m": 7.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0009",
+    "name_1912": "St Henry St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300107.7,
+      5040053.94
+     ],
+     [
+      300186.33,
+      5039998.72
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0007",
+    "from_node": "SN12-0003",
+    "to_node": "SN12-0021",
+    "length_m": 196.4,
+    "turn_deg": 0.0,
+    "width_m": 15.6,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0008 E12-0016",
+    "name_1912": "Notre Dame St West",
+    "name_status": "documented",
+    "name_source": "name read (R24-N43: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300107.7,
+      5040053.94
+     ],
+     [
+      300026.98,
+      5039874.93
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0008",
+    "from_node": "SN12-0004",
+    "to_node": "SN12-0006",
+    "length_m": 16.9,
+    "turn_deg": 0.0,
+    "width_m": 13.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0010",
+    "name_1912": "St Paul St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300347.75,
+      5040041.75
+     ],
+     [
+      300335.42,
+      5040030.23
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0009",
+    "from_node": "SN12-0005",
+    "to_node": "SN12-0007",
+    "length_m": 41.2,
+    "turn_deg": 0.0,
+    "width_m": 7.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0012",
+    "name_1912": "St Maurice St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300208.71,
+      5040033.36
+     ],
+     [
+      300186.33,
+      5039998.72
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0010",
+    "from_node": "SN12-0005",
+    "to_node": "SN12-0009",
+    "length_m": 99.9,
+    "turn_deg": 0.0,
+    "width_m": 8.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "ADD-R24-R02-1",
+    "name_1912": "Longueuil St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N38: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300208.71,
+      5040033.36
+     ],
+     [
+      300296.14,
+      5039984.95
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0011",
+    "from_node": "SN12-0006",
+    "to_node": "SN12-0008",
+    "length_m": 80.7,
+    "turn_deg": 0.0,
+    "width_m": 24.2,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0013 E12-0018",
+    "name_1912": "McGill St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N17: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300335.42,
+      5040030.23
+     ],
+     [
+      300408.27,
+      5039995.57
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0012",
+    "from_node": "SN12-0006",
+    "to_node": "SN12-0009",
+    "length_m": 59.9,
+    "turn_deg": 0.0,
+    "width_m": 17.4,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0014",
+    "name_1912": "St Paul St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300335.42,
+      5040030.23
+     ],
+     [
+      300296.14,
+      5039984.95
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0013",
+    "from_node": "SN12-0007",
+    "to_node": "SN12-0013",
+    "length_m": 94.4,
+    "turn_deg": 0.0,
+    "width_m": 7.2,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0020",
+    "name_1912": "St Henry St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300186.33,
+      5039998.72
+     ],
+     [
+      300262.98,
+      5039943.61
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0014",
+    "from_node": "SN12-0007",
+    "to_node": "SN12-0025",
+    "length_m": 180.2,
+    "turn_deg": 0.0,
+    "width_m": 5.0,
+    "seg_class": "lane",
+    "zone": "halo",
+    "source_edges": "E12-0021",
+    "name_1912": "St Maurice St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N42: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300186.33,
+      5039998.72
+     ],
+     [
+      300084.13,
+      5039850.32
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0015",
+    "from_node": "SN12-0008",
+    "to_node": "SN12-0011",
+    "length_m": 49.1,
+    "turn_deg": 0.0,
+    "width_m": 21.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0023",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300408.27,
+      5039995.57
+     ],
+     [
+      300379.85,
+      5039955.51
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0016",
+    "from_node": "SN12-0008",
+    "to_node": "SN12-0012",
+    "length_m": 113.9,
+    "turn_deg": 12.6,
+    "width_m": 26.9,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0022 E12-0030",
+    "name_1912": "McGill St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300408.27,
+      5039995.57
+     ],
+     [
+      300476.25,
+      5039959.25
+     ],
+     [
+      300511.74,
+      5039949.43
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0017",
+    "from_node": "SN12-0009",
+    "to_node": "SN12-0010",
+    "length_m": 24.5,
+    "turn_deg": 0.0,
+    "width_m": 15.3,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0026",
+    "name_1912": "St Paul St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300296.14,
+      5039984.95
+     ],
+     [
+      300281.75,
+      5039965.09
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0018",
+    "from_node": "SN12-0009",
+    "to_node": "SN12-0014",
+    "length_m": 89.6,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0025",
+    "name_1912": "Richard Lane",
+    "name_status": "documented",
+    "name_source": "name read (R24-N37: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300296.14,
+      5039984.95
+     ],
+     [
+      300375.24,
+      5039942.83
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0019",
+    "from_node": "SN12-0010",
+    "to_node": "SN12-0013",
+    "length_m": 28.5,
+    "turn_deg": 0.0,
+    "width_m": 16.4,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0028",
+    "name_1912": "St Paul St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300281.75,
+      5039965.09
+     ],
+     [
+      300262.98,
+      5039943.61
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0020",
+    "from_node": "SN12-0010",
+    "to_node": "SN12-0017",
+    "length_m": 90.6,
+    "turn_deg": 0.0,
+    "width_m": 4.2,
+    "seg_class": "lane",
+    "zone": "ring",
+    "source_edges": "E12-0029",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300281.75,
+      5039965.09
+     ],
+     [
+      300355.55,
+      5039912.55
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0021",
+    "from_node": "SN12-0011",
+    "to_node": "SN12-0014",
+    "length_m": 13.5,
+    "turn_deg": 0.0,
+    "width_m": 22.6,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0031",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N32: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300379.85,
+      5039955.51
+     ],
+     [
+      300375.24,
+      5039942.83
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0022",
+    "from_node": "SN12-0011",
+    "to_node": "SN12-0018",
+    "length_m": 123.5,
+    "turn_deg": 0.0,
+    "width_m": 11.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0032",
+    "name_1912": "Grey Nun St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N16: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300379.85,
+      5039955.51
+     ],
+     [
+      300489.09,
+      5039897.96
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0023",
+    "from_node": "SN12-0012",
+    "to_node": "SN12-0016",
+    "length_m": 54.9,
+    "turn_deg": 0.0,
+    "width_m": 28.4,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0034",
+    "name_1912": "McGill St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300511.74,
+      5039949.43
+     ],
+     [
+      300558.63,
+      5039920.91
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0024",
+    "from_node": "SN12-0012",
+    "to_node": "SN12-0018",
+    "length_m": 56.2,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "ADD-R27-R01-7",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300511.74,
+      5039949.43
+     ],
+     [
+      300489.09,
+      5039897.96
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0025",
+    "from_node": "SN12-0013",
+    "to_node": "SN12-0020",
+    "length_m": 88.4,
+    "turn_deg": 0.0,
+    "width_m": 10.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0036",
+    "name_1912": "St Henry St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N19: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300262.98,
+      5039943.61
+     ],
+     [
+      300334.42,
+      5039891.58
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0026",
+    "from_node": "SN12-0013",
+    "to_node": "SN12-0030",
+    "length_m": 180.2,
+    "turn_deg": 0.0,
+    "width_m": 15.4,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0037",
+    "name_1912": "St Paul St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N41: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300262.98,
+      5039943.61
+     ],
+     [
+      300157.73,
+      5039797.28
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0027",
+    "from_node": "SN12-0014",
+    "to_node": "SN12-0017",
+    "length_m": 36.1,
+    "turn_deg": 0.0,
+    "width_m": 20.2,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0033",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300375.24,
+      5039942.83
+     ],
+     [
+      300355.55,
+      5039912.55
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0028",
+    "from_node": "SN12-0015",
+    "to_node": "SN12-0016",
+    "length_m": 15.5,
+    "turn_deg": 0.0,
+    "width_m": 12.4,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0038",
+    "name_1912": "(name not legible)",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300569.75,
+      5039931.75
+     ],
+     [
+      300558.63,
+      5039920.91
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0029",
+    "from_node": "SN12-0016",
+    "to_node": "SN12-0022",
+    "length_m": 53.1,
+    "turn_deg": 0.0,
+    "width_m": 15.2,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0039",
+    "name_1912": "(name not legible)",
+    "name_status": "documented",
+    "name_source": "name read (R27-N29: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300558.63,
+      5039920.91
+     ],
+     [
+      300533.4,
+      5039874.21
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0030",
+    "from_node": "SN12-0016",
+    "to_node": "SN12-0024",
+    "length_m": 123.7,
+    "turn_deg": 0.0,
+    "width_m": 25.2,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0040",
+    "name_1912": "McGill St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N21: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300558.63,
+      5039920.91
+     ],
+     [
+      300667.25,
+      5039861.62
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0031",
+    "from_node": "SN12-0017",
+    "to_node": "SN12-0019",
+    "length_m": 17.9,
+    "turn_deg": 0.0,
+    "width_m": 19.6,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0041",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300355.55,
+      5039912.55
+     ],
+     [
+      300348.78,
+      5039896.01
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0032",
+    "from_node": "SN12-0018",
+    "to_node": "SN12-0022",
+    "length_m": 50.3,
+    "turn_deg": 0.0,
+    "width_m": 11.6,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0042",
+    "name_1912": "Grey Nun St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300489.09,
+      5039897.96
+     ],
+     [
+      300533.4,
+      5039874.21
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0033",
+    "from_node": "SN12-0018",
+    "to_node": "SN12-0029",
+    "length_m": 77.7,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "ADD-R27-R01-6",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N18: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300489.09,
+      5039897.96
+     ],
+     [
+      300479.75,
+      5039820.8
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0034",
+    "from_node": "SN12-0019",
+    "to_node": "SN12-0029",
+    "length_m": 151.0,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "ADD-R24-R01-1",
+    "name_1912": "King St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N15: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300348.78,
+      5039896.01
+     ],
+     [
+      300479.75,
+      5039820.8
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0035",
+    "from_node": "SN12-0020",
+    "to_node": "SN12-0028",
+    "length_m": 63.9,
+    "turn_deg": 0.0,
+    "width_m": 12.2,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0046",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N31: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300334.42,
+      5039891.58
+     ],
+     [
+      300298.39,
+      5039838.79
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0036",
+    "from_node": "SN12-0021",
+    "to_node": "SN12-0027",
+    "length_m": 61.1,
+    "turn_deg": 0.0,
+    "width_m": 7.6,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0048",
+    "name_1912": "Duke St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N06: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300026.98,
+      5039874.93
+     ],
+     [
+      300076.4,
+      5039839.02
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0037",
+    "from_node": "SN12-0021",
+    "to_node": "SN12-0045",
+    "length_m": 210.7,
+    "turn_deg": 0.0,
+    "width_m": 14.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0049",
+    "name_1912": "Notre Dame St West",
+    "name_status": "documented",
+    "name_source": "name read (R24-N01: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300026.98,
+      5039874.93
+     ],
+     [
+      299953.5,
+      5039677.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0038",
+    "from_node": "SN12-0022",
+    "to_node": "SN12-0031",
+    "length_m": 162.5,
+    "turn_deg": 54.0,
+    "width_m": 11.6,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0047",
+    "name_1912": "Grey Nun St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N20: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300533.4,
+      5039874.21
+     ],
+     [
+      300651.25,
+      5039809.25
+     ],
+     [
+      300664.25,
+      5039806.25
+     ],
+     [
+      300673.42,
+      5039794.89
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0039",
+    "from_node": "SN12-0023",
+    "to_node": "SN12-0024",
+    "length_m": 13.0,
+    "turn_deg": 0.0,
+    "width_m": 13.2,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0050",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300678.75,
+      5039867.75
+     ],
+     [
+      300667.25,
+      5039861.62
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0040",
+    "from_node": "SN12-0024",
+    "to_node": "SN12-0026",
+    "length_m": 22.5,
+    "turn_deg": 0.0,
+    "width_m": 23.4,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0052 E12-0055",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300667.25,
+      5039861.62
+     ],
+     [
+      300673.92,
+      5039840.08
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0041",
+    "from_node": "SN12-0025",
+    "to_node": "SN12-0027",
+    "length_m": 13.7,
+    "turn_deg": 0.0,
+    "width_m": 6.4,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0056",
+    "name_1912": "St Maurice St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300084.13,
+      5039850.32
+     ],
+     [
+      300076.4,
+      5039839.02
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0042",
+    "from_node": "SN12-0025",
+    "to_node": "SN12-0030",
+    "length_m": 90.7,
+    "turn_deg": 0.0,
+    "width_m": 6.0,
+    "seg_class": "lane",
+    "zone": "halo",
+    "source_edges": "E12-0057 E12-0070",
+    "name_1912": "Duke St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N36: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300084.13,
+      5039850.32
+     ],
+     [
+      300157.73,
+      5039797.28
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0043",
+    "from_node": "SN12-0027",
+    "to_node": "SN12-0044",
+    "length_m": 194.5,
+    "turn_deg": 0.0,
+    "width_m": 6.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0059",
+    "name_1912": "St Maurice St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N04: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300076.4,
+      5039839.02
+     ],
+     [
+      299967.87,
+      5039677.62
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0044",
+    "from_node": "SN12-0028",
+    "to_node": "SN12-0033",
+    "length_m": 110.3,
+    "turn_deg": 0.0,
+    "width_m": 10.2,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0062",
+    "name_1912": "Queen St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N14: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300298.39,
+      5039838.79
+     ],
+     [
+      300394.89,
+      5039785.29
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0045",
+    "from_node": "SN12-0028",
+    "to_node": "SN12-0034",
+    "length_m": 72.6,
+    "turn_deg": 0.0,
+    "width_m": 12.4,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0063",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N30: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300298.39,
+      5039838.79
+     ],
+     [
+      300254.69,
+      5039780.76
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0046",
+    "from_node": "SN12-0029",
+    "to_node": "SN12-0038",
+    "length_m": 74.5,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "ADD-R27-R01-5",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N22: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300479.75,
+      5039820.8
+     ],
+     [
+      300467.18,
+      5039747.39
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0047",
+    "from_node": "SN12-0029",
+    "to_node": "SN12-0042",
+    "length_m": 208.1,
+    "turn_deg": 0.0,
+    "width_m": 10.2,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0068",
+    "name_1912": "King St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N19: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300479.75,
+      5039820.8
+     ],
+     [
+      300662.97,
+      5039722.13
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0048",
+    "from_node": "SN12-0030",
+    "to_node": "SN12-0035",
+    "length_m": 27.4,
+    "turn_deg": 0.0,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0071",
+    "name_1912": "St Paul St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300157.73,
+      5039797.28
+     ],
+     [
+      300142.18,
+      5039774.69
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0049",
+    "from_node": "SN12-0031",
+    "to_node": "SN12-0032",
+    "length_m": 16.8,
+    "turn_deg": 0.0,
+    "width_m": 12.6,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0072",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300673.42,
+      5039794.89
+     ],
+     [
+      300656.75,
+      5039793.25
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0050",
+    "from_node": "SN12-0031",
+    "to_node": "SN12-0037",
+    "length_m": 30.2,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "ADD-R27-R04-4",
+    "name_1912": "Common St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300673.42,
+      5039794.89
+     ],
+     [
+      300666.91,
+      5039765.39
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0051",
+    "from_node": "SN12-0033",
+    "to_node": "SN12-0038",
+    "length_m": 81.6,
+    "turn_deg": 0.0,
+    "width_m": 11.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0075",
+    "name_1912": "Queen St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300394.89,
+      5039785.29
+     ],
+     [
+      300467.18,
+      5039747.39
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0052",
+    "from_node": "SN12-0033",
+    "to_node": "SN12-0040",
+    "length_m": 67.8,
+    "turn_deg": 0.0,
+    "width_m": 12.4,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0076",
+    "name_1912": "Ottawa St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N24: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300394.89,
+      5039785.29
+     ],
+     [
+      300361.54,
+      5039726.27
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0053",
+    "from_node": "SN12-0034",
+    "to_node": "SN12-0039",
+    "length_m": 92.4,
+    "turn_deg": 0.0,
+    "width_m": 9.2,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0078a",
+    "name_1912": "Prince St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N13: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300254.69,
+      5039780.76
+     ],
+     [
+      300336.48,
+      5039737.8
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0054",
+    "from_node": "SN12-0034",
+    "to_node": "SN12-0041",
+    "length_m": 70.4,
+    "turn_deg": 0.0,
+    "width_m": 11.2,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0077",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300254.69,
+      5039780.76
+     ],
+     [
+      300211.69,
+      5039725.05
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0055",
+    "from_node": "SN12-0035",
+    "to_node": "SN12-0041",
+    "length_m": 85.4,
+    "turn_deg": 0.0,
+    "width_m": 9.8,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0079",
+    "name_1912": "Duke St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300142.18,
+      5039774.69
+     ],
+     [
+      300211.69,
+      5039725.05
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0056",
+    "from_node": "SN12-0035",
+    "to_node": "SN12-0053",
+    "length_m": 180.5,
+    "turn_deg": 0.0,
+    "width_m": 15.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0080",
+    "name_1912": "St Paul St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N05: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300142.18,
+      5039774.69
+     ],
+     [
+      300036.06,
+      5039628.74
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0057",
+    "from_node": "SN12-0036",
+    "to_node": "SN12-0037",
+    "length_m": 17.8,
+    "turn_deg": 0.0,
+    "width_m": 9.8,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0083",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300684.75,
+      5039765.75
+     ],
+     [
+      300666.91,
+      5039765.39
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0058",
+    "from_node": "SN12-0037",
+    "to_node": "SN12-0042",
+    "length_m": 43.4,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "ADD-R27-R04-3",
+    "name_1912": "Common St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300666.91,
+      5039765.39
+     ],
+     [
+      300662.97,
+      5039722.13
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0059",
+    "from_node": "SN12-0038",
+    "to_node": "SN12-0048",
+    "length_m": 78.0,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-R01-4",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300467.18,
+      5039747.39
+     ],
+     [
+      300457.09,
+      5039670.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0060",
+    "from_node": "SN12-0038",
+    "to_node": "SN12-0051",
+    "length_m": 215.6,
+    "turn_deg": 0.0,
+    "width_m": 10.1,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "E12-0088 E12-0102",
+    "name_1912": "Queen St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N18: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300467.18,
+      5039747.39
+     ],
+     [
+      300657.22,
+      5039645.61
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0061",
+    "from_node": "SN12-0039",
+    "to_node": "SN12-0040",
+    "length_m": 27.6,
+    "turn_deg": 0.0,
+    "width_m": 9.2,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0078b",
+    "name_1912": "Prince St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300336.48,
+      5039737.8
+     ],
+     [
+      300361.54,
+      5039726.27
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0062",
+    "from_node": "SN12-0039",
+    "to_node": "SN12-0040",
+    "length_m": 27.6,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-R02-1",
+    "name_1912": "Prince St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300336.48,
+      5039737.8
+     ],
+     [
+      300361.54,
+      5039726.27
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0063",
+    "from_node": "SN12-0040",
+    "to_node": "SN12-0043",
+    "length_m": 67.4,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-R02-2",
+    "name_1912": "Prince St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300361.54,
+      5039726.27
+     ],
+     [
+      300421.04,
+      5039694.57
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0064",
+    "from_node": "SN12-0040",
+    "to_node": "SN12-0049",
+    "length_m": 71.9,
+    "turn_deg": 0.0,
+    "width_m": 9.8,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0099",
+    "name_1912": "Ottawa St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300361.54,
+      5039726.27
+     ],
+     [
+      300327.14,
+      5039663.08
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0065",
+    "from_node": "SN12-0041",
+    "to_node": "SN12-0047",
+    "length_m": 68.8,
+    "turn_deg": 0.0,
+    "width_m": 12.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0096",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N33: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300211.69,
+      5039725.05
+     ],
+     [
+      300170.42,
+      5039670.02
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0066",
+    "from_node": "SN12-0041",
+    "to_node": "SN12-0049",
+    "length_m": 131.0,
+    "turn_deg": 0.0,
+    "width_m": 9.4,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0097",
+    "name_1912": "Duke St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N07: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300211.69,
+      5039725.05
+     ],
+     [
+      300327.14,
+      5039663.08
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0067",
+    "from_node": "SN12-0042",
+    "to_node": "SN12-0051",
+    "length_m": 76.7,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "ADD-R27-R04-2",
+    "name_1912": "Common St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N26: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300662.97,
+      5039722.13
+     ],
+     [
+      300657.22,
+      5039645.61
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0068",
+    "from_node": "SN12-0043",
+    "to_node": "SN12-0046",
+    "length_m": 25.8,
+    "turn_deg": 0.0,
+    "width_m": 5.7,
+    "seg_class": "lane",
+    "zone": "halo",
+    "source_edges": "E12-0109",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300421.04,
+      5039694.57
+     ],
+     [
+      300404.08,
+      5039675.08
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0069",
+    "from_node": "SN12-0043",
+    "to_node": "SN12-0048",
+    "length_m": 43.6,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-R02-3",
+    "name_1912": "Prince St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300421.04,
+      5039694.57
+     ],
+     [
+      300457.09,
+      5039670.0
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0070",
+    "from_node": "SN12-0044",
+    "to_node": "SN12-0045",
+    "length_m": 14.4,
+    "turn_deg": 0.0,
+    "width_m": 23.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0113",
+    "name_1912": "Inspector St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N35: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299967.87,
+      5039677.62
+     ],
+     [
+      299953.5,
+      5039677.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0071",
+    "from_node": "SN12-0044",
+    "to_node": "SN12-0053",
+    "length_m": 83.9,
+    "turn_deg": 0.0,
+    "width_m": 16.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0117",
+    "name_1912": "Inspector St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299967.87,
+      5039677.62
+     ],
+     [
+      300036.06,
+      5039628.74
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0072",
+    "from_node": "SN12-0045",
+    "to_node": "SN12-0054",
+    "length_m": 62.4,
+    "turn_deg": 0.0,
+    "width_m": 25.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0114",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299953.5,
+      5039677.5
+     ],
+     [
+      299926.36,
+      5039621.27
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0073",
+    "from_node": "SN12-0046",
+    "to_node": "SN12-0050",
+    "length_m": 20.1,
+    "turn_deg": 0.0,
+    "width_m": 5.0,
+    "seg_class": "lane",
+    "zone": "halo",
+    "source_edges": "E12-0118",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300404.08,
+      5039675.08
+     ],
+     [
+      300398.75,
+      5039655.75
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0074",
+    "from_node": "SN12-0047",
+    "to_node": "SN12-0055",
+    "length_m": 72.2,
+    "turn_deg": 0.0,
+    "width_m": 12.3,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0120",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300170.42,
+      5039670.02
+     ],
+     [
+      300127.37,
+      5039612.09
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0075",
+    "from_node": "SN12-0047",
+    "to_node": "SN12-0056",
+    "length_m": 141.1,
+    "turn_deg": 0.0,
+    "width_m": 9.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0121",
+    "name_1912": "Nazareth St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N12: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300170.42,
+      5039670.02
+     ],
+     [
+      300293.66,
+      5039601.33
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0076",
+    "from_node": "SN12-0048",
+    "to_node": "SN12-0052",
+    "length_m": 32.6,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-R01-3",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300457.09,
+      5039670.0
+     ],
+     [
+      300451.13,
+      5039637.98
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0077",
+    "from_node": "SN12-0048",
+    "to_node": "SN12-0061",
+    "length_m": 210.3,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-R03-1",
+    "name_1912": "Prince St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N17: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300457.09,
+      5039670.0
+     ],
+     [
+      300645.05,
+      5039575.74
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0078",
+    "from_node": "SN12-0049",
+    "to_node": "SN12-0056",
+    "length_m": 70.2,
+    "turn_deg": 0.0,
+    "width_m": 11.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0126",
+    "name_1912": "Ottawa St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300327.14,
+      5039663.08
+     ],
+     [
+      300293.66,
+      5039601.33
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0079",
+    "from_node": "SN12-0049",
+    "to_node": "SN12-0057",
+    "length_m": 133.0,
+    "turn_deg": 0.0,
+    "width_m": 8.8,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0125",
+    "name_1912": "Duke St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N09: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300327.14,
+      5039663.08
+     ],
+     [
+      300444.14,
+      5039599.92
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0080",
+    "from_node": "SN12-0050",
+    "to_node": "SN12-0052",
+    "length_m": 56.2,
+    "turn_deg": 20.9,
+    "width_m": 4.2,
+    "seg_class": "lane",
+    "zone": "halo",
+    "source_edges": "E12-0129",
+    "name_1912": "Spiers Lane",
+    "name_status": "documented",
+    "name_source": "name read (R27-N23: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300398.75,
+      5039655.75
+     ],
+     [
+      300418.75,
+      5039643.75
+     ],
+     [
+      300451.13,
+      5039637.98
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0081",
+    "from_node": "SN12-0051",
+    "to_node": "SN12-0061",
+    "length_m": 70.9,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "ring",
+    "source_edges": "ADD-R27-R04-1",
+    "name_1912": "Common St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300657.22,
+      5039645.61
+     ],
+     [
+      300645.05,
+      5039575.74
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0082",
+    "from_node": "SN12-0052",
+    "to_node": "SN12-0057",
+    "length_m": 38.7,
+    "turn_deg": 0.0,
+    "width_m": 15.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-R01-2",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300451.13,
+      5039637.98
+     ],
+     [
+      300444.14,
+      5039599.92
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0083",
+    "from_node": "SN12-0053",
+    "to_node": "SN12-0058",
+    "length_m": 82.1,
+    "turn_deg": 0.0,
+    "width_m": 19.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0132",
+    "name_1912": "Inspector St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N03: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300036.06,
+      5039628.74
+     ],
+     [
+      300103.2,
+      5039581.53
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0084",
+    "from_node": "SN12-0053",
+    "to_node": "SN12-0060",
+    "length_m": 67.7,
+    "turn_deg": 0.0,
+    "width_m": 10.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0133",
+    "name_1912": "St Paul St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300036.06,
+      5039628.74
+     ],
+     [
+      299992.25,
+      5039577.12
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0085",
+    "from_node": "SN12-0054",
+    "to_node": "SN12-0060",
+    "length_m": 79.3,
+    "turn_deg": 0.0,
+    "width_m": 10.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0134",
+    "name_1912": "Chaboillez St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N02: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299926.36,
+      5039621.27
+     ],
+     [
+      299992.25,
+      5039577.12
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0086",
+    "from_node": "SN12-0054",
+    "to_node": "SN12-0068",
+    "length_m": 121.4,
+    "turn_deg": 0.0,
+    "width_m": 21.7,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0135 E12-0155",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299926.36,
+      5039621.27
+     ],
+     [
+      299878.08,
+      5039509.92
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0087",
+    "from_node": "SN12-0055",
+    "to_node": "SN12-0058",
+    "length_m": 39.0,
+    "turn_deg": 0.0,
+    "width_m": 12.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0136",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300127.37,
+      5039612.09
+     ],
+     [
+      300103.2,
+      5039581.53
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0088",
+    "from_node": "SN12-0055",
+    "to_node": "SN12-0063",
+    "length_m": 153.0,
+    "turn_deg": 0.0,
+    "width_m": 9.9,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0137 E12-0158",
+    "name_1912": "Dalhousie St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N11: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300127.37,
+      5039612.09
+     ],
+     [
+      300261.46,
+      5039538.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0089",
+    "from_node": "SN12-0056",
+    "to_node": "SN12-0063",
+    "length_m": 70.6,
+    "turn_deg": 0.0,
+    "width_m": 12.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0142",
+    "name_1912": "Ottawa St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N39: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300293.66,
+      5039601.33
+     ],
+     [
+      300261.46,
+      5039538.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0090",
+    "from_node": "SN12-0056",
+    "to_node": "SN12-0065",
+    "length_m": 161.3,
+    "turn_deg": 0.0,
+    "width_m": 9.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0143",
+    "name_1912": "Nazareth St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N08: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300293.66,
+      5039601.33
+     ],
+     [
+      300435.28,
+      5039524.11
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0091",
+    "from_node": "SN12-0057",
+    "to_node": "SN12-0065",
+    "length_m": 76.3,
+    "turn_deg": 0.0,
+    "width_m": 11.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0146",
+    "name_1912": "Wellington St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300444.14,
+      5039599.92
+     ],
+     [
+      300435.28,
+      5039524.11
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0092",
+    "from_node": "SN12-0057",
+    "to_node": "SN12-0066",
+    "length_m": 184.6,
+    "turn_deg": 0.0,
+    "width_m": 9.4,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0147",
+    "name_1912": "Duke St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300444.14,
+      5039599.92
+     ],
+     [
+      300605.97,
+      5039511.09
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0093",
+    "from_node": "SN12-0058",
+    "to_node": "SN12-0062",
+    "length_m": 32.7,
+    "turn_deg": 0.0,
+    "width_m": 11.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0148",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300103.2,
+      5039581.53
+     ],
+     [
+      300085.25,
+      5039554.17
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0094",
+    "from_node": "SN12-0059",
+    "to_node": "SN12-0072",
+    "length_m": 114.3,
+    "turn_deg": 55.0,
+    "width_m": 21.1,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0150 E12-0159",
+    "name_1912": "Common St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N28: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300653.58,
+      5039578.42
+     ],
+     [
+      300684.75,
+      5039546.25
+     ],
+     [
+      300671.59,
+      5039478.05
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0095",
+    "from_node": "SN12-0061",
+    "to_node": "SN12-0067",
+    "length_m": 74.8,
+    "turn_deg": 0.0,
+    "width_m": 9.4,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0152",
+    "name_1912": "Brennan St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N25: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300645.05,
+      5039575.74
+     ],
+     [
+      300608.92,
+      5039510.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0096",
+    "from_node": "SN12-0062",
+    "to_node": "SN12-0064",
+    "length_m": 37.5,
+    "turn_deg": 0.0,
+    "width_m": 11.9,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0156a",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300085.25,
+      5039554.17
+     ],
+     [
+      300062.0,
+      5039524.7
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0097",
+    "from_node": "SN12-0062",
+    "to_node": "SN12-0073",
+    "length_m": 160.6,
+    "turn_deg": 0.0,
+    "width_m": 11.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0157",
+    "name_1912": "Ann St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N10: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300085.25,
+      5039554.17
+     ],
+     [
+      300226.57,
+      5039477.82
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0098",
+    "from_node": "SN12-0063",
+    "to_node": "SN12-0073",
+    "length_m": 70.0,
+    "turn_deg": 0.0,
+    "width_m": 12.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0160",
+    "name_1912": "Ottawa St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N06: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300261.46,
+      5039538.5
+     ],
+     [
+      300226.57,
+      5039477.82
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0099",
+    "from_node": "SN12-0063",
+    "to_node": "SN12-0074",
+    "length_m": 150.1,
+    "turn_deg": 0.0,
+    "width_m": 11.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0161",
+    "name_1912": "Dalhousie St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N07: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300261.46,
+      5039538.5
+     ],
+     [
+      300393.45,
+      5039467.09
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0100",
+    "from_node": "SN12-0064",
+    "to_node": "SN12-0070",
+    "length_m": 41.6,
+    "turn_deg": 0.0,
+    "width_m": 3.0,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "ADD-R24-A01-1",
+    "name_1912": "Diamond Court",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300062.0,
+      5039524.7
+     ],
+     [
+      300097.2,
+      5039502.59
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0101",
+    "from_node": "SN12-0064",
+    "to_node": "SN12-0071",
+    "length_m": 34.3,
+    "turn_deg": 0.0,
+    "width_m": 11.9,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0156b",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300062.0,
+      5039524.7
+     ],
+     [
+      300041.7,
+      5039497.06
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0102",
+    "from_node": "SN12-0065",
+    "to_node": "SN12-0075",
+    "length_m": 133.5,
+    "turn_deg": 0.0,
+    "width_m": 10.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0163",
+    "name_1912": "Nazareth St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300435.28,
+      5039524.11
+     ],
+     [
+      300553.08,
+      5039461.31
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0103",
+    "from_node": "SN12-0065",
+    "to_node": "SN12-0076",
+    "length_m": 75.5,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0164",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N02: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300435.28,
+      5039524.11
+     ],
+     [
+      300424.98,
+      5039449.27
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0104",
+    "from_node": "SN12-0066",
+    "to_node": "SN12-0067",
+    "length_m": 3.1,
+    "turn_deg": 0.0,
+    "width_m": 13.4,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0165",
+    "name_1912": "Duke St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300605.97,
+      5039511.09
+     ],
+     [
+      300608.92,
+      5039510.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0105",
+    "from_node": "SN12-0066",
+    "to_node": "SN12-0075",
+    "length_m": 72.6,
+    "turn_deg": 0.0,
+    "width_m": 12.2,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0166",
+    "name_1912": "Brennan St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300605.97,
+      5039511.09
+     ],
+     [
+      300553.08,
+      5039461.31
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0106",
+    "from_node": "SN12-0067",
+    "to_node": "SN12-0072",
+    "length_m": 70.5,
+    "turn_deg": 0.0,
+    "width_m": 10.8,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0167",
+    "name_1912": "Duke St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300608.92,
+      5039510.3
+     ],
+     [
+      300671.59,
+      5039478.05
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0107",
+    "from_node": "SN12-0068",
+    "to_node": "SN12-0069",
+    "length_m": 9.3,
+    "turn_deg": 0.0,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0169",
+    "name_1912": "Colborne St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299878.08,
+      5039509.92
+     ],
+     [
+      299885.33,
+      5039504.04
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0108",
+    "from_node": "SN12-0069",
+    "to_node": "SN12-0077",
+    "length_m": 139.8,
+    "turn_deg": 0.0,
+    "width_m": 8.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0170",
+    "name_1912": "Colborne St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299885.33,
+      5039504.04
+     ],
+     [
+      300007.38,
+      5039435.91
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0109",
+    "from_node": "SN12-0069",
+    "to_node": "SN12-0082",
+    "length_m": 143.0,
+    "turn_deg": 0.0,
+    "width_m": 13.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0171",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299885.33,
+      5039504.04
+     ],
+     [
+      299817.99,
+      5039377.92
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0110",
+    "from_node": "SN12-0071",
+    "to_node": "SN12-0077",
+    "length_m": 70.1,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0172",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300041.7,
+      5039497.06
+     ],
+     [
+      300007.38,
+      5039435.91
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0111",
+    "from_node": "SN12-0071",
+    "to_node": "SN12-0078",
+    "length_m": 170.3,
+    "turn_deg": 0.0,
+    "width_m": 9.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0173",
+    "name_1912": "Shannon St",
+    "name_status": "documented",
+    "name_source": "name read (R24-N09: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300041.7,
+      5039497.06
+     ],
+     [
+      300191.6,
+      5039416.33
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0112",
+    "from_node": "SN12-0072",
+    "to_node": "SN12-0080",
+    "length_m": 73.0,
+    "turn_deg": 0.0,
+    "width_m": 16.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-A08-1 E12-0174 E12-0183",
+    "name_1912": "Common St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N27: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300671.59,
+      5039478.05
+     ],
+     [
+      300655.89,
+      5039406.76
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0113",
+    "from_node": "SN12-0073",
+    "to_node": "SN12-0078",
+    "length_m": 70.7,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0175",
+    "name_1912": "Ottawa St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300226.57,
+      5039477.82
+     ],
+     [
+      300191.6,
+      5039416.33
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0114",
+    "from_node": "SN12-0073",
+    "to_node": "SN12-0081",
+    "length_m": 152.0,
+    "turn_deg": 0.0,
+    "width_m": 13.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0176",
+    "name_1912": "Ann St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N04: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300226.57,
+      5039477.82
+     ],
+     [
+      300359.66,
+      5039404.41
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0115",
+    "from_node": "SN12-0074",
+    "to_node": "SN12-0076",
+    "length_m": 36.2,
+    "turn_deg": 0.0,
+    "width_m": 10.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0177",
+    "name_1912": "Dalhousie St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300393.45,
+      5039467.09
+     ],
+     [
+      300424.98,
+      5039449.27
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0116",
+    "from_node": "SN12-0074",
+    "to_node": "SN12-0081",
+    "length_m": 71.2,
+    "turn_deg": 0.0,
+    "width_m": 6.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0178",
+    "name_1912": "James Lane",
+    "name_status": "documented",
+    "name_source": "name read (R27-N01: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300393.45,
+      5039467.09
+     ],
+     [
+      300359.66,
+      5039404.41
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0117",
+    "from_node": "SN12-0075",
+    "to_node": "SN12-0079",
+    "length_m": 75.4,
+    "turn_deg": 0.0,
+    "width_m": 12.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0180",
+    "name_1912": "Brennan St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N11: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300553.08,
+      5039461.31
+     ],
+     [
+      300497.81,
+      5039410.02
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0118",
+    "from_node": "SN12-0075",
+    "to_node": "SN12-0080",
+    "length_m": 116.4,
+    "turn_deg": 0.0,
+    "width_m": 10.8,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0181",
+    "name_1912": "Nazareth St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N16: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300553.08,
+      5039461.31
+     ],
+     [
+      300655.89,
+      5039406.76
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0119",
+    "from_node": "SN12-0076",
+    "to_node": "SN12-0079",
+    "length_m": 82.7,
+    "turn_deg": 0.0,
+    "width_m": 10.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0185",
+    "name_1912": "Dalhousie St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300424.98,
+      5039449.27
+     ],
+     [
+      300497.81,
+      5039410.02
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0120",
+    "from_node": "SN12-0076",
+    "to_node": "SN12-0083",
+    "length_m": 72.7,
+    "turn_deg": 0.0,
+    "width_m": 12.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0186",
+    "name_1912": "Wellington St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300424.98,
+      5039449.27
+     ],
+     [
+      300412.5,
+      5039377.6
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0121",
+    "from_node": "SN12-0077",
+    "to_node": "SN12-0084",
+    "length_m": 69.4,
+    "turn_deg": 0.0,
+    "width_m": 9.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0187",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300007.38,
+      5039435.91
+     ],
+     [
+      299977.4,
+      5039373.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0122",
+    "from_node": "SN12-0077",
+    "to_node": "SN12-0087",
+    "length_m": 172.5,
+    "turn_deg": 0.0,
+    "width_m": 8.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0188",
+    "name_1912": "Colborne St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N14: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300007.38,
+      5039435.91
+     ],
+     [
+      300158.86,
+      5039353.4
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0123",
+    "from_node": "SN12-0078",
+    "to_node": "SN12-0087",
+    "length_m": 70.9,
+    "turn_deg": 0.0,
+    "width_m": 10.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0189",
+    "name_1912": "Ottawa St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300191.6,
+      5039416.33
+     ],
+     [
+      300158.86,
+      5039353.4
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0124",
+    "from_node": "SN12-0078",
+    "to_node": "SN12-0092",
+    "length_m": 238.4,
+    "turn_deg": 0.0,
+    "width_m": 10.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0190a",
+    "name_1912": "Shannon St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N03: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300191.6,
+      5039416.33
+     ],
+     [
+      300402.12,
+      5039304.43
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0125",
+    "from_node": "SN12-0079",
+    "to_node": "SN12-0085",
+    "length_m": 88.3,
+    "turn_deg": 0.0,
+    "width_m": 10.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0193",
+    "name_1912": "Dalhousie St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N14: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300497.81,
+      5039410.02
+     ],
+     [
+      300576.24,
+      5039369.39
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0126",
+    "from_node": "SN12-0079",
+    "to_node": "SN12-0086",
+    "length_m": 77.2,
+    "turn_deg": 0.0,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0194",
+    "name_1912": "Brennan St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300497.81,
+      5039410.02
+     ],
+     [
+      300441.36,
+      5039357.42
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0127",
+    "from_node": "SN12-0080",
+    "to_node": "SN12-0088",
+    "length_m": 73.5,
+    "turn_deg": 0.0,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-R12-1",
+    "name_1912": "Common St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N40: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300655.89,
+      5039406.76
+     ],
+     [
+      300640.63,
+      5039334.83
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0128",
+    "from_node": "SN12-0081",
+    "to_node": "SN12-0083",
+    "length_m": 59.3,
+    "turn_deg": 0.0,
+    "width_m": 12.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0195",
+    "name_1912": "Ann St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300359.66,
+      5039404.41
+     ],
+     [
+      300412.5,
+      5039377.6
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0129",
+    "from_node": "SN12-0082",
+    "to_node": "SN12-0090",
+    "length_m": 145.2,
+    "turn_deg": 0.0,
+    "width_m": 8.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0202 E12-0218",
+    "name_1912": "Murray St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299817.99,
+      5039377.92
+     ],
+     [
+      299945.89,
+      5039309.15
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0130",
+    "from_node": "SN12-0082",
+    "to_node": "SN12-0091",
+    "length_m": 81.5,
+    "turn_deg": 0.0,
+    "width_m": 20.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0203",
+    "name_1912": "Notre Dame St West",
+    "name_status": "documented",
+    "name_source": "name read (R23-N12: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299817.99,
+      5039377.92
+     ],
+     [
+      299778.91,
+      5039306.35
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0131",
+    "from_node": "SN12-0083",
+    "to_node": "SN12-0086",
+    "length_m": 35.2,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R27-A07-1",
+    "name_1912": "Ann St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300412.5,
+      5039377.6
+     ],
+     [
+      300441.36,
+      5039357.42
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0132",
+    "from_node": "SN12-0083",
+    "to_node": "SN12-0092",
+    "length_m": 73.9,
+    "turn_deg": 0.0,
+    "width_m": 18.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R27-R10-3",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300412.5,
+      5039377.6
+     ],
+     [
+      300402.12,
+      5039304.43
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0133",
+    "from_node": "SN12-0084",
+    "to_node": "SN12-0090",
+    "length_m": 71.5,
+    "turn_deg": 0.0,
+    "width_m": 9.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0204",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299977.4,
+      5039373.3
+     ],
+     [
+      299945.89,
+      5039309.15
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0134",
+    "from_node": "SN12-0084",
+    "to_node": "SN12-0094",
+    "length_m": 171.8,
+    "turn_deg": 0.0,
+    "width_m": 10.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0205",
+    "name_1912": "Young St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299977.4,
+      5039373.3
+     ],
+     [
+      300128.0,
+      5039290.71
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0135",
+    "from_node": "SN12-0085",
+    "to_node": "SN12-0088",
+    "length_m": 73.1,
+    "turn_deg": 0.0,
+    "width_m": 10.4,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0207",
+    "name_1912": "Dalhousie St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300576.24,
+      5039369.39
+     ],
+     [
+      300640.63,
+      5039334.83
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0136",
+    "from_node": "SN12-0085",
+    "to_node": "SN12-0093",
+    "length_m": 67.2,
+    "turn_deg": 0.0,
+    "width_m": 11.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0206",
+    "name_1912": "Hughes Lane",
+    "name_status": "documented",
+    "name_source": "name read (R27-N13: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300576.24,
+      5039369.39
+     ],
+     [
+      300564.12,
+      5039303.25
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0137",
+    "from_node": "SN12-0086",
+    "to_node": "SN12-0093",
+    "length_m": 134.2,
+    "turn_deg": 0.0,
+    "width_m": 11.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0206",
+    "name_1912": "Ann St",
+    "name_status": "documented",
+    "name_source": "name read (R27-N12: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300441.36,
+      5039357.42
+     ],
+     [
+      300564.12,
+      5039303.25
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0138",
+    "from_node": "SN12-0087",
+    "to_node": "SN12-0094",
+    "length_m": 69.9,
+    "turn_deg": 0.0,
+    "width_m": 11.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0209",
+    "name_1912": "Ottawa St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300158.86,
+      5039353.4
+     ],
+     [
+      300128.0,
+      5039290.71
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0139",
+    "from_node": "SN12-0087",
+    "to_node": "SN12-0096",
+    "length_m": 173.1,
+    "turn_deg": 0.0,
+    "width_m": 10.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0210",
+    "name_1912": "Colborne St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N18: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300158.86,
+      5039353.4
+     ],
+     [
+      300310.97,
+      5039270.84
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0140",
+    "from_node": "SN12-0088",
+    "to_node": "SN12-0098",
+    "length_m": 81.7,
+    "turn_deg": 0.0,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "ADD-R27-R11-1",
+    "name_1912": "Common St",
+    "name_status": "inferred",
+    "name_source": "traced street, name not printed here",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300640.63,
+      5039334.83
+     ],
+     [
+      300622.19,
+      5039255.2
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0141",
+    "from_node": "SN12-0089",
+    "to_node": "SN12-0095",
+    "length_m": 40.4,
+    "turn_deg": 0.0,
+    "width_m": 5.8,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0219",
+    "name_1912": "Lansdowne Ave",
+    "name_status": "documented",
+    "name_source": "name read (R23-N11: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299837.25,
+      5039321.25
+     ],
+     [
+      299815.43,
+      5039287.22
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0142",
+    "from_node": "SN12-0090",
+    "to_node": "SN12-0099",
+    "length_m": 73.5,
+    "turn_deg": 0.0,
+    "width_m": 9.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0220",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299945.89,
+      5039309.15
+     ],
+     [
+      299916.08,
+      5039241.92
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0143",
+    "from_node": "SN12-0090",
+    "to_node": "SN12-0102",
+    "length_m": 168.7,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0221",
+    "name_1912": "Murray St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299945.89,
+      5039309.15
+     ],
+     [
+      300094.08,
+      5039228.43
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0144",
+    "from_node": "SN12-0091",
+    "to_node": "SN12-0095",
+    "length_m": 41.2,
+    "turn_deg": 0.0,
+    "width_m": 5.2,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0222",
+    "name_1912": "Eleanor St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299778.91,
+      5039306.35
+     ],
+     [
+      299815.43,
+      5039287.22
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0145",
+    "from_node": "SN12-0091",
+    "to_node": "SN12-0103",
+    "length_m": 95.2,
+    "turn_deg": 0.0,
+    "width_m": 20.1,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0223 E12-0230",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299778.91,
+      5039306.35
+     ],
+     [
+      299731.71,
+      5039223.62
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0146",
+    "from_node": "SN12-0092",
+    "to_node": "SN12-0101",
+    "length_m": 73.8,
+    "turn_deg": 0.0,
+    "width_m": 18.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R27-R10-2",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300402.12,
+      5039304.43
+     ],
+     [
+      300393.99,
+      5039231.03
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0147",
+    "from_node": "SN12-0094",
+    "to_node": "SN12-0102",
+    "length_m": 70.9,
+    "turn_deg": 0.0,
+    "width_m": 10.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0225",
+    "name_1912": "Ottawa St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300128.0,
+      5039290.71
+     ],
+     [
+      300094.08,
+      5039228.43
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0148",
+    "from_node": "SN12-0094",
+    "to_node": "SN12-0104",
+    "length_m": 169.2,
+    "turn_deg": 0.0,
+    "width_m": 9.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0226",
+    "name_1912": "Young St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N17: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300128.0,
+      5039290.71
+     ],
+     [
+      300276.58,
+      5039209.66
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0149",
+    "from_node": "SN12-0095",
+    "to_node": "SN12-0097",
+    "length_m": 32.8,
+    "turn_deg": 0.0,
+    "width_m": 4.2,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0228",
+    "name_1912": "Eleanor St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N42: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299815.43,
+      5039287.22
+     ],
+     [
+      299842.88,
+      5039269.27
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0150",
+    "from_node": "SN12-0096",
+    "to_node": "SN12-0101",
+    "length_m": 92.1,
+    "turn_deg": 0.0,
+    "width_m": 13.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0237",
+    "name_1912": "Colborne St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N10: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300310.97,
+      5039270.84
+     ],
+     [
+      300393.99,
+      5039231.03
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0151",
+    "from_node": "SN12-0096",
+    "to_node": "SN12-0104",
+    "length_m": 70.2,
+    "turn_deg": 0.0,
+    "width_m": 16.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0238",
+    "name_1912": "Smith St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N08: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300310.97,
+      5039270.84
+     ],
+     [
+      300276.58,
+      5039209.66
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0152",
+    "from_node": "SN12-0097",
+    "to_node": "SN12-0100",
+    "length_m": 72.2,
+    "turn_deg": 0.0,
+    "width_m": 8.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R23-R03-1",
+    "name_1912": "Eleanor St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299842.88,
+      5039269.27
+     ],
+     [
+      299905.78,
+      5039233.8
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0153",
+    "from_node": "SN12-0097",
+    "to_node": "SN12-0106",
+    "length_m": 101.1,
+    "turn_deg": 0.0,
+    "width_m": 8.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0235 E12-0255",
+    "name_1912": "Barre St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299842.88,
+      5039269.27
+     ],
+     [
+      299793.99,
+      5039180.82
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0154",
+    "from_node": "SN12-0098",
+    "to_node": "SN12-0101",
+    "length_m": 229.5,
+    "turn_deg": 0.0,
+    "width_m": 16.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0240 E12-0241 E12-0244",
+    "name_1912": "Colborne St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N11: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300622.19,
+      5039255.2
+     ],
+     [
+      300393.99,
+      5039231.03
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0155",
+    "from_node": "SN12-0099",
+    "to_node": "SN12-0107",
+    "length_m": 163.3,
+    "turn_deg": 0.0,
+    "width_m": 10.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0243",
+    "name_1912": "Eleanor St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N10: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299916.08,
+      5039241.92
+     ],
+     [
+      300060.79,
+      5039166.2
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0156",
+    "from_node": "SN12-0100",
+    "to_node": "SN12-0108",
+    "length_m": 89.8,
+    "turn_deg": 0.0,
+    "width_m": 10.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0246",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N13: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299905.78,
+      5039233.8
+     ],
+     [
+      299868.99,
+      5039151.85
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0157",
+    "from_node": "SN12-0101",
+    "to_node": "SN12-0111",
+    "length_m": 85.5,
+    "turn_deg": 0.0,
+    "width_m": 15.5,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0247",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N12: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300393.99,
+      5039231.03
+     ],
+     [
+      300388.38,
+      5039145.71
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0158",
+    "from_node": "SN12-0102",
+    "to_node": "SN12-0107",
+    "length_m": 70.6,
+    "turn_deg": 0.0,
+    "width_m": 11.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0248 E12-0261",
+    "name_1912": "Ottawa St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N15: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300094.08,
+      5039228.43
+     ],
+     [
+      300060.79,
+      5039166.2
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0159",
+    "from_node": "SN12-0102",
+    "to_node": "SN12-0110",
+    "length_m": 171.2,
+    "turn_deg": 0.0,
+    "width_m": 11.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0249",
+    "name_1912": "Murray St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N16: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300094.08,
+      5039228.43
+     ],
+     [
+      300244.7,
+      5039147.07
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0160",
+    "from_node": "SN12-0103",
+    "to_node": "SN12-0106",
+    "length_m": 75.6,
+    "turn_deg": 0.0,
+    "width_m": 14.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0250",
+    "name_1912": "McCord St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299731.71,
+      5039223.62
+     ],
+     [
+      299793.99,
+      5039180.82
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0161",
+    "from_node": "SN12-0103",
+    "to_node": "SN12-0109",
+    "length_m": 87.2,
+    "turn_deg": 0.0,
+    "width_m": 20.2,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0251",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299731.71,
+      5039223.62
+     ],
+     [
+      299686.69,
+      5039148.92
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0162",
+    "from_node": "SN12-0104",
+    "to_node": "SN12-0105",
+    "length_m": 20.4,
+    "turn_deg": 0.0,
+    "width_m": 3.6,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0253",
+    "name_1912": "Smith St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300276.58,
+      5039209.66
+     ],
+     [
+      300263.75,
+      5039193.75
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0163",
+    "from_node": "SN12-0104",
+    "to_node": "SN12-0111",
+    "length_m": 128.8,
+    "turn_deg": 0.0,
+    "width_m": 10.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0252 E12-0256",
+    "name_1912": "Young St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N09: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300276.58,
+      5039209.66
+     ],
+     [
+      300388.38,
+      5039145.71
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0164",
+    "from_node": "SN12-0106",
+    "to_node": "SN12-0108",
+    "length_m": 80.4,
+    "turn_deg": 0.0,
+    "width_m": 13.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0258",
+    "name_1912": "McCord St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299793.99,
+      5039180.82
+     ],
+     [
+      299868.99,
+      5039151.85
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0165",
+    "from_node": "SN12-0106",
+    "to_node": "SN12-0115",
+    "length_m": 83.1,
+    "turn_deg": 0.0,
+    "width_m": 12.9,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0259 E12-0272",
+    "name_1912": "Barre St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299793.99,
+      5039180.82
+     ],
+     [
+      299752.38,
+      5039108.89
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0166",
+    "from_node": "SN12-0107",
+    "to_node": "SN12-0113",
+    "length_m": 48.2,
+    "turn_deg": 0.0,
+    "width_m": 13.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0263",
+    "name_1912": "Ottawa St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300060.79,
+      5039166.2
+     ],
+     [
+      300037.06,
+      5039124.29
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0167",
+    "from_node": "SN12-0108",
+    "to_node": "SN12-0112",
+    "length_m": 46.6,
+    "turn_deg": 0.0,
+    "width_m": 16.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0264",
+    "name_1912": "McCord St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299868.99,
+      5039151.85
+     ],
+     [
+      299915.12,
+      5039145.46
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0168",
+    "from_node": "SN12-0108",
+    "to_node": "SN12-0116",
+    "length_m": 59.6,
+    "turn_deg": 0.0,
+    "width_m": 19.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0265",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299868.99,
+      5039151.85
+     ],
+     [
+      299844.92,
+      5039097.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0169",
+    "from_node": "SN12-0109",
+    "to_node": "SN12-0115",
+    "length_m": 76.9,
+    "turn_deg": 0.0,
+    "width_m": 8.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R23-R04-1",
+    "name_1912": "Aqueduct St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N40: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299686.69,
+      5039148.92
+     ],
+     [
+      299752.38,
+      5039108.89
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0170",
+    "from_node": "SN12-0109",
+    "to_node": "SN12-0121",
+    "length_m": 107.1,
+    "turn_deg": 0.0,
+    "width_m": 18.6,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0268",
+    "name_1912": "Notre Dame St West",
+    "name_status": "documented",
+    "name_source": "name read (R23-N02: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299686.69,
+      5039148.92
+     ],
+     [
+      299632.6,
+      5039056.48
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0171",
+    "from_node": "SN12-0110",
+    "to_node": "SN12-0117",
+    "length_m": 53.8,
+    "turn_deg": 0.0,
+    "width_m": 9.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0269",
+    "name_1912": "Smith St",
+    "name_status": "inferred",
+    "name_source": "read as the same street, name not printed here (R24-N40)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300244.7,
+      5039147.07
+     ],
+     [
+      300230.13,
+      5039095.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0172",
+    "from_node": "SN12-0110",
+    "to_node": "SN12-0120",
+    "length_m": 145.2,
+    "turn_deg": 27.2,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0270",
+    "name_1912": "Murray St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N06: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300244.7,
+      5039147.07
+     ],
+     [
+      300340.25,
+      5039091.75
+     ],
+     [
+      300359.06,
+      5039062.52
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0173",
+    "from_node": "SN12-0111",
+    "to_node": "SN12-0120",
+    "length_m": 88.2,
+    "turn_deg": 0.0,
+    "width_m": 22.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0266",
+    "name_1912": "Wellington St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N13: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300388.38,
+      5039145.71
+     ],
+     [
+      300359.06,
+      5039062.52
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0174",
+    "from_node": "SN12-0112",
+    "to_node": "SN12-0113",
+    "length_m": 123.8,
+    "turn_deg": 0.0,
+    "width_m": 16.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0273",
+    "name_1912": "McCord St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N23: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299915.12,
+      5039145.46
+     ],
+     [
+      300037.06,
+      5039124.29
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0175",
+    "from_node": "SN12-0112",
+    "to_node": "SN12-0123",
+    "length_m": 127.5,
+    "turn_deg": 0.0,
+    "width_m": 17.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0274",
+    "name_1912": "Seminary St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N43: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299915.12,
+      5039145.46
+     ],
+     [
+      299995.72,
+      5039046.61
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0176",
+    "from_node": "SN12-0113",
+    "to_node": "SN12-0114",
+    "length_m": 15.0,
+    "turn_deg": 0.0,
+    "width_m": 18.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0275",
+    "name_1912": "McCord St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300037.06,
+      5039124.29
+     ],
+     [
+      300051.31,
+      5039119.66
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0177",
+    "from_node": "SN12-0113",
+    "to_node": "SN12-0123",
+    "length_m": 88.0,
+    "turn_deg": 0.0,
+    "width_m": 14.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0276",
+    "name_1912": "Ottawa St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300037.06,
+      5039124.29
+     ],
+     [
+      299995.72,
+      5039046.61
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0178",
+    "from_node": "SN12-0114",
+    "to_node": "SN12-0117",
+    "length_m": 180.5,
+    "turn_deg": 0.0,
+    "width_m": 14.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0277",
+    "name_1912": "McCord St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N22: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300051.31,
+      5039119.66
+     ],
+     [
+      300230.13,
+      5039095.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0179",
+    "from_node": "SN12-0114",
+    "to_node": "SN12-0129",
+    "length_m": 155.8,
+    "turn_deg": 0.0,
+    "width_m": 12.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0278",
+    "name_1912": "St Augustin St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N21: printed on the plate or listed for 1912)",
+    "name_alt": "Rioux St",
+    "name_alt_source": "alias (R23-L01)",
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300051.31,
+      5039119.66
+     ],
+     [
+      300148.92,
+      5038998.17
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0180",
+    "from_node": "SN12-0115",
+    "to_node": "SN12-0122",
+    "length_m": 65.1,
+    "turn_deg": 0.0,
+    "width_m": 12.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0280",
+    "name_1912": "Barre St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N06: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299752.38,
+      5039108.89
+     ],
+     [
+      299718.92,
+      5039053.01
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0181",
+    "from_node": "SN12-0116",
+    "to_node": "SN12-0130",
+    "length_m": 134.5,
+    "turn_deg": 0.0,
+    "width_m": 16.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0282",
+    "name_1912": "St Thomas St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299844.92,
+      5039097.3
+     ],
+     [
+      299931.92,
+      5038994.78
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0182",
+    "from_node": "SN12-0116",
+    "to_node": "SN12-0145",
+    "length_m": 312.6,
+    "turn_deg": 0.0,
+    "width_m": 17.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0283",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N09: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299844.92,
+      5039097.3
+     ],
+     [
+      299714.55,
+      5038813.19
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0183",
+    "from_node": "SN12-0117",
+    "to_node": "SN12-0118",
+    "length_m": 15.2,
+    "turn_deg": 0.0,
+    "width_m": 23.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0281a",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300230.13,
+      5039095.3
+     ],
+     [
+      300243.05,
+      5039087.22
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0184",
+    "from_node": "SN12-0118",
+    "to_node": "SN12-0120",
+    "length_m": 119.9,
+    "turn_deg": 23.6,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A01-1",
+    "name_1912": "McCord St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300243.05,
+      5039087.22
+     ],
+     [
+      300266.29,
+      5039088.54
+     ],
+     [
+      300317.14,
+      5039078.07
+     ],
+     [
+      300359.06,
+      5039062.52
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0185",
+    "from_node": "SN12-0118",
+    "to_node": "SN12-0125",
+    "length_m": 58.2,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A02-2a",
+    "name_1912": "Gallery Square (west side)",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300243.05,
+      5039087.22
+     ],
+     [
+      300264.55,
+      5039033.1
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0186",
+    "from_node": "SN12-0118",
+    "to_node": "SN12-0129",
+    "length_m": 129.6,
+    "turn_deg": 0.0,
+    "width_m": 18.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0285",
+    "name_1912": "Basin St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N05: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300243.05,
+      5039087.22
+     ],
+     [
+      300148.92,
+      5038998.17
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0187",
+    "from_node": "SN12-0119",
+    "to_node": "SN12-0120",
+    "length_m": 63.8,
+    "turn_deg": 19.0,
+    "width_m": 8.9,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0287",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300422.08,
+      5039062.58
+     ],
+     [
+      300380.25,
+      5039067.25
+     ],
+     [
+      300359.06,
+      5039062.52
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0188",
+    "from_node": "SN12-0120",
+    "to_node": "SN12-0133",
+    "length_m": 116.6,
+    "turn_deg": 0.0,
+    "width_m": 16.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A03-3",
+    "name_1912": "Wellington St",
+    "name_status": "inferred",
+    "name_source": "traced street, name not printed here",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300359.06,
+      5039062.52
+     ],
+     [
+      300302.58,
+      5038960.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0189",
+    "from_node": "SN12-0121",
+    "to_node": "SN12-0127",
+    "length_m": 76.8,
+    "turn_deg": 0.0,
+    "width_m": 6.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0292",
+    "name_1912": "Versailles St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N04: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299632.6,
+      5039056.48
+     ],
+     [
+      299696.73,
+      5039014.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0190",
+    "from_node": "SN12-0121",
+    "to_node": "SN12-0128",
+    "length_m": 63.6,
+    "turn_deg": 0.0,
+    "width_m": 16.8,
+    "seg_class": "street",
+    "zone": "halo",
+    "source_edges": "E12-0293",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299632.6,
+      5039056.48
+     ],
+     [
+      299599.76,
+      5039002.03
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0191",
+    "from_node": "SN12-0122",
+    "to_node": "SN12-0126",
+    "length_m": 55.2,
+    "turn_deg": 0.0,
+    "width_m": 3.6,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0294",
+    "name_1912": "Garreau Lane",
+    "name_status": "documented",
+    "name_source": "name read (R23-N07: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299718.92,
+      5039053.01
+     ],
+     [
+      299767.75,
+      5039027.25
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0192",
+    "from_node": "SN12-0122",
+    "to_node": "SN12-0127",
+    "length_m": 44.6,
+    "turn_deg": 0.0,
+    "width_m": 9.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0295",
+    "name_1912": "Barre St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299718.92,
+      5039053.01
+     ],
+     [
+      299696.73,
+      5039014.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0193",
+    "from_node": "SN12-0123",
+    "to_node": "SN12-0124",
+    "length_m": 9.4,
+    "turn_deg": 0.0,
+    "width_m": 22.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0296",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299995.72,
+      5039046.61
+     ],
+     [
+      299997.34,
+      5039037.39
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0194",
+    "from_node": "SN12-0124",
+    "to_node": "SN12-0130",
+    "length_m": 78.1,
+    "turn_deg": 0.0,
+    "width_m": 22.1,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0300 E12-0309",
+    "name_1912": "Ottawa St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299997.34,
+      5039037.39
+     ],
+     [
+      299931.92,
+      5038994.78
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0195",
+    "from_node": "SN12-0124",
+    "to_node": "SN12-0137",
+    "length_m": 130.6,
+    "turn_deg": 0.0,
+    "width_m": 24.5,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A07-1a E12-0301",
+    "name_1912": "Seminary St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N26: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299997.34,
+      5039037.39
+     ],
+     [
+      300086.45,
+      5038941.95
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0196",
+    "from_node": "SN12-0125",
+    "to_node": "SN12-0132",
+    "length_m": 76.6,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A02-2ba",
+    "name_1912": "Gallery Square (west side)",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300264.55,
+      5039033.1
+     ],
+     [
+      300297.15,
+      5038963.83
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0197",
+    "from_node": "SN12-0125",
+    "to_node": "SN12-0141",
+    "length_m": 194.9,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A05-1",
+    "name_1912": "Olier St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N02: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300264.55,
+      5039033.1
+     ],
+     [
+      300119.03,
+      5038903.39
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0198",
+    "from_node": "SN12-0127",
+    "to_node": "SN12-0134",
+    "length_m": 64.7,
+    "turn_deg": 0.0,
+    "width_m": 9.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0305",
+    "name_1912": "Barre St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299696.73,
+      5039014.3
+     ],
+     [
+      299662.22,
+      5038959.55
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0199",
+    "from_node": "SN12-0128",
+    "to_node": "SN12-0131",
+    "length_m": 44.6,
+    "turn_deg": 0.0,
+    "width_m": 9.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R23-R02-1",
+    "name_1912": "Lusignan St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299599.76,
+      5039002.03
+     ],
+     [
+      299635.98,
+      5038975.93
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0200",
+    "from_node": "SN12-0128",
+    "to_node": "SN12-0140",
+    "length_m": 103.4,
+    "turn_deg": 0.0,
+    "width_m": 13.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0312",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299599.76,
+      5039002.03
+     ],
+     [
+      299547.04,
+      5038913.05
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0201",
+    "from_node": "SN12-0129",
+    "to_node": "SN12-0137",
+    "length_m": 84.0,
+    "turn_deg": 0.0,
+    "width_m": 18.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R23-A01-1 E12-0313",
+    "name_1912": "Basin St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N04: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300148.92,
+      5038998.17
+     ],
+     [
+      300086.45,
+      5038941.95
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0202",
+    "from_node": "SN12-0130",
+    "to_node": "SN12-0143",
+    "length_m": 157.7,
+    "turn_deg": 0.0,
+    "width_m": 15.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0320",
+    "name_1912": "St Thomas St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N25: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299931.92,
+      5038994.78
+     ],
+     [
+      300032.25,
+      5038873.12
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0203",
+    "from_node": "SN12-0130",
+    "to_node": "SN12-0145",
+    "length_m": 283.2,
+    "turn_deg": 0.0,
+    "width_m": 17.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R23-R01-2",
+    "name_1912": "Ottawa St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N24: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299931.92,
+      5038994.78
+     ],
+     [
+      299714.55,
+      5038813.19
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0204",
+    "from_node": "SN12-0131",
+    "to_node": "SN12-0134",
+    "length_m": 30.9,
+    "turn_deg": 0.0,
+    "width_m": 9.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R23-R02-2",
+    "name_1912": "Lusignan St",
+    "name_status": "documented",
+    "name_source": "name read (R23-N03: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299635.98,
+      5038975.93
+     ],
+     [
+      299662.22,
+      5038959.55
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0205",
+    "from_node": "SN12-0131",
+    "to_node": "SN12-0136",
+    "length_m": 39.5,
+    "turn_deg": 0.0,
+    "width_m": 4.2,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0325",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299635.98,
+      5038975.93
+     ],
+     [
+      299615.25,
+      5038942.25
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0206",
+    "from_node": "SN12-0132",
+    "to_node": "SN12-0133",
+    "length_m": 6.4,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A02-2bb",
+    "name_1912": "Gallery Square (west side)",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300297.15,
+      5038963.83
+     ],
+     [
+      300302.58,
+      5038960.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0207",
+    "from_node": "SN12-0132",
+    "to_node": "SN12-0144",
+    "length_m": 178.6,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A06-1",
+    "name_1912": "St Leon St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N03: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300297.15,
+      5038963.83
+     ],
+     [
+      300149.11,
+      5038863.91
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0208",
+    "from_node": "SN12-0134",
+    "to_node": "SN12-0135",
+    "length_m": 12.9,
+    "turn_deg": 0.0,
+    "width_m": 10.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R23-A02-1",
+    "name_1912": "Barre St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299662.22,
+      5038959.55
+     ],
+     [
+      299656.41,
+      5038948.01
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0209",
+    "from_node": "SN12-0135",
+    "to_node": "SN12-0138",
+    "length_m": 25.3,
+    "turn_deg": 0.0,
+    "width_m": 9.3,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0330",
+    "name_1912": "Barre St",
+    "name_status": "inferred",
+    "name_source": "read as the same street, name not printed here (R23-N41)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299656.41,
+      5038948.01
+     ],
+     [
+      299642.62,
+      5038926.75
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0210",
+    "from_node": "SN12-0135",
+    "to_node": "SN12-0139",
+    "length_m": 38.3,
+    "turn_deg": 0.0,
+    "width_m": 8.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0331",
+    "name_1912": "Pichette Lane",
+    "name_status": "documented",
+    "name_source": "name read (R23-N08: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299656.41,
+      5038948.01
+     ],
+     [
+      299687.42,
+      5038925.58
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0211",
+    "from_node": "SN12-0137",
+    "to_node": "SN12-0141",
+    "length_m": 50.5,
+    "turn_deg": 0.0,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A07-1b",
+    "name_1912": "Seminary St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300086.45,
+      5038941.95
+     ],
+     [
+      300119.03,
+      5038903.39
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0212",
+    "from_node": "SN12-0140",
+    "to_node": "SN12-0142",
+    "length_m": 16.5,
+    "turn_deg": 0.0,
+    "width_m": 13.5,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0336",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299547.04,
+      5038913.05
+     ],
+     [
+      299538.58,
+      5038898.92
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0213",
+    "from_node": "SN12-0140",
+    "to_node": "SN12-0147",
+    "length_m": 191.1,
+    "turn_deg": 0.0,
+    "width_m": 18.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0337",
+    "name_1912": "Guy St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N09: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299547.04,
+      5038913.05
+     ],
+     [
+      299705.17,
+      5038805.81
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0214",
+    "from_node": "SN12-0141",
+    "to_node": "SN12-0144",
+    "length_m": 49.6,
+    "turn_deg": 0.0,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R26-A07-2",
+    "name_1912": "Seminary St",
+    "name_status": "documented",
+    "name_source": "name read (R26-N01: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      300119.03,
+      5038903.39
+     ],
+     [
+      300149.11,
+      5038863.91
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0215",
+    "from_node": "SN12-0142",
+    "to_node": "SN12-0146",
+    "length_m": 100.0,
+    "turn_deg": 0.0,
+    "width_m": 11.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0339",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299538.58,
+      5038898.92
+     ],
+     [
+      299493.01,
+      5038809.89
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0216",
+    "from_node": "SN12-0145",
+    "to_node": "SN12-0147",
+    "length_m": 11.9,
+    "turn_deg": 0.0,
+    "width_m": 17.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R23-R01-1",
+    "name_1912": "Ottawa St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299714.55,
+      5038813.19
+     ],
+     [
+      299705.17,
+      5038805.81
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0217",
+    "from_node": "SN12-0146",
+    "to_node": "SN12-0148",
+    "length_m": 99.0,
+    "turn_deg": 0.0,
+    "width_m": 15.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0350",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299493.01,
+      5038809.89
+     ],
+     [
+      299445.66,
+      5038722.93
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0218",
+    "from_node": "SN12-0146",
+    "to_node": "SN12-0149",
+    "length_m": 174.8,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0351",
+    "name_1912": "Richmond St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N08: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299493.01,
+      5038809.89
+     ],
+     [
+      299639.68,
+      5038714.88
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0219",
+    "from_node": "SN12-0148",
+    "to_node": "SN12-0151",
+    "length_m": 124.4,
+    "turn_deg": 0.0,
+    "width_m": 12.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0356",
+    "name_1912": "St Martin St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N07: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299445.66,
+      5038722.93
+     ],
+     [
+      299547.22,
+      5038651.03
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0220",
+    "from_node": "SN12-0148",
+    "to_node": "SN12-0152",
+    "length_m": 85.7,
+    "turn_deg": 0.0,
+    "width_m": 18.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0357",
+    "name_1912": "Notre Dame St West",
+    "name_status": "documented",
+    "name_source": "name read (R22-N05: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299445.66,
+      5038722.93
+     ],
+     [
+      299409.91,
+      5038645.07
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0221",
+    "from_node": "SN12-0149",
+    "to_node": "SN12-0150",
+    "length_m": 68.3,
+    "turn_deg": 0.0,
+    "width_m": 17.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0360",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N11: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299639.68,
+      5038714.88
+     ],
+     [
+      299600.62,
+      5038658.81
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0222",
+    "from_node": "SN12-0149",
+    "to_node": "SN12-0153",
+    "length_m": 108.2,
+    "turn_deg": 0.0,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R22-R01-1",
+    "name_1912": "Richmond St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N14: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299639.68,
+      5038714.88
+     ],
+     [
+      299707.97,
+      5038630.95
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0223",
+    "from_node": "SN12-0150",
+    "to_node": "SN12-0154",
+    "length_m": 35.8,
+    "turn_deg": 0.0,
+    "width_m": 18.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0366",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299600.62,
+      5038658.81
+     ],
+     [
+      299580.78,
+      5038629.01
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0224",
+    "from_node": "SN12-0150",
+    "to_node": "SN12-0160",
+    "length_m": 91.3,
+    "turn_deg": 0.0,
+    "width_m": 6.9,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0365 E12-0371",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299600.62,
+      5038658.81
+     ],
+     [
+      299661.38,
+      5038590.69
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0225",
+    "from_node": "SN12-0151",
+    "to_node": "SN12-0154",
+    "length_m": 40.1,
+    "turn_deg": 0.0,
+    "width_m": 13.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0367",
+    "name_1912": "St Martin St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299547.22,
+      5038651.03
+     ],
+     [
+      299580.78,
+      5038629.01
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0226",
+    "from_node": "SN12-0151",
+    "to_node": "SN12-0162",
+    "length_m": 82.1,
+    "turn_deg": 0.0,
+    "width_m": 3.6,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0368",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299547.22,
+      5038651.03
+     ],
+     [
+      299500.48,
+      5038583.56
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0227",
+    "from_node": "SN12-0152",
+    "to_node": "SN12-0155",
+    "length_m": 42.7,
+    "turn_deg": 0.0,
+    "width_m": 14.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0369",
+    "name_1912": "Seigneurs St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299409.91,
+      5038645.07
+     ],
+     [
+      299445.03,
+      5038620.72
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0228",
+    "from_node": "SN12-0152",
+    "to_node": "SN12-0168",
+    "length_m": 97.9,
+    "turn_deg": 0.0,
+    "width_m": 22.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0370 E12-0401",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299409.91,
+      5038645.07
+     ],
+     [
+      299372.38,
+      5038554.69
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0229",
+    "from_node": "SN12-0153",
+    "to_node": "SN12-0160",
+    "length_m": 61.6,
+    "turn_deg": 0.0,
+    "width_m": 17.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0373 E12-0380",
+    "name_1912": "Basin St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N13: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299707.97,
+      5038630.95
+     ],
+     [
+      299661.38,
+      5038590.69
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0230",
+    "from_node": "SN12-0153",
+    "to_node": "SN12-0161",
+    "length_m": 56.1,
+    "turn_deg": 0.0,
+    "width_m": 15.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0374",
+    "name_1912": "Richmond St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299707.97,
+      5038630.95
+     ],
+     [
+      299744.83,
+      5038588.72
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0231",
+    "from_node": "SN12-0154",
+    "to_node": "SN12-0158",
+    "length_m": 34.4,
+    "turn_deg": 0.0,
+    "width_m": 17.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0375",
+    "name_1912": "William St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299580.78,
+      5038629.01
+     ],
+     [
+      299561.03,
+      5038600.8
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0232",
+    "from_node": "SN12-0154",
+    "to_node": "SN12-0165",
+    "length_m": 81.3,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0376",
+    "name_1912": "St Martin St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N16: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299580.78,
+      5038629.01
+     ],
+     [
+      299634.59,
+      5038568.09
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0233",
+    "from_node": "SN12-0155",
+    "to_node": "SN12-0157",
+    "length_m": 32.5,
+    "turn_deg": 0.0,
+    "width_m": 14.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0377",
+    "name_1912": "Seigneurs St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N06: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299445.03,
+      5038620.72
+     ],
+     [
+      299472.55,
+      5038603.38
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0234",
+    "from_node": "SN12-0155",
+    "to_node": "SN12-0159",
+    "length_m": 34.8,
+    "turn_deg": 0.0,
+    "width_m": 3.6,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0378",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299445.03,
+      5038620.72
+     ],
+     [
+      299425.21,
+      5038592.12
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0235",
+    "from_node": "SN12-0156",
+    "to_node": "SN12-0161",
+    "length_m": 40.3,
+    "turn_deg": 0.0,
+    "width_m": 13.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0379",
+    "name_1912": "St Leon St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N15: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299775.42,
+      5038614.92
+     ],
+     [
+      299744.83,
+      5038588.72
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0236",
+    "from_node": "SN12-0157",
+    "to_node": "SN12-0162",
+    "length_m": 34.2,
+    "turn_deg": 0.0,
+    "width_m": 14.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0381",
+    "name_1912": "Seigneurs St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299472.55,
+      5038603.38
+     ],
+     [
+      299500.48,
+      5038583.56
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0237",
+    "from_node": "SN12-0157",
+    "to_node": "SN12-0163",
+    "length_m": 36.3,
+    "turn_deg": 0.0,
+    "width_m": 8.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0382",
+    "name_1912": "Payette St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299472.55,
+      5038603.38
+     ],
+     [
+      299451.39,
+      5038573.89
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0238",
+    "from_node": "SN12-0158",
+    "to_node": "SN12-0166",
+    "length_m": 48.3,
+    "turn_deg": 0.0,
+    "width_m": 18.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0383",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N10: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299561.03,
+      5038600.8
+     ],
+     [
+      299534.27,
+      5038560.58
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0239",
+    "from_node": "SN12-0158",
+    "to_node": "SN12-0170",
+    "length_m": 70.0,
+    "turn_deg": 0.0,
+    "width_m": 5.4,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0384",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299561.03,
+      5038600.8
+     ],
+     [
+      299607.82,
+      5038548.75
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0240",
+    "from_node": "SN12-0159",
+    "to_node": "SN12-0163",
+    "length_m": 31.9,
+    "turn_deg": 0.0,
+    "width_m": 3.6,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0387",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299425.21,
+      5038592.12
+     ],
+     [
+      299451.39,
+      5038573.89
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0241",
+    "from_node": "SN12-0159",
+    "to_node": "SN12-0171",
+    "length_m": 59.7,
+    "turn_deg": 0.0,
+    "width_m": 3.6,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0388",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299425.21,
+      5038592.12
+     ],
+     [
+      299395.87,
+      5038540.14
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0242",
+    "from_node": "SN12-0160",
+    "to_node": "SN12-0165",
+    "length_m": 35.0,
+    "turn_deg": 0.0,
+    "width_m": 17.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0385",
+    "name_1912": "Basin St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299661.38,
+      5038590.69
+     ],
+     [
+      299634.59,
+      5038568.09
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0243",
+    "from_node": "SN12-0161",
+    "to_node": "SN12-0164",
+    "length_m": 23.9,
+    "turn_deg": 0.0,
+    "width_m": 15.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0386",
+    "name_1912": "Richmond St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299744.83,
+      5038588.72
+     ],
+     [
+      299758.92,
+      5038569.42
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0244",
+    "from_node": "SN12-0162",
+    "to_node": "SN12-0166",
+    "length_m": 40.9,
+    "turn_deg": 0.0,
+    "width_m": 14.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0389",
+    "name_1912": "Seigneurs St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299500.48,
+      5038583.56
+     ],
+     [
+      299534.27,
+      5038560.58
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0245",
+    "from_node": "SN12-0163",
+    "to_node": "SN12-0167",
+    "length_m": 32.4,
+    "turn_deg": 0.0,
+    "width_m": 3.6,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0391",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299451.39,
+      5038573.89
+     ],
+     [
+      299478.25,
+      5038555.75
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0246",
+    "from_node": "SN12-0163",
+    "to_node": "SN12-0174",
+    "length_m": 59.6,
+    "turn_deg": 0.0,
+    "width_m": 10.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R22-A02-1 E12-0392",
+    "name_1912": "Payette St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N18: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299451.39,
+      5038573.89
+     ],
+     [
+      299417.12,
+      5038525.09
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0247",
+    "from_node": "SN12-0165",
+    "to_node": "SN12-0169",
+    "length_m": 22.9,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0395",
+    "name_1912": "St Martin St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299634.59,
+      5038568.09
+     ],
+     [
+      299647.92,
+      5038549.42
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0248",
+    "from_node": "SN12-0165",
+    "to_node": "SN12-0170",
+    "length_m": 33.0,
+    "turn_deg": 0.0,
+    "width_m": 16.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0396",
+    "name_1912": "Basin St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299634.59,
+      5038568.09
+     ],
+     [
+      299607.82,
+      5038548.75
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0249",
+    "from_node": "SN12-0166",
+    "to_node": "SN12-0173",
+    "length_m": 58.9,
+    "turn_deg": 0.0,
+    "width_m": 15.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0398",
+    "name_1912": "Seigneurs St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299534.27,
+      5038560.58
+     ],
+     [
+      299583.17,
+      5038527.73
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0250",
+    "from_node": "SN12-0166",
+    "to_node": "SN12-0176",
+    "length_m": 91.2,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R22-A03-1 ADD-R22-R02-2",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N17: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299534.27,
+      5038560.58
+     ],
+     [
+      299484.65,
+      5038484.1
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0251",
+    "from_node": "SN12-0168",
+    "to_node": "SN12-0171",
+    "length_m": 27.6,
+    "turn_deg": 0.0,
+    "width_m": 10.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0402",
+    "name_1912": "Chatham St",
+    "name_status": "inferred",
+    "name_source": "read as the same street, name not printed here (R22-N40)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299372.38,
+      5038554.69
+     ],
+     [
+      299395.87,
+      5038540.14
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0252",
+    "from_node": "SN12-0168",
+    "to_node": "SN12-0178",
+    "length_m": 94.2,
+    "turn_deg": 0.0,
+    "width_m": 17.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0403",
+    "name_1912": "Notre Dame St West",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299372.38,
+      5038554.69
+     ],
+     [
+      299324.19,
+      5038473.77
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0253",
+    "from_node": "SN12-0170",
+    "to_node": "SN12-0173",
+    "length_m": 32.4,
+    "turn_deg": 0.0,
+    "width_m": 9.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0405",
+    "name_1912": "Basin St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299607.82,
+      5038548.75
+     ],
+     [
+      299583.17,
+      5038527.73
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0254",
+    "from_node": "SN12-0171",
+    "to_node": "SN12-0172",
+    "length_m": 12.1,
+    "turn_deg": 0.0,
+    "width_m": 10.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0406",
+    "name_1912": "Chatham St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299395.87,
+      5038540.14
+     ],
+     [
+      299404.25,
+      5038531.38
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0255",
+    "from_node": "SN12-0172",
+    "to_node": "SN12-0174",
+    "length_m": 14.3,
+    "turn_deg": 0.0,
+    "width_m": 11.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0408",
+    "name_1912": "Chatham St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299404.25,
+      5038531.38
+     ],
+     [
+      299417.12,
+      5038525.09
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0256",
+    "from_node": "SN12-0172",
+    "to_node": "SN12-0177",
+    "length_m": 70.0,
+    "turn_deg": 0.0,
+    "width_m": 2.8,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0409",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299404.25,
+      5038531.38
+     ],
+     [
+      299363.57,
+      5038474.4
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0257",
+    "from_node": "SN12-0173",
+    "to_node": "SN12-0179",
+    "length_m": 106.6,
+    "turn_deg": 0.0,
+    "width_m": 13.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0411 E12-0421",
+    "name_1912": "Basin St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N12: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299583.17,
+      5038527.73
+     ],
+     [
+      299503.62,
+      5038456.75
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0258",
+    "from_node": "SN12-0173",
+    "to_node": "SN12-0182",
+    "length_m": 110.6,
+    "turn_deg": 79.9,
+    "width_m": 11.7,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0410 E12-0414 E12-0434",
+    "name_1912": "Seigneurs St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299583.17,
+      5038527.73
+     ],
+     [
+      299599.58,
+      5038510.58
+     ],
+     [
+      299622.25,
+      5038470.25
+     ],
+     [
+      299622.75,
+      5038449.38
+     ],
+     [
+      299611.08,
+      5038433.42
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0259",
+    "from_node": "SN12-0174",
+    "to_node": "SN12-0175",
+    "length_m": 29.3,
+    "turn_deg": 0.0,
+    "width_m": 11.4,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0412",
+    "name_1912": "Chatham St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299417.12,
+      5038525.09
+     ],
+     [
+      299442.09,
+      5038509.75
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0260",
+    "from_node": "SN12-0175",
+    "to_node": "SN12-0176",
+    "length_m": 49.7,
+    "turn_deg": 0.0,
+    "width_m": 9.2,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0416",
+    "name_1912": "Chatham St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N04: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299442.09,
+      5038509.75
+     ],
+     [
+      299484.65,
+      5038484.1
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0261",
+    "from_node": "SN12-0175",
+    "to_node": "SN12-0181",
+    "length_m": 73.2,
+    "turn_deg": 0.0,
+    "width_m": 8.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0417",
+    "name_1912": "Hunter St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N03: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299442.09,
+      5038509.75
+     ],
+     [
+      299400.23,
+      5038449.72
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0262",
+    "from_node": "SN12-0176",
+    "to_node": "SN12-0184",
+    "length_m": 106.6,
+    "turn_deg": 0.0,
+    "width_m": 12.0,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "ADD-R22-R02-1",
+    "name_1912": "William St",
+    "name_status": "documented",
+    "name_source": "traced street (network_edits_1912.csv)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299484.65,
+      5038484.1
+     ],
+     [
+      299406.54,
+      5038411.63
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0263",
+    "from_node": "SN12-0177",
+    "to_node": "SN12-0180",
+    "length_m": 23.2,
+    "turn_deg": 0.0,
+    "width_m": 3.2,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0426",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299363.57,
+      5038474.4
+     ],
+     [
+      299350.61,
+      5038455.11
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0264",
+    "from_node": "SN12-0177",
+    "to_node": "SN12-0181",
+    "length_m": 44.2,
+    "turn_deg": 0.0,
+    "width_m": 4.2,
+    "seg_class": "lane",
+    "zone": "core",
+    "source_edges": "E12-0427",
+    "name_1912": null,
+    "name_status": "unknown",
+    "name_source": null,
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299363.57,
+      5038474.4
+     ],
+     [
+      299400.23,
+      5038449.72
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0265",
+    "from_node": "SN12-0178",
+    "to_node": "SN12-0180",
+    "length_m": 32.3,
+    "turn_deg": 0.0,
+    "width_m": 11.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0424",
+    "name_1912": "Canning St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299324.19,
+      5038473.77
+     ],
+     [
+      299350.61,
+      5038455.11
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0266",
+    "from_node": "SN12-0178",
+    "to_node": "SN12-0185",
+    "length_m": 239.2,
+    "turn_deg": 72.2,
+    "width_m": 15.1,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0425 E12-0451 E12-0456",
+    "name_1912": "Notre Dame St West",
+    "name_status": "documented",
+    "name_source": "name read (R22-N01: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299324.19,
+      5038473.77
+     ],
+     [
+      299298.25,
+      5038436.25
+     ],
+     [
+      299191.75,
+      5038335.25
+     ],
+     [
+      299189.25,
+      5038324.25
+     ],
+     [
+      299197.75,
+      5038289.75
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0267",
+    "from_node": "SN12-0180",
+    "to_node": "SN12-0183",
+    "length_m": 43.5,
+    "turn_deg": 0.0,
+    "width_m": 10.8,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0430",
+    "name_1912": "Canning St",
+    "name_status": "documented",
+    "name_source": "name read (R22-N02: printed on the plate or listed for 1912)",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299350.61,
+      5038455.11
+     ],
+     [
+      299386.77,
+      5038430.87
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0268",
+    "from_node": "SN12-0181",
+    "to_node": "SN12-0183",
+    "length_m": 23.2,
+    "turn_deg": 0.0,
+    "width_m": 9.1,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0433",
+    "name_1912": "Hunter St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299400.23,
+      5038449.72
+     ],
+     [
+      299386.77,
+      5038430.87
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "seg_id": "S12-0269",
+    "from_node": "SN12-0183",
+    "to_node": "SN12-0184",
+    "length_m": 27.6,
+    "turn_deg": 0.0,
+    "width_m": 14.6,
+    "seg_class": "street",
+    "zone": "core",
+    "source_edges": "E12-0444",
+    "name_1912": "Canning St",
+    "name_status": "inferred",
+    "name_source": "continuation of a printed name",
+    "name_alt": null,
+    "name_alt_source": null,
+    "valid_from": "1912",
+    "valid_to": "1912"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      299386.77,
+      5038430.87
+     ],
+     [
+      299406.54,
+      5038411.63
+     ]
+    ]
+   }
+  }
+ ]
+}

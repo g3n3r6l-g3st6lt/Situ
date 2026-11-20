@@ -1,0 +1,31 @@
+{
+ "made": "2026-11-20T17:04:02+00:00",
+ "tool": "tools/hist_import.py",
+ "read": [
+  {
+   "path": "historical_situ/exports/geojson/ref_boundary.geojson",
+   "sha256": "364f5b1ee073b6a18271ce3021e6319c50704536e351144f0fcf83c64efdfccd",
+   "copied_to": "outputs/hist/boundary.geojson"
+  },
+  {
+   "path": "historical_situ/exports/geojson/h12_segmap.geojson",
+   "sha256": "8b43ce32e1c58913b6eabe95580e818fefcb53d8089cff897a8972aae4bb2dda",
+   "copied_to": "outputs/hist/h1_segmap_1912.geojson"
+  },
+  {
+   "path": "historical_situ/exports/geojson/h12_syntax.geojson",
+   "sha256": "e32fee298bdb6bb76b0e552ad906de88b9860a43c35cc45deb112b6402b78022",
+   "copied_to": "outputs/hist/h2_values_1912.geojson"
+  },
+  {
+   "path": "historical_situ/analysis/d036/d036_results.json",
+   "sha256": "89ed9af0733f2d9088e9796631073301eea179837e53fceb161ec6b2aa81f3f2",
+   "copied_to": "outputs/hist/d036_results.json"
+  },
+  {
+   "path": "historical_situ/register/sources.csv",
+   "sha256": "5417c5c9d29b443a574585a787ca88235a7a5287909fef2181075697d8b0e965",
+   "copied_to": "outputs/hist/sources.csv (columns kept: source_id, title, creator_publisher, archive_collection, archive_identifier, url, source_kind, depicted_start, depicted_end, publication_date, systems, access, use_terms)"
+  }
+ ]
+}
