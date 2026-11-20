@@ -32,6 +32,11 @@
   const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes, G1 = window.SITU_G1, MAT = window.SITU_MATERIALS;
   const mat4 = {};                                 // building -> materials library entries recorded on it
   if (MAT) MAT.entries.forEach(m => (mat4[m.building] = mat4[m.building] || []).push(m));
+  const WALL = MAT && MAT.walls ? MAT.walls.buildings : {};      // building -> [material, sure, photo, date, why empty]
+  const WALL_COL = { "brick, red": "#b5523b", "brick, brown": "#8a5a3c", "brick, buff or cream": "#d8c49a", "brick, dark": "#4a3a36",
+    "stone, dressed": "#a8a39a", "stone, rough-faced": "#7f7a70", "concrete or render": "#c9c9c9", "metal cladding": "#5b8fb3",
+    "panels": "#9fb5a5", "glass": "#6fc1d6", "siding": "#b08fc0", "under construction": "#e0a030" };
+  const wallOf = id => WALL[id] && WALL[id][0] ? WALL[id] : null;
   const host = document.getElementById("situ-lab");
   if (!host) return;
   if (!S1 || !window.SituMap) {                 // the streets or the map code did not load: say so, never a blank page
@@ -135,7 +140,7 @@
     s2net: "ped", s2measure: "NACH", s2radius: 2, s2view: "one",
     s3view: "rules",
     s4colour: "use", s4places: false, s4odb: false,
-    matPanels: true,                                  // show a building's recorded materials in its panel on every tab
+    matPanels: true, matView: "walls",               // Materials tab: every building's wall as read from photos, or the library's entries                                  // show a building's recorded materials in its panel on every tab
     s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
     s6show: "all", s6colour: "material", s6canopy: false,
     s7show: "all",
@@ -345,7 +350,8 @@
     if (!on) return;
     if (state.tab === "s8") { S4.buildings.forEach(b => bEl[b.id].setAttribute("class", "lab-bld view8")); return; }   // what stops a sight line
     S4.buildings.forEach(b => {
-      const m = state.tab === "mat" && mat4[b.id];
+      const wl = state.tab === "mat" && state.matView === "walls" && wallOf(b.id);
+      const m = state.tab === "mat" && (state.matView === "walls" ? (wl ? [{ colour: WALL_COL[wl[0]] }] : null) : mat4[b.id]);
       let cls = "lab-bld " + (state.tab === "mat" ? (m ? "mat-yes" : "mat-none")
         : state.s4colour === "use" ? USE_CLASS(b.use) : state.s4colour === "height" ? "h-" + HEIGHT4(b) : "src-" + (b.use_source || "none"));
       bEl[b.id].style.fill = m ? m[0].colour : "";          // a recorded wall shows its measured mean colour
@@ -378,7 +384,9 @@
       html = `<span class="lab-ramp"><em>${fmt(q(0))}</em><i></i><em>${fmt(q(0.5))}</em><i></i><em>${fmt(q(1))}</em></span>
         <span><b>${state.s2net === "ped" ? "walking" : "driving"} ${state.s2measure === "NACH" ? "choice" : "integration"}, ${RADIUS_NAME(RADII[state.s2net][state.s2radius])}</b>, by rank among ${rk.vals.length} segments: lowest blue, highest yellow</span><span><i class="k novalue"></i>no value (${S1.segments.length - rk.vals.length})</span>`;
     }
-    if (state.tab === "mat" && MAT && S4) html = MAT.entries.map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") +
+    if (state.tab === "mat" && MAT && S4 && state.matView === "walls" && MAT.walls) html = Object.entries(MAT.walls.counts).filter(([k]) => k).sort((a, b) => b[1] - a[1])
+      .map(([k, n]) => `<span><i class="kb" style="background:${WALL_COL[k]}"></i>${esc(k)} ${n}</span>`).join("") + `<span><i class="kb mat-none"></i>not read ${MAT.walls.counts[""] || 0}</span>`;
+    else if (state.tab === "mat" && MAT && S4) html = MAT.entries.map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") +
       `<span><i class="kb mat-none"></i>no material recorded yet ${S4.buildings.filter(b => !mat4[b.id]).length}</span>`;
     if (state.tab === "s3") html = state.s3view === "speed"
       ? `<span><i class="k v40"></i>40 km/h</span><span><i class="k v30"></i>30</span><span><i class="k v20"></i>20</span><span><i class="k gap"></i>cars allowed, no limit</span><span>the wider the line, the higher the limit</span>`
@@ -1035,11 +1043,18 @@
         `<tr><td>${w}</td>${tol.map(t => `<td>${sp[k].disagree_at[t]}</td>`).join("")}</tr>`).join("")}</table>`;
   }
   // what G1 World keeps for the game: the newest measurement, and every other height it discarded, with why (W32 to W35)
+  function wallHTML(b) {
+    const w = WALL[b.id];
+    if (!w) return "";
+    if (!w[0]) return `<p class="sub">Wall material: not read. ${esc(w[4].charAt(0).toUpperCase() + w[4].slice(1))}.</p>`;
+    return `<p>Wall material: <b>${esc(w[0])}</b> <span class="sub">(${esc(w[1])}; read by eye from a <a href="https://www.mapillary.com/app/?pKey=${esc(w[2])}">street photo of ${esc(w[3])}</a>, Mapillary, CC BY-SA 4.0; an assumption)</span></p>`;
+  }
   function matHTML(b) {
     if (!MAT) return "";
     const ms = mat4[b.id] || [];
-    if (!ms.length) return `<h3 class="lab-s"><a href="materials.html" title="the materials library">Materials</a></h3><p class="sub">No material recorded for this building yet.</p>`;
-    return `<h3 class="lab-s"><a href="materials.html" title="the materials library">Materials</a></h3>` + ms.map(m => `<div class="lab-mat">
+    if (!ms.length) return `<h3 class="lab-s"><a href="materials.html" title="the materials library">Materials</a></h3>${wallHTML(b)}<p class="sub">No library entry for this building yet.</p>`;
+    return `<h3 class="lab-s"><a href="materials.html" title="the materials library">Materials</a></h3>` + wallHTML(b) + ms.map(m => `<div class="lab-mat">
+
       <img src="${esc(m.preview)}" alt="${esc(m.name)}: colour map, tiled 3 by 3" loading="lazy">
       <p><a href="${esc(m.anchor)}"><b>${esc(m.id)}</b> ${esc(m.name)}</a></p>
       <p class="sub">${esc(m.face)}</p>
@@ -1134,7 +1149,9 @@
         <p class="sub">S6 only records what each object is and where it stands. Whether it slows anyone down is left to later systems, as a written assumption.</p>`;
     }
     if (t === "mat" && MAT) {
-      h += `<h2 class="lab-t">Materials</h2><p>The walls recorded in the <a href="materials.html">materials library</a>, each in its measured mean colour. Every entry starts from a published photo of one building, straightened to a known scale. Click a building for everything the systems know about it, its materials included.</p>
+      h += `<h2 class="lab-t">Materials</h2><p>What Griffintown's walls are made of. Every building's wall as read from a street photo, or the <a href="materials.html">materials library</a>'s entries, each measured from a published photo straightened to a known scale and shown in its measured mean colour. Click a building for everything the systems know about it, its materials included.</p>
+        ${MAT.walls ? seg2("matView", [["walls", "every building's wall, from street photos"], ["entries", "library entries"]]) : ""}
+        ${state.matView === "walls" && MAT.walls ? `<p class="sub">Read by eye from the nearest street panorama taken since 2023 (${esc(MAT.walls.source)}), blind to each building's use and age: an assumption, each tied to its photo. A photo older than the year the tax roll gives a building is not used.</p>` : ""}
         <label class="lab-check"><input type="checkbox" class="lab-matpanels-on"${state.matPanels ? " checked" : ""}> also show materials in building panels on the other tabs</label>
         <h3 class="lab-s">Entries (${MAT.entries.length})</h3>` + MAT.entries.map(m => `<div class="lab-mat">
           <img src="${esc(m.preview)}" alt="${esc(m.name)}: colour map, tiled 3 by 3" loading="lazy">

@@ -530,6 +530,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#what-this-page-holds" id="toc-what-this-page-holds" class="nav-link active" data-scroll-target="#what-this-page-holds">What this page holds</a></li>
   <li><a href="#how-an-entry-is-made" id="toc-how-an-entry-is-made" class="nav-link" data-scroll-target="#how-an-entry-is-made">How an entry is made</a></li>
+  <li><a href="#walls" id="toc-walls" class="nav-link" data-scroll-target="#walls">Every building’s walls</a></li>
   <li><a href="#m001" id="toc-m001" class="nav-link" data-scroll-target="#m001">M001 · red brick, 1895 factory wall</a></li>
   <li><a href="#m002" id="toc-m002" class="nav-link" data-scroll-target="#m002">M002 · red brick, 1880s factory wall</a></li>
   <li><a href="#set-aside" id="toc-set-aside" class="nav-link" data-scroll-target="#set-aside">Set aside</a></li>
@@ -573,8 +574,8 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="glance">
 <p><strong>Asks</strong> What Griffintown’s walls are made of, recorded as measurements and as texture maps, each tied to a building and a photo.</p>
-<p><strong>Found</strong> Two entries, both red brick factory walls: M001 (Lowney, 1895) with courses of 8.2 cm, and M002 (Robin &amp; Sadler, 1880) with courses of 8.4 cm, about 12 to the metre. One greystone attempt was set aside. 49 more published photos are sorted by material.</p>
-<p><strong>Stands</strong> partial: the colour map is observed; the height and normal maps are estimated from one photo, so they are assumptions. No roughness map yet.</p>
+<p><strong>Found</strong> The wall material of 215 of the 296 buildings, read from street photos: red brick on 76, more than any other. Two library entries, both red brick factory walls with courses of 8.2 and 8.4 cm. One greystone attempt was set aside.</p>
+<p><strong>Stands</strong> partial. Each wall reading is an assumption, tied to its photo and not yet checked by a second reader. In the entries, the colour map is observed and the height and normal maps are estimated.</p>
 <p><strong>Leaves out</strong> Murals and graffiti, interiors, and anything no published photo shows clearly.</p>
 <p><strong>In the game</strong> Not yet. The greybox look comes first (<a href="./g1-world.html">G1 World</a>).</p>
 <p><strong>Trace</strong> entry file <a href="outputs/materials/M001/entry.json">entry.json</a> · uses <a href="./s4-buildings.html">S4</a> outlines and <a href="./g1-world.html">G1</a> heights</p>
@@ -629,6 +630,140 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>A measured height would need several photos of the same patch from different places (photogrammetry). The published photos found so far give one view each.</p>
+</section>
+<section id="walls" class="level2">
+<h2 class="anchored" data-anchor-id="walls">Every building’s walls</h2>
+<p>For each <a href="./s4-buildings.html">S4</a> building I took the nearest street panorama on Mapillary taken since 2023, within 40 m of its outline, and cut the 90° view facing it. Each view was read by eye for one thing: what the wall is made of. The reading was done blind to the building’s use and age, and marked clear or likely. A photo taken before the year the tax roll gives a building is not used, since it shows what stood there before.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Wall material</th>
+<th>Buildings</th>
+<th>built before 1950</th>
+<th>1950 to 1999</th>
+<th>2000 on</th>
+<th>year unknown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>brick, red</td>
+<td>76</td>
+<td>24</td>
+<td>6</td>
+<td>20</td>
+<td>26</td>
+</tr>
+<tr class="even">
+<td>concrete or render</td>
+<td>29</td>
+<td>8</td>
+<td>8</td>
+<td>3</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>brick, buff or cream</td>
+<td>24</td>
+<td>6</td>
+<td>3</td>
+<td>6</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>brick, dark</td>
+<td>22</td>
+<td>5</td>
+<td>0</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>brick, brown</td>
+<td>14</td>
+<td>6</td>
+<td>0</td>
+<td>1</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>stone, dressed</td>
+<td>14</td>
+<td>8</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>panels</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>metal cladding</td>
+<td>7</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>glass</td>
+<td>6</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>under construction</td>
+<td>4</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>stone, rough-faced</td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>siding</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>not read</td>
+<td>81</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>121 readings are marked clear and 94 likely. 74 views did not show the building’s own wall: a neighbour, a tree, a truck, or a corner where two walls meet. 4 buildings had no panorama within 40 m, and in 3 cases the photo predates the building.</p>
+<p>Red brick is the most common wall on buildings from before 1950 (24) and from 2000 on (20). From 1950 to 1999, concrete or render leads (8, against 6 in red brick). Among buildings with a known year, panels appear only on those from 2000 on. Dressed stone stands mostly on buildings from before 1950 (8 of 14).</p>
+<p>Each reading rests on one view, cut toward the nearest point of the outline, so a long building is read from one place. No second reader has checked them yet. In the <a href="./lab.html">Lab</a>, the Materials tab colours every building by its reading, and each building’s panel links to the photo.</p>
+<p><strong>The 2016 textured 3D model, set aside.</strong> The city’s 2016 model comes with wall textures (CC BY 4.0), made from oblique aerial photos. Measured building by building, most of what its wall surfaces show is roof, street or shade: walls are thin slivers in photos taken from the air. The median colour came out grey for buildings that are red brick in street photos. It gives no wall colour I can use.</p>
 </section>
 <section id="m001" class="level2">
 <h2 class="anchored" data-anchor-id="m001">M001 · red brick, 1895 factory wall</h2>
