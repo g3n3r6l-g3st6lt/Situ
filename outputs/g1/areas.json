@@ -16,7 +16,7 @@
  },
  "area_m2": {
   "roadway": 111859,
-  "green": 392391,
+  "green": 392389,
   "play": 9248,
   "plaza": 29146,
   "parking": 144997,
@@ -67,9 +67,9 @@
    "water": 9
   },
   "area_m2": {
-   "not classified": 315993,
+   "not classified": 315995,
    "roadway": 111749,
-   "green": 189018,
+   "green": 189016,
    "play": 2749,
    "plaza": 8512,
    "parking": 30802,
@@ -82,11 +82,11 @@
    "parking": 30802,
    "plaza": 8512,
    "play": 2749,
-   "green": 189018,
+   "green": 189016,
    "roadway": 111749,
-   "not classified": 315994
+   "not classified": 315996
   },
-  "corners_added_to_neighbour_edges": 384,
+  "corners_added_to_neighbour_edges": 383,
   "pinched_split": 7,
   "slivers_dropped": 167
  }

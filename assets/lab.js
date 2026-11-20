@@ -13,6 +13,7 @@
     window.SITU_S9   outputs/s9/web_data.js   the morning on foot, imagined under three readings, and the counted junctions
     window.SITU_S1_ROUTES  outputs/s1/routes_data.js  shortest distances and routes between every pair of junctions
     window.SITU_G1   outputs/g1/web_data.js   each building's height as G1 World chose it, and the heights it discarded, with why
+    window.SITU_MATERIALS  outputs/materials/web_data.js  the materials library: entries recorded on a building, with the photo's credit
 
   It computes nothing about the city. Every colour and every value shows what the Python code already
   produced, and tools/test_lab.py checks that these files match the tables. One exception, kept small:
@@ -28,7 +29,9 @@
     3 painting              6 the detail panel
 */
 (function () {
-  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes, G1 = window.SITU_G1;
+  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes, G1 = window.SITU_G1, MAT = window.SITU_MATERIALS;
+  const mat4 = {};                                 // building -> materials library entries recorded on it
+  if (MAT) MAT.entries.forEach(m => (mat4[m.building] = mat4[m.building] || []).push(m));
   const host = document.getElementById("situ-lab");
   if (!host) return;
   if (!S1 || !window.SituMap) {                 // the streets or the map code did not load: say so, never a blank page
@@ -340,7 +343,10 @@
     if (!on) return;
     if (state.tab === "s8") { S4.buildings.forEach(b => bEl[b.id].setAttribute("class", "lab-bld view8")); return; }   // what stops a sight line
     S4.buildings.forEach(b => {
-      let cls = "lab-bld " + (state.s4colour === "use" ? USE_CLASS(b.use) : state.s4colour === "height" ? "h-" + HEIGHT4(b) : "src-" + (b.use_source || "none"));
+      const m = state.s4colour === "material" && mat4[b.id];
+      let cls = "lab-bld " + (state.s4colour === "use" ? USE_CLASS(b.use) : state.s4colour === "height" ? "h-" + HEIGHT4(b)
+        : state.s4colour === "material" ? (m ? "mat-yes" : "mat-none") : "src-" + (b.use_source || "none"));
+      bEl[b.id].style.fill = m ? m[0].colour : "";          // a recorded wall shows its measured mean colour
       if (state.pick && state.pick.kind === "building" && state.pick.id === b.id) cls += " picked";
       bEl[b.id].setAttribute("class", cls);
     });
@@ -392,7 +398,10 @@
     if (state.tab === "s7" && S7) html = `<span><i class="kd home7"></i>building with homes, sized by its commuters</span><span><i class="kd metro7"></i>metro entrance</span><span><i class="kd stop7"></i>bus stop</span>`;
     if (state.tab === "s4" && S4) {
       const n = f => S4.buildings.filter(f).length;
-      html = state.s4colour === "height"
+      html = state.s4colour === "material"
+        ? (MAT ? MAT.entries.map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") : "") +
+          `<span><i class="kb mat-none"></i>no material recorded yet ${n(b => !mat4[b.id])}</span>`
+        : state.s4colour === "height"
         ? `<span><i class="kb h-agree"></i>two sources agree within one storey (${S4.evidence.tolerance_m} m) ${n(b => HEIGHT4(b) === "agree")}</span><span><i class="kb h-disagree"></i>two sources disagree ${n(b => HEIGHT4(b) === "disagree")}</span>` +
           `<span><i class="kb h-one"></i>one source only ${n(b => HEIGHT4(b) === "one")}</span><span><i class="kb h-none"></i>no height ${n(b => HEIGHT4(b) === "none")}</span>`
         : state.s4colour === "use"
@@ -978,7 +987,7 @@
       (b.storeys != null && b.storeys_reason ? `<p class="sub">${esc(b.storeys_reason)}. A building is as tall as its tallest known part.</p>` : "") +
       (b.parts ? `<p class="sub">${b.parts} part${b.parts > 1 ? "s" : ""} drawn in OpenStreetMap inside this outline.</p>` : "") + `
       <p>Dwellings: ${b.dwellings != null ? `<b>${b.dwellings}</b> <span class="sub">from the tax roll, ${b.properties} properties${b.condo_units ? `, ${b.condo_units} condo units` : ""}${b.year ? `, built ${esc(b.year)}` : ""}</span>` : `<span class="warn">unknown</span> <span class="sub">${esc(b.roll_reason)}</span>`}</p>`;
-    h += heightHTML(b) + g1HTML(b);
+    h += heightHTML(b) + g1HTML(b) + matHTML(b);
     if (b.premises) h += `<h3 class="lab-s">Ground floor</h3><p>${b.premises} commercial spaces in the 2025 survey, ${b.vacant} vacant.</p>${b.ground_floor ? `<p class="sub">${esc(b.ground_floor)}</p>` : ""}`;
     if (inside.length) h += `<h3 class="lab-s">Places inside (${inside.length})</h3><ul class="lab-places">${inside.map(p =>
       `<li><button type="button" class="sx-link" data-place="${p.id}">${esc(p.name || "(no name)")}</button> <span class="sub">${esc(p.kind)}${p.hours ? " · has hours" : ""}</span></li>`).join("")}</ul>`;
@@ -1025,6 +1034,18 @@
         `<tr><td>${w}</td>${tol.map(t => `<td>${sp[k].disagree_at[t]}</td>`).join("")}</tr>`).join("")}</table>`;
   }
   // what G1 World keeps for the game: the newest measurement, and every other height it discarded, with why (W32 to W35)
+  function matHTML(b) {
+    if (!MAT) return "";
+    const ms = mat4[b.id] || [];
+    if (!ms.length) return `<h3 class="lab-s"><a href="materials.html" title="the materials library">Materials</a></h3><p class="sub">No material recorded for this building yet.</p>`;
+    return `<h3 class="lab-s"><a href="materials.html" title="the materials library">Materials</a></h3>` + ms.map(m => `<div class="lab-mat">
+      <img src="${esc(m.preview)}" alt="${esc(m.name)}: colour map, tiled 3 by 3" loading="lazy">
+      <p><a href="${esc(m.anchor)}"><b>${esc(m.id)}</b> ${esc(m.name)}</a></p>
+      <p class="sub">${esc(m.face)}</p>
+      <p>One brick course ${m.course_cm} cm <span class="sub">(${m.course_range[0]} to ${m.course_range[1]}), about ${m.per_m} to the metre</span></p>
+      <p class="sub">Mean colour ${esc(m.colour)} · colour map observed; height and normal estimated, so assumptions; no roughness map</p>
+      <p class="sub">Photo: ${esc(m.credit)}, ${esc(m.taken)}, <a href="${esc(m.page)}">Wikimedia Commons</a>, <a href="${esc(m.licence_url)}">${esc(m.licence)}</a></p></div>`).join("");
+  }
   function g1HTML(b) {
     const g = G1 && G1.blocks[b.id];
     if (!g) return "";
@@ -1085,7 +1106,7 @@
     }
     if (t === "s4") {
       h += `<h2 class="lab-t">S4 · Buildings</h2><p>What each building is used for, and where that answer comes from. Click a building to see everything S4 knows about it. When no source says, the use stays unknown.</p>
-        ${seg2("s4colour", [["use", "used for"], ["source", "where that came from"], ["height", "height, by source"]])}
+        ${seg2("s4colour", [["use", "used for"], ["source", "where that came from"], ["height", "height, by source"]].concat(MAT ? [["material", "materials recorded"]] : []))}` + (state.s4colour === "material" && MAT ? `<p class="sub">Walls recorded in the <a href="materials.html">materials library</a>, coloured by their measured mean colour. Click one for its entry. ${MAT.set_aside.length} attempt${MAT.set_aside.length === 1 ? " was" : "s were"} set aside.</p>` : "") + `
         <label class="lab-check"><input type="checkbox" class="lab-places-on"${state.s4places ? " checked" : ""}> show the places people go to</label>` +
         (state.s4colour === "height" && S4.evidence && S4.evidence.spread_unchanged ? spreadHTML(S4.evidence) : "") +
         (S4.odb_alone ? `<label class="lab-check"><input type="checkbox" class="lab-odb-on"${state.s4odb ? " checked" : ""}> show footprints only the Open Database of Buildings has (${S4.odb_alone.length})</label>` : "");
@@ -1137,7 +1158,7 @@
     }
     if (t === "s8" && S8) {
       const m = S8.meta;
-      h += `<h2 class="lab-t">S8 · Views</h2><p>How much of the city a person can see from each street. Every ${m.step_m} m, ${m.rays} lines of sight go out until they hit a building or reach ${m.radius_m} m;
+      h += `<h2 class="lab-t">S8 · Views</h2><p>How much of the city could be seen from each street if only buildings blocked the view. Trees and slopes stop nothing here, so a real view is smaller. Every ${m.step_m} m, ${m.rays} lines of sight go out until they hit a building or reach ${m.radius_m} m;
         the shape they draw is what can be seen from that spot. A typical spot sees about ${fmt8(m.area_median)} m², and most spots see between ${fmt8(m.area_p10)} and ${fmt8(m.area_p90)} m².
         Click a street to draw its view, or take a walk.</p>
         ${seg2("s8tool", [["colour", "colour the streets"], ["walk", "walk and look"]])}

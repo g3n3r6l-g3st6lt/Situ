@@ -42,3 +42,20 @@ L11 S9: every street's imagined walkers, the counted junctions, the ring and the
     579 street flows x 4 hours, 14 junction-hours compared, 18 ledger rules
     PASS
 
+L12 Walk tools: the Lab's walking distances equal S7's shortest walks, and its sight lines give S8's areas
+    60 walks between random points, 30 views from S8's viewpoints, 360 sight lines each; views within 0.75 % of S8's, 0.038 % on average
+    PASS
+
+L13 Two orders: the gaps the Lab shows equal a fresh count from the S2 and S9 tables
+    8 S2 views and 9 S9 views, 4075 gaps; a missing value gives no gap, never 0
+    PASS
+
+L14 G1 heights: every building's height, source, status, roof and discarded heights match blocks.geojson
+    296 buildings x 9 fields and every part outline point; 5 unknown heights stayed null; 43 discarded heights with their reasons
+    PASS
+
+L15 Materials: every entry the Lab shows equals its entry.json, stands on an S4 building, and its pictures exist
+    2 entries on 2 buildings; 1 set aside, not shown
+    PASS
+
+ALL PASS

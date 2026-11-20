@@ -1,0 +1,146 @@
+{
+ "id": "M002",
+ "name": "red brick, 1880s factory wall (Robin & Sadler)",
+ "family": "brick",
+ "building": "w225610882",
+ "building_name": "Robin & Sadler, 1845 rue William (S4: Le William - Phase 1A)",
+ "facade": "south-west face on rue William: the 20.59 m side of the S4 outline, parallel to William in S1",
+ "photo": {
+  "file": "data/external/commons_images/Robin___Sadler__1845__rue_William__Sud-Ouest___36204300985_.jpg",
+  "title": "File:Robin & Sadler, 1845, rue William (Sud-Ouest) (36204300985).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Robin_%26_Sadler,_1845,_rue_William_(Sud-Ouest)_(36204300985).jpg",
+  "author": "Parcours riverain - Ville de Montréal (Flickr), via Wikimedia Commons",
+  "licence": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0",
+  "taken": "2017-07-19",
+  "saved_as": "3840 px wide copy from Wikimedia Commons, saved 2026-11-20"
+ },
+ "corners_px": {
+  "top_left": [
+   1541,
+   238
+  ],
+  "top_right": [
+   3375,
+   811
+  ],
+  "bottom_right": [
+   3392,
+   2321
+  ],
+  "bottom_left": [
+   1539,
+   2371
+  ]
+ },
+ "corners_note": "top: the underside of the metal coping, a straight line read at both ends; left: the corner arris; right: the end of the face where the neighbour begins; bottom: the top of the stone base, drawn from the visible corner toward the vanishing point of the sill lines (cars hide its right end). About 15 px either way.",
+ "width_m": 20.59,
+ "width_source": "S4 outline (OpenStreetMap way 225610882): the side parallel to rue William in S1",
+ "height_m": 17.9,
+ "height_source": "G1 height 18.77 m (2023 lidar, 90th percentile of the roof) less about 0.85 m of stone base, read at the corner",
+ "height_uncertainty_m": 1.0,
+ "px_per_m": 100,
+ "patches_m": {
+  "pier between bays 2 and 3": [
+   13.22,
+   4.3,
+   14.28,
+   12.0
+  ],
+  "corner pier": [
+   0.2,
+   7.0,
+   1.4,
+   12.0
+  ],
+  "spandrel, bay 1, floors 1 to 2": [
+   2.6,
+   12.75,
+   6.4,
+   13.6
+  ],
+  "spandrel, bay 2, floors 2 to 3": [
+   8.8,
+   8.35,
+   12.3,
+   9.2
+  ]
+ },
+ "tile_patch": "pier between bays 2 and 3",
+ "tile_m": 1.0,
+ "checks": [
+  "Floor to floor in the straightened face: window sills 4.1 and 4.4 m apart (read by eye), against S4's measured storey of 4.27 m for commerce. The photo shows four rows of windows; the tax roll gives 5 storeys."
+ ],
+ "limits": [
+  "About 1 pixel per cm at the far end of the face: joints are one or two pixels wide.",
+  "Overcast light (diffuse): fewer shadows than M001, camera white balance unknown."
+ ],
+ "made_by": "tools/materials.py",
+ "measured": {
+  "course_cm": 8.4,
+  "course_cm_range": [
+   7.9,
+   8.9
+  ],
+  "courses_per_m": 11.9,
+  "per_patch": {
+   "pier between bays 2 and 3": {
+    "course_cm": 8.29,
+    "repeat_strength": 0.87
+   },
+   "corner pier": {
+    "course_cm": 8.4,
+    "repeat_strength": 0.79
+   },
+   "spandrel, bay 1, floors 1 to 2": {
+    "course_cm": 8.41,
+    "repeat_strength": 0.68
+   },
+   "spandrel, bay 2, floors 2 to 3": {
+    "course_cm": 6.1,
+    "repeat_strength": 0.01
+   }
+  },
+  "mean_colour_srgb": "#af6851",
+  "resolution_px_per_cm": 1.0
+ },
+ "maps": {
+  "base_color": {
+   "file": "base_color.png",
+   "status": "observed",
+   "how": "the photo's colour; light changing over more than about 0.4 m divided out; the calmest 1.2 m window kept; tiled by a half-shift blend"
+  },
+  "height": {
+   "file": "height_estimated.png",
+   "status": "assumption",
+   "how": "estimated: brighter read as higher. Repointed light mortar reads as raised, the opposite of a recessed joint"
+  },
+  "normal": {
+   "file": "normal_estimated.png",
+   "status": "assumption",
+   "how": "worked out from the estimated height with an assumed relief of 1 cm; OpenGL convention (green up)"
+  },
+  "roughness": {
+   "file": "",
+   "status": "not made",
+   "how": "one daylight photo shows no reflection to measure it"
+  }
+ },
+ "tile": {
+  "size_m": [
+   1.0,
+   1.01
+  ],
+  "size_px": [
+   100,
+   101
+  ],
+  "courses": 12,
+  "from_patch": "pier between bays 2 and 3",
+  "offset_in_patch_m": [
+   0.0,
+   0.0
+  ],
+  "chosen_by": "fewest odd spots (repairs, stains) in a 10 cm search"
+ }
+}
