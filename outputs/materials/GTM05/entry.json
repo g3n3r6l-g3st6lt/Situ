@@ -1,0 +1,94 @@
+{
+ "id": "GTM05",
+ "name": "Grey rough stone infill and pale mortar",
+ "kind": "rubble",
+ "building": "New_City_Gas_complex",
+ "on_s4": false,
+ "building_name": "New City Gas complex, rue Ottawa, Griffintown, Montreal",
+ "component": "Stone wall fields between openings on the photographed New City Gas facade. Excludes smooth surrounds, upper brick, adjacent buildings and ground paving.",
+ "basis": "The dated photograph shows irregular roughly horizontal rough stone masonry. Stone species, mortar binder and current condition are unknown. Building-level association only; no new OSM footprint match asserted.",
+ "assumptions": "Authored 1.8 m tile with ten uneven courses and variable stone lengths, approximately 7-14 mm mortar/bevel zones and an 18 mm height range. Arrangement, dimensions, palette and face relief are invented approximations informed by the visible family, not a trace or scan. This replaces neither the reference nor the older colour-only study; those layouts differ.",
+ "made": "2026-11-23",
+ "method": "procedural reconstruction informed by references: made by a script, pattern, colour and relief authored; no photo pixels in the maps",
+ "tile_m": [
+  1.8,
+  1.8
+ ],
+ "size_px": 1024,
+ "relief_m": 0.018,
+ "repeats": true,
+ "mean_colour_srgb": "#73736f",
+ "validation": {
+  "dimensions_pass": true,
+  "height_16bit": true,
+  "normal_conventions_pass": true,
+  "height_normal_max_component_error": 0.003994365918180129,
+  "building_references_pass": true,
+  "render_files_pass": true
+ },
+ "physically_calibrated": false,
+ "checked_in_a_game_engine": false,
+ "renders": {
+  "render": "outputs/materials/GTM05/render.jpg"
+ },
+ "hub_status": "Procedural reconstruction; Blender reviewed",
+ "hub_confidence": "The dated photograph shows irregular roughly horizontal rough stone masonry. Stone species, mortar binder and current condition are unknown. Building-level association only; no new OSM footprint match asserted.",
+ "next_action": "Stone wall fields between openings on the photographed New City Gas facade. Excludes smooth surrounds, upper brick, adjacent buildings and ground paving. Obtain frontal detail and scale before close-up acceptance.",
+ "reference_note": "Reference: File:New City Gas Montreal 01.jpg, by Jeangagnon. Captured 2011-08-07.\nhttps://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg\nSource licence: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0\nSource photo copied unchanged; retain credit and licence when sharing it. These maps are separately authored procedural reconstructions with no photographic pixel extraction. They are not evidence of current condition.\nGriffintown scope evidence retained from prior review: https://www.patrimoine-culturel.gouv.qc.ca/detail.do?id=191016&methode=consulter&type=bien",
+ "notes_file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/DETAILS_AND_REFERENCES.txt",
+ "notes": "GTM05 — Grey rough stone infill and pale mortar\nRELATED BUILDING(S)\nNew City Gas complex, rue Ottawa, Griffintown, Montreal\nBuilding association key (not an OSM footprint ID): New_City_Gas_complex\nStone wall fields between openings on the photographed New City Gas facade. Excludes smooth surrounds, upper brick, adjacent buildings and ground paving.\n\nEVIDENCE\nThe dated photograph shows irregular roughly horizontal rough stone masonry. Stone species, mortar binder and current condition are unknown. Building-level association only; no new OSM footprint match asserted.\nReference: File:New City Gas Montreal 01.jpg, by Jeangagnon. Captured 2011-08-07.\nhttps://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg\nSource licence: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0\nSource photo copied unchanged; retain credit and licence when sharing it. These maps are separately authored procedural reconstructions with no photographic pixel extraction. They are not evidence of current condition.\nGriffintown scope evidence retained from prior review: https://www.patrimoine-culturel.gouv.qc.ca/detail.do?id=191016&methode=consulter&type=bien\n\nMAP STATUS — PROCEDURAL RECONSTRUCTION / NOT A SCANNED MATERIAL\nCreated 2026-11-23. Deterministic script-generated study, separated from source photographs. All maps use the same UV coordinates and resolution. This resolution is authored detail, not recovered source detail.\nAuthored 1.8 m tile with ten uneven courses and variable stone lengths, approximately 7-14 mm mortar/bevel zones and an 18 mm height range. Arrangement, dimensions, palette and face relief are invented approximations informed by the visible family, not a trace or scan. This replaces neither the reference nor the older colour-only study; those layouts differ.\n\nFILES AND IMPORT\nbase_color.png: sRGB; interpreted unlit palette, not calibrated albedo.\nheight_estimated_16bit.png: linear 16-bit, normalized 0-1. Physical height range 0.018 m; authored only.\nnormal_OpenGL.png: tangent +Y. normal_DirectX.png: same normals with green channel inverted. Use one, never both.\nroughness_assumed.png: linear; unmeasured trial values.\nmetallic_surface.png: linear; outer-surface convention described above.\nambient_occlusion_neutral.png: white fallback, not calculated occlusion.\nfeature_mask.png: mortar and bevel-zone mask; white indicates joints, black indicates stone faces.\ntransmission_assumed.png: 1 for glass, 0 otherwise. opacity.png is white; not a glass cutout mask.\nUV extent: 1.8 m x 1.8 m, authored. Resolution: 1024 x 1024.\nUse normal OR height-driven bump at first; avoid double-counting the same relief. Start with displacement disabled. The render review uses normal shading only; a side silhouette needs actual geometry.\nNo in-game physical friction, thermal response, acoustic response or NPC behaviour is established by these maps.\n",
+ "maps": {
+  "base_color": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/base_color.png",
+   "sha256": "32b2aa7d309ae642a1d2d5fa2bb70ff0a82791c11dd6e7a8a4179932d36761de",
+   "status": "authored: an interpreted palette, not calibrated colour"
+  },
+  "normal_OpenGL": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/normal_OpenGL.png",
+   "sha256": "6327bf97b671560d4a9e13a96c63b4345ba5b08176b15450aa05119bf5cdb7a0",
+   "status": "derived from the authored height"
+  },
+  "normal_DirectX": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/normal_DirectX.png",
+   "sha256": "b72841a3cdb925b11f7306365d41b619de91c91c18f877d9b80c7f59e4496d0d",
+   "status": "the same normals, green channel inverted"
+  },
+  "roughness_assumed": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/roughness_assumed.png",
+   "sha256": "2c951b4063431fe372d74272e4479430222cde39a94617b46a4c10968f77adc0",
+   "status": "assumed: trial values, not measured"
+  },
+  "metallic_surface": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/metallic_surface.png",
+   "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+   "status": "authored: describes the outer coating"
+  },
+  "ambient_occlusion_neutral": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/ambient_occlusion_neutral.png",
+   "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+   "status": "a white placeholder, not computed"
+  },
+  "height_estimated_16bit": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/height_estimated_16bit.png",
+   "sha256": "ce58db621a0c3ea02e8cec882126ba7ac8c3e135e07815710647386f2b55fd0b",
+   "status": "authored relief, 16-bit; the physical range is in the record"
+  },
+  "feature_mask": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/feature_mask.png",
+   "sha256": "e6bd3a5c8d17641bc09502d3a63abaade11cc798d85b1694b857a20fd148fef1",
+   "status": "authored: mortar or raised ribs"
+  },
+  "transmission_assumed": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/transmission_assumed.png",
+   "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+   "status": "assumed: 1 for glass, 0 otherwise"
+  },
+  "opacity": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_rough_infill/reconstruction_maps/opacity.png",
+   "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+   "status": "white: no cut-out"
+  }
+ },
+ "made_by": "tools/materials_batch.py",
+ "source_folder": "data/external/materials_batch02_2026-11-23"
+}

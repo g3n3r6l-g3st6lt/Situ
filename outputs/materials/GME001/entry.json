@@ -100,5 +100,8 @@
    "status": "assumption",
    "how": "the joints the height is built on, for checking against the colour"
   }
+ },
+ "hub": {
+  "status": "usable"
  }
 }

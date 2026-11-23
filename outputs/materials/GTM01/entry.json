@@ -16,6 +16,7 @@
  ],
  "size_px": 1024,
  "relief_m": 0.0043,
+ "repeats": true,
  "mean_colour_srgb": "#75503f",
  "validation": {
   "dimensions_pass": true,
@@ -27,58 +28,63 @@
  },
  "physically_calibrated": false,
  "checked_in_a_game_engine": false,
- "render": "Blender 5.2 Cycles, three repeats, light from the left (the set's own render)",
+ "renders": {
+  "render": "outputs/materials/GTM01/render.jpg"
+ },
+ "hub_status": "Procedural reconstruction; Blender reviewed",
+ "hub_confidence": "Door number 301 in original photo and municipal address point inside the footprint support association. Brick family visually identified; product and mortar chemistry unknown.",
+ "next_action": "Only the narrow house at 301 Young. The large pale panelized neighbour is excluded. Obtain frontal detail and scale before close-up acceptance.",
  "reference_note": "Mapillary image 413784728208746, captured 2024-03-13.\nhttps://www.mapillary.com/app/?pKey=413784728208746\nIndividual photographer attribution is absent in the inherited register; resolve before publishing photographic derivatives. The maps are authored reconstructions, not extracted photograph pixels.",
- "notes_file": "buildings/301_Young_w340229158/red_brown_brick/DETAILS_AND_REFERENCES.txt",
+ "notes_file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/DETAILS_AND_REFERENCES.txt",
  "notes": "GTM01 — Red-brown brick and pale mortar\nRELATED BUILDING(S)\n301 rue Young, Griffintown, Montreal\nStable footprint ID: w340229158\nOnly the narrow house at 301 Young. The large pale panelized neighbour is excluded.\n\nEVIDENCE\nDoor number 301 in original photo and municipal address point inside the footprint support association. Brick family visually identified; product and mortar chemistry unknown.\nMapillary image 413784728208746, captured 2024-03-13.\nhttps://www.mapillary.com/app/?pKey=413784728208746\nIndividual photographer attribution is absent in the inherited register; resolve before publishing photographic derivatives. The maps are authored reconstructions, not extracted photograph pixels.\n\nMAP STATUS — PROCEDURAL RECONSTRUCTION / NOT A SCANNED MATERIAL\nCreated 2026-11-23. Deterministic script-generated study, separated from source photographs. All maps use the same UV coordinates and resolution. This resolution is authored detail, not recovered source detail.\nAuthored running bond: 220 x 65 mm module including joints, 8 mm joint width, 4.3 mm height range. Tile 0.88 x 0.52 m. Bond, dimensions, colour palette and wear are interpretations, not measurements. No photographed stain was converted to relief.\n\nFILES AND IMPORT\nbase_color.png: sRGB; interpreted unlit palette, not calibrated albedo.\nheight_estimated_16bit.png: linear 16-bit, normalized 0-1. Physical height range 0.0043 m; authored only.\nnormal_OpenGL.png: tangent +Y. normal_DirectX.png: same normals with green channel inverted. Use one, never both.\nroughness_assumed.png: linear; unmeasured trial values.\nmetallic_surface.png: linear; outer-surface convention described above.\nambient_occlusion_neutral.png: white fallback, not calculated occlusion.\nfeature_mask.png: mortar mask for brick; raised-rib mask for cladding; zero for uniform surfaces.\ntransmission_assumed.png: 1 for glass, 0 otherwise. opacity.png is white; not a glass cutout mask.\nUV extent: 0.88 m x 0.52 m, authored. Resolution: 1024 x 1024.\nUse normal OR height-driven bump at first; avoid double-counting the same relief. Start with displacement disabled. The render review uses normal shading only; a side silhouette needs actual geometry.\nNo in-game physical friction, thermal response, acoustic response or NPC behaviour is established by these maps.\n",
  "maps": {
   "base_color": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/base_color.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/base_color.png",
    "sha256": "380c4740be9e9d7c3cc4819c0966fe160c63aa89b36f9c041b3502a5c69f49a3",
    "status": "authored: an interpreted palette, not calibrated colour"
   },
   "normal_OpenGL": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/normal_OpenGL.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/normal_OpenGL.png",
    "sha256": "283d9efaa7ae6603608e423375c4605f0f0d6893a5b45d615e8eeb0c30e31648",
    "status": "derived from the authored height"
   },
   "normal_DirectX": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/normal_DirectX.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/normal_DirectX.png",
    "sha256": "14e95b09deebae3dca3f0273fd0208b2a2dfec2bc2e36ae987d91e7033c09a1a",
    "status": "the same normals, green channel inverted"
   },
   "roughness_assumed": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/roughness_assumed.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/roughness_assumed.png",
    "sha256": "1b49454f0b34368e9dbfb7f5f1e95588788e03449e2dd0a4a7b6c34ae2332410",
    "status": "assumed: trial values, not measured"
   },
   "metallic_surface": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/metallic_surface.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/metallic_surface.png",
    "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
    "status": "authored: describes the outer coating"
   },
   "ambient_occlusion_neutral": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/ambient_occlusion_neutral.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/ambient_occlusion_neutral.png",
    "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
    "status": "a white placeholder, not computed"
   },
   "height_estimated_16bit": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/height_estimated_16bit.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/height_estimated_16bit.png",
    "sha256": "50d2d60fbbeea0bcb1fc2d3ff6c2c82a58011fc8bb3426c4b8890b682d32b41a",
    "status": "authored relief, 16-bit; the physical range is in the record"
   },
   "feature_mask": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/feature_mask.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/feature_mask.png",
    "sha256": "c51fab3b5caa2e17f44aa9dce841865a277bf89bd6254fa5f75fae85255b56ee",
    "status": "authored: mortar or raised ribs"
   },
   "transmission_assumed": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/transmission_assumed.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/transmission_assumed.png",
    "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
    "status": "assumed: 1 for glass, 0 otherwise"
   },
   "opacity": {
-   "file": "buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/opacity.png",
+   "file": "materials_batch01_2026-11-23/buildings/301_Young_w340229158/red_brown_brick/reconstruction_maps/opacity.png",
    "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
    "status": "white: no cut-out"
   }

@@ -40,6 +40,69 @@
   "texture_ready": 0,
   "method": "Assistant visual review of originals and 180 alternate views on comparison sheets; not blind to earlier readings"
  },
+ "third_pass": {
+  "reviewed": 10,
+  "by_status": {
+   "provisional_surface": 1,
+   "identity_pending": 3,
+   "identity_supported_composition_pending": 3,
+   "dated_brick_observation": 1,
+   "small_object_unread": 2
+  },
+  "buildings": {
+   "w1080276132": {
+    "status": "provisional_surface",
+    "finding": "Blue vertically ribbed cladding is the best-supported target surface in alternate 2, with the adjacent taller brick building providing context. The pale peeling wall in alternate 1 is not accepted as this same frontage. Metal is plausible, but only the blue profiled finish is visually established."
+   },
+   "w1093571777": {
+    "status": "identity_pending",
+    "finding": "The footprint contains two street-address points and spans a large block. The oblique images include several faces and an intervening corner building. Keep facade ownership unresolved rather than assigning the nearest dark wall."
+   },
+   "w201007244": {
+    "status": "identity_supported_composition_pending",
+    "finding": "Alternate 2 is consistent with the modern end block of Lowney Phase 11 at the end of the courtyard. Alternate 1 is dominated by adjoining older red and grey profiled cladding; reject that dominant foreground as Phase 11 material evidence. Pale opaque bands and glazing are visible, but the pale substance remains unknown."
+   },
+   "w201007399": {
+    "status": "identity_supported_composition_pending",
+    "finding": "Alternate 2 is consistent with the modern Phase 10 courtyard-end block on the opposite side of the complex. Alternate 1 is dominated by older industrial cladding. Do not pool Phase 10, Phase 11 and the older industrial building into a single material entry."
+   },
+   "w340229118": {
+    "status": "identity_pending",
+    "finding": "The target is a long narrow footprint associated with 288-320 Peel, not a tiny isolated wall. The images remain tilted or distant. Keep the facade-to-footprint association and opaque material unresolved."
+   },
+   "w340229158": {
+    "status": "dated_brick_observation",
+    "finding": "Original photograph visibly carries door number 301 on the narrow red-brown brick house. The municipal 301 Young address point lies inside the 72 m2 footprint. Together they support a dated brick-frontage observation for this record. The large pale panelized wall beside it is a different building. Side-wall coating and current condition remain separate unknowns."
+   },
+   "w347395104": {
+    "status": "identity_pending",
+    "finding": "The target footprint contains 265 des Seigneurs, while 1830-1844 William lies on adjacent geometry. Do not attach the quarantined Caledonia material study to this record merely because it is nearby. The heavily tilted views do not settle facade identity."
+   },
+   "w606863913": {
+    "status": "small_object_unread",
+    "finding": "The 7.6 m2 target and a second small structure are separate from the surrounding towers. The recovered scenes do not isolate this tiny object reliably. Reject tower brick and balcony materials as evidence for it."
+   },
+   "w614137698": {
+    "status": "identity_supported_composition_pending",
+    "finding": "The orange footprint corresponds to the enclosed service room beside the separate canopy footprint. Brown opaque infill, pale framing and roof edge are visible. Do not merge it with the adjacent roof-only record; infill substance remains unverified."
+   },
+   "w642915689": {
+    "status": "small_object_unread",
+    "finding": "The 15.4 m2 park object is distinct from the 7.6 m2 nearby record and from the surrounding towers. A distant shelter is visible, but exact matching is not secure. Keep both small objects individually unresolved."
+   }
+  }
+ },
+ "identity_review": {
+  "records": 81,
+  "lanes": {
+   "building_facade": 69,
+   "roof_or_canopy": 3,
+   "small_structure": 8,
+   "elevated_connection": 1
+  },
+  "with_address_point": 39,
+  "component_cards": 2
+ },
  "library_on": {
   "w54895065": [
    "GME001",
@@ -47,13 +110,6 @@
   ],
   "w340223814": [
    "GME003"
-  ],
-  "w347395104": [
-   "GME004",
-   "GME005"
-  ],
-  "w225637542": [
-   "GME006"
   ],
   "w340229158": [
    "GTM01"
@@ -64,6 +120,11 @@
   "w1309501032": [
    "GTM03",
    "GTM04"
+  ],
+  "New_City_Gas_complex": [
+   "GTM05",
+   "GTM05-T1",
+   "GTM06"
   ],
   "w225610882": [
    "M002"

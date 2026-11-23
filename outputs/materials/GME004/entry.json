@@ -67,5 +67,9 @@
    "status": "not made",
    "how": "the study gives a starting value for trials: 0.8"
   }
+ },
+ "hub": {
+  "status": "held",
+  "why": "Exact building footprint/location association pending; not admitted to usable material list"
  }
 }

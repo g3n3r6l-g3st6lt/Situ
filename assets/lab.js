@@ -35,8 +35,8 @@
   const mat4 = {};                                 // building -> materials library entries recorded on it
   if (MAT) MAT.entries.forEach(m => (mat4[m.building] = mat4[m.building] || []).push(m));
   const gen4 = {};                                 // building -> colour studies an image model made from a photo of it
-  if (MAT && MAT.generated) MAT.generated.forEach(m => (gen4[m.building] = gen4[m.building] || []).push(m));
-  if (MAT && MAT.sets) MAT.sets.forEach(m => (gen4[m.building] = gen4[m.building] || []).push(m));     // map sets drawn by a script from references
+  if (MAT && MAT.generated) MAT.generated.filter(m => m.building).forEach(m => (gen4[m.building] = gen4[m.building] || []).push(m));     // held or excluded studies are tied to no building
+  if (MAT && MAT.sets) MAT.sets.filter(m => m.building).forEach(m => (gen4[m.building] = gen4[m.building] || []).push(m));     // map sets drawn by a script; a building-level one (no S4 footprint) is tied to none
   const WALL = MAT && MAT.walls ? MAT.walls.buildings : {};      // building -> [material, sure, photo, date, why empty]
   const WALL_COL = { "brick, red": "#b5523b", "brick, brown": "#8a5a3c", "brick, buff or cream": "#d8c49a", "brick, dark": "#4a3a36",
     "stone, dressed": "#a8a39a", "stone, rough-faced": "#7f7a70", "concrete or render": "#c9c9c9", "metal cladding": "#5b8fb3",
@@ -148,7 +148,7 @@
     s2net: "ped", s2measure: "NACH", s2radius: 2, s2view: "one",
     s3view: "rules",
     s4colour: "use", s4places: false, s4odb: false,
-    matPanels: false, matView: "walls",               // Materials tab: every building's wall as read from photos, or the library's entries                                  // show a building's recorded materials in its panel on every tab
+    matPanels: true, matView: "walls",               // Materials tab: every building's wall as read from photos, or the library's entries                                  // show a building's recorded materials in its panel on every tab
     s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
     s6show: "all", s6colour: "material", s6canopy: false,
     s7show: "all",
@@ -510,7 +510,7 @@
     }
     if (state.tab === "mat" && MAT && S4 && state.matView === "walls" && MAT.walls) html = Object.entries(MAT.walls.counts).filter(([k]) => k).sort((a, b) => b[1] - a[1])
       .map(([k, n]) => `<span><i class="kb" style="background:${WALL_COL[k]}"></i>${esc(k)} ${n}</span>`).join("") + `<span><i class="kb mat-none"></i>not read ${MAT.walls.counts[""] || 0}</span>`;
-    else if (state.tab === "mat" && MAT && S4) html = MAT.entries.concat((MAT.generated || []).concat(MAT.sets || []).filter(m => !mat4[m.building])).map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") +
+    else if (state.tab === "mat" && MAT && S4) html = MAT.entries.concat((MAT.generated || []).concat(MAT.sets || []).filter(m => m.building && !mat4[m.building])).map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") +
       `<span><i class="kb mat-none"></i>no material recorded yet ${S4.buildings.filter(b => !mat4[b.id] && !gen4[b.id]).length}</span>`;
     if (state.tab === "s3") html = state.s3view === "speed"
       ? `<span><i class="k v40"></i>40 km/h</span><span><i class="k v30"></i>30</span><span><i class="k v20"></i>20</span><span><i class="k gap"></i>cars allowed, no limit</span><span>the wider the line, the higher the limit</span>`
@@ -1260,11 +1260,13 @@
       <p class="sub">Mean colour ${esc(m.colour)} · colour map observed; height and normal estimated, so assumptions; no roughness map</p>
       <p class="sub">Photo: ${esc(m.credit)}, ${esc(m.taken)}, <a href="${esc(m.page)}">Wikimedia Commons</a>, <a href="${esc(m.licence_url)}">${esc(m.licence)}</a></p></div>`).join("") + gs.map(genHTML).join("");
   }
+  const bldLink = m => m.building ? `<button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button>`
+    : `<span class="sub">${esc(m.where)}${m.hub && m.hub.status !== "usable" && m.hub.status !== "earlier study" ? "" : ": no S4 footprint matched"}</span>`;
   function setLine(m) {
     return `<div class="lab-mat lab-gen">
       <img src="${esc(m.preview)}" alt="${esc(m.name)}: authored colour map, tiled 3 by 3" loading="lazy">
-      <p><b>${esc(m.id)}</b> ${esc(m.name)} · <button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button></p>
-      <p class="sub">${esc(m.component)} Tile ${m.tile_m[0]} × ${m.tile_m[1]} m (authored) · mean colour ${esc(m.colour)} · <a href="${esc(m.anchor)}">map set</a></p></div>`;
+      <p><b>${esc(m.id)}</b> ${esc(m.name)} · ${bldLink(m)}</p>
+      <p class="sub">${esc(m.component)} ${m.repeats === false ? "One panel, not a tile" : "Tile"} ${m.tile_m[0]} × ${m.tile_m[1]} m (authored) · mean colour ${esc(m.colour)} · <a href="${esc(m.anchor)}">map set</a></p></div>`;
   }
   function genHTML(m) {
     if (m.render) return setLine(m);
@@ -1403,14 +1405,15 @@
       h += `<h2 class="lab-t">Materials</h2><p>What Griffintown's walls are made of. Every building's wall as read from a street photo, or the <a href="materials.html">materials library</a>'s entries, each measured from a published photo straightened to a known scale, the colour studies an image model made from photos, and the map sets drawn by a script from references, each shown in its mean colour. Click a building for everything the systems know about it, its materials included.</p>
         ${MAT.walls ? seg2("matView", [["walls", "every building's wall, from street photos"], ["entries", "library entries"]]) : ""}
         ${state.matView === "walls" && MAT.walls ? `<p class="sub">Read by eye from the nearest street panorama taken since 2023 (${esc(MAT.walls.source)}), blind to each building's use and age: an assumption, each tied to its photo. A photo older than the year the tax roll gives a building is not used.</p>` : ""}
-        <label class="lab-check"><input type="checkbox" class="lab-matpanels-on"${state.matPanels ? " checked" : ""}> also show materials in S4's building panels</label>
+        <label class="lab-check"><input type="checkbox" class="lab-matpanels-on"${state.matPanels ? " checked" : ""}> show materials in S4's building panels, as the past era shows each building's construction</label>
         <h3 class="lab-s">Entries (${MAT.entries.length})</h3>` + MAT.entries.map(m => `<div class="lab-mat">
           <img src="${esc(m.preview)}" alt="${esc(m.name)}: colour map, tiled 3 by 3" loading="lazy">
           <p><b>${esc(m.id)}</b> ${esc(m.name)} · <button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button></p>
           <p class="sub">course ${m.course_cm} cm (${m.course_range[0]} to ${m.course_range[1]}) · mean colour ${esc(m.colour)} · <a href="${esc(m.anchor)}">entry</a></p></div>`).join("") +
         ((MAT.generated || []).length ? `<h3 class="lab-s">Generated from photos (${MAT.generated.length})</h3><p class="sub">Colour studies an image model made from a published photo of the building, for control over the pattern. Their pattern is authored; each is checked against its photo where a measurement exists.</p>` + MAT.generated.map(m => `<div class="lab-mat lab-gen">
           <img src="${esc(m.preview)}" alt="${esc(m.name)}: generated colour study, tiled 3 by 3" loading="lazy">
-          <p><b>${esc(m.id)}</b> ${esc(m.name)} · <button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button></p>
+          <p><b>${esc(m.id)}</b> ${esc(m.name)} · ${bldLink(m)}</p>
+          ${m.hub && m.hub.status !== "usable" ? `<p class="${m.hub.status === "earlier study" ? "sub" : "warn"}">${m.hub.status === "held" ? "Held by the material hub" : m.hub.status === "excluded" ? "Excluded by the material hub" : "Kept as an earlier study"}: ${esc(m.hub.why)}</p>` : ""}
           <p class="sub">${m.tile_m ? `tile about ${m.tile_m} m` : "no measured scale"} · repeat edge ${esc(m.seam_reads)} · mean colour ${esc(m.colour)} · <a href="${esc(m.anchor)}">entry</a></p></div>`).join("") : "") +
         ((MAT.sets || []).length ? `<h3 class="lab-s">Map sets (${MAT.sets.length})</h3><p class="sub">Full sets of texture maps drawn by a script from reference photos and documents, each for one part of a building. Every map is authored: an assumption.</p>` + MAT.sets.map(setLine).join("") : "") +
         (MAT.set_aside.length ? `<h3 class="lab-s">Set aside (${MAT.set_aside.length})</h3>` + MAT.set_aside.map(a => `<p class="sub"><b>${esc(a.id)}</b> ${esc(a.name)}: ${esc(a.why)}</p>`).join("") : "") +

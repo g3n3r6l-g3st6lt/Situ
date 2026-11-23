@@ -1,0 +1,112 @@
+{
+ "id": "GTM05-T1",
+ "name": "New City Gas rough stone — traced unique panel",
+ "kind": "traced_stone",
+ "building": "New_City_Gas_complex",
+ "on_s4": false,
+ "building_name": "New City Gas complex, rue Ottawa, Griffintown, Montreal",
+ "component": "Hand-interpreted face boundaries in a small dated photo patch; shallow relief and colour are authored, not measured.",
+ "basis": "Hand-interpreted face boundaries in a small dated photo patch; shallow relief and colour are authored, not measured.",
+ "assumptions": "Perspective remains; ambiguous packing stones are simplified. No extra source detail is recovered by the 1024 pixel output. Edge stones are clipped. Use one panel with clamped UVs, never repeat.",
+ "made": "2026-11-23",
+ "method": "stone faces traced by hand on a small patch of a dated photo, then shallow relief and colour authored; a unique panel, not a tile",
+ "tile_m": [
+  1.0,
+  1.0
+ ],
+ "size_px": 1024,
+ "relief_m": 0.006,
+ "repeats": false,
+ "mean_colour_srgb": "#7a7a75",
+ "validation": {
+  "passed": true,
+  "benchmark_dimensions": [
+   1024,
+   1024
+  ],
+  "source_patch_dimensions": [
+   245,
+   250
+  ],
+  "normal_height_max_component_error": 0.003983868439069341,
+  "height16bit": true,
+  "normal_conventions": true,
+  "blender_views": [
+   1,
+   3,
+   6
+  ],
+  "unreal_import": true,
+  "unreal_visual_acceptance": false,
+  "physically_calibrated": false,
+  "tileable": false,
+  "unreal_static_capture_tested": true
+ },
+ "physically_calibrated": false,
+ "checked_in_a_game_engine": true,
+ "renders": {
+  "view_1m": "outputs/materials/GTM05-T1/view_1m.jpg",
+  "view_3m": "outputs/materials/GTM05-T1/view_3m.jpg",
+  "view_6m": "outputs/materials/GTM05-T1/view_6m.jpg"
+ },
+ "hub_status": null,
+ "hub_confidence": null,
+ "next_action": null,
+ "reference_note": "",
+ "notes_file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/DETAILS_AND_REFERENCES.txt",
+ "notes": "GTM05-T1 — NEW CITY GAS / ROUGH STONE TRACED PANEL\nRELATED BUILDING: New City Gas complex, rue Ottawa, Griffintown, Montreal.\nCOMPONENT: Small rough stone infill patch to the right of the large central-right window, excluding dressed surround and brick. Building-level association; no new OSM footprint match.\n\nSOURCE: Jeangagnon, New City Gas Montreal 01.jpg, 7 August 2011.\nhttps://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg\nCC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0\nFull reference copied unchanged. Crop and trace overlay are adaptations; credit Jeangagnon / Wikimedia Commons, CC BY-SA 3.0, cropped and annotated for SITU. These reference adaptations retain CC BY-SA 3.0. No source pixels are used in the authored base colour.\n\nWHAT CHANGED\nThe earlier GTM05 repeatable procedural wall remains available. This is a separate, unique panel with manually interpreted face boundaries from an actual 245 x 250 pixel patch. Review the numbered trace overlay: boundaries are approximate and some fragmentary stones are omitted. Output is 1024 square for editing, not 1024 pixels of recovered photographic detail. Perspective is not metrically rectified. Do not mix this set with earlier maps.\n\nMAPS AND IMPORT\nAll ten maps share the traced geometry. Base colour: sRGB, authored grey palette, not calibrated albedo. Other channels: linear/non-colour. Height: normalized 16-bit, authored 6 mm range. Normal: choose OpenGL +Y or DirectX -Y; use only one. Roughness .84 stone/.93 mortar is assumed. Metallic and transmission zero; opacity white. AO white is a neutral placeholder. Feature mask marks joints/bevels. Microrelief is authored, not measured from brightness.\nNOT TILEABLE. Use a single panel with UVs 0-1 and clamp addressing; no repeating-wall claim. One metre square is an arbitrary test extent, not measured. Avoid combining normal and height bump for the same relief. Displacement stays off. Surface profiles, chemistry, friction and acoustics are not established.\n\nBENCHMARK STATUS\nThis tests traceability and shader behaviour, not documentary realism. Source age does not verify 2026 condition and does not define a historical-era reconstruction. Better frontal, scale-controlled photographs remain necessary for high-fidelity close-ups.\n",
+ "maps": {
+  "base_color": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/base_color.png",
+   "sha256": "dc7afd63fdca63c2f7bad56519f5c86ff44a2c0ac91fdceb09e5ea333e03e71d",
+   "status": "authored: an interpreted palette, not calibrated colour"
+  },
+  "height_estimated_16bit": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/height_estimated_16bit.png",
+   "sha256": "383ae39c30a9fca6a6eb79d6d19cca76e667a43dad333863b1e780a5223e16ad",
+   "status": "authored relief, 16-bit; the physical range is in the record"
+  },
+  "normal_OpenGL": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/normal_OpenGL.png",
+   "sha256": "9a46184b3c04e66fe73348e4d37ac4d192db7e47fff0414299779e9389ea35b6",
+   "status": "derived from the authored height"
+  },
+  "normal_DirectX": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/normal_DirectX.png",
+   "sha256": "e05551cb3d3cc382e49a3e0c43f25d94d31378584839a9b26151b214742dca59",
+   "status": "the same normals, green channel inverted"
+  },
+  "roughness_assumed": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/roughness_assumed.png",
+   "sha256": "6fc284086d46a170d3c357a061a776e16f9c218266c1b5d6aaa5bea817a505a7",
+   "status": "assumed: trial values, not measured"
+  },
+  "metallic_surface": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/metallic_surface.png",
+   "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+   "status": "authored: describes the outer coating"
+  },
+  "ambient_occlusion_neutral": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/ambient_occlusion_neutral.png",
+   "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+   "status": "a white placeholder, not computed"
+  },
+  "feature_mask": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/feature_mask.png",
+   "sha256": "c046e0925c4ddc482ccb0a5762964feabae6d84b80f4dbaf3ec225ae8a18872e",
+   "status": "authored: mortar or raised ribs"
+  },
+  "transmission_assumed": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/transmission_assumed.png",
+   "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+   "status": "assumed: 1 for glass, 0 otherwise"
+  },
+  "opacity": {
+   "file": "materials_hub_2026-11-23/benchmark/New_City_Gas/rough_stone_traced_patch/reconstruction_maps/opacity.png",
+   "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+   "status": "white: no cut-out"
+  }
+ },
+ "made_by": "tools/materials_batch.py",
+ "source_folder": "data/external/materials_hub_2026-11-23"
+}

@@ -90,5 +90,9 @@
    "status": "not made",
    "how": "the study gives a starting value for trials: 0.8"
   }
+ },
+ "hub": {
+  "status": "earlier study",
+  "why": "GME003 retained as earlier colour-only study under Encyclopedia_2026-11-20_v2; not counted again as a new material. GTM05 and GTM06 separate rough infill from dressed surrounds."
  }
 }

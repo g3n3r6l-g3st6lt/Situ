@@ -1,0 +1,94 @@
+{
+ "id": "GTM06",
+ "name": "Grey dressed stone surround surface",
+ "kind": "dressed",
+ "building": "New_City_Gas_complex",
+ "on_s4": false,
+ "building_name": "New City Gas complex, rue Ottawa, Griffintown, Montreal",
+ "component": "Smooth rectangular stone units beside the photographed windows and doors at New City Gas. This repeatable surface study does not reproduce the surround geometry, lintels or complete facade.",
+ "basis": "Smooth dressed stone surrounds contrast with the rough infill in the dated photograph. Lithology, unit dimensions, tooling and current condition are unverified. Building-level association only; no new OSM footprint match asserted.",
+ "assumptions": "Authored 1.5 m tile with 500 x 300 mm modules in stack bond, 4 mm nominal joints and 3 mm relief range. This is a generic surface sample of the documented component, not measured surround coursing. Actual surrounds require separately modelled geometry. Exact stone species and tooling remain unknown.",
+ "made": "2026-11-23",
+ "method": "procedural reconstruction informed by references: made by a script, pattern, colour and relief authored; no photo pixels in the maps",
+ "tile_m": [
+  1.5,
+  1.5
+ ],
+ "size_px": 1024,
+ "relief_m": 0.003,
+ "repeats": true,
+ "mean_colour_srgb": "#7e7f7c",
+ "validation": {
+  "dimensions_pass": true,
+  "height_16bit": true,
+  "normal_conventions_pass": true,
+  "height_normal_max_component_error": 0.00393027754262637,
+  "building_references_pass": true,
+  "render_files_pass": true
+ },
+ "physically_calibrated": false,
+ "checked_in_a_game_engine": false,
+ "renders": {
+  "render": "outputs/materials/GTM06/render.jpg"
+ },
+ "hub_status": "Procedural reconstruction; Blender reviewed",
+ "hub_confidence": "Smooth dressed stone surrounds contrast with the rough infill in the dated photograph. Lithology, unit dimensions, tooling and current condition are unverified. Building-level association only; no new OSM footprint match asserted.",
+ "next_action": "Smooth rectangular stone units beside the photographed windows and doors at New City Gas. This repeatable surface study does not reproduce the surround geometry, lintels or complete facade. Obtain frontal detail and scale before close-up acceptance.",
+ "reference_note": "Reference: File:New City Gas Montreal 01.jpg, by Jeangagnon. Captured 2011-08-07.\nhttps://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg\nSource licence: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0\nSource photo copied unchanged; retain credit and licence when sharing it. These maps are separately authored procedural reconstructions with no photographic pixel extraction. They are not evidence of current condition.\nGriffintown scope evidence retained from prior review: https://www.patrimoine-culturel.gouv.qc.ca/detail.do?id=191016&methode=consulter&type=bien",
+ "notes_file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/DETAILS_AND_REFERENCES.txt",
+ "notes": "GTM06 — Grey dressed stone surround surface\nRELATED BUILDING(S)\nNew City Gas complex, rue Ottawa, Griffintown, Montreal\nBuilding association key (not an OSM footprint ID): New_City_Gas_complex\nSmooth rectangular stone units beside the photographed windows and doors at New City Gas. This repeatable surface study does not reproduce the surround geometry, lintels or complete facade.\n\nEVIDENCE\nSmooth dressed stone surrounds contrast with the rough infill in the dated photograph. Lithology, unit dimensions, tooling and current condition are unverified. Building-level association only; no new OSM footprint match asserted.\nReference: File:New City Gas Montreal 01.jpg, by Jeangagnon. Captured 2011-08-07.\nhttps://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg\nSource licence: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0\nSource photo copied unchanged; retain credit and licence when sharing it. These maps are separately authored procedural reconstructions with no photographic pixel extraction. They are not evidence of current condition.\nGriffintown scope evidence retained from prior review: https://www.patrimoine-culturel.gouv.qc.ca/detail.do?id=191016&methode=consulter&type=bien\n\nMAP STATUS — PROCEDURAL RECONSTRUCTION / NOT A SCANNED MATERIAL\nCreated 2026-11-23. Deterministic script-generated study, separated from source photographs. All maps use the same UV coordinates and resolution. This resolution is authored detail, not recovered source detail.\nAuthored 1.5 m tile with 500 x 300 mm modules in stack bond, 4 mm nominal joints and 3 mm relief range. This is a generic surface sample of the documented component, not measured surround coursing. Actual surrounds require separately modelled geometry. Exact stone species and tooling remain unknown.\n\nFILES AND IMPORT\nbase_color.png: sRGB; interpreted unlit palette, not calibrated albedo.\nheight_estimated_16bit.png: linear 16-bit, normalized 0-1. Physical height range 0.003 m; authored only.\nnormal_OpenGL.png: tangent +Y. normal_DirectX.png: same normals with green channel inverted. Use one, never both.\nroughness_assumed.png: linear; unmeasured trial values.\nmetallic_surface.png: linear; outer-surface convention described above.\nambient_occlusion_neutral.png: white fallback, not calculated occlusion.\nfeature_mask.png: mortar and bevel-zone mask; white indicates joints, black indicates stone faces.\ntransmission_assumed.png: 1 for glass, 0 otherwise. opacity.png is white; not a glass cutout mask.\nUV extent: 1.5 m x 1.5 m, authored. Resolution: 1024 x 1024.\nUse normal OR height-driven bump at first; avoid double-counting the same relief. Start with displacement disabled. The render review uses normal shading only; a side silhouette needs actual geometry.\nNo in-game physical friction, thermal response, acoustic response or NPC behaviour is established by these maps.\n",
+ "maps": {
+  "base_color": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/base_color.png",
+   "sha256": "308cf4c48da082868ec3c9742709c8315d6745a083d4155e357d33dc862ac1b0",
+   "status": "authored: an interpreted palette, not calibrated colour"
+  },
+  "normal_OpenGL": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/normal_OpenGL.png",
+   "sha256": "4052d3ab3fef6aac600c396966e1a0f33c13473a48961b49581543aada8c4597",
+   "status": "derived from the authored height"
+  },
+  "normal_DirectX": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/normal_DirectX.png",
+   "sha256": "368ccaa48334dfa7725241c8ad8d49fb7d0cce319b68cfaba018350b83b4529c",
+   "status": "the same normals, green channel inverted"
+  },
+  "roughness_assumed": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/roughness_assumed.png",
+   "sha256": "8b55f00337dc686917721b75ce53d4771a305e92c86dfbe47190b3f5c89bbab9",
+   "status": "assumed: trial values, not measured"
+  },
+  "metallic_surface": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/metallic_surface.png",
+   "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+   "status": "authored: describes the outer coating"
+  },
+  "ambient_occlusion_neutral": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/ambient_occlusion_neutral.png",
+   "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+   "status": "a white placeholder, not computed"
+  },
+  "height_estimated_16bit": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/height_estimated_16bit.png",
+   "sha256": "f1164426d79470cac2b0ff4cafa54441f229ba36aa1407484ce1c4f493043666",
+   "status": "authored relief, 16-bit; the physical range is in the record"
+  },
+  "feature_mask": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/feature_mask.png",
+   "sha256": "cc94ca2d63c8851d261acf2d357c80c5b6d05aa37f352bf2a29187b2133b8a6d",
+   "status": "authored: mortar or raised ribs"
+  },
+  "transmission_assumed": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/transmission_assumed.png",
+   "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+   "status": "assumed: 1 for glass, 0 otherwise"
+  },
+  "opacity": {
+   "file": "materials_batch02_2026-11-23/buildings/New_City_Gas/stone_grey_dressed_surround/reconstruction_maps/opacity.png",
+   "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+   "status": "white: no cut-out"
+  }
+ },
+ "made_by": "tools/materials_batch.py",
+ "source_folder": "data/external/materials_batch02_2026-11-23"
+}
