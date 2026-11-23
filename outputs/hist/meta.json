@@ -151,31 +151,31 @@
    "nested": 9
   },
   "c1927": {
-   "outlines": 18,
-   "m2": 1298,
+   "outlines": 25,
+   "m2": 3385,
    "construction": {
-    "brick": 13,
-    "frame": 5
+    "brick": 18,
+    "frame": 6,
+    "stone or concrete": 1
    },
    "top_1918": 183,
    "meet_d020": 62,
-   "read_1949": 44,
-   "carried": 18,
+   "read_1949": 62,
+   "carried": 25,
    "by_1949": {
-    "partly": 23,
-    "yes": 18,
+    "partly": 33,
+    "yes": 25,
     "no": 2,
-    "can't tell": 1
+    "can't tell": 2
    },
    "reviewed_1949": 0,
-   "wait_1949": 18,
+   "wait_1949": 0,
    "blocks_1949": [
     "Colborne–Shannon, William–Ottawa",
-    "Shannon–Ann, William–Ottawa"
-   ],
-   "blocks_wait_1949": [
+    "Shannon–Ann, William–Ottawa",
     "Ann–Dalhousie, William–Ottawa"
-   ]
+   ],
+   "blocks_wait_1949": []
   },
   "blocks": [
    "Colborne–Shannon, William–Ottawa",

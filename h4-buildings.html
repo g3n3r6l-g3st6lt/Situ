@@ -581,9 +581,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="glance">
 <p><strong>Asks</strong> Which buildings stood in Griffintown, what they were built of, and how tall they were, read from the 1912 atlas and the 1918 insurance plan.</p>
-<p><strong>Found</strong> On three blocks between Colborne and Dalhousie, William and Ottawa: 110 outlines on the 1912 atlas and 192 on the May 1918 plan. 18 are carried to the represented period, c1927, all on the two blocks read on the 1949 plans so far.</p>
+<p><strong>Found</strong> On three blocks between Colborne and Dalhousie, William and Ottawa: 110 outlines on the 1912 atlas and 192 on the May 1918 plan. 25 are carried to the represented period, c1927, after each was read against the 1949 plans.</p>
 <p><strong>Stands</strong> partial. Readings: assumption. The outlines are traced from the plans’ coloured fills by a script, and their construction is read from the fill colour before the legend has been read. Whether each outline is still drawn in 1949 is read on the 1949 plan, and waits for my review.</p>
-<p><strong>Leaves out</strong> The rest of the study area, which is not traced yet: there, an empty map means not read, never no building. The Ann–Dalhousie block on the 1949 plans, so none of its buildings is carried yet. Storeys and uses for most 1918 outlines.</p>
+<p><strong>Leaves out</strong> The rest of the study area, which is not traced yet: there, an empty map means not read, never no building. Storeys and uses for most 1918 outlines.</p>
 <p><strong>In the game</strong> Not yet.</p>
 <p><strong>Trace</strong> from the historical workspace by <a href="./provenance.html">tools/hist_import.py</a> · <a href="outputs/hist/h4_outlines_1912.geojson">1912 outlines</a> · <a href="outputs/hist/h4_outlines_1918.geojson">1918 outlines</a> · <a href="outputs/hist/h4_carried_c1927.geojson">carried to c1927</a> · <a href="./past-sources.html">sources</a></p>
 </div>
@@ -596,8 +596,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="result">Result</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/hist/h4_outlines.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The three pilot blocks. Left: the 1912 Goad atlas. Middle: the May 1918 insurance plan. Right: the outlines carried to c1927, on the two blocks read on the 1949 plans so far. Pink-red: brick (on the 1912 atlas, brick or stone); yellow: frame; blue-grey: stone or concrete."><img src="outputs/hist/h4_outlines.png" class="img-fluid figure-img" alt="The three pilot blocks. Left: the 1912 Goad atlas. Middle: the May 1918 insurance plan. Right: the outlines carried to c1927, on the two blocks read on the 1949 plans so far. Pink-red: brick (on the 1912 atlas, brick or stone); yellow: frame; blue-grey: stone or concrete."></a></p>
-<figcaption>The three pilot blocks. Left: the 1912 Goad atlas. Middle: the May 1918 insurance plan. Right: the outlines carried to c1927, on the two blocks read on the 1949 plans so far. Pink-red: brick (on the 1912 atlas, brick or stone); yellow: frame; blue-grey: stone or concrete.</figcaption>
+<p><a href="outputs/hist/h4_outlines.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The three pilot blocks. Left: the 1912 Goad atlas. Middle: the May 1918 insurance plan. Right: the outlines carried to c1927, bracketed by the 1949 plans. Pink-red: brick (on the 1912 atlas, brick or stone); yellow: frame; blue-grey: stone or concrete."><img src="outputs/hist/h4_outlines.png" class="img-fluid figure-img" alt="The three pilot blocks. Left: the 1912 Goad atlas. Middle: the May 1918 insurance plan. Right: the outlines carried to c1927, bracketed by the 1949 plans. Pink-red: brick (on the 1912 atlas, brick or stone); yellow: frame; blue-grey: stone or concrete."></a></p>
+<figcaption>The three pilot blocks. Left: the 1912 Goad atlas. Middle: the May 1918 insurance plan. Right: the outlines carried to c1927, bracketed by the 1949 plans. Pink-red: brick (on the 1912 atlas, brick or stone); yellow: frame; blue-grey: stone or concrete.</figcaption>
 </figure>
 </div>
 <table class="caption-top table">
@@ -621,20 +621,20 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>carried to c1927 (inferred)</td>
-<td>18</td>
-<td>1,298 m²</td>
+<td>25</td>
+<td>3,385 m²</td>
 </tr>
 </tbody>
 </table>
-<p>On the 1912 atlas, 55 outlines are brick or stone and 55 frame: this atlas does not tell brick from stone. On the 1918 plan, 95 are brick, 95 frame and 2 stone or concrete. The 1918 plan prints storeys and uses; they are read so far for 33 outlines. 9 outlines of 1918 sit inside a larger one: additions, or sheds in yards. Of the 18 carried to c1927, 13 are brick and 5 frame, as read on the 1918 plan.</p>
+<p>On the 1912 atlas, 55 outlines are brick or stone and 55 frame: this atlas does not tell brick from stone. On the 1918 plan, 95 are brick, 95 frame and 2 stone or concrete. The 1918 plan prints storeys and uses; they are read so far for 33 outlines. 9 outlines of 1918 sit inside a larger one: additions, or sheds in yards. Of the 25 carried to c1927, 18 are brick, 6 frame and 1 stone or concrete, as read on the 1918 plan.</p>
 </section>
 <section id="how-it-is-read" class="level2">
 <h2 class="anchored" data-anchor-id="how-it-is-read">How it is read</h2>
 <ul>
 <li><strong>Outlines.</strong> A script follows the coloured fill of each building and cuts it along the plan’s ink lines (decision D017). It works at the scan’s resolution, about 5 cm per pixel. Buildings left uncoloured on the plan, such as open sheds and platforms, are not traced.</li>
 <li><strong>Construction.</strong> Read from the fill colour by the usual key of these plans: pink brick, yellow frame, blue stone or concrete (D016, D018). The legend sheets have not been read yet, so the key is provisional.</li>
-<li><strong>Place.</strong> Each outline sits where its plan’s registration puts it: to about 3.5 m on the 1912 plate, 2.5 to 2.6 m on the 1918 sheets. The 1949 sheet is registered on ten junctions of William and Ottawa to about 2.0 m, and the two Colborne junctions, kept out of the fit as checks, land 3.9 and 4.5 m from today’s (D040).</li>
-<li><strong>Carried to c1927.</strong> A 1918 outline is carried to the represented period only when two things hold (D039). First, the 1927 directory ties its occupant to the same firm, or it was drawn on both the 1912 and 1918 maps and one of its addresses is listed in 1927 (the earlier rule, D020). Second, it is still drawn on the city’s 1949 land-use plans, so 1918 and 1949 bracket the 1920s. 62 of the 183 main 1918 outlines pass the first test. 44 of them lie on the 1949 sheet read so far, sheet 51-70, which covers Colborne–Shannon and Shannon–Ann. Each 1918 outline is laid on that sheet and read: 18 are still drawn there, 23 partly (a building covers the place, and its walls do not follow the 1918 outline), 2 not, and 1 cannot be told. The 18 are carried. The other 18 that pass the first test stand on the Ann–Dalhousie block, which is on a sheet not read yet, so they are not carried. Every value carried is inferred, and an outline that is not carried is unknown in c1927, never absent.</li>
+<li><strong>Place.</strong> Each outline sits where its plan’s registration puts it: to about 3.5 m on the 1912 plate, 2.5 to 2.6 m on the 1918 sheets. The 1949 sheet 51-70 is registered on ten junctions of William and Ottawa to about 2.0 m, and the two Colborne junctions, kept out of the fit as checks, land 3.9 and 4.5 m from today’s (D040). The east part of the Ann–Dalhousie block is on the next sheet, 52-70. That sheet is drawn stretched along William, so it is fitted together with 51-70, on four junctions and on the points where William and Ottawa cross the edge the two sheets share: to about 3.9 m, and the shared edge meets within 1.7 m (D041).</li>
+<li><strong>Carried to c1927.</strong> A 1918 outline is carried to the represented period only when two things hold (D039). First, the 1927 directory ties its occupant to the same firm, or it was drawn on both the 1912 and 1918 maps and one of its addresses is listed in 1927 (the earlier rule, D020). Second, it is still drawn on the city’s 1949 land-use plans, so 1918 and 1949 bracket the 1920s. 62 of the 183 main 1918 outlines pass the first test. Each of the 62 is laid on the 1949 sheets and read: 25 are still drawn there, 33 partly (a building covers the place, and its walls do not follow the 1918 outline), 2 not, and 2 cannot be told. The 25 are carried. Many of the outlines read partly stand inside one larger 1949 building, such as the Robertson works on Ann, which the 1949 plan draws as one outline where the 1918 plan draws several. Every value carried is inferred, and an outline that is not carried is unknown in c1927, never absent.</li>
 </ul>
 </section>
 <section id="how-sure" class="level2">

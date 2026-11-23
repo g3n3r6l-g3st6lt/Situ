@@ -143,42 +143,42 @@ ITM-PAI1918-S27-T157,B-COLB-SHAN,16.4,1.0,141 Ottawa;141½ Ottawa,2.0,,1.0,partl
 ITM-PAI1918-S27-T158,B-COLB-SHAN,27.4,1.0,137½ Ottawa,1.0,,1.0,partly,,0.0,"1912–1918 stable; address listed in 1927 (unchanged numbering); 1949 reading 'partly', so not carried (D039)",D020;D039
 ITM-PAI1918-S27-T159,B-COLB-SHAN,35.0,1.0,139 Ottawa;139½ Ottawa,2.0,,1.0,partly,,0.0,"1912–1918 stable; address listed in 1927 (unchanged numbering); 1949 reading 'partly', so not carried (D039)",D020;D039
 ITM-PAI1918-S27-T160,B-COLB-SHAN,10.1,1.0,137 Ottawa,1.0,,1.0,partly,,0.0,"1912–1918 stable; address listed in 1927 (unchanged numbering); 1949 reading 'partly', so not carried (D039)",D020;D039
-ITM-PAI1918-S28-T001,B-ANN-DALH,576.9,1.0,203 Ann;144 William;142 William,1.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
-ITM-PAI1918-S28-T002,B-ANN-DALH,111.8,1.0,140 William,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
-ITM-PAI1918-S28-T003,B-ANN-DALH,682.5,1.0,248 Dalhousie;246 Dalhousie;138 William,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
-ITM-PAI1918-S28-T004,B-ANN-DALH,416.4,1.0,197 Ann;199 Ann;195 Ann,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T001,B-ANN-DALH,576.9,1.0,203 Ann;144 William;142 William,1.0,AN01,1.0,yes,,1.0,"identity anchor AN01; still drawn in 1949 (D039, read by Claude, not yet reviewed)",D020;D039
+ITM-PAI1918-S28-T002,B-ANN-DALH,111.8,1.0,140 William,0.0,AN01,1.0,partly,,0.0,"identity anchor AN01; 1949 reading 'partly', so not carried (D039)",D020;D039
+ITM-PAI1918-S28-T003,B-ANN-DALH,682.5,1.0,248 Dalhousie;246 Dalhousie;138 William,0.0,AN01,1.0,partly,,0.0,"identity anchor AN01; 1949 reading 'partly', so not carried (D039)",D020;D039
+ITM-PAI1918-S28-T004,B-ANN-DALH,416.4,1.0,197 Ann;199 Ann;195 Ann,0.0,AN01,1.0,partly,,0.0,"identity anchor AN01; 1949 reading 'partly', so not carried (D039)",D020;D039
 ITM-PAI1918-S28-T005,B-ANN-DALH,23.6,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
-ITM-PAI1918-S28-T006,B-ANN-DALH,352.6,1.0,244 Dalhousie,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T006,B-ANN-DALH,352.6,1.0,244 Dalhousie,0.0,AN01,1.0,partly,,0.0,"identity anchor AN01; 1949 reading 'partly', so not carried (D039)",D020;D039
 ITM-PAI1918-S28-T007,B-ANN-DALH,20.3,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T008,B-ANN-DALH,8.8,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
-ITM-PAI1918-S28-T009,B-ANN-DALH,310.5,1.0,193 Ann,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T009,B-ANN-DALH,310.5,1.0,193 Ann,0.0,AN01,1.0,partly,,0.0,"identity anchor AN01; 1949 reading 'partly', so not carried (D039)",D020;D039
 ITM-PAI1918-S28-T010,B-ANN-DALH,36.4,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T011,B-ANN-DALH,107.6,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T012,B-ANN-DALH,30.4,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T013,B-ANN-DALH,13.6,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T014,B-ANN-DALH,80.1,1.0,242 Dalhousie,0.0,,0.0,,,0.0,1918 address not listed in 1927,D020;D039
-ITM-PAI1918-S28-T015,B-ANN-DALH,339.6,1.0,240 Dalhousie,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T015,B-ANN-DALH,339.6,1.0,240 Dalhousie,0.0,AN01,1.0,partly,,0.0,"identity anchor AN01; 1949 reading 'partly', so not carried (D039)",D020;D039
 ITM-PAI1918-S28-T016,B-ANN-DALH,10.8,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T017,B-ANN-DALH,13.4,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
-ITM-PAI1918-S28-T018,B-ANN-DALH,106.5,1.0,179 Ann;177 Ann,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
-ITM-PAI1918-S28-T019,B-ANN-DALH,88.8,1.0,,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
-ITM-PAI1918-S28-T020,B-ANN-DALH,287.8,1.0,236 Dalhousie,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T018,B-ANN-DALH,106.5,1.0,179 Ann;177 Ann,0.0,AN01,1.0,yes,,1.0,"identity anchor AN01; still drawn in 1949 (D039, read by Claude, not yet reviewed)",D020;D039
+ITM-PAI1918-S28-T019,B-ANN-DALH,88.8,1.0,,0.0,AN01,1.0,partly,,0.0,"identity anchor AN01; 1949 reading 'partly', so not carried (D039)",D020;D039
+ITM-PAI1918-S28-T020,B-ANN-DALH,287.8,1.0,236 Dalhousie,0.0,AN01,1.0,partly,,0.0,"identity anchor AN01; 1949 reading 'partly', so not carried (D039)",D020;D039
 ITM-PAI1918-S28-T021,B-ANN-DALH,68.1,1.0,185 Ann,0.0,,0.0,,,0.0,1918 address not listed in 1927,D020;D039
-ITM-PAI1918-S28-T022,B-ANN-DALH,245.9,1.0,,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T022,B-ANN-DALH,245.9,1.0,,0.0,AN01,1.0,partly,,0.0,"identity anchor AN01; 1949 reading 'partly', so not carried (D039)",D020;D039
 ITM-PAI1918-S28-T023,B-ANN-DALH,58.7,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
-ITM-PAI1918-S28-T024,B-ANN-DALH,634.1,1.0,173 Ann;171 Ann;169 Ann,1.0,AN02,1.0,,,0.0,identity anchor AN02; waits for the 1949 bracket (D039),D020;D039
-ITM-PAI1918-S28-T025,B-ANN-DALH,358.9,1.0,226 Dalhousie,0.0,AN01,1.0,,,0.0,identity anchor AN01; waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T024,B-ANN-DALH,634.1,1.0,173 Ann;171 Ann;169 Ann,1.0,AN02,1.0,yes,,1.0,"identity anchor AN02; still drawn in 1949 (D039, read by Claude, not yet reviewed)",D020;D039
+ITM-PAI1918-S28-T025,B-ANN-DALH,358.9,1.0,226 Dalhousie,0.0,AN01,1.0,yes,,1.0,"identity anchor AN01; still drawn in 1949 (D039, read by Claude, not yet reviewed)",D020;D039
 ITM-PAI1918-S28-T026,B-ANN-DALH,11.5,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
-ITM-PAI1918-S28-T027,B-ANN-DALH,154.7,1.0,214 Dalhousie;216 Dalhousie;210 Dalhousie;212 Dalhousie;206 Dalhousie;208 Dalhousie,6.0,,1.0,,,0.0,1912–1918 stable; address listed in 1927 (unchanged numbering); waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T027,B-ANN-DALH,154.7,1.0,214 Dalhousie;216 Dalhousie;210 Dalhousie;212 Dalhousie;206 Dalhousie;208 Dalhousie,6.0,,1.0,yes,,1.0,"1912–1918 stable; address listed in 1927 (unchanged numbering); still drawn in 1949 (D039, read by Claude, not yet reviewed)",D020;D039
 ITM-PAI1918-S28-T028,B-ANN-DALH,39.0,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T029,B-ANN-DALH,62.7,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T030,B-ANN-DALH,38.7,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
-ITM-PAI1918-S28-T031,B-ANN-DALH,175.0,1.0,202 Dalhousie;204 Dalhousie;198 Dalhousie;200 Dalhousie;194 Dalhousie;196 Dalhousie,6.0,,1.0,,,0.0,1912–1918 stable; address listed in 1927 (unchanged numbering); waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T031,B-ANN-DALH,175.0,1.0,202 Dalhousie;204 Dalhousie;198 Dalhousie;200 Dalhousie;194 Dalhousie;196 Dalhousie,6.0,,1.0,yes,,1.0,"1912–1918 stable; address listed in 1927 (unchanged numbering); still drawn in 1949 (D039, read by Claude, not yet reviewed)",D020;D039
 ITM-PAI1918-S28-T032,B-ANN-DALH,27.4,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T033,B-ANN-DALH,25.1,1.0,161 Ann,0.0,,0.0,,,0.0,1918 address not listed in 1927,D020;D039
 ITM-PAI1918-S28-T034,B-ANN-DALH,9.8,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
 ITM-PAI1918-S28-T035,B-ANN-DALH,41.1,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
-ITM-PAI1918-S28-T036,B-ANN-DALH,80.9,1.0,105 Ottawa;107 Ottawa;101 Ottawa;103 Ottawa,2.0,,1.0,,,0.0,1912–1918 stable; address listed in 1927 (unchanged numbering); waits for the 1949 bracket (D039),D020;D039
-ITM-PAI1918-S28-T037,B-ANN-DALH,62.9,1.0,93 Ottawa;95 Ottawa;97 Ottawa;99 Ottawa,4.0,,1.0,,,0.0,1912–1918 stable; address listed in 1927 (unchanged numbering); waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T036,B-ANN-DALH,80.9,1.0,105 Ottawa;107 Ottawa;101 Ottawa;103 Ottawa,2.0,,1.0,yes,,1.0,"1912–1918 stable; address listed in 1927 (unchanged numbering); still drawn in 1949 (D039, read by Claude, not yet reviewed)",D020;D039
+ITM-PAI1918-S28-T037,B-ANN-DALH,62.9,1.0,93 Ottawa;95 Ottawa;97 Ottawa;99 Ottawa,4.0,,1.0,can't tell,,0.0,"1912–1918 stable; address listed in 1927 (unchanged numbering); 1949 reading 'can't tell', so not carried (D039)",D020;D039
 ITM-PAI1918-S28-T038,B-ANN-DALH,50.8,1.0,,0.0,,0.0,,,0.0,no 1918 address on this outline,D020;D039
-ITM-PAI1918-S28-T039,B-ANN-DALH,82.3,1.0,192 Dalhousie;91 Ottawa;89 Ottawa,2.0,,1.0,,,0.0,1912–1918 stable; address listed in 1927 (unchanged numbering); waits for the 1949 bracket (D039),D020;D039
+ITM-PAI1918-S28-T039,B-ANN-DALH,82.3,1.0,192 Dalhousie;91 Ottawa;89 Ottawa,2.0,,1.0,partly,,0.0,"1912–1918 stable; address listed in 1927 (unchanged numbering); 1949 reading 'partly', so not carried (D039)",D020;D039
