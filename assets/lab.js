@@ -14,14 +14,16 @@
     window.SITU_S1_ROUTES  outputs/s1/routes_data.js  shortest distances and routes between every pair of junctions
     window.SITU_G1   outputs/g1/web_data.js   each building's height as G1 World chose it, and the heights it discarded, with why
     window.SITU_MATERIALS  outputs/materials/web_data.js  the materials library: entries recorded on a building, with the photo's credit
+    window.SITU_HIST outputs/hist/web_data.js     the past era: the 1912 segment map (H-S1) and its space syntax values (H-S2)
 
   It computes nothing about the city. Every colour and every value shows what the Python code already
   produced, and tools/test_lab.py checks that these files match the tables. One exception, kept small:
   the route tool applies the rules in assets/routes.js to the distances routes.py wrote (test L5).
 
-  The page: nine tabs, one per system. Each tab paints the map its own way, has at most two controls,
-  lists its checkpoints with the reason each one matters, and shows its tests. Clicking a street,
-  a junction, a sign or a building opens its details in every tab.
+  The page: an era switch (today, 1912, or the two compared), an Overview, and one tab per system. Each system tab
+  paints the map its own way, has at most two controls, lists its checkpoints with the reason each one matters,
+  and shows its tests. Clicking a street, a junction or a building on a system's tab shows only what that system
+  knows about it; the Overview collects what every system knows about it in one panel (added 2026-11-23).
 
   Structure
     1 data and indexes      4 overlays             7 the side: tabs, controls, checkpoints, tests
@@ -29,11 +31,12 @@
     3 painting              6 the detail panel
 */
 (function () {
-  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes, G1 = window.SITU_G1, MAT = window.SITU_MATERIALS;
+  const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes, G1 = window.SITU_G1, MAT = window.SITU_MATERIALS, H = window.SITU_HIST;
   const mat4 = {};                                 // building -> materials library entries recorded on it
   if (MAT) MAT.entries.forEach(m => (mat4[m.building] = mat4[m.building] || []).push(m));
   const gen4 = {};                                 // building -> colour studies an image model made from a photo of it
   if (MAT && MAT.generated) MAT.generated.forEach(m => (gen4[m.building] = gen4[m.building] || []).push(m));
+  if (MAT && MAT.sets) MAT.sets.forEach(m => (gen4[m.building] = gen4[m.building] || []).push(m));     // map sets drawn by a script from references
   const WALL = MAT && MAT.walls ? MAT.walls.buildings : {};      // building -> [material, sure, photo, date, why empty]
   const WALL_COL = { "brick, red": "#b5523b", "brick, brown": "#8a5a3c", "brick, buff or cream": "#d8c49a", "brick, dark": "#4a3a36",
     "stone, dressed": "#a8a39a", "stone, rough-faced": "#7f7a70", "concrete or render": "#c9c9c9", "metal cladding": "#5b8fb3",
@@ -125,10 +128,11 @@
   const RADII = { ped: ["200", "400", "800", "n"], veh: ["1200", "2000"] };
   const RADIUS_NAME = r => r === "n" ? "whole island" : r + " m";
   const TABS = [
-    { id: "s1", name: "Streets", ok: true },
-    { id: "s2", name: "Scores", ok: !!S2 },
+    { id: "all", tag: "ALL", name: "Overview: every system at once", ok: true, past: true },
+    { id: "s1", name: "Streets", ok: true, past: true },
+    { id: "s2", name: "Scores", ok: !!S2, past: true },
     { id: "s3", name: "Rules", ok: !!S3 },
-    { id: "s4", name: "Buildings", ok: !!S4 },
+    { id: "s4", name: "Buildings", ok: !!S4, past: true },
     { id: "s5", name: "Rhythm", ok: !!S5 && !!S4 },
     { id: "s6", name: "Streetscape", ok: !!S6 },
     { id: "s7", name: "Commuters", ok: !!S7 },
@@ -137,12 +141,15 @@
     { id: "mat", tag: "M", name: "Materials", ok: !!MAT && !!S4 },   // the materials library: not a system, a record of the walls
   ];
   const state = {
+    era: "now",                      // "now", "1912" or "compare" (the two crossfaded on one map)
+    cmp: 50,                         // compare: 0 shows only 1912, 100 only today
+    hmeasure: "nach", hradius: "800", hbld: "1912",     // the past's buildings: outlines on the 1912 atlas, the May 1918 plan, or carried to c1927
     tab: "s1",
     s1try: "details", s1mode: "walk", reachStart: null, reachStep: 0, routeA: null, routeB: null, routeSlack: 2,
     s2net: "ped", s2measure: "NACH", s2radius: 2, s2view: "one",
     s3view: "rules",
     s4colour: "use", s4places: false, s4odb: false,
-    matPanels: true, matView: "walls",               // Materials tab: every building's wall as read from photos, or the library's entries                                  // show a building's recorded materials in its panel on every tab
+    matPanels: false, matView: "walls",               // Materials tab: every building's wall as read from photos, or the library's entries                                  // show a building's recorded materials in its panel on every tab
     s5day: "1", s5hour: 17, s5mode: "pedestrian", s5season: "summer",
     s6show: "all", s6colour: "material", s6canopy: false,
     s7show: "all",
@@ -155,8 +162,12 @@
   };
 
   host.innerHTML = `
+  <div class="lab-top">
+  <div class="lab-era" role="group" aria-label="Era">${[["now", "Today"], ["1912", "1912"], ["compare", "Compare"]].map(([v, l]) =>
+    `<button type="button" data-era="${v}"${v !== "now" && !H ? ' disabled title="The past era\'s data did not load (outputs/hist/web_data.js)"' : ""} aria-pressed="${v === "now"}">${l}</button>`).join("")}</div>
   <div class="lab-tabs" role="tablist" aria-label="Systems">${TABS.map(t =>
-    `<button type="button" role="tab" data-tab="${t.id}"${t.ok ? "" : ` disabled title="This system's data did not load (outputs/${t.id}/web_data.js)"`}><span>${t.tag || t.id.toUpperCase()}</span>${t.name}</button>`).join("")}</div>
+    `<button type="button" role="tab" data-tab="${t.id}"${t.id === "all" ? ' class="lab-all"' : ""}${t.ok ? "" : ` disabled title="This system's data did not load (outputs/${t.id}/web_data.js)"`}><span>${t.tag || t.id.toUpperCase()}</span>${t.name}</button>`).join("")}</div>
+  </div>
   <div class="lab-main">
     <div class="lab-map"></div>
     <form class="lab-find" role="search" autocomplete="off">
@@ -217,6 +228,43 @@
     e.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "surf6", id: s.id }); });
     sfEl[s.id] = e;
   });
+
+  // the past era (H-S1, H-S2): two layers of its own, under today's streets, shown only in the 1912 and compare views
+  const hbLayer = map.layer("histb"), h1Layer = map.layer("hist1"), h2Layer = map.layer("hist2");
+  const hbEl = {}, hbRec = {};
+  const HB_COL = { brick: "brick", "brick or stone": "brick", frame: "frame", "stone or concrete": "stone" };
+  if (H && H.buildings) Object.entries(H.buildings).forEach(([yr, list]) => list.forEach(b => {
+    const id = b.footprint_id || b.building_id;
+    hbRec[id] = Object.assign({ year: yr, id }, b);
+    const e = map.path(hbLayer, "M" + b.ring.map(p => map.P(p).join(",")).join("L") + "Z", { class: "lab-hbld", "data-yr": yr });
+    e.addEventListener("pointermove", ev => map.tip(ev, `${esc(b.occupant || id)}<br><span>${yr === "c1927" ? "carried to c1927" : yr} · ${esc(b.construction || "construction unknown")}${b.storeys_raw || b.storeys ? " · " + esc(b.storeys_raw || b.storeys) + " storeys" : ""}</span>`));
+    e.addEventListener("pointerleave", () => map.untip());
+    e.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "hbld", id }); });
+    hbEl[id] = e;
+  }));
+  const hseg = {}, hnet = {}, h1El = {}, h2El = {};
+  const HZONE = { core: "inside the study area", halo: "in the 150 m halo", ring: "in the ring beyond the halo" };
+  const HCLS = { street: "street", lane: "lane or court", open_area: "open area" };
+  if (H) {
+    H.segments.forEach(s => {
+      hseg[s.id] = s;
+      h1El[s.id] = map.line(h1Layer, s.pts, { class: "lab-hist" });
+      const hit = map.line(h1Layer, s.pts, { class: "sx-hit" });
+      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(s.name || "no name")} <span>${s.id} · 1912</span><br><span>${esc(HCLS[s.cls] || s.cls)}, name ${esc(s.status)}</span>`));
+      hit.addEventListener("pointerleave", () => map.untip());
+      hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "hseg", id: s.id }); });
+    });
+    H.net.forEach(n => {
+      hnet[n.id] = n;
+      h2El[n.id] = map.line(h2Layer, n.pts, { class: "lab-hist" });
+      const hit = map.line(h2Layer, n.pts, { class: "sx-hit" });
+      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(n.name || "no name")} <span>${n.id} · 1912</span><br><span>${n.report ? hcol() + ": " + fmt(n.v[hcol()]) : "ring: not reported"}</span>`));
+      hit.addEventListener("pointerleave", () => map.untip());
+      hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "hnet", id: n.id }); });
+    });
+  }
+  const hcol = () => state.hmeasure + "_" + state.hradius;
+  const past = () => state.era !== "now";
 
   const streets = map.layer("streets");
   const segEl = {};
@@ -293,14 +341,46 @@
     return "";
   }
 
+  function paintPast() {
+    const on1 = H && past() && state.tab !== "s2", on2 = H && past() && state.tab === "s2", onb = H && H.buildings && past() && (state.tab === "s4" || state.tab === "all");
+    const fade = state.era === "compare" ? (100 - state.cmp) / 100 : 1;          // 1912's weight in the crossfade
+    h1Layer.style.display = on1 ? "" : "none";
+    hbLayer.style.display = onb ? "" : "none";
+    if (onb) Object.values(hbRec).forEach(b => hbEl[b.id].setAttribute("class", b.year !== state.hbld ? "lab-hbld off" :
+      "lab-hbld " + (state.tab === "all" ? "ov" : HB_COL[b.construction] || "unknown") + (b.nested_in ? " nested" : "") + (state.pick && state.pick.kind === "hbld" && state.pick.id === b.id ? " picked" : "")));
+    h2Layer.style.display = on2 ? "" : "none";
+    [h1Layer, h2Layer, hbLayer].forEach(g => { g.style.opacity = fade; g.style.pointerEvents = state.era === "compare" && fade < 0.5 ? "none" : ""; });
+    streets.style.opacity = state.era === "compare" ? 1 - fade : "";
+    streets.style.pointerEvents = state.era === "compare" && fade >= 0.5 ? "none" : "";
+    streets.style.display = state.era === "1912" ? "none" : "";
+    if (on1) H.segments.forEach(s => h1El[s.id].setAttribute("class", "lab-hist " + (state.tab === "s4" ? "ring" : s.zone === "ring" ? "ring" : s.cls) + (state.tab !== "s4" && s.status !== "documented" ? " named-" + s.status : "") +
+      (state.pick && state.pick.kind === "hseg" && state.pick.id === s.id ? " picked" : "")));
+    if (on2) {
+      const vals = H.net.filter(n => n.report && n.v[hcol()] != null).map(n => n.v[hcol()]).sort((a, b) => a - b);
+      const rank = v => vals.filter(x => x < v).length / Math.max(1, vals.length - 1);
+      H.net.forEach(n => {
+        const e = h2El[n.id], v = n.report ? n.v[hcol()] : null;
+        let style = "";
+        if (v != null) { const t = rank(v); style = `stroke:${ramp(t)};stroke-width:${(1.2 + 2.6 * t).toFixed(2)}px`; }
+        e.setAttribute("class", "lab-hist " + (n.report ? (v == null ? "novalue" : "val") : "ring") + (state.pick && state.pick.kind === "hnet" && state.pick.id === n.id ? " picked" : ""));
+        e.setAttribute("style", style);
+      });
+      return vals.length;
+    }
+    return 0;
+  }
+
   function paint() {
-    const col = state.tab === "s2" ? s2col() : null, rk = col ? ranks(col) : state.tab === "s8" && S8 ? ranks8(state.s8measure) : null;
+    const hn = paintPast();
+    if (state.era === "1912") { paintBuildings(); paintSurfaces(); drawKey(null, hn); return; }
+    const col = state.tab === "s2" ? (state.era === "compare" ? "ped_" + state.hmeasure.toUpperCase() + "_" + state.hradius : s2col()) : null, rk = col ? ranks(col) : state.tab === "s8" && S8 ? ranks8(state.s8measure) : null;
     const dd = diffNow();
     const top9 = state.tab === "s9" && S9 ? Math.max(1, ...S1.segments.map(x => flow9(x.id))) : 1;
     const reach = reachSteps(), rt = routeNow();
     S1.segments.forEach((s, i) => {
       const e = segEl[s.id];
       let cls = "lab-street", style = "";
+      if (state.tab === "all") cls += !car(s) ? " walk" : !s.walk ? " drive" : " both";
       if (state.tab === "s1") {
         cls += !car(s) ? " walk" : !s.walk ? " drive" : " both";
         if (s.source !== "geobase") cls += " added";
@@ -308,7 +388,7 @@
         if (rt) cls += rt.path.has(i) ? " route" : rt.wide.has(i) ? " corridor" : " unreached";      // so does a route
         if (state.s1try === "minutes" && state.minA) cls += " unreached";                             // and the minutes on foot
       }
-      if (state.tab === "s2" && dd) {
+      if (state.tab === "s2" && dd && state.era === "now") {
         if (dd[s.id] == null) cls += " novalue"; else style = divStyle(dd[s.id]);
       } else if (state.tab === "s2") {
         const v = S2.scores[s.id] && S2.scores[s.id][col];
@@ -343,14 +423,19 @@
     });
     paintBuildings();
     paintSurfaces();
-    drawKey(rk);
+    drawKey(rk, hn);
   }
 
   function paintBuildings() {
-    const on = (state.tab === "s4" || state.tab === "s8" || state.tab === "mat") && S4;
+    const cmp4 = state.era === "compare" && state.tab === "s4" && S4;
+    const on = ((state.tab === "s4" || state.tab === "s8" || state.tab === "mat" || state.tab === "all") && S4 && state.era === "now") || cmp4;
     bLayer.style.display = on ? "" : "none";
+    bLayer.style.opacity = cmp4 ? state.cmp / 100 : "";
+    bLayer.style.pointerEvents = cmp4 && state.cmp < 50 ? "none" : "";
     if (!on) return;
+    if (cmp4) { S4.buildings.forEach(b => { bEl[b.id].style.fill = ""; bEl[b.id].setAttribute("class", "lab-bld ov" + (state.pick && state.pick.kind === "building" && state.pick.id === b.id ? " picked" : "")); }); return; }
     if (state.tab === "s8") { S4.buildings.forEach(b => bEl[b.id].setAttribute("class", "lab-bld view8")); return; }   // what stops a sight line
+    if (state.tab === "all") { S4.buildings.forEach(b => { bEl[b.id].style.fill = ""; bEl[b.id].setAttribute("class", "lab-bld ov" + (state.pick && state.pick.kind === "building" && state.pick.id === b.id ? " picked" : "")); }); return; }
     S4.buildings.forEach(b => {
       const wl = state.tab === "mat" && state.matView === "walls" && wallOf(b.id);
       const m = state.tab === "mat" && (state.matView === "walls" ? (wl ? [{ colour: WALL_COL[wl[0]] }] : null) : mat4[b.id] || gen4[b.id]);
@@ -363,7 +448,7 @@
   }
 
   function paintSurfaces() {
-    const on = state.tab === "s6" && S6;
+    const on = state.tab === "s6" && S6 && state.era === "now";
     sLayer.style.display = on ? "" : "none";
     cLayer.style.display = on && state.s6canopy ? "" : "none";
     if (!on) return;
@@ -373,7 +458,21 @@
       (state.pick && state.pick.kind === "surf6" && state.pick.id === s.id ? " picked" : "")));
   }
 
-  function drawKey(rk) {
+  function drawKey(rk, hn) {
+    if (past() && state.tab === "s4") {
+      const M = H.meta.buildings[state.hbld];
+      key.innerHTML = `<span><i class="kb hb-brick"></i>brick${state.hbld === "1912" ? " or stone" : ""}</span><span><i class="kb hb-frame"></i>frame</span>${state.hbld !== "1912" ? `<span><i class="kb hb-stone"></i>stone or concrete</span>` : ""}` +
+        `<span><i class="kb hb-nested"></i>inside a larger outline</span><span>${M.outlines ? M.outlines + " outlines on " + H.blocks.length + " blocks; the rest of the area is not traced yet" : "none carried yet: waiting for the 1949 plans"}</span>` + (state.era === "compare" ? `<span><i class="kb ov"></i>today's buildings (S4)</span>` : "");
+      return;
+    }
+    if (past() && (state.tab === "s1" || state.tab === "all" || state.tab === "s2")) {
+      const today = state.era === "compare" ? `<span><i class="k both"></i>today (S1)</span>` : "";
+      const html = state.tab === "s2"
+        ? `<span class="lab-ramp"><i></i><i></i></span><span><b>1912 walking ${state.hmeasure === "nach" ? "choice" : "integration"}, ${state.hradius} m</b>, by rank among the ${hn} reported segments: lowest blue, highest yellow${state.era === "compare" ? "; today's streets by the same measure" : ""}</span><span><i class="k hring"></i>ring: analysed, not reported</span>`
+        : `<span><i class="k hstreet"></i>1912 street</span><span><i class="k hlane"></i>lane or court</span><span><i class="k hopen"></i>open area</span><span><i class="k hinfer"></i>name inferred or unknown</span><span><i class="k hring"></i>ring</span>` + today;
+      key.innerHTML = html;
+      return;
+    }
     let html = "";
     if (state.tab === "s1") {
       if (state.s1try === "minutes") html = BANDS.map((m, b) => `<span><i class="k min${b}"></i>${b ? BANDS[b - 1] + " to " : "within "}${m} minutes</span>`).join("") + `<span><i class="k minbeyond"></i>further</span>`;
@@ -388,7 +487,7 @@
     }
     if (state.tab === "mat" && MAT && S4 && state.matView === "walls" && MAT.walls) html = Object.entries(MAT.walls.counts).filter(([k]) => k).sort((a, b) => b[1] - a[1])
       .map(([k, n]) => `<span><i class="kb" style="background:${WALL_COL[k]}"></i>${esc(k)} ${n}</span>`).join("") + `<span><i class="kb mat-none"></i>not read ${MAT.walls.counts[""] || 0}</span>`;
-    else if (state.tab === "mat" && MAT && S4) html = MAT.entries.concat((MAT.generated || []).filter(m => !mat4[m.building])).map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") +
+    else if (state.tab === "mat" && MAT && S4) html = MAT.entries.concat((MAT.generated || []).concat(MAT.sets || []).filter(m => !mat4[m.building])).map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") +
       `<span><i class="kb mat-none"></i>no material recorded yet ${S4.buildings.filter(b => !mat4[b.id] && !gen4[b.id]).length}</span>`;
     if (state.tab === "s3") html = state.s3view === "speed"
       ? `<span><i class="k v40"></i>40 km/h</span><span><i class="k v30"></i>30</span><span><i class="k v20"></i>20</span><span><i class="k gap"></i>cars allowed, no limit</span><span>the wider the line, the higher the limit</span>`
@@ -449,6 +548,11 @@
     map.clearHits();
     for (const n of ["marks", "focus", "labels"]) map.clear(n);
     const marks = map.layer("marks"), focus = map.layer("focus"), labels = map.layer("labels");
+    if (past()) {
+      if (H) map.line(marks, H.boundary, { class: "lab-hbound" });
+      if (H && H.blocks && (state.tab === "s4" || state.tab === "all")) H.blocks.forEach(b => map.line(marks, b.ring.concat([b.ring[0]]), { class: "lab-hblock" }));
+      return;
+    }
     if (state.tab === "s1") {
       if (state.s1mode === "drive" && state.s1try !== "details") onewayArrows(marks);
       S1.junctions.forEach(j => {
@@ -886,20 +990,75 @@
   }
 
   // ================================================================ 6 the detail panel
+  // what a panel may show on this tab: on a system's tab, only that system; on the Overview, everything
+  let PARTS = 0;
+  const shows = sys => state.tab === "all" || state.tab === sys || (sys === "mat" && state.tab === "s4" && state.matPanels);
+  const part = (sys, html) => { if (!html || !shows(sys)) return ""; PARTS++; return html; };
+  const TABNAME = t => { const x = TABS.find(y => y.id === t); return x ? (x.tag || x.id.toUpperCase()) + " " + x.name : t; };
+  function onlyNote(what) {
+    if (state.tab === "all") return "";
+    return (PARTS ? "" : `<p class="sub lab-none">${esc(TABNAME(state.tab))} says nothing about this ${what}.</p>`) +
+      `<p class="lab-ovlink"><button type="button" class="sx-link" data-overview="1">Everything the systems know about it: Overview</button></p>`;
+  }
   function panelHTML() {
     const p = state.pick;
     if (!p) return "";
+    PARTS = 0;
     const back = `<p class="sx-crumb"><button type="button" class="sx-link" data-close="1">close</button></p>`;
     if (p.kind === "check") return back + checkHTML(checksOf(state.tab).find(x => x.id === p.id) || allChecks().find(x => x.id === p.id));
-    if (p.kind === "building") return back + buildingHTML(b4[p.id]) + PROV;
+    if (p.kind === "building") { const h = buildingHTML(b4[p.id]); return back + h + onlyNote("building") + PROV; }
     if (p.kind === "odb") return back + odbHTML(S4.odb_alone.find(o => o.id === p.id)) + PROV;
     if (p.kind === "place") return back + placeHTML(place4[p.id]) + PROV;
     if (p.kind === "obj6") return back + obj6HTML(o6[p.id]) + PROV;
     if (p.kind === "surf6") return back + surf6HTML(s6[p.id]) + PROV;
     if (p.kind === "home7") return back + home7HTML(h7[p.id]) + PROV;
-    if (p.kind === "segment") return back + segmentHTML(seg[p.id]) + PROV;
-    if (p.kind === "junction") return back + junctionHTML(p.id) + PROV;
+    if (p.kind === "segment") { const h = segmentHTML(seg[p.id]); return back + h + onlyNote("street") + PROV; }
+    if (p.kind === "junction") { const h = junctionHTML(p.id); return back + h + onlyNote("junction") + PROV; }
+    if (p.kind === "hseg") return back + hsegHTML(hseg[p.id]) + PROVH;
+    if (p.kind === "hnet") return back + hnetHTML(hnet[p.id]) + PROVH;
+    if (p.kind === "hbld") return back + hbldHTML(hbRec[p.id]) + PROVH;
     return "";
+  }
+  const PROVH = `<p class="sx-prov">The past era repeats the historical workspace's files exactly (the Lab's tests check it). How the 1912 network was read: <a href="h1-streets.html">S1 · past</a>; its values: <a href="h2-scores.html">S2 · past</a>.</p>`;
+  const NAMEW = { documented: "documented: printed on the plate, or listed in a 1912 directory", inferred: "inferred: read as the same street, not printed on this stretch", unknown: "unknown: no name found" };
+  function hsegHTML(s) {
+    return `<h2 class="lab-pt">${esc(s.name || "A street with no name")}</h2><p class="sub">${s.id} · ${s.len} m · ${esc(HCLS[s.cls] || s.cls)} · ${esc(HZONE[s.zone])} · 1912</p>
+      <h3 class="lab-s"><a href="h1-streets.html" title="the S1 past page">S1 · past</a> · the street in 1912</h3>
+      <p>Name ${esc(NAMEW[s.status] || s.status)}${s.src ? ` <span class="sub">(${esc(s.src)})</span>` : ""}</p>` +
+      (s.alt ? `<p class="sub">Also called ${esc(s.alt)}</p>` : "") +
+      (s.width != null ? `<p class="sub">About ${s.width} m between the lot lines on the plate.</p>` : "") +
+      `<p class="sub">Read from the 1912 Goad atlas, plate by plate, and registered onto today's ground: my reading, so an assumption until it is reviewed. Who could use it in 1912 is not known.</p>` +
+      (state.tab === "all" && H.net.some(n => n.seg === s.id && n.report) ? `<h3 class="lab-s"><a href="h2-scores.html" title="the S2 past page">S2 · past</a> · space syntax</h3>` + hvals(H.net.filter(n => n.seg === s.id && n.report)) : "") +
+      (state.tab !== "all" ? `<p class="lab-ovlink"><button type="button" class="sx-link" data-overview="1">Everything the past era knows about it: Overview</button></p>` : "");
+  }
+  function hvals(list) {
+    return list.map(n => `<table class="lab-vals"><tr><th>${list.length > 1 ? esc(n.id) : ""}</th><th>400</th><th>800</th></tr>
+      <tr><td>walk choice</td><td>${fmt(n.v.nach_400)}</td><td>${fmt(n.v.nach_800)}</td></tr><tr><td>walk integr.</td><td>${fmt(n.v.nain_400)}</td><td>${fmt(n.v.nain_800)}</td></tr></table>`).join("") +
+      `<p class="sub">Normalised values, with no unit, from PlanX 4.19.0 on the 1912 network. A street's rank moves by ${list.map(n => n.es800 == null ? "none" : n.es800.toFixed(2)).join(", ")} at 800 m when the ring around the halo is removed${list.some(n => n.es800 > 0.2) ? ": more than 0.2, so this value leans on the edge" : ""}.</p>`;
+  }
+  const BLOCK = id => { const b = H.blocks.find(x => x.id === id); return b ? b.name : id || "block not recorded"; };
+  function hbldHTML(b) {
+    const src = b.year === "1912" ? "the 1912 Goad atlas" : b.year === "1918" ? "the May 1918 insurance plan" : "the May 1918 plan, carried to c1927";
+    let h = `<h2 class="lab-pt">${esc(b.occupant || (b.year === "c1927" ? "A building carried to c1927" : "A building in " + b.year))}</h2>
+      <p class="sub">${esc(b.id)} · ${Math.round(b.area_m2)} m² · ${esc(BLOCK(b.block_id))}</p>
+      <h3 class="lab-s"><a href="h4-buildings.html" title="the S4 past page">S4 · past</a> · ${b.year === "c1927" ? "c1927" : b.year}</h3>
+      <p>Outline traced from the coloured fills of ${src}${b.pos_error_m ? `, placed to about ${b.pos_error_m} m` : ""}: a reading, so an assumption.</p>
+      <p>Construction: <b>${esc(b.construction || "unknown")}</b> <span class="sub">read from the fill colour; the legend of this edition is not read yet, so provisional</span></p>`;
+    if (b.year === "1918") h += `<p>Storeys: ${b.storeys_raw ? `<b>${esc(b.storeys_raw)}</b> <span class="sub">as printed on the plan</span>` : `<span class="warn">not read yet</span>`}</p>` +
+      (b.use_raw ? `<p>Use: <b>${esc(b.use_raw)}</b> <span class="sub">as printed</span></p>` : "") + (b.occupant ? `<p>Occupant: <b>${esc(b.occupant)}</b></p>` : "") +
+      `<p class="sub">Carried to c1927: ${esc(b.carried_to_c1927 || "no")}</p>`;
+    if (b.year === "1912") h += `<p class="sub">Carried to c1927: ${esc(b.carried_to_c1927 || "no")}. The 1912 outlines are compared with 1918, not carried directly.</p>`;
+    if (b.year === "c1927") h += `<p>Storeys: ${b.storeys ? `<b>${esc(b.storeys)}</b> <span class="sub">from 1918</span>` : `<span class="warn">unknown</span>`}</p>
+      <p>Why it is carried: ${esc(b.basis)} <span class="sub">(${esc(b.strength)})</span></p>${b.addresses_1927 ? `<p class="sub">1927 directory: ${esc(b.addresses_1927)}</p>` : ""}
+      <p class="sub">Every value here is inferred from 1918, bracketed by 1949 (D039). From 1918 outline ${esc(b.footprint_1918)}.</p>`;
+    if (b.nested_in) h += `<p class="sub">Inside the larger outline ${esc(b.nested_in)}: an addition, or a shed in a yard.</p>`;
+    return h + (state.tab !== "all" ? "" : "");
+  }
+  function hnetHTML(n) {
+    return `<h2 class="lab-pt">${esc(n.name || "A street with no name")}</h2><p class="sub">${n.id} · ${n.len} m · ${esc(HZONE[n.zone])} · 1912</p>
+      <h3 class="lab-s"><a href="h2-scores.html" title="the S2 past page">S2 · past</a> · space syntax</h3>` +
+      (n.report ? hvals([n]) : `<p class="sub">Analysed so the streets inside have a city around them, and not reported: values out here depend on where the plates stop.</p>`) +
+      (hseg[n.seg] ? `<p><button type="button" class="sx-link" data-hseg="${n.seg}">The street in 1912 (${n.seg})</button></p>` : "");
   }
   const PROV = `<p class="sx-prov">Each value here repeats a system's results exactly (the Lab's tests check it). To follow one to its source file: <a href="provenance.html#trace">Tracing a result</a>.</p>`;
   const allChecks = () => [...checksOf("s1"), ...checksOf("s3"), ...checksOf("s4"), ...checksOf("s5"), ...checksOf("s6"), ...checksOf("s7"), ...checksOf("s8"), ...checksOf("s9")];
@@ -917,10 +1076,11 @@
   }
 
   function segmentHTML(s) {
-    let h = `<h2 class="lab-pt">${esc(s.street)}</h2><p class="sub">${s.id} · ${s.length} m · ${esc(s.class)}</p>
-      <h3 class="lab-s"><a href="s1-streets.html" title="the S1 page">S1</a> · who may use it</h3><p>${s.walk ? "On foot" : "Not on foot"}; ${!car(s) ? "closed to cars" : s.car_ft && s.car_tf ? "cars both ways" : "cars one way"}.${s.source !== "geobase" ? " A path I added after the S1 checks." : ""}</p>`;
+    let h = `<h2 class="lab-pt">${esc(s.street)}</h2><p class="sub">${s.id} · ${s.length} m · ${esc(s.class)}</p>` +
+      part("s1", `<h3 class="lab-s"><a href="s1-streets.html" title="the S1 page">S1</a> · who may use it</h3><p>${s.walk ? "On foot" : "Not on foot"}; ${!car(s) ? "closed to cars" : s.car_ft && s.car_tf ? "cars both ways" : "cars one way"}.${s.source !== "geobase" ? " A path I added after the S1 checks." : ""}</p>`);
     const v = S2 && S2.scores[s.id];
-    if (v) {
+    if (!shows("s2")) { }
+    else if (v) { PARTS++;
       const row = (net, m) => RADII[net].map(r => `<td>${fmt(v[`${net}_${m}_${r}`])}</td>`).join("");
       h += `<h3 class="lab-s"><a href="s2-scores.html" title="the S2 page">S2</a> · space syntax</h3><p class="sub">walking: ${esc(v.ped_status)}${v.ped_reason ? " · " + esc(v.ped_reason) : ""} · driving: ${esc(v.veh_status)}${v.veh_note ? " · " + esc(v.veh_note) : ""}</p>
         <p class="sub">Normalised values, with no unit. Each column is a radius in metres; n is the whole island. "none" means no value, never zero.</p>
@@ -928,27 +1088,29 @@
         <tr><td>walk choice</td>${row("ped", "NACH")}</tr><tr><td>walk integr.</td>${row("ped", "NAIN")}</tr></table>
         <table class="lab-vals"><tr><th></th>${RADII.veh.map(r => `<th>${r}</th>`).join("")}</tr>
         <tr><td>car choice</td>${row("veh", "NACH")}</tr><tr><td>car integr.</td>${row("veh", "NAIN")}</tr></table>`;
-    } else if (S2) h += `<h3 class="lab-s"><a href="s2-scores.html" title="the S2 page">S2</a> · space syntax</h3><p class="sub">S2 holds no row for this segment.</p>`;
+    } else if (S2) { PARTS++; h += `<h3 class="lab-s"><a href="s2-scores.html" title="the S2 page">S2</a> · space syntax</h3><p class="sub">S2 holds no row for this segment.</p>`; }
     const r = S3 && r3.speed[s.id];
-    if (r) {
+    if (r && shows("s3")) { PARTS++;
       const how = { by_id: `from the speed file, street id ${esc(r.speed_id)}`, by_shape: `borrowed from line ${esc(r.speed_id)} of the same name`,
                     zero_in_file: "the file gives 0: no limit", missing: "not in the speed file", not_a_road: "a path: not in the speed file" }[r.speed_status] || "";
       h += `<h3 class="lab-s"><a href="s3-rules.html" title="the S3 page">S3</a> · speed</h3><p><b>${r.speed ? r.speed + " km/h" : "no limit"}</b> · ${how}</p>${r.speed_note ? `<p class="sub">${esc(r.speed_note)}</p>` : ""}`;
     }
-    if (S9 && S9.flows[s.id]) {
+    if (!shows("s9")) { }
+    else if (S9 && S9.flows[s.id]) { PARTS++;
       const f = S9.flows[s.id], hs = S9.meta.hours;
       h += `<h3 class="lab-s"><a href="s9-observer.html" title="the S9 page">S9</a> · commuters walking here, imagined</h3><table class="lab-vals"><tr><th></th>${hs.map(x => `<th>${x}h</th>`).join("")}</tr>${S9.meta.readings.map(rd =>
         `<tr><td>${rd}</td>${(f[rd] || hs.map(() => 0)).map(v => `<td>${Math.round(v)}</td>`).join("")}</tr>`).join("")}</table>
         <p class="sub">Imagined, from the rules in the <a href="s9-build.html#ledger">ledger</a> (assumption). 0: no imagined walker in that reading.</p>`;
-    } else if (S9) h += `<h3 class="lab-s"><a href="s9-observer.html" title="the S9 page">S9</a> · commuters walking here, imagined</h3><p class="sub">No imagined walker passes here in any reading.</p>`;
+    } else if (S9) { PARTS++; h += `<h3 class="lab-s"><a href="s9-observer.html" title="the S9 page">S9</a> · commuters walking here, imagined</h3><p class="sub">No imagined walker passes here in any reading.</p>`; }
     const w = S8 && S8.segments[s.id];
-    if (w) h += `<h3 class="lab-s"><a href="s8-views.html" title="the S8 page">S8</a> · views</h3><p class="sub">mean of its ${w.points} viewpoint${w.points > 1 ? "s" : ""}, about one every ${S8.meta.step_m} m${w.in_building ? ` · ${w.in_building} inside a building outline` : ""}</p>
+    if (!shows("s8")) { }
+    else if (w) PARTS++, h += `<h3 class="lab-s"><a href="s8-views.html" title="the S8 page">S8</a> · views</h3><p class="sub">mean of its ${w.points} viewpoint${w.points > 1 ? "s" : ""}, about one every ${S8.meta.step_m} m${w.in_building ? ` · ${w.in_building} inside a building outline` : ""}</p>
       <table class="lab-vals"><tr><td>area seen</td><td>${fmt8(w.area_m2)} m²</td></tr><tr><td>longest sight line</td><td>${fmt8(w.longest_m)} m</td></tr>
       <tr><td>mean sight line</td><td>${fmt8(w.mean_m)} m</td></tr><tr><td>compactness</td><td>${fmt8(w.compactness)}</td></tr>
       <tr><td>lines open to ${S8.meta.radius_m} m</td><td>${Math.round(100 * w.open_share)} %</td></tr>
       <tr><td>lines leaving the map</td><td>${Math.round(100 * w.beyond_share)} %</td></tr></table>` +
       (state.tab === "s8" ? `<p class="sub">The green shape is what can be seen from ${esc(w.view.point)}, the middle viewpoint, past no building outline.</p>` : "");
-    else if (S8) h += `<h3 class="lab-s"><a href="s8-views.html" title="the S8 page">S8</a> · views</h3><p class="sub">No viewpoint: not walkable, or outside the area.</p>`;
+    else if (S8) PARTS++, h += `<h3 class="lab-s"><a href="s8-views.html" title="the S8 page">S8</a> · views</h3><p class="sub">No viewpoint: not walkable, or outside the area.</p>`;
     return h;
   }
 
@@ -961,11 +1123,13 @@
   function junctionHTML(id) {
     const j = jun[id];
     let h = `<h2 class="lab-pt">${id}</h2><p class="sub">S1 · ${esc(j.kind.replace("_", " "))}${j.status ? " (" + esc(j.status) + ")" : ""}</p>`;
-    if (S5 && S5.junctions[id]) h += count5HTML(id);
+    if (shows("s1")) PARTS++;
+    if (S5 && S5.junctions[id]) h += part("s5", count5HTML(id));
     const c9 = S9 && S9.counted.find(c => c.id === id);
-    if (c9) h += `<h3 class="lab-s"><a href="s9-observer.html" title="the S9 page">S9</a> · commuters against the count</h3><table class="lab-vals"><tr><th></th><th>counted</th>${S9.meta.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${Object.entries(c9.hours).map(([hh, v]) =>
+    if (c9 && shows("s9")) PARTS++, h += `<h3 class="lab-s"><a href="s9-observer.html" title="the S9 page">S9</a> · commuters against the count</h3><table class="lab-vals"><tr><th></th><th>counted</th>${S9.meta.readings.map(rd => `<th>${rd}</th>`).join("")}</tr>${Object.entries(c9.hours).map(([hh, v]) =>
       `<tr><td>${hh}h</td><td>${Math.round(v.counted)}</td>${S9.meta.readings.map(rd => `<td>${Math.round(v[rd])}</td>`).join("")}</tr>`).join("")}</table>`;
-    if (!S3 || !r3.jun[id]) return h;
+    if (!S3 || !r3.jun[id] || !shows("s3")) return h;
+    PARTS++;
     const J = r3.jun[id], list = r3.appsAt[id] || [];
     h += `<p class="sub">${esc(J.streets.join(" × "))}</p><h3 class="lab-s"><a href="s3-rules.html" title="the S3 page">S3</a> · ${esc(CONTROL[J.control])}</h3>`;
     if (J.control === "lights") h += `<p>${(r3.lightsAt[id] || []).map(l => `Light ${esc(l.id)} (${esc(l.streets)}), ${l.distance} m away${l.kind === "temporary" ? ", temporary" : ""}.`).join(" ")}</p>`;
@@ -990,15 +1154,19 @@
   const said = (v, src, why) => v != null && v !== "" ? `<b>${esc(v)}</b>${src ? ` <span class="sub">from ${esc(SRC4[src] || src)}</span>` : ""}` : `<span class="warn">unknown</span> <span class="sub">${esc(why)}</span>`;
   function buildingHTML(b) {
     const inside = (placesIn[b.id] || []).filter(p => !p.same_as);
-    let h = `<h2 class="lab-pt">${esc(b.name || "A building with no name")}</h2><p class="sub">${b.id} · building=${esc(b.tag)} · ${Math.round(b.area)} m² on the ground</p>
-      <h3 class="lab-s">Used for</h3><p>${said(b.use, b.use_source, b.use_reason)}</p>`;
-    if (b.use && b.use_reason) h += `<p class="sub">${esc(b.use_reason)}</p>`;
-    if (b.use_mix) h += `<p class="sub">Tax-roll properties by class: ${esc(b.use_mix)}</p>`;
-    h += `<h3 class="lab-s">Size</h3><p>Storeys: ${said(b.storeys, b.storeys_source, b.storeys_reason)}${b.height != null ? ` · height ${b.height} m` : ""}</p>` +
+    let h = `<h2 class="lab-pt">${esc(b.name || "A building with no name")}</h2><p class="sub">${b.id} · building=${esc(b.tag)} · ${Math.round(b.area)} m² on the ground</p>`;
+    const s4 = shows("s4");
+    if (s4) PARTS++, h += `<h3 class="lab-s"><a href="s4-buildings.html" title="the S4 page">S4</a> · used for</h3><p>${said(b.use, b.use_source, b.use_reason)}</p>`;
+    if (s4 && b.use && b.use_reason) h += `<p class="sub">${esc(b.use_reason)}</p>`;
+    if (s4 && b.use_mix) h += `<p class="sub">Tax-roll properties by class: ${esc(b.use_mix)}</p>`;
+    if (s4) h += `<h3 class="lab-s">Size</h3><p>Storeys: ${said(b.storeys, b.storeys_source, b.storeys_reason)}${b.height != null ? ` · height ${b.height} m` : ""}</p>` +
       (b.storeys != null && b.storeys_reason ? `<p class="sub">${esc(b.storeys_reason)}. A building is as tall as its tallest known part.</p>` : "") +
       (b.parts ? `<p class="sub">${b.parts} part${b.parts > 1 ? "s" : ""} drawn in OpenStreetMap inside this outline.</p>` : "") + `
       <p>Dwellings: ${b.dwellings != null ? `<b>${b.dwellings}</b> <span class="sub">from the tax roll, ${b.properties} properties${b.condo_units ? `, ${b.condo_units} condo units` : ""}${b.year ? `, built ${esc(b.year)}` : ""}</span>` : `<span class="warn">unknown</span> <span class="sub">${esc(b.roll_reason)}</span>`}</p>`;
-    h += heightHTML(b) + g1HTML(b) + (state.tab === "mat" || state.matPanels ? matHTML(b) : "");
+    if (s4) h += heightHTML(b);
+    h += (state.tab === "all" ? g1HTML(b) : "") + part("mat", matHTML(b));
+    if (state.tab === "s8") PARTS++, h += `<h3 class="lab-s"><a href="s8-views.html" title="the S8 page">S8</a> · views</h3><p class="sub">S8 reads this outline only as something a sight line cannot pass.</p>`;
+    if (!s4) return h;
     if (b.premises) h += `<h3 class="lab-s">Ground floor</h3><p>${b.premises} commercial spaces in the 2025 survey, ${b.vacant} vacant.</p>${b.ground_floor ? `<p class="sub">${esc(b.ground_floor)}</p>` : ""}`;
     if (inside.length) h += `<h3 class="lab-s">Places inside (${inside.length})</h3><ul class="lab-places">${inside.map(p =>
       `<li><button type="button" class="sx-link" data-place="${p.id}">${esc(p.name || "(no name)")}</button> <span class="sub">${esc(p.kind)}${p.hours ? " · has hours" : ""}</span></li>`).join("")}</ul>`;
@@ -1064,7 +1232,14 @@
       <p class="sub">Mean colour ${esc(m.colour)} · colour map observed; height and normal estimated, so assumptions; no roughness map</p>
       <p class="sub">Photo: ${esc(m.credit)}, ${esc(m.taken)}, <a href="${esc(m.page)}">Wikimedia Commons</a>, <a href="${esc(m.licence_url)}">${esc(m.licence)}</a></p></div>`).join("") + gs.map(genHTML).join("");
   }
+  function setLine(m) {
+    return `<div class="lab-mat lab-gen">
+      <img src="${esc(m.preview)}" alt="${esc(m.name)}: authored colour map, tiled 3 by 3" loading="lazy">
+      <p><b>${esc(m.id)}</b> ${esc(m.name)} · <button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button></p>
+      <p class="sub">${esc(m.component)} Tile ${m.tile_m[0]} × ${m.tile_m[1]} m (authored) · mean colour ${esc(m.colour)} · <a href="${esc(m.anchor)}">map set</a></p></div>`;
+  }
   function genHTML(m) {
+    if (m.render) return setLine(m);
     const cv = m.colour_vs_photo;
     return `<div class="lab-mat lab-gen">
       <img src="${esc(m.preview)}" alt="${esc(m.name)}: generated colour study, tiled 3 by 3" loading="lazy">
@@ -1100,9 +1275,47 @@
   // ================================================================ 7 the side: one system at a time
   const seg2 = (k, opts) => `<div class="lab-seg" data-key="${k}">${opts.map(([v, label]) => `<button type="button" data-v="${v}"${state[k] === v ? ' class="on"' : ""}>${label}</button>`).join("")}</div>`;
 
+  // the status of each system as the site states it (option C, 2026-11-23): its tests, and its readings where it has any
+  const STATUS = { s1: ["tests pass", "readings: reviewed"], s2: ["tests pass"], s3: ["tests pass", "readings: reviewed"], s4: ["tests pass"],
+    s5: ["tests pass"], s6: ["tests pass", "detections: Mapillary's"], s7: ["tests pass"], s8: ["tests pass"], s9: ["partial"] };
+  function overviewSide() {
+    if (past()) return `<h2 class="lab-t">Overview · ${state.era === "1912" ? "1912" : "1912 and today"}</h2><p>Click a street or a building for everything the past era knows about it. So far the past era has the streets (H-S1), their space syntax values (H-S2) and the building outlines traced on three blocks (H-S4). The others are not started.</p>` + pastSide();
+    const rows = TABS.filter(t => /^s\d$/.test(t.id)).map(t => { const D = { s1: S1, s2: S2, s3: S3, s4: S4, s5: S5, s6: S6, s7: S7, s8: S8, s9: S9 }[t.id];
+      const ts = D && D.tests ? D.tests : [], f = ts.filter(x => x.status === "fail").length;
+      return `<li><button type="button" class="sx-link" data-tab="${t.id}"><b>${t.id.toUpperCase()}</b> ${esc(t.name)}</button> ${(STATUS[t.id] || []).map((w, i) =>
+        `<span class="lab-badge${i ? " read" : f ? " fail" : ""}">${i === 0 && w === "tests pass" ? (f ? f + " tests fail" : "tests ✓") : esc(w)}</span>`).join(" ")}${t.past ? ' <span class="lab-badge past">1912</span>' : ""}</li>`; }).join("");
+    return `<h2 class="lab-t">Overview · every system at once</h2><p>Click a street, a junction or a building: its panel collects what every system knows about it. Pick a system's tab to see only that system, with its colours and its tools.</p>
+      <ul class="lab-ovlist">${rows}</ul><p class="sub">tests ✓: the system's own tests pass, a fact about its code. readings: what was read on photos or plates; reviewed means I looked at them again as the researcher. A passing test does not make a reading verified.</p>`;
+  }
+  function pastSide() {
+    const t = state.tab, M = H.meta;
+    let h = state.era === "compare"
+      ? `<label class="lab-range">past <b>${100 - state.cmp} %</b> · today <b>${state.cmp} %</b><input type="range" class="lab-cmp" min="0" max="100" step="5" value="${state.cmp}" aria-label="Crossfade between the past and today"></label>
+         <p class="sub">Slide between the two, drawn on the same ground. Clicking picks whichever is stronger at the slider's position.</p>`
+      : "";
+    if (t === "s4") {
+      const B = M.buildings, b = B[state.hbld];
+      h += seg2("hbld", [["1912", "1912 atlas"], ["1918", "May 1918 plan"], ["c1927", "carried to c1927"]]) +
+        `<p class="sub">${b.outlines} outlines, ${b.m2.toLocaleString("en")} m², on ${B.blocks.length} blocks so far: ${B.blocks.map(esc).join("; ")}. The rest of the study area is not traced yet: empty there means not read, never no building.</p>` +
+        (state.hbld === "1912" ? `<p class="sub">Construction from the fill colour: pink brick or stone, yellow frame. This atlas does not tell brick from stone.</p>`
+         : state.hbld === "1918" ? `<p class="sub">The insurance plan prints storeys and uses: read so far for ${B["1918"].with_storeys} outlines. ${B["1918"].nested} outlines sit inside a larger one (additions, yard sheds).</p>`
+         : `<p class="sub">A 1918 outline is carried to the represented period only when it passes the 1912 to 1927 test (D020) and is still drawn on the 1949 land-use plans, so 1918 and 1949 bracket the 1920s (D039). ${B.c1927.outlines ? "Every value carried is inferred." : `${B.c1927.meet_d020} of the ${B.c1927.top_1918} main 1918 outlines pass the first test; the 1949 plans are not read yet, so none is carried and c1927 buildings stay unknown.`}</p>`) +
+        (state.era === "compare" ? `<p class="sub">Today's buildings (S4) are drawn grey under the slider.</p>` : "");
+    } else if (t === "s2") h += seg2("hmeasure", [["nach", "choice"], ["nain", "integration"]]) + seg2("hradius", [["400", "400 m"], ["800", "800 m"]]) +
+      `<p class="sub">${M.reported.segments} segments inside the study area and its halo carry values (${M.reported.km} km). The ring beyond the halo is analysed so they have a city around them, and is not reported.${state.era === "compare" ? " Today's streets are coloured by the same measure at the same radius, ranked among themselves." : ""}</p>`;
+    else h += `<p class="sub">${M.segmap.segments} segments, ${M.segmap.km} km: ${M.segmap.class.street} streets, ${M.segmap.class.lane} lanes or courts and ${M.segmap.class.open_area} open areas. Names: ${M.segmap.name_status.documented} documented, ${M.segmap.name_status.inferred} inferred, ${M.segmap.name_status.unknown} unknown.</p>`;
+    return h + `<p class="sub">Read from the ${esc(M.atlas)}, registered onto today's ground. The past era's represented period is ${esc(M.represented)}. Status: partial; ${t === "s4" ? "the outlines are traced from the plans" : "the network is read from the plates"}, so readings: assumption.</p>
+      <p><a href="h1-streets.html">S1 · past</a> · <a href="h2-scores.html">S2 · past</a> · <a href="h4-buildings.html">S4 · past</a> · <a href="past-sources.html">past sources</a></p>`;
+  }
+
   function sideHTML() {
     const t = state.tab;
     let h = "";
+    if (t === "all") return overviewSide();
+    if (past()) {
+      const nm = t === "s2" ? "S2 · Scores, 1912" : t === "s4" ? "S4 · Buildings, 1912 to c1927" : "S1 · Streets, 1912";
+      return `<h2 class="lab-t">${state.era === "compare" ? (t === "s4" ? "S4 · Buildings: the past and today" : nm.replace(", 1912", ": 1912 and today")) : nm}</h2>` + pastSide();
+    }
     if (t === "s1") {
       h += `<h2 class="lab-t">S1 · Streets</h2><p>Which streets connect, and who may use them. White streets are for people and cars, green dashed ones for people only, grey ones for cars only. Click a street or a junction for its details, or try one of the tools.</p>
         <h3 class="lab-s">Try it</h3>${seg2("s1try", [["details", "details"], ["reach", "how far can I get?"], ["minutes", "minutes on foot"], ["route", "from here to there"]])}`;
@@ -1160,10 +1373,10 @@
         <p class="sub">S6 only records what each object is and where it stands. Whether it slows anyone down is left to later systems, as a written assumption.</p>`;
     }
     if (t === "mat" && MAT) {
-      h += `<h2 class="lab-t">Materials</h2><p>What Griffintown's walls are made of. Every building's wall as read from a street photo, or the <a href="materials.html">materials library</a>'s entries, each measured from a published photo straightened to a known scale, and the colour studies an image model made from photos, each shown in its mean colour. Click a building for everything the systems know about it, its materials included.</p>
+      h += `<h2 class="lab-t">Materials</h2><p>What Griffintown's walls are made of. Every building's wall as read from a street photo, or the <a href="materials.html">materials library</a>'s entries, each measured from a published photo straightened to a known scale, the colour studies an image model made from photos, and the map sets drawn by a script from references, each shown in its mean colour. Click a building for everything the systems know about it, its materials included.</p>
         ${MAT.walls ? seg2("matView", [["walls", "every building's wall, from street photos"], ["entries", "library entries"]]) : ""}
         ${state.matView === "walls" && MAT.walls ? `<p class="sub">Read by eye from the nearest street panorama taken since 2023 (${esc(MAT.walls.source)}), blind to each building's use and age: an assumption, each tied to its photo. A photo older than the year the tax roll gives a building is not used.</p>` : ""}
-        <label class="lab-check"><input type="checkbox" class="lab-matpanels-on"${state.matPanels ? " checked" : ""}> also show materials in building panels on the other tabs</label>
+        <label class="lab-check"><input type="checkbox" class="lab-matpanels-on"${state.matPanels ? " checked" : ""}> also show materials in S4's building panels</label>
         <h3 class="lab-s">Entries (${MAT.entries.length})</h3>` + MAT.entries.map(m => `<div class="lab-mat">
           <img src="${esc(m.preview)}" alt="${esc(m.name)}: colour map, tiled 3 by 3" loading="lazy">
           <p><b>${esc(m.id)}</b> ${esc(m.name)} · <button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button></p>
@@ -1172,6 +1385,7 @@
           <img src="${esc(m.preview)}" alt="${esc(m.name)}: generated colour study, tiled 3 by 3" loading="lazy">
           <p><b>${esc(m.id)}</b> ${esc(m.name)} · <button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button></p>
           <p class="sub">${m.tile_m ? `tile about ${m.tile_m} m` : "no measured scale"} · repeat edge ${esc(m.seam_reads)} · mean colour ${esc(m.colour)} · <a href="${esc(m.anchor)}">entry</a></p></div>`).join("") : "") +
+        ((MAT.sets || []).length ? `<h3 class="lab-s">Map sets (${MAT.sets.length})</h3><p class="sub">Full sets of texture maps drawn by a script from reference photos and documents, each for one part of a building. Every map is authored: an assumption.</p>` + MAT.sets.map(setLine).join("") : "") +
         (MAT.set_aside.length ? `<h3 class="lab-s">Set aside (${MAT.set_aside.length})</h3>` + MAT.set_aside.map(a => `<p class="sub"><b>${esc(a.id)}</b> ${esc(a.name)}: ${esc(a.why)}</p>`).join("") : "") +
         `<p class="sub">${S4.buildings.filter(b => !mat4[b.id] && !gen4[b.id]).length} of ${S4.buildings.length} buildings have no library entry or study yet.</p>`;
     }
@@ -1420,7 +1634,11 @@
     const html = panelHTML();
     side.innerHTML = html;
     side.hidden = !html;
-    host.querySelectorAll(".lab-tabs button").forEach(b => { b.classList.toggle("on", b.dataset.tab === state.tab); b.setAttribute("aria-selected", b.dataset.tab === state.tab ? "true" : "false"); });
+    host.querySelectorAll(".lab-tabs button").forEach(b => { b.classList.toggle("on", b.dataset.tab === state.tab); b.setAttribute("aria-selected", b.dataset.tab === state.tab ? "true" : "false");
+      const t = TABS.find(x => x.id === b.dataset.tab); b.disabled = !t.ok || (past() && !t.past);
+      if (t.ok) b.title = past() && !t.past ? "Not started in the past era" : ""; });
+    host.querySelectorAll(".lab-era button").forEach(b => { b.classList.toggle("on", b.dataset.era === state.era); b.setAttribute("aria-pressed", String(b.dataset.era === state.era)); });
+    host.classList.toggle("lab-past", past());
     if (!keepSide) info.innerHTML = sideHTML();
     paint();
     draw();
@@ -1446,6 +1664,9 @@
     if (pick.kind === "surf6") return mid(s6[pick.id].ring);
     if (pick.kind === "home7") return h7[pick.id].xy;
     if (pick.kind === "odb") return S4.odb_alone.find(o => o.id === pick.id).xy;
+    if (pick.kind === "hseg") return hseg[pick.id].pts[Math.floor(hseg[pick.id].pts.length / 2)];
+    if (pick.kind === "hnet") return hnet[pick.id].pts[Math.floor(hnet[pick.id].pts.length / 2)];
+    if (pick.kind === "hbld") { const r = hbRec[pick.id].ring; return [r.reduce((a, p) => a + p[0], 0) / r.length, r.reduce((a, p) => a + p[1], 0) / r.length]; }
     const c = checksOf(state.tab).find(x => x.id === pick.id) || allChecks().find(x => x.id === pick.id);   // ids repeat across systems
     return c ? c.xy : null;
   }
@@ -1473,6 +1694,7 @@
   function find(q) {
     q = (q || "").trim();
     if (!q) return "";
+    if (past()) setEra("now");
     const id = q.toUpperCase();
     if (seg[id]) { select({ kind: "segment", id }); return `${seg[id].street || "a path"}, ${id}`; }
     if (jun[id]) { select({ kind: "junction", id }); return `junction ${id}`; }
@@ -1493,8 +1715,17 @@
   // Escape closes the detail panel, wherever the focus is in the Lab (added 2026-10-21)
   host.addEventListener("keydown", e => { if (e.key === "Escape" && state.pick) { select(null); e.preventDefault(); } });
 
+  function setEra(e) {
+    if (e !== "now" && !H) return;
+    const b3 = host.querySelector(".b3d[aria-pressed='true']"); if (b3) b3.click();      // the 3D view stands on today's buildings
+    state.era = e; state.pick = null; state.approach = null;
+    if (past() && !TABS.find(x => x.id === state.tab).past) state.tab = "s1";
+    clearInterval(timer); stopWalk();
+    render();
+    map.fit(true);                              // the whole area, so the two networks are seen as wholes
+  }
   function setTab(t) {
-    if (!TABS.find(x => x.id === t && x.ok)) return;
+    if (!TABS.find(x => x.id === t && x.ok && (!past() || x.past))) return;
     state.tab = t; state.pick = null; state.approach = null;
     clearInterval(timer); stopWalk();
     render();
@@ -1519,6 +1750,7 @@
   });
   host.addEventListener("input", e => {
     const t = e.target;
+    if (t.classList.contains("lab-cmp")) { state.cmp = +t.value; paint(); const l = t.closest("label").querySelectorAll("b"); l[0].textContent = (100 - state.cmp) + " %"; l[1].textContent = state.cmp + " %"; }
     if (t.classList.contains("lab-radius")) { state.s2radius = +t.value; paint(); refreshOut(); }
     if (t.classList.contains("lab-step")) { state.reachStep = +t.value; paint(); refreshOut(); }
     if (t.classList.contains("lab-slack")) { state.routeSlack = +t.value; render(); }
@@ -1529,6 +1761,9 @@
     const b = e.target.closest("button");
     if (!b) return;
     if (b.dataset.tab) { setTab(b.dataset.tab); return; }
+    if (b.dataset.era) { setEra(b.dataset.era); return; }
+    if (b.dataset.overview) { const p = state.pick; state.tab = "all"; render(); select(p); return; }
+    if (b.dataset.hseg) { select({ kind: "hseg", id: b.dataset.hseg }); return; }
     const group = b.closest(".lab-seg");
     if (group) {
       state[group.dataset.key] = b.dataset.v;
@@ -1543,7 +1778,7 @@
     if (b.dataset.close) select(null);
     if (b.dataset.check) select({ kind: "check", id: b.dataset.check });
     if (b.dataset.app) select(state.pick, b.dataset.app === state.approach ? null : b.dataset.app);
-    if (b.dataset.b) { if (state.tab !== "s4" && state.tab !== "mat") { state.tab = "s4"; render(); } select({ kind: "building", id: b.dataset.b }); }
+    if (b.dataset.b) { if (state.tab !== "s4" && state.tab !== "mat" && state.tab !== "all") { state.tab = "s4"; render(); } select({ kind: "building", id: b.dataset.b }); }
     if (b.dataset.place) { if (state.tab !== "s4") state.tab = "s4"; state.s4places = true; render(); select({ kind: "place", id: b.dataset.place }); }
     if (b.dataset.seg) select({ kind: "segment", id: b.dataset.seg });
     if (b.dataset.play === "radius") playRadius();
@@ -1588,7 +1823,9 @@
   function fromHash() {
     const h = location.hash;
     let m;
-    if ((m = /^#(s[1-9])$/.exec(h))) { setTab(m[1]); return; }
+    if ((m = /^#(past|compare)(?:-(s[124]|all))?$/.exec(h)) && H) { state.era = m[1] === "past" ? "1912" : "compare"; state.tab = m[2] || "s1"; state.pick = null; render(); return; }
+    if (h === "#overview") { setEra("now"); setTab("all"); return; }
+    if ((m = /^#(s[1-9])$/.exec(h))) { if (past()) setEra("now"); setTab(m[1]); return; }
     if (h === "#radius") { setTab("s2"); playRadius(); return; }
     if ((m = /^#reach(?:-(J\d{3}))?$/.exec(h))) {
       state.tab = "s1"; state.s1try = "reach";
@@ -1598,7 +1835,7 @@
     if ((m = /^#route-(J\d{3})-(J\d{3})$/.exec(h)) && jun[m[1]] && jun[m[2]]) {
       state.tab = "s1"; state.s1try = "route"; state.routeA = m[1]; state.routeB = m[2]; render(); return;
     }
-    if ((m = /^#([wr]\d+)$/.exec(h)) && S4 && b4[m[1]]) { state.tab = "s4"; render(); select({ kind: "building", id: m[1] }); return; }
+    if ((m = /^#([wr]\d+)$/.exec(h)) && S4 && b4[m[1]]) { state.era = "now"; state.tab = "s4"; render(); select({ kind: "building", id: m[1] }); return; }
     if ((m = /^#(J\d{3})(?:-(S\d{3}))?$/.exec(h)) && jun[m[1]]) {
       state.tab = "s3"; state.s3view = "rules"; render();
       select({ kind: "junction", id: m[1] }, m[2] && r3.app[m[2] + "@" + m[1]] ? m[2] : null);
@@ -1609,7 +1846,7 @@
   // for the 3D view (lab3d.js): it reads the map as drawn, and picks through the same select()
   window.SituLab = {
     map, host, select: p => select(p),
-    openBuilding: id => { if (state.tab !== "s4" && state.tab !== "s8" && state.tab !== "mat") { state.tab = "s4"; render(); } select({ kind: "building", id }); },
+    openBuilding: id => { if (state.tab !== "s4" && state.tab !== "s8" && state.tab !== "mat" && state.tab !== "all") { state.tab = "s4"; render(); } select({ kind: "building", id }); },
     tab: () => state.tab,
     // S6 for the 3D view: the objects the 2D map shows now (same filter), and how it sizes and flags them
     s6: () => S6 ? { shown: S6.objects.filter(show6), trunk: trunk6, seen: S6_SEEN, light: SLUG6, pick: state.pick } : null,

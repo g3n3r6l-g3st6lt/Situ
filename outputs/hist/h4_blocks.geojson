@@ -1,0 +1,127 @@
+{
+ "type": "FeatureCollection",
+ "name": "h_blocks",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "EPSG:32188"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "block_id": "B-COLB-SHAN",
+    "name_hist": "Colborne–Shannon, William–Ottawa",
+    "bounding_segments": "HS01,HS04,HS07,HS08",
+    "area_m2_centreline": 12203.3,
+    "kind": "centreline block frame (derived from junctions; not a footprint)"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       300159.3582749624,
+       5039353.71713261
+      ],
+      [
+       300193.6267756861,
+       5039416.499406608
+      ],
+      [
+       300042.97641448345,
+       5039497.405062409
+      ],
+      [
+       300008.5376977993,
+       5039435.303743038
+      ],
+      [
+       300159.3582749624,
+       5039353.71713261
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "block_id": "B-SHAN-ANN",
+    "name_hist": "Shannon–Ann, William–Ottawa",
+    "bounding_segments": "HS02,HS05,HS08,HS09",
+    "area_m2_centreline": 11651.7,
+    "kind": "centreline block frame (derived from junctions; not a footprint)"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       300193.6267756861,
+       5039416.499406608
+      ],
+      [
+       300227.2894964884,
+       5039478.356228319
+      ],
+      [
+       300085.4077166995,
+       5039554.117203144
+      ],
+      [
+       300042.97641448345,
+       5039497.405062409
+      ],
+      [
+       300193.6267756861,
+       5039416.499406608
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "block_id": "B-ANN-DALH",
+    "name_hist": "Ann–Dalhousie, William–Ottawa",
+    "bounding_segments": "HS03,HS06,HS11,HS09,HS10",
+    "area_m2_centreline": 10972.3,
+    "kind": "centreline block frame (derived from junctions; not a footprint)"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       300227.2894964884,
+       5039478.356228319
+      ],
+      [
+       300260.53945887025,
+       5039540.408925114
+      ],
+      [
+       300129.5393453757,
+       5039610.983993956
+      ],
+      [
+       300105.55668914353,
+       5039581.380039042
+      ],
+      [
+       300085.4077166995,
+       5039554.117203144
+      ],
+      [
+       300227.2894964884,
+       5039478.356228319
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

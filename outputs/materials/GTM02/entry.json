@@ -1,0 +1,88 @@
+{
+ "id": "GTM02",
+ "name": "Blue coated vertically profiled cladding",
+ "kind": "profiled",
+ "building": "w1080276132",
+ "on_s4": true,
+ "building_name": "Rue Barre, Griffintown, Montreal; footprint w1080276132",
+ "component": "Blue-clad low building beside taller brick frontage. Exact civic address unconfirmed; do not assign neighbouring 1319 Barre as fact.",
+ "basis": "Alternate view 2 and footprint context support the blue profile. Metal substrate is plausible but unconfirmed; coating is represented as dielectric.",
+ "assumptions": "Authored profile: 12 ribs across 1.2 m, 100 mm pitch, 12 mm height range. Dimensions and exact cross-section are unmeasured. Coating roughness 0.53 is a trial. Metallic is zero for the visible coating; underlying alloy remains unknown.",
+ "made": "2026-11-23",
+ "method": "procedural reconstruction informed by references: made by a script, pattern, colour and relief authored; no photo pixels in the maps",
+ "tile_m": [
+  1.2,
+  1.2
+ ],
+ "size_px": 1024,
+ "relief_m": 0.012,
+ "mean_colour_srgb": "#18445b",
+ "validation": {
+  "dimensions_pass": true,
+  "height_16bit": true,
+  "normal_conventions_pass": true,
+  "height_normal_max_component_error": 0.003933137272647214,
+  "building_references_pass": true,
+  "render_files_pass": true
+ },
+ "physically_calibrated": false,
+ "checked_in_a_game_engine": false,
+ "render": "Blender 5.2 Cycles, three repeats, light from the left (the set's own render)",
+ "reference_note": "Mapillary image 481357544903592, captured 2024-03-15.\nhttps://www.mapillary.com/app/?pKey=481357544903592\nIndividual photographer attribution is absent in the inherited register; resolve before publishing photographic derivatives. The maps are authored reconstructions, not extracted photograph pixels.",
+ "notes_file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/DETAILS_AND_REFERENCES.txt",
+ "notes": "GTM02 — Blue coated vertically profiled cladding\nRELATED BUILDING(S)\nRue Barre, Griffintown, Montreal; footprint w1080276132\nStable footprint ID: w1080276132\nBlue-clad low building beside taller brick frontage. Exact civic address unconfirmed; do not assign neighbouring 1319 Barre as fact.\n\nEVIDENCE\nAlternate view 2 and footprint context support the blue profile. Metal substrate is plausible but unconfirmed; coating is represented as dielectric.\nMapillary image 481357544903592, captured 2024-03-15.\nhttps://www.mapillary.com/app/?pKey=481357544903592\nIndividual photographer attribution is absent in the inherited register; resolve before publishing photographic derivatives. The maps are authored reconstructions, not extracted photograph pixels.\n\nMAP STATUS — PROCEDURAL RECONSTRUCTION / NOT A SCANNED MATERIAL\nCreated 2026-11-23. Deterministic script-generated study, separated from source photographs. All maps use the same UV coordinates and resolution. This resolution is authored detail, not recovered source detail.\nAuthored profile: 12 ribs across 1.2 m, 100 mm pitch, 12 mm height range. Dimensions and exact cross-section are unmeasured. Coating roughness 0.53 is a trial. Metallic is zero for the visible coating; underlying alloy remains unknown.\n\nFILES AND IMPORT\nbase_color.png: sRGB; interpreted unlit palette, not calibrated albedo.\nheight_estimated_16bit.png: linear 16-bit, normalized 0-1. Physical height range 0.012 m; authored only.\nnormal_OpenGL.png: tangent +Y. normal_DirectX.png: same normals with green channel inverted. Use one, never both.\nroughness_assumed.png: linear; unmeasured trial values.\nmetallic_surface.png: linear; outer-surface convention described above.\nambient_occlusion_neutral.png: white fallback, not calculated occlusion.\nfeature_mask.png: mortar mask for brick; raised-rib mask for cladding; zero for uniform surfaces.\ntransmission_assumed.png: 1 for glass, 0 otherwise. opacity.png is white; not a glass cutout mask.\nUV extent: 1.2 m x 1.2 m, authored. Resolution: 1024 x 1024.\nUse normal OR height-driven bump at first; avoid double-counting the same relief. Start with displacement disabled. The render review uses normal shading only; a side silhouette needs actual geometry.\nNo in-game physical friction, thermal response, acoustic response or NPC behaviour is established by these maps.\n",
+ "maps": {
+  "base_color": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/base_color.png",
+   "sha256": "51ec656497e67fb1f2f71f03f286d9cbdce0c210a491afb03a906eef95a54104",
+   "status": "authored: an interpreted palette, not calibrated colour"
+  },
+  "normal_OpenGL": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/normal_OpenGL.png",
+   "sha256": "0cd838f2c64be5f6157ec41c7d159a061b18b91495ab6222a8c9e9ab5ba2822d",
+   "status": "derived from the authored height"
+  },
+  "normal_DirectX": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/normal_DirectX.png",
+   "sha256": "e2ca24f37e76a31d15a515ccc292b8e6546bfa50aa31e810dba6dc49c54ab9ad",
+   "status": "the same normals, green channel inverted"
+  },
+  "roughness_assumed": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/roughness_assumed.png",
+   "sha256": "4f5a2426fd44ecd3eb99d057f8db20b9423c6b70749e0b6369b38b7793f27f6a",
+   "status": "assumed: trial values, not measured"
+  },
+  "metallic_surface": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/metallic_surface.png",
+   "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+   "status": "authored: describes the outer coating"
+  },
+  "ambient_occlusion_neutral": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/ambient_occlusion_neutral.png",
+   "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+   "status": "a white placeholder, not computed"
+  },
+  "height_estimated_16bit": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/height_estimated_16bit.png",
+   "sha256": "bb2e37484f3b133f6bae4496566468ff4423d1d34297b4b720db05d9ff5c3218",
+   "status": "authored relief, 16-bit; the physical range is in the record"
+  },
+  "feature_mask": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/feature_mask.png",
+   "sha256": "c0e78687a215a6e5e62a5f825bcb60af5bddd5fb3760af1940ebb12be07af66c",
+   "status": "authored: mortar or raised ribs"
+  },
+  "transmission_assumed": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/transmission_assumed.png",
+   "sha256": "0f4b1668d119f77ceb6b86645573f088ab2341d7b284314d5df0be7226ea5d91",
+   "status": "assumed: 1 for glass, 0 otherwise"
+  },
+  "opacity": {
+   "file": "buildings/Rue_Barre_w1080276132/blue_profiled_cladding/reconstruction_maps/opacity.png",
+   "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900",
+   "status": "white: no cut-out"
+  }
+ },
+ "made_by": "tools/materials_batch.py",
+ "source_folder": "data/external/materials_batch01_2026-11-23"
+}

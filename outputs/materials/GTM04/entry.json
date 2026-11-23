@@ -1,0 +1,88 @@
+{
+ "id": "GTM04",
+ "name": "Frosted glass privacy-screen study",
+ "kind": "glass",
+ "building": "w1309501032",
+ "on_s4": true,
+ "building_name": "Sherwin, 1957 rue Hunter, Griffintown, Montreal",
+ "component": "Sherwin documented frosted privacy screens. The terrace photograph shows clear guards; it is context, not proof of the frosted screen appearance.",
+ "basis": "Installer documents frosted glass screens. Frosting method, tint, thickness and optical response are unknown; no frosted close-up available.",
+ "assumptions": "Uniform frosted transmission study: roughness 0.32, transmission 1, IOR 1.45 and 8 mm pane thickness are authored starting values, not measured. Normal is flat; no invented measured frost pattern. Opacity map remains white: use transmission/refraction, not alpha-cutout transparency.",
+ "made": "2026-11-23",
+ "method": "procedural reconstruction informed by references: made by a script, pattern, colour and relief authored; no photo pixels in the maps",
+ "tile_m": [
+  0.5,
+  0.5
+ ],
+ "size_px": 512,
+ "relief_m": 0.0,
+ "mean_colour_srgb": "#f7f7f7",
+ "validation": {
+  "dimensions_pass": true,
+  "height_16bit": true,
+  "normal_conventions_pass": true,
+  "height_normal_max_component_error": 0.0039215686274509665,
+  "building_references_pass": true,
+  "render_files_pass": true
+ },
+ "physically_calibrated": false,
+ "checked_in_a_game_engine": false,
+ "render": "Blender 5.2 Cycles, three repeats, light from the left (the set's own render)",
+ "reference_note": "Installer: https://www.rampesavantgarde.com/realisations/sherwin/?lang=en\nDeveloper: https://mondev.ca/fr/appartements-et-condos-a-louer-montreal/griffintown-fr/sherwin-condos-locatifs/\nPhotograph: https://mondev.ca/wp-content/uploads/2026/07/SHW_EXT_terasse_02-1.jpg\nCapture date unknown. No open image-reuse licence established. Context only; no pixels extracted into maps.",
+ "notes_file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/DETAILS_AND_REFERENCES.txt",
+ "notes": "GTM04 — Frosted glass privacy-screen study\nRELATED BUILDING(S)\nSherwin, 1957 rue Hunter, Griffintown, Montreal\nStable footprint ID: w1309501032\nSherwin documented frosted privacy screens. The terrace photograph shows clear guards; it is context, not proof of the frosted screen appearance.\n\nEVIDENCE\nInstaller documents frosted glass screens. Frosting method, tint, thickness and optical response are unknown; no frosted close-up available.\nInstaller: https://www.rampesavantgarde.com/realisations/sherwin/?lang=en\nDeveloper: https://mondev.ca/fr/appartements-et-condos-a-louer-montreal/griffintown-fr/sherwin-condos-locatifs/\nPhotograph: https://mondev.ca/wp-content/uploads/2026/07/SHW_EXT_terasse_02-1.jpg\nCapture date unknown. No open image-reuse licence established. Context only; no pixels extracted into maps.\n\nMAP STATUS — PROCEDURAL RECONSTRUCTION / NOT A SCANNED MATERIAL\nCreated 2026-11-23. Deterministic script-generated study, separated from source photographs. All maps use the same UV coordinates and resolution. This resolution is authored detail, not recovered source detail.\nUniform frosted transmission study: roughness 0.32, transmission 1, IOR 1.45 and 8 mm pane thickness are authored starting values, not measured. Normal is flat; no invented measured frost pattern. Opacity map remains white: use transmission/refraction, not alpha-cutout transparency.\n\nFILES AND IMPORT\nbase_color.png: sRGB; interpreted unlit palette, not calibrated albedo.\nheight_estimated_16bit.png: linear 16-bit, normalized 0-1. Physical height range 0.0 m; authored only.\nnormal_OpenGL.png: tangent +Y. normal_DirectX.png: same normals with green channel inverted. Use one, never both.\nroughness_assumed.png: linear; unmeasured trial values.\nmetallic_surface.png: linear; outer-surface convention described above.\nambient_occlusion_neutral.png: white fallback, not calculated occlusion.\nfeature_mask.png: mortar mask for brick; raised-rib mask for cladding; zero for uniform surfaces.\ntransmission_assumed.png: 1 for glass, 0 otherwise. opacity.png is white; not a glass cutout mask.\nUV extent: 0.5 m x 0.5 m, authored. Resolution: 512 x 512.\nUse normal OR height-driven bump at first; avoid double-counting the same relief. Start with displacement disabled. The render review uses normal shading only; a side silhouette needs actual geometry.\nNo in-game physical friction, thermal response, acoustic response or NPC behaviour is established by these maps.\n",
+ "maps": {
+  "base_color": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/base_color.png",
+   "sha256": "aed434f436c423e59bc40bd09e0ffdae1f275840abc8a117ec71c03d7c7c96c2",
+   "status": "authored: an interpreted palette, not calibrated colour"
+  },
+  "normal_OpenGL": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/normal_OpenGL.png",
+   "sha256": "76944f0bc81a92b281cd35587ae86667b41849efc89093db9fa79cc271e8edfd",
+   "status": "derived from the authored height"
+  },
+  "normal_DirectX": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/normal_DirectX.png",
+   "sha256": "579215cffb23112bc630ef6962c5d2902c81299f034d528a068dc78271180baf",
+   "status": "the same normals, green channel inverted"
+  },
+  "roughness_assumed": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/roughness_assumed.png",
+   "sha256": "b6b794551bcec376ecbf668183a308818a067c8f86ad945b1d3e64ec7e05dc2e",
+   "status": "assumed: trial values, not measured"
+  },
+  "metallic_surface": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/metallic_surface.png",
+   "sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+   "status": "authored: describes the outer coating"
+  },
+  "ambient_occlusion_neutral": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/ambient_occlusion_neutral.png",
+   "sha256": "d8acccafa1fdcf03f3bb9112f5f2f30ad1558e446d5c12ec5644fc0d53c1e58b",
+   "status": "a white placeholder, not computed"
+  },
+  "height_estimated_16bit": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/height_estimated_16bit.png",
+   "sha256": "a504ff9cf5e7dd75959c299d7e6c1db6519ea00426879e4e58c7a79c47fa221a",
+   "status": "authored relief, 16-bit; the physical range is in the record"
+  },
+  "feature_mask": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/feature_mask.png",
+   "sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+   "status": "authored: mortar or raised ribs"
+  },
+  "transmission_assumed": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/transmission_assumed.png",
+   "sha256": "d8acccafa1fdcf03f3bb9112f5f2f30ad1558e446d5c12ec5644fc0d53c1e58b",
+   "status": "assumed: 1 for glass, 0 otherwise"
+  },
+  "opacity": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/frosted_glass_privacy/reconstruction_maps/opacity.png",
+   "sha256": "d8acccafa1fdcf03f3bb9112f5f2f30ad1558e446d5c12ec5644fc0d53c1e58b",
+   "status": "white: no cut-out"
+  }
+ },
+ "made_by": "tools/materials_batch.py",
+ "source_folder": "data/external/materials_batch01_2026-11-23"
+}

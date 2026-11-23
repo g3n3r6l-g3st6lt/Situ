@@ -1,0 +1,88 @@
+{
+ "id": "GTM03",
+ "name": "Light neutral coating over aluminum railings",
+ "kind": "coated",
+ "building": "w1309501032",
+ "on_s4": true,
+ "building_name": "Sherwin, 1957 rue Hunter, Griffintown, Montreal",
+ "component": "Sherwin railing systems only. Do not apply the aluminum identification to facade panels or terrace furniture.",
+ "basis": "Installer documents aluminum railing systems. The neutral coating appearance is an authored study; alloy, coating type and exact colour are not established.",
+ "assumptions": "Neutral light coating, roughness 0.40 and microscopic 0.02 mm relief range are authored trials. Metallic zero represents the outer dielectric coat, not a claim that aluminum is nonmetallic. No exposed-metal or rust mask is asserted.",
+ "made": "2026-11-23",
+ "method": "procedural reconstruction informed by references: made by a script, pattern, colour and relief authored; no photo pixels in the maps",
+ "tile_m": [
+  0.25,
+  0.25
+ ],
+ "size_px": 512,
+ "relief_m": 2e-05,
+ "mean_colour_srgb": "#9ea3a6",
+ "validation": {
+  "dimensions_pass": true,
+  "height_16bit": true,
+  "normal_conventions_pass": true,
+  "height_normal_max_component_error": 0.0039215686274509665,
+  "building_references_pass": true,
+  "render_files_pass": true
+ },
+ "physically_calibrated": false,
+ "checked_in_a_game_engine": false,
+ "render": "Blender 5.2 Cycles, three repeats, light from the left (the set's own render)",
+ "reference_note": "Installer: https://www.rampesavantgarde.com/realisations/sherwin/?lang=en\nDeveloper: https://mondev.ca/fr/appartements-et-condos-a-louer-montreal/griffintown-fr/sherwin-condos-locatifs/\nPhotograph: https://mondev.ca/wp-content/uploads/2026/07/SHW_EXT_terasse_02-1.jpg\nCapture date unknown. No open image-reuse licence established. Context only; no pixels extracted into maps.",
+ "notes_file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/DETAILS_AND_REFERENCES.txt",
+ "notes": "GTM03 — Light neutral coating over aluminum railings\nRELATED BUILDING(S)\nSherwin, 1957 rue Hunter, Griffintown, Montreal\nStable footprint ID: w1309501032\nSherwin railing systems only. Do not apply the aluminum identification to facade panels or terrace furniture.\n\nEVIDENCE\nInstaller documents aluminum railing systems. The neutral coating appearance is an authored study; alloy, coating type and exact colour are not established.\nInstaller: https://www.rampesavantgarde.com/realisations/sherwin/?lang=en\nDeveloper: https://mondev.ca/fr/appartements-et-condos-a-louer-montreal/griffintown-fr/sherwin-condos-locatifs/\nPhotograph: https://mondev.ca/wp-content/uploads/2026/07/SHW_EXT_terasse_02-1.jpg\nCapture date unknown. No open image-reuse licence established. Context only; no pixels extracted into maps.\n\nMAP STATUS — PROCEDURAL RECONSTRUCTION / NOT A SCANNED MATERIAL\nCreated 2026-11-23. Deterministic script-generated study, separated from source photographs. All maps use the same UV coordinates and resolution. This resolution is authored detail, not recovered source detail.\nNeutral light coating, roughness 0.40 and microscopic 0.02 mm relief range are authored trials. Metallic zero represents the outer dielectric coat, not a claim that aluminum is nonmetallic. No exposed-metal or rust mask is asserted.\n\nFILES AND IMPORT\nbase_color.png: sRGB; interpreted unlit palette, not calibrated albedo.\nheight_estimated_16bit.png: linear 16-bit, normalized 0-1. Physical height range 2e-05 m; authored only.\nnormal_OpenGL.png: tangent +Y. normal_DirectX.png: same normals with green channel inverted. Use one, never both.\nroughness_assumed.png: linear; unmeasured trial values.\nmetallic_surface.png: linear; outer-surface convention described above.\nambient_occlusion_neutral.png: white fallback, not calculated occlusion.\nfeature_mask.png: mortar mask for brick; raised-rib mask for cladding; zero for uniform surfaces.\ntransmission_assumed.png: 1 for glass, 0 otherwise. opacity.png is white; not a glass cutout mask.\nUV extent: 0.25 m x 0.25 m, authored. Resolution: 512 x 512.\nUse normal OR height-driven bump at first; avoid double-counting the same relief. Start with displacement disabled. The render review uses normal shading only; a side silhouette needs actual geometry.\nNo in-game physical friction, thermal response, acoustic response or NPC behaviour is established by these maps.\n",
+ "maps": {
+  "base_color": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/base_color.png",
+   "sha256": "6a88c9e4983856bf2151d4506b44890f759431c84831f87bcf38518cb63659da",
+   "status": "authored: an interpreted palette, not calibrated colour"
+  },
+  "normal_OpenGL": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/normal_OpenGL.png",
+   "sha256": "2dbe749edd97ef0f6da02cebf118686b92e35a44ef64bc10574da33ab66bbbc0",
+   "status": "derived from the authored height"
+  },
+  "normal_DirectX": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/normal_DirectX.png",
+   "sha256": "7488b31727a9e7f4880fd388ae31aea6b2c7cbb9704b4583d5e8b08ac8f52369",
+   "status": "the same normals, green channel inverted"
+  },
+  "roughness_assumed": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/roughness_assumed.png",
+   "sha256": "4a0659de45f2506128f2f95ae62e659caa19c4b6e694f74318a0a0ded08442cc",
+   "status": "assumed: trial values, not measured"
+  },
+  "metallic_surface": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/metallic_surface.png",
+   "sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+   "status": "authored: describes the outer coating"
+  },
+  "ambient_occlusion_neutral": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/ambient_occlusion_neutral.png",
+   "sha256": "d8acccafa1fdcf03f3bb9112f5f2f30ad1558e446d5c12ec5644fc0d53c1e58b",
+   "status": "a white placeholder, not computed"
+  },
+  "height_estimated_16bit": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/height_estimated_16bit.png",
+   "sha256": "96e7c62ec738b9a0ec40b560bb9226debd629b08e6dc5f2c9b5a6f7739569c2f",
+   "status": "authored relief, 16-bit; the physical range is in the record"
+  },
+  "feature_mask": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/feature_mask.png",
+   "sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+   "status": "authored: mortar or raised ribs"
+  },
+  "transmission_assumed": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/transmission_assumed.png",
+   "sha256": "65795a5b91030a2a433dae510d1edf494082a9cfa1153cd94f3797759f68f257",
+   "status": "assumed: 1 for glass, 0 otherwise"
+  },
+  "opacity": {
+   "file": "buildings/Sherwin_1957_Hunter_w1309501032/coated_aluminum_railings/reconstruction_maps/opacity.png",
+   "sha256": "d8acccafa1fdcf03f3bb9112f5f2f30ad1558e446d5c12ec5644fc0d53c1e58b",
+   "status": "white: no cut-out"
+  }
+ },
+ "made_by": "tools/materials_batch.py",
+ "source_folder": "data/external/materials_batch01_2026-11-23"
+}

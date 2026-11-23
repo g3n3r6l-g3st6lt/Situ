@@ -1,0 +1,73 @@
+{
+ "made": "2026-11-23",
+ "source": "Prototype/Materials: Griffintown_Coverage_Atlas_v3 and Unread_Buildings_Recovery_v1 (2026-11-23)",
+ "s4_records": 296,
+ "excluded": 1,
+ "in_scope": 295,
+ "boundary_review": 71,
+ "states": {
+  "not read": 81,
+  "read, likely": 94,
+  "read, clear": 116,
+  "excluded": 1,
+  "under construction": 4
+ },
+ "families": {
+  "brick, brown": 14,
+  "stone, dressed": 14,
+  "brick, red": 76,
+  "panels": 13,
+  "brick, dark": 22,
+  "concrete or render": 29,
+  "glass": 6,
+  "brick, buff or cream": 24,
+  "metal cladding": 7,
+  "siding": 2,
+  "stone, rough-faced": 4
+ },
+ "unread_second_pass": {
+  "reviewed": 81,
+  "views": 180,
+  "by_outcome": {
+   "Target identity / street side unresolved": 30,
+   "Still obscured or unreadable": 5,
+   "Facade visible; opaque material unresolved": 15,
+   "Current state / date unresolved": 6,
+   "Provisional material reading recovered": 23,
+   "Dated broad material family established": 1,
+   "No suitable panorama candidate": 1
+  },
+  "texture_ready": 0,
+  "method": "Assistant visual review of originals and 180 alternate views on comparison sheets; not blind to earlier readings"
+ },
+ "library_on": {
+  "w54895065": [
+   "GME001",
+   "M001"
+  ],
+  "w340223814": [
+   "GME003"
+  ],
+  "w347395104": [
+   "GME004",
+   "GME005"
+  ],
+  "w225637542": [
+   "GME006"
+  ],
+  "w340229158": [
+   "GTM01"
+  ],
+  "w1080276132": [
+   "GTM02"
+  ],
+  "w1309501032": [
+   "GTM03",
+   "GTM04"
+  ],
+  "w225610882": [
+   "M002"
+  ]
+ },
+ "claim": "Every current S4 record is accounted for. This does NOT establish that every real-world building, facade or material has been found."
+}

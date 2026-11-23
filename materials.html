@@ -50,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c722b9823d9cdbdee03cdca8e8909edf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c2590eb3037042410e60884f5ee1194c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -289,6 +289,12 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./h4-buildings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Past · 1912 to c1927</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
@@ -534,6 +540,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#m001" id="toc-m001" class="nav-link" data-scroll-target="#m001">M001 · red brick, 1895 factory wall</a></li>
   <li><a href="#m002" id="toc-m002" class="nav-link" data-scroll-target="#m002">M002 · red brick, 1880s factory wall</a></li>
   <li><a href="#generated" id="toc-generated" class="nav-link" data-scroll-target="#generated">Generated from photos</a></li>
+  <li><a href="#sets" id="toc-sets" class="nav-link" data-scroll-target="#sets">Map sets</a></li>
   <li><a href="#set-aside" id="toc-set-aside" class="nav-link" data-scroll-target="#set-aside">Set aside</a></li>
   <li><a href="#photos-waiting-for-entries" id="toc-photos-waiting-for-entries" class="nav-link" data-scroll-target="#photos-waiting-for-entries">Photos waiting for entries</a></li>
   </ul>
@@ -575,15 +582,15 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="glance">
 <p><strong>Asks</strong> What Griffintown’s walls are made of, recorded as measurements and as texture maps, each tied to a building and a photo.</p>
-<p><strong>Found</strong> The wall material of 215 of the 296 buildings, read from street photos: red brick on 76, more than any other. Two library entries, both red brick factory walls with courses of 8.2 and 8.4 cm. Five colour studies generated from photos of four buildings, for pattern control. One greystone attempt was set aside.</p>
-<p><strong>Stands</strong> partial. Each wall reading is an assumption, tied to its photo and not yet checked by a second reader. In the entries, the colour map is observed and the height and normal maps are estimated. In the generated studies, the colour is authored by an image model.</p>
+<p><strong>Found</strong> The wall material of 215 of the 296 buildings, read from street photos: red brick on 76, more than any other. Two library entries, both red brick factory walls with courses of 8.2 and 8.4 cm. Five colour studies generated from photos of four buildings, for pattern control. Four map sets for three buildings (brick, profiled cladding, coated railings, frosted glass), drawn by a script from references. One greystone attempt was set aside.</p>
+<p><strong>Stands</strong> partial. Each wall reading is an assumption, tied to its photo, until I have reviewed it. In the entries, the colour map is observed and the height and normal maps are estimated. In the generated studies, the colour is authored by an image model; in the map sets, every map is authored. Measurements made on a photo are verified for that photo only.</p>
 <p><strong>Leaves out</strong> Murals and graffiti, interiors, and anything no published photo shows clearly.</p>
 <p><strong>In the game</strong> Not yet. The greybox look comes first (<a href="./g1-world.html">G1 World</a>).</p>
 <p><strong>Trace</strong> entry file <a href="outputs/materials/M001/entry.json">entry.json</a> · uses <a href="./s4-buildings.html">S4</a> outlines and <a href="./g1-world.html">G1</a> heights</p>
 </div>
 <section id="what-this-page-holds" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-page-holds">What this page holds</h2>
-<p>The materials library I use in this project, and where each material came from. It documents Griffintown’s architectural character for this research; the maps are not offered for others to use. Each entry starts from facts about the wall: where it is, which building, how big its bricks or stones are, and how that was measured. The texture maps come second, and each says how it was made. The <a href="./lab.html">Lab</a> has a Materials tab that shows each recorded wall in its measured colour. A building’s panel lists its entries there, and on the other tabs too when you choose.</p>
+<p>The materials library I use in this project, and where each material came from. It documents Griffintown’s architectural character for this research; the maps are not offered for others to use. Each entry starts from facts about the wall: where it is, which building, how big its bricks or stones are, and how that was measured. The texture maps come second, and each says how it was made. The <a href="./lab.html">Lab</a> has a Materials tab that shows each recorded wall in its measured colour. A building’s panel lists its entries there, in the Overview, and on the S4 tab when you choose. <a href="#coverage">How far the library reaches</a> shows which buildings are read so far.</p>
 </section>
 <section id="how-an-entry-is-made" class="level2">
 <h2 class="anchored" data-anchor-id="how-an-entry-is-made">How an entry is made</h2>
@@ -763,15 +770,29 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>121 readings are marked clear and 94 likely. 74 views did not show the building’s own wall: a neighbour, a tree, a truck, or a corner where two walls meet. 4 buildings had no panorama within 40 m, and in 3 cases the photo predates the building.</p>
 <p>Red brick is the most common wall on buildings from before 1950 (24) and from 2000 on (20). From 1950 to 1999, concrete or render leads (8, against 6 in red brick). Among buildings with a known year, panels appear only on those from 2000 on. Dressed stone stands mostly on buildings from before 1950 (8 of 14).</p>
-<p>Each reading rests on one view, cut toward the nearest point of the outline, so a long building is read from one place. No second reader has checked them yet. In the <a href="./lab.html">Lab</a>, the Materials tab colours every building by its reading, and each building’s panel links to the photo.</p>
+<p>Each reading rests on one view, cut toward the nearest point of the outline, so a long building is read from one place. Each is an assumption until I have reviewed it. In the <a href="./lab.html">Lab</a>, the Materials tab colours every building by its reading, and each building’s panel links to the photo.</p>
+<!-- coverage: written by tools/materials_page.py -->
+<section id="coverage" class="level3">
+<h3 class="anchored" data-anchor-id="coverage">How far the library reaches</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/materials/coverage_map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Every S4 building by how far its wall has been read, and where the library’s entries, studies and map sets stand."><img src="outputs/materials/coverage_map.png" class="img-fluid figure-img" style="width:80.0%" alt="Every S4 building by how far its wall has been read, and where the library’s entries, studies and map sets stand."></a></p>
+<figcaption>Every S4 building by how far its wall has been read, and where the library’s entries, studies and map sets stand.</figcaption>
+</figure>
+</div>
+<p>Of the 295 buildings in the study area (1 more set aside as outside it), 210 have a wall reading: 116 clear and 94 likely. 4 were under construction in their photo, and 81 are not read. 71 stand near the edge of the area, where the side of the street a photo shows needs checking.</p>
+<p>A second pass on 23 November 2026 looked at the 81 unread buildings again, through 180 other street views. It found a wall that can be read on 23 of them. For 30, which building the photo shows is still in doubt; on 15 the wall shows but its material cannot be told; 6 may have changed since the photo; 5 stay hidden. These readings are not yet in the table above: each still needs my review. None of them is clear enough yet for a set of maps.</p>
+<p>The count covers every S4 building once. It is not a survey of every wall: one photo shows one side, and the ground, the canal edge, the roofs, doors, railings and street furniture each need entries of their own.</p>
+<!-- end of coverage -->
 <p><strong>The 2016 textured 3D model, set aside.</strong> The city’s 2016 model comes with wall textures (CC BY 4.0), made from oblique aerial photos. Measured building by building, most of what its wall surfaces show is roof, street or shade: walls are thin slivers in photos taken from the air. The median colour came out grey for buildings that are red brick in street photos. It gives no wall colour I can use.</p>
+</section>
 </section>
 <section id="m001" class="level2">
 <h2 class="anchored" data-anchor-id="m001">M001 · red brick, 1895 factory wall</h2>
 <p><strong>Where</strong> Lowney (Phase 1), 350 rue de l’Inspecteur: the face on the street (S4 building w54895065; 5 storeys; built 1895 according to the city’s tax roll).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/materials/M001/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The face, straightened. Width 18.0 m from the S4 outline, height 20.58 m from the 2023 lidar less the 1.67 m stone base. Photo: Jeangagnon, 23 May 2016, Wikimedia Commons, CC BY-SA 4.0; straightened by me."><img src="outputs/materials/M001/face.jpg" class="img-fluid figure-img" style="width:70.0%" alt="The face, straightened. Width 18.0 m from the S4 outline, height 20.58 m from the 2023 lidar less the 1.67 m stone base. Photo: Jeangagnon, 23 May 2016, Wikimedia Commons, CC BY-SA 4.0; straightened by me."></a></p>
+<p><a href="outputs/materials/M001/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="The face, straightened. Width 18.0 m from the S4 outline, height 20.58 m from the 2023 lidar less the 1.67 m stone base. Photo: Jeangagnon, 23 May 2016, Wikimedia Commons, CC BY-SA 4.0; straightened by me."><img src="outputs/materials/M001/face.jpg" class="img-fluid figure-img" style="width:70.0%" alt="The face, straightened. Width 18.0 m from the S4 outline, height 20.58 m from the 2023 lidar less the 1.67 m stone base. Photo: Jeangagnon, 23 May 2016, Wikimedia Commons, CC BY-SA 4.0; straightened by me."></a></p>
 <figcaption>The face, straightened. Width 18.0 m from the S4 outline, height 20.58 m from the 2023 lidar less the 1.67 m stone base. Photo: Jeangagnon, 23 May 2016, <a href="https://commons.wikimedia.org/wiki/File:Le_Lowney_-_005.jpg">Wikimedia Commons</a>, CC BY-SA 4.0; straightened by me.</figcaption>
 </figure>
 </div>
@@ -797,7 +818,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>same course in three patches</td>
 <td>8.20 to 8.37 cm</td>
-<td>verified</td>
+<td>verified, on the photo</td>
 </tr>
 <tr class="odd">
 <td>mean colour</td>
@@ -824,7 +845,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Where</strong> Robin &amp; Sadler, 1845 rue William, at rue des Seigneurs: the face on William (S4 building w225610882, built 1880 according to the tax roll). Other sources date it later: 1895 on the architect’s project page for Le William, 1893 to 1894 in a heritage study cited by the OCPM (both found by the materials encyclopedia, not yet read by me). No reading here depends on the year.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="outputs/materials/M002/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="The face on rue William, straightened. Width 20.59 m from the S4 outline (its side parallel to William in S1), height 17.9 m from the 2023 lidar less the stone base. Photo: Parcours riverain, Ville de Montréal, 19 July 2017, Wikimedia Commons, CC BY 2.0; straightened by me."><img src="outputs/materials/M002/face.jpg" class="img-fluid figure-img" style="width:70.0%" alt="The face on rue William, straightened. Width 20.59 m from the S4 outline (its side parallel to William in S1), height 17.9 m from the 2023 lidar less the stone base. Photo: Parcours riverain, Ville de Montréal, 19 July 2017, Wikimedia Commons, CC BY 2.0; straightened by me."></a></p>
+<p><a href="outputs/materials/M002/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The face on rue William, straightened. Width 20.59 m from the S4 outline (its side parallel to William in S1), height 17.9 m from the 2023 lidar less the stone base. Photo: Parcours riverain, Ville de Montréal, 19 July 2017, Wikimedia Commons, CC BY 2.0; straightened by me."><img src="outputs/materials/M002/face.jpg" class="img-fluid figure-img" style="width:70.0%" alt="The face on rue William, straightened. Width 20.59 m from the S4 outline (its side parallel to William in S1), height 17.9 m from the 2023 lidar less the stone base. Photo: Parcours riverain, Ville de Montréal, 19 July 2017, Wikimedia Commons, CC BY 2.0; straightened by me."></a></p>
 <figcaption>The face on rue William, straightened. Width 20.59 m from the S4 outline (its side parallel to William in S1), height 17.9 m from the 2023 lidar less the stone base. Photo: Parcours riverain, Ville de Montréal, 19 July 2017, <a href="https://commons.wikimedia.org/wiki/File:Robin_%26_Sadler,_1845,_rue_William_(Sud-Ouest)_(36204300985).jpg">Wikimedia Commons</a>, CC BY 2.0; straightened by me.</figcaption>
 </figure>
 </div>
@@ -850,7 +871,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>same course in three patches</td>
 <td>8.29 to 8.41 cm</td>
-<td>verified; a fourth patch showed no clear repeat and was left out</td>
+<td>verified, on the photo; a fourth patch showed no clear repeat and was left out</td>
 </tr>
 <tr class="odd">
 <td>mean colour</td>
@@ -885,7 +906,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="gme001">GME001 · red fired-brick masonry, weathered face</h3>
 <p><strong>Where</strong> Lowney (Phase 1), 350 rue de l’Inspecteur (S4 building w54895065). Part of the wall followed: plain brick piers of the short Inspecteur facade.</p>
 <div class="tex-tiles">
-<p><img src="outputs/materials/GME001/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <img src="outputs/materials/GME001/height_estimated_16bit_3x3.png" class="img-fluid" style="width:32.0%" alt="height (estimated from the joints)"> <img src="outputs/materials/GME001/normal_OpenGL_3x3.png" class="img-fluid" style="width:32.0%" alt="normal (estimated)"> <a href="outputs/materials/GME001/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The photo it was made from: Jeangagnon, 2016-05-23, Wikimedia Commons, CC BY-SA 4.0"><img src="outputs/materials/GME001/face.jpg" class="img-fluid" style="width:70.0%" alt="The photo it was made from: Jeangagnon, 2016-05-23, Wikimedia Commons, CC BY-SA 4.0"></a></p>
+<p><img src="outputs/materials/GME001/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <img src="outputs/materials/GME001/height_estimated_16bit_3x3.png" class="img-fluid" style="width:32.0%" alt="height (estimated from the joints)"> <img src="outputs/materials/GME001/normal_OpenGL_3x3.png" class="img-fluid" style="width:32.0%" alt="normal (estimated)"> <a href="outputs/materials/GME001/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The photo it was made from: Jeangagnon, 2016-05-23, Wikimedia Commons, CC BY-SA 4.0"><img src="outputs/materials/GME001/face.jpg" class="img-fluid" style="width:70.0%" alt="The photo it was made from: Jeangagnon, 2016-05-23, Wikimedia Commons, CC BY-SA 4.0"></a></p>
 </div>
 <table class="caption-top table">
 <colgroup>
@@ -944,7 +965,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="gme003">GME003 · grey irregular rubble masonry</h3>
 <p><strong>Where</strong> New City Gas complex, rue Ottawa (S4 outline 6.6 m from the photo’s geotag; built 1859 in the tax roll) (S4 building w340223814). Part of the wall followed: stone infill between windows, excluding dressed surrounds and upper brick.</p>
 <div class="tex-tiles">
-<p><img src="outputs/materials/GME003/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME003/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The photo it was made from: Jeangagnon, 2011-08-07, Wikimedia Commons, CC BY-SA 3.0"><img src="outputs/materials/GME003/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Jeangagnon, 2011-08-07, Wikimedia Commons, CC BY-SA 3.0"></a></p>
+<p><img src="outputs/materials/GME003/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME003/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="The photo it was made from: Jeangagnon, 2011-08-07, Wikimedia Commons, CC BY-SA 3.0"><img src="outputs/materials/GME003/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Jeangagnon, 2011-08-07, Wikimedia Commons, CC BY-SA 3.0"></a></p>
 </div>
 <table class="caption-top table">
 <colgroup>
@@ -987,7 +1008,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="gme004">GME004 · warm grey rough-faced rectangular stone</h3>
 <p><strong>Where</strong> Caledonia Iron Works, 1840-1844 rue William (the S4 outline also holds its neighbours) (S4 building w347395104). Part of the wall followed: horizontal stone bands and lower plinth; exclude smooth infill.</p>
 <div class="tex-tiles">
-<p><img src="outputs/materials/GME004/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME004/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"><img src="outputs/materials/GME004/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"></a></p>
+<p><img src="outputs/materials/GME004/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME004/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"><img src="outputs/materials/GME004/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"></a></p>
 </div>
 <table class="caption-top table">
 <colgroup>
@@ -1030,7 +1051,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="gme005">GME005 · pale green-grey fine render or coating</h3>
 <p><strong>Where</strong> Caledonia Iron Works, 1840-1844 rue William (the S4 outline also holds its neighbours) (S4 building w347395104). Part of the wall followed: broad smooth areas between exposed stone bands.</p>
 <div class="tex-tiles">
-<p><img src="outputs/materials/GME005/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME005/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"><img src="outputs/materials/GME005/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"></a></p>
+<p><img src="outputs/materials/GME005/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME005/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"><img src="outputs/materials/GME005/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"></a></p>
 </div>
 <table class="caption-top table">
 <colgroup>
@@ -1073,7 +1094,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="gme006">GME006 · grey dressed ashlar, planar lightly pitted faces</h3>
 <p><strong>Where</strong> 1700 rue Notre-Dame Ouest (La Poste; tax roll: built 1923) (S4 building w225637542). Part of the wall followed: wall fields beside columns; exclude sculpture, fluting and tree shadows.</p>
 <div class="tex-tiles">
-<p><img src="outputs/materials/GME006/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME006/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="The photo it was made from: Guerinf, 2017-05-24, Wikimedia Commons, CC BY-SA 4.0"><img src="outputs/materials/GME006/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Guerinf, 2017-05-24, Wikimedia Commons, CC BY-SA 4.0"></a></p>
+<p><img src="outputs/materials/GME006/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME006/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="The photo it was made from: Guerinf, 2017-05-24, Wikimedia Commons, CC BY-SA 4.0"><img src="outputs/materials/GME006/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Guerinf, 2017-05-24, Wikimedia Commons, CC BY-SA 4.0"></a></p>
 </div>
 <table class="caption-top table">
 <colgroup>
@@ -1116,6 +1137,196 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Limits noted with the study</strong> Do not infer limestone species from grey appearance. Generated pitting is more pronounced and uniform than some source blocks.</p>
 <p><strong>Source</strong> Made from the photo by Guerinf, <a href="https://commons.wikimedia.org/wiki/File:1700_La_Poste_(5).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; changed by an image model. Record: <a href="outputs/materials/GME006/entry.json">entry.json</a>, with the prompt.</p>
 <!-- end of generated studies -->
+<!-- map sets: written by tools/materials_page.py -->
+</section>
+</section>
+<section id="sets" class="level2">
+<h2 class="anchored" data-anchor-id="sets">Map sets</h2>
+<p>4 sets of texture maps were made on 23 November 2026 for 3 buildings, each for one part of a building: brick (GTM01), profiled cladding (GTM02), coated metal (GTM03), glass (GTM04). Each set has ten maps of the same size: colour, normal (for OpenGL and DirectX), roughness, metal, occlusion, height, a mask of its joints or ribs, transmission and opacity. They are reconstructions: a script draws the pattern from what the reference photos and documents show, so the bond, sizes, colour and wear are interpretations. They sit apart from the entries cut from photos above. Status: assumption.</p>
+<section id="gtm01" class="level3">
+<h3 class="anchored" data-anchor-id="gtm01">GTM01 · red-brown brick and pale mortar</h3>
+<p><strong>Where</strong> 301 rue Young, Griffintown, Montreal (S4 building w340229158). Only the narrow house at 301 Young. The large pale panelized neighbour is excluded.</p>
+<div class="tex-tiles">
+<p><img src="outputs/materials/GTM01/base_color_3x3.png" class="img-fluid" style="width:24.0%" alt="colour (authored), 3 × 3"> <img src="outputs/materials/GTM01/normal_OpenGL_3x3.png" class="img-fluid" style="width:24.0%" alt="normal, from the authored height"> <img src="outputs/materials/GTM01/height_estimated_16bit_3x3.png" class="img-fluid" style="width:24.0%" alt="height (authored)"> <img src="outputs/materials/GTM01/roughness_assumed_3x3.png" class="img-fluid" style="width:24.0%" alt="roughness (assumed)"></p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/materials/GTM01/render.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="GTM01 rendered in Blender, three repeats, light from the left (the set’s own render)."><img src="outputs/materials/GTM01/render.jpg" class="img-fluid figure-img" style="width:56.0%" alt="GTM01 rendered in Blender, three repeats, light from the left (the set’s own render)."></a></p>
+<figcaption>GTM01 rendered in Blender, three repeats, light from the left (the set’s own render).</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>tile</td>
+<td>0.88 × 0.52 m, 1024 × 1024 pixels (authored, not surveyed)</td>
+</tr>
+<tr class="even">
+<td>relief</td>
+<td>4.3 mm from lowest to highest (authored)</td>
+</tr>
+<tr class="odd">
+<td>mean colour</td>
+<td>#75503f (an interpreted palette, not calibrated)</td>
+</tr>
+<tr class="even">
+<td>what ties it to the building</td>
+<td>Door number 301 in original photo and municipal address point inside the footprint support association. Brick family visually identified; product and mortar chemistry unknown.</td>
+</tr>
+<tr class="odd">
+<td>assumed</td>
+<td>Authored running bond: 220 x 65 mm module including joints, 8 mm joint width, 4.3 mm height range. Tile 0.88 x 0.52 m. Bond, dimensions, colour palette and wear are interpretations, not measurements. No photographed stain was converted to relief.</td>
+</tr>
+<tr class="even">
+<td>checked</td>
+<td>5 file checks passed: size, 16-bit height, both normal conventions, height and normal aligned, building and source notes. Not calibrated against a measured material, and not yet tried in a game engine.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong> Made on 2026-11-23 by a script, from reference photos and documents named in its notes; no photo pixel is in its maps. The reference photos are not shown here: their photographers are not named in the register they come from. Record: <a href="outputs/materials/GTM01/entry.json">entry.json</a>.</p>
+</section>
+<section id="gtm02" class="level3">
+<h3 class="anchored" data-anchor-id="gtm02">GTM02 · blue coated vertically profiled cladding</h3>
+<p><strong>Where</strong> Rue Barre, Griffintown, Montreal; footprint w1080276132 (S4 building w1080276132). Blue-clad low building beside taller brick frontage. Exact civic address unconfirmed; do not assign neighbouring 1319 Barre as fact.</p>
+<div class="tex-tiles">
+<p><img src="outputs/materials/GTM02/base_color_3x3.png" class="img-fluid" style="width:24.0%" alt="colour (authored), 3 × 3"> <img src="outputs/materials/GTM02/normal_OpenGL_3x3.png" class="img-fluid" style="width:24.0%" alt="normal, from the authored height"> <img src="outputs/materials/GTM02/height_estimated_16bit_3x3.png" class="img-fluid" style="width:24.0%" alt="height (authored)"> <img src="outputs/materials/GTM02/roughness_assumed_3x3.png" class="img-fluid" style="width:24.0%" alt="roughness (assumed)"></p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/materials/GTM02/render.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="GTM02 rendered in Blender, three repeats, light from the left (the set’s own render)."><img src="outputs/materials/GTM02/render.jpg" class="img-fluid figure-img" style="width:56.0%" alt="GTM02 rendered in Blender, three repeats, light from the left (the set’s own render)."></a></p>
+<figcaption>GTM02 rendered in Blender, three repeats, light from the left (the set’s own render).</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>tile</td>
+<td>1.2 × 1.2 m, 1024 × 1024 pixels (authored, not surveyed)</td>
+</tr>
+<tr class="even">
+<td>relief</td>
+<td>12 mm from lowest to highest (authored)</td>
+</tr>
+<tr class="odd">
+<td>mean colour</td>
+<td>#18445b (an interpreted palette, not calibrated)</td>
+</tr>
+<tr class="even">
+<td>what ties it to the building</td>
+<td>Alternate view 2 and footprint context support the blue profile. Metal substrate is plausible but unconfirmed; coating is represented as dielectric.</td>
+</tr>
+<tr class="odd">
+<td>assumed</td>
+<td>Authored profile: 12 ribs across 1.2 m, 100 mm pitch, 12 mm height range. Dimensions and exact cross-section are unmeasured. Coating roughness 0.53 is a trial. Metallic is zero for the visible coating; underlying alloy remains unknown.</td>
+</tr>
+<tr class="even">
+<td>checked</td>
+<td>5 file checks passed: size, 16-bit height, both normal conventions, height and normal aligned, building and source notes. Not calibrated against a measured material, and not yet tried in a game engine.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong> Made on 2026-11-23 by a script, from reference photos and documents named in its notes; no photo pixel is in its maps. The reference photos are not shown here: their photographers are not named in the register they come from. Record: <a href="outputs/materials/GTM02/entry.json">entry.json</a>.</p>
+</section>
+<section id="gtm03" class="level3">
+<h3 class="anchored" data-anchor-id="gtm03">GTM03 · light neutral coating over aluminum railings</h3>
+<p><strong>Where</strong> Sherwin, 1957 rue Hunter, Griffintown, Montreal (S4 building w1309501032). Sherwin railing systems only. Do not apply the aluminum identification to facade panels or terrace furniture.</p>
+<div class="tex-tiles">
+<p><img src="outputs/materials/GTM03/base_color_3x3.png" class="img-fluid" style="width:24.0%" alt="colour (authored), 3 × 3"> <img src="outputs/materials/GTM03/normal_OpenGL_3x3.png" class="img-fluid" style="width:24.0%" alt="normal, from the authored height"> <img src="outputs/materials/GTM03/height_estimated_16bit_3x3.png" class="img-fluid" style="width:24.0%" alt="height (authored)"> <img src="outputs/materials/GTM03/roughness_assumed_3x3.png" class="img-fluid" style="width:24.0%" alt="roughness (assumed)"></p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/materials/GTM03/render.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="GTM03 rendered in Blender, three repeats, light from the left (the set’s own render)."><img src="outputs/materials/GTM03/render.jpg" class="img-fluid figure-img" style="width:56.0%" alt="GTM03 rendered in Blender, three repeats, light from the left (the set’s own render)."></a></p>
+<figcaption>GTM03 rendered in Blender, three repeats, light from the left (the set’s own render).</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>tile</td>
+<td>0.25 × 0.25 m, 512 × 512 pixels (authored, not surveyed)</td>
+</tr>
+<tr class="even">
+<td>relief</td>
+<td>0.02 mm from lowest to highest (authored)</td>
+</tr>
+<tr class="odd">
+<td>mean colour</td>
+<td>#9ea3a6 (an interpreted palette, not calibrated)</td>
+</tr>
+<tr class="even">
+<td>what ties it to the building</td>
+<td>Installer documents aluminum railing systems. The neutral coating appearance is an authored study; alloy, coating type and exact colour are not established.</td>
+</tr>
+<tr class="odd">
+<td>assumed</td>
+<td>Neutral light coating, roughness 0.40 and microscopic 0.02 mm relief range are authored trials. Metallic zero represents the outer dielectric coat, not a claim that aluminum is nonmetallic. No exposed-metal or rust mask is asserted.</td>
+</tr>
+<tr class="even">
+<td>checked</td>
+<td>5 file checks passed: size, 16-bit height, both normal conventions, height and normal aligned, building and source notes. Not calibrated against a measured material, and not yet tried in a game engine.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong> Made on 2026-11-23 by a script, from reference photos and documents named in its notes; no photo pixel is in its maps. The reference photos are not shown here: their photographers are not named in the register they come from. Record: <a href="outputs/materials/GTM03/entry.json">entry.json</a>.</p>
+</section>
+<section id="gtm04" class="level3">
+<h3 class="anchored" data-anchor-id="gtm04">GTM04 · frosted glass privacy-screen study</h3>
+<p><strong>Where</strong> Sherwin, 1957 rue Hunter, Griffintown, Montreal (S4 building w1309501032). Sherwin documented frosted privacy screens. The terrace photograph shows clear guards; it is context, not proof of the frosted screen appearance.</p>
+<div class="tex-tiles">
+<p><img src="outputs/materials/GTM04/base_color_3x3.png" class="img-fluid" style="width:24.0%" alt="colour (authored), 3 × 3"> <img src="outputs/materials/GTM04/normal_OpenGL_3x3.png" class="img-fluid" style="width:24.0%" alt="normal, from the authored height"> <img src="outputs/materials/GTM04/height_estimated_16bit_3x3.png" class="img-fluid" style="width:24.0%" alt="height (authored)"> <img src="outputs/materials/GTM04/roughness_assumed_3x3.png" class="img-fluid" style="width:24.0%" alt="roughness (assumed)"></p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="outputs/materials/GTM04/render.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="GTM04 rendered in Blender, three repeats, light from the left (the set’s own render). The checkerboard is a background seen through the glass, to show its blur."><img src="outputs/materials/GTM04/render.jpg" class="img-fluid figure-img" style="width:56.0%" alt="GTM04 rendered in Blender, three repeats, light from the left (the set’s own render). The checkerboard is a background seen through the glass, to show its blur."></a></p>
+<figcaption>GTM04 rendered in Blender, three repeats, light from the left (the set’s own render). The checkerboard is a background seen through the glass, to show its blur.</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>tile</td>
+<td>0.5 × 0.5 m, 512 × 512 pixels (authored, not surveyed)</td>
+</tr>
+<tr class="even">
+<td>relief</td>
+<td>none: a flat surface</td>
+</tr>
+<tr class="odd">
+<td>mean colour</td>
+<td>#f7f7f7 (an interpreted palette, not calibrated)</td>
+</tr>
+<tr class="even">
+<td>what ties it to the building</td>
+<td>Installer documents frosted glass screens. Frosting method, tint, thickness and optical response are unknown; no frosted close-up available.</td>
+</tr>
+<tr class="odd">
+<td>assumed</td>
+<td>Uniform frosted transmission study: roughness 0.32, transmission 1, IOR 1.45 and 8 mm pane thickness are authored starting values, not measured. Normal is flat; no invented measured frost pattern. Opacity map remains white: use transmission/refraction, not alpha-cutout transparency.</td>
+</tr>
+<tr class="even">
+<td>checked</td>
+<td>5 file checks passed: size, 16-bit height, both normal conventions, height and normal aligned, building and source notes. Not calibrated against a measured material, and not yet tried in a game engine.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong> Made on 2026-11-23 by a script, from reference photos and documents named in its notes; no photo pixel is in its maps. The reference photos are not shown here: their photographers are not named in the register they come from. Record: <a href="outputs/materials/GTM04/entry.json">entry.json</a>.</p>
+<!-- end of map sets -->
 </section>
 </section>
 <section id="set-aside" class="level2">

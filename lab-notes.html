@@ -50,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c722b9823d9cdbdee03cdca8e8909edf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c2590eb3037042410e60884f5ee1194c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -289,6 +289,12 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./h4-buildings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Past · 1912 to c1927</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./s4-build.html" class="sidebar-item-text sidebar-link">
@@ -530,6 +536,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#what-the-lab-is" id="toc-what-the-lab-is" class="nav-link active" data-scroll-target="#what-the-lab-is">What the Lab is</a></li>
   <li><a href="#what-it-shows" id="toc-what-it-shows" class="nav-link" data-scroll-target="#what-it-shows">What it shows</a></li>
+  <li><a href="#eras" id="toc-eras" class="nav-link" data-scroll-target="#eras">Two eras</a></li>
   <li><a href="#how-it-is-built" id="toc-how-it-is-built" class="nav-link" data-scroll-target="#how-it-is-built">How it is built</a></li>
   <li><a href="#two-orders" id="toc-two-orders" class="nav-link" data-scroll-target="#two-orders">Two orders on one map</a></li>
   <li><a href="#unresolved" id="toc-unresolved" class="nav-link" data-scroll-target="#unresolved">Only what is unresolved</a></li>
@@ -573,7 +580,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-the-lab-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-lab-is">What the Lab is</h2>
-<p>The <a href="./lab.html">Lab</a> is one map with a tab for each system. There I try a system and see the places it still leaves open. Click anything to see what every system knows about it.</p>
+<p>The <a href="./lab.html">Lab</a> is one map with a tab for each system. There I try a system and see the places it still leaves open. On a system’s tab, clicking a street, a junction or a building shows what that system knows about it. The Overview tab collects what every system knows about it in one panel.</p>
 <p>The Lab replays results. It never recomputes them. Every street colour and slider position shows something a system already wrote down: the reach slider, for instance, steps through how far S1 found you can get from a junction. So each rule lives in one place, and the Lab cannot quietly disagree with it.</p>
 <p>Routes are the one small exception. Storing every route between every pair of junctions would take many megabytes. So I store only the shortest distances and the last step of each shortest route. The browser follows each route back and tests each street against the detour allowed. Those two rules exist twice, beside the systems and in the browser, and a test runs both on 45,600 cases to check they give the same streets.</p>
 </section>
@@ -643,6 +650,10 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Every tab can also be seen in 3D: the 3D button under the zoom buttons turns the map into a model. The streets, surfaces and marks are the 2D map’s own, with its colours, so the 3D view always shows the same tab and the same choices. Each building stands at the height <a href="./g1-world.html#heights">G1 World</a> gives it, with its towers on their podium where G1 splits it into measured parts; a building no source measures stays a thin plate, never a guessed mass. Drag to turn and scroll to zoom. Pointing and clicking are the 2D map’s own: the 3D view hands each click to whatever the 2D map holds at that point on the ground, so every street, junction, sign, place, object and tool answers in 3D as it does in 2D, and zooming in 3D brings the same labels as zooming in 2D. In S6, each object stands as a small model of its icon (a tree, a bench, a light post, a hydrant…), at a common size: the shapes are icons, not measurements, and a bench or a crossing turns with its street. Where a model stands in front of a street, a click opens the object, since the model is what the pointer meets. The 3D view uses three.js (MIT licence).</p>
 <p>Integration and choice are the <a href="./space-syntax.html">space syntax</a> measures S2 gives each street. Integration is how easy a street is to reach. Choice is how often it lies on the way between other places. The stress tests sit with each system’s tests, where their numbers can be read in full.</p>
+</section>
+<section id="eras" class="level2">
+<h2 class="anchored" data-anchor-id="eras">Two eras</h2>
+<p>Above the tabs, a switch moves the Lab between today, 1912 and the two compared. In 1912 the map shows the streets read from the Goad atlas (<a href="./h1-streets.html">S1 · past</a>), their space syntax values (<a href="./h2-scores.html">S2 · past</a>) and the building outlines traced so far on three blocks, from 1912, from 1918, or carried to c1927 (<a href="./h4-buildings.html">S4 · past</a>), on the same ground and the same study area as today. The other systems have not started in the past era, so their tabs are off. Compare lays both networks on one map, and a slider fades from 1912 to today. In 1912 the 3D view is off, because its buildings are today’s.</p>
 </section>
 <section id="how-it-is-built" class="level2">
 <h2 class="anchored" data-anchor-id="how-it-is-built">How it is built</h2>

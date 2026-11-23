@@ -55,7 +55,11 @@ L14 G1 heights: every building's height, source, status, roof and discarded heig
     PASS
 
 L15 Materials: every entry the Lab shows equals its entry.json, stands on an S4 building, and its pictures exist
-    2 entries on 2 buildings; 5 generated studies; 1 set aside, not shown
+    2 entries on 2 buildings; 5 generated studies; 4 map sets; 1 set aside, not shown
+    PASS
+
+L16 Past era: every 1912 segment and reported H-S2 value in the Lab equals outputs/hist (copied from the historical workspace)
+    283 segments, 821 analysis pieces, 972 values compared; the ring stays null; 302 past outlines with their records
     PASS
 
 ALL PASS

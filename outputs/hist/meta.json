@@ -129,5 +129,40 @@
   "interpolated": 123,
   "unassigned": 10
  },
- "sources": 19
+ "sources": 19,
+ "buildings": {
+  "1912": {
+   "outlines": 110,
+   "m2": 15843,
+   "construction": {
+    "brick or stone": 55,
+    "frame": 55
+   }
+  },
+  "1918": {
+   "outlines": 192,
+   "m2": 16065,
+   "construction": {
+    "brick": 95,
+    "frame": 95,
+    "stone or concrete": 2
+   },
+   "with_storeys": 33,
+   "nested": 9
+  },
+  "c1927": {
+   "outlines": 0,
+   "m2": 0,
+   "construction": {},
+   "top_1918": 183,
+   "meet_d020": 62,
+   "read_1949": 0,
+   "carried": 0
+  },
+  "blocks": [
+   "Colborne–Shannon, William–Ottawa",
+   "Shannon–Ann, William–Ottawa",
+   "Ann–Dalhousie, William–Ottawa"
+  ]
+ }
 }

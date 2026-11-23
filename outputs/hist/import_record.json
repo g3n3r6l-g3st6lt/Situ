@@ -1,5 +1,5 @@
 {
- "made": "2026-11-23T06:43:49+00:00",
+ "made": "2026-11-23T16:11:48+00:00",
  "tool": "tools/hist_import.py",
  "read": [
   {
@@ -21,6 +21,31 @@
    "path": "historical_situ/analysis/d036/d036_results.json",
    "sha256": "89ed9af0733f2d9088e9796631073301eea179837e53fceb161ec6b2aa81f3f2",
    "copied_to": "outputs/hist/d036_results.json"
+  },
+  {
+   "path": "historical_situ/exports/geojson/h12_footprints.geojson",
+   "sha256": "ef402bfac2b4094693d1b959017c0f1fbec3b20136b23a4be0e26ee1a85d24b0",
+   "copied_to": "outputs/hist/h4_outlines_1912.geojson"
+  },
+  {
+   "path": "historical_situ/exports/geojson/h18_footprints.geojson",
+   "sha256": "29eb118efcda90ffbb6b2a0c9a7f3a49144fc999de29ab8505004c2972477327",
+   "copied_to": "outputs/hist/h4_outlines_1918.geojson"
+  },
+  {
+   "path": "historical_situ/exports/geojson/h_buildings.geojson",
+   "sha256": "a2ae51317a0adf07df3e6f9ffc484e927b93acaef88eb4486496491c1ba13c8b",
+   "copied_to": "outputs/hist/h4_carried_c1927.geojson"
+  },
+  {
+   "path": "historical_situ/exports/geojson/h_blocks.geojson",
+   "sha256": "48d94cab0aa2e9cae08f2e8a5b63fc5a299e8293422fe2f74639a402d5c962bf",
+   "copied_to": "outputs/hist/h4_blocks.geojson"
+  },
+  {
+   "path": "historical_situ/exports/csv/carry_1918_1927.csv",
+   "sha256": "53da994fd9e479be17fce120dcbb688d6ec602f6624a6a988d4c7a258dd996e9",
+   "copied_to": "outputs/hist/h4_carry_1918_1927.csv"
   },
   {
    "path": "historical_situ/register/sources.csv",
