@@ -1244,7 +1244,9 @@
   function wallHTML(b) {
     const w = WALL[b.id];
     if (!w) return "";
-    if (!w[0]) return `<p class="sub">Wall material: not read. ${esc(w[4].charAt(0).toUpperCase() + w[4].slice(1))}.</p>`;
+    const lp = MAT.walls.later_pass && MAT.walls.later_pass[b.id];
+    if (!w[0]) return `<p class="sub">Wall material: not read. ${esc(w[4].charAt(0).toUpperCase() + w[4].slice(1))}.</p>` +
+      (lp ? `<p class="sub">A third pass over the unread walls (materials folder, 23 November 2026) found: <b>${esc(lp[0])}</b>. ${esc(lp[1])} Not yet reviewed, so not a reading.</p>` : "");
     return `<p>Wall material: <b>${esc(w[0])}</b> <span class="sub">(${esc(w[1])}; read by eye from a <a href="https://www.mapillary.com/app/?pKey=${esc(w[2])}">street photo of ${esc(w[3])}</a>, Mapillary, CC BY-SA 4.0; an assumption)</span></p>`;
   }
   function matHTML(b) {
