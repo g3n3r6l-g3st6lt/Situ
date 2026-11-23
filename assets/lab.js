@@ -141,8 +141,7 @@
     { id: "mat", tag: "M", name: "Materials", ok: !!MAT && !!S4 },   // the materials library: not a system, a record of the walls
   ];
   const state = {
-    era: "now",                      // "now", "1912" or "compare" (the two crossfaded on one map)
-    cmp: 50,                         // compare: 0 shows only 1912, 100 only today
+    era: "now",                      // "now", "1912" or "compare" (1912 above, today below, moving together)
     hmeasure: "nach", hradius: "800", hbld: "1912",     // the past's buildings: outlines on the 1912 atlas, the May 1918 plan, or carried to c1927
     tab: "s1",
     s1try: "details", s1mode: "walk", reachStart: null, reachStep: 0, routeA: null, routeB: null, routeSlack: 2,
@@ -169,7 +168,10 @@
     `<button type="button" role="tab" data-tab="${t.id}"${t.id === "all" ? ' class="lab-all"' : ""}${t.ok ? "" : ` disabled title="This system's data did not load (outputs/${t.id}/web_data.js)"`}><span>${t.tag || t.id.toUpperCase()}</span>${t.name}</button>`).join("")}</div>
   </div>
   <div class="lab-main">
-    <div class="lab-map"></div>
+    <div class="lab-maps">
+      <div class="lab-pmap" hidden><span class="lab-maptag">1912</span></div>
+      <div class="lab-map"><span class="lab-maptag">today</span></div>
+    </div>
     <form class="lab-find" role="search" autocomplete="off">
       <label for="lab-find-in">Find a street</label>
       <input id="lab-find-in" type="search" list="lab-find-list" placeholder="a street, or an id like S101">
@@ -203,6 +205,14 @@
   };
   map.defs().innerHTML = Object.entries(ICONS).map(([k, v]) => `<symbol id="i-${k}" viewBox="-12 -12 24 24" overflow="visible">${v}</symbol>`).join("");
   map.cover = () => side.hidden || narrow() ? 0 : side.offsetWidth + 16;
+  // the past era has a map of its own, on the same ground and origin: alone in 1912, above today's in Compare.
+  // The two move together, so a place sits at the same spot on both and each can be clicked on its own.
+  const pmap = new SituMap($(".lab-pmap"), S1.segments.flatMap(s => s.pts));
+  pmap.cover = map.cover;
+  const link = (a, b) => { const own = a.apply.bind(a); a.apply = function (later) { own(later);
+    if (link.busy || b.host.hidden) return; link.busy = true; b.view = Object.assign({}, a.view); b.autoFit = a.autoFit; b.apply(later); link.busy = false; }; };
+  link(map, pmap); link(pmap, map);
+  const shownMap = () => state.era === "1912" ? pmap : map;
 
   // ================================================================ 3 painting
   const USE_CLASS = u => u ? "u-" + u.replace(/ /g, "-") : "u-unknown";
@@ -230,16 +240,16 @@
   });
 
   // the past era (H-S1, H-S2): two layers of its own, under today's streets, shown only in the 1912 and compare views
-  const hbLayer = map.layer("histb"), h1Layer = map.layer("hist1"), h2Layer = map.layer("hist2");
+  const hbLayer = pmap.layer("histb"), h1Layer = pmap.layer("hist1"), h2Layer = pmap.layer("hist2");
   const hbEl = {}, hbRec = {};
   const HB_COL = { brick: "brick", "brick or stone": "brick", frame: "frame", "stone or concrete": "stone" };
   if (H && H.buildings) Object.entries(H.buildings).forEach(([yr, list]) => list.forEach(b => {
     const id = b.footprint_id || b.building_id;
     hbRec[id] = Object.assign({ year: yr, id }, b);
-    const e = map.path(hbLayer, "M" + b.ring.map(p => map.P(p).join(",")).join("L") + "Z", { class: "lab-hbld", "data-yr": yr });
-    e.addEventListener("pointermove", ev => map.tip(ev, `${esc(b.occupant || id)}<br><span>${yr === "c1927" ? "carried to c1927" : yr} · ${esc(b.construction || "construction unknown")}${b.storeys_raw || b.storeys ? " · " + esc(b.storeys_raw || b.storeys) + " storeys" : ""}</span>`));
-    e.addEventListener("pointerleave", () => map.untip());
-    e.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "hbld", id }); });
+    const e = pmap.path(hbLayer, "M" + b.ring.map(p => pmap.P(p).join(",")).join("L") + "Z", { class: "lab-hbld", "data-yr": yr });
+    e.addEventListener("pointermove", ev => pmap.tip(ev, `${esc(b.occupant || id)}<br><span>${yr === "c1927" ? "carried to c1927" : yr} · ${esc(b.construction || "construction unknown")}${b.storeys_raw || b.storeys ? " · " + esc(b.storeys_raw || b.storeys) + " storeys" : ""}</span>`));
+    e.addEventListener("pointerleave", () => pmap.untip());
+    e.addEventListener("click", () => { if (!pmap.wasDrag()) select({ kind: "hbld", id }); });
     hbEl[id] = e;
   }));
   const hseg = {}, hnet = {}, h1El = {}, h2El = {};
@@ -248,22 +258,28 @@
   if (H) {
     H.segments.forEach(s => {
       hseg[s.id] = s;
-      h1El[s.id] = map.line(h1Layer, s.pts, { class: "lab-hist" });
-      const hit = map.line(h1Layer, s.pts, { class: "sx-hit" });
-      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(s.name || "no name")} <span>${s.id} · 1912</span><br><span>${esc(HCLS[s.cls] || s.cls)}, name ${esc(s.status)}</span>`));
-      hit.addEventListener("pointerleave", () => map.untip());
-      hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "hseg", id: s.id }); });
+      h1El[s.id] = pmap.line(h1Layer, s.pts, { class: "lab-hist" });
+      const hit = pmap.line(h1Layer, s.pts, { class: "sx-hit" });
+      hit.addEventListener("pointermove", ev => pmap.tip(ev, `${esc(s.name || "no name")} <span>${s.id} · 1912</span><br><span>${esc(HCLS[s.cls] || s.cls)}, name ${esc(s.status)}</span>`));
+      hit.addEventListener("pointerleave", () => pmap.untip());
+      hit.addEventListener("click", () => { if (!pmap.wasDrag()) select({ kind: "hseg", id: s.id }); });
     });
     H.net.forEach(n => {
       hnet[n.id] = n;
-      h2El[n.id] = map.line(h2Layer, n.pts, { class: "lab-hist" });
-      const hit = map.line(h2Layer, n.pts, { class: "sx-hit" });
-      hit.addEventListener("pointermove", ev => map.tip(ev, `${esc(n.name || "no name")} <span>${n.id} · 1912</span><br><span>${n.report ? hcol() + ": " + fmt(n.v[hcol()]) : "ring: not reported"}</span>`));
-      hit.addEventListener("pointerleave", () => map.untip());
-      hit.addEventListener("click", () => { if (!map.wasDrag()) select({ kind: "hnet", id: n.id }); });
+      h2El[n.id] = pmap.line(h2Layer, n.pts, { class: "lab-hist" });
+      const hit = pmap.line(h2Layer, n.pts, { class: "sx-hit" });
+      hit.addEventListener("pointermove", ev => pmap.tip(ev, `${esc(n.name || "no name")} <span>${n.id} · 1912</span><br><span>${n.report ? hcol() + ": " + fmt(n.v[hcol()]) : "ring: not reported"}</span>`));
+      hit.addEventListener("pointerleave", () => pmap.untip());
+      hit.addEventListener("click", () => { if (!pmap.wasDrag()) select({ kind: "hnet", id: n.id }); });
     });
   }
   const hcol = () => state.hmeasure + "_" + state.hradius;
+  // in Compare, both eras are shown on the same footprint: the study area. Outside it, each era has its own context
+  // (today's edge streets, 1912's halo and ring), drawn faint and left out of the ranking, so like is set beside like.
+  const insideB = (p, ring) => { let ins = false; for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i], [xj, yj] = ring[j]; if ((yi > p[1]) !== (yj > p[1]) && p[0] < (xj - xi) * (p[1] - yi) / (yj - yi) + xi) ins = !ins; } return ins; };
+  const inArea = {};
+  if (H) S1.segments.forEach(s => inArea[s.id] = insideB(s.pts[Math.floor(s.pts.length / 2)], H.boundary));
   const past = () => state.era !== "now";
 
   const streets = map.layer("streets");
@@ -280,9 +296,14 @@
 
   // rank colouring, as on the S2 sheets: values bunch up, ranks spread them evenly
   function ranks(col) {
+    if (state.era === "compare" && H) return ranksIn(col);
     const vals = S1.segments.map(s => S2.scores[s.id] && S2.scores[s.id][col]).filter(v => v != null).sort((a, b) => a - b);
     const rank = v => { let lo = 0, hi = vals.length; while (lo < hi) { const m = (lo + hi) >> 1; vals[m] < v ? lo = m + 1 : hi = m; } return lo / Math.max(1, vals.length - 1); };
     return { rank, vals };
+  }
+  function ranksIn(col) {           // Compare: today's streets ranked among those inside the study area only
+    const vals = S1.segments.filter(s => inArea[s.id]).map(s => S2.scores[s.id] && S2.scores[s.id][col]).filter(v => v != null).sort((a, b) => a - b);
+    return { vals, rank: v => vals.filter(x => x < v).length / Math.max(1, vals.length - 1) };
   }
   function ranks8(col) {
     const vals = Object.values(S8.segments).map(v => v[col]).sort((a, b) => a - b);
@@ -343,26 +364,26 @@
 
   function paintPast() {
     const on1 = H && past() && state.tab !== "s2", on2 = H && past() && state.tab === "s2", onb = H && H.buildings && past() && (state.tab === "s4" || state.tab === "all");
-    const fade = state.era === "compare" ? (100 - state.cmp) / 100 : 1;          // 1912's weight in the crossfade
+
     h1Layer.style.display = on1 ? "" : "none";
     hbLayer.style.display = onb ? "" : "none";
     if (onb) Object.values(hbRec).forEach(b => hbEl[b.id].setAttribute("class", b.year !== state.hbld ? "lab-hbld off" :
       "lab-hbld " + (state.tab === "all" ? "ov" : HB_COL[b.construction] || "unknown") + (b.nested_in ? " nested" : "") + (state.pick && state.pick.kind === "hbld" && state.pick.id === b.id ? " picked" : "")));
     h2Layer.style.display = on2 ? "" : "none";
-    [h1Layer, h2Layer, hbLayer].forEach(g => { g.style.opacity = fade; g.style.pointerEvents = state.era === "compare" && fade < 0.5 ? "none" : ""; });
-    streets.style.opacity = state.era === "compare" ? 1 - fade : "";
-    streets.style.pointerEvents = state.era === "compare" && fade >= 0.5 ? "none" : "";
-    streets.style.display = state.era === "1912" ? "none" : "";
-    if (on1) H.segments.forEach(s => h1El[s.id].setAttribute("class", "lab-hist " + (state.tab === "s4" ? "ring" : s.zone === "ring" ? "ring" : s.cls) + (state.tab !== "s4" && s.status !== "documented" ? " named-" + s.status : "") +
+    $(".lab-pmap").hidden = !past(); $(".lab-map").hidden = state.era === "1912";
+    $(".lab-maps").classList.toggle("split", state.era === "compare");
+    if (on1) H.segments.forEach(s => h1El[s.id].setAttribute("class", "lab-hist " + (state.tab === "s4" ? "ring" : s.zone === "ring" || (state.era === "compare" && s.zone !== "core") ? "ring" : s.cls) + (state.tab !== "s4" && s.status !== "documented" ? " named-" + s.status : "") +
       (state.pick && state.pick.kind === "hseg" && state.pick.id === s.id ? " picked" : "")));
     if (on2) {
-      const vals = H.net.filter(n => n.report && n.v[hcol()] != null).map(n => n.v[hcol()]).sort((a, b) => a - b);
+      const cmpArea = state.era === "compare";
+      const counted = n => n.report && n.v[hcol()] != null && (!cmpArea || n.zone === "core");
+      const vals = H.net.filter(counted).map(n => n.v[hcol()]).sort((a, b) => a - b);
       const rank = v => vals.filter(x => x < v).length / Math.max(1, vals.length - 1);
       H.net.forEach(n => {
-        const e = h2El[n.id], v = n.report ? n.v[hcol()] : null;
+        const e = h2El[n.id], v = counted(n) ? n.v[hcol()] : null;
         let style = "";
         if (v != null) { const t = rank(v); style = `stroke:${ramp(t)};stroke-width:${(1.2 + 2.6 * t).toFixed(2)}px`; }
-        e.setAttribute("class", "lab-hist " + (n.report ? (v == null ? "novalue" : "val") : "ring") + (state.pick && state.pick.kind === "hnet" && state.pick.id === n.id ? " picked" : ""));
+        e.setAttribute("class", "lab-hist " + (n.report && (!cmpArea || n.zone === "core") ? (v == null ? "novalue" : "val") : "ring") + (state.pick && state.pick.kind === "hnet" && state.pick.id === n.id ? " picked" : ""));
         e.setAttribute("style", style);
       });
       return vals.length;
@@ -416,6 +437,7 @@
         if (!v) cls += " novalue";
         else { const t = rk.rank(v[state.s8measure]); style = `stroke:${ramp(t)};stroke-width:${(1.2 + 2.6 * t).toFixed(2)}px`; }
       }
+      if (state.era === "compare" && H && !inArea[s.id]) { cls = "lab-street plain faint"; style = ""; }      // outside the study area: context only
       if (state.pick && state.pick.kind === "segment" && state.pick.id === s.id) cls += " picked";
       if (state.approach === s.id) cls += " picked";
       e.setAttribute("class", cls);
@@ -430,8 +452,7 @@
     const cmp4 = state.era === "compare" && state.tab === "s4" && S4;
     const on = ((state.tab === "s4" || state.tab === "s8" || state.tab === "mat" || state.tab === "all") && S4 && state.era === "now") || cmp4;
     bLayer.style.display = on ? "" : "none";
-    bLayer.style.opacity = cmp4 ? state.cmp / 100 : "";
-    bLayer.style.pointerEvents = cmp4 && state.cmp < 50 ? "none" : "";
+
     if (!on) return;
     if (cmp4) { S4.buildings.forEach(b => { bEl[b.id].style.fill = ""; bEl[b.id].setAttribute("class", "lab-bld ov" + (state.pick && state.pick.kind === "building" && state.pick.id === b.id ? " picked" : "")); }); return; }
     if (state.tab === "s8") { S4.buildings.forEach(b => bEl[b.id].setAttribute("class", "lab-bld view8")); return; }   // what stops a sight line
@@ -462,14 +483,16 @@
     if (past() && state.tab === "s4") {
       const M = H.meta.buildings[state.hbld];
       key.innerHTML = `<span><i class="kb hb-brick"></i>brick${state.hbld === "1912" ? " or stone" : ""}</span><span><i class="kb hb-frame"></i>frame</span>${state.hbld !== "1912" ? `<span><i class="kb hb-stone"></i>stone or concrete</span>` : ""}` +
-        `<span><i class="kb hb-nested"></i>inside a larger outline</span><span>${M.outlines ? M.outlines + " outlines on " + H.blocks.length + " blocks; the rest of the area is not traced yet" : "none carried yet: waiting for the 1949 plans"}</span>` + (state.era === "compare" ? `<span><i class="kb ov"></i>today's buildings (S4)</span>` : "");
+        `<span><i class="kb hb-nested"></i>inside a larger outline</span><span>${state.hbld === "c1927" ? (M.outlines ? M.outlines + " outlines carried, on " + (M.blocks_1949 || []).length + " of " + H.blocks.length + " blocks; the rest is unknown in c1927" : "none carried yet: waiting for the 1949 plans") : M.outlines + " outlines on " + H.blocks.length + " blocks; the rest of the area is not traced yet"}</span>` + (state.era === "compare" ? `<span><i class="kb ov"></i>today's buildings (S4)</span>` : "");
       return;
     }
     if (past() && (state.tab === "s1" || state.tab === "all" || state.tab === "s2")) {
       const today = state.era === "compare" ? `<span><i class="k both"></i>today (S1)</span>` : "";
       const html = state.tab === "s2"
-        ? `<span class="lab-ramp"><i></i><i></i></span><span><b>1912 walking ${state.hmeasure === "nach" ? "choice" : "integration"}, ${state.hradius} m</b>, by rank among the ${hn} reported segments: lowest blue, highest yellow${state.era === "compare" ? "; today's streets by the same measure" : ""}</span><span><i class="k hring"></i>ring: analysed, not reported</span>`
-        : `<span><i class="k hstreet"></i>1912 street</span><span><i class="k hlane"></i>lane or court</span><span><i class="k hopen"></i>open area</span><span><i class="k hinfer"></i>name inferred or unknown</span><span><i class="k hring"></i>ring</span>` + today;
+        ? (state.era === "compare"
+          ? `<span class="lab-ramp"><i></i><i></i></span><span><b>walking ${state.hmeasure === "nach" ? "choice" : "integration"}, ${state.hradius} m</b>, each era ranked among its own streets inside the study area (1912: ${hn}): lowest blue, highest yellow</span><span><i class="k faint"></i>outside the study area: context, not ranked</span>`
+          : `<span class="lab-ramp"><i></i><i></i></span><span><b>1912 walking ${state.hmeasure === "nach" ? "choice" : "integration"}, ${state.hradius} m</b>, by rank among the ${hn} reported segments: lowest blue, highest yellow</span><span><i class="k hring"></i>ring: analysed, not reported</span>`)
+        : `<span><i class="k hstreet"></i>1912 street</span><span><i class="k hlane"></i>lane or court</span><span><i class="k hopen"></i>open area</span><span><i class="k hinfer"></i>name inferred or unknown</span><span><i class="k hring"></i>${state.era === "compare" ? "outside the study area (both eras): context" : "ring"}</span>` + today;
       key.innerHTML = html;
       return;
     }
@@ -543,16 +566,21 @@
 
   // ================================================================ 4 overlays
   map.onRedraw(draw);
+  pmap.onRedraw(drawPast);
+  function drawPast() {                        // the past map's own marks: the study area, and the blocks traced so far
+    pmap.clear("pmarks");
+    if (!H || !past()) return;
+    const g = pmap.layer("pmarks");
+    pmap.line(g, H.boundary, { class: "lab-hbound" });
+    if (H.blocks && (state.tab === "s4" || state.tab === "all")) H.blocks.forEach(b => pmap.line(g, b.ring.concat([b.ring[0]]), { class: "lab-hblock" }));
+  }
   function draw() {
+    drawPast();
     map.boxes = [];
     map.clearHits();
     for (const n of ["marks", "focus", "labels"]) map.clear(n);
     const marks = map.layer("marks"), focus = map.layer("focus"), labels = map.layer("labels");
-    if (past()) {
-      if (H) map.line(marks, H.boundary, { class: "lab-hbound" });
-      if (H && H.blocks && (state.tab === "s4" || state.tab === "all")) H.blocks.forEach(b => map.line(marks, b.ring.concat([b.ring[0]]), { class: "lab-hblock" }));
-      return;
-    }
+    if (past()) { if (H && state.era === "compare") map.line(marks, H.boundary, { class: "lab-hbound" }); return; }
     if (state.tab === "s1") {
       if (state.s1mode === "drive" && state.s1try !== "details") onewayArrows(marks);
       S1.junctions.forEach(j => {
@@ -1290,19 +1318,18 @@
   function pastSide() {
     const t = state.tab, M = H.meta;
     let h = state.era === "compare"
-      ? `<label class="lab-range">past <b>${100 - state.cmp} %</b> · today <b>${state.cmp} %</b><input type="range" class="lab-cmp" min="0" max="100" step="5" value="${state.cmp}" aria-label="Crossfade between the past and today"></label>
-         <p class="sub">Slide between the two, drawn on the same ground. Clicking picks whichever is stronger at the slider's position.</p>`
+      ? `<p class="sub">1912 above, today below, on the same ground: the two maps move together, so a place sits at the same spot on both. Click either one.</p>`
       : "";
     if (t === "s4") {
       const B = M.buildings, b = B[state.hbld];
       h += seg2("hbld", [["1912", "1912 atlas"], ["1918", "May 1918 plan"], ["c1927", "carried to c1927"]]) +
-        `<p class="sub">${b.outlines} outlines, ${b.m2.toLocaleString("en")} m², on ${B.blocks.length} blocks so far: ${B.blocks.map(esc).join("; ")}. The rest of the study area is not traced yet: empty there means not read, never no building.</p>` +
+        `<p class="sub">${b.outlines} outlines, ${b.m2.toLocaleString("en")} m², on ${state.hbld === "c1927" && b.blocks_1949 ? `${b.blocks_1949.length} of the ${B.blocks.length} traced blocks: ${b.blocks_1949.map(esc).join("; ")}` : `${B.blocks.length} blocks so far: ${B.blocks.map(esc).join("; ")}`}. The rest of the study area is not traced yet: empty there means not read, never no building.</p>` +
         (state.hbld === "1912" ? `<p class="sub">Construction from the fill colour: pink brick or stone, yellow frame. This atlas does not tell brick from stone.</p>`
          : state.hbld === "1918" ? `<p class="sub">The insurance plan prints storeys and uses: read so far for ${B["1918"].with_storeys} outlines. ${B["1918"].nested} outlines sit inside a larger one (additions, yard sheds).</p>`
-         : `<p class="sub">A 1918 outline is carried to the represented period only when it passes the 1912 to 1927 test (D020) and is still drawn on the 1949 land-use plans, so 1918 and 1949 bracket the 1920s (D039). ${B.c1927.outlines ? "Every value carried is inferred." : `${B.c1927.meet_d020} of the ${B.c1927.top_1918} main 1918 outlines pass the first test; the 1949 plans are not read yet, so none is carried and c1927 buildings stay unknown.`}</p>`) +
-        (state.era === "compare" ? `<p class="sub">Today's buildings (S4) are drawn grey under the slider.</p>` : "");
+         : `<p class="sub">A 1918 outline is carried to the represented period only when it passes the 1912 to 1927 test (D020) and is still drawn on the 1949 land-use plans, so 1918 and 1949 bracket the 1920s (D039). ${B.c1927.outlines ? `${B.c1927.meet_d020} of the ${B.c1927.top_1918} main 1918 outlines pass the first test. ${B.c1927.read_1949} of them are read on the 1949 sheet covering ${(B.c1927.blocks_1949 || []).map(esc).join(" and ")}: ${B.c1927.carried} are still drawn and carried. ${B.c1927.wait_1949 ? `${B.c1927.wait_1949} on ${(B.c1927.blocks_wait_1949 || []).map(esc).join(" and ")} wait for a 1949 sheet not read yet. ` : ""}The 1949 readings wait for review. Every value carried is inferred; an outline not carried is unknown in c1927, never absent.` : `${B.c1927.meet_d020} of the ${B.c1927.top_1918} main 1918 outlines pass the first test; the 1949 plans are not read yet, so none is carried and c1927 buildings stay unknown.`}</p>`) +
+        (state.era === "compare" ? `<p class="sub">Below: today's buildings (S4), in grey.</p>` : "");
     } else if (t === "s2") h += seg2("hmeasure", [["nach", "choice"], ["nain", "integration"]]) + seg2("hradius", [["400", "400 m"], ["800", "800 m"]]) +
-      `<p class="sub">${M.reported.segments} segments inside the study area and its halo carry values (${M.reported.km} km). The ring beyond the halo is analysed so they have a city around them, and is not reported.${state.era === "compare" ? " Today's streets are coloured by the same measure at the same radius, ranked among themselves." : ""}</p>`;
+      `<p class="sub">${M.reported.segments} segments inside the study area and its halo carry values (${M.reported.km} km). The ring beyond the halo is analysed so they have a city around them, and is not reported.${state.era === "compare" ? " To set like beside like, Compare colours only the streets inside the study area, in both eras, each ranked among its own; the rest is drawn faint as context. Each era was analysed with its own city around it, so a rank compares a street's place in its own network." : ""}</p>`;
     else h += `<p class="sub">${M.segmap.segments} segments, ${M.segmap.km} km: ${M.segmap.class.street} streets, ${M.segmap.class.lane} lanes or courts and ${M.segmap.class.open_area} open areas. Names: ${M.segmap.name_status.documented} documented, ${M.segmap.name_status.inferred} inferred, ${M.segmap.name_status.unknown} unknown.</p>`;
     return h + `<p class="sub">Read from the ${esc(M.atlas)}, registered onto today's ground. The past era's represented period is ${esc(M.represented)}. Status: partial; ${t === "s4" ? "the outlines are traced from the plans" : "the network is read from the plates"}, so readings: assumption.</p>
       <p><a href="h1-streets.html">S1 · past</a> · <a href="h2-scores.html">S2 · past</a> · <a href="h4-buildings.html">S4 · past</a> · <a href="past-sources.html">past sources</a></p>`;
@@ -1685,7 +1712,7 @@
       map.zoomTo([(Math.max(...xs) + Math.min(...xs)) / 2, (Math.max(...ys) + Math.min(...ys)) / 2], Math.max(380, w * 1.1));
     } else {
       const xy = centreOf(pick);
-      if (xy) map.zoomTo(xy, pick.kind === "junction" ? 220 : 380);
+      if (xy) shownMap().zoomTo(xy, pick.kind === "junction" ? 220 : 380);
     }
     if (narrow() && pick.kind !== "junction") side.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
@@ -1722,7 +1749,8 @@
     if (past() && !TABS.find(x => x.id === state.tab).past) state.tab = "s1";
     clearInterval(timer); stopWalk();
     render();
-    map.fit(true);                              // the whole area, so the two networks are seen as wholes
+    if (past()) { pmap.view = Object.assign({}, map.view); pmap.measure(); }
+    shownMap().fit(true);                       // the whole area, so the two networks are seen as wholes
   }
   function setTab(t) {
     if (!TABS.find(x => x.id === t && x.ok && (!past() || x.past))) return;
@@ -1750,7 +1778,6 @@
   });
   host.addEventListener("input", e => {
     const t = e.target;
-    if (t.classList.contains("lab-cmp")) { state.cmp = +t.value; paint(); const l = t.closest("label").querySelectorAll("b"); l[0].textContent = (100 - state.cmp) + " %"; l[1].textContent = state.cmp + " %"; }
     if (t.classList.contains("lab-radius")) { state.s2radius = +t.value; paint(); refreshOut(); }
     if (t.classList.contains("lab-step")) { state.reachStep = +t.value; paint(); refreshOut(); }
     if (t.classList.contains("lab-slack")) { state.routeSlack = +t.value; render(); }

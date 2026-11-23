@@ -2155,7 +2155,7 @@
     "href": "h1-streets.html#compare",
     "title": "S1 Streets · past",
     "section": "Compared with today",
-    "text": "Compared with today\n\nStreets along the water that are gone today: Canal St on the south bank of the canal (507 m, 2 % of it under a present street) and St Leon St on the north bank.\nOf the 1912 junctions, 36 lie within 3 m of a present junction.\nThe street-by-street comparison of the two networks’ space syntax values is on S2 · past.\nIn the Lab, the two networks lie on the same ground, with a slider that fades from 1912 to today.",
+    "text": "Compared with today\n\nStreets along the water that are gone today: Canal St on the south bank of the canal (507 m, 2 % of it under a present street) and St Leon St on the north bank.\nOf the 1912 junctions, 36 lie within 3 m of a present junction.\nThe street-by-street comparison of the two networks’ space syntax values is on S2 · past.\nIn the Lab, the two networks sit one above the other on the same ground, on two maps that move together.",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2194,7 +2194,7 @@
     "href": "h4-buildings.html#result",
     "title": "S4 Buildings · past",
     "section": "Result",
-    "text": "Result\n\n\n\nThe three pilot blocks. Left: the 1912 Goad atlas. Middle: the May 1918 insurance plan. Right: the outlines carried to c1927, empty until the 1949 plans are read. Pink-red: brick (on the 1912 atlas, brick or stone); yellow: frame; blue-grey: stone or concrete.\n\n\n\n\n\n\nOutlines\nArea\n\n\n\n\nGoad atlas, 1912\n110\n15,843 m²\n\n\ninsurance plan, May 1918\n192\n16,065 m²\n\n\ncarried to c1927 (inferred)\n0\n0 m²\n\n\n\nOn the 1912 atlas, 55 outlines are brick or stone and 55 frame: this atlas does not tell brick from stone. On the 1918 plan, 95 are brick, 95 frame and 2 stone or concrete. The 1918 plan prints storeys and uses; they are read so far for 33 outlines. 9 outlines of 1918 sit inside a larger one: additions, or sheds in yards.",
+    "text": "Result\n\n\n\nThe three pilot blocks. Left: the 1912 Goad atlas. Middle: the May 1918 insurance plan. Right: the outlines carried to c1927, on the two blocks read on the 1949 plans so far. Pink-red: brick (on the 1912 atlas, brick or stone); yellow: frame; blue-grey: stone or concrete.\n\n\n\n\n\n\nOutlines\nArea\n\n\n\n\nGoad atlas, 1912\n110\n15,843 m²\n\n\ninsurance plan, May 1918\n192\n16,065 m²\n\n\ncarried to c1927 (inferred)\n18\n1,298 m²\n\n\n\nOn the 1912 atlas, 55 outlines are brick or stone and 55 frame: this atlas does not tell brick from stone. On the 1918 plan, 95 are brick, 95 frame and 2 stone or concrete. The 1918 plan prints storeys and uses; they are read so far for 33 outlines. 9 outlines of 1918 sit inside a larger one: additions, or sheds in yards. Of the 18 carried to c1927, 13 are brick and 5 frame, as read on the 1918 plan.",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2207,7 +2207,7 @@
     "href": "h4-buildings.html#how-it-is-read",
     "title": "S4 Buildings · past",
     "section": "How it is read",
-    "text": "How it is read\n\nOutlines. A script follows the coloured fill of each building and cuts it along the plan’s ink lines (decision D017). It works at the scan’s resolution, about 5 cm per pixel. Buildings left uncoloured on the plan, such as open sheds and platforms, are not traced.\nConstruction. Read from the fill colour by the usual key of these plans: pink brick, yellow frame, blue stone or concrete (D016, D018). The legend sheets have not been read yet, so the key is provisional.\nPlace. Each outline sits where its plan’s registration puts it: to about 3.5 m on the 1912 plate, 2.5 to 2.6 m on the 1918 sheets.\nCarried to c1927. A 1918 outline is carried to the represented period only when two things hold (D039). First, the 1927 directory ties its occupant to the same firm, or it was drawn on both the 1912 and 1918 maps and one of its addresses is listed in 1927 (the earlier rule, D020). Second, it is still drawn on the city’s 1949 land-use plans, so 1918 and 1949 bracket the 1920s. 62 of the 183 main 1918 outlines pass the first test. The 1949 plans are not read yet, so none is carried, and c1927 buildings stay unknown. Every value carried will be inferred.",
+    "text": "How it is read\n\nOutlines. A script follows the coloured fill of each building and cuts it along the plan’s ink lines (decision D017). It works at the scan’s resolution, about 5 cm per pixel. Buildings left uncoloured on the plan, such as open sheds and platforms, are not traced.\nConstruction. Read from the fill colour by the usual key of these plans: pink brick, yellow frame, blue stone or concrete (D016, D018). The legend sheets have not been read yet, so the key is provisional.\nPlace. Each outline sits where its plan’s registration puts it: to about 3.5 m on the 1912 plate, 2.5 to 2.6 m on the 1918 sheets. The 1949 sheet is registered on ten junctions of William and Ottawa to about 2.0 m, and the two Colborne junctions, kept out of the fit as checks, land 3.9 and 4.5 m from today’s (D040).\nCarried to c1927. A 1918 outline is carried to the represented period only when two things hold (D039). First, the 1927 directory ties its occupant to the same firm, or it was drawn on both the 1912 and 1918 maps and one of its addresses is listed in 1927 (the earlier rule, D020). Second, it is still drawn on the city’s 1949 land-use plans, so 1918 and 1949 bracket the 1920s. 62 of the 183 main 1918 outlines pass the first test. 44 of them lie on the 1949 sheet read so far, sheet 51-70, which covers Colborne–Shannon and Shannon–Ann. Each 1918 outline is laid on that sheet and read: 18 are still drawn there, 23 partly (a building covers the place, and its walls do not follow the 1918 outline), 2 not, and 1 cannot be told. The 18 are carried. The other 18 that pass the first test stand on the Ann–Dalhousie block, which is on a sheet not read yet, so they are not carried. Every value carried is inferred, and an outline that is not carried is unknown in c1927, never absent.",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2220,7 +2220,7 @@
     "href": "h4-buildings.html#how-sure",
     "title": "S4 Buildings · past",
     "section": "How sure",
-    "text": "How sure\nIn an audit of the historical workspace, 32 outlines drawn at random all followed a building drawn on the plan. That check was made by the same reader as the tracing, so the outlines stand as an assumption until I have reviewed them (what the words mean). Large lettering across a wall leaves notched edges in a few outlines, visible in the middle map.",
+    "text": "How sure\nIn an audit of the historical workspace, 32 outlines drawn at random all followed a building drawn on the plan. That check was made by the same reader as the tracing, so the outlines stand as an assumption until I have reviewed them (what the words mean). The 1949 readings were made by the same reader and stand the same way. The 1949 plan carries later notes written over some buildings, such as “démolie”, so a reading can take a later state for the 1949 one. Large lettering across a wall leaves notched edges in a few outlines, visible in the middle map.",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2233,7 +2233,7 @@
     "href": "h4-buildings.html#compare",
     "title": "S4 Buildings · past",
     "section": "Compared with today",
-    "text": "Compared with today\nIn the Lab, the outlines lie over today’s buildings, with a slider that fades from the past to today.",
+    "text": "Compared with today\nIn the Lab, the outlines sit above today’s buildings on two maps that move together.",
     "crumbs": [
       "Explore",
       "Systems",
@@ -2279,7 +2279,7 @@
     "href": "lab-notes.html#eras",
     "title": "Lab notes",
     "section": "Two eras",
-    "text": "Two eras\nAbove the tabs, a switch moves the Lab between today, 1912 and the two compared. In 1912 the map shows the streets read from the Goad atlas (S1 · past), their space syntax values (S2 · past) and the building outlines traced so far on three blocks, from 1912, from 1918, or carried to c1927 (S4 · past), on the same ground and the same study area as today. The other systems have not started in the past era, so their tabs are off. Compare lays both networks on one map, and a slider fades from 1912 to today. In 1912 the 3D view is off, because its buildings are today’s.",
+    "text": "Two eras\nAbove the tabs, a switch moves the Lab between today, 1912 and the two compared. In 1912 the map shows the streets read from the Goad atlas (S1 · past), their space syntax values (S2 · past) and the building outlines traced so far on three blocks, from 1912, from 1918, or carried to c1927 (S4 · past), on the same ground and the same study area as today. The other systems have not started in the past era, so their tabs are off. Compare puts 1912 above today, on two maps of the same ground that move together, so each can be clicked on its own. It colours only the streets inside the study area, in both eras, each ranked among its own; outside it, each era’s own context (today’s edge streets, 1912’s halo and ring) is drawn faint. A test checks that 1912 streets which still exist lie on today’s, within the plates’ registration error. In 1912 the 3D view is off, because its buildings are today’s.",
     "crumbs": [
       "Explore",
       "How the Lab works"

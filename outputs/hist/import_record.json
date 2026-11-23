@@ -1,5 +1,5 @@
 {
- "made": "2026-11-23T16:11:48+00:00",
+ "made": "2026-11-23T18:32:32+00:00",
  "tool": "tools/hist_import.py",
  "read": [
   {
@@ -34,7 +34,7 @@
   },
   {
    "path": "historical_situ/exports/geojson/h_buildings.geojson",
-   "sha256": "a2ae51317a0adf07df3e6f9ffc484e927b93acaef88eb4486496491c1ba13c8b",
+   "sha256": "1b98c233e13bd91e8313b864e43c89f286fc01ff5a019e73553d0a00e9c9d9b1",
    "copied_to": "outputs/hist/h4_carried_c1927.geojson"
   },
   {
@@ -44,7 +44,7 @@
   },
   {
    "path": "historical_situ/exports/csv/carry_1918_1927.csv",
-   "sha256": "53da994fd9e479be17fce120dcbb688d6ec602f6624a6a988d4c7a258dd996e9",
+   "sha256": "bf8c8984db513e18d1956e4c2114a0705ba64ea75a62dd07d6e20277fa555df0",
    "copied_to": "outputs/hist/h4_carry_1918_1927.csv"
   },
   {
