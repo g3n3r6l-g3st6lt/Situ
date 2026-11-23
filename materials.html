@@ -533,6 +533,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#walls" id="toc-walls" class="nav-link" data-scroll-target="#walls">Every building’s walls</a></li>
   <li><a href="#m001" id="toc-m001" class="nav-link" data-scroll-target="#m001">M001 · red brick, 1895 factory wall</a></li>
   <li><a href="#m002" id="toc-m002" class="nav-link" data-scroll-target="#m002">M002 · red brick, 1880s factory wall</a></li>
+  <li><a href="#generated" id="toc-generated" class="nav-link" data-scroll-target="#generated">Generated from photos</a></li>
   <li><a href="#set-aside" id="toc-set-aside" class="nav-link" data-scroll-target="#set-aside">Set aside</a></li>
   <li><a href="#photos-waiting-for-entries" id="toc-photos-waiting-for-entries" class="nav-link" data-scroll-target="#photos-waiting-for-entries">Photos waiting for entries</a></li>
   </ul>
@@ -574,8 +575,8 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="glance">
 <p><strong>Asks</strong> What Griffintown’s walls are made of, recorded as measurements and as texture maps, each tied to a building and a photo.</p>
-<p><strong>Found</strong> The wall material of 215 of the 296 buildings, read from street photos: red brick on 76, more than any other. Two library entries, both red brick factory walls with courses of 8.2 and 8.4 cm. One greystone attempt was set aside.</p>
-<p><strong>Stands</strong> partial. Each wall reading is an assumption, tied to its photo and not yet checked by a second reader. In the entries, the colour map is observed and the height and normal maps are estimated.</p>
+<p><strong>Found</strong> The wall material of 215 of the 296 buildings, read from street photos: red brick on 76, more than any other. Two library entries, both red brick factory walls with courses of 8.2 and 8.4 cm. Five colour studies generated from photos of four buildings, for pattern control. One greystone attempt was set aside.</p>
+<p><strong>Stands</strong> partial. Each wall reading is an assumption, tied to its photo and not yet checked by a second reader. In the entries, the colour map is observed and the height and normal maps are estimated. In the generated studies, the colour is authored by an image model.</p>
 <p><strong>Leaves out</strong> Murals and graffiti, interiors, and anything no published photo shows clearly.</p>
 <p><strong>In the game</strong> Not yet. The greybox look comes first (<a href="./g1-world.html">G1 World</a>).</p>
 <p><strong>Trace</strong> entry file <a href="outputs/materials/M001/entry.json">entry.json</a> · uses <a href="./s4-buildings.html">S4</a> outlines and <a href="./g1-world.html">G1</a> heights</p>
@@ -820,7 +821,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="m002" class="level2">
 <h2 class="anchored" data-anchor-id="m002">M002 · red brick, 1880s factory wall</h2>
-<p><strong>Where</strong> Robin &amp; Sadler, 1845 rue William, at rue des Seigneurs: the face on William (S4 building w225610882, built 1880 according to the tax roll).</p>
+<p><strong>Where</strong> Robin &amp; Sadler, 1845 rue William, at rue des Seigneurs: the face on William (S4 building w225610882, built 1880 according to the tax roll). Other sources date it later: 1895 on the architect’s project page for Le William, 1893 to 1894 in a heritage study cited by the OCPM (both found by the materials encyclopedia, not yet read by me). No reading here depends on the year.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="outputs/materials/M002/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="The face on rue William, straightened. Width 20.59 m from the S4 outline (its side parallel to William in S1), height 17.9 m from the 2023 lidar less the stone base. Photo: Parcours riverain, Ville de Montréal, 19 July 2017, Wikimedia Commons, CC BY 2.0; straightened by me."><img src="outputs/materials/M002/face.jpg" class="img-fluid figure-img" style="width:70.0%" alt="The face on rue William, straightened. Width 20.59 m from the S4 outline (its side parallel to William in S1), height 17.9 m from the 2023 lidar less the stone base. Photo: Parcours riverain, Ville de Montréal, 19 July 2017, Wikimedia Commons, CC BY 2.0; straightened by me."></a></p>
@@ -869,6 +870,253 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>One tile is 1.0 m wide and 12 courses tall, 100 × 101 pixels, cut from the pier between the second and third bays.</p>
 <p><strong>Source</strong> Photo by Parcours riverain, Ville de Montréal, <a href="https://commons.wikimedia.org/wiki/File:Robin_%26_Sadler,_1845,_rue_William_(Sud-Ouest)_(36204300985).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. The maps stay in my project files; the previews here are shown with this credit. Record: <a href="outputs/materials/M002/entry.json">entry.json</a>.</p>
+<!-- generated studies: written by tools/materials_page.py -->
+</section>
+<section id="generated" class="level2">
+<h2 class="anchored" data-anchor-id="generated">Generated from photos</h2>
+<p>Five colour studies were made on 20 November 2026 by an image model, each from one published photo of a Griffintown wall and a written prompt describing which part of the wall to follow. I use them for control over the pattern. Their pattern is authored by the model, so they sit apart from the entries above, whose colour is cut from the photo itself. Each study is checked here against what can be measured:</p>
+<ul>
+<li><strong>Repeat edge.</strong> The jump where the tile repeats, against the hardest jumps inside it (its own joints). 1.0 or less: the edge is no harder than a joint.</li>
+<li><strong>Scale.</strong> Only where the wall was measured in a photo: the tile’s courses times the course height measured on that wall.</li>
+<li><strong>Colour.</strong> The tile’s mean colour; for brick, its difference from the colour measured on the photo (CIE76).</li>
+</ul>
+<p>One study, GME001, also has height, normal and roughness maps, made from its mortar joints. The others carry colour only.</p>
+<section id="gme001" class="level3">
+<h3 class="anchored" data-anchor-id="gme001">GME001 · red fired-brick masonry, weathered face</h3>
+<p><strong>Where</strong> Lowney (Phase 1), 350 rue de l’Inspecteur (S4 building w54895065). Part of the wall followed: plain brick piers of the short Inspecteur facade.</p>
+<div class="tex-tiles">
+<p><img src="outputs/materials/GME001/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <img src="outputs/materials/GME001/height_estimated_16bit_3x3.png" class="img-fluid" style="width:32.0%" alt="height (estimated from the joints)"> <img src="outputs/materials/GME001/normal_OpenGL_3x3.png" class="img-fluid" style="width:32.0%" alt="normal (estimated)"> <a href="outputs/materials/GME001/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The photo it was made from: Jeangagnon, 2016-05-23, Wikimedia Commons, CC BY-SA 4.0"><img src="outputs/materials/GME001/face.jpg" class="img-fluid" style="width:70.0%" alt="The photo it was made from: Jeangagnon, 2016-05-23, Wikimedia Commons, CC BY-SA 4.0"></a></p>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Checked</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>repeat edge</td>
+<td>0.0 across, 0.0 down: no harder than its own joints</td>
+</tr>
+<tr class="even">
+<td>tile</td>
+<td>the generated study cut to 1190 rows of whole courses in the same bond phase, its edges matched over 4 px (Encyclopedia v2)</td>
+</tr>
+<tr class="odd">
+<td>size</td>
+<td>1254 × 1190 pixels</td>
+</tr>
+<tr class="even">
+<td>scale</td>
+<td>about 1.21 × 1.15 m: 14.0 courses in the tile, 8.2 cm, the course height measured on the photographed wall (M001); the width follows from the tile’s pixels</td>
+</tr>
+<tr class="odd">
+<td>mean colour</td>
+<td>#99513e; 14.7 from the photo’s #99655b, 5.5 darker in lightness</td>
+</tr>
+<tr class="even">
+<td>height</td>
+<td>assumption: from a mask of the mortar joints found by colour (mortar 14% of the tile): bricks up, joints down; the depth, 4 mm, is authored</td>
+</tr>
+<tr class="odd">
+<td>normal</td>
+<td>assumption: worked out from that height; OpenGL (green up), DirectX copy beside it</td>
+</tr>
+<tr class="even">
+<td>roughness</td>
+<td>assumption: two set values, brick 0.80 and mortar 0.90; not measured</td>
+</tr>
+<tr class="odd">
+<td>checked in</td>
+<td>rendered in Blender 5.2 Cycles under two lights (light_left.png, light_right.png); not yet tried in Unreal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Limits noted with the study</strong> The generated tile is more regular and more saturated than portions of the facade. It is a material study, not a pixel-faithful reproduction of the source bond.</p>
+<p><strong>Source</strong> Made from the photo by Jeangagnon, <a href="https://commons.wikimedia.org/wiki/File:Le_Lowney_-_005.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; changed by an image model. Record: <a href="outputs/materials/GME001/entry.json">entry.json</a>, with the prompt.</p>
+</section>
+<section id="gme003" class="level3">
+<h3 class="anchored" data-anchor-id="gme003">GME003 · grey irregular rubble masonry</h3>
+<p><strong>Where</strong> New City Gas complex, rue Ottawa (S4 outline 6.6 m from the photo’s geotag; built 1859 in the tax roll) (S4 building w340223814). Part of the wall followed: stone infill between windows, excluding dressed surrounds and upper brick.</p>
+<div class="tex-tiles">
+<p><img src="outputs/materials/GME003/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME003/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The photo it was made from: Jeangagnon, 2011-08-07, Wikimedia Commons, CC BY-SA 3.0"><img src="outputs/materials/GME003/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Jeangagnon, 2011-08-07, Wikimedia Commons, CC BY-SA 3.0"></a></p>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Checked</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>repeat edge</td>
+<td>0.83 across, 0.94 down: no harder than its own joints</td>
+</tr>
+<tr class="even">
+<td>seam</td>
+<td>mended: the generated tile showed a seam across (1.29). Its right edge band was laid over its left by 14 px and cut along the path where the two differ least; nothing resampled or blended, the generated original kept unchanged</td>
+</tr>
+<tr class="odd">
+<td>size</td>
+<td>1240 × 1254 pixels (generated at 1254 × 1254)</td>
+</tr>
+<tr class="even">
+<td>scale</td>
+<td>not measured</td>
+</tr>
+<tr class="odd">
+<td>mean colour</td>
+<td>#858483</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Limits noted with the study</strong> Lithology is unverified. The 2011 photo does not establish present condition. Generated stones are more regularly coursed than some source areas. A generated height attempt changed the layout and was rejected.</p>
+<p><strong>Source</strong> Made from the photo by Jeangagnon, <a href="https://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; changed by an image model. Record: <a href="outputs/materials/GME003/entry.json">entry.json</a>, with the prompt.</p>
+</section>
+<section id="gme004" class="level3">
+<h3 class="anchored" data-anchor-id="gme004">GME004 · warm grey rough-faced rectangular stone</h3>
+<p><strong>Where</strong> Caledonia Iron Works, 1840-1844 rue William (the S4 outline also holds its neighbours) (S4 building w347395104). Part of the wall followed: horizontal stone bands and lower plinth; exclude smooth infill.</p>
+<div class="tex-tiles">
+<p><img src="outputs/materials/GME004/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME004/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"><img src="outputs/materials/GME004/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"></a></p>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Checked</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>repeat edge</td>
+<td>0.98 across, 0.63 down: no harder than its own joints</td>
+</tr>
+<tr class="even">
+<td>size</td>
+<td>1254 × 1254 pixels</td>
+</tr>
+<tr class="odd">
+<td>scale</td>
+<td>not measured</td>
+</tr>
+<tr class="even">
+<td>mean colour</td>
+<td>#988676</td>
+</tr>
+<tr class="odd">
+<td>located</td>
+<td>S4 building w347395104. The photo’s title gives 1840-1844 rue William; the tax roll’s 1830-1844 rue William lies 1.5 m from this outline; the photo shows the rue William and rue des Seigneurs signs at the corner, and the outline’s short side runs along des Seigneurs. Encyclopedia v2 held these two studies until the facade was tied to a footprint; this is that tie (2026-11-20).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Limits noted with the study</strong> Do not label the entire facade rough stone. Some apparent colour may be a surface treatment. Exact stone species and coating history are unverified.</p>
+<p><strong>Source</strong> Made from the photo by Parcours riverain - Ville de Montréal from Canada, <a href="https://commons.wikimedia.org/wiki/File:Caledonia_Iron_Works,_1840-1844,_rue_William_(Sud-Ouest)_(35368007014).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>; changed by an image model. Record: <a href="outputs/materials/GME004/entry.json">entry.json</a>, with the prompt.</p>
+</section>
+<section id="gme005" class="level3">
+<h3 class="anchored" data-anchor-id="gme005">GME005 · pale green-grey fine render or coating</h3>
+<p><strong>Where</strong> Caledonia Iron Works, 1840-1844 rue William (the S4 outline also holds its neighbours) (S4 building w347395104). Part of the wall followed: broad smooth areas between exposed stone bands.</p>
+<div class="tex-tiles">
+<p><img src="outputs/materials/GME005/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME005/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"><img src="outputs/materials/GME005/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Parcours riverain - Ville de Montréal from Canada, 2017-07-19, Wikimedia Commons, CC BY 2.0"></a></p>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Checked</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>repeat edge</td>
+<td>0.78 across, 0.67 down: no harder than its own joints</td>
+</tr>
+<tr class="even">
+<td>size</td>
+<td>1254 × 1254 pixels</td>
+</tr>
+<tr class="odd">
+<td>scale</td>
+<td>not measured</td>
+</tr>
+<tr class="even">
+<td>mean colour</td>
+<td>#abad9f</td>
+</tr>
+<tr class="odd">
+<td>located</td>
+<td>S4 building w347395104. The photo’s title gives 1840-1844 rue William; the tax roll’s 1830-1844 rue William lies 1.5 m from this outline; the photo shows the rue William and rue des Seigneurs signs at the corner, and the outline’s short side runs along des Seigneurs. Encyclopedia v2 held these two studies until the facade was tied to a footprint; this is that tie (2026-11-20).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Limits noted with the study</strong> Render/coating is a visual classification. Binder, substrate, layer thickness and whether every smooth area has the same construction remain unknown.</p>
+<p><strong>Source</strong> Made from the photo by Parcours riverain - Ville de Montréal from Canada, <a href="https://commons.wikimedia.org/wiki/File:Caledonia_Iron_Works,_1840-1844,_rue_William_(Sud-Ouest)_(35368007014).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>; changed by an image model. Record: <a href="outputs/materials/GME005/entry.json">entry.json</a>, with the prompt.</p>
+</section>
+<section id="gme006" class="level3">
+<h3 class="anchored" data-anchor-id="gme006">GME006 · grey dressed ashlar, planar lightly pitted faces</h3>
+<p><strong>Where</strong> 1700 rue Notre-Dame Ouest (La Poste; tax roll: built 1923) (S4 building w225637542). Part of the wall followed: wall fields beside columns; exclude sculpture, fluting and tree shadows.</p>
+<div class="tex-tiles">
+<p><img src="outputs/materials/GME006/base_color_3x3.png" class="img-fluid" style="width:32.0%" alt="colour (generated), 3 × 3"> <a href="outputs/materials/GME006/face.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="The photo it was made from: Guerinf, 2017-05-24, Wikimedia Commons, CC BY-SA 4.0"><img src="outputs/materials/GME006/face.jpg" class="img-fluid" style="width:64.0%" alt="The photo it was made from: Guerinf, 2017-05-24, Wikimedia Commons, CC BY-SA 4.0"></a></p>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Checked</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>repeat edge</td>
+<td>0.65 across, 0.61 down: no harder than its own joints</td>
+</tr>
+<tr class="even">
+<td>seam</td>
+<td>mended: the generated tile ended on a joint at top and bottom, so it repeated with a doubled joint (2.78 down). Kept rows 4 to 834: 2 whole courses, so the bond carries on across the repeat; nothing resampled or blended, the generated original kept unchanged</td>
+</tr>
+<tr class="odd">
+<td>size</td>
+<td>1254 × 830 pixels (generated at 1254 × 1254)</td>
+</tr>
+<tr class="even">
+<td>scale</td>
+<td>not measured</td>
+</tr>
+<tr class="odd">
+<td>mean colour</td>
+<td>#999894</td>
+</tr>
+<tr class="even">
+<td>in the study area?</td>
+<td>Encyclopedia v2 leaves it out: the owner’s site places 1700 La Poste in Petite-Bourgogne (https://1700laposte.com/fr/propos). It lies inside Situ’s study polygon and is S4 building w225637542. Kept until Mo decides which boundary the library follows.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Limits noted with the study</strong> Do not infer limestone species from grey appearance. Generated pitting is more pronounced and uniform than some source blocks.</p>
+<p><strong>Source</strong> Made from the photo by Guerinf, <a href="https://commons.wikimedia.org/wiki/File:1700_La_Poste_(5).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; changed by an image model. Record: <a href="outputs/materials/GME006/entry.json">entry.json</a>, with the prompt.</p>
+<!-- end of generated studies -->
+</section>
 </section>
 <section id="set-aside" class="level2">
 <h2 class="anchored" data-anchor-id="set-aside">Set aside</h2>

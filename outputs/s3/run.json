@@ -1,9 +1,9 @@
 {
  "system": "s3",
- "made": "2026-11-03T22:03:25Z",
+ "made": "2026-11-23T13:13:51Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "796009540bf5d239ba60aa66375402979cb571f2",
+  "git_commit": "63b314c75c82966a09054fdb98138835ea382623",
   "differs_from_commit": true,
   "files": [
    {
@@ -24,7 +24,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "773a83a48f5c64bf7736d63430266a7418d52fc02f19001aa72aa3b71e70479d"
+    "sha256": "96e2e2d2de8d342a6f3e74fecbd53c07896b5a31e8aae7fd7d4bdf85901b3caf"
    },
    {
     "path": "Situ/s1_streets/__init__.py",
@@ -52,7 +52,7 @@
    },
    {
     "path": "Situ/s3_rules/build.py",
-    "sha256": "d204378e5234a2648a37b649c35cec26699a3af07adac63facd4c9f10738d146"
+    "sha256": "c0f279563623b538ef45dbf43c19005b3248b88a62d8487d21da01890d850c16"
    },
    {
     "path": "Situ/s3_rules/stress.py",
@@ -60,7 +60,7 @@
    },
    {
     "path": "Situ/s3_rules/test.py",
-    "sha256": "10c398979f52baa6b01a55cb3a309cd48d2c3aac80b010a6401881d6a8508a9d"
+    "sha256": "3f882648fe7d7dfb75f1bd320fffeae62bfad5a747c94df145f6136206cdd184"
    },
    {
     "path": "Situ/s3_rules/visualize.py",
@@ -93,10 +93,10 @@
   },
   {
    "name": "LIGHTS_FILE",
-   "path": "QGIS/Sample4-200926/Layers/traffic_lights.gpkg",
-   "bytes": 552960,
-   "modified": "2026-10-09T20:12:49Z",
-   "sha256": "c0d9a0439ffc3cc96ec1cabbea212f5e4e4c82f53c99675aa997b78b2059bf55"
+   "path": "Situ/data/external/feux-circulation.csv",
+   "bytes": 270469,
+   "modified": "2026-11-23T13:08:44Z",
+   "sha256": "a92e508e81a5c270ff7a55ea87df89f547f3ea70873ee3131625a37ad183e763"
   },
   {
    "name": "OSM_CACHE",
@@ -115,9 +115,9 @@
   {
    "name": "SIGNS_FILE",
    "path": "QGIS/Sample4-200926/signalisation_excluant_stationnement.csv",
-   "bytes": 59295711,
-   "modified": "2026-09-24T12:58:47Z",
-   "sha256": "be2d18088e5ed6fef96fe5ac6747a1dfa36f232043034f943b449b5790e50f3f"
+   "bytes": 59286602,
+   "modified": "2026-11-21T01:38:19Z",
+   "sha256": "05a0e129654923ee8ac7ab7c52f132b87adc39af7991aa39d765db9c30bd6bd2"
   },
   {
    "name": "SIGN_DECISIONS_FILE",
@@ -285,13 +285,13 @@
  "outputs": [
   {
    "path": "Situ/outputs/s3/approaches.csv",
-   "bytes": 20641,
-   "sha256": "b18a2d213dcacbfb422a6aa4dd4ed142d5e039ac42eac2929ba073b8a849c444"
+   "bytes": 20696,
+   "sha256": "133f92110d536bda9e42d125b098659393c1b7462481d91784acbcc0f2a6d839"
   },
   {
    "path": "Situ/outputs/s3/checkpoints.csv",
-   "bytes": 5748,
-   "sha256": "ec6f179db43a063891a94e8e6d9c4a74a9332ebb0eaa30e7b63fcd55e226ce5f"
+   "bytes": 5747,
+   "sha256": "2430a372b7fe0bce444e00b94a496d98fb093f64ab04354ff5453c356121da40"
   },
   {
    "path": "Situ/outputs/s3/evidence/J006_1082370856836956_1.jpg",
@@ -606,12 +606,12 @@
   {
    "path": "Situ/outputs/s3/junctions.csv",
    "bytes": 12162,
-   "sha256": "4972c5452b712e1de8a73540fdf947921aeef5aade8572436fbeb5238109d0a6"
+   "sha256": "3952d9de677dffe04bfc28133beb6a29a06df074f4e940bb6bcd47fb4dc16bf1"
   },
   {
    "path": "Situ/outputs/s3/lights.csv",
    "bytes": 3271,
-   "sha256": "b8faa2718edeee170e54d348ff445dd2d10e9cddb2747c499c8d80684de7d9ad"
+   "sha256": "08488d59f57aff9c732a6e665fdb335db88a191c74bac1af4776974fa6818c2d"
   },
   {
    "path": "Situ/outputs/s3/movements.csv",
@@ -650,8 +650,8 @@
   },
   {
    "path": "Situ/outputs/s3/signs.csv",
-   "bytes": 61761,
-   "sha256": "0675ee9a662dc47b1e3495ff0e52c3c436ece9dbb96535babb37e9fe6b65be10"
+   "bytes": 62007,
+   "sha256": "744ca9fb8a9dd6a6f89567a1198ce1363c74dfad32378a543f305e28c3dfd93a"
   },
   {
    "path": "Situ/outputs/s3/speed.csv",
@@ -676,17 +676,17 @@
   {
    "path": "Situ/outputs/s3/test_report.txt",
    "bytes": 1849,
-   "sha256": "b2715efe8c245412b4c322e123250aeb1d47fa043f461072776335c3dc092d3e"
+   "sha256": "f59392eefdc35b46eeebcfc1ff9cfd9eede8ecd70c217b9aa2e759f535578d38"
   },
   {
    "path": "Situ/outputs/s3/web_data.js",
-   "bytes": 394681,
-   "sha256": "7bc6569bce1a4f1c156eea99b84d7102a681ee55c5eae98bbac6a0eac920a268"
+   "bytes": 395422,
+   "sha256": "f75cb9afeca488c4003f3d79db1ea57e607e71e2376e455ff128dcbad9eafbea"
   }
  ],
  "tests": {
   "report": "Situ/outputs/s3/test_report.txt",
-  "made": "2026-10-10T16:41:09Z",
+  "made": "2026-11-23T13:13:50Z",
   "checks": 10,
   "pass": 8,
   "fail": 0,

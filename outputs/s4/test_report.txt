@@ -30,7 +30,7 @@ T9  No building is lower than its tallest known part
     PASS
 
 T10 Each roll row sits on its lot: in the building its lot holds, or the address point decides and says so
-    lot file lots_study_2026-11-13.json; placed by lot+address 7451, lot 988, address 468, inside 43, near 4, lot overlap 3
+    lot file lots_study_2026-11-20.json; placed by lot+address 7451, lot 988, address 468, inside 43, near 4, lot overlap 3
     PASS
 
 T11 Each source's height is the one its file gives, and each verdict follows from them (within one storey, 3.5 m)
@@ -57,7 +57,7 @@ T8  Coverage (information, never a failure)
     buildings 296: use from the roll 188, from the OSM tag 74, unknown 34
     storeys from the roll 102, from the OSM outline 113, from an OSM part 9, unknown 72
     dwellings 12021 in 133 buildings
-    tax-roll properties: 8957 placed, 468 unplaced; 15008 rows on the study streets found no address point; 0 duplicate rows dropped
+    tax-roll properties: 8957 placed, 468 unplaced; 15007 rows on the study streets found no address point; 0 duplicate rows dropped
     places 610 rows, 558 once each: in a building 543, outside 67; with opening hours 83
      - unplaced: 415 x its lot holds 2 buildings and its address point stands in none of them
      - unplaced: 45 x no address point, and its lot holds no building outline

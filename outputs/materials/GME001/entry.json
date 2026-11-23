@@ -1,0 +1,104 @@
+{
+ "id": "GME001",
+ "status": "generated",
+ "name": "Red fired-brick masonry, weathered face",
+ "family": "Brick",
+ "building": "w54895065",
+ "building_name": "Lowney (Phase 1), 350 rue de l'Inspecteur",
+ "where_on_wall": "Plain brick piers of the short Inspecteur facade",
+ "finish_seen": "Fine granular red faces; pale mortar; horizontal staggered courses",
+ "photo": {
+  "file": "data/external/commons_images/Le_Lowney_-_005.jpg",
+  "title": "File:Le Lowney - 005.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Le_Lowney_-_005.jpg",
+  "author": "Jeangagnon",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "taken": "2016-05-23"
+ },
+ "generated_file": "buildings/Lowney_350_Inspecteur/brick_red_weathered/base_color_interpreted.png",
+ "generated_sha256": "2e99a4669b86da47407d20983f28c3e62a32eb11806ff69675457eeaef7c23cb",
+ "made": {
+  "on": "2026-11-20",
+  "where": "Prototype/Materials/Encyclopedia_2026-11-20 (outside Situ)",
+  "method_in_its_record": "built-in image generation, from the photo and the prompt",
+  "aim": "control over the pattern (Mo, 2026-11-20)"
+ },
+ "prompt": "Create one square seamless base colour texture for a game, an authored reconstruction of the muted red fired-brick pier masonry on the Lowney facade in this photograph. Use the plain red brick piers, not arches or grey repaired infill. Fine irregular weathered red-orange to muted dusty rose brick faces, pale fine mortar joints, orderly horizontal staggered courses. A roughly 1.2 metre square patch, about 14 brick courses, interpreted scale not measured. Flat orthographic surface only. Remove sunlight gradients, shadows, windows and occlusions. No text, border or objects. Preserve subtle weathering without dramatic invented damage. Seamless edges.",
+ "study_note": "The generated tile is more regular and more saturated than portions of the facade. It is a material study, not a pixel-faithful reproduction of the source bond.",
+ "scale_note": "1.2 m square is a proposed game scale, not a measured extent of this generated image.",
+ "roughness_start": 0.8,
+ "compare_with": "M001",
+ "map_set": {
+  "folder": "materials_encyclopedia_2026-11-20_v2/buildings/Lowney_350_Inspecteur/brick_red_weathered/reconstruction_maps_v2",
+  "made": "2026-11-20, Encyclopedia refinement 2 (its REFINEMENT_METHOD.txt); rendered in Blender 5.2 Cycles under two lights (light_left.png, light_right.png); not yet tried in Unreal"
+ },
+ "made_by": "tools/materials_generated.py",
+ "measured_on_image": {
+  "size_px": [
+   1254,
+   1190
+  ],
+  "seam_left_right": 0.0,
+  "seam_top_bottom": 0.0,
+  "seam_reads": "no harder than its own joints",
+  "mean_colour_srgb": "#99513e",
+  "courses_in_tile": 14.0,
+  "course_repeat_strength": 0.91,
+  "colour_vs_photo": {
+   "photo_entry": "M001",
+   "photo_colour": "#99655b",
+   "delta_e76": 14.7,
+   "lightness_tile_minus_photo": -5.5
+  }
+ },
+ "scale": {
+  "tile_m": 1.21,
+  "tile_h_m": 1.15,
+  "tile_m_range": [
+   1.18,
+   1.24
+  ],
+  "how": "14.0 courses in the tile's height x 8.2 cm, the course height measured on the photographed wall (M001); the width follows from the tile's pixels"
+ },
+ "seam_mended": null,
+ "maps": {
+  "base_color": {
+   "file": "outputs/materials/GME001/base_color.png",
+   "original": "buildings/Lowney_350_Inspecteur/brick_red_weathered/base_color_interpreted.png",
+   "status": "generated",
+   "how": "the generated study cut to 1190 rows of whole courses in the same bond phase, its edges matched over 4 px (Encyclopedia v2)"
+  },
+  "height": {
+   "file": "outputs/materials/GME001/height_estimated_16bit.png",
+   "status": "assumption",
+   "how": "from a mask of the mortar joints found by colour (mortar 14% of the tile): bricks up, joints down; the depth, 4 mm, is authored"
+  },
+  "normal": {
+   "file": "outputs/materials/GME001/normal_OpenGL.png",
+   "also": "outputs/materials/GME001/normal_DirectX.png",
+   "status": "assumption",
+   "how": "worked out from that height; OpenGL (green up), DirectX copy beside it"
+  },
+  "roughness": {
+   "file": "outputs/materials/GME001/roughness_assumed.png",
+   "status": "assumption",
+   "how": "two set values, brick 0.80 and mortar 0.90; not measured"
+  },
+  "metallic": {
+   "file": "outputs/materials/GME001/metallic_zero.png",
+   "status": "assumption",
+   "how": "0: not a metal"
+  },
+  "ambient_occlusion": {
+   "file": "outputs/materials/GME001/ambient_occlusion_neutral.png",
+   "status": "not made",
+   "how": "plain white, so it changes nothing"
+  },
+  "mortar_mask": {
+   "file": "outputs/materials/GME001/mortar_mask.png",
+   "status": "assumption",
+   "how": "the joints the height is built on, for checking against the colour"
+  }
+ }
+}

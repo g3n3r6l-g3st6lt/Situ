@@ -1,10 +1,10 @@
 {
  "system": "s5",
- "made": "2026-11-18T22:48:05Z",
+ "made": "2026-11-23T13:15:59Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "a8d26cef7884742daf5f7561c060e94779943d44",
-  "differs_from_commit": false,
+  "git_commit": "63b314c75c82966a09054fdb98138835ea382623",
+  "differs_from_commit": true,
   "files": [
    {
     "path": "Situ/common/__init__.py",
@@ -28,7 +28,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "f36a8f2dc0ecb095848f4aef14d49313f2acabd69c0fe2e10bc1aa3f8143248e"
+    "sha256": "96e2e2d2de8d342a6f3e74fecbd53c07896b5a31e8aae7fd7d4bdf85901b3caf"
    },
    {
     "path": "Situ/s1_streets/__init__.py",
@@ -48,7 +48,7 @@
    },
    {
     "path": "Situ/s4_buildings/build.py",
-    "sha256": "ac5ffe38ee62058ea9ce3e666fdeb83b1bd9645dba67967b4ac403dadd2b7cd2"
+    "sha256": "fb24035849559cb4419cfb9b18141e6f70ab67d62bd59290f86576c9f272e7f3"
    },
    {
     "path": "Situ/s5_rhythm/__init__.py",
@@ -99,24 +99,24 @@
  "inputs": [
   {
    "name": "ADDRESS_FILE",
-   "path": "Situ/data/external/address_points_2026-09-25.json",
-   "bytes": 4231535,
-   "modified": "2026-10-14T22:52:08Z",
-   "sha256": "4aba339dc0fe69c513988f12e96ad0e39a44aa4c11f8c3a805342c683b025604"
+   "path": "Situ/data/external/address_points_2026-11-21.json",
+   "bytes": 2605226,
+   "modified": "2026-11-23T13:03:23Z",
+   "sha256": "f8ec25a878035609f6a38fc4e4e1cb51d345bcb7d0c71a48fb05a41375c5a64d"
   },
   {
    "name": "BIKE_COUNT_FILES",
    "path": "Situ/data/external/cyclistes_2025.csv",
-   "bytes": 127127287,
-   "modified": "2026-10-15T22:50:40Z",
-   "sha256": "cc470b8185e8a2ba4bda00b0dee7404a17ed573d4a933a3ec7796127b1cc5cd4"
+   "bytes": 127118512,
+   "modified": "2026-11-20T16:53:09Z",
+   "sha256": "1738eec3abb6e08f0ad82f9816c1e7ad2cf520cfecaf514ea22be99d1065c7e1"
   },
   {
    "name": "BIKE_COUNT_FILES",
    "path": "Situ/data/external/cyclistes_2026.csv",
-   "bytes": 214164671,
-   "modified": "2026-10-15T22:50:58Z",
-   "sha256": "de5f6ec08ca964e811ff543c1ec2135a40c0e504717eea2a238990ddb3f139d4"
+   "bytes": 250068681,
+   "modified": "2026-11-20T16:53:43Z",
+   "sha256": "fb1fea364ecd13a7f44a1b675d16678939751ba87873a100228c5a1029ad3857"
   },
   {
    "name": "BIKE_SITES_FILE",
@@ -162,10 +162,10 @@
   },
   {
    "name": "LOTS_FILE",
-   "path": "Situ/data/external/lots_study_2026-11-13.json",
+   "path": "Situ/data/external/lots_study_2026-11-20.json",
    "bytes": 6580168,
-   "modified": "2026-11-13T02:34:52Z",
-   "sha256": "ca2a38cf215f4a51d060cf5f298322f7787f1d3695588126218125e4138fe3c8"
+   "modified": "2026-11-21T02:13:11Z",
+   "sha256": "ed8d9edcfaf9375f69a096981d542d26537da7ab6b890373cd02f601b37cc888"
   },
   {
    "name": "OSM_CACHE",
@@ -197,10 +197,10 @@
   },
   {
    "name": "ROLL_FILE",
-   "path": "Situ/data/external/roll_study_streets_2026-11-12.json",
-   "bytes": 18537843,
-   "modified": "2026-11-13T02:35:15Z",
-   "sha256": "d4b38b6d31090bce7277c8854e71c0b074e9ff903de236b471024da1181d8c50"
+   "path": "Situ/data/external/roll_study_streets_2026-11-20.json",
+   "bytes": 18537823,
+   "modified": "2026-11-21T02:13:13Z",
+   "sha256": "a8838c1fc1041d966e335548df32ba78066d97df4a71cf68d370410cdd0bbfa2"
   },
   {
    "name": "S5_COUNTS_YEAR_FILES",
@@ -322,7 +322,7 @@
   },
   {
    "system": "s4",
-   "run_json_sha256": "ab3daf09fd2e97762c96b0de4b1d0deae1d37dc09ca67c50686174cf7d017f5c"
+   "run_json_sha256": "83ceb2c11e55a0f880b69f08011b6ecb227b197bc7703f4f864e6eefe15ee031"
   }
  ],
  "settings": {
@@ -370,18 +370,18 @@
  "outputs": [
   {
    "path": "Situ/outputs/s5/bike_days.csv",
-   "bytes": 89143,
-   "sha256": "0102cf4fa738883f39e6231a15e01d6baf34d26634180d371363af9b3f4c0cfc"
+   "bytes": 95519,
+   "sha256": "22654de2fb9c4f8d8e46e672e6a406fa891fac92832dfdd54929f5555b93db89"
   },
   {
    "path": "Situ/outputs/s5/bike_months.csv",
-   "bytes": 338,
-   "sha256": "42fac54d45ba59fd9d637c27ebcec8c9cb3f3c461e01867e8afe0e2e19407dd7"
+   "bytes": 356,
+   "sha256": "b5eaffce9f0f329cc528ca4dc5f72e51ca02989422a7a58c134f2b8b10685dec"
   },
   {
    "path": "Situ/outputs/s5/bike_shape.csv",
-   "bytes": 17906,
-   "sha256": "07a320647051c9c64e0ae6173ce2a268d09dc1397d63e7a618fd8f660dd0e333"
+   "bytes": 17931,
+   "sha256": "fd4cb348387cef37dc25f51b25a8a4503acd87e1f794541294d4e23dfdfe3102"
   },
   {
    "path": "Situ/outputs/s5/bike_sites.csv",
@@ -390,8 +390,8 @@
   },
   {
    "path": "Situ/outputs/s5/bike_week.csv",
-   "bytes": 918,
-   "sha256": "5decd9aaba66381b65f79cdd83a393153f09d52decdd7e22db4c73a86fab48d1"
+   "bytes": 919,
+   "sha256": "a8e13b845bd142f69ec5260f8b4d9193d7ab5d188e5a6d3433a388ee1c6c7778"
   },
   {
    "path": "Situ/outputs/s5/checkpoints.csv",
@@ -411,7 +411,7 @@
   {
    "path": "Situ/outputs/s5/meta.json",
    "bytes": 4754,
-   "sha256": "908ba1fb060b27f22a066c6d6f3f5d4f2256802fc252b2dfebe679c9173b9f03"
+   "sha256": "3dd5764e272b98a8e4757ce7a9e6339264b7643f329a22cc1fe21273972bde56"
   },
   {
    "path": "Situ/outputs/s5/open_by_hour.csv",
@@ -466,12 +466,12 @@
   {
    "path": "Situ/outputs/s5/test_report.txt",
    "bytes": 3233,
-   "sha256": "f6d8c9648e6b96b3477de7f7a93262789891ed1262983ac0e49f8322a98ed196"
+   "sha256": "75c1db55ab9ade8f9b7247d49ca91751854003e1ae07107d8b7e84b649191b1b"
   },
   {
    "path": "Situ/outputs/s5/web_data.js",
-   "bytes": 204281,
-   "sha256": "1d531a1df3fd306934e81f8725f271d7872492137640c9c5a25e3e5af59c6c3f"
+   "bytes": 204334,
+   "sha256": "49f4b9831852d015860dd91369f2a7bc6aa9ce0946d81bfc0099509077c11436"
   },
   {
    "path": "Situ/outputs/s5/weekday.csv",
@@ -491,7 +491,7 @@
  ],
  "tests": {
   "report": "Situ/outputs/s5/test_report.txt",
-  "made": "2026-11-18T22:48:05Z",
+  "made": "2026-11-23T13:15:58Z",
   "checks": 15,
   "pass": 13,
   "fail": 0,

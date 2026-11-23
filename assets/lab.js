@@ -32,6 +32,8 @@
   const S1 = window.SITU_S1, S2 = window.SITU_S2, S3 = window.SITU_S3, S4 = window.SITU_S4, S5 = window.SITU_S5, S6 = window.SITU_S6, S7 = window.SITU_S7, S8 = window.SITU_S8, S9 = window.SITU_S9, RT = window.SITU_S1_ROUTES, SR = window.SituRoutes, G1 = window.SITU_G1, MAT = window.SITU_MATERIALS;
   const mat4 = {};                                 // building -> materials library entries recorded on it
   if (MAT) MAT.entries.forEach(m => (mat4[m.building] = mat4[m.building] || []).push(m));
+  const gen4 = {};                                 // building -> colour studies an image model made from a photo of it
+  if (MAT && MAT.generated) MAT.generated.forEach(m => (gen4[m.building] = gen4[m.building] || []).push(m));
   const WALL = MAT && MAT.walls ? MAT.walls.buildings : {};      // building -> [material, sure, photo, date, why empty]
   const WALL_COL = { "brick, red": "#b5523b", "brick, brown": "#8a5a3c", "brick, buff or cream": "#d8c49a", "brick, dark": "#4a3a36",
     "stone, dressed": "#a8a39a", "stone, rough-faced": "#7f7a70", "concrete or render": "#c9c9c9", "metal cladding": "#5b8fb3",
@@ -351,7 +353,7 @@
     if (state.tab === "s8") { S4.buildings.forEach(b => bEl[b.id].setAttribute("class", "lab-bld view8")); return; }   // what stops a sight line
     S4.buildings.forEach(b => {
       const wl = state.tab === "mat" && state.matView === "walls" && wallOf(b.id);
-      const m = state.tab === "mat" && (state.matView === "walls" ? (wl ? [{ colour: WALL_COL[wl[0]] }] : null) : mat4[b.id]);
+      const m = state.tab === "mat" && (state.matView === "walls" ? (wl ? [{ colour: WALL_COL[wl[0]] }] : null) : mat4[b.id] || gen4[b.id]);
       let cls = "lab-bld " + (state.tab === "mat" ? (m ? "mat-yes" : "mat-none")
         : state.s4colour === "use" ? USE_CLASS(b.use) : state.s4colour === "height" ? "h-" + HEIGHT4(b) : "src-" + (b.use_source || "none"));
       bEl[b.id].style.fill = m ? m[0].colour : "";          // a recorded wall shows its measured mean colour
@@ -386,8 +388,8 @@
     }
     if (state.tab === "mat" && MAT && S4 && state.matView === "walls" && MAT.walls) html = Object.entries(MAT.walls.counts).filter(([k]) => k).sort((a, b) => b[1] - a[1])
       .map(([k, n]) => `<span><i class="kb" style="background:${WALL_COL[k]}"></i>${esc(k)} ${n}</span>`).join("") + `<span><i class="kb mat-none"></i>not read ${MAT.walls.counts[""] || 0}</span>`;
-    else if (state.tab === "mat" && MAT && S4) html = MAT.entries.map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") +
-      `<span><i class="kb mat-none"></i>no material recorded yet ${S4.buildings.filter(b => !mat4[b.id]).length}</span>`;
+    else if (state.tab === "mat" && MAT && S4) html = MAT.entries.concat((MAT.generated || []).filter(m => !mat4[m.building])).map(m => `<span><i class="kb" style="background:${m.colour}"></i>${esc(m.id)} ${esc(m.name)}</span>`).join("") +
+      `<span><i class="kb mat-none"></i>no material recorded yet ${S4.buildings.filter(b => !mat4[b.id] && !gen4[b.id]).length}</span>`;
     if (state.tab === "s3") html = state.s3view === "speed"
       ? `<span><i class="k v40"></i>40 km/h</span><span><i class="k v30"></i>30</span><span><i class="k v20"></i>20</span><span><i class="k gap"></i>cars allowed, no limit</span><span>the wider the line, the higher the limit</span>`
       : `<span><i class="kd lights"></i>traffic lights</span><span><i class="kd allway"></i>all-way stop</span><span><i class="kb2"></i>a street that must stop</span>`;
@@ -1051,8 +1053,8 @@
   }
   function matHTML(b) {
     if (!MAT) return "";
-    const ms = mat4[b.id] || [];
-    if (!ms.length) return `<h3 class="lab-s"><a href="materials.html" title="the materials library">Materials</a></h3>${wallHTML(b)}<p class="sub">No library entry for this building yet.</p>`;
+    const ms = mat4[b.id] || [], gs = gen4[b.id] || [];
+    if (!ms.length && !gs.length) return `<h3 class="lab-s"><a href="materials.html" title="the materials library">Materials</a></h3>${wallHTML(b)}<p class="sub">No library entry for this building yet.</p>`;
     return `<h3 class="lab-s"><a href="materials.html" title="the materials library">Materials</a></h3>` + wallHTML(b) + ms.map(m => `<div class="lab-mat">
 
       <img src="${esc(m.preview)}" alt="${esc(m.name)}: colour map, tiled 3 by 3" loading="lazy">
@@ -1060,7 +1062,16 @@
       <p class="sub">${esc(m.face)}</p>
       <p>One brick course ${m.course_cm} cm <span class="sub">(${m.course_range[0]} to ${m.course_range[1]}), about ${m.per_m} to the metre</span></p>
       <p class="sub">Mean colour ${esc(m.colour)} · colour map observed; height and normal estimated, so assumptions; no roughness map</p>
-      <p class="sub">Photo: ${esc(m.credit)}, ${esc(m.taken)}, <a href="${esc(m.page)}">Wikimedia Commons</a>, <a href="${esc(m.licence_url)}">${esc(m.licence)}</a></p></div>`).join("");
+      <p class="sub">Photo: ${esc(m.credit)}, ${esc(m.taken)}, <a href="${esc(m.page)}">Wikimedia Commons</a>, <a href="${esc(m.licence_url)}">${esc(m.licence)}</a></p></div>`).join("") + gs.map(genHTML).join("");
+  }
+  function genHTML(m) {
+    const cv = m.colour_vs_photo;
+    return `<div class="lab-mat lab-gen">
+      <img src="${esc(m.preview)}" alt="${esc(m.name)}: generated colour study, tiled 3 by 3" loading="lazy">
+      <p><a href="${esc(m.anchor)}"><b>${esc(m.id)}</b> ${esc(m.name)}</a> <span class="sub">generated from a photo</span></p>
+      <p class="sub">${esc(m.face)}</p>
+      <p class="sub">Made by an image model from the photo, so its pattern is authored. Repeat edge: ${esc(m.seam_reads)}. ${m.tile_m ? `Tile about ${m.tile_m} m (${esc(m.scale_how)}).` : "No measured scale."}${cv ? ` Mean colour ${esc(m.colour)}, ${cv.delta_e76} from the colour measured on the photo (${esc(cv.photo_colour)}).` : ` Mean colour ${esc(m.colour)}.`}${m.maps.height === "assumption" ? " Height and normal estimated from its mortar joints, roughness set by hand: assumptions." : " Colour only: no height, normal or roughness yet."}</p>
+      <p class="sub">From the photo by ${esc(m.credit)}, ${esc(m.taken)}, <a href="${esc(m.page)}">Wikimedia Commons</a>, <a href="${esc(m.licence_url)}">${esc(m.licence)}</a></p></div>`;
   }
   function g1HTML(b) {
     const g = G1 && G1.blocks[b.id];
@@ -1149,7 +1160,7 @@
         <p class="sub">S6 only records what each object is and where it stands. Whether it slows anyone down is left to later systems, as a written assumption.</p>`;
     }
     if (t === "mat" && MAT) {
-      h += `<h2 class="lab-t">Materials</h2><p>What Griffintown's walls are made of. Every building's wall as read from a street photo, or the <a href="materials.html">materials library</a>'s entries, each measured from a published photo straightened to a known scale and shown in its measured mean colour. Click a building for everything the systems know about it, its materials included.</p>
+      h += `<h2 class="lab-t">Materials</h2><p>What Griffintown's walls are made of. Every building's wall as read from a street photo, or the <a href="materials.html">materials library</a>'s entries, each measured from a published photo straightened to a known scale, and the colour studies an image model made from photos, each shown in its mean colour. Click a building for everything the systems know about it, its materials included.</p>
         ${MAT.walls ? seg2("matView", [["walls", "every building's wall, from street photos"], ["entries", "library entries"]]) : ""}
         ${state.matView === "walls" && MAT.walls ? `<p class="sub">Read by eye from the nearest street panorama taken since 2023 (${esc(MAT.walls.source)}), blind to each building's use and age: an assumption, each tied to its photo. A photo older than the year the tax roll gives a building is not used.</p>` : ""}
         <label class="lab-check"><input type="checkbox" class="lab-matpanels-on"${state.matPanels ? " checked" : ""}> also show materials in building panels on the other tabs</label>
@@ -1157,8 +1168,12 @@
           <img src="${esc(m.preview)}" alt="${esc(m.name)}: colour map, tiled 3 by 3" loading="lazy">
           <p><b>${esc(m.id)}</b> ${esc(m.name)} · <button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button></p>
           <p class="sub">course ${m.course_cm} cm (${m.course_range[0]} to ${m.course_range[1]}) · mean colour ${esc(m.colour)} · <a href="${esc(m.anchor)}">entry</a></p></div>`).join("") +
+        ((MAT.generated || []).length ? `<h3 class="lab-s">Generated from photos (${MAT.generated.length})</h3><p class="sub">Colour studies an image model made from a published photo of the building, for control over the pattern. Their pattern is authored; each is checked against its photo where a measurement exists.</p>` + MAT.generated.map(m => `<div class="lab-mat lab-gen">
+          <img src="${esc(m.preview)}" alt="${esc(m.name)}: generated colour study, tiled 3 by 3" loading="lazy">
+          <p><b>${esc(m.id)}</b> ${esc(m.name)} · <button type="button" class="sx-link" data-b="${esc(m.building)}">${esc(b4[m.building] && b4[m.building].name || m.building)}</button></p>
+          <p class="sub">${m.tile_m ? `tile about ${m.tile_m} m` : "no measured scale"} · repeat edge ${esc(m.seam_reads)} · mean colour ${esc(m.colour)} · <a href="${esc(m.anchor)}">entry</a></p></div>`).join("") : "") +
         (MAT.set_aside.length ? `<h3 class="lab-s">Set aside (${MAT.set_aside.length})</h3>` + MAT.set_aside.map(a => `<p class="sub"><b>${esc(a.id)}</b> ${esc(a.name)}: ${esc(a.why)}</p>`).join("") : "") +
-        `<p class="sub">${S4.buildings.length - Object.keys(mat4).length} of ${S4.buildings.length} buildings have no material recorded yet.</p>`;
+        `<p class="sub">${S4.buildings.filter(b => !mat4[b.id] && !gen4[b.id]).length} of ${S4.buildings.length} buildings have no library entry or study yet.</p>`;
     }
     if (t === "s9" && S9) {
       const m = S9.meta, k = m.people_by_kind, e = m.explained_share, pc = v => (v < 0.1 ? (100 * v).toFixed(1) : Math.round(100 * v)) + " %";

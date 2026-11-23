@@ -2,7 +2,7 @@ T1  Every street a car can arrive along has exactly one approach row
     PASS
 
 T2  No sign disappears: each one has an approach, or a written reason it has none
-    493 panels on 359 posts
+    496 panels on 362 posts
     PASS
 
 T3  Every stop sign stands where a driver would see it
@@ -16,24 +16,24 @@ T5  Junction control agrees with its approaches
     PASS
 
 T6  One-way check: no-entry signs against the city's one-way codes (information)
-      37  agrees
-      24  street closed to cars
+      36  agrees
+      23  street closed to cars
        7  no street end near this sign
        2  explained by a photo (P07, likely)
-       2  only a path added in S1 fits: check the photo
-       2  explained by a photo (P04, likely)
-       2  explained by a photo (P05, likely)
        2  open after the photos (P06)
-    67 of 78 agree; every other one is a checkpoint
+       2  explained by a photo (P05, likely)
+       2  explained by a photo (P04, likely)
+       2  only a path added in S1 fits: check the photo
+    65 of 76 agree; every other one is a checkpoint
 
 T7  Every rule cites the signs behind it
     PASS
 
 T8  Coverage (information)
-    stop     145 high, 41 medium, 27 none
+    stop     149 high, 43 medium, 27 none
     all_way  20 high, 3 none
-    turn     75 high, 40 medium, 42 none, 2 photo, 20 redundant
-    junctions: 22 all_way_stop, 31 lights, 99 none, 39 stop
+    turn     76 high, 40 medium, 41 none, 2 photo, 19 redundant
+    junctions: 22 all_way_stop, 31 lights, 98 none, 40 stop
     checkpoints: 21
     traffic lights: 31 at S1 junctions, 3 near the area without one
     speed: 219 by_id, 3 by_shape, 8 missing, 27 not_a_road, 7 zero_in_file

@@ -1,0 +1,94 @@
+{
+ "id": "GME003",
+ "status": "generated",
+ "name": "Grey irregular rubble masonry",
+ "family": "Stone",
+ "building": "w340223814",
+ "building_name": "New City Gas complex, rue Ottawa (S4 outline 6.6 m from the photo's geotag; built 1859 in the tax roll)",
+ "where_on_wall": "Stone infill between windows, excluding dressed surrounds and upper brick",
+ "finish_seen": "Uneven stone faces; irregular roughly horizontal courses; broad mortar",
+ "photo": {
+  "file": "data/external/commons_images/New_City_Gas_Montreal_01.jpg",
+  "title": "File:New City Gas Montreal 01.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg",
+  "author": "Jeangagnon",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "taken": "2011-08-07"
+ },
+ "generated_file": "buildings/New_City_Gas/stone_grey_irregular_rubble/base_color_interpreted.png",
+ "generated_sha256": "3b6695edfc1ed2c2507cee3e735fee5fd2063e496c39a46b195ea4e94fb4f59c",
+ "made": {
+  "on": "2026-11-20",
+  "where": "Prototype/Materials/Encyclopedia_2026-11-20 (outside Situ)",
+  "method_in_its_record": "built-in image generation, from the photo and the prompt",
+  "aim": "control over the pattern (Mo, 2026-11-20)"
+ },
+ "prompt": "Create one square seamless base-color game material texture, 1024 square or higher. Reference image is New City Gas Montreal; use ONLY the irregular grey rubble masonry infill between the windows, not dressed rectangular stone trims nor red brick. Faithful naturalistic interpretation of uneven flattened grey stone faces, small irregular stones and larger roughly horizontal stones, pale grey mortar, subtle weathering. Front-on orthographic isolated wall surface filling entire frame; approximately 1.5 metre patch, interpreted scale. Remove directional illumination and deep cast shadows; flat diffuse neutral daylight, no occlusions, windows, plants, borders, text or labels. Preserve irregular stone identity, do not turn it into regular ashlar. Seamless edges requested. This is an authored reference-based reconstruction, not a scientific measurement.",
+ "study_note": "Lithology is unverified. The 2011 photo does not establish present condition. Generated stones are more regularly coursed than some source areas. A generated height attempt changed the layout and was rejected.",
+ "scale_note": "Suggested 1.5 m square for prototype comparison only.",
+ "roughness_start": 0.8,
+ "mend_seam": [
+  "x"
+ ],
+ "made_by": "tools/materials_generated.py",
+ "measured_on_image": {
+  "size_px": [
+   1240,
+   1254
+  ],
+  "seam_left_right": 0.83,
+  "seam_top_bottom": 0.94,
+  "seam_reads": "no harder than its own joints",
+  "mean_colour_srgb": "#858483"
+ },
+ "scale": {
+  "tile_m": null,
+  "how": "Suggested 1.5 m square for prototype comparison only."
+ },
+ "seam_mended": {
+  "steps": [
+   {
+    "axis": "left to right",
+    "overlap_px": 14,
+    "mean_difference_on_cut": 11.37
+   }
+  ],
+  "seam_before": [
+   1.29,
+   0.94
+  ],
+  "seam_after": [
+   0.83,
+   0.94
+  ],
+  "size_before_px": [
+   1254,
+   1254
+  ],
+  "how": "the edge band overlapped and cut along the path of least difference; nothing resampled or blended; the generated original is kept unchanged in data/external"
+ },
+ "maps": {
+  "base_color": {
+   "file": "outputs/materials/GME003/base_color.png",
+   "original": "buildings/New_City_Gas/stone_grey_irregular_rubble/base_color_interpreted.png",
+   "status": "generated",
+   "how": "made by an image model from the photo and the prompt below; the pattern is authored, its colour and units follow the photo by eye"
+  },
+  "height": {
+   "file": "",
+   "status": "not made",
+   "how": "no relief aligned with this image yet (a generated try moved the stones and was rejected)"
+  },
+  "normal": {
+   "file": "",
+   "status": "not made",
+   "how": "waits for the height"
+  },
+  "roughness": {
+   "file": "",
+   "status": "not made",
+   "how": "the study gives a starting value for trials: 0.8"
+  }
+ }
+}

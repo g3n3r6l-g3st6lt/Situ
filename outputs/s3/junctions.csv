@@ -23,7 +23,7 @@ J021,dead_end,none,1,0,False,,,299492.86,5038450.12
 J022,junction,none,1,0,False,,,300509.08,5039411.32
 J023,junction,none,2,0,False,,,300453.42,5039234.6
 J024,junction,none,1,0,False,,,299406.03,5038412.11
-J025,junction,none,2,0,False,,,299384.38,5038430.34
+J025,junction,stop,2,1,False,,,299384.38,5038430.34
 J026,gate,all_way_stop,3,3,False,,,299323.24,5038476.57
 J027,junction,stop,3,2,False,,,299479.92,5038483.63
 J028,junction,none,1,0,False,,,299440.84,5038509.27

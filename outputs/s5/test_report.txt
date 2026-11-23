@@ -28,11 +28,11 @@ T8  Does every place's week come from its own hours text, and do the counts per 
     PASS
 
 T9  Do the detector days hold every recorded hour, with a total only when all 24 were recorded?
-    3 detectors inside the area; 1455 detector-days, 309 incomplete and left without a total
+    3 detectors inside the area; 1563 detector-days, 322 incomplete and left without a total
     PASS
 
 T10  Can every bicycle shape and monthly level be rebuilt from the detector hours?
-    376 days with every detector complete
+    407 days with every detector complete
     PASS
 
 T11  How much do the sources cover? (report)
@@ -42,9 +42,9 @@ T11  How much do the sources cover? (report)
     vehicle   : 24 of 24 weekday hours have a value; 17 rest on J040 alone
     places (each once): 558; with readable hours 83 (15 %), without 475, not understood 0
     with hours, by kind: amenity=restaurant 18, amenity=cafe 8, shop=bicycle 4, shop=supermarket 4, amenity=bar 4, amenity=bank 4, Parks and gardens 3, amenity=fast_food 3
-    bicycle detectors: det-00401-01, det-00401-02, det-01487-03, 376 complete days from 2025-06-09 to 2026-10-14
-      Saturdays measured: 59
-      Sundays measured: 57
+    bicycle detectors: det-00401-01, det-00401-02, det-01487-03, 407 complete days from 2025-06-09 to 2026-11-19
+      Saturdays measured: 64
+      Sundays measured: 61
 
 T12  Do the intersection counts and the detectors agree on a weekday's bicycles? (report)
     winter      : correlation over 24 hours 0.87; largest gap at 19h (counts 0.45, detectors 0.95)

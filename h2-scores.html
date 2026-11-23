@@ -530,6 +530,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#what-h-s2-does" id="toc-what-h-s2-does" class="nav-link active" data-scroll-target="#what-h-s2-does">What H-S2 does</a></li>
   <li><a href="#result" id="toc-result" class="nav-link" data-scroll-target="#result">Result</a></li>
+  <li><a href="#the-plates-registered-again" id="toc-the-plates-registered-again" class="nav-link" data-scroll-target="#the-plates-registered-again">The plates registered again</a></li>
   <li><a href="#a-test-registered-before-it-was-run" id="toc-a-test-registered-before-it-was-run" class="nav-link" data-scroll-target="#a-test-registered-before-it-was-run">A test registered before it was run</a></li>
   <li><a href="#how-sure" id="toc-how-sure" class="nav-link" data-scroll-target="#how-sure">How sure</a></li>
   <li><a href="#compare" id="toc-compare" class="nav-link" data-scroll-target="#compare">Compared with today</a></li>
@@ -575,16 +576,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="glance">
 <p><strong>Asks</strong> Where each 1912 street sat in its network, by the same space syntax analysis as today’s, and whether anything recorded in 1912 follows it.</p>
-<p><strong>Found</strong> 233 segments (18.8 km) carry reported values at 400 and 800 m. Wellington St and Notre Dame St West rank highest. Shops listed in the 1912 directory sit more densely on the segments that rank high for choice at 800 m (Spearman 0.41).</p>
-<p><strong>Stands</strong> partial. The ranking holds under plate error and simplification. Which segments make the top tenth for choice at 800 m changes with the streets around the area, and the values differ between two analysis programs at about 0.05 of Spearman’s rho.</p>
+<p><strong>Found</strong> 243 segments (18.9 km) carry reported values at 400 and 800 m. Wellington St and Notre Dame St West rank highest. Shops listed in the 1912 directory sit more densely on the segments that rank high for choice at 800 m (Spearman 0.41).</p>
+<p><strong>Stands</strong> partial. The ranking holds under plate error, simplification and a new registration of the plates (Spearman 0.94 to 0.97). Which segments make the top tenth for choice at 800 m changes with the streets around the area, and the values differ between two analysis programs at about 0.05 of Spearman’s rho.</p>
 <p><strong>Leaves out</strong> Values at 1200 m and over the whole network, which depend on where the 1912 map stops.</p>
 <p><strong>In the game</strong> Not yet.</p>
 <p><strong>Trace</strong> <a href="outputs/hist/h2_values_1912.geojson">values</a> · <a href="outputs/hist/d036_results.json">shops result</a> · uses <a href="./h1-streets.html">H-S1</a></p>
 </div>
 <section id="what-h-s2-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-h-s2-does">What H-S2 does</h2>
-<p>H-S2 runs angular segment analysis on the 1912 network with PlanX 4.19.0, unmodified, the same engine as the present <a href="./s2-scores.html">S2</a>. The analysis network holds 801 segments: the 233 reported inside the study area and its halo, and 568 in the ring around them, there so that each street has a city around it. Ring values are computed and never reported.</p>
-<p>35 reported segments change their percentile rank by more than 0.2 at 800 m when the ring is removed, mostly at the corner of Notre Dame and Guy and on Seigneurs St.&nbsp;They are marked in the file.</p>
+<p>H-S2 runs angular segment analysis on the 1912 network with PlanX 4.19.0, unmodified, the same engine as the present <a href="./s2-scores.html">S2</a>. The analysis network holds 821 segments: the 243 reported inside the study area and its halo, and 578 in the ring around them, there so that each street has a city around it. Ring values are computed and never reported.</p>
+<p>22 reported segments change their percentile rank by more than 0.2 at 800 m when the ring is removed, mostly at the corner of Notre Dame and Guy and on Seigneurs St.&nbsp;They are marked in the file.</p>
 </section>
 <section id="result" class="level2">
 <h2 class="anchored" data-anchor-id="result">Result</h2>
@@ -609,14 +610,45 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>choice, 800 m (NACH)</td>
-<td>Wellington St 1.22, Seigneurs St 1.22 (depends on the ring), Notre Dame St West 1.16, McCord St 1.13, Chatham St 1.06, Ottawa St 1.05</td>
+<td>Wellington St 1.25, Seigneurs St 1.23 (depends on the ring), Notre Dame St West 1.17, Inspector St 1.16, McCord St 1.10, Gallery Square (west side) 1.06</td>
 </tr>
 <tr class="even">
 <td>integration, 800 m (NAIN)</td>
-<td>Wellington St 1.60, Notre Dame St West 1.46, Dalhousie St 1.44, Colborne St 1.44, Nazareth St 1.40, McCord St 1.37</td>
+<td>Wellington St 1.67, Notre Dame St West 1.52, Dalhousie St 1.42, Murray St 1.40, Nazareth St 1.40, McCord St 1.39</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="the-plates-registered-again" class="level2">
+<h2 class="anchored" data-anchor-id="the-plates-registered-again">The plates registered again</h2>
+<p>On 23 November 2026 the plates were registered again, with control points over the whole of each plate, and the network and these values were computed again on it. On 219 segments found in both runs (midpoints within 8 m, same 1912 name), the ranks agree closely:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Measure</th>
+<th>Spearman, before and after</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>integration, 400 m</td>
+<td>0.91</td>
+</tr>
+<tr class="even">
+<td>choice, 400 m</td>
+<td>0.96</td>
+</tr>
+<tr class="odd">
+<td>integration, 800 m</td>
+<td>0.94</td>
+</tr>
+<tr class="even">
+<td>choice, 800 m</td>
+<td>0.97</td>
+</tr>
+</tbody>
+</table>
+<p>18 of the 21 segments in the top tenth for choice at 800 m stay there. The values above are the new ones.</p>
 </section>
 <section id="a-test-registered-before-it-was-run" class="level2">
 <h2 class="anchored" data-anchor-id="a-test-registered-before-it-was-run">A test registered before it was run</h2>
@@ -643,6 +675,7 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>194 segments and 190 establishments: 67 placed at their address, 123 interpolated along their block, 10 left unassigned. Choice at 800 m passed the registered mark, and still holds once plain reach and segment length are taken into account (partial rho 0.41). Integration fell just short.</p>
+<p>This test was run on the earlier registration and stays as it was run. On the new registration, the same shop counts set against the new choice values of the same 184 segments give a simple Spearman of 0.31, against 0.32 before (a check made afterwards, not the registered test).</p>
 <p>What it does not show: how people moved in 1912. Notre Dame and Wellington were old commercial roads, and 95 of the 190 establishments stand on Notre Dame. Without Notre Dame and Wellington the relation drops to 0.22, below the registered mark. Telling a main road from a street the network favours needs a test this network alone cannot give.</p>
 </section>
 <section id="how-sure" class="level2">

@@ -1,111 +1,111 @@
 {
- "made": "2026-11-20",
+ "made": "2026-11-23",
  "segmap": {
-  "segments": 269,
-  "km": 22.2,
+  "segments": 283,
+  "km": 22.3,
   "zone": {
-   "core": 183,
-   "halo": 40,
-   "ring": 46
+   "core": 194,
+   "halo": 39,
+   "ring": 50
   },
   "class": {
-   "street": 244,
-   "lane": 23,
-   "open_area": 2
+   "street": 252,
+   "lane": 24,
+   "open_area": 7
   },
   "name_status": {
-   "documented": 136,
-   "inferred": 112,
-   "unknown": 21
+   "documented": 140,
+   "inferred": 115,
+   "unknown": 28
   }
  },
  "analysis_net": {
-  "segments": 801,
+  "segments": 821,
   "zone": {
-   "core": 190,
-   "halo": 43,
-   "ring": 568
+   "core": 201,
+   "halo": 42,
+   "ring": 578
   }
  },
  "reported": {
-  "segments": 233,
-  "km": 18.78,
-  "edge_shift_800_over_0_2": 35
+  "segments": 243,
+  "km": 18.9,
+  "edge_shift_800_over_0_2": 22
  },
  "top_nach_800": [
   [
    "Wellington St",
-   1.22,
-   1.6,
-   812
+   1.25,
+   1.67,
+   778
   ],
   [
    "Seigneurs St",
-   1.22,
-   1.27,
-   320
+   1.23,
+   1.29,
+   321
   ],
   [
    "Notre Dame St West",
+   1.17,
+   1.52,
+   2012
+  ],
+  [
+   "Inspector St",
    1.16,
-   1.46,
-   2004
+   1.28,
+   196
   ],
   [
    "McCord St",
-   1.13,
-   1.37,
-   642
+   1.1,
+   1.39,
+   640
   ],
   [
-   "Chatham St",
+   "Gallery Square (west side)",
    1.06,
-   1.2,
-   133
-  ],
-  [
-   "Ottawa St",
-   1.05,
-   1.35,
-   1213
+   1.21,
+   145
   ]
  ],
  "top_nain_800": [
   [
    "Wellington St",
-   1.22,
-   1.6,
-   812
+   1.25,
+   1.67,
+   778
   ],
   [
    "Notre Dame St West",
-   1.16,
-   1.46,
-   2004
+   1.17,
+   1.52,
+   2012
   ],
   [
    "Dalhousie St",
-   1.02,
-   1.44,
-   583
-  ],
-  [
-   "Colborne St",
-   0.98,
-   1.44,
-   816
+   1.03,
+   1.42,
+   592
   ],
   [
    "Nazareth St",
    1.0,
    1.4,
-   552
+   559
   ],
   [
-   "McCord St",
-   1.13,
-   1.37,
-   642
+   "Murray St",
+   1.0,
+   1.4,
+   630
+  ],
+  [
+   "Colborne St",
+   0.96,
+   1.39,
+   820
   ]
  ],
  "d036": {

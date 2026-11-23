@@ -1,0 +1,107 @@
+{
+ "id": "GME006",
+ "status": "generated",
+ "name": "Grey dressed ashlar, planar lightly pitted faces",
+ "family": "Stone",
+ "building": "w225637542",
+ "building_name": "1700 rue Notre-Dame Ouest (La Poste; tax roll: built 1923)",
+ "where_on_wall": "Wall fields beside columns; exclude sculpture, fluting and tree shadows",
+ "finish_seen": "Large rectangular planar stones, narrow joints and slight pitting",
+ "photo": {
+  "file": "data/external/commons_images/1700_La_Poste__5_.jpg",
+  "title": "File:1700 La Poste (5).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:1700_La_Poste_(5).jpg",
+  "author": "Guerinf",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "taken": "2017-05-24"
+ },
+ "generated_file": "buildings/1700_La_Poste/stone_grey_dressed_ashlar/base_color_interpreted.png",
+ "generated_sha256": "eaa76033ab7f0f9b5aba478e97fe33198751ab336e79281d1b014076fec66333",
+ "made": {
+  "on": "2026-11-20",
+  "where": "Prototype/Materials/Encyclopedia_2026-11-20 (outside Situ)",
+  "method_in_its_record": "built-in image generation, from the photo and the prompt",
+  "aim": "control over the pattern (Mo, 2026-11-20)"
+ },
+ "prompt": "Create one square seamless game base-colour texture reconstruction of the dressed grey stone ASHLAR wall at 1700 La Poste in this reference. Use flat rectangular cut grey stones, narrow pale joints, subtle pinholes/pitting and slight grey tonal variation; approximately 3 rows of blocks. Preserve relatively smooth planar dressed finish, not broken rough rubble. Remove tree shadows and all lighting gradients; orthographic straight-on continuous wall with neutral diffuse colour. No sculpture, columns, windows, decorations, borders, text or other objects. Reference-inspired authored material, not measured albedo. Tile edges should join.",
+ "study_note": "Do not infer limestone species from grey appearance. Generated pitting is more pronounced and uniform than some source blocks.",
+ "scale_note": "No verified physical scale; generated block layout is interpretive.",
+ "roughness_start": 0.8,
+ "mend_seam": [
+  "y_joints"
+ ],
+ "in_study_area": "yes: S4 outline w225637542, placed from the tax roll's 1700 rue Notre-Dame Ouest (checked 2026-11-20)",
+ "scope_question": "Encyclopedia v2 leaves it out: the owner's site places 1700 La Poste in Petite-Bourgogne (https://1700laposte.com/fr/propos). It lies inside Situ's study polygon and is S4 building w225637542. Kept until Mo decides which boundary the library follows.",
+ "made_by": "tools/materials_generated.py",
+ "measured_on_image": {
+  "size_px": [
+   1254,
+   830
+  ],
+  "seam_left_right": 0.65,
+  "seam_top_bottom": 0.61,
+  "seam_reads": "no harder than its own joints",
+  "mean_colour_srgb": "#999894"
+ },
+ "scale": {
+  "tile_m": null,
+  "how": "No verified physical scale; generated block layout is interpretive."
+ },
+ "seam_mended": {
+  "steps": [
+   {
+    "axis": "top to bottom",
+    "kept_rows": [
+     4,
+     834
+    ],
+    "joints_at_rows": [
+     2,
+     417,
+     832,
+     1246
+    ],
+    "courses_kept": 2,
+    "bond_match": 0.62,
+    "course_px": 414.7
+   }
+  ],
+  "seam_before": [
+   0.71,
+   2.78
+  ],
+  "seam_after": [
+   0.65,
+   0.61
+  ],
+  "size_before_px": [
+   1254,
+   1254
+  ],
+  "how": "whole courses kept, as many as carry the bond across the repeat; nothing resampled or blended; the generated original is kept unchanged in data/external"
+ },
+ "maps": {
+  "base_color": {
+   "file": "outputs/materials/GME006/base_color.png",
+   "original": "buildings/1700_La_Poste/stone_grey_dressed_ashlar/base_color_interpreted.png",
+   "status": "generated",
+   "how": "made by an image model from the photo and the prompt below; the pattern is authored, its colour and units follow the photo by eye"
+  },
+  "height": {
+   "file": "",
+   "status": "not made",
+   "how": "no relief aligned with this image yet"
+  },
+  "normal": {
+   "file": "",
+   "status": "not made",
+   "how": "waits for the height"
+  },
+  "roughness": {
+   "file": "",
+   "status": "not made",
+   "how": "the study gives a starting value for trials: 0.8"
+  }
+ }
+}

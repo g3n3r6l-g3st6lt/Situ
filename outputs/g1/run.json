@@ -1,10 +1,10 @@
 {
  "system": "g1",
- "made": "2026-11-18T22:48:20Z",
+ "made": "2026-11-23T13:16:14Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "a8d26cef7884742daf5f7561c060e94779943d44",
-  "differs_from_commit": false,
+  "git_commit": "63b314c75c82966a09054fdb98138835ea382623",
+  "differs_from_commit": true,
   "files": [
    {
     "path": "Situ/common/__init__.py",
@@ -28,7 +28,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "f36a8f2dc0ecb095848f4aef14d49313f2acabd69c0fe2e10bc1aa3f8143248e"
+    "sha256": "96e2e2d2de8d342a6f3e74fecbd53c07896b5a31e8aae7fd7d4bdf85901b3caf"
    },
    {
     "path": "Situ/g1_world/__init__.py",
@@ -40,7 +40,7 @@
    },
    {
     "path": "Situ/g1_world/build.py",
-    "sha256": "abc6657c0ffc2d8d2caf2bdeea38c94e38198ed3d541d1eb91fb648e2a66f25a"
+    "sha256": "5ac4a9bced32fc44244c5ae8f1c4e07db1190a521748eb54f4132c07c9519bd1"
    },
    {
     "path": "Situ/g1_world/terrain.py",
@@ -156,11 +156,11 @@
   },
   {
    "system": "s4",
-   "run_json_sha256": "ab3daf09fd2e97762c96b0de4b1d0deae1d37dc09ca67c50686174cf7d017f5c"
+   "run_json_sha256": "83ceb2c11e55a0f880b69f08011b6ecb227b197bc7703f4f864e6eefe15ee031"
   },
   {
    "system": "s6",
-   "run_json_sha256": "7fc1ccefe14a34bb75bd68eb19d15454aa1d94a4385f18f767b7ea5684e92b12"
+   "run_json_sha256": "2f45ce22472c49f557d6292bf0b3041d003c8f4954def791531ac5dee3999413"
   }
  ],
  "settings": {
@@ -191,17 +191,17 @@
    [
     "green",
     "leisure",
-    "{'dog_park', 'garden', 'park'}"
+    "{'garden', 'park', 'dog_park'}"
    ],
    [
     "green",
     "landuse",
-    "{'village_green', 'flowerbed', 'grass', 'meadow', 'allotments', 'recreation_ground'}"
+    "{'meadow', 'grass', 'allotments', 'flowerbed', 'village_green', 'recreation_ground'}"
    ],
    [
     "green",
     "natural",
-    "{'scrub', 'grass', 'wood'}"
+    "{'scrub', 'wood', 'grass'}"
    ],
    [
     "play",
@@ -422,7 +422,7 @@
   {
    "path": "Situ/outputs/g1/frame.json",
    "bytes": 1796,
-   "sha256": "fa7642f276446f1ebc9efafacba6db926cad7ebe4d04d71483e0fcf2d66e911b"
+   "sha256": "8d9b6bf1a6e28b96477ae08fd62dd5648670862e5e765a5bac1d583d38f7274e"
   },
   {
    "path": "Situ/outputs/g1/g1_sheet_roofs.png",
@@ -446,8 +446,8 @@
   },
   {
    "path": "Situ/outputs/g1/ledger.csv",
-   "bytes": 14729,
-   "sha256": "3f6de688b650e6bceb3c3ac76b5e80f4799b4a95259d53517241251ea030cddc"
+   "bytes": 14792,
+   "sha256": "f3bca903c1740b56c3a9dbf1971c14ad8ee4cdd1efe3d95b37359fca3cd1f0d7"
   },
   {
    "path": "Situ/outputs/g1/props.csv",
@@ -481,13 +481,13 @@
   },
   {
    "path": "Situ/outputs/g1/web_data.js",
-   "bytes": 125249,
-   "sha256": "da3cd1d326d0b1f206f98c7c1201643d515627a547eeaf633b0e133d30465cf2"
+   "bytes": 125250,
+   "sha256": "e24b2f15bf219e5d368af2e2cf65a6622d7876a1e1ffae07a0fd04b823e489c9"
   }
  ],
  "tests": {
   "report": "Situ/outputs/g1/test_report.txt",
-  "made": "2026-11-18T22:48:19Z",
+  "made": "2026-11-23T13:16:13Z",
   "checks": 12,
   "pass": 11,
   "fail": 0,

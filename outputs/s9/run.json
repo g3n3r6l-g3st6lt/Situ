@@ -1,10 +1,10 @@
 {
  "system": "s9",
- "made": "2026-11-18T22:48:32Z",
+ "made": "2026-11-23T13:16:26Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "a8d26cef7884742daf5f7561c060e94779943d44",
-  "differs_from_commit": false,
+  "git_commit": "63b314c75c82966a09054fdb98138835ea382623",
+  "differs_from_commit": true,
   "files": [
    {
     "path": "Situ/common/__init__.py",
@@ -32,7 +32,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "f36a8f2dc0ecb095848f4aef14d49313f2acabd69c0fe2e10bc1aa3f8143248e"
+    "sha256": "96e2e2d2de8d342a6f3e74fecbd53c07896b5a31e8aae7fd7d4bdf85901b3caf"
    },
    {
     "path": "Situ/s1_streets/__init__.py",
@@ -52,7 +52,7 @@
    },
    {
     "path": "Situ/s4_buildings/build.py",
-    "sha256": "ac5ffe38ee62058ea9ce3e666fdeb83b1bd9645dba67967b4ac403dadd2b7cd2"
+    "sha256": "fb24035849559cb4419cfb9b18141e6f70ab67d62bd59290f86576c9f272e7f3"
    },
    {
     "path": "Situ/s5_rhythm/__init__.py",
@@ -115,24 +115,24 @@
  "inputs": [
   {
    "name": "ADDRESS_FILE",
-   "path": "Situ/data/external/address_points_2026-09-25.json",
-   "bytes": 4231535,
-   "modified": "2026-10-14T22:52:08Z",
-   "sha256": "4aba339dc0fe69c513988f12e96ad0e39a44aa4c11f8c3a805342c683b025604"
+   "path": "Situ/data/external/address_points_2026-11-21.json",
+   "bytes": 2605226,
+   "modified": "2026-11-23T13:03:23Z",
+   "sha256": "f8ec25a878035609f6a38fc4e4e1cb51d345bcb7d0c71a48fb05a41375c5a64d"
   },
   {
    "name": "BIKE_COUNT_FILES",
    "path": "Situ/data/external/cyclistes_2025.csv",
-   "bytes": 127127287,
-   "modified": "2026-10-15T22:50:40Z",
-   "sha256": "cc470b8185e8a2ba4bda00b0dee7404a17ed573d4a933a3ec7796127b1cc5cd4"
+   "bytes": 127118512,
+   "modified": "2026-11-20T16:53:09Z",
+   "sha256": "1738eec3abb6e08f0ad82f9816c1e7ad2cf520cfecaf514ea22be99d1065c7e1"
   },
   {
    "name": "BIKE_COUNT_FILES",
    "path": "Situ/data/external/cyclistes_2026.csv",
-   "bytes": 214164671,
-   "modified": "2026-10-15T22:50:58Z",
-   "sha256": "de5f6ec08ca964e811ff543c1ec2135a40c0e504717eea2a238990ddb3f139d4"
+   "bytes": 250068681,
+   "modified": "2026-11-20T16:53:43Z",
+   "sha256": "fb1fea364ecd13a7f44a1b675d16678939751ba87873a100228c5a1029ad3857"
   },
   {
    "name": "BIKE_SITES_FILE",
@@ -213,10 +213,10 @@
   },
   {
    "name": "LOTS_FILE",
-   "path": "Situ/data/external/lots_study_2026-11-13.json",
+   "path": "Situ/data/external/lots_study_2026-11-20.json",
    "bytes": 6580168,
-   "modified": "2026-11-13T02:34:52Z",
-   "sha256": "ca2a38cf215f4a51d060cf5f298322f7787f1d3695588126218125e4138fe3c8"
+   "modified": "2026-11-21T02:13:11Z",
+   "sha256": "ed8d9edcfaf9375f69a096981d542d26537da7ab6b890373cd02f601b37cc888"
   },
   {
    "name": "OSM_CACHE",
@@ -248,10 +248,10 @@
   },
   {
    "name": "ROLL_FILE",
-   "path": "Situ/data/external/roll_study_streets_2026-11-12.json",
-   "bytes": 18537843,
-   "modified": "2026-11-13T02:35:15Z",
-   "sha256": "d4b38b6d31090bce7277c8854e71c0b074e9ff903de236b471024da1181d8c50"
+   "path": "Situ/data/external/roll_study_streets_2026-11-20.json",
+   "bytes": 18537823,
+   "modified": "2026-11-21T02:13:13Z",
+   "sha256": "a8838c1fc1041d966e335548df32ba78066d97df4a71cf68d370410cdd0bbfa2"
   },
   {
    "name": "STM_STOPS_FILE",
@@ -272,15 +272,15 @@
   },
   {
    "system": "s4",
-   "run_json_sha256": "ab3daf09fd2e97762c96b0de4b1d0deae1d37dc09ca67c50686174cf7d017f5c"
+   "run_json_sha256": "83ceb2c11e55a0f880b69f08011b6ecb227b197bc7703f4f864e6eefe15ee031"
   },
   {
    "system": "s5",
-   "run_json_sha256": "e6e7beace33b7f58a48bcd1a1a07d8abd49474e3b513bd708589fac437d5ac0f"
+   "run_json_sha256": "1738b8bcf449141bc5b2f1682a5e3b26d42fcccc5ed6893fa30455ad1793612c"
   },
   {
    "system": "s7",
-   "run_json_sha256": "7bc4edf992f02c62b13aac244f77cb63dc2030c96c6c213818bf6bceb51a8a59"
+   "run_json_sha256": "f74f92a34dead4a9f20163f5d80b594349f8b38f1fa1cc7c11e77406c4335974"
   },
   {
    "system": "s8",
@@ -396,7 +396,7 @@
   {
    "path": "Situ/outputs/s9/meta.json",
    "bytes": 1878,
-   "sha256": "54f64a0951c37bf6735ef263bcf0345653368ac273924e0890a105a0b75931ec"
+   "sha256": "2aaf53538e3c9e4122c9de3827600d60a012b208b07188a5d1540e2997150549"
   },
   {
    "path": "Situ/outputs/s9/routes.csv",
@@ -405,28 +405,28 @@
   },
   {
    "path": "Situ/outputs/s9/s9_sheet_counts.png",
-   "bytes": 22591,
-   "sha256": "df62f3958e9ebf0b973d1225f29cdf0100647f7e3344c7b369157b9574078ce2"
+   "bytes": 22541,
+   "sha256": "a523cc754309feeb2869f0b877fdd5dca51ae776e6a8ca815a9cd11d9e03375c"
   },
   {
    "path": "Situ/outputs/s9/s9_sheet_morning.png",
-   "bytes": 126174,
-   "sha256": "ddaadef6ead6284ddabc8506e3cc339f8e26db7a7cc581a9893f608a50e89e47"
+   "bytes": 126178,
+   "sha256": "5f539a18ba911a8f217b25c594d0d766ed4026b6d8919fa3ef4970ef4ef1fb47"
   },
   {
    "path": "Situ/outputs/s9/s9_sheet_readings.png",
-   "bytes": 111928,
-   "sha256": "588a3998a55a1de484fe5e93a525554e35a5081350a0aaf843f6f2cf870385e6"
+   "bytes": 112812,
+   "sha256": "dc46979af0396af9014b09652c2e30891c81ed65f2ca8e7948e05da18d92b31d"
   },
   {
    "path": "Situ/outputs/s9/s9_sheet_ring.png",
-   "bytes": 111750,
-   "sha256": "7acffc47da8d44d9d23e6dac82646b1f55cd08658181dcf2a0b7fbbb526f65c5"
+   "bytes": 111693,
+   "sha256": "aee60313dd0c921e68e4ab966f275e428f76ef6e40778e720992cea8b529277a"
   },
   {
    "path": "Situ/outputs/s9/stress_report.txt",
-   "bytes": 3543,
-   "sha256": "de3a66cb133b33cb4bdd21c6f22c63db23a63c7677efe0ddbb6c6f2f16e9d765"
+   "bytes": 3542,
+   "sha256": "9eedf88fb6127a1f79a24065ecb40b5b3ffda89e61647717e55d16b14a706c5b"
   },
   {
    "path": "Situ/outputs/s9/test_report.txt",
@@ -440,13 +440,13 @@
   },
   {
    "path": "Situ/outputs/s9/web_data.js",
-   "bytes": 69156,
-   "sha256": "006437f71617115ffa076629a2bab503560011ebbd9130c078d84b4e55af0449"
+   "bytes": 69170,
+   "sha256": "0db2fd44ac30bff6cb751cad1fdb7924e879cc1aff5124b5c88315ab50c0b2a5"
   }
  ],
  "tests": {
   "report": "Situ/outputs/s9/test_report.txt",
-  "made": "2026-11-18T22:48:31Z",
+  "made": "2026-11-23T13:16:25Z",
   "checks": 10,
   "pass": 9,
   "fail": 0,

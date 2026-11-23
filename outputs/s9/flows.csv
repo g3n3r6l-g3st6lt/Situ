@@ -150,7 +150,7 @@ shortest,S173,Rue Ottawa,21.392,72.1,99.586,20.227,213.305
 shortest,S174,Rue Ottawa,27.511,56.169,62.984,7.028,153.693
 shortest,S175,Rue Ottawa,33.103,67.105,77.865,8.754,186.827
 shortest,S176,Rue Ottawa,49.666,101.784,125.779,15.509,292.738
-shortest,S177,Allée des Barges,7.527,16.994,23.722,3.582,51.825
+shortest,S177,Allée des Barges,7.527,16.994,23.722,3.582,51.826
 shortest,S178,Allée des Barges,17.116,37.582,52.356,7.606,114.66
 shortest,S180,Allée des Vraquiers,5.978,12.242,17.036,2.036,37.293
 shortest,S181,Allée des Charbonniers,17.371,35.581,49.501,5.912,108.365
@@ -340,7 +340,7 @@ open,S173,Rue Ottawa,20.449,67.683,92.474,18.978,199.585
 open,S174,Rue Ottawa,15.07,36.149,39.267,4.578,95.064
 open,S175,Rue Ottawa,20.617,46.801,53.724,6.215,127.357
 open,S176,Rue Ottawa,48.968,98.416,120.323,14.544,282.251
-open,S177,Allée des Barges,7.527,16.994,23.722,3.582,51.825
+open,S177,Allée des Barges,7.527,16.994,23.722,3.582,51.826
 open,S178,Allée des Barges,28.667,53.195,69.031,8.783,159.676
 open,S180,Allée des Vraquiers,6.029,12.547,17.495,2.13,38.201
 open,S181,Allée des Charbonniers,17.371,35.581,49.501,5.912,108.365
@@ -533,7 +533,7 @@ straight,S173,Rue Ottawa,29.853,104.726,148.709,35.625,318.914
 straight,S174,Rue Ottawa,36.353,90.306,114.599,22.825,264.083
 straight,S175,Rue Ottawa,41.926,101.128,129.308,24.516,296.879
 straight,S176,Rue Ottawa,58.522,136.032,177.558,31.344,403.457
-straight,S177,Allée des Barges,7.527,16.994,23.722,3.582,51.825
+straight,S177,Allée des Barges,7.527,16.994,23.722,3.582,51.826
 straight,S178,Allée des Barges,17.207,38.127,53.174,7.773,116.281
 straight,S180,Allée des Vraquiers,5.996,12.35,17.199,2.069,37.614
 straight,S181,Allée des Charbonniers,17.441,35.821,49.895,5.968,109.125

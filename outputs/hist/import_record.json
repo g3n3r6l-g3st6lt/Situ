@@ -1,20 +1,20 @@
 {
- "made": "2026-11-20T17:04:02+00:00",
+ "made": "2026-11-23T06:43:49+00:00",
  "tool": "tools/hist_import.py",
  "read": [
   {
    "path": "historical_situ/exports/geojson/ref_boundary.geojson",
-   "sha256": "364f5b1ee073b6a18271ce3021e6319c50704536e351144f0fcf83c64efdfccd",
+   "sha256": "38fd1eedf412eb2dc53ac0314c7154f6aba07fcb09b94a5750f59f8396134c98",
    "copied_to": "outputs/hist/boundary.geojson"
   },
   {
    "path": "historical_situ/exports/geojson/h12_segmap.geojson",
-   "sha256": "8b43ce32e1c58913b6eabe95580e818fefcb53d8089cff897a8972aae4bb2dda",
+   "sha256": "088e7b52fa5ece37f8c1f247ed3d729e425bd1913434c66daf82b24873cd9a8d",
    "copied_to": "outputs/hist/h1_segmap_1912.geojson"
   },
   {
    "path": "historical_situ/exports/geojson/h12_syntax.geojson",
-   "sha256": "e32fee298bdb6bb76b0e552ad906de88b9860a43c35cc45deb112b6402b78022",
+   "sha256": "e7d9cdc30eb6aa052c7b800aae5317d64e35eb6c123af2e6fba416027c192a09",
    "copied_to": "outputs/hist/h2_values_1912.geojson"
   },
   {

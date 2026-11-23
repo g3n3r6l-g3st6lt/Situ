@@ -1,0 +1,71 @@
+{
+ "id": "GME005",
+ "status": "generated",
+ "name": "Pale green-grey fine render or coating",
+ "family": "Render / coating",
+ "building": "w347395104",
+ "building_name": "Caledonia Iron Works, 1840-1844 rue William (the S4 outline also holds its neighbours)",
+ "where_on_wall": "Broad smooth areas between exposed stone bands",
+ "finish_seen": "Continuous fine-grained pale surface with subtle mottling",
+ "photo": {
+  "file": "data/external/commons_images/Caledonia_Iron_Works__1840-1844__rue_William__Sud-Ouest___35368007014_.jpg",
+  "title": "File:Caledonia Iron Works, 1840-1844, rue William (Sud-Ouest) (35368007014).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Caledonia_Iron_Works,_1840-1844,_rue_William_(Sud-Ouest)_(35368007014).jpg",
+  "author": "Parcours riverain - Ville de Montréal from Canada",
+  "licence": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0",
+  "taken": "2017-07-19"
+ },
+ "generated_file": "buildings/Caledonia_1840-1844_William/render_pale_green_grey_fine/base_color_interpreted.png",
+ "generated_sha256": "ea1179450e6af26bb1800739b8e068c0cceeccfd49f52e38cef616b9fb7b4d29",
+ "made": {
+  "on": "2026-11-20",
+  "where": "Prototype/Materials/Encyclopedia_2026-11-20 (outside Situ)",
+  "method_in_its_record": "built-in image generation, from the photo and the prompt",
+  "aim": "control over the pattern (Mo, 2026-11-20)"
+ },
+ "prompt": "Produce a square base-colour game texture inspired faithfully by this Caledonia Iron Works facade reference: pale green-grey fine-grained render/coating visible in the broad panels between the stone bands. Continuous gently uneven subtly granular surface, slight age mottling. No stone blocks, bricks or joints. Substrate and binder are unknown. Flat frontal orthographic surface fills whole image. Even neutral diffuse colour, no cast shadows, directional highlights, windows, text, borders, trim, vegetation or objects. Seamless repeatable edges requested. Authored reconstruction for prototyping, not measured albedo. Preserve the material's natural surface identity.",
+ "study_note": "Render/coating is a visual classification. Binder, substrate, layer thickness and whether every smooth area has the same construction remain unknown.",
+ "scale_note": "No measured scale; continuous texture without an independently sized unit.",
+ "roughness_start": 0.8,
+ "location_evidence": "S4 building w347395104. The photo's title gives 1840-1844 rue William; the tax roll's 1830-1844 rue William lies 1.5 m from this outline; the photo shows the rue William and rue des Seigneurs signs at the corner, and the outline's short side runs along des Seigneurs. Encyclopedia v2 held these two studies until the facade was tied to a footprint; this is that tie (2026-11-20).",
+ "made_by": "tools/materials_generated.py",
+ "measured_on_image": {
+  "size_px": [
+   1254,
+   1254
+  ],
+  "seam_left_right": 0.78,
+  "seam_top_bottom": 0.67,
+  "seam_reads": "no harder than its own joints",
+  "mean_colour_srgb": "#abad9f"
+ },
+ "scale": {
+  "tile_m": null,
+  "how": "No measured scale; continuous texture without an independently sized unit."
+ },
+ "seam_mended": null,
+ "maps": {
+  "base_color": {
+   "file": "outputs/materials/GME005/base_color.png",
+   "original": "buildings/Caledonia_1840-1844_William/render_pale_green_grey_fine/base_color_interpreted.png",
+   "status": "generated",
+   "how": "made by an image model from the photo and the prompt below; the pattern is authored, its colour and units follow the photo by eye"
+  },
+  "height": {
+   "file": "",
+   "status": "not made",
+   "how": "no relief aligned with this image yet"
+  },
+  "normal": {
+   "file": "",
+   "status": "not made",
+   "how": "waits for the height"
+  },
+  "roughness": {
+   "file": "",
+   "status": "not made",
+   "how": "the study gives a starting value for trials: 0.8"
+  }
+ }
+}

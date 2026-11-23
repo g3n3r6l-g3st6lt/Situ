@@ -1,5 +1,5 @@
 {
- "made": "2026-11-18",
+ "made": "2026-11-23",
  "reference_hours": [
   7,
   8,
@@ -100,9 +100,9 @@
    "det-00401-02",
    "det-01487-03"
   ],
-  "full_days": 376,
+  "full_days": 407,
   "first": "2025-06-09",
-  "last": "2026-10-14",
+  "last": "2026-11-19",
   "days_set_aside": 0,
   "near_but_outside": [
    "det-00399-01 Notre-Dame/Peel (35.3 m from J187)",

@@ -1,10 +1,10 @@
 {
  "system": "s6",
- "made": "2026-11-18T22:48:10Z",
+ "made": "2026-11-23T13:16:04Z",
  "note": "made by tools/make_manifest.py; hashes are SHA-256; paths are relative to the Prototype folder",
  "code": {
-  "git_commit": "a8d26cef7884742daf5f7561c060e94779943d44",
-  "differs_from_commit": false,
+  "git_commit": "63b314c75c82966a09054fdb98138835ea382623",
+  "differs_from_commit": true,
   "files": [
    {
     "path": "Situ/common/__init__.py",
@@ -28,7 +28,7 @@
    },
    {
     "path": "Situ/config.py",
-    "sha256": "f36a8f2dc0ecb095848f4aef14d49313f2acabd69c0fe2e10bc1aa3f8143248e"
+    "sha256": "96e2e2d2de8d342a6f3e74fecbd53c07896b5a31e8aae7fd7d4bdf85901b3caf"
    },
    {
     "path": "Situ/s1_streets/__init__.py",
@@ -48,7 +48,7 @@
    },
    {
     "path": "Situ/s4_buildings/build.py",
-    "sha256": "ac5ffe38ee62058ea9ce3e666fdeb83b1bd9645dba67967b4ac403dadd2b7cd2"
+    "sha256": "fb24035849559cb4419cfb9b18141e6f70ab67d62bd59290f86576c9f272e7f3"
    },
    {
     "path": "Situ/s6_streetscape/__init__.py",
@@ -83,10 +83,10 @@
  "inputs": [
   {
    "name": "ADDRESS_FILE",
-   "path": "Situ/data/external/address_points_2026-09-25.json",
-   "bytes": 4231535,
-   "modified": "2026-10-14T22:52:08Z",
-   "sha256": "4aba339dc0fe69c513988f12e96ad0e39a44aa4c11f8c3a805342c683b025604"
+   "path": "Situ/data/external/address_points_2026-11-21.json",
+   "bytes": 2605226,
+   "modified": "2026-11-23T13:03:23Z",
+   "sha256": "f8ec25a878035609f6a38fc4e4e1cb51d345bcb7d0c71a48fb05a41375c5a64d"
   },
   {
    "name": "BOUNDARY_FILE",
@@ -118,10 +118,10 @@
   },
   {
    "name": "LOTS_FILE",
-   "path": "Situ/data/external/lots_study_2026-11-13.json",
+   "path": "Situ/data/external/lots_study_2026-11-20.json",
    "bytes": 6580168,
-   "modified": "2026-11-13T02:34:52Z",
-   "sha256": "ca2a38cf215f4a51d060cf5f298322f7787f1d3695588126218125e4138fe3c8"
+   "modified": "2026-11-21T02:13:11Z",
+   "sha256": "ed8d9edcfaf9375f69a096981d542d26537da7ab6b890373cd02f601b37cc888"
   },
   {
    "name": "MAPILLARY_POINTS_FILE",
@@ -181,10 +181,10 @@
   },
   {
    "name": "ROLL_FILE",
-   "path": "Situ/data/external/roll_study_streets_2026-11-12.json",
-   "bytes": 18537843,
-   "modified": "2026-11-13T02:35:15Z",
-   "sha256": "d4b38b6d31090bce7277c8854e71c0b074e9ff903de236b471024da1181d8c50"
+   "path": "Situ/data/external/roll_study_streets_2026-11-20.json",
+   "bytes": 18537823,
+   "modified": "2026-11-21T02:13:13Z",
+   "sha256": "a8838c1fc1041d966e335548df32ba78066d97df4a71cf68d370410cdd0bbfa2"
   },
   {
    "name": "STREETSCAPE_FILE",
@@ -201,7 +201,7 @@
   },
   {
    "system": "s4",
-   "run_json_sha256": "ab3daf09fd2e97762c96b0de4b1d0deae1d37dc09ca67c50686174cf7d017f5c"
+   "run_json_sha256": "83ceb2c11e55a0f880b69f08011b6ecb227b197bc7703f4f864e6eefe15ee031"
   }
  ],
  "settings": {
@@ -285,7 +285,7 @@
   {
    "path": "Situ/outputs/s6/meta.json",
    "bytes": 2881,
-   "sha256": "cc757725a6e3ff7ef913773f85185d9fea6296b0c505243c0ac3609e99d82495"
+   "sha256": "f51fe69767b8933b3c15769773b9af5bb5b477ffdbcc1d8b695fa5b2a79fe210"
   },
   {
    "path": "Situ/outputs/s6/objects.csv",
@@ -329,13 +329,13 @@
   },
   {
    "path": "Situ/outputs/s6/web_data.js",
-   "bytes": 1828822,
-   "sha256": "5ae7660251e2b4cbcbbed5b4dc71658b7656eb008b32b50f51f40bdac8ec6983"
+   "bytes": 1828823,
+   "sha256": "b5127893fe15e7ae9828c7718b636b834fc4fe78082decd7028018864196e594"
   }
  ],
  "tests": {
   "report": "Situ/outputs/s6/test_report.txt",
-  "made": "2026-11-18T22:48:10Z",
+  "made": "2026-11-23T13:16:03Z",
   "checks": 10,
   "pass": 8,
   "fail": 0,

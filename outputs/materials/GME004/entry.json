@@ -1,0 +1,71 @@
+{
+ "id": "GME004",
+ "status": "generated",
+ "name": "Warm grey rough-faced rectangular stone",
+ "family": "Stone",
+ "building": "w347395104",
+ "building_name": "Caledonia Iron Works, 1840-1844 rue William (the S4 outline also holds its neighbours)",
+ "where_on_wall": "Horizontal stone bands and lower plinth; exclude smooth infill",
+ "finish_seen": "Rectangular units with fractured projecting faces and narrow joints",
+ "photo": {
+  "file": "data/external/commons_images/Caledonia_Iron_Works__1840-1844__rue_William__Sud-Ouest___35368007014_.jpg",
+  "title": "File:Caledonia Iron Works, 1840-1844, rue William (Sud-Ouest) (35368007014).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Caledonia_Iron_Works,_1840-1844,_rue_William_(Sud-Ouest)_(35368007014).jpg",
+  "author": "Parcours riverain - Ville de Montréal from Canada",
+  "licence": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0",
+  "taken": "2017-07-19"
+ },
+ "generated_file": "buildings/Caledonia_1840-1844_William/stone_warm_grey_rough_faced/base_color_interpreted.png",
+ "generated_sha256": "ecec101900b0390138598a60c073cbff95af5e234e9b719968251bb25f41f27d",
+ "made": {
+  "on": "2026-11-20",
+  "where": "Prototype/Materials/Encyclopedia_2026-11-20 (outside Situ)",
+  "method_in_its_record": "built-in image generation, from the photo and the prompt",
+  "aim": "control over the pattern (Mo, 2026-11-20)"
+ },
+ "prompt": "Produce a square base-colour game texture inspired faithfully by this Caledonia Iron Works facade reference: rough-faced rectangular warm grey stone blocks visible in the horizontal bands and lower plinth. Reconstruct a patch of that stone masonry with two to four rows of rectangular stones, broad irregular fractured faces, narrow pale mortar joints. Do not use smooth rendered panels. Flat frontal orthographic surface fills whole image. Even neutral diffuse colour, no cast shadows, directional highlights, windows, text, borders, trim, vegetation or objects. Seamless repeatable edges requested. Authored reconstruction for prototyping, not measured albedo. Preserve the material's natural surface identity.",
+ "study_note": "Do not label the entire facade rough stone. Some apparent colour may be a surface treatment. Exact stone species and coating history are unverified.",
+ "scale_note": "No verified physical scale. Set scale from a measured stone course before production.",
+ "roughness_start": 0.8,
+ "location_evidence": "S4 building w347395104. The photo's title gives 1840-1844 rue William; the tax roll's 1830-1844 rue William lies 1.5 m from this outline; the photo shows the rue William and rue des Seigneurs signs at the corner, and the outline's short side runs along des Seigneurs. Encyclopedia v2 held these two studies until the facade was tied to a footprint; this is that tie (2026-11-20).",
+ "made_by": "tools/materials_generated.py",
+ "measured_on_image": {
+  "size_px": [
+   1254,
+   1254
+  ],
+  "seam_left_right": 0.98,
+  "seam_top_bottom": 0.63,
+  "seam_reads": "no harder than its own joints",
+  "mean_colour_srgb": "#988676"
+ },
+ "scale": {
+  "tile_m": null,
+  "how": "No verified physical scale. Set scale from a measured stone course before production."
+ },
+ "seam_mended": null,
+ "maps": {
+  "base_color": {
+   "file": "outputs/materials/GME004/base_color.png",
+   "original": "buildings/Caledonia_1840-1844_William/stone_warm_grey_rough_faced/base_color_interpreted.png",
+   "status": "generated",
+   "how": "made by an image model from the photo and the prompt below; the pattern is authored, its colour and units follow the photo by eye"
+  },
+  "height": {
+   "file": "",
+   "status": "not made",
+   "how": "no relief aligned with this image yet"
+  },
+  "normal": {
+   "file": "",
+   "status": "not made",
+   "how": "waits for the height"
+  },
+  "roughness": {
+   "file": "",
+   "status": "not made",
+   "how": "the study gives a starting value for trials: 0.8"
+  }
+ }
+}
