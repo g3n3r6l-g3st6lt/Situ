@@ -1,0 +1,290 @@
+{
+  "pack": "materials_complete_maps_2026-11-23",
+  "variants": 10,
+  "maps": 120,
+  "manifest_files_verified": 181,
+  "entries": [
+    {
+      "id": "GME001",
+      "name": "Red fired-brick masonry — weathered face",
+      "building": "Lowney 350 Inspecteur",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "feature_mask",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        1254,
+        1190
+      ],
+      "source_reference": {
+        "title": "File:Le Lowney - 005.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Le_Lowney_-_005.jpg",
+        "creator": "Jeangagnon",
+        "credit_note": "Le Lowney, phase 1, au 350, rue de l'Inspecteur, Montréal",
+        "licence": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "observation_date": "2016-05-23",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Le_Lowney_-_005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "latitude": 45.49624,
+        "longitude": -73.5602409,
+        "study_area_flag": true
+      }
+    },
+    {
+      "id": "GME002",
+      "name": "Red-orange fired-brick masonry — weathered face",
+      "building": "Robin Sadler 1845 William",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "feature_mask",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        100,
+        101
+      ],
+      "source_reference": {
+        "title": "File:Robin & Sadler, 1845, rue William (Sud-Ouest) (36204300985).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Robin_%26_Sadler,_1845,_rue_William_(Sud-Ouest)_(36204300985).jpg",
+        "creator": "Parcours riverain - Ville de Montréal from Canada",
+        "credit_note": "Photo : Denis Tremblay",
+        "licence": "CC BY 2.0",
+        "licence_url": "https://creativecommons.org/licenses/by/2.0",
+        "observation_date": "2017-07-19 13:46",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Robin_%26_Sadler%2C_1845%2C_rue_William_%28Sud-Ouest%29_%2836204300985%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "latitude": null,
+        "longitude": null,
+        "study_area_flag": "not established"
+      }
+    },
+    {
+      "id": "GTM01",
+      "name": "Red-brown brick and pale mortar",
+      "building": "301 rue Young, Griffintown, Montreal",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "feature_mask",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "source_reference": "Mapillary image 413784728208746, captured 2024-03-13.\nhttps://www.mapillary.com/app/?pKey=413784728208746\nIndividual photographer attribution is absent in the inherited register; resolve before publishing photographic derivatives. The maps are authored reconstructions, not extracted photograph pixels."
+    },
+    {
+      "id": "GTM02",
+      "name": "Blue coated vertically profiled cladding",
+      "building": "Rue Barre, Griffintown, Montreal; footprint w1080276132",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "feature_mask",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "source_reference": "Mapillary image 481357544903592, captured 2024-03-15.\nhttps://www.mapillary.com/app/?pKey=481357544903592\nIndividual photographer attribution is absent in the inherited register; resolve before publishing photographic derivatives. The maps are authored reconstructions, not extracted photograph pixels."
+    },
+    {
+      "id": "GTM03",
+      "name": "Light neutral coating over aluminum railings",
+      "building": "Sherwin, 1957 rue Hunter, Griffintown, Montreal",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "feature_mask",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "source_reference": "Installer: https://www.rampesavantgarde.com/realisations/sherwin/?lang=en\nDeveloper: https://mondev.ca/fr/appartements-et-condos-a-louer-montreal/griffintown-fr/sherwin-condos-locatifs/\nPhotograph: https://mondev.ca/wp-content/uploads/2026/07/SHW_EXT_terasse_02-1.jpg\nCapture date unknown. No open image-reuse licence established. Context only; no pixels extracted into maps."
+    },
+    {
+      "id": "GTM04",
+      "name": "Frosted glass privacy-screen study",
+      "building": "Sherwin, 1957 rue Hunter, Griffintown, Montreal",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "feature_mask",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "source_reference": "Installer: https://www.rampesavantgarde.com/realisations/sherwin/?lang=en\nDeveloper: https://mondev.ca/fr/appartements-et-condos-a-louer-montreal/griffintown-fr/sherwin-condos-locatifs/\nPhotograph: https://mondev.ca/wp-content/uploads/2026/07/SHW_EXT_terasse_02-1.jpg\nCapture date unknown. No open image-reuse licence established. Context only; no pixels extracted into maps."
+    },
+    {
+      "id": "GTM05",
+      "name": "Grey rough stone infill and pale mortar",
+      "building": "New City Gas complex, rue Ottawa, Griffintown, Montreal",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "feature_mask",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "source_reference": "Reference: File:New City Gas Montreal 01.jpg, by Jeangagnon. Captured 2011-08-07.\nhttps://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg\nSource licence: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0\nSource photo copied unchanged; retain credit and licence when sharing it. These maps are separately authored procedural reconstructions with no photographic pixel extraction. They are not evidence of current condition.\nGriffintown scope evidence retained from prior review: https://www.patrimoine-culturel.gouv.qc.ca/detail.do?id=191016&methode=consulter&type=bien"
+    },
+    {
+      "id": "GTM06",
+      "name": "Grey dressed stone surround surface",
+      "building": "New City Gas complex, rue Ottawa, Griffintown, Montreal",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "feature_mask",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "source_reference": "Reference: File:New City Gas Montreal 01.jpg, by Jeangagnon. Captured 2011-08-07.\nhttps://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg\nSource licence: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0\nSource photo copied unchanged; retain credit and licence when sharing it. These maps are separately authored procedural reconstructions with no photographic pixel extraction. They are not evidence of current condition.\nGriffintown scope evidence retained from prior review: https://www.patrimoine-culturel.gouv.qc.ca/detail.do?id=191016&methode=consulter&type=bien"
+    },
+    {
+      "id": "GTM05-T1",
+      "name": "New City Gas rough stone — traced unique panel",
+      "building": "New City Gas complex, rue Ottawa, Griffintown, Montreal",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "feature_mask",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "source_reference": "Jeangagnon, 2011-08-07; https://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg ; CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0 . Cropped reference, not texture pixels."
+    },
+    {
+      "id": "GME003-M1",
+      "name": "Earlier detailed grey stone colour study — matching relief draft",
+      "building": "New City Gas complex, 956 rue Ottawa, Griffintown, Montreal",
+      "channels": [
+        "base_color",
+        "height_estimated_16bit",
+        "normal_OpenGL",
+        "normal_DirectX",
+        "feature_mask",
+        "roughness_assumed",
+        "metallic_surface",
+        "ambient_occlusion_neutral",
+        "transmission_assumed",
+        "opacity",
+        "ambient_occlusion_estimated",
+        "ORM_Unreal"
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "source_reference": {
+        "title": "File:New City Gas Montreal 01.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:New_City_Gas_Montreal_01.jpg",
+        "creator": "Jeangagnon",
+        "credit_note": "Complexe de la New City Gas Company of Montreal, rue Ottawa, Montréal",
+        "licence": "CC BY-SA 3.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "observation_date": "2011-08-07 09:51:26",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/New_City_Gas_Montreal_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "latitude": 45.495496,
+        "longitude": -73.557839,
+        "study_area_flag": true
+      }
+    }
+  ],
+  "checks": [
+    "manifest hashes",
+    "map decoding",
+    "matching dimensions per variant"
+  ],
+  "limits": "Checks do not establish physical accuracy, map registration, licensing clearance or engine integration."
+}

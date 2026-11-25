@@ -562,6 +562,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#m002" id="toc-m002" class="nav-link" data-scroll-target="#m002">M002 · red brick, 1880s factory wall</a></li>
   <li><a href="#generated" id="toc-generated" class="nav-link" data-scroll-target="#generated">Generated from photos</a></li>
   <li><a href="#sets" id="toc-sets" class="nav-link" data-scroll-target="#sets">Map sets</a></li>
+  <li><a href="#complete-maps" id="toc-complete-maps" class="nav-link" data-scroll-target="#complete-maps">Complete map pack</a></li>
   <li><a href="#set-aside" id="toc-set-aside" class="nav-link" data-scroll-target="#set-aside">Set aside</a></li>
   <li><a href="#photos-waiting-for-entries" id="toc-photos-waiting-for-entries" class="nav-link" data-scroll-target="#photos-waiting-for-entries">Photos waiting for entries</a></li>
   </ul>
@@ -924,7 +925,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Scale.</strong> Only where the wall was measured in a photo: the tile’s courses times the course height measured on that wall.</li>
 <li><strong>Colour.</strong> The tile’s mean colour; for brick, its difference from the colour measured on the photo (CIE76).</li>
 </ul>
-<p>One study, GME001, also has height, normal and roughness maps, made from its mortar joints. The others carry colour only. The material hub of 23 November 2026 holds back 3 of them (GME004 held, GME005 held, GME006 excluded): they stay on this page with the reason, and are tied to no building in the Lab.</p>
+<p>In these original study records, GME001 also has height, normal and roughness maps made from its mortar joints; the other records describe colour studies. Later extensions are listed separately in the <a href="#complete-maps">complete map pack</a>. The material hub of 23 November 2026 holds back 3 of them (GME004 held, GME005 held, GME006 excluded): they stay on this page with the reason, and are tied to no building in the Lab.</p>
 <section id="gme001" class="level3">
 <h3 class="anchored" data-anchor-id="gme001">GME001 · red fired-brick masonry, weathered face</h3>
 <p><strong>Where</strong> Lowney (Phase 1), 350 rue de l’Inspecteur (S4 building w54895065). Part of the wall followed: plain brick piers of the short Inspecteur facade.</p>
@@ -1581,7 +1582,93 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p><strong>Source</strong> Made on 2026-11-23 by a script, from reference photos and documents named in its notes; no photo pixel is in its maps. Its reference photo is by Jeangagnon, 7 August 2011, CC BY-SA 3.0, not shown here. Record: <a href="outputs/materials/GTM06/entry.json">entry.json</a>.</p>
 <!-- end of map sets -->
+<!-- complete map inventory -->
 </section>
+</section>
+<section id="complete-maps" class="level2">
+<h2 class="anchored" data-anchor-id="complete-maps">Complete map pack</h2>
+<p>The consolidated pack contains <strong>10 texture variants and 120 maps</strong>. These extend earlier studies; they are not 120 distinct materials. All listed files decode, match their recorded hashes, and share dimensions within each variant.</p>
+<p>Each variant has colour, estimated height, OpenGL and DirectX normals, assumed roughness, metallic, neutral and estimated ambient occlusion, feature mask, assumed transmission, opacity, and a packed Unreal ORM map. Estimates and neutral placeholders are not measured surface properties. File validation does not establish pixel alignment or successful use in a game engine.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variant</th>
+<th>Associated building or location</th>
+<th>Map size</th>
+<th>Channels</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GME001</td>
+<td>Lowney 350 Inspecteur</td>
+<td>1254 × 1190</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>GME002</td>
+<td>Robin Sadler 1845 William</td>
+<td>100 × 101</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>GTM01</td>
+<td>301 rue Young, Griffintown, Montreal</td>
+<td>1024 × 1024</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>GTM02</td>
+<td>Rue Barre, Griffintown, Montreal; footprint w1080276132</td>
+<td>1024 × 1024</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>GTM03</td>
+<td>Sherwin, 1957 rue Hunter, Griffintown, Montreal</td>
+<td>512 × 512</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>GTM04</td>
+<td>Sherwin, 1957 rue Hunter, Griffintown, Montreal</td>
+<td>512 × 512</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>GTM05</td>
+<td>New City Gas complex, rue Ottawa, Griffintown, Montreal</td>
+<td>1024 × 1024</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>GTM06</td>
+<td>New City Gas complex, rue Ottawa, Griffintown, Montreal</td>
+<td>1024 × 1024</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>GTM05-T1</td>
+<td>New City Gas complex, rue Ottawa, Griffintown, Montreal</td>
+<td>1024 × 1024</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>GME003-M1</td>
+<td>New City Gas complex, 956 rue Ottawa, Griffintown, Montreal</td>
+<td>1254 × 1254</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>The association records where the study was sourced or referenced; it does not prove that an authored reconstruction reproduces that wall. Mapillary photographer credits for GTM01 and GTM02 remain unresolved, and the Sherwin reference photographs do not have an established open licence. This inventory does not clear those assets for redistribution.</p>
+<p><a href="outputs/materials/complete_inventory.json">Read the file-check receipt and source references</a>. Full-resolution maps remain in the local project. <!-- end complete map inventory --></p>
 </section>
 <section id="set-aside" class="level2">
 <h2 class="anchored" data-anchor-id="set-aside">Set aside</h2>

@@ -144,12 +144,12 @@ ul.task-list li input[type="checkbox"] {
 
   <section class="situ-hero" aria-label="Situ">
     <figure class="cell cell-lines figure">
-      <img class="nolightbox art-2d figure-img" src="assets/home-explore-plan.svg" alt="Illustrative network with a highlighted route.">
-      <figcaption class="cap-2d"><b>Diagram</b>Follow connections through a network.</figcaption>
+      <img class="nolightbox art-2d figure-img" src="assets/home-explore-plan.svg" alt="Griffintown streets and building footprints; Peel and William highlighted.">
+      <figcaption class="cap-2d"><b>Map</b>Griffintown street fabric; Peel and William highlighted for orientation.</figcaption>
     </figure>
     <figure class="cell cell-dots figure">
-      <img class="nolightbox art-3d figure-img" src="assets/home-explore-iso.svg" alt="Illustrative isometric network of linked layers.">
-      <figcaption class="cap-3d"><b>Diagram</b>Read a place through several linked layers.</figcaption>
+      <img class="nolightbox art-3d figure-img" src="outputs/site/home_explore_3d.svg" alt="Network steps from J080 represented as rising street lines.">
+      <figcaption class="cap-3d"><b>Spatial study</b>Junction steps from J080, raised for comparison; elevation here represents network steps.</figcaption>
     </figure>
   </section>
 
@@ -258,18 +258,18 @@ ul.task-list li input[type="checkbox"] {
 
 <script>
 (function () {
-  // Illustrative section diagrams, not measured Griffintown maps.
+  // Actual SITU geometry; captions identify dates, encodings and limits.
   const ART = {
-    explore: ["home-explore-plan.svg", "Diagram", "Follow connections through a network.", "home-explore-iso.svg", "Diagram", "Read a place through several linked layers."],
-    systems: ["home-systems-plan.svg", "Diagram", "Nine systems, connected by shared evidence.", "home-systems-iso.svg", "Diagram", "Separate components contribute to one model."],
-    game: ["home-game-plan.svg", "Diagram", "Arrange streets and building footprints.", "home-game-iso.svg", "Diagram", "Translate footprints and heights into a scene."],
-    research: ["home-research-plan.svg", "Diagram", "Move from sources to evidence and questions.", "home-research-iso.svg", "Diagram", "Compare an interpretation with its evidence."],
-    data: ["home-data-plan.svg", "Diagram", "Keep records structured and traceable.", "home-data-iso.svg", "Diagram", "Combine sources without losing their identities."],
-    workshop: ["home-workshop-plan.svg", "Diagram", "Edit a connection and inspect what changes.", "home-workshop-iso.svg", "Diagram", "Turn a short piece of code into a visible result."],
+    explore: ["assets/home-explore-plan.svg", "Map", "Griffintown street fabric; Peel and William highlighted for orientation.", "outputs/site/home_explore_3d.svg", "Spatial study", "Junction steps from J080, raised for comparison; elevation here represents network steps."],
+    systems: ["assets/home-systems-plan.svg", "Map", "S1 streets and S6 recorded trees: infrastructure and the living streetscape.", "outputs/site/home_systems_3d.svg", "Spatial study", "S7 commuter estimates as columns on homes; column height represents counts, not building height."],
+    research: ["assets/home-research-plan.svg", "Map", "Present streets in grey; the 1912 core network in dashed pink. Source dates remain distinct.", "outputs/site/home_research_3d.svg", "Spatial study", "Walking choice within 800 m, raised as walls. Height represents a network score."],
+    game: ["assets/home-game-plan.svg", "Map", "S4 footprints; pink-grey fill marks buildings with recorded dwellings.", "outputs/site/home_game_3d.svg", "Spatial study", "G1 building masses at recorded heights. Pink dashed footprints have no known height."],
+    data: ["assets/home-data-plan.svg", "Map", "Two recorded geometries: S1 junction points and S4 building polygons.", "outputs/site/home_data_3d.png", "Spatial study", "The 2023 lidar point cloud: recorded ground and building elevations."],
+    workshop: ["assets/home-workshop-plan.svg", "Map", "S1 network with non-geobase additions in pink. Workshop practice datasets are separate.", "outputs/site/home_explore_2d.svg", "Spatial study", "A real S1 route and its 10% distance corridor. The Workshop teaches these processes with small invented datasets."],
   };
   ART[""] = ART.explore;
   const OLD = { situ: "research", method: "research", lab: "explore", resources: "data" };   // links made before the four sections
-  const dir = "assets/";
+  const dir = "";
   const img2 = document.querySelector(".art-2d"), img3 = document.querySelector(".art-3d");
   const cap2 = document.querySelector(".cap-2d"), cap3 = document.querySelector(".cap-3d");
   const narrow = () => window.matchMedia("(max-width: 1100px)").matches;
