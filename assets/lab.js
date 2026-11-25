@@ -483,7 +483,7 @@
     if (past() && state.tab === "s4") {
       const M = H.meta.buildings[state.hbld];
       key.innerHTML = `<span><i class="kb hb-brick"></i>brick${state.hbld === "1912" ? " or stone" : ""}</span><span><i class="kb hb-frame"></i>frame</span>${state.hbld !== "1912" ? `<span><i class="kb hb-stone"></i>stone or concrete</span>` : ""}` +
-        `<span><i class="kb hb-nested"></i>inside a larger outline</span><span>${state.hbld === "c1927" ? (M.outlines ? M.outlines + " outlines carried, on " + (M.blocks_1949 || []).length + " of " + H.blocks.length + " blocks; the rest is unknown in c1927" : "none carried yet: waiting for the 1949 plans") : M.outlines + " outlines on " + H.blocks.length + " blocks; the rest of the area is not traced yet"}</span>` + (state.era === "compare" ? `<span><i class="kb ov"></i>today's buildings (S4)</span>` : "");
+        `<span><i class="kb hb-nested"></i>inside a larger outline</span><span>${state.hbld === "c1927" ? (M.outlines ? M.outlines + " outlines carried, on " + (M.blocks_1949 || []).length + " of " + H.blocks.length + " blocks; the rest is unknown in c1927" : "none carried yet: waiting for the 1949 plans") : M.outlines.toLocaleString("en") + " outlines" + (state.hbld === "1918" ? ", sheets 27 and 28 only: beyond them no 1918 sheet survives in the digitised copy" : " across the study area")}</span>` + (state.era === "compare" ? `<span><i class="kb ov"></i>today's buildings (S4)</span>` : "");
       return;
     }
     if (past() && (state.tab === "s1" || state.tab === "all" || state.tab === "s2")) {
@@ -1064,7 +1064,7 @@
       <tr><td>walk choice</td><td>${fmt(n.v.nach_400)}</td><td>${fmt(n.v.nach_800)}</td></tr><tr><td>walk integr.</td><td>${fmt(n.v.nain_400)}</td><td>${fmt(n.v.nain_800)}</td></tr></table>`).join("") +
       `<p class="sub">Normalised values, with no unit, from PlanX 4.19.0 on the 1912 network. A street's rank moves by ${list.map(n => n.es800 == null ? "none" : n.es800.toFixed(2)).join(", ")} at 800 m when the ring around the halo is removed${list.some(n => n.es800 > 0.2) ? ": more than 0.2, so this value leans on the edge" : ""}.</p>`;
   }
-  const BLOCK = id => { const b = H.blocks.find(x => x.id === id); return b ? b.name : id || "block not recorded"; };
+  const BLOCK = id => { if (!id) return "beyond the pilot blocks"; const b = H.blocks.find(x => x.id === id); return b ? b.name : id; };
   function hbldHTML(b) {
     const src = b.year === "1912" ? "the 1912 Goad atlas" : b.year === "1918" ? "the May 1918 insurance plan" : "the May 1918 plan, carried to c1927";
     let h = `<h2 class="lab-pt">${esc(b.occupant || (b.year === "c1927" ? "A building carried to c1927" : "A building in " + b.year))}</h2>
@@ -1079,6 +1079,7 @@
     if (b.year === "c1927") h += `<p>Storeys: ${b.storeys ? `<b>${esc(b.storeys)}</b> <span class="sub">from 1918</span>` : `<span class="warn">unknown</span>`}</p>
       <p>Why it is carried: ${esc(b.basis)} <span class="sub">(${esc(b.strength)})</span></p>${b.addresses_1927 ? `<p class="sub">1927 directory: ${esc(b.addresses_1927)}</p>` : ""}
       <p class="sub">Every value here is inferred from 1918, bracketed by 1949 (D039). From 1918 outline ${esc(b.footprint_1918)}.</p>`;
+    if (b.scope === "area") h += `<p class="sub">Traced beyond the pilot blocks by the same script and settings (${b.year === "1912" ? "D042" : "D043"}). In a sample of 40 checked on the plate, 31 outlines followed one building, 4 joined two neighbours and 5 were partial: this one may do either.${b.year === "1918" ? " Its storeys, use and numbers are not read yet, and it is not evaluated for c1927." : ""}</p>`;
     if (b.nested_in) h += `<p class="sub">Inside the larger outline ${esc(b.nested_in)}: an addition, or a shed in a yard.</p>`;
     return h + (state.tab !== "all" ? "" : "");
   }
@@ -1327,7 +1328,8 @@
     if (t === "s4") {
       const B = M.buildings, b = B[state.hbld];
       h += seg2("hbld", [["1912", "1912 atlas"], ["1918", "May 1918 plan"], ["c1927", "carried to c1927"]]) +
-        `<p class="sub">${b.outlines} outlines, ${b.m2.toLocaleString("en")} m², on ${state.hbld === "c1927" && b.blocks_1949 ? `${b.blocks_1949.length} of the ${B.blocks.length} traced blocks: ${b.blocks_1949.map(esc).join("; ")}` : `${B.blocks.length} blocks so far: ${B.blocks.map(esc).join("; ")}`}. The rest of the study area is not traced yet: empty there means not read, never no building.</p>` +
+        (state.hbld === "c1927" ? `<p class="sub">${b.outlines} outlines, ${b.m2.toLocaleString("en")} m², on ${b.blocks_1949 ? `${b.blocks_1949.length} of the ${B.blocks.length} pilot blocks: ${b.blocks_1949.map(esc).join("; ")}` : `${B.blocks.length} pilot blocks`}. Beyond them, c1927 waits for a rule: empty there means not decided, never no building.</p>`
+          : `<p class="sub">${b.outlines.toLocaleString("en")} outlines, ${b.m2.toLocaleString("en")} m², ${state.hbld === "1912" ? "across the study area, plate by plate (D042)" : "on sheets 27 and 28, from Murray to Prince (D043). The digitised 1918 plan has no other sheet here: empty beyond them means no source, never no building"}. In the ${B.blocks.length} pilot blocks (${B.blocks.map(esc).join("; ")}) the two years are also compared${state.hbld === "1918" ? ", and storeys, uses and numbers read" : ""}.</p>`) +
         (state.hbld === "1912" ? `<p class="sub">Construction from the fill colour: pink brick or stone, yellow frame. This atlas does not tell brick from stone.</p>`
          : state.hbld === "1918" ? `<p class="sub">The insurance plan prints storeys and uses: read so far for ${B["1918"].with_storeys} outlines. ${B["1918"].nested} outlines sit inside a larger one (additions, yard sheds).</p>`
          : `<p class="sub">A 1918 outline is carried to the represented period only when it passes the 1912 to 1927 test (D020) and is still drawn on the 1949 land-use plans, so 1918 and 1949 bracket the 1920s (D039). ${B.c1927.outlines ? `${B.c1927.meet_d020} of the ${B.c1927.top_1918} main 1918 outlines pass the first test. ${B.c1927.read_1949} of them are read on the 1949 sheets, on ${(B.c1927.blocks_1949 || []).length} blocks: ${B.c1927.carried} are still drawn and carried. ${B.c1927.wait_1949 ? `${B.c1927.wait_1949} on ${(B.c1927.blocks_wait_1949 || []).map(esc).join(" and ")} wait for a 1949 sheet not read yet. ` : ""}The 1949 readings wait for review. Every value carried is inferred; an outline not carried is unknown in c1927, never absent.` : `${B.c1927.meet_d020} of the ${B.c1927.top_1918} main 1918 outlines pass the first test; the 1949 plans are not read yet, so none is carried and c1927 buildings stay unknown.`}</p>`) +

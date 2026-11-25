@@ -1,0 +1,173 @@
+[
+  {
+    "url": "https://donnees.montreal.ca/dataset/canopee",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=canopee",
+    "title": "Canop\u00e9e",
+    "licence_id": "cc-by",
+    "licence_title": "Creative Commons Attribution 4.0 International",
+    "licence_url": "http://creativecommons.org/licenses/by/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donnees.montreal.ca/dataset/comptage-vehicules-pietons",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=comptage-vehicules-pietons",
+    "title": "Comptages des v\u00e9hicules, cyclistes et pi\u00e9tons aux intersections munies de feux de circulation",
+    "licence_id": "cc-by",
+    "licence_title": "Creative Commons Attribution 4.0 International",
+    "licence_url": "http://creativecommons.org/licenses/by/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donnees.montreal.ca/dataset/feux-pietons",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=feux-pietons",
+    "title": "Feux de circulation \u2013 feux pour pi\u00e9tons",
+    "licence_id": "cc-by",
+    "licence_title": "Creative Commons Attribution 4.0 International",
+    "licence_url": "http://creativecommons.org/licenses/by/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donnees.montreal.ca/dataset/feux-tous",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=feux-tous",
+    "title": "Feux de circulation \u2013 emplacements toutes intersections",
+    "licence_id": "cc-by",
+    "licence_title": "Creative Commons Attribution 4.0 International",
+    "licence_url": "http://creativecommons.org/licenses/by/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donnees.montreal.ca/dataset/limites-vitesse",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=limites-vitesse",
+    "title": "Limites de vitesse",
+    "licence_id": "cc-by",
+    "licence_title": "Creative Commons Attribution 4.0 International",
+    "licence_url": "http://creativecommons.org/licenses/by/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donnees.montreal.ca/dataset/plans-detailles-d-occupation-du-sol-de-la-ville-de-montreal-1949",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=plans-detailles-d-occupation-du-sol-de-la-ville-de-montreal-1949",
+    "title": "Plans d\u00e9taill\u00e9s d'occupation du sol de la Ville de Montr\u00e9al, 1949",
+    "licence_id": "cc-by-nc-sa",
+    "licence_title": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donnees.montreal.ca/dataset/plans-generaux-d-occupation-du-sol-de-la-ville-de-montreal-1949",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=plans-generaux-d-occupation-du-sol-de-la-ville-de-montreal-1949",
+    "title": "Plans g\u00e9n\u00e9raux d'occupation du sol de la Ville de Montr\u00e9al, 1949",
+    "licence_id": "cc-by-nc-sa",
+    "licence_title": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donnees.montreal.ca/dataset/voirie-chaussee-intersection",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=voirie-chaussee-intersection",
+    "title": "Chauss\u00e9e agr\u00e9g\u00e9e et intersection (Base de donn\u00e9es des actifs de voirie)",
+    "licence_id": "cc-by",
+    "licence_title": "Creative Commons Attribution 4.0 International",
+    "licence_url": "http://creativecommons.org/licenses/by/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donnees.montreal.ca/dataset/vues-aeriennes-archives",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=vues-aeriennes-archives",
+    "title": "Vues a\u00e9riennes de l\u2019\u00eele de Montr\u00e9al, 1947-1949",
+    "licence_id": "cc-by-nc-sa",
+    "licence_title": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donnees.montreal.ca/dataset/vues-aeriennes-de-l-ile-de-montreal-1925-1935",
+    "catalogue": "https://donnees.montreal.ca/api/3/action/package_show?id=vues-aeriennes-de-l-ile-de-montreal-1925-1935",
+    "title": "Vues a\u00e9riennes de l\u2019\u00eele de Montr\u00e9al, 1925-1935",
+    "licence_id": "cc-by-nc-sa",
+    "licence_title": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donneesquebec.ca/recherche/dataset/vmtl-batiments-3d-2020-maquette-lod2-avec-textures",
+    "catalogue": "https://www.donneesquebec.ca/recherche/api/3/action/package_show?id=vmtl-batiments-3d-2020-maquette-lod2-avec-textures",
+    "title": "B\u00e2timents 3D 2020 (Maquette LOD2 avec textures)",
+    "licence_id": "cc-by",
+    "licence_title": "Attribution (CC-BY 4.0)",
+    "licence_url": "https://www.donneesquebec.ca/licence/#cc-by",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donneesquebec.ca/recherche/dataset/vmtl-cyclistes",
+    "catalogue": "https://www.donneesquebec.ca/recherche/api/3/action/package_show?id=vmtl-cyclistes",
+    "title": "Compteurs cyclistes permanents",
+    "licence_id": "cc-by",
+    "licence_title": "Attribution (CC-BY 4.0)",
+    "licence_url": "https://www.donneesquebec.ca/licence/#cc-by",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donneesquebec.ca/recherche/dataset/vmtl-geobase",
+    "catalogue": "https://www.donneesquebec.ca/recherche/api/3/action/package_show?id=vmtl-geobase",
+    "title": "G\u00e9obase - r\u00e9seau routier",
+    "licence_id": "cc-by",
+    "licence_title": "Attribution (CC-BY 4.0)",
+    "licence_url": "https://www.donneesquebec.ca/licence/#cc-by",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donneesquebec.ca/recherche/dataset/vmtl-lieux-batiments-vocation-publique",
+    "catalogue": "https://www.donneesquebec.ca/recherche/api/3/action/package_show?id=vmtl-lieux-batiments-vocation-publique",
+    "title": "Lieux et b\u00e2timents \u00e0 vocation publique",
+    "licence_id": "cc-by",
+    "licence_title": "Attribution (CC-BY 4.0)",
+    "licence_url": "https://www.donneesquebec.ca/licence/#cc-by",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donneesquebec.ca/recherche/dataset/vmtl-locaux-commerciaux",
+    "catalogue": "https://www.donneesquebec.ca/recherche/api/3/action/package_show?id=vmtl-locaux-commerciaux",
+    "title": "Locaux commerciaux et statuts d'occupation",
+    "licence_id": "cc-by",
+    "licence_title": "Attribution (CC-BY 4.0)",
+    "licence_url": "https://www.donneesquebec.ca/licence/#cc-by",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://donneesquebec.ca/recherche/dataset/vmtl-modele-numerique-de-surface-mns",
+    "catalogue": "https://www.donneesquebec.ca/recherche/api/3/action/package_show?id=vmtl-modele-numerique-de-surface-mns",
+    "title": "Mod\u00e8le num\u00e9rique de surface (MNS)",
+    "licence_id": "cc-by",
+    "licence_title": "Attribution (CC-BY 4.0)",
+    "licence_url": "https://www.donneesquebec.ca/licence/#cc-by",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://www.donneesquebec.ca/recherche/dataset/vmtl-batiment-3d-2016-maquette-citygml-lod2-avec-textures2",
+    "catalogue": "https://www.donneesquebec.ca/recherche/api/3/action/package_show?id=vmtl-batiment-3d-2016-maquette-citygml-lod2-avec-textures2",
+    "title": "B\u00e2timents 3D 2016 (Maquette LOD2 avec textures)",
+    "licence_id": "cc-by",
+    "licence_title": "Attribution (CC-BY 4.0)",
+    "licence_url": "https://www.donneesquebec.ca/licence/#cc-by",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://www.donneesquebec.ca/recherche/dataset/vmtl-batiment-3d-2016-maquette-citygml-lod2-avec-textures2/resource/e4398404-b09f-4d3b-9fdc-d4e7992d9e47",
+    "catalogue": "https://www.donneesquebec.ca/recherche/api/3/action/package_show?id=vmtl-batiment-3d-2016-maquette-citygml-lod2-avec-textures2",
+    "title": "B\u00e2timents 3D 2016 (Maquette LOD2 avec textures)",
+    "licence_id": "cc-by",
+    "licence_title": "Attribution (CC-BY 4.0)",
+    "licence_url": "https://www.donneesquebec.ca/licence/#cc-by",
+    "result": "catalogue retrieved"
+  },
+  {
+    "url": "https://www.donneesquebec.ca/recherche/fr/dataset/757bb61a-a5c5-4f38-947b-0130355a7917",
+    "catalogue": "https://www.donneesquebec.ca/recherche/api/3/action/package_show?id=757bb61a-a5c5-4f38-947b-0130355a7917",
+    "title": "Donn\u00e9es lidar du Qu\u00e9bec",
+    "licence_id": "cc-by",
+    "licence_title": "Attribution (CC-BY 4.0)",
+    "licence_url": "https://www.donneesquebec.ca/licence/#cc-by",
+    "result": "catalogue retrieved"
+  }
+]

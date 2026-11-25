@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9b72eb626856766e9cc8d3a7dc96451e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2847b8f5feacf9d46f349e53232e3371.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-ecc222255be09f852a135ce6edad74ce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,6 +108,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Systems</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./workshop.html"> 
+<span class="menu-text">Workshop</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./game.html"> 
 <span class="menu-text">Game</span></a>
   </li>  
@@ -140,12 +144,12 @@ ul.task-list li input[type="checkbox"] {
 
   <section class="situ-hero" aria-label="Situ">
     <figure class="cell cell-lines figure">
-      <img class="nolightbox art-2d figure-img" src="outputs/site/roads.svg" alt="Every street segment of Griffintown in the S1 network, drawn as thin white lines.">
-      <figcaption class="cap-2d"><b>2D</b>Every street of Griffintown in S1</figcaption>
+      <img class="nolightbox art-2d figure-img" src="assets/home-explore-plan.svg" alt="Illustrative network with a highlighted route.">
+      <figcaption class="cap-2d"><b>Diagram</b>Follow connections through a network.</figcaption>
     </figure>
     <figure class="cell cell-dots figure">
-      <img class="nolightbox art-3d figure-img" src="outputs/site/junctions_stops.svg" alt="The same area with no lines: every junction as a white dot, every stop sign as a small pink octagon.">
-      <figcaption class="cap-3d"><b>2D</b>Every junction, and every stop sign in pink</figcaption>
+      <img class="nolightbox art-3d figure-img" src="assets/home-explore-iso.svg" alt="Illustrative isometric network of linked layers.">
+      <figcaption class="cap-3d"><b>Diagram</b>Read a place through several linked layers.</figcaption>
     </figure>
   </section>
 
@@ -155,8 +159,8 @@ ul.task-list li input[type="checkbox"] {
       <button aria-expanded="false" aria-controls="explore-panel"><span class="num">01</span><span class="label">Explore</span></button>
       <div class="panel" id="explore-panel" role="region">
         <h2>Explore</h2>
-        <p class="lead">Every system on one map, one at a time, in 2D or in 3D. Try each one and see the places I still need to check. Click anything to see its details.</p>
-        <p>The Lab replays what each system wrote down. Its own tests check that it shows those results exactly.</p>
+        <p class="lead">Explore the present-day system outputs on a shared map, with dedicated historical comparisons where available. Try each one and see the places I still need to check. Select mapped features to inspect their details.</p>
+        <p>The Lab replays what each system wrote down. Replay tests check selected outputs against the recorded results; they do not establish that the source observations are correct.</p>
         <ul class="links">
           <li><a href="lab.html">Open the Lab</a></li>
           <li><a href="lab-notes.html">How the Lab works</a></li>
@@ -206,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="panel" id="research-panel" role="region">
         <h2>Research</h2>
         <p class="lead">Situ is the worked prototype of my PhD research-creation project: a transferable methodology for experiential, exploratory archives of spatial culture and urban rhythms across eras. Griffintown, Montréal, is the case through which I develop it.</p>
-        <p>Space syntax measures how a street network is laid out. It is one of my measuring sticks, next to the city's own counts. The simulated people never read it.</p>
+        <p>Space syntax measures how a street network is laid out. It is one of my measuring sticks, next to the city's own counts. In the proposed game, these scores will evaluate movement rather than direct NPC navigation.</p>
         <p>Integration measures how easy a street is to reach. Choice measures how often it lies on the way between other places.</p>
         <ul class="links">
           <li><a href="about.html#research-creation">Research-creation: systems made for a game</a></li>
@@ -222,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
       <button aria-expanded="false" aria-controls="data-panel"><span class="num">05</span><span class="label">Data</span></button>
       <div class="panel" id="data-panel" role="region">
         <h2>Data</h2>
-        <p class="lead">One walking network for the whole island: the city's streets joined with the off-street paths people use. Every source has its date and licence.</p>
+        <p class="lead">One walking network for the whole island: the city's streets joined with the off-street paths people use. The source register records dates, licences and unresolved gaps.</p>
         <p class="figure-num">47,197 <span>lines</span></p>
         <p>I took out highways and streets that exist only on plans. I added 161 km of the city's own off-street paths.</p>
         <p class="figure-note">A line is one piece of a street or a path in the network file, as analysed on 10 October 2026. The number says how the island is drawn. It says nothing about how much anyone walks.</p>
@@ -235,22 +239,37 @@ ul.task-list li input[type="checkbox"] {
       </div>
     </section>
 
+    <section class="situ-strip" id="workshop">
+      <button aria-expanded="false" aria-controls="workshop-panel"><span class="num">06</span><span class="label">Workshop</span></button>
+      <div class="panel" id="workshop-panel" role="region">
+        <h2>Workshop</h2>
+        <p class="lead">Change a few lines of code. See a network connect, a route change, or building data become a small world.</p>
+        <p>Three visual experiments introduce road networks, route analysis and data-to-scene translation. Run a starter, inspect the result, use hints and explain your decisions to complete each checkpoint.</p>
+        <p>The exercises use small invented datasets. They teach processes you can adapt to your own archive; they are not measurements of Griffintown.</p>
+        <ul class="links">
+          <li><a href="workshop.html">Enter the Workshop</a></li>
+          <li><a href="recreate.html">Apply the process to another city</a></li>
+        </ul>
+      </div>
+    </section>
+
   </nav>
 </div>
 
 <script>
 (function () {
-  // Each section has its own pair of pictures of Griffintown, drawn from the data: a 2D plan and a 3D view, each pair a different kind (tools/draw_home_art.py).
+  // Illustrative section diagrams, not measured Griffintown maps.
   const ART = {
-    "": ["roads.svg", "2D", "Every street of Griffintown in S1", "junctions_stops.svg", "2D", "Every junction, and every stop sign in pink"],
-    explore: ["home_explore_2d.svg", "2D", "One walk from J016 to J152: the shortest route in white, every street a trip 10 % longer could take in pink", "home_explore_3d.svg", "3D", "Walking out from J080, junction by junction: each step further raises the street higher and pinker"],
-    systems: ["home_systems_2d.svg", "2D", "Speed limits. White: 40 km/h. Pink: 20 km/h. Grey: the rest", "home_systems_3d.svg", "3D", "Residents who commute, as a column on each home (S7): the taller, the more commuters"],
-    research: ["home_research_2d.svg", "2D", "Walking integration within 800 m: grey low, pink high. Dashed: no value", "home_research_3d.svg", "3D", "Walking choice within 800 m raised as walls: the taller and pinker, the more often a street lies on the way"],
-    game: ["home_game_2d.svg", "2D", "G1 World: building masses, every prop, and doors in pink where a public use is recorded", "home_game_3d.svg", "3D", "G1's blocks at G1's heights, most from the 2023 lidar, towers standing on their podiums. Pink dashed: no height in any source"],
-    data: ["home_data_2d.svg", "2D", "Who may use each street. Dashed: on foot only. Pink dots: paths I added", "home_data_3d.png", "3D", "Québec's 2023 lidar: each ground and building point at its height. Pink: the tallest"],
+    explore: ["home-explore-plan.svg", "Diagram", "Follow connections through a network.", "home-explore-iso.svg", "Diagram", "Read a place through several linked layers."],
+    systems: ["home-systems-plan.svg", "Diagram", "Nine systems, connected by shared evidence.", "home-systems-iso.svg", "Diagram", "Separate components contribute to one model."],
+    game: ["home-game-plan.svg", "Diagram", "Arrange streets and building footprints.", "home-game-iso.svg", "Diagram", "Translate footprints and heights into a scene."],
+    research: ["home-research-plan.svg", "Diagram", "Move from sources to evidence and questions.", "home-research-iso.svg", "Diagram", "Compare an interpretation with its evidence."],
+    data: ["home-data-plan.svg", "Diagram", "Keep records structured and traceable.", "home-data-iso.svg", "Diagram", "Combine sources without losing their identities."],
+    workshop: ["home-workshop-plan.svg", "Diagram", "Edit a connection and inspect what changes.", "home-workshop-iso.svg", "Diagram", "Turn a short piece of code into a visible result."],
   };
+  ART[""] = ART.explore;
   const OLD = { situ: "research", method: "research", lab: "explore", resources: "data" };   // links made before the four sections
-  const dir = "outputs/site/";
+  const dir = "assets/";
   const img2 = document.querySelector(".art-2d"), img3 = document.querySelector(".art-3d");
   const cap2 = document.querySelector(".cap-2d"), cap3 = document.querySelector(".cap-3d");
   const narrow = () => window.matchMedia("(max-width: 1100px)").matches;
@@ -264,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
       if (img.getAttribute("src") === dir + src) return;
       img.classList.add("fading");
       setTimeout(() => { img.src = dir + src; img.alt = text; cap.innerHTML = `<b>${kind}</b>${text}`; }, 180);
-      img.onload = () => img.classList.remove("fading");
+      img.onload = img.onerror = () => img.classList.remove("fading");
     });
   }
   function panelArt(strip) {                       // on a phone the pictures sit inside the open section
@@ -283,6 +302,8 @@ ul.task-list li input[type="checkbox"] {
       const on = s === strip && !s.classList.contains('open');
       s.classList.toggle('open', on);
       s.querySelector('button').setAttribute('aria-expanded', on ? 'true' : 'false');
+      s.querySelector('.panel').inert = !on;
+      s.querySelector('.panel').setAttribute('aria-hidden', String(!on));
     });
     const now = strips.find(s => s.classList.contains('open'));
     document.querySelector('.situ-home').classList.toggle('has-open', !!now);   // an open section shows its own links: the opening text shortens
@@ -291,7 +312,11 @@ ul.task-list li input[type="checkbox"] {
     if (now && push && narrow()) setTimeout(() => now.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
     if (push) history.replaceState(null, '', now ? '#' + now.id : location.pathname);
   }
-  strips.forEach(s => s.querySelector('button').addEventListener('click', () => open(s, true)));
+  strips.forEach(s => {
+    s.querySelector('.panel').inert = true;
+    s.querySelector('.panel').setAttribute('aria-hidden', 'true');
+    s.querySelector('button').addEventListener('click', () => open(s, true));
+  });
   const id = location.hash.slice(1), start = id && document.getElementById(OLD[id] || id);
   if (start && start.classList.contains('situ-strip')) open(start, false);
 })();

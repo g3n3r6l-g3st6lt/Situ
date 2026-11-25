@@ -1,5 +1,5 @@
 {
- "made": "2026-11-23T19:53:06+00:00",
+ "made": "2026-11-23T23:44:57+00:00",
  "tool": "tools/hist_import.py",
  "read": [
   {
@@ -24,12 +24,12 @@
   },
   {
    "path": "historical_situ/exports/geojson/h12_footprints.geojson",
-   "sha256": "ef402bfac2b4094693d1b959017c0f1fbec3b20136b23a4be0e26ee1a85d24b0",
+   "sha256": "8336a02b0a31c87d9b3ebcadc3445ee20a25b22425ff7961a38691398cdc5006",
    "copied_to": "outputs/hist/h4_outlines_1912.geojson"
   },
   {
    "path": "historical_situ/exports/geojson/h18_footprints.geojson",
-   "sha256": "29eb118efcda90ffbb6b2a0c9a7f3a49144fc999de29ab8505004c2972477327",
+   "sha256": "6b6be16b3e43a9dd09307f2c89f2b023afeb1f1a9347684e6f76c79868a7e0a3",
    "copied_to": "outputs/hist/h4_outlines_1918.geojson"
   },
   {
@@ -46,6 +46,11 @@
    "path": "historical_situ/exports/csv/carry_1918_1927.csv",
    "sha256": "e30b76a62bd28b3227e7ba446cbf95c584d9c5fc5faf901484538c74df534c7e",
    "copied_to": "outputs/hist/h4_carry_1918_1927.csv"
+  },
+  {
+   "path": "historical_situ/checks/area_1912/audit/sample.csv",
+   "sha256": "cda87fc8edbb48fe74b1fa7db04768852118428b780db287a613739478cfb1df",
+   "copied_to": "outputs/hist/h4_audit_1912_area.csv"
   },
   {
    "path": "historical_situ/register/sources.csv",

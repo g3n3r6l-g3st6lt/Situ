@@ -132,23 +132,79 @@
  "sources": 19,
  "buildings": {
   "1912": {
-   "outlines": 110,
-   "m2": 15843,
+   "outlines": 2233,
+   "m2": 270369,
    "construction": {
-    "brick or stone": 55,
-    "frame": 55
+    "brick or stone": 1015,
+    "frame": 1218
+   },
+   "pilot": {
+    "outlines": 110,
+    "m2": 15843,
+    "construction": {
+     "brick or stone": 55,
+     "frame": 55
+    }
+   },
+   "area": {
+    "outlines": 2123,
+    "m2": 254526,
+    "by_plate": {
+     "P11H": 1,
+     "P22": 399,
+     "P23": 1111,
+     "P24": 201,
+     "P26": 128,
+     "P27": 283
+    },
+    "construction": {
+     "frame": 1163,
+     "brick or stone": 960
+    },
+    "audit": {
+     "sampled": 40,
+     "by_reading": {
+      "merged": 4,
+      "follows one building": 31,
+      "partial": 3,
+      "doubtful": 2
+     },
+     "read_by": "Claude (the tracer's author: not independent)"
+    }
    }
   },
   "1918": {
-   "outlines": 192,
-   "m2": 16065,
+   "outlines": 804,
+   "m2": 54090,
    "construction": {
-    "brick": 95,
-    "frame": 95,
-    "stone or concrete": 2
+    "brick": 357,
+    "frame": 400,
+    "stone or concrete": 47
    },
    "with_storeys": 33,
-   "nested": 9
+   "nested": 9,
+   "pilot": {
+    "outlines": 192,
+    "m2": 16065,
+    "construction": {
+     "brick": 95,
+     "frame": 95,
+     "stone or concrete": 2
+    }
+   },
+   "area": {
+    "outlines": 612,
+    "m2": 38025,
+    "by_plate": {
+     "S27": 432,
+     "S28": 180
+    },
+    "construction": {
+     "stone or concrete": 45,
+     "brick": 262,
+     "frame": 305
+    }
+   }
   },
   "c1927": {
    "outlines": 25,

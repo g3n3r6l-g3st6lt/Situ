@@ -1,0 +1,41 @@
+n,trace_id,item_id,construction,fill_share,reading,read_by,read_on
+1,ITM-GOAD1912-P27-A0185,ITM-GOAD1912-P27,brick_or_stone,0.925,merged,Claude (the tracer's author: not independent),2026-11-23
+2,ITM-GOAD1912-P23-A0261,ITM-GOAD1912-P23,frame,0.91,follows one building,Claude (the tracer's author: not independent),2026-11-23
+3,ITM-GOAD1912-P23-A0318,ITM-GOAD1912-P23,frame,0.844,follows one building,Claude (the tracer's author: not independent),2026-11-23
+4,ITM-GOAD1912-P22-A0367,ITM-GOAD1912-P22,brick_or_stone,0.939,follows one building,Claude (the tracer's author: not independent),2026-11-23
+5,ITM-GOAD1912-P24-A0035,ITM-GOAD1912-P24,frame,0.768,partial: around lettering,Claude (the tracer's author: not independent),2026-11-23
+6,ITM-GOAD1912-P24-A0083,ITM-GOAD1912-P24,frame,0.881,follows one building,Claude (the tracer's author: not independent),2026-11-23
+7,ITM-GOAD1912-P23-A0369,ITM-GOAD1912-P23,frame,0.823,follows one building,Claude (the tracer's author: not independent),2026-11-23
+8,ITM-GOAD1912-P22-A0122,ITM-GOAD1912-P22,brick_or_stone,0.817,doubtful: a narrow strip,Claude (the tracer's author: not independent),2026-11-23
+9,ITM-GOAD1912-P22-A0306,ITM-GOAD1912-P22,frame,0.865,follows one building,Claude (the tracer's author: not independent),2026-11-23
+10,ITM-GOAD1912-P23-A0015,ITM-GOAD1912-P23,frame,0.934,follows one building,Claude (the tracer's author: not independent),2026-11-23
+11,ITM-GOAD1912-P26-A0027,ITM-GOAD1912-P26,frame,0.912,follows one building,Claude (the tracer's author: not independent),2026-11-23
+12,ITM-GOAD1912-P23-A0724,ITM-GOAD1912-P23,brick_or_stone,0.879,follows one building,Claude (the tracer's author: not independent),2026-11-23
+13,ITM-GOAD1912-P23-A0055,ITM-GOAD1912-P23,brick_or_stone,0.914,follows one building,Claude (the tracer's author: not independent),2026-11-23
+14,ITM-GOAD1912-P22-A0221,ITM-GOAD1912-P22,brick_or_stone,0.887,follows one building,Claude (the tracer's author: not independent),2026-11-23
+15,ITM-GOAD1912-P23-A0766,ITM-GOAD1912-P23,frame,0.78,follows one building,Claude (the tracer's author: not independent),2026-11-23
+16,ITM-GOAD1912-P23-A1015,ITM-GOAD1912-P23,brick_or_stone,0.913,merged,Claude (the tracer's author: not independent),2026-11-23
+17,ITM-GOAD1912-P27-A0073,ITM-GOAD1912-P27,frame,0.679,follows one building,Claude (the tracer's author: not independent),2026-11-23
+18,ITM-GOAD1912-P23-A0952,ITM-GOAD1912-P23,brick_or_stone,0.643,doubtful: a fragment,Claude (the tracer's author: not independent),2026-11-23
+19,ITM-GOAD1912-P22-A0186,ITM-GOAD1912-P22,brick_or_stone,0.906,follows one building,Claude (the tracer's author: not independent),2026-11-23
+20,ITM-GOAD1912-P22-A0252,ITM-GOAD1912-P22,frame,0.703,partial: around a lot number,Claude (the tracer's author: not independent),2026-11-23
+21,ITM-GOAD1912-P23-A0726,ITM-GOAD1912-P23,brick_or_stone,0.888,follows one building,Claude (the tracer's author: not independent),2026-11-23
+22,ITM-GOAD1912-P22-A0210,ITM-GOAD1912-P22,frame,0.858,follows one building,Claude (the tracer's author: not independent),2026-11-23
+23,ITM-GOAD1912-P27-A0091,ITM-GOAD1912-P27,brick_or_stone,0.869,follows one building,Claude (the tracer's author: not independent),2026-11-23
+24,ITM-GOAD1912-P23-A0573,ITM-GOAD1912-P23,frame,0.806,follows one building,Claude (the tracer's author: not independent),2026-11-23
+25,ITM-GOAD1912-P23-A0410,ITM-GOAD1912-P23,brick_or_stone,0.913,follows one building,Claude (the tracer's author: not independent),2026-11-23
+26,ITM-GOAD1912-P27-A0116,ITM-GOAD1912-P27,brick_or_stone,0.959,partial: ragged edge,Claude (the tracer's author: not independent),2026-11-23
+27,ITM-GOAD1912-P23-A0069,ITM-GOAD1912-P23,frame,0.899,merged,Claude (the tracer's author: not independent),2026-11-23
+28,ITM-GOAD1912-P23-A0930,ITM-GOAD1912-P23,frame,0.897,follows one building,Claude (the tracer's author: not independent),2026-11-23
+29,ITM-GOAD1912-P24-A0171,ITM-GOAD1912-P24,brick_or_stone,0.813,follows one building,Claude (the tracer's author: not independent),2026-11-23
+30,ITM-GOAD1912-P24-A0148,ITM-GOAD1912-P24,brick_or_stone,0.889,follows one building,Claude (the tracer's author: not independent),2026-11-23
+31,ITM-GOAD1912-P24-A0004,ITM-GOAD1912-P24,brick_or_stone,0.839,follows one building,Claude (the tracer's author: not independent),2026-11-23
+32,ITM-GOAD1912-P26-A0005,ITM-GOAD1912-P26,brick_or_stone,0.961,follows one building,Claude (the tracer's author: not independent),2026-11-23
+33,ITM-GOAD1912-P24-A0103,ITM-GOAD1912-P24,brick_or_stone,0.86,follows one building,Claude (the tracer's author: not independent),2026-11-23
+34,ITM-GOAD1912-P22-A0197,ITM-GOAD1912-P22,frame,0.85,follows one building,Claude (the tracer's author: not independent),2026-11-23
+35,ITM-GOAD1912-P27-A0261,ITM-GOAD1912-P27,frame,0.843,follows one building,Claude (the tracer's author: not independent),2026-11-23
+36,ITM-GOAD1912-P27-A0286,ITM-GOAD1912-P27,frame,0.945,follows one building,Claude (the tracer's author: not independent),2026-11-23
+37,ITM-GOAD1912-P23-A0691,ITM-GOAD1912-P23,brick_or_stone,0.903,follows one building,Claude (the tracer's author: not independent),2026-11-23
+38,ITM-GOAD1912-P23-A0878,ITM-GOAD1912-P23,frame,0.832,follows one building,Claude (the tracer's author: not independent),2026-11-23
+39,ITM-GOAD1912-P23-A0837,ITM-GOAD1912-P23,brick_or_stone,0.833,merged,Claude (the tracer's author: not independent),2026-11-23
+40,ITM-GOAD1912-P23-A0122,ITM-GOAD1912-P23,brick_or_stone,0.936,follows one building,Claude (the tracer's author: not independent),2026-11-23
