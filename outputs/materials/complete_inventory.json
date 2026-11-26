@@ -284,7 +284,9 @@
   "checks": [
     "manifest hashes",
     "map decoding",
-    "matching dimensions per variant"
+    "matching dimensions per variant",
+    "OpenGL/DirectX exact green inversion",
+    "ORM exact channel agreement"
   ],
   "limits": "Checks do not establish physical accuracy, map registration, licensing clearance or engine integration."
 }

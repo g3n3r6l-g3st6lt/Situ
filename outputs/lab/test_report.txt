@@ -59,7 +59,7 @@ L15 Materials: every entry the Lab shows equals its entry.json, stands on an S4 
     PASS
 
 L16 Past era: every 1912 segment and reported H-S2 value in the Lab equals outputs/hist (copied from the historical workspace)
-    283 segments, 821 analysis pieces, 972 values compared; the ring stays null; 3062 past outlines with their records; 1912 streets that persist lie on today's: Ottawa 2.4 m, Shannon 2.8 m, Murray 1.9 m, Ann St 5.9 m
+    283 segments, 821 analysis pieces, 972 values compared; the ring stays null; 3058 past outlines with their records; 1912 streets that persist lie on today's: Ottawa 2.4 m, Shannon 2.8 m, Murray 1.9 m, Ann St 5.9 m
     PASS
 
 ALL PASS

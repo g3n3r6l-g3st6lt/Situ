@@ -1,0 +1,3084 @@
+{
+ "step": "apply",
+ "root_actors": 1,
+ "meshes": 307,
+ "flags": {
+  "CTF_USE_COMPLEX_AS_SIMPLE: 3>": 307
+ },
+ "changed": 0,
+ "folders": [
+  "/Game/Griffintown_Greybox/greybox/StaticMeshes"
+ ],
+ "rows": [
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_bike.ground_bike",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_green.ground_green",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_island.ground_island",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_not_classified.ground_not_classified",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_parking.ground_parking",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_play.ground_play",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_plaza.ground_plaza",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_roadway.ground_roadway",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_sidewalk.ground_sidewalk",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/ground_water.ground_water",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/north_marker.north_marker",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1080275376.w1080275376",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1080276132.w1080276132",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1081860869.w1081860869",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1081874551.w1081874551",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1081882036.w1081882036",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1081882041.w1081882041",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1093179046.w1093179046",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1093416727.w1093416727",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1093571770.w1093571770",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1093571771.w1093571771",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1093571772.w1093571772",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1093571773.w1093571773",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1093571774.w1093571774",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1093571777.w1093571777",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1100913875.w1100913875",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1163554942.w1163554942",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1164076977.w1164076977",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1175945703.w1175945703",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1175945704.w1175945704",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1190882733.w1190882733",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1225946672.w1225946672",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1297381699.w1297381699",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1309501032.w1309501032",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1309501052.w1309501052",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1314138312.w1314138312",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1314138313.w1314138313",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1314138314.w1314138314",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1321450945.w1321450945",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1338495164.w1338495164",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w134140650.w134140650",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1344783765.w1344783765",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1354184758.w1354184758",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1381560040.w1381560040",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1393630742.w1393630742",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1451065379.w1451065379",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w1534123738.w1534123738",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w157556076.w157556076",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w157556077.w157556077",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w157556078.w157556078",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w157557382.w157557382",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w199234636.w199234636",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w199235094.w199235094",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w199238058.w199238058",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w199238749.w199238749",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201007244.w201007244",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201007399.w201007399",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201007820.w201007820",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201008023.w201008023",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201008914.w201008914",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201010047.w201010047",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201011175.w201011175",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201011933.w201011933",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201012386.w201012386",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201013721.w201013721",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201017213.w201017213",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w201017547.w201017547",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225600469.w225600469",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225600470.w225600470",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225600471.w225600471",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225600473.w225600473",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225610882.w225610882",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225610883.w225610883",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225610884.w225610884",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637514.w225637514",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637515.w225637515",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637516.w225637516",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637517.w225637517",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637518.w225637518",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637519.w225637519",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637520.w225637520",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637522.w225637522",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637526.w225637526",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637527.w225637527",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637528.w225637528",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637529.w225637529",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637533.w225637533",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637534.w225637534",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637535.w225637535",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637536.w225637536",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637537.w225637537",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637538.w225637538",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637539.w225637539",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637540.w225637540",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637541.w225637541",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637542.w225637542",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637543.w225637543",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637544.w225637544",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225637545.w225637545",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640563.w225640563",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640564.w225640564",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640565.w225640565",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640566.w225640566",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640567.w225640567",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640568.w225640568",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640569.w225640569",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640570.w225640570",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640571.w225640571",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w225640572.w225640572",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611749.w227611749",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611750.w227611750",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611751.w227611751",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611752.w227611752",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611753.w227611753",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611754.w227611754",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611755.w227611755",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611756.w227611756",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611757.w227611757",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611758.w227611758",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611759.w227611759",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611760.w227611760",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611761.w227611761",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227611762.w227611762",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227612459.w227612459",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227612460.w227612460",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227612461.w227612461",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227612462.w227612462",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227612464.w227612464",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227612465.w227612465",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227612466.w227612466",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w227612467.w227612467",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w229736562.w229736562",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w26500307.w26500307",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w272436794.w272436794",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w272436796.w272436796",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w272436799.w272436799",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w304987885.w304987885",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w305021902.w305021902",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w305021906.w305021906",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w331868173.w331868173",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w331868174.w331868174",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w331868175.w331868175",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w331868177.w331868177",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w331868180.w331868180",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340223814.w340223814",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340225313.w340225313",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340226280.w340226280",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340227472.w340227472",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340228173.w340228173",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340228269.w340228269",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340228785.w340228785",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340228792.w340228792",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340228823.w340228823",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340229118.w340229118",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340229158.w340229158",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340229534.w340229534",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340229787.w340229787",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340229788.w340229788",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340235536.w340235536",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340235636.w340235636",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340235663.w340235663",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340235699.w340235699",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340235717.w340235717",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340235780.w340235780",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340235860.w340235860",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340235898.w340235898",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340236006.w340236006",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340236261.w340236261",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340237120.w340237120",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340237151.w340237151",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340237197.w340237197",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340237249.w340237249",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340237304.w340237304",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340237459.w340237459",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w340237527.w340237527",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w345055603.w345055603",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347382284.w347382284",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347382287.w347382287",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347382316.w347382316",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347382427.w347382427",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347382465.w347382465",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347382472.w347382472",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347382572.w347382572",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347383034.w347383034",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347383036.w347383036",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347383665.w347383665",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347383948.w347383948",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347384187.w347384187",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347385193.w347385193",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347385982.w347385982",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347386507.w347386507",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347390461.w347390461",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347390794.w347390794",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347391772.w347391772",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347392454.w347392454",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393375.w347393375",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393446.w347393446",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393449.w347393449",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393479.w347393479",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393484.w347393484",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393493.w347393493",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393515.w347393515",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393528.w347393528",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393760.w347393760",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393784.w347393784",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393798.w347393798",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347393968.w347393968",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394020.w347394020",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394086.w347394086",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394312.w347394312",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394418.w347394418",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394420.w347394420",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394483.w347394483",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394485.w347394485",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394507.w347394507",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394545.w347394545",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394572.w347394572",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394622.w347394622",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394627.w347394627",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394685.w347394685",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394699.w347394699",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347394807.w347394807",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347395104.w347395104",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347395483.w347395483",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347395611.w347395611",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347395784.w347395784",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347396342.w347396342",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347396506.w347396506",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347396555.w347396555",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347396574.w347396574",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347396576.w347396576",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347458840.w347458840",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w347489369.w347489369",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w35927752.w35927752",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w35927753.w35927753",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w35927788.w35927788",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w360807178.w360807178",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w360807179.w360807179",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w360807180.w360807180",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w362106076.w362106076",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w362626435.w362626435",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w372127834.w372127834",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w372127835.w372127835",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w386406659.w386406659",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w41651775.w41651775",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w41651776.w41651776",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w422426892.w422426892",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w422426893.w422426893",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w422426894.w422426894",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w422426895.w422426895",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w422426896.w422426896",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w429914299.w429914299",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w432033288.w432033288",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w432033289.w432033289",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w442597210.w442597210",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w442597527.w442597527",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w47175201.w47175201",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w47175223.w47175223",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w47175243.w47175243",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w47175646.w47175646",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w47175647.w47175647",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w47175688.w47175688",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w501448937.w501448937",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w54854259.w54854259",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w54895064.w54895064",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w54895065.w54895065",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w54895066.w54895066",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w54896274.w54896274",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w582431318.w582431318",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w583403068.w583403068",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w583403069.w583403069",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w592159754.w592159754",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w592159755.w592159755",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w592159756.w592159756",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w592172258.w592172258",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w592172260.w592172260",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w592172261.w592172261",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w592747149.w592747149",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w599388844.w599388844",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w606863913.w606863913",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w606876714.w606876714",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w607076683.w607076683",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w607959790.w607959790",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w607959791.w607959791",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w609773933.w609773933",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w614137698.w614137698",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w616028662.w616028662",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w620759658.w620759658",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w642915689.w642915689",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w651611802.w651611802",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w651611804.w651611804",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w696912352.w696912352",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w696912353.w696912353",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w696912354.w696912354",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w699964836.w699964836",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w699964837.w699964837",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w699964838.w699964838",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w700437945.w700437945",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w700437946.w700437946",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w700571090.w700571090",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w806954151.w806954151",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w825931426.w825931426",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w825931427.w825931427",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w826567448.w826567448",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w837636795.w837636795",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w906939746.w906939746",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  },
+  {
+   "mesh": "/Game/Griffintown_Greybox/greybox/StaticMeshes/w965233758.w965233758",
+   "actors": 1,
+   "body_setup": true,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+   "simple_boxes": 0,
+   "simple_convex": 0,
+   "simple_spheres": 0,
+   "simple_capsules": 0
+  }
+ ]
+}

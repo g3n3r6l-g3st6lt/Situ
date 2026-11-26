@@ -1,0 +1,1596 @@
+{
+ "copies": {
+  "groups": {
+   "w201013721 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201013721",
+    "top_is_self": true
+   },
+   "w201012386 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201012386",
+    "top_is_self": true
+   },
+   "w201011933 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201011933",
+    "top_is_self": true
+   },
+   "w201011175 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201011175",
+    "top_is_self": true
+   },
+   "w201010047 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201010047",
+    "top_is_self": true
+   },
+   "w201008914 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201008914",
+    "top_is_self": true
+   },
+   "w201008023 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201008023",
+    "top_is_self": true
+   },
+   "w201007820 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201007820",
+    "top_is_self": true
+   },
+   "w201007399 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201007399",
+    "top_is_self": true
+   },
+   "w201007244 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201007244",
+    "top_is_self": true
+   },
+   "w199238749 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w199238749",
+    "top_is_self": true
+   },
+   "w199238058 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w199238058",
+    "top_is_self": true
+   },
+   "w199235094 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w199235094",
+    "top_is_self": true
+   },
+   "w199234636 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w199234636",
+    "top_is_self": true
+   },
+   "w157557382 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w157557382",
+    "top_is_self": true
+   },
+   "w157556078 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w157556078",
+    "top_is_self": true
+   },
+   "w157556077 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w157556077",
+    "top_is_self": true
+   },
+   "w157556076 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w157556076",
+    "top_is_self": true
+   },
+   "w1381560040 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1381560040",
+    "top_is_self": true
+   },
+   "w1354184758 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1354184758",
+    "top_is_self": true
+   },
+   "w1344783765 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1344783765",
+    "top_is_self": true
+   },
+   "w134140650 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w134140650",
+    "top_is_self": true
+   },
+   "w1338495164 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1338495164",
+    "top_is_self": true
+   },
+   "w1314138314 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1314138314",
+    "top_is_self": true
+   },
+   "w1314138312 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1314138312",
+    "top_is_self": true
+   },
+   "w1309501032 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1309501032",
+    "top_is_self": true
+   },
+   "w1225946672 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1225946672",
+    "top_is_self": true
+   },
+   "w1190882733 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1190882733",
+    "top_is_self": true
+   },
+   "w1175945704 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1175945704",
+    "top_is_self": true
+   },
+   "w1175945703 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1175945703",
+    "top_is_self": true
+   },
+   "w1163554942 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1163554942",
+    "top_is_self": true
+   },
+   "w1100913875 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1100913875",
+    "top_is_self": true
+   },
+   "w1093571777 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1093571777",
+    "top_is_self": true
+   },
+   "w1093571774 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1093571774",
+    "top_is_self": true
+   },
+   "w1093571773 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1093571773",
+    "top_is_self": true
+   },
+   "w1093571772 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1093571772",
+    "top_is_self": true
+   },
+   "w1093571771 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1093571771",
+    "top_is_self": true
+   },
+   "w1093571770 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1093571770",
+    "top_is_self": true
+   },
+   "w1093416727 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1093416727",
+    "top_is_self": true
+   },
+   "w1093179046 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1093179046",
+    "top_is_self": true
+   },
+   "w1081882041 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1081882041",
+    "top_is_self": true
+   },
+   "w1081882036 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1081882036",
+    "top_is_self": true
+   },
+   "w1081874551 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1081874551",
+    "top_is_self": true
+   },
+   "w1081860869 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1081860869",
+    "top_is_self": true
+   },
+   "w1080276132 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1080276132",
+    "top_is_self": true
+   },
+   "w1080275376 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1080275376",
+    "top_is_self": true
+   },
+   "w696912352 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w696912352",
+    "top_is_self": true
+   },
+   "w620759658 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w620759658",
+    "top_is_self": true
+   },
+   "w606863913 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w606863913",
+    "top_is_self": true
+   },
+   "w340237120 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340237120",
+    "top_is_self": true
+   },
+   "w1534123738 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1534123738",
+    "top_is_self": true
+   },
+   "w1451065379 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1451065379",
+    "top_is_self": true
+   },
+   "w1393630742 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1393630742",
+    "top_is_self": true
+   },
+   "w201017213 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201017213",
+    "top_is_self": true
+   },
+   "w201017547 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w201017547",
+    "top_is_self": true
+   },
+   "w225600469 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225600469",
+    "top_is_self": true
+   },
+   "w225600470 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225600470",
+    "top_is_self": true
+   },
+   "w225600471 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225600471",
+    "top_is_self": true
+   },
+   "w225600473 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225600473",
+    "top_is_self": true
+   },
+   "w225610882 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225610882",
+    "top_is_self": true
+   },
+   "w225610883 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225610883",
+    "top_is_self": true
+   },
+   "w225610884 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225610884",
+    "top_is_self": true
+   },
+   "w225637514 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637514",
+    "top_is_self": true
+   },
+   "w225637515 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637515",
+    "top_is_self": true
+   },
+   "w225637516 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637516",
+    "top_is_self": true
+   },
+   "w225637517 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637517",
+    "top_is_self": true
+   },
+   "w225637518 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637518",
+    "top_is_self": true
+   },
+   "w225637519 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637519",
+    "top_is_self": true
+   },
+   "w225637520 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637520",
+    "top_is_self": true
+   },
+   "w225637522 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637522",
+    "top_is_self": true
+   },
+   "w225637526 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637526",
+    "top_is_self": true
+   },
+   "w225637527 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637527",
+    "top_is_self": true
+   },
+   "w225637528 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637528",
+    "top_is_self": true
+   },
+   "w225637529 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637529",
+    "top_is_self": true
+   },
+   "w225637533 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637533",
+    "top_is_self": true
+   },
+   "w225637534 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637534",
+    "top_is_self": true
+   },
+   "w225637535 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637535",
+    "top_is_self": true
+   },
+   "w225637536 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637536",
+    "top_is_self": true
+   },
+   "w225637537 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637537",
+    "top_is_self": true
+   },
+   "w225637538 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637538",
+    "top_is_self": true
+   },
+   "w225637539 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637539",
+    "top_is_self": true
+   },
+   "w225637540 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637540",
+    "top_is_self": true
+   },
+   "w225637541 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637541",
+    "top_is_self": true
+   },
+   "w225637542 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637542",
+    "top_is_self": true
+   },
+   "w225637543 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637543",
+    "top_is_self": true
+   },
+   "w225637544 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637544",
+    "top_is_self": true
+   },
+   "w225637545 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225637545",
+    "top_is_self": true
+   },
+   "w225640563 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640563",
+    "top_is_self": true
+   },
+   "w225640564 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640564",
+    "top_is_self": true
+   },
+   "w225640565 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640565",
+    "top_is_self": true
+   },
+   "w225640566 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640566",
+    "top_is_self": true
+   },
+   "w225640567 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640567",
+    "top_is_self": true
+   },
+   "w225640568 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640568",
+    "top_is_self": true
+   },
+   "w225640569 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640569",
+    "top_is_self": true
+   },
+   "w225640570 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640570",
+    "top_is_self": true
+   },
+   "w225640571 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640571",
+    "top_is_self": true
+   },
+   "w225640572 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w225640572",
+    "top_is_self": true
+   },
+   "w227611749 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611749",
+    "top_is_self": true
+   },
+   "w227611750 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611750",
+    "top_is_self": true
+   },
+   "w227611751 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611751",
+    "top_is_self": true
+   },
+   "w227611752 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611752",
+    "top_is_self": true
+   },
+   "w227611753 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611753",
+    "top_is_self": true
+   },
+   "w227611754 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611754",
+    "top_is_self": true
+   },
+   "w227611755 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611755",
+    "top_is_self": true
+   },
+   "w227611756 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611756",
+    "top_is_self": true
+   },
+   "w227611757 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611757",
+    "top_is_self": true
+   },
+   "w227611758 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611758",
+    "top_is_self": true
+   },
+   "w227611759 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611759",
+    "top_is_self": true
+   },
+   "w227611760 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611760",
+    "top_is_self": true
+   },
+   "w227611761 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611761",
+    "top_is_self": true
+   },
+   "w227611762 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227611762",
+    "top_is_self": true
+   },
+   "w227612459 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227612459",
+    "top_is_self": true
+   },
+   "w227612460 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227612460",
+    "top_is_self": true
+   },
+   "w227612461 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227612461",
+    "top_is_self": true
+   },
+   "w227612462 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227612462",
+    "top_is_self": true
+   },
+   "w227612464 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227612464",
+    "top_is_self": true
+   },
+   "w227612465 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227612465",
+    "top_is_self": true
+   },
+   "w227612466 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227612466",
+    "top_is_self": true
+   },
+   "w227612467 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w227612467",
+    "top_is_self": true
+   },
+   "w229736562 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w229736562",
+    "top_is_self": true
+   },
+   "w26500307 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w26500307",
+    "top_is_self": true
+   },
+   "w272436794 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w272436794",
+    "top_is_self": true
+   },
+   "w272436796 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w272436796",
+    "top_is_self": true
+   },
+   "w272436799 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w272436799",
+    "top_is_self": true
+   },
+   "w304987885 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w304987885",
+    "top_is_self": true
+   },
+   "w305021902 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w305021902",
+    "top_is_self": true
+   },
+   "w305021906 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w305021906",
+    "top_is_self": true
+   },
+   "w331868173 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w331868173",
+    "top_is_self": true
+   },
+   "w331868174 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w331868174",
+    "top_is_self": true
+   },
+   "w331868175 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w331868175",
+    "top_is_self": true
+   },
+   "w331868177 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w331868177",
+    "top_is_self": true
+   },
+   "w331868180 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w331868180",
+    "top_is_self": true
+   },
+   "w340223814 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340223814",
+    "top_is_self": true
+   },
+   "w340225313 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340225313",
+    "top_is_self": true
+   },
+   "w340226280 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340226280",
+    "top_is_self": true
+   },
+   "w340227472 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340227472",
+    "top_is_self": true
+   },
+   "w340228173 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340228173",
+    "top_is_self": true
+   },
+   "w340228269 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340228269",
+    "top_is_self": true
+   },
+   "w340228785 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340228785",
+    "top_is_self": true
+   },
+   "w340228792 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340228792",
+    "top_is_self": true
+   },
+   "w340228823 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340228823",
+    "top_is_self": true
+   },
+   "w340229118 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340229118",
+    "top_is_self": true
+   },
+   "w340229158 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340229158",
+    "top_is_self": true
+   },
+   "w340229534 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340229534",
+    "top_is_self": true
+   },
+   "w340229787 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340229787",
+    "top_is_self": true
+   },
+   "w340229788 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340229788",
+    "top_is_self": true
+   },
+   "w340235536 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340235536",
+    "top_is_self": true
+   },
+   "w340235636 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340235636",
+    "top_is_self": true
+   },
+   "w340235663 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340235663",
+    "top_is_self": true
+   },
+   "w340235699 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340235699",
+    "top_is_self": true
+   },
+   "w340235717 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340235717",
+    "top_is_self": true
+   },
+   "w340235780 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340235780",
+    "top_is_self": true
+   },
+   "w340235860 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340235860",
+    "top_is_self": true
+   },
+   "w340235898 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340235898",
+    "top_is_self": true
+   },
+   "w340236006 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340236006",
+    "top_is_self": true
+   },
+   "w340236261 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340236261",
+    "top_is_self": true
+   },
+   "w340237151 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340237151",
+    "top_is_self": true
+   },
+   "w340237197 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340237197",
+    "top_is_self": true
+   },
+   "w340237249 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340237249",
+    "top_is_self": true
+   },
+   "w340237304 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340237304",
+    "top_is_self": true
+   },
+   "w340237459 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340237459",
+    "top_is_self": true
+   },
+   "w340237527 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w340237527",
+    "top_is_self": true
+   },
+   "w345055603 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w345055603",
+    "top_is_self": true
+   },
+   "w347382284 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347382284",
+    "top_is_self": true
+   },
+   "w347382287 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347382287",
+    "top_is_self": true
+   },
+   "w347382316 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347382316",
+    "top_is_self": true
+   },
+   "w347382427 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347382427",
+    "top_is_self": true
+   },
+   "w347382465 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347382465",
+    "top_is_self": true
+   },
+   "w347382472 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347382472",
+    "top_is_self": true
+   },
+   "w347382572 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347382572",
+    "top_is_self": true
+   },
+   "w347383034 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347383034",
+    "top_is_self": true
+   },
+   "w347383036 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347383036",
+    "top_is_self": true
+   },
+   "w347383665 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347383665",
+    "top_is_self": true
+   },
+   "w347383948 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347383948",
+    "top_is_self": true
+   },
+   "w347384187 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347384187",
+    "top_is_self": true
+   },
+   "w347385193 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347385193",
+    "top_is_self": true
+   },
+   "w347385982 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347385982",
+    "top_is_self": true
+   },
+   "w347386507 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347386507",
+    "top_is_self": true
+   },
+   "w347390461 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347390461",
+    "top_is_self": true
+   },
+   "w347390794 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347390794",
+    "top_is_self": true
+   },
+   "w347391772 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347391772",
+    "top_is_self": true
+   },
+   "w347392454 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347392454",
+    "top_is_self": true
+   },
+   "w347393375 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393375",
+    "top_is_self": true
+   },
+   "w347393446 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393446",
+    "top_is_self": true
+   },
+   "w347393449 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393449",
+    "top_is_self": true
+   },
+   "w347393479 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393479",
+    "top_is_self": true
+   },
+   "w347393484 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393484",
+    "top_is_self": true
+   },
+   "w347393493 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393493",
+    "top_is_self": true
+   },
+   "w347393515 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393515",
+    "top_is_self": true
+   },
+   "w347393528 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393528",
+    "top_is_self": true
+   },
+   "w347393760 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393760",
+    "top_is_self": true
+   },
+   "w347393784 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393784",
+    "top_is_self": true
+   },
+   "w347393798 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393798",
+    "top_is_self": true
+   },
+   "w347393968 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347393968",
+    "top_is_self": true
+   },
+   "w347394020 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394020",
+    "top_is_self": true
+   },
+   "w347394086 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394086",
+    "top_is_self": true
+   },
+   "w347394312 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394312",
+    "top_is_self": true
+   },
+   "w347394418 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394418",
+    "top_is_self": true
+   },
+   "w347394420 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394420",
+    "top_is_self": true
+   },
+   "w347394483 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394483",
+    "top_is_self": true
+   },
+   "w347394485 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394485",
+    "top_is_self": true
+   },
+   "w347394507 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394507",
+    "top_is_self": true
+   },
+   "w347394545 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394545",
+    "top_is_self": true
+   },
+   "w347394572 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394572",
+    "top_is_self": true
+   },
+   "w347394622 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394622",
+    "top_is_self": true
+   },
+   "w347394627 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394627",
+    "top_is_self": true
+   },
+   "w347394685 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394685",
+    "top_is_self": true
+   },
+   "w347394699 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394699",
+    "top_is_self": true
+   },
+   "w347394807 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347394807",
+    "top_is_self": true
+   },
+   "w347395104 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347395104",
+    "top_is_self": true
+   },
+   "w347395483 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347395483",
+    "top_is_self": true
+   },
+   "w347395611 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347395611",
+    "top_is_self": true
+   },
+   "w347395784 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347395784",
+    "top_is_self": true
+   },
+   "w347396342 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347396342",
+    "top_is_self": true
+   },
+   "w347396506 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347396506",
+    "top_is_self": true
+   },
+   "w347396555 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347396555",
+    "top_is_self": true
+   },
+   "w347396574 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347396574",
+    "top_is_self": true
+   },
+   "w347396576 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347396576",
+    "top_is_self": true
+   },
+   "w347458840 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347458840",
+    "top_is_self": true
+   },
+   "w347489369 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w347489369",
+    "top_is_self": true
+   },
+   "w35927752 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w35927752",
+    "top_is_self": true
+   },
+   "w35927753 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w35927753",
+    "top_is_self": true
+   },
+   "w35927788 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w35927788",
+    "top_is_self": true
+   },
+   "w360807178 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w360807178",
+    "top_is_self": true
+   },
+   "w360807179 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w360807179",
+    "top_is_self": true
+   },
+   "w360807180 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w360807180",
+    "top_is_self": true
+   },
+   "w362106076 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w362106076",
+    "top_is_self": true
+   },
+   "w362626435 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w362626435",
+    "top_is_self": true
+   },
+   "w372127834 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w372127834",
+    "top_is_self": true
+   },
+   "w372127835 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w372127835",
+    "top_is_self": true
+   },
+   "w386406659 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w386406659",
+    "top_is_self": true
+   },
+   "w41651775 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w41651775",
+    "top_is_self": true
+   },
+   "w41651776 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w41651776",
+    "top_is_self": true
+   },
+   "w422426892 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w422426892",
+    "top_is_self": true
+   },
+   "w422426893 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w422426893",
+    "top_is_self": true
+   },
+   "w422426894 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w422426894",
+    "top_is_self": true
+   },
+   "w422426895 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w422426895",
+    "top_is_self": true
+   },
+   "w422426896 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w422426896",
+    "top_is_self": true
+   },
+   "w429914299 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w429914299",
+    "top_is_self": true
+   },
+   "w432033288 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w432033288",
+    "top_is_self": true
+   },
+   "w432033289 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w432033289",
+    "top_is_self": true
+   },
+   "w442597210 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w442597210",
+    "top_is_self": true
+   },
+   "w442597527 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w442597527",
+    "top_is_self": true
+   },
+   "w47175201 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w47175201",
+    "top_is_self": true
+   },
+   "w47175223 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w47175223",
+    "top_is_self": true
+   },
+   "w47175243 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w47175243",
+    "top_is_self": true
+   },
+   "w47175646 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w47175646",
+    "top_is_self": true
+   },
+   "w47175647 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w47175647",
+    "top_is_self": true
+   },
+   "w47175688 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w47175688",
+    "top_is_self": true
+   },
+   "w501448937 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w501448937",
+    "top_is_self": true
+   },
+   "w54854259 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w54854259",
+    "top_is_self": true
+   },
+   "w54895064 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w54895064",
+    "top_is_self": true
+   },
+   "w54895065 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w54895065",
+    "top_is_self": true
+   },
+   "w54895066 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w54895066",
+    "top_is_self": true
+   },
+   "w54896274 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w54896274",
+    "top_is_self": true
+   },
+   "w582431318 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w582431318",
+    "top_is_self": true
+   },
+   "w583403068 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w583403068",
+    "top_is_self": true
+   },
+   "w583403069 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w583403069",
+    "top_is_self": true
+   },
+   "w592159754 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w592159754",
+    "top_is_self": true
+   },
+   "w592159755 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w592159755",
+    "top_is_self": true
+   },
+   "w592159756 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w592159756",
+    "top_is_self": true
+   },
+   "w592172258 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w592172258",
+    "top_is_self": true
+   },
+   "w592172260 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w592172260",
+    "top_is_self": true
+   },
+   "w592172261 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w592172261",
+    "top_is_self": true
+   },
+   "w592747149 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w592747149",
+    "top_is_self": true
+   },
+   "w599388844 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w599388844",
+    "top_is_self": true
+   },
+   "w606876714 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w606876714",
+    "top_is_self": true
+   },
+   "w607076683 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w607076683",
+    "top_is_self": true
+   },
+   "w607959790 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w607959790",
+    "top_is_self": true
+   },
+   "w607959791 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w607959791",
+    "top_is_self": true
+   },
+   "w609773933 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w609773933",
+    "top_is_self": true
+   },
+   "w614137698 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w614137698",
+    "top_is_self": true
+   },
+   "w616028662 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w616028662",
+    "top_is_self": true
+   },
+   "w642915689 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w642915689",
+    "top_is_self": true
+   },
+   "w651611802 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w651611802",
+    "top_is_self": true
+   },
+   "w651611804 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w651611804",
+    "top_is_self": true
+   },
+   "w696912353 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w696912353",
+    "top_is_self": true
+   },
+   "w696912354 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w696912354",
+    "top_is_self": true
+   },
+   "w699964836 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w699964836",
+    "top_is_self": true
+   },
+   "w699964837 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w699964837",
+    "top_is_self": true
+   },
+   "w699964838 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w699964838",
+    "top_is_self": true
+   },
+   "w700437945 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w700437945",
+    "top_is_self": true
+   },
+   "w700437946 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w700437946",
+    "top_is_self": true
+   },
+   "w700571090 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w700571090",
+    "top_is_self": true
+   },
+   "w806954151 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w806954151",
+    "top_is_self": true
+   },
+   "w825931426 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w825931426",
+    "top_is_self": true
+   },
+   "w825931427 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w825931427",
+    "top_is_self": true
+   },
+   "w826567448 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w826567448",
+    "top_is_self": true
+   },
+   "w837636795 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w837636795",
+    "top_is_self": true
+   },
+   "w906939746 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w906939746",
+    "top_is_self": true
+   },
+   "w965233758 | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w965233758",
+    "top_is_self": true
+   },
+   "ground_bike | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "ground_bike",
+    "top_is_self": true
+   },
+   "ground_green | folder None | top at <Struct 'Vector' (0x00000195960E5780) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "ground_green",
+    "top_is_self": true
+   },
+   "ground_not_classified | folder None | top at <Struct 'Vector' (0x000001955D3EE0E0) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "ground_not_classified",
+    "top_is_self": true
+   },
+   "ground_parking | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "ground_parking",
+    "top_is_self": true
+   },
+   "ground_play | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "ground_play",
+    "top_is_self": true
+   },
+   "ground_plaza | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "ground_plaza",
+    "top_is_self": true
+   },
+   "ground_roadway | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "ground_roadway",
+    "top_is_self": true
+   },
+   "ground_water | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "ground_water",
+    "top_is_self": true
+   },
+   "w1164076977 | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1164076977",
+    "top_is_self": true
+   },
+   "w1297381699 | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1297381699",
+    "top_is_self": true
+   },
+   "w1309501052 | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1309501052",
+    "top_is_self": true
+   },
+   "w1314138313 | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1314138313",
+    "top_is_self": true
+   },
+   "w1321450945 | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "w1321450945",
+    "top_is_self": true
+   },
+   "north_marker | folder None | top at <Struct 'Vector' (0x0000019406882720) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 1,
+    "example": "north_marker",
+    "top_is_self": true
+   },
+   "Griffintown_G1_greybox | folder None | top at <Struct 'Vector' (0x0000019406882950) {x: 0.000000, y: 0.000000, z: 0.000000}>": {
+    "meshes": 307,
+    "example": "w1393630742",
+    "top_is_self": false
+   }
+  },
+  "meshes": 307,
+  "placed_more_than_once": 305
+ },
+ "walls": {
+  "segments": 2158,
+  "at_wall": 2152,
+  "missed": 0,
+  "hit_elsewhere": 6,
+  "buildings_missed": [],
+  "missed_list": [],
+  "off_list": [
+   [
+    48510,
+    -95430,
+    150,
+    "w347385193",
+    69.9,
+    "w347385193"
+   ],
+   [
+    49708,
+    -91738,
+    150,
+    "w347385193",
+    62.0,
+    "w347385193"
+   ],
+   [
+    23356,
+    -50820,
+    150,
+    "w347394807",
+    9.6,
+    "w347394807"
+   ],
+   [
+    23550,
+    -51006,
+    150,
+    "w347394807",
+    null,
+    "w347394807"
+   ],
+   [
+    25273,
+    -48660,
+    150,
+    "w347394807",
+    75.3,
+    "w347394807"
+   ],
+   [
+    30129,
+    -41962,
+    150,
+    "w347395483",
+    59.1,
+    "w347395483"
+   ]
+  ]
+ }
+}

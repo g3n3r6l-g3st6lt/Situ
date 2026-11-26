@@ -694,38 +694,30 @@ ul.task-list li input[type="checkbox"] {
 <td>26</td>
 </tr>
 <tr class="even">
-<td>concrete or render</td>
-<td>29</td>
-<td>8</td>
-<td>8</td>
-<td>3</td>
-<td>10</td>
+<td>brick, buff or cream</td>
+<td>34</td>
+<td>6</td>
+<td>4</td>
+<td>7</td>
+<td>17</td>
 </tr>
 <tr class="odd">
-<td>brick, buff or cream</td>
-<td>24</td>
-<td>6</td>
-<td>3</td>
-<td>6</td>
-<td>9</td>
+<td>concrete or render</td>
+<td>22</td>
+<td>8</td>
+<td>7</td>
+<td>2</td>
+<td>5</td>
 </tr>
 <tr class="even">
 <td>brick, dark</td>
-<td>22</td>
+<td>20</td>
 <td>5</td>
 <td>0</td>
+<td>7</td>
 <td>8</td>
-<td>9</td>
 </tr>
 <tr class="odd">
-<td>brick, brown</td>
-<td>14</td>
-<td>6</td>
-<td>0</td>
-<td>1</td>
-<td>7</td>
-</tr>
-<tr class="even">
 <td>stone, dressed</td>
 <td>14</td>
 <td>8</td>
@@ -733,13 +725,21 @@ ul.task-list li input[type="checkbox"] {
 <td>1</td>
 <td>4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>panels</td>
-<td>13</td>
+<td>12</td>
 <td>0</td>
 <td>0</td>
-<td>6</td>
 <td>7</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>brick, brown</td>
+<td>11</td>
+<td>5</td>
+<td>0</td>
+<td>1</td>
+<td>5</td>
 </tr>
 <tr class="even">
 <td>metal cladding</td>
@@ -750,6 +750,14 @@ ul.task-list li input[type="checkbox"] {
 <td>2</td>
 </tr>
 <tr class="odd">
+<td>stone, rough-faced</td>
+<td>7</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr class="even">
 <td>glass</td>
 <td>6</td>
 <td>1</td>
@@ -757,21 +765,13 @@ ul.task-list li input[type="checkbox"] {
 <td>2</td>
 <td>2</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>under construction</td>
 <td>4</td>
 <td>1</td>
 <td>1</td>
 <td>0</td>
 <td>2</td>
-</tr>
-<tr class="odd">
-<td>stone, rough-faced</td>
-<td>4</td>
-<td>2</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
 </tr>
 <tr class="even">
 <td>siding</td>
@@ -792,7 +792,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>121 readings are marked clear and 94 likely. 74 views did not show the building’s own wall: a neighbour, a tree, a truck, or a corner where two walls meet. 4 buildings had no panorama within 40 m, and in 3 cases the photo predates the building.</p>
-<p>Red brick is the most common wall on buildings from before 1950 (24) and from 2000 on (20). From 1950 to 1999, concrete or render leads (8, against 6 in red brick). Among buildings with a known year, panels appear only on those from 2000 on. Dressed stone stands mostly on buildings from before 1950 (8 of 14).</p>
+<p>Red brick is the most common wall on buildings from before 1950 (24) and from 2000 on (20). From 1950 to 1999, concrete or render leads (7, against 6 in red brick). Among buildings with a known year, panels appear only on those from 2000 on. Dressed stone stands mostly on buildings from before 1950 (8 of 14).</p>
+<p>On 26 November 2026, Codex reassessed larger source photographs and corrected 16 visible-facade readings: ten to pale brick, three to rough-faced stone and three to panels. The original readings, photograph references and reasons are preserved in the <a href="data/materials/review/assistant_corrections.json">assistant correction record</a>. These later readings were not blind reviews and remain unverified assumptions using the existing photograph-to-building associations. They do not count as my own reviews.</p>
 <p>Each reading rests on one view, cut toward the nearest point of the outline, so a long building is read from one place. Each is an assumption until I have reviewed it. In the <a href="./lab.html">Lab</a>, the Materials tab colours every building by its reading, and each building’s panel links to the photo.</p>
 <!-- coverage: written by tools/materials_page.py -->
 <section id="coverage" class="level3">
@@ -1588,7 +1589,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="complete-maps" class="level2">
 <h2 class="anchored" data-anchor-id="complete-maps">Complete map pack</h2>
 <p>The consolidated pack contains <strong>10 texture variants and 120 maps</strong>. These extend earlier studies; they are not 120 distinct materials. All listed files decode, match their recorded hashes, and share dimensions within each variant.</p>
-<p>Each variant has colour, estimated height, OpenGL and DirectX normals, assumed roughness, metallic, neutral and estimated ambient occlusion, feature mask, assumed transmission, opacity, and a packed Unreal ORM map. Estimates and neutral placeholders are not measured surface properties. File validation does not establish pixel alignment or successful use in a game engine.</p>
+<p>Each variant has colour, estimated height, OpenGL and DirectX normals, assumed roughness, metallic, neutral and estimated ambient occlusion, feature mask, assumed transmission, opacity, and a packed Unreal ORM map. Normal conventions and ORM channel packing have also been checked pixel by pixel. Estimates and neutral placeholders are not measured surface properties. File validation does not establish alignment with the colour image or successful use in a game engine.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">

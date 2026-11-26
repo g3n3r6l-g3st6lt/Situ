@@ -1,0 +1,3467 @@
+{
+ "level": {
+  "actors": 622,
+  "roots": [
+   "Griffintown_G1_greybox"
+  ]
+ },
+ "meshes": {
+  "w201013721": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201012386": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201011933": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201011175": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201010047": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201008914": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201008023": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201007820": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201007399": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201007244": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w199238749": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w199238058": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w199235094": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w199234636": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w157557382": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w157556078": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w157556077": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w157556076": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1381560040": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1354184758": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1344783765": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w134140650": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1338495164": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1314138314": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1314138312": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1309501032": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1225946672": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1190882733": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1175945704": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1175945703": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1163554942": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1100913875": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1093571777": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1093571774": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1093571773": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1093571772": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1093571771": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1093571770": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1093416727": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1093179046": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1081882041": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1081882036": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1081874551": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1081860869": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1080276132": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1080275376": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w696912352": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w620759658": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w606863913": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340237120": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1534123738": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1451065379": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1393630742": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201017213": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w201017547": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225600469": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225600470": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225600471": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225600473": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225610882": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225610883": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225610884": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637514": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637515": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637516": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637517": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637518": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637519": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637520": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637522": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637526": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637527": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637528": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637529": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637533": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637534": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637535": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637536": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637537": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637538": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637539": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637540": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637541": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637542": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637543": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637544": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225637545": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640563": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640564": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640565": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640566": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640567": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640568": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640569": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640570": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640571": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w225640572": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611749": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611750": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611751": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611752": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611753": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611754": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611755": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611756": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611757": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611758": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611759": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611760": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611761": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227611762": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227612459": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227612460": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227612461": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227612462": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227612464": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227612465": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227612466": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w227612467": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w229736562": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w26500307": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w272436794": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w272436796": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w272436799": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w304987885": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w305021902": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w305021906": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w331868173": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w331868174": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w331868175": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w331868177": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w331868180": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340223814": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340225313": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340226280": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340227472": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340228173": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340228269": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340228785": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340228792": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340228823": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340229118": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340229158": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340229534": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340229787": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340229788": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340235536": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340235636": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340235663": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340235699": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340235717": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340235780": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340235860": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340235898": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340236006": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340236261": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340237151": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340237197": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340237249": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340237304": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340237459": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w340237527": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w345055603": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347382284": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347382287": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347382316": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347382427": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347382465": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347382472": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347382572": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347383034": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347383036": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347383665": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347383948": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347384187": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347385193": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347385982": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347386507": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347390461": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347390794": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347391772": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347392454": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393375": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393446": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393449": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393479": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393484": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393493": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393515": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393528": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393760": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393784": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393798": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347393968": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394020": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394086": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394312": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394418": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394420": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394483": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394485": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394507": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394545": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394572": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394622": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394627": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394685": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394699": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347394807": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347395104": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347395483": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347395611": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347395784": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347396342": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347396506": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347396555": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347396574": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347396576": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347458840": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w347489369": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w35927752": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w35927753": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w35927788": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w360807178": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w360807179": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w360807180": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w362106076": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w362626435": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w372127834": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w372127835": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w386406659": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w41651775": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w41651776": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w422426892": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w422426893": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w422426894": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w422426895": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w422426896": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w429914299": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w432033288": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w432033289": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w442597210": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w442597527": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w47175201": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w47175223": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w47175243": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w47175646": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w47175647": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w47175688": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w501448937": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w54854259": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w54895064": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w54895065": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w54895066": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w54896274": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w582431318": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w583403068": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w583403069": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w592159754": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w592159755": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w592159756": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w592172258": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w592172260": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w592172261": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w592747149": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w599388844": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w606876714": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w607076683": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w607959790": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w607959791": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w609773933": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w614137698": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w616028662": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w642915689": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w651611802": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w651611804": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w696912353": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w696912354": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w699964836": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w699964837": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w699964838": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w700437945": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w700437946": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w700571090": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w806954151": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w825931426": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w825931427": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w826567448": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w837636795": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w906939746": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w965233758": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_bike": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_green": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_not_classified": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_parking": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_play": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_plaza": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_roadway": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_water": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1164076977": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1297381699": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1309501052": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1314138313": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "w1321450945": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "north_marker": {
+   "components": 2,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_island": {
+   "components": 1,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  },
+  "ground_sidewalk": {
+   "components": 1,
+   "profiles": [
+    "BlockAll"
+   ],
+   "collision": [
+    "QUERY_AND_PHYSICS: 3>"
+   ],
+   "nanite": false,
+   "flag": "CTF_USE_COMPLEX_AS_SIMPLE: 3>"
+  }
+ },
+ "points": 55155,
+ "hit": 55154,
+ "missed": 1,
+ "hit_not_at_0": 2,
+ "hits_by_actor_top": [
+  [
+   "ground_not_classified",
+   19724
+  ],
+  [
+   "ground_green",
+   11794
+  ],
+  [
+   "ground_water",
+   7819
+  ],
+  [
+   "ground_roadway",
+   6973
+  ],
+  [
+   "ground_sidewalk",
+   4883
+  ],
+  [
+   "ground_parking",
+   1934
+  ],
+  [
+   "ground_bike",
+   1228
+  ],
+  [
+   "ground_plaza",
+   528
+  ],
+  [
+   "ground_play",
+   175
+  ],
+  [
+   "ground_island",
+   94
+  ],
+  [
+   "w347385982",
+   1
+  ],
+  [
+   "w700437945",
+   1
+  ]
+ ],
+ "misses": [
+  [
+   111747,
+   -124618,
+   "not classified",
+   "G00758"
+  ]
+ ],
+ "low": [
+  [
+   55347,
+   -99018,
+   "sidewalk",
+   "SW122",
+   500.0,
+   "w347385982"
+  ],
+  [
+   106147,
+   -87818,
+   "sidewalk",
+   "SW411",
+   18.0,
+   "w700437945"
+  ]
+ ]
+}

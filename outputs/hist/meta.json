@@ -1,5 +1,5 @@
 {
- "made": "2026-11-23",
+ "made": "2026-11-26",
  "segmap": {
   "segments": 283,
   "km": 22.3,
@@ -129,11 +129,11 @@
   "interpolated": 123,
   "unassigned": 10
  },
- "sources": 19,
+ "sources": 20,
  "buildings": {
   "1912": {
    "outlines": 2233,
-   "m2": 270369,
+   "m2": 270655,
    "construction": {
     "brick or stone": 1015,
     "frame": 1218
@@ -148,7 +148,7 @@
    },
    "area": {
     "outlines": 2123,
-    "m2": 254526,
+    "m2": 254812,
     "by_plate": {
      "P11H": 1,
      "P22": 399,
@@ -174,10 +174,10 @@
    }
   },
   "1918": {
-   "outlines": 804,
-   "m2": 54090,
+   "outlines": 800,
+   "m2": 54104,
    "construction": {
-    "brick": 357,
+    "brick": 353,
     "frame": 400,
     "stone or concrete": 47
    },
@@ -193,15 +193,15 @@
     }
    },
    "area": {
-    "outlines": 612,
-    "m2": 38025,
+    "outlines": 608,
+    "m2": 38038,
     "by_plate": {
-     "S27": 432,
+     "S27": 428,
      "S28": 180
     },
     "construction": {
      "stone or concrete": 45,
-     "brick": 262,
+     "brick": 258,
      "frame": 305
     }
    }

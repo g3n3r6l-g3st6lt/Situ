@@ -7,7 +7,7 @@ QGIS/Sample4-200926/layers/occupation_commerciale_2025.gpkg,"Ville de Montréal,
 QGIS/Sample4-200926/Donnees_Quebec/lieux-en.csv,"Ville de Montréal, Lieux et bâtiments à vocation publique (public places)","X/Y in MTM 8, horaire_par_jour",downloaded 2026-10,CC BY 4.0,S4,saved by Mo,checked 2026-10-14
 QGIS/Sample4-200926/layers/Buildings.gpkg,"Concordia NGCI, Montreal buildings","333,596 buildings, heights and uses; one property per footprint",2022 roll,no licence provided,not used,saved by Mo,not used and not published until licensed
 osm_highways_2026-10-07.json,OpenStreetMap via the Overpass API,"streets and paths, S1",2026-10-07,ODbL 1.0,S1,tools,"from earlier notes, to confirm"
-osm_turn_restrictions_2026-10-09.json,OpenStreetMap via the Overpass API,"turn restrictions, S3 check",2026-10-09,ODbL 1.0,S3,tools,"from earlier notes, to confirm"
+osm_turn_restrictions_2026-10-09.json,OpenStreetMap via the Overpass API,"turn restrictions, S3 check",2026-10-09,ODbL 1.0,S3,Overpass query (no script in Situ writes it),"checked 2026-11-25: file says Overpass snapshot 2026-10-09T22:27:02Z; no Situ script or page reads it"
 reseau_cyclable_2026-10-07.geojson,"Ville de Montréal, cycling network","bike paths, S1",2026-10-07,CC BY 4.0,S1,downloaded,"from earlier notes, to confirm"
 mapillary_signs_2026-10-10.json,Mapillary API,"map features (signs) in the study box, S3 checks",2026-10-10,Mapillary terms; imagery CC BY-SA 4.0,S3,tools/fetch_mapillary_signs.py,as on the Resources page
 comptages_vehicules_cyclistes_pietons.csv,"Ville de Montréal, intersection counts (vehicles, cyclists, pedestrians)",turning-movement counts,2026-10-10,CC BY 4.0,counts page,downloaded,as on the Resources page

@@ -1,0 +1,66 @@
+{
+  "status": "needs fresh projection and comparison after geometry repair",
+  "date": "2026-11-26",
+  "retired_comparisons": [
+    {
+      "trace_id": "ITM-PAI1918-S27-A0043",
+      "item_id": "ITM-PAI1918-S27",
+      "scope": "area",
+      "cover_1940": "0.0",
+      "grow_1940": "0.0",
+      "reading": "no",
+      "ring_1940_px": "4263,1751 4263,1765 4304,1764 4314,1767 4308,1771 4305,1784 4310,1852 4319,1853 4320,1885 4349,1885 4345,1816 4337,1816 4337,1858 4330,1862 4327,1843 4330,1772 4339,1771 4339,1744",
+      "method": "1918 outline laid on the 1940 scan of sheet 27 (ECC homography between the scans, correlation 0.408); cover = share of the outline filled in 1940; grow = share of the ground just outside it, empty in 1918, filled in 1940; yes when cover >= 0.85 and grow <= 0.5, partly when cover >= 0.5, no when cover < 0.15 (D044 amended; first settings)"
+    },
+    {
+      "trace_id": "ITM-PAI1918-S27-A0137",
+      "item_id": "ITM-PAI1918-S27",
+      "scope": "area",
+      "cover_1940": "0.998",
+      "grow_1940": "0.145",
+      "reading": "yes",
+      "ring_1940_px": "2006,1788 2007,1836 2147,1840 2147,1814 2114,1815 2110,1801 2147,1800 2147,1792",
+      "method": "1918 outline laid on the 1940 scan of sheet 27 (ECC homography between the scans, correlation 0.408); cover = share of the outline filled in 1940; grow = share of the ground just outside it, empty in 1918, filled in 1940; yes when cover >= 0.85 and grow <= 0.5, partly when cover >= 0.5, no when cover < 0.15 (D044 amended; first settings)"
+    },
+    {
+      "trace_id": "ITM-PAI1918-S27-A0341",
+      "item_id": "ITM-PAI1918-S27",
+      "scope": "area",
+      "cover_1940": "0.954",
+      "grow_1940": "0.409",
+      "reading": "yes",
+      "ring_1940_px": "1442,4537 1443,4613 1456,4613 1455,4582 1460,4579 1464,4590 1464,4610 1468,4612 1486,4612 1485,4596 1512,4595 1513,4536 1503,4536 1503,4569 1500,4568 1500,4559 1489,4562 1488,4586 1484,4580 1486,4537 1471,4537 1464,4545 1458,4546 1454,4537",
+      "method": "1918 outline laid on the 1940 scan of sheet 27 (ECC homography between the scans, correlation 0.408); cover = share of the outline filled in 1940; grow = share of the ground just outside it, empty in 1918, filled in 1940; yes when cover >= 0.85 and grow <= 0.5, partly when cover >= 0.5, no when cover < 0.15 (D044 amended; first settings)"
+    },
+    {
+      "trace_id": "ITM-PAI1918-S27-A0404",
+      "item_id": "ITM-PAI1918-S27",
+      "scope": "area",
+      "cover_1940": "0.878",
+      "grow_1940": "0.142",
+      "reading": "yes",
+      "ring_1940_px": "599,4603 597,4663 672,4661 671,4631 648,4630 625,4635 614,4632 618,4621 671,4619 671,4602",
+      "method": "1918 outline laid on the 1940 scan of sheet 27 (ECC homography between the scans, correlation 0.408); cover = share of the outline filled in 1940; grow = share of the ground just outside it, empty in 1918, filled in 1940; yes when cover >= 0.85 and grow <= 0.5, partly when cover >= 0.5, no when cover < 0.15 (D044 amended; first settings)"
+    },
+    {
+      "trace_id": "ITM-PAI1918-S27-A0409",
+      "item_id": "ITM-PAI1918-S27",
+      "scope": "area",
+      "cover_1940": "0.0",
+      "grow_1940": "0.0",
+      "reading": "no",
+      "ring_1940_px": "1351,6160 1353,6177 1411,6177 1412,6160 1417,6177 1472,6176 1471,6143 1446,6143 1442,6134 1423,6135 1423,6145 1436,6147 1436,6150 1404,6150 1398,6154 1396,6148 1409,6144 1409,6136 1365,6135 1361,6155",
+      "method": "1918 outline laid on the 1940 scan of sheet 27 (ECC homography between the scans, correlation 0.408); cover = share of the outline filled in 1940; grow = share of the ground just outside it, empty in 1918, filled in 1940; yes when cover >= 0.85 and grow <= 0.5, partly when cover >= 0.5, no when cover < 0.15 (D044 amended; first settings)"
+    },
+    {
+      "trace_id": "ITM-PAI1918-S28-A0042",
+      "item_id": "ITM-PAI1918-S28",
+      "scope": "area",
+      "cover_1940": "0.965",
+      "grow_1940": "0.109",
+      "reading": "yes",
+      "ring_1940_px": "3795,2652 3793,2720 3788,2723 3782,2796 3998,2818 4000,2767 4005,2756 4015,2673 3905,2666 3905,2679 3967,2684 3994,2691 3983,2793 3980,2796 3956,2795 3954,2790 3910,2789 3895,2784 3864,2784 3832,2777 3811,2779 3807,2762 3798,2761 3809,2759 3814,2734 3808,2713 3809,2690 3821,2673 3842,2671 3899,2677 3899,2665 3828,2657 3820,2651",
+      "method": "1918 outline laid on the 1940 scan of sheet 28 (ECC homography between the scans, correlation 0.383); cover = share of the outline filled in 1940; grow = share of the ground just outside it, empty in 1918, filled in 1940; yes when cover >= 0.85 and grow <= 0.5, partly when cover >= 0.5, no when cover < 0.15 (D044 amended; first settings)"
+    }
+  ]
+}

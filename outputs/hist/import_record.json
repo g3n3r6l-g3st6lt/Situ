@@ -1,20 +1,20 @@
 {
- "made": "2026-11-23T23:44:57+00:00",
+ "made": "2026-11-26T21:24:25+00:00",
  "tool": "tools/hist_import.py",
  "read": [
   {
    "path": "historical_situ/exports/geojson/ref_boundary.geojson",
-   "sha256": "38fd1eedf412eb2dc53ac0314c7154f6aba07fcb09b94a5750f59f8396134c98",
+   "sha256": "364f5b1ee073b6a18271ce3021e6319c50704536e351144f0fcf83c64efdfccd",
    "copied_to": "outputs/hist/boundary.geojson"
   },
   {
    "path": "historical_situ/exports/geojson/h12_segmap.geojson",
-   "sha256": "088e7b52fa5ece37f8c1f247ed3d729e425bd1913434c66daf82b24873cd9a8d",
+   "sha256": "640a003c8af5c8716206e5695cbb4234ed44fe867858a5ff0c2a3f417cb1e46b",
    "copied_to": "outputs/hist/h1_segmap_1912.geojson"
   },
   {
    "path": "historical_situ/exports/geojson/h12_syntax.geojson",
-   "sha256": "e7d9cdc30eb6aa052c7b800aae5317d64e35eb6c123af2e6fba416027c192a09",
+   "sha256": "a519559d04b6d8b2c16143c2daff52542d733345b72ca1478c1bf5ecf84ae6a9",
    "copied_to": "outputs/hist/h2_values_1912.geojson"
   },
   {
@@ -24,22 +24,22 @@
   },
   {
    "path": "historical_situ/exports/geojson/h12_footprints.geojson",
-   "sha256": "8336a02b0a31c87d9b3ebcadc3445ee20a25b22425ff7961a38691398cdc5006",
+   "sha256": "812633ff84a759c0d787752a1af77fd0fda747eb403d0538c61c30949c5d2473",
    "copied_to": "outputs/hist/h4_outlines_1912.geojson"
   },
   {
    "path": "historical_situ/exports/geojson/h18_footprints.geojson",
-   "sha256": "6b6be16b3e43a9dd09307f2c89f2b023afeb1f1a9347684e6f76c79868a7e0a3",
+   "sha256": "1649e4eb592047673c6e6e116316ae01167657708d77e96946ea914269cd1934",
    "copied_to": "outputs/hist/h4_outlines_1918.geojson"
   },
   {
    "path": "historical_situ/exports/geojson/h_buildings.geojson",
-   "sha256": "83dc505fad552daec5d06ced128cb0a5c6bd438a80cdb5b0810ccbe1d3325579",
+   "sha256": "5976dce9b99be735f17b6ac7e4422ea4055933aad4172576edf712b48563cc99",
    "copied_to": "outputs/hist/h4_carried_c1927.geojson"
   },
   {
    "path": "historical_situ/exports/geojson/h_blocks.geojson",
-   "sha256": "48d94cab0aa2e9cae08f2e8a5b63fc5a299e8293422fe2f74639a402d5c962bf",
+   "sha256": "c589e95c39144617955c021589f10a564ab9df862f796c7afdc81e10617aa49a",
    "copied_to": "outputs/hist/h4_blocks.geojson"
   },
   {
@@ -53,8 +53,18 @@
    "copied_to": "outputs/hist/h4_audit_1912_area.csv"
   },
   {
+   "path": "historical_situ/register/assistant_geometry_corrections.json",
+   "sha256": "e68320e8e2f2034bffe270775f336066f824b3ed2fcb6d70c264ecbf3c6e1685",
+   "copied_to": "outputs/hist/h4_geometry_corrections.json"
+  },
+  {
+   "path": "historical_situ/register/assistant_geometry_comparisons_pending.json",
+   "sha256": "241e15b0a9614631f5baf5c70bf9a64997d4f340cb0a820384f2b77a73812975",
+   "copied_to": "outputs/hist/h4_geometry_comparisons_pending.json"
+  },
+  {
    "path": "historical_situ/register/sources.csv",
-   "sha256": "5417c5c9d29b443a574585a787ca88235a7a5287909fef2181075697d8b0e965",
+   "sha256": "baa85ad63598844e037330ae866d67a596b99616846f499dd2de8596a08b5f96",
    "copied_to": "outputs/hist/sources.csv (columns kept: source_id, title, creator_publisher, archive_collection, archive_identifier, url, source_kind, depicted_start, depicted_end, publication_date, systems, access, use_terms)"
   }
  ]
